@@ -578,11 +578,12 @@ function renderVendorTable(m, label) {
     .sort((a, b) => b.neto - a.neto);
 
   rows.forEach(r => {
+    const name  = usersMap[r.uid] || r.uid;
     const teox  = (bvb[r.uid] || {})['Teoxane'] || 0;
     const rrs   = (bvb[r.uid] || {})['RRS HA Long Lasting'] || 0;
     const tr = document.createElement('tr');
     tr.innerHTML = `
-      <td><strong>${r.uid}</strong></td>
+      <td><strong>${name}</strong></td>
       <td>${M(r.neto)}</td>
       <td style="color:${BRAND_COLORS['Teoxane']}">${M(teox)}</td>
       <td style="color:${BRAND_COLORS['RRS HA Long Lasting']}">${M(rrs)}</td>
