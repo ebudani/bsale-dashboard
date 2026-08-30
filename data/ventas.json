@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-30T23:24:54.453570Z",
+  "updated_at": "2026-08-30T23:30:35.486245Z",
   "users": {
     "7": "Cindy Monsalves",
     "9": "Daisy Ponce",
@@ -4298,9 +4298,29 @@
         }
       ],
       "by_vendor": {
-        "2": {
-          "count": 50,
-          "neto": 30847781
+        "Daisy Ponce": {
+          "count": 8,
+          "neto": 2535788
+        },
+        "Cindy Monsalves": {
+          "count": 15,
+          "neto": 6972695
+        },
+        "Monica Urrutia": {
+          "count": 18,
+          "neto": 12589378
+        },
+        "Sin asignar": {
+          "count": 3,
+          "neto": 997101
+        },
+        "Francisca Salinas": {
+          "count": 3,
+          "neto": 6557789
+        },
+        "Ivan Salinas": {
+          "count": 3,
+          "neto": 1195030
         }
       },
       "by_brand": {
@@ -4309,9 +4329,34 @@
         "FINE": 0
       },
       "by_vendor_brand": {
-        "2": {
+        "Daisy Ponce": {
           "Teoxane": 0,
-          "RRS HA Long Lasting": 21561960,
+          "RRS HA Long Lasting": 2268945,
+          "FINE": 0
+        },
+        "Cindy Monsalves": {
+          "Teoxane": 0,
+          "RRS HA Long Lasting": 6865488,
+          "FINE": 0
+        },
+        "Monica Urrutia": {
+          "Teoxane": 0,
+          "RRS HA Long Lasting": 11430426,
+          "FINE": 0
+        },
+        "Sin asignar": {
+          "Teoxane": 0,
+          "RRS HA Long Lasting": 997101,
+          "FINE": 0
+        },
+        "Francisca Salinas": {
+          "Teoxane": 0,
+          "RRS HA Long Lasting": 0,
+          "FINE": 0
+        },
+        "Ivan Salinas": {
+          "Teoxane": 0,
+          "RRS HA Long Lasting": 0,
           "FINE": 0
         }
       },
@@ -4499,9 +4544,25 @@
         }
       ],
       "by_vendor": {
-        "2": {
-          "count": 37,
-          "neto": 32372405
+        "Cindy Monsalves": {
+          "count": 15,
+          "neto": 8437119
+        },
+        "Sin asignar": {
+          "count": 2,
+          "neto": 1731807
+        },
+        "Monica Urrutia": {
+          "count": 17,
+          "neto": 18939507
+        },
+        "Daisy Ponce": {
+          "count": 2,
+          "neto": 1311975
+        },
+        "Francisca Salinas": {
+          "count": 1,
+          "neto": 1951997
         }
       },
       "by_brand": {
@@ -4510,9 +4571,29 @@
         "FINE": 0
       },
       "by_vendor_brand": {
-        "2": {
-          "Teoxane": 9801600,
-          "RRS HA Long Lasting": 21139188,
+        "Cindy Monsalves": {
+          "Teoxane": 2334450,
+          "RRS HA Long Lasting": 5331249,
+          "FINE": 0
+        },
+        "Sin asignar": {
+          "Teoxane": 0,
+          "RRS HA Long Lasting": 1731807,
+          "FINE": 0
+        },
+        "Monica Urrutia": {
+          "Teoxane": 7467150,
+          "RRS HA Long Lasting": 10853157,
+          "FINE": 0
+        },
+        "Daisy Ponce": {
+          "Teoxane": 0,
+          "RRS HA Long Lasting": 1311975,
+          "FINE": 0
+        },
+        "Francisca Salinas": {
+          "Teoxane": 0,
+          "RRS HA Long Lasting": 1911000,
           "FINE": 0
         }
       },
@@ -4720,9 +4801,25 @@
         }
       ],
       "by_vendor": {
-        "2": {
-          "count": 65,
-          "neto": 62884374
+        "Cindy Monsalves": {
+          "count": 21,
+          "neto": 15896777
+        },
+        "Monica Urrutia": {
+          "count": 35,
+          "neto": 37899626
+        },
+        "Daisy Ponce": {
+          "count": 7,
+          "neto": 3742990
+        },
+        "Ivan Salinas": {
+          "count": 1,
+          "neto": 102765
+        },
+        "Francisca Salinas": {
+          "count": 1,
+          "neto": 5242216
         }
       },
       "by_brand": {
@@ -4731,9 +4828,29 @@
         "FINE": 0
       },
       "by_vendor_brand": {
-        "2": {
-          "Teoxane": 27641660,
-          "RRS HA Long Lasting": 29733674,
+        "Cindy Monsalves": {
+          "Teoxane": 9945350,
+          "RRS HA Long Lasting": 2945525,
+          "FINE": 0
+        },
+        "Monica Urrutia": {
+          "Teoxane": 16466980,
+          "RRS HA Long Lasting": 19237258,
+          "FINE": 0
+        },
+        "Daisy Ponce": {
+          "Teoxane": 1229330,
+          "RRS HA Long Lasting": 2513660,
+          "FINE": 0
+        },
+        "Ivan Salinas": {
+          "Teoxane": 0,
+          "RRS HA Long Lasting": 0,
+          "FINE": 0
+        },
+        "Francisca Salinas": {
+          "Teoxane": 0,
+          "RRS HA Long Lasting": 5037231,
           "FINE": 0
         }
       },
@@ -4926,9 +5043,25 @@
         }
       ],
       "by_vendor": {
-        "2": {
-          "count": 75,
-          "neto": 78707472
+        "Monica Urrutia": {
+          "count": 36,
+          "neto": 37662935
+        },
+        "Cindy Monsalves": {
+          "count": 29,
+          "neto": 28016129
+        },
+        "Daisy Ponce": {
+          "count": 7,
+          "neto": 5546624
+        },
+        "Ivan Salinas": {
+          "count": 1,
+          "neto": 102765
+        },
+        "Francisca Salinas": {
+          "count": 2,
+          "neto": 7379019
         }
       },
       "by_brand": {
@@ -4937,10 +5070,30 @@
         "FINE": 1116871
       },
       "by_vendor_brand": {
-        "2": {
-          "Teoxane": 43737020,
-          "RRS HA Long Lasting": 22730874,
+        "Monica Urrutia": {
+          "Teoxane": 19570450,
+          "RRS HA Long Lasting": 12201653,
           "FINE": 1116871
+        },
+        "Cindy Monsalves": {
+          "Teoxane": 18801790,
+          "RRS HA Long Lasting": 3977519,
+          "FINE": 0
+        },
+        "Daisy Ponce": {
+          "Teoxane": 3012180,
+          "RRS HA Long Lasting": 2219684,
+          "FINE": 0
+        },
+        "Ivan Salinas": {
+          "Teoxane": 0,
+          "RRS HA Long Lasting": 0,
+          "FINE": 0
+        },
+        "Francisca Salinas": {
+          "Teoxane": 2352600,
+          "RRS HA Long Lasting": 4332018,
+          "FINE": 0
         }
       },
       "top_clients": [
@@ -5142,9 +5295,25 @@
         }
       ],
       "by_vendor": {
-        "2": {
-          "count": 93,
-          "neto": 90153750
+        "Cindy Monsalves": {
+          "count": 36,
+          "neto": 18643082
+        },
+        "Monica Urrutia": {
+          "count": 42,
+          "neto": 39373965
+        },
+        "Daisy Ponce": {
+          "count": 7,
+          "neto": 5651747
+        },
+        "Sin asignar": {
+          "count": 5,
+          "neto": 3147304
+        },
+        "Francisca Salinas": {
+          "count": 3,
+          "neto": 23337652
         }
       },
       "by_brand": {
@@ -5153,10 +5322,30 @@
         "FINE": 93182
       },
       "by_vendor_brand": {
-        "2": {
-          "Teoxane": 44266160,
-          "RRS HA Long Lasting": 31181634,
-          "FINE": 93182
+        "Cindy Monsalves": {
+          "Teoxane": 9688920,
+          "RRS HA Long Lasting": 6881385,
+          "FINE": 46591
+        },
+        "Monica Urrutia": {
+          "Teoxane": 20405050,
+          "RRS HA Long Lasting": 13135769,
+          "FINE": 0
+        },
+        "Daisy Ponce": {
+          "Teoxane": 1667930,
+          "RRS HA Long Lasting": 3831597,
+          "FINE": 0
+        },
+        "Sin asignar": {
+          "Teoxane": 0,
+          "RRS HA Long Lasting": 2497144,
+          "FINE": 0
+        },
+        "Francisca Salinas": {
+          "Teoxane": 12504260,
+          "RRS HA Long Lasting": 4835739,
+          "FINE": 46591
         }
       },
       "top_clients": [
@@ -5363,9 +5552,25 @@
         }
       ],
       "by_vendor": {
-        "2": {
-          "count": 83,
-          "neto": 98830352
+        "Monica Urrutia": {
+          "count": 48,
+          "neto": 49508110
+        },
+        "Cindy Monsalves": {
+          "count": 21,
+          "neto": 13942048
+        },
+        "Daisy Ponce": {
+          "count": 11,
+          "neto": 7963029
+        },
+        "Sin asignar": {
+          "count": 1,
+          "neto": 81993
+        },
+        "Francisca Salinas": {
+          "count": 2,
+          "neto": 27335172
         }
       },
       "by_brand": {
@@ -5374,10 +5579,30 @@
         "FINE": 46672
       },
       "by_vendor_brand": {
-        "2": {
-          "Teoxane": 55556330,
-          "RRS HA Long Lasting": 28401713,
+        "Monica Urrutia": {
+          "Teoxane": 25795940,
+          "RRS HA Long Lasting": 18444514,
           "FINE": 46672
+        },
+        "Cindy Monsalves": {
+          "Teoxane": 10370630,
+          "RRS HA Long Lasting": 1829918,
+          "FINE": 0
+        },
+        "Daisy Ponce": {
+          "Teoxane": 4066310,
+          "RRS HA Long Lasting": 2384839,
+          "FINE": 0
+        },
+        "Sin asignar": {
+          "Teoxane": 0,
+          "RRS HA Long Lasting": 0,
+          "FINE": 0
+        },
+        "Francisca Salinas": {
+          "Teoxane": 15323450,
+          "RRS HA Long Lasting": 5742442,
+          "FINE": 0
         }
       },
       "top_clients": [
@@ -5589,9 +5814,25 @@
         }
       ],
       "by_vendor": {
-        "2": {
-          "count": 109,
-          "neto": 102857705
+        "Cindy Monsalves": {
+          "count": 44,
+          "neto": 30948849
+        },
+        "Monica Urrutia": {
+          "count": 47,
+          "neto": 44021247
+        },
+        "Daisy Ponce": {
+          "count": 14,
+          "neto": 8876936
+        },
+        "Francisca Salinas": {
+          "count": 3,
+          "neto": 18907908
+        },
+        "Ivan Salinas": {
+          "count": 1,
+          "neto": 102765
         }
       },
       "by_brand": {
@@ -5600,9 +5841,29 @@
         "FINE": 0
       },
       "by_vendor_brand": {
-        "2": {
-          "Teoxane": 61954462,
-          "RRS HA Long Lasting": 20795042,
+        "Cindy Monsalves": {
+          "Teoxane": 19636132,
+          "RRS HA Long Lasting": 4948417,
+          "FINE": 0
+        },
+        "Monica Urrutia": {
+          "Teoxane": 26276740,
+          "RRS HA Long Lasting": 9142982,
+          "FINE": 0
+        },
+        "Daisy Ponce": {
+          "Teoxane": 4219100,
+          "RRS HA Long Lasting": 2774605,
+          "FINE": 0
+        },
+        "Francisca Salinas": {
+          "Teoxane": 11822490,
+          "RRS HA Long Lasting": 3929038,
+          "FINE": 0
+        },
+        "Ivan Salinas": {
+          "Teoxane": 0,
+          "RRS HA Long Lasting": 0,
           "FINE": 0
         }
       },
@@ -5800,9 +6061,29 @@
         }
       ],
       "by_vendor": {
-        "2": {
-          "count": 122,
-          "neto": 120615461
+        "Daisy Ponce": {
+          "count": 16,
+          "neto": 17252189
+        },
+        "Monica Urrutia": {
+          "count": 52,
+          "neto": 56963232
+        },
+        "Cindy Monsalves": {
+          "count": 47,
+          "neto": 36975407
+        },
+        "Sin asignar": {
+          "count": 2,
+          "neto": 1109842
+        },
+        "Ivan Salinas": {
+          "count": 1,
+          "neto": 46672
+        },
+        "Francisca Salinas": {
+          "count": 4,
+          "neto": 8268119
         }
       },
       "by_brand": {
@@ -5811,10 +6092,35 @@
         "FINE": 662207
       },
       "by_vendor_brand": {
-        "2": {
-          "Teoxane": 80196180,
-          "RRS HA Long Lasting": 21275904,
-          "FINE": 662207
+        "Daisy Ponce": {
+          "Teoxane": 12787200,
+          "RRS HA Long Lasting": 2140409,
+          "FINE": 0
+        },
+        "Monica Urrutia": {
+          "Teoxane": 37796410,
+          "RRS HA Long Lasting": 8885339,
+          "FINE": 568863
+        },
+        "Cindy Monsalves": {
+          "Teoxane": 26077100,
+          "RRS HA Long Lasting": 6520955,
+          "FINE": 46672
+        },
+        "Sin asignar": {
+          "Teoxane": 0,
+          "RRS HA Long Lasting": 1109842,
+          "FINE": 0
+        },
+        "Ivan Salinas": {
+          "Teoxane": 0,
+          "RRS HA Long Lasting": 0,
+          "FINE": 46672
+        },
+        "Francisca Salinas": {
+          "Teoxane": 3535470,
+          "RRS HA Long Lasting": 2619359,
+          "FINE": 0
         }
       },
       "top_clients": [
@@ -6016,9 +6322,25 @@
         }
       ],
       "by_vendor": {
-        "2": {
-          "count": 97,
-          "neto": 107554196
+        "Cindy Monsalves": {
+          "count": 33,
+          "neto": 31562618
+        },
+        "Monica Urrutia": {
+          "count": 43,
+          "neto": 49589941
+        },
+        "Sin asignar": {
+          "count": 5,
+          "neto": 3219775
+        },
+        "Daisy Ponce": {
+          "count": 13,
+          "neto": 9403966
+        },
+        "Francisca Salinas": {
+          "count": 3,
+          "neto": 13777896
         }
       },
       "by_brand": {
@@ -6027,10 +6349,30 @@
         "FINE": 46672
       },
       "by_vendor_brand": {
-        "2": {
-          "Teoxane": 69580190,
-          "RRS HA Long Lasting": 21620444,
+        "Cindy Monsalves": {
+          "Teoxane": 22267900,
+          "RRS HA Long Lasting": 4280818,
+          "FINE": 0
+        },
+        "Monica Urrutia": {
+          "Teoxane": 31984740,
+          "RRS HA Long Lasting": 9598809,
           "FINE": 46672
+        },
+        "Sin asignar": {
+          "Teoxane": 900640,
+          "RRS HA Long Lasting": 2061135,
+          "FINE": 0
+        },
+        "Daisy Ponce": {
+          "Teoxane": 5839920,
+          "RRS HA Long Lasting": 3564046,
+          "FINE": 0
+        },
+        "Francisca Salinas": {
+          "Teoxane": 8586990,
+          "RRS HA Long Lasting": 2115636,
+          "FINE": 0
         }
       },
       "top_clients": [
@@ -6242,9 +6584,25 @@
         }
       ],
       "by_vendor": {
-        "2": {
-          "count": 131,
-          "neto": 131372467
+        "Cindy Monsalves": {
+          "count": 47,
+          "neto": 30451786
+        },
+        "Monica Urrutia": {
+          "count": 64,
+          "neto": 67763260
+        },
+        "Daisy Ponce": {
+          "count": 17,
+          "neto": 11583763
+        },
+        "Sin asignar": {
+          "count": 1,
+          "neto": 554921
+        },
+        "Francisca Salinas": {
+          "count": 2,
+          "neto": 21018737
         }
       },
       "by_brand": {
@@ -6253,10 +6611,30 @@
         "FINE": 309802
       },
       "by_vendor_brand": {
-        "2": {
-          "Teoxane": 86073310,
-          "RRS HA Long Lasting": 30796455,
-          "FINE": 309802
+        "Cindy Monsalves": {
+          "Teoxane": 18888300,
+          "RRS HA Long Lasting": 9545958,
+          "FINE": 110668
+        },
+        "Monica Urrutia": {
+          "Teoxane": 45913470,
+          "RRS HA Long Lasting": 13291676,
+          "FINE": 199134
+        },
+        "Daisy Ponce": {
+          "Teoxane": 7861720,
+          "RRS HA Long Lasting": 3071883,
+          "FINE": 0
+        },
+        "Sin asignar": {
+          "Teoxane": 0,
+          "RRS HA Long Lasting": 554921,
+          "FINE": 0
+        },
+        "Francisca Salinas": {
+          "Teoxane": 13409820,
+          "RRS HA Long Lasting": 4332017,
+          "FINE": 0
         }
       },
       "top_clients": [
@@ -6453,9 +6831,25 @@
         }
       ],
       "by_vendor": {
-        "2": {
-          "count": 105,
-          "neto": 125930870
+        "Monica Urrutia": {
+          "count": 52,
+          "neto": 60954322
+        },
+        "Cindy Monsalves": {
+          "count": 33,
+          "neto": 28009254
+        },
+        "Daisy Ponce": {
+          "count": 15,
+          "neto": 15913864
+        },
+        "Sin asignar": {
+          "count": 3,
+          "neto": 1753702
+        },
+        "Francisca Salinas": {
+          "count": 2,
+          "neto": 19299728
         }
       },
       "by_brand": {
@@ -6464,10 +6858,30 @@
         "FINE": 93344
       },
       "by_vendor_brand": {
-        "2": {
-          "Teoxane": 80756250,
-          "RRS HA Long Lasting": 26755116,
+        "Monica Urrutia": {
+          "Teoxane": 37753900,
+          "RRS HA Long Lasting": 15148018,
           "FINE": 93344
+        },
+        "Cindy Monsalves": {
+          "Teoxane": 19650600,
+          "RRS HA Long Lasting": 4723434,
+          "FINE": 0
+        },
+        "Daisy Ponce": {
+          "Teoxane": 10990270,
+          "RRS HA Long Lasting": 2549994,
+          "FINE": 0
+        },
+        "Sin asignar": {
+          "Teoxane": 318780,
+          "RRS HA Long Lasting": 1109842,
+          "FINE": 0
+        },
+        "Francisca Salinas": {
+          "Teoxane": 12042700,
+          "RRS HA Long Lasting": 3223828,
+          "FINE": 0
         }
       },
       "top_clients": [
@@ -6649,9 +7063,25 @@
         }
       ],
       "by_vendor": {
-        "2": {
-          "count": 97,
-          "neto": 105958822
+        "Monica Urrutia": {
+          "count": 45,
+          "neto": 47436866
+        },
+        "Cindy Monsalves": {
+          "count": 33,
+          "neto": 25258226
+        },
+        "Daisy Ponce": {
+          "count": 12,
+          "neto": 9436605
+        },
+        "Ivan Salinas": {
+          "count": 3,
+          "neto": 427368
+        },
+        "Francisca Salinas": {
+          "count": 4,
+          "neto": 23399757
         }
       },
       "by_brand": {
@@ -6660,10 +7090,30 @@
         "FINE": 410610
       },
       "by_vendor_brand": {
-        "2": {
-          "Teoxane": 57831100,
-          "RRS HA Long Lasting": 28753864,
+        "Monica Urrutia": {
+          "Teoxane": 23276440,
+          "RRS HA Long Lasting": 14976256,
           "FINE": 410610
+        },
+        "Cindy Monsalves": {
+          "Teoxane": 14743500,
+          "RRS HA Long Lasting": 7429046,
+          "FINE": 0
+        },
+        "Daisy Ponce": {
+          "Teoxane": 5516600,
+          "RRS HA Long Lasting": 2721755,
+          "FINE": 0
+        },
+        "Ivan Salinas": {
+          "Teoxane": 0,
+          "RRS HA Long Lasting": 0,
+          "FINE": 0
+        },
+        "Francisca Salinas": {
+          "Teoxane": 14294560,
+          "RRS HA Long Lasting": 3626807,
+          "FINE": 0
         }
       },
       "top_clients": [
@@ -6860,9 +7310,25 @@
         }
       ],
       "by_vendor": {
-        "2": {
-          "count": 109,
-          "neto": 119397537
+        "Cindy Monsalves": {
+          "count": 42,
+          "neto": 38619768
+        },
+        "Monica Urrutia": {
+          "count": 52,
+          "neto": 58710388
+        },
+        "Sin asignar": {
+          "count": 1,
+          "neto": 554921
+        },
+        "Daisy Ponce": {
+          "count": 12,
+          "neto": 12707817
+        },
+        "Francisca Salinas": {
+          "count": 2,
+          "neto": 8804643
         }
       },
       "by_brand": {
@@ -6871,10 +7337,30 @@
         "FINE": 388930
       },
       "by_vendor_brand": {
-        "2": {
-          "Teoxane": 79717710,
-          "RRS HA Long Lasting": 21897907,
+        "Cindy Monsalves": {
+          "Teoxane": 28456760,
+          "RRS HA Long Lasting": 5654908,
+          "FINE": 0
+        },
+        "Monica Urrutia": {
+          "Teoxane": 36265880,
+          "RRS HA Long Lasting": 11204118,
           "FINE": 388930
+        },
+        "Sin asignar": {
+          "Teoxane": 0,
+          "RRS HA Long Lasting": 554921,
+          "FINE": 0
+        },
+        "Daisy Ponce": {
+          "Teoxane": 8340830,
+          "RRS HA Long Lasting": 3778747,
+          "FINE": 0
+        },
+        "Francisca Salinas": {
+          "Teoxane": 6654240,
+          "RRS HA Long Lasting": 705213,
+          "FINE": 0
         }
       },
       "top_clients": [
@@ -7071,13 +7557,21 @@
         }
       ],
       "by_vendor": {
-        "2": {
-          "count": 68,
-          "neto": 91316266
+        "Monica Urrutia": {
+          "count": 40,
+          "neto": 51568392
         },
-        "7": {
-          "count": 19,
-          "neto": 21622937
+        "Cindy Monsalves": {
+          "count": 31,
+          "neto": 28716104
+        },
+        "Daisy Ponce": {
+          "count": 14,
+          "neto": 17604226
+        },
+        "Francisca Salinas": {
+          "count": 2,
+          "neto": 15050481
         }
       },
       "by_brand": {
@@ -7086,14 +7580,24 @@
         "FINE": 242695
       },
       "by_vendor_brand": {
-        "2": {
-          "Teoxane": 62812930,
-          "RRS HA Long Lasting": 18310741,
+        "Monica Urrutia": {
+          "Teoxane": 36620080,
+          "RRS HA Long Lasting": 10708652,
+          "FINE": 0
+        },
+        "Cindy Monsalves": {
+          "Teoxane": 23028610,
+          "RRS HA Long Lasting": 2384839,
           "FINE": 242695
         },
-        "7": {
-          "Teoxane": 17682540,
-          "RRS HA Long Lasting": 1274997,
+        "Daisy Ponce": {
+          "Teoxane": 12422460,
+          "RRS HA Long Lasting": 2563206,
+          "FINE": 0
+        },
+        "Francisca Salinas": {
+          "Teoxane": 8424320,
+          "RRS HA Long Lasting": 3929041,
           "FINE": 0
         }
       },
@@ -7301,13 +7805,29 @@
         }
       ],
       "by_vendor": {
-        "2": {
-          "count": 82,
-          "neto": 105409381
+        "Daisy Ponce": {
+          "count": 13,
+          "neto": 11747917
         },
-        "7": {
-          "count": 27,
-          "neto": 28827916
+        "Monica Urrutia": {
+          "count": 58,
+          "neto": 73971096
+        },
+        "Cindy Monsalves": {
+          "count": 32,
+          "neto": 29796057
+        },
+        "Sin asignar": {
+          "count": 2,
+          "neto": 1828195
+        },
+        "Ivan Salinas": {
+          "count": 2,
+          "neto": 288420
+        },
+        "Francisca Salinas": {
+          "count": 2,
+          "neto": 16605612
         }
       },
       "by_brand": {
@@ -7316,14 +7836,34 @@
         "FINE": 0
       },
       "by_vendor_brand": {
-        "2": {
-          "Teoxane": 71135680,
-          "RRS HA Long Lasting": 12155612,
+        "Daisy Ponce": {
+          "Teoxane": 7977836,
+          "RRS HA Long Lasting": 2286272,
           "FINE": 0
         },
-        "7": {
-          "Teoxane": 14222054,
-          "RRS HA Long Lasting": 11092593,
+        "Monica Urrutia": {
+          "Teoxane": 43934745,
+          "RRS HA Long Lasting": 14820069,
+          "FINE": 0
+        },
+        "Cindy Monsalves": {
+          "Teoxane": 22723489,
+          "RRS HA Long Lasting": 3535107,
+          "FINE": 0
+        },
+        "Sin asignar": {
+          "Teoxane": 1828195,
+          "RRS HA Long Lasting": 0,
+          "FINE": 0
+        },
+        "Ivan Salinas": {
+          "Teoxane": 288420,
+          "RRS HA Long Lasting": 0,
+          "FINE": 0
+        },
+        "Francisca Salinas": {
+          "Teoxane": 8605049,
+          "RRS HA Long Lasting": 2606757,
           "FINE": 0
         }
       },
@@ -7531,13 +8071,29 @@
         }
       ],
       "by_vendor": {
-        "7": {
-          "count": 26,
-          "neto": 28077403
+        "Monica Urrutia": {
+          "count": 38,
+          "neto": 52621501
         },
-        "2": {
-          "count": 62,
-          "neto": 81620093
+        "Cindy Monsalves": {
+          "count": 32,
+          "neto": 27173150
+        },
+        "Sin asignar": {
+          "count": 3,
+          "neto": 1763632
+        },
+        "Daisy Ponce": {
+          "count": 12,
+          "neto": 13207907
+        },
+        "Ivan Salinas": {
+          "count": 1,
+          "neto": 0
+        },
+        "Francisca Salinas": {
+          "count": 2,
+          "neto": 14931306
         }
       },
       "by_brand": {
@@ -7546,14 +8102,34 @@
         "FINE": 0
       },
       "by_vendor_brand": {
-        "7": {
-          "Teoxane": 19709541,
-          "RRS HA Long Lasting": 4177228,
+        "Monica Urrutia": {
+          "Teoxane": 27944758,
+          "RRS HA Long Lasting": 18838746,
           "FINE": 0
         },
-        "2": {
-          "Teoxane": 49836966,
-          "RRS HA Long Lasting": 23077440,
+        "Cindy Monsalves": {
+          "Teoxane": 20666684,
+          "RRS HA Long Lasting": 2720694,
+          "FINE": 0
+        },
+        "Sin asignar": {
+          "Teoxane": 609398,
+          "RRS HA Long Lasting": 1154234,
+          "FINE": 0
+        },
+        "Daisy Ponce": {
+          "Teoxane": 10746642,
+          "RRS HA Long Lasting": 1621424,
+          "FINE": 0
+        },
+        "Ivan Salinas": {
+          "Teoxane": 0,
+          "RRS HA Long Lasting": 0,
+          "FINE": 0
+        },
+        "Francisca Salinas": {
+          "Teoxane": 9579025,
+          "RRS HA Long Lasting": 2919570,
           "FINE": 0
         }
       },
@@ -7746,13 +8322,25 @@
         }
       ],
       "by_vendor": {
-        "2": {
-          "count": 91,
-          "neto": 93426956
+        "Daisy Ponce": {
+          "count": 14,
+          "neto": 11227696
         },
-        "7": {
-          "count": 11,
-          "neto": 12137323
+        "Monica Urrutia": {
+          "count": 47,
+          "neto": 52913487
+        },
+        "Cindy Monsalves": {
+          "count": 37,
+          "neto": 28878461
+        },
+        "Sin asignar": {
+          "count": 2,
+          "neto": 872791
+        },
+        "Francisca Salinas": {
+          "count": 2,
+          "neto": 11671844
         }
       },
       "by_brand": {
@@ -7761,15 +8349,30 @@
         "FINE": 150000
       },
       "by_vendor_brand": {
-        "2": {
-          "Teoxane": 76916571,
-          "RRS HA Long Lasting": 16460385,
-          "FINE": 50000
+        "Daisy Ponce": {
+          "Teoxane": 7039208,
+          "RRS HA Long Lasting": 4163488,
+          "FINE": 25000
         },
-        "7": {
-          "Teoxane": 11288445,
-          "RRS HA Long Lasting": 748878,
+        "Monica Urrutia": {
+          "Teoxane": 45187298,
+          "RRS HA Long Lasting": 7626189,
           "FINE": 100000
+        },
+        "Cindy Monsalves": {
+          "Teoxane": 26173988,
+          "RRS HA Long Lasting": 2679473,
+          "FINE": 25000
+        },
+        "Sin asignar": {
+          "Teoxane": -198998,
+          "RRS HA Long Lasting": 1071789,
+          "FINE": 0
+        },
+        "Francisca Salinas": {
+          "Teoxane": 10003520,
+          "RRS HA Long Lasting": 1668324,
+          "FINE": 0
         }
       },
       "top_clients": [
@@ -7976,13 +8579,25 @@
         }
       ],
       "by_vendor": {
-        "2": {
-          "count": 67,
-          "neto": 95224302
+        "Daisy Ponce": {
+          "count": 20,
+          "neto": 20815233
         },
-        "7": {
-          "count": 55,
-          "neto": 48042497
+        "Monica Urrutia": {
+          "count": 64,
+          "neto": 75123745
+        },
+        "Cindy Monsalves": {
+          "count": 33,
+          "neto": 29113654
+        },
+        "Sin asignar": {
+          "count": 3,
+          "neto": 2349933
+        },
+        "Francisca Salinas": {
+          "count": 2,
+          "neto": 15864234
         }
       },
       "by_brand": {
@@ -7991,14 +8606,29 @@
         "FINE": 150000
       },
       "by_vendor_brand": {
-        "2": {
-          "Teoxane": 71744287,
-          "RRS HA Long Lasting": 23330015,
+        "Daisy Ponce": {
+          "Teoxane": 12934840,
+          "RRS HA Long Lasting": 7880393,
+          "FINE": 0
+        },
+        "Monica Urrutia": {
+          "Teoxane": 58491562,
+          "RRS HA Long Lasting": 16482183,
           "FINE": 150000
         },
-        "7": {
-          "Teoxane": 38815496,
-          "RRS HA Long Lasting": 9227001,
+        "Cindy Monsalves": {
+          "Teoxane": 24785276,
+          "RRS HA Long Lasting": 4328378,
+          "FINE": 0
+        },
+        "Sin asignar": {
+          "Teoxane": 673546,
+          "RRS HA Long Lasting": 1676387,
+          "FINE": 0
+        },
+        "Francisca Salinas": {
+          "Teoxane": 13674559,
+          "RRS HA Long Lasting": 2189675,
           "FINE": 0
         }
       },
@@ -8206,13 +8836,25 @@
         }
       ],
       "by_vendor": {
-        "7": {
-          "count": 91,
-          "neto": 101578998
+        "Cindy Monsalves": {
+          "count": 37,
+          "neto": 39719256
         },
-        "2": {
-          "count": 17,
-          "neto": 26706602
+        "Daisy Ponce": {
+          "count": 22,
+          "neto": 19409064
+        },
+        "Monica Urrutia": {
+          "count": 45,
+          "neto": 55363915
+        },
+        "Sin asignar": {
+          "count": 2,
+          "neto": 1154234
+        },
+        "Francisca Salinas": {
+          "count": 2,
+          "neto": 12639131
         }
       },
       "by_brand": {
@@ -8221,14 +8863,29 @@
         "FINE": 0
       },
       "by_vendor_brand": {
-        "7": {
-          "Teoxane": 79408088,
-          "RRS HA Long Lasting": 22170910,
+        "Cindy Monsalves": {
+          "Teoxane": 34009920,
+          "RRS HA Long Lasting": 5709336,
           "FINE": 0
         },
-        "2": {
-          "Teoxane": 17562827,
-          "RRS HA Long Lasting": 9143775,
+        "Daisy Ponce": {
+          "Teoxane": 11116443,
+          "RRS HA Long Lasting": 8292621,
+          "FINE": 0
+        },
+        "Monica Urrutia": {
+          "Teoxane": 41499368,
+          "RRS HA Long Lasting": 13864547,
+          "FINE": 0
+        },
+        "Sin asignar": {
+          "Teoxane": 0,
+          "RRS HA Long Lasting": 1154234,
+          "FINE": 0
+        },
+        "Francisca Salinas": {
+          "Teoxane": 10345184,
+          "RRS HA Long Lasting": 2293947,
           "FINE": 0
         }
       },
