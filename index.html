@@ -38,11 +38,18 @@
   }
   header h1 { font-size: 18px; font-weight: 700; letter-spacing: .3px; }
   header h1 span { color: #93c5fd; }
-  .header-right { display: flex; align-items: center; gap: 16px; }
+  .header-right { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
   #updated-at { font-size: 11px; color: #94a3b8; }
 
-  /* Month selector */
-  #month-select {
+  /* Filters */
+  .filter-group { display: flex; align-items: center; gap: 6px; }
+  .filter-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    color: #93c5fd;
+  }
+  .filter-select {
     background: rgba(255,255,255,.12);
     border: 1px solid rgba(255,255,255,.3);
     color: white;
@@ -51,7 +58,8 @@
     font-size: 13px;
     cursor: pointer;
   }
-  #month-select option { background: var(--navy); color: white; }
+  .filter-select option { background: var(--navy); color: white; }
+  #custom-range { display: none; align-items: center; gap: 6px; }
 
   /* Main layout */
   main { padding: 20px 24px; max-width: 1400px; margin: 0 auto; }
@@ -152,6 +160,20 @@
   #loading { text-align: center; padding: 60px; color: var(--gray-600); font-size: 16px; }
   #content { display: none; }
 
+  /* Unavailable-per-vendor placeholder */
+  .unavailable {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 120px;
+    color: #94a3b8;
+    font-size: 12px;
+    text-align: center;
+    padding: 0 16px;
+  }
+  .approx-note { font-size: 10px; color: #94a3b8; font-weight: 400; text-transform: none; letter-spacing: 0; margin-left: 6px; }
+
   @media (max-width: 900px) {
     .charts-row, .tables-row, .bottom-row { grid-template-columns: 1fr; }
   }
@@ -163,7 +185,26 @@
   <h1>AestheticsPro <span>· Ventas</span></h1>
   <div class="header-right">
     <span id="updated-at">Cargando…</span>
-    <select id="month-select" onchange="selectMonth(this.value)"></select>
+    <div class="filter-group">
+      <span class="filter-label">Vendedor</span>
+      <select id="vendor-select" class="filter-select" onchange="selectVendor(this.value)"></select>
+    </div>
+    <div class="filter-group">
+      <span class="filter-label">Periodo</span>
+      <select id="period-select" class="filter-select" onchange="onPeriodChange(this.value)">
+        <option value="this_month">Este mes</option>
+        <option value="prev_month">Mes anterior</option>
+        <option value="this_year">Año actual</option>
+        <option value="prev_year">Año anterior</option>
+        <option value="custom">Personalizar</option>
+      </select>
+      <div id="custom-range">
+        <span class="filter-label">Desde</span>
+        <select id="custom-from" class="filter-select" onchange="onCustomRangeChange()"></select>
+        <span class="filter-label">Hasta</span>
+        <select id="custom-to" class="filter-select" onchange="onCustomRangeChange()"></select>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -210,7 +251,10 @@
     <div class="bottom-row">
       <div class="card">
         <h2 id="chart-daily-title">Curva Diaria — </h2>
-        <div class="chart-wrap"><canvas id="chart-daily"></canvas></div>
+        <div class="chart-wrap">
+          <canvas id="chart-daily"></canvas>
+          <div id="chart-daily-unavailable" class="unavailable" style="display:none">No disponible por vendedor</div>
+        </div>
       </div>
       <div class="card">
         <h2>Marcas por Mes (últimos 12)</h2>
@@ -254,10 +298,11 @@
     <!-- Top clients -->
     <div class="card">
       <h2 id="table-clients-title">Top 10 Clientes — </h2>
-      <table>
+      <div id="clients-unavailable" class="unavailable" style="display:none">No disponible por vendedor</div>
+      <table id="table-clients">
         <thead>
           <tr>
-            <th>#</th><th>Cliente</th><th>Facturas</th><th>Neto</th><th>% del mes</th>
+            <th>#</th><th>Cliente</th><th>Facturas</th><th>Neto</th><th>% del período</th>
           </tr>
         </thead>
         <tbody id="tbody-clients"></tbody>
@@ -276,8 +321,18 @@ const BRAND_COLORS = { 'Teoxane': '#2563eb', 'RRS HA Long Lasting': '#d97706', '
 let allMonths = [];
 let usersMap  = {};
 let targetsData = {};
-let selectedIdx = 0;
+let selectedVendor = 'all';
+let periodMode = 'this_month';
+let customFromIdx = 0;
+let customToIdx = 0;
 let chartMonthly, chartDaily, chartBrands;
+
+// by_vendor / by_vendor_brand keys are inconsistent across months (some store the
+// numeric Bsale user id, others already store the name) — always resolve through
+// this so aggregation across months groups the same person together.
+function canonVendor(key) {
+  return usersMap[key] || key;
+}
 
 // ── Formatting ─────────────────────────────────────────────────────────────
 const CLP = v => new Intl.NumberFormat('es-CL', {
@@ -319,57 +374,218 @@ async function loadData() {
   document.getElementById('updated-at').textContent =
     'Actualizado: ' + (ventas.updated_at || '').slice(0, 16).replace('T', ' ') + ' UTC';
 
-  buildSelector();
-  selectedIdx = allMonths.length - 1;
-  document.getElementById('month-select').value = selectedIdx;
+  buildVendorSelector();
+  buildCustomRangeSelectors();
   render();
   document.getElementById('loading').style.display = 'none';
   document.getElementById('content').style.display = 'block';
 }
 
-// ── Month selector ──────────────────────────────────────────────────────────
-function buildSelector() {
-  const sel = document.getElementById('month-select');
-  allMonths.forEach((m, i) => {
+// ── Vendedor selector ────────────────────────────────────────────────────────
+function buildVendorSelector() {
+  const names = new Set();
+  allMonths.forEach(m => Object.keys(m.by_vendor || {}).forEach(k => names.add(canonVendor(k))));
+  const sel = document.getElementById('vendor-select');
+  sel.innerHTML = '<option value="all">Total</option>';
+  Array.from(names).sort((a, b) => a.localeCompare(b, 'es')).forEach(name => {
     const opt = document.createElement('option');
-    opt.value = i;
-    opt.textContent = monthLabel(m.year, m.month);
+    opt.value = name;
+    opt.textContent = name;
     sel.appendChild(opt);
   });
 }
 
-function selectMonth(idx) {
-  selectedIdx = parseInt(idx);
+function selectVendor(v) {
+  selectedVendor = v;
   render();
+}
+
+// ── Periodo selector ─────────────────────────────────────────────────────────
+function buildCustomRangeSelectors() {
+  const from = document.getElementById('custom-from');
+  const to   = document.getElementById('custom-to');
+  from.innerHTML = '';
+  to.innerHTML   = '';
+  allMonths.forEach((m, i) => {
+    const label = monthLabel(m.year, m.month);
+    const o1 = document.createElement('option'); o1.value = i; o1.textContent = label; from.appendChild(o1);
+    const o2 = document.createElement('option'); o2.value = i; o2.textContent = label; to.appendChild(o2);
+  });
+  customFromIdx = allMonths.length - 1;
+  customToIdx   = allMonths.length - 1;
+  from.value = customFromIdx;
+  to.value   = customToIdx;
+}
+
+function onPeriodChange(mode) {
+  periodMode = mode;
+  document.getElementById('custom-range').style.display = mode === 'custom' ? 'inline-flex' : 'none';
+  render();
+}
+
+function onCustomRangeChange() {
+  customFromIdx = parseInt(document.getElementById('custom-from').value);
+  customToIdx   = parseInt(document.getElementById('custom-to').value);
+  render();
+}
+
+function monthsForPeriod() {
+  const refIdx = allMonths.length - 1;
+  const ref = allMonths[refIdx];
+  switch (periodMode) {
+    case 'prev_month': return refIdx > 0 ? [allMonths[refIdx - 1]] : [ref];
+    case 'this_year':  return allMonths.filter(m => m.year === ref.year);
+    case 'prev_year':  return allMonths.filter(m => m.year === ref.year - 1);
+    case 'custom': {
+      const from = Math.min(customFromIdx, customToIdx);
+      const to   = Math.max(customFromIdx, customToIdx);
+      return allMonths.slice(from, to + 1);
+    }
+    default: return [ref]; // this_month
+  }
+}
+
+function periodLabel(months) {
+  if (!months.length) return '—';
+  if (months.length === 1) return monthLabel(months[0].year, months[0].month);
+  if (periodMode === 'this_year' || periodMode === 'prev_year') return String(months[0].year);
+  const first = months[0], last = months[months.length - 1];
+  return `${monthLabel(first.year, first.month)} – ${monthLabel(last.year, last.month)}`;
+}
+
+// ── Aggregation across the selected period ──────────────────────────────────
+function aggregateMonths(months) {
+  const agg = {
+    total_neto: 0, count_facturas: 0, count_nc: 0, neto_facturas: 0, neto_nc: 0,
+    by_brand: {}, by_vendor: {}, by_vendor_brand: {}, by_day: [], top_clients: []
+  };
+  const clientMap = {};
+  months.forEach(mm => {
+    agg.total_neto     += mm.total_neto || 0;
+    agg.count_facturas += mm.count_facturas || 0;
+    agg.count_nc       += mm.count_nc || 0;
+    agg.neto_facturas  += mm.neto_facturas || 0;
+    agg.neto_nc        += mm.neto_nc || 0;
+    Object.entries(mm.by_brand || {}).forEach(([b, v]) => {
+      agg.by_brand[b] = (agg.by_brand[b] || 0) + v;
+    });
+    Object.entries(mm.by_vendor || {}).forEach(([k, v]) => {
+      const name = canonVendor(k);
+      agg.by_vendor[name] = agg.by_vendor[name] || { count: 0, neto: 0 };
+      agg.by_vendor[name].count += v.count || 0;
+      agg.by_vendor[name].neto  += v.neto  || 0;
+    });
+    Object.entries(mm.by_vendor_brand || {}).forEach(([k, brands]) => {
+      const name = canonVendor(k);
+      agg.by_vendor_brand[name] = agg.by_vendor_brand[name] || {};
+      Object.entries(brands || {}).forEach(([b, v]) => {
+        agg.by_vendor_brand[name][b] = (agg.by_vendor_brand[name][b] || 0) + v;
+      });
+    });
+    (mm.by_day || []).forEach(d => agg.by_day.push(d));
+    (mm.top_clients || []).forEach(c => {
+      const key = c.id || c.name;
+      if (!clientMap[key]) clientMap[key] = { name: c.name, count: 0, neto: 0 };
+      clientMap[key].count += c.count || 0;
+      clientMap[key].neto  += c.neto  || 0;
+    });
+  });
+  agg.by_day.sort((a, b) => a.date.localeCompare(b.date));
+  agg.top_clients = Object.values(clientMap).sort((a, b) => b.neto - a.neto);
+  return agg;
+}
+
+function aggregateTargets(months) {
+  let total = 0, hasAny = false;
+  const byVendor = {};
+  months.forEach(mm => {
+    const key = `${mm.year}-${String(mm.month).padStart(2, '0')}`;
+    const t = targetsData[key];
+    if (!t) return;
+    hasAny = true;
+    total += t.total || 0;
+    Object.entries(t.by_vendor || {}).forEach(([name, brands]) => {
+      byVendor[name] = byVendor[name] || {};
+      Object.entries(brands || {}).forEach(([b, v]) => {
+        byVendor[name][b] = (byVendor[name][b] || 0) + v;
+      });
+    });
+  });
+  return hasAny ? { total, by_vendor: byVendor } : null;
+}
+
+// A vendor filter narrows the period aggregate down to one person's numbers.
+// Daily curve and top clients aren't broken down by vendor in the source data,
+// so they're marked unavailable (null) rather than silently showing totals.
+function applyVendorFilter(agg, vendorName) {
+  if (vendorName === 'all') return agg;
+  const v = agg.by_vendor[vendorName] || { count: 0, neto: 0 };
+  return {
+    ...agg,
+    total_neto: v.neto,
+    count_docs: v.count,
+    count_facturas: null,
+    count_nc: null,
+    by_brand: agg.by_vendor_brand[vendorName] || {},
+    by_day: null,
+    top_clients: null,
+  };
+}
+
+function vendorNetoForMonth(mm, vendorName) {
+  if (vendorName === 'all') return mm.total_neto || 0;
+  return Object.entries(mm.by_vendor || {})
+    .filter(([k]) => canonVendor(k) === vendorName)
+    .reduce((s, [, v]) => s + (v.neto || 0), 0);
+}
+
+function vendorBrandForMonth(mm, vendorName, brand) {
+  if (vendorName === 'all') return (mm.by_brand || {})[brand] || 0;
+  return Object.entries(mm.by_vendor_brand || {})
+    .filter(([k]) => canonVendor(k) === vendorName)
+    .reduce((s, [, brands]) => s + ((brands || {})[brand] || 0), 0);
 }
 
 // ── Render all ──────────────────────────────────────────────────────────────
 function render() {
-  const m = allMonths[selectedIdx];
-  const label = monthLabel(m.year, m.month);
-  const key = `${m.year}-${String(m.month).padStart(2,'0')}`;
-  const t = targetsData[key] || null;
+  const months = monthsForPeriod();
+  const label  = periodLabel(months);
+  const agg    = aggregateMonths(months);
+  const t      = aggregateTargets(months);
+  const view   = applyVendorFilter(agg, selectedVendor);
 
-  renderKPIs(m, t, label);
+  renderKPIs(view, t, label);
   renderMonthlyChart();
-  renderDailyChart(m, label);
+  renderDailyChart(view, label, months.length > 1);
   renderBrandsChart();
-  renderVendorTable(m, label);
-  renderCumplTable(m, t, label);
-  renderTopClients(m, label);
+  renderVendorTable(agg, label);
+  renderCumplTable(agg, t, label);
+  renderTopClients(view, label, months.length > 1);
 }
 
 // ── KPI Cards ───────────────────────────────────────────────────────────────
 function renderKPIs(m, t, label) {
+  const isVendor = selectedVendor !== 'all';
   const teox = (m.by_brand || {})['Teoxane'] || 0;
   const rrs  = (m.by_brand || {})['RRS HA Long Lasting'] || 0;
 
   document.getElementById('kpi-total').textContent = M(m.total_neto);
-  document.getElementById('kpi-total-sub').textContent =
-    `${m.count_facturas} fact · ${m.count_nc} NC`;
+  document.getElementById('kpi-total-sub').textContent = isVendor
+    ? `${m.count_docs} documentos`
+    : `${m.count_facturas} fact · ${m.count_nc} NC`;
+
+  const vendorTarget = isVendor && t ? (t.by_vendor[selectedVendor] || {}) : null;
 
   document.getElementById('kpi-teox').textContent = M(teox);
-  if (t && t.total) {
+  if (isVendor) {
+    if (vendorTarget && vendorTarget['Teoxane']) {
+      const tTeox = vendorTarget['Teoxane'];
+      document.getElementById('kpi-teox-sub').textContent =
+        `Obj: ${M(tTeox)} · ${PCT(teox/tTeox)}`;
+    } else {
+      document.getElementById('kpi-teox-sub').textContent = 'Sin objetivo';
+    }
+  } else if (t && t.total) {
     const tTeox = sumVendorTargets(t, 'Teoxane');
     document.getElementById('kpi-teox-sub').textContent =
       `Obj: ${M(tTeox)} · ${PCT(tTeox ? teox/tTeox : 0)}`;
@@ -378,7 +594,15 @@ function renderKPIs(m, t, label) {
   }
 
   document.getElementById('kpi-rrs').textContent = M(rrs);
-  if (t && t.total) {
+  if (isVendor) {
+    if (vendorTarget && vendorTarget['RRS HA Long Lasting']) {
+      const tRrs = vendorTarget['RRS HA Long Lasting'];
+      document.getElementById('kpi-rrs-sub').textContent =
+        `Obj: ${M(tRrs)} · ${PCT(rrs/tRrs)}`;
+    } else {
+      document.getElementById('kpi-rrs-sub').textContent = 'Sin objetivo';
+    }
+  } else if (t && t.total) {
     const tRrs = sumVendorTargets(t, 'RRS HA Long Lasting');
     document.getElementById('kpi-rrs-sub').textContent =
       `Obj: ${M(tRrs)} · ${PCT(tRrs ? rrs/tRrs : 0)}`;
@@ -386,20 +610,34 @@ function renderKPIs(m, t, label) {
     document.getElementById('kpi-rrs-sub').textContent = `${PCT(m.total_neto ? rrs/m.total_neto : 0)} del total`;
   }
 
-  if (t && t.total) {
-    const ratio = m.total_neto / t.total;
+  let ratio = null, objLabel = '';
+  if (isVendor) {
+    const tTotal = vendorTarget ? (vendorTarget['Teoxane']||0) + (vendorTarget['RRS HA Long Lasting']||0) : 0;
+    if (tTotal) { ratio = (teox + rrs) / tTotal; objLabel = `Obj: ${M(tTotal)}`; }
+  } else if (t && t.total) {
+    ratio = m.total_neto / t.total;
+    objLabel = `Obj: ${M(t.total)}`;
+  }
+
+  if (ratio !== null) {
     document.getElementById('kpi-cumpl').textContent = PCT(ratio);
-    document.getElementById('kpi-cumpl-sub').textContent = `Obj: ${M(t.total)}`;
+    document.getElementById('kpi-cumpl-sub').textContent = objLabel;
     const card = document.getElementById('kpi-cumpl-card');
     card.className = `kpi ${ratio >= 1 ? 'green' : ratio >= 0.85 ? '' : 'red'}`;
   } else {
     document.getElementById('kpi-cumpl').textContent = '—';
     document.getElementById('kpi-cumpl-sub').textContent = 'Sin objetivo';
+    document.getElementById('kpi-cumpl-card').className = 'kpi';
   }
 
-  document.getElementById('kpi-docs').textContent = m.count_facturas + m.count_nc;
-  document.getElementById('kpi-docs-sub').textContent =
-    `Neto fact: ${M(m.neto_facturas)} · NC: ${M(m.neto_nc)}`;
+  if (isVendor) {
+    document.getElementById('kpi-docs').textContent = m.count_docs;
+    document.getElementById('kpi-docs-sub').textContent = `Neto: ${M(m.total_neto)}`;
+  } else {
+    document.getElementById('kpi-docs').textContent = m.count_facturas + m.count_nc;
+    document.getElementById('kpi-docs-sub').textContent =
+      `Neto fact: ${M(m.neto_facturas)} · NC: ${M(m.neto_nc)}`;
+  }
 }
 
 function sumVendorTargets(t, brand) {
@@ -409,9 +647,9 @@ function sumVendorTargets(t, brand) {
 // ── Monthly trend chart ─────────────────────────────────────────────────────
 function renderMonthlyChart() {
   const labels = allMonths.map(m => monthLabel(m.year, m.month));
-  const totals = allMonths.map(m => m.total_neto);
-  const teoxs  = allMonths.map(m => (m.by_brand || {})['Teoxane'] || 0);
-  const rrss   = allMonths.map(m => (m.by_brand || {})['RRS HA Long Lasting'] || 0);
+  const totals = allMonths.map(m => vendorNetoForMonth(m, selectedVendor));
+  const teoxs  = allMonths.map(m => vendorBrandForMonth(m, selectedVendor, 'Teoxane'));
+  const rrss   = allMonths.map(m => vendorBrandForMonth(m, selectedVendor, 'RRS HA Long Lasting'));
 
   if (chartMonthly) chartMonthly.destroy();
   chartMonthly = new Chart(document.getElementById('chart-monthly'), {
@@ -473,10 +711,22 @@ function renderMonthlyChart() {
 }
 
 // ── Daily chart ──────────────────────────────────────────────────────────────
-function renderDailyChart(m, label) {
+function renderDailyChart(m, label, isMulti) {
   document.getElementById('chart-daily-title').textContent = `Curva Diaria — ${label}`;
+  const unavailable = document.getElementById('chart-daily-unavailable');
+  const canvas = document.getElementById('chart-daily');
+
+  if (m.by_day === null) {
+    unavailable.style.display = 'flex';
+    canvas.style.display = 'none';
+    if (chartDaily) { chartDaily.destroy(); chartDaily = null; }
+    return;
+  }
+  unavailable.style.display = 'none';
+  canvas.style.display = 'block';
+
   const days = (m.by_day || []);
-  const lbl  = days.map(d => d.date.slice(8));  // DD
+  const lbl  = days.map(d => isMulti ? d.date.slice(5) : d.date.slice(8));  // MM-DD across months, DD within one
   const vals = days.map(d => d.neto);
 
   // Running total
@@ -541,7 +791,7 @@ function renderBrandsChart() {
       labels,
       datasets: BRANDS.map(b => ({
         label: b === 'RRS HA Long Lasting' ? 'RRS' : b,
-        data: last12.map(m => (m.by_brand || {})[b] || 0),
+        data: last12.map(m => vendorBrandForMonth(m, selectedVendor, b)),
         borderColor: BRAND_COLORS[b],
         backgroundColor: BRAND_COLORS[b] + '22',
         pointRadius: 3,
@@ -566,24 +816,25 @@ function renderBrandsChart() {
 }
 
 // ── Vendor table ─────────────────────────────────────────────────────────────
-function renderVendorTable(m, label) {
+function renderVendorTable(agg, label) {
   document.getElementById('table-vendor-title').textContent = `Vendedores — ${label}`;
-  const bv    = m.by_vendor || {};
-  const bvb   = m.by_vendor_brand || {};
+  const bv    = agg.by_vendor || {};
+  const bvb   = agg.by_vendor_brand || {};
   const tbody = document.getElementById('tbody-vendor');
   tbody.innerHTML = '';
 
+  const filterName = selectedVendor;
   const rows = Object.entries(bv)
-    .map(([uid, v]) => ({uid, ...v}))
+    .filter(([name]) => filterName === 'all' || name === filterName)
+    .map(([name, v]) => ({name, ...v}))
     .sort((a, b) => b.neto - a.neto);
 
   rows.forEach(r => {
-    const name  = usersMap[r.uid] || r.uid;
-    const teox  = (bvb[r.uid] || {})['Teoxane'] || 0;
-    const rrs   = (bvb[r.uid] || {})['RRS HA Long Lasting'] || 0;
+    const teox  = (bvb[r.name] || {})['Teoxane'] || 0;
+    const rrs   = (bvb[r.name] || {})['RRS HA Long Lasting'] || 0;
     const tr = document.createElement('tr');
     tr.innerHTML = `
-      <td><strong>${name}</strong></td>
+      <td><strong>${r.name}</strong></td>
       <td>${M(r.neto)}</td>
       <td style="color:${BRAND_COLORS['Teoxane']}">${M(teox)}</td>
       <td style="color:${BRAND_COLORS['RRS HA Long Lasting']}">${M(rrs)}</td>
@@ -591,39 +842,46 @@ function renderVendorTable(m, label) {
     tbody.appendChild(tr);
   });
 
-  // Total row
-  const totNeto = rows.reduce((s, r) => s + r.neto, 0);
-  const totTeox = rows.reduce((s, r) => s + ((bvb[r.uid]||{})['Teoxane']||0), 0);
-  const totRrs  = rows.reduce((s, r) => s + ((bvb[r.uid]||{})['RRS HA Long Lasting']||0), 0);
-  const tfoot = document.createElement('tr');
-  tfoot.style.fontWeight = '700';
-  tfoot.style.background = '#f8fafc';
-  tfoot.innerHTML = `
-    <td>Total</td>
-    <td>${M(totNeto)}</td>
-    <td style="color:${BRAND_COLORS['Teoxane']}">${M(totTeox)}</td>
-    <td style="color:${BRAND_COLORS['RRS HA Long Lasting']}">${M(totRrs)}</td>
-  `;
-  tbody.appendChild(tfoot);
+  if (filterName === 'all' && rows.length > 1) {
+    const totNeto = rows.reduce((s, r) => s + r.neto, 0);
+    const totTeox = rows.reduce((s, r) => s + ((bvb[r.name]||{})['Teoxane']||0), 0);
+    const totRrs  = rows.reduce((s, r) => s + ((bvb[r.name]||{})['RRS HA Long Lasting']||0), 0);
+    const tfoot = document.createElement('tr');
+    tfoot.style.fontWeight = '700';
+    tfoot.style.background = '#f8fafc';
+    tfoot.innerHTML = `
+      <td>Total</td>
+      <td>${M(totNeto)}</td>
+      <td style="color:${BRAND_COLORS['Teoxane']}">${M(totTeox)}</td>
+      <td style="color:${BRAND_COLORS['RRS HA Long Lasting']}">${M(totRrs)}</td>
+    `;
+    tbody.appendChild(tfoot);
+  }
 }
 
 // ── Cumplimiento table ───────────────────────────────────────────────────────
-function renderCumplTable(m, t, label) {
+function renderCumplTable(agg, t, label) {
   document.getElementById('table-cumpl-title').textContent = `Cumplimiento — ${label}`;
-  const bvb   = m.by_vendor_brand || {};
+  const bvb   = agg.by_vendor_brand || {};
   const tbody = document.getElementById('tbody-cumpl');
   tbody.innerHTML = '';
 
   if (!t) {
-    tbody.innerHTML = '<tr><td colspan="5" style="color:#94a3b8;text-align:center">Sin objetivos para este mes</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="5" style="color:#94a3b8;text-align:center">Sin objetivos para este período</td></tr>';
     return;
   }
 
-  const vendorIds = Object.keys(t.by_vendor || {});
-  vendorIds.forEach(uid => {
-    const name    = usersMap[uid] || uid;
-    const real    = bvb[uid] || {};
-    const targets = t.by_vendor[uid] || {};
+  const filterName = selectedVendor;
+  const vendorIds = Object.keys(t.by_vendor || {}).filter(name => filterName === 'all' || name === filterName);
+
+  if (!vendorIds.length) {
+    tbody.innerHTML = '<tr><td colspan="5" style="color:#94a3b8;text-align:center">Sin objetivo para este vendedor</td></tr>';
+    return;
+  }
+
+  vendorIds.forEach(name => {
+    const real    = bvb[name] || {};
+    const targets = t.by_vendor[name] || {};
     const teoxReal = real['Teoxane'] || 0;
     const teoxObj  = targets['Teoxane'] || 0;
     const rrsReal  = real['RRS HA Long Lasting'] || 0;
@@ -643,26 +901,39 @@ function renderCumplTable(m, t, label) {
   });
 
   // Total row
-  const totTeox = vendorIds.reduce((s, u) => s + ((bvb[u]||{})['Teoxane']||0), 0);
-  const totRrs  = vendorIds.reduce((s, u) => s + ((bvb[u]||{})['RRS HA Long Lasting']||0), 0);
-  const tTeox   = vendorIds.reduce((s, u) => s + ((t.by_vendor[u]||{})['Teoxane']||0), 0);
-  const tRrs    = vendorIds.reduce((s, u) => s + ((t.by_vendor[u]||{})['RRS HA Long Lasting']||0), 0);
-  const tr2 = document.createElement('tr');
-  tr2.style.fontWeight = '700';
-  tr2.style.background = '#f8fafc';
-  tr2.innerHTML = `
-    <td>Total</td>
-    <td style="color:${BRAND_COLORS['Teoxane']}">${M(totTeox)}</td>
-    <td>${tTeox ? `<span class="pill ${pillClass(totTeox/tTeox)}">${PCT(totTeox/tTeox)}</span><br><small>${M(tTeox)}</small>` : '—'}</td>
-    <td style="color:${BRAND_COLORS['RRS HA Long Lasting']}">${M(totRrs)}</td>
-    <td>${tRrs ? `<span class="pill ${pillClass(totRrs/tRrs)}">${PCT(totRrs/tRrs)}</span><br><small>${M(tRrs)}</small>` : '—'}</td>
-  `;
-  tbody.appendChild(tr2);
+  if (filterName === 'all' && vendorIds.length > 1) {
+    const totTeox = vendorIds.reduce((s, u) => s + ((bvb[u]||{})['Teoxane']||0), 0);
+    const totRrs  = vendorIds.reduce((s, u) => s + ((bvb[u]||{})['RRS HA Long Lasting']||0), 0);
+    const tTeox   = vendorIds.reduce((s, u) => s + ((t.by_vendor[u]||{})['Teoxane']||0), 0);
+    const tRrs    = vendorIds.reduce((s, u) => s + ((t.by_vendor[u]||{})['RRS HA Long Lasting']||0), 0);
+    const tr2 = document.createElement('tr');
+    tr2.style.fontWeight = '700';
+    tr2.style.background = '#f8fafc';
+    tr2.innerHTML = `
+      <td>Total</td>
+      <td style="color:${BRAND_COLORS['Teoxane']}">${M(totTeox)}</td>
+      <td>${tTeox ? `<span class="pill ${pillClass(totTeox/tTeox)}">${PCT(totTeox/tTeox)}</span><br><small>${M(tTeox)}</small>` : '—'}</td>
+      <td style="color:${BRAND_COLORS['RRS HA Long Lasting']}">${M(totRrs)}</td>
+      <td>${tRrs ? `<span class="pill ${pillClass(totRrs/tRrs)}">${PCT(totRrs/tRrs)}</span><br><small>${M(tRrs)}</small>` : '—'}</td>
+    `;
+    tbody.appendChild(tr2);
+  }
 }
 
 // ── Top clients ──────────────────────────────────────────────────────────────
-function renderTopClients(m, label) {
-  document.getElementById('table-clients-title').textContent = `Top 10 Clientes — ${label}`;
+function renderTopClients(m, label, isMulti) {
+  document.getElementById('table-clients-title').innerHTML =
+    `Top 10 Clientes — ${label}` + (isMulti && m.top_clients !== null ? '<span class="approx-note">(aprox., suma de tops mensuales)</span>' : '');
+
+  const unavailable = document.getElementById('clients-unavailable');
+  const table = document.getElementById('table-clients');
+  if (m.top_clients === null) {
+    unavailable.style.display = 'flex';
+    table.style.display = 'none';
+    return;
+  }
+  unavailable.style.display = 'none';
+  table.style.display = 'table';
   const tbody = document.getElementById('tbody-clients');
   tbody.innerHTML = '';
   const top = (m.top_clients || []).slice(0, 10);
