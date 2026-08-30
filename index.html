@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AestheticsPro · Dashboard Ventas</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
 <style>
   :root {
     --navy:    #0f2547;
@@ -316,6 +317,8 @@
 // ── Config ─────────────────────────────────────────────────────────────────
 const BRANDS = ['Teoxane', 'RRS HA Long Lasting'];
 const BRAND_COLORS = { 'Teoxane': '#2563eb', 'RRS HA Long Lasting': '#d97706', 'FINE': '#059669' };
+Chart.register(ChartDataLabels);
+Chart.defaults.set('plugins.datalabels', { display: false });
 
 // ── State ──────────────────────────────────────────────────────────────────
 let allMonths = [];
@@ -443,6 +446,13 @@ function monthsForPeriod() {
     }
     default: return [ref]; // this_month
   }
+}
+
+// Which allMonths entries fall inside the currently selected período (used to
+// highlight them in the always-full-history "Ventas Netas Mensuales" chart).
+function periodIndices() {
+  const keys = new Set(monthsForPeriod().map(m => `${m.year}-${m.month}`));
+  return allMonths.map(m => keys.has(`${m.year}-${m.month}`));
 }
 
 function periodLabel(months) {
@@ -650,6 +660,12 @@ function renderMonthlyChart() {
   const totals = allMonths.map(m => vendorNetoForMonth(m, selectedVendor));
   const teoxs  = allMonths.map(m => vendorBrandForMonth(m, selectedVendor, 'Teoxane'));
   const rrss   = allMonths.map(m => vendorBrandForMonth(m, selectedVendor, 'RRS HA Long Lasting'));
+  const inPeriod = periodIndices();
+
+  const pct = (brandVal, i) => {
+    const sum = teoxs[i] + rrss[i];
+    return sum ? Math.round(brandVal / sum * 100) : null;
+  };
 
   if (chartMonthly) chartMonthly.destroy();
   chartMonthly = new Chart(document.getElementById('chart-monthly'), {
@@ -660,16 +676,32 @@ function renderMonthlyChart() {
         {
           label: 'Teoxane',
           data: teoxs,
-          backgroundColor: BRAND_COLORS['Teoxane'] + 'cc',
+          backgroundColor: teoxs.map((_, i) => BRAND_COLORS['Teoxane'] + (inPeriod[i] ? 'ee' : '44')),
+          borderColor: '#0f172a',
+          borderWidth: (ctx) => inPeriod[ctx.dataIndex] ? 1 : 0,
           borderRadius: 4,
           stack: 'brands',
+          datalabels: {
+            display: (ctx) => pct(teoxs[ctx.dataIndex], ctx.dataIndex) !== null,
+            color: 'white',
+            font: { size: 9, weight: '600' },
+            formatter: (v, ctx) => `${pct(v, ctx.dataIndex)}%`,
+          },
         },
         {
           label: 'RRS HA Long Lasting',
           data: rrss,
-          backgroundColor: BRAND_COLORS['RRS HA Long Lasting'] + 'cc',
+          backgroundColor: rrss.map((_, i) => BRAND_COLORS['RRS HA Long Lasting'] + (inPeriod[i] ? 'ee' : '44')),
+          borderColor: '#0f172a',
+          borderWidth: (ctx) => inPeriod[ctx.dataIndex] ? 1 : 0,
           borderRadius: 4,
           stack: 'brands',
+          datalabels: {
+            display: (ctx) => pct(rrss[ctx.dataIndex], ctx.dataIndex) !== null,
+            color: 'white',
+            font: { size: 9, weight: '600' },
+            formatter: (v, ctx) => `${pct(v, ctx.dataIndex)}%`,
+          },
         },
         {
           label: 'Total neto',
@@ -677,11 +709,12 @@ function renderMonthlyChart() {
           type: 'line',
           borderColor: '#0f172a',
           backgroundColor: 'transparent',
-          pointRadius: 3,
-          pointBackgroundColor: '#0f172a',
+          pointRadius: totals.map((_, i) => inPeriod[i] ? 4 : 2),
+          pointBackgroundColor: totals.map((_, i) => inPeriod[i] ? '#0f172a' : '#94a3b8'),
           borderWidth: 1.5,
           tension: 0.2,
           yAxisID: 'y',
+          datalabels: { display: false },
         }
       ]
     },
