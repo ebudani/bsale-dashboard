@@ -197,6 +197,7 @@
         <option value="prev_month">Mes anterior</option>
         <option value="this_year">Año actual</option>
         <option value="prev_year">Año anterior</option>
+        <option value="all_time">Todo</option>
         <option value="custom">Personalizar</option>
       </select>
       <div id="custom-range">
@@ -439,6 +440,7 @@ function monthsForPeriod() {
     case 'prev_month': return refIdx > 0 ? [allMonths[refIdx - 1]] : [ref];
     case 'this_year':  return allMonths.filter(m => m.year === ref.year);
     case 'prev_year':  return allMonths.filter(m => m.year === ref.year - 1);
+    case 'all_time':   return allMonths;
     case 'custom': {
       const from = Math.min(customFromIdx, customToIdx);
       const to   = Math.max(customFromIdx, customToIdx);
@@ -457,6 +459,7 @@ function periodIndices() {
 
 function periodLabel(months) {
   if (!months.length) return '—';
+  if (periodMode === 'all_time') return 'Todo';
   if (months.length === 1) return monthLabel(months[0].year, months[0].month);
   if (periodMode === 'this_year' || periodMode === 'prev_year') return String(months[0].year);
   const first = months[0], last = months[months.length - 1];
@@ -676,7 +679,7 @@ function renderMonthlyChart() {
         {
           label: 'Teoxane',
           data: teoxs,
-          backgroundColor: teoxs.map((_, i) => BRAND_COLORS['Teoxane'] + (inPeriod[i] ? 'ee' : '44')),
+          backgroundColor: teoxs.map((_, i) => BRAND_COLORS['Teoxane'] + (inPeriod[i] ? 'ee' : '99')),
           borderColor: '#0f172a',
           borderWidth: (ctx) => inPeriod[ctx.dataIndex] ? 1 : 0,
           borderRadius: 4,
@@ -691,7 +694,7 @@ function renderMonthlyChart() {
         {
           label: 'RRS HA Long Lasting',
           data: rrss,
-          backgroundColor: rrss.map((_, i) => BRAND_COLORS['RRS HA Long Lasting'] + (inPeriod[i] ? 'ee' : '44')),
+          backgroundColor: rrss.map((_, i) => BRAND_COLORS['RRS HA Long Lasting'] + (inPeriod[i] ? 'ee' : '99')),
           borderColor: '#0f172a',
           borderWidth: (ctx) => inPeriod[ctx.dataIndex] ? 1 : 0,
           borderRadius: 4,
