@@ -173,6 +173,14 @@
     text-align: center;
     padding: 0 16px;
   }
+  /* Inside a chart card: cover the whole area so it doesn't matter what
+     Chart.js does to the canvas's own display style underneath it. */
+  .chart-wrap .unavailable {
+    position: absolute;
+    inset: 0;
+    background: var(--white);
+    z-index: 1;
+  }
   .approx-note { font-size: 10px; color: #94a3b8; font-weight: 400; text-transform: none; letter-spacing: 0; margin-left: 6px; }
 
   @media (max-width: 900px) {
