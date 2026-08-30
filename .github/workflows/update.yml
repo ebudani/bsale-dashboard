@@ -4,6 +4,19 @@ on:
   schedule:
     - cron: "0 8 * * *"   # 8:00 UTC = 5:00 AM Chile (hora Santiago)
   workflow_dispatch:        # permite correrlo manualmente desde GitHub
+    inputs:
+      mode:
+        description: "daily (solo mes actual) o backfill (reprocesa todo el historico con el mapeo RUT->vendedor vigente)"
+        required: false
+        default: "daily"
+        type: choice
+        options:
+          - daily
+          - backfill
+      from:
+        description: "Mes de inicio para backfill (YYYY-MM). Solo aplica si mode=backfill."
+        required: false
+        default: "2025-01"
 
 jobs:
   fetch:
@@ -23,7 +36,12 @@ jobs:
       - name: Fetch Bsale data
         env:
           BSALE_TOKEN: ${{ secrets.BSALE_TOKEN }}
-        run: python scripts/fetch_data.py
+        run: |
+          if [ "${{ github.event.inputs.mode }}" = "backfill" ]; then
+            python scripts/fetch_data.py --backfill --from "${{ github.event.inputs.from }}"
+          else
+            python scripts/fetch_data.py
+          fi
 
       - name: Commit updated data
         run: |
