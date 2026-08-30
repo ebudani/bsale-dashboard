@@ -246,13 +246,20 @@ def build_month_record(year, month, facturas, nc_docs, exenta_docs, clients_meta
             return client_to_vendor[cid]
         return "Sin asignar"
 
-    # By day
+    # By day (total and per vendor)
     by_day = {}
+    by_vendor_day = {}
     for d in facturas + exenta_docs:
         dia = datetime.datetime.utcfromtimestamp(d["emissionDate"]).strftime("%Y-%m-%d")
         by_day.setdefault(dia, {"count": 0, "neto": 0})
         by_day[dia]["count"] += 1
         by_day[dia]["neto"] += d.get("netAmount", 0)
+
+        vname = vendor_for(d)
+        by_vendor_day.setdefault(vname, {})
+        by_vendor_day[vname].setdefault(dia, {"count": 0, "neto": 0})
+        by_vendor_day[vname][dia]["count"] += 1
+        by_vendor_day[vname][dia]["neto"] += d.get("netAmount", 0)
 
     # By vendor (keyed by vendor name from client assignment)
     by_vendor = {}
@@ -279,20 +286,31 @@ def build_month_record(year, month, facturas, nc_docs, exenta_docs, clients_meta
                     by_brand[brand] += signed_neto
                     by_vendor_brand[vname][brand] = by_vendor_brand[vname].get(brand, 0) + signed_neto
 
-    # Top clients
+    # Top clients (total and per vendor)
     by_client = {}
+    by_vendor_client = {}
     for d in facturas + exenta_docs:
         cid = str(d.get("client", {}).get("id", "unknown"))
         by_client.setdefault(cid, {"count": 0, "neto": 0})
         by_client[cid]["count"] += 1
         by_client[cid]["neto"] += d.get("netAmount", 0)
 
-    top_clients = sorted(
-        [{"id": cid, **vals, "name": clients_meta.get(cid, {}).get("name", cid)}
-         for cid, vals in by_client.items()],
-        key=lambda x: x["neto"],
-        reverse=True
-    )[:15]
+        vname = vendor_for(d)
+        by_vendor_client.setdefault(vname, {})
+        by_vendor_client[vname].setdefault(cid, {"count": 0, "neto": 0})
+        by_vendor_client[vname][cid]["count"] += 1
+        by_vendor_client[vname][cid]["neto"] += d.get("netAmount", 0)
+
+    def top_n(client_totals, n=15):
+        return sorted(
+            [{"id": cid, **vals, "name": clients_meta.get(cid, {}).get("name", cid)}
+             for cid, vals in client_totals.items()],
+            key=lambda x: x["neto"],
+            reverse=True
+        )[:n]
+
+    top_clients = top_n(by_client)
+    top_clients_by_vendor = {vname: top_n(totals) for vname, totals in by_vendor_client.items()}
 
     record = {
         "year": year,
@@ -307,9 +325,15 @@ def build_month_record(year, month, facturas, nc_docs, exenta_docs, clients_meta
             for k, v in sorted(by_day.items())
         ],
         "by_vendor": by_vendor,
+        "by_vendor_day": {
+            vname: [{"date": k, "count": v["count"], "neto": v["neto"]}
+                     for k, v in sorted(days.items())]
+            for vname, days in by_vendor_day.items()
+        },
         "by_brand": by_brand,
         "by_vendor_brand": by_vendor_brand,
         "top_clients": top_clients,
+        "top_clients_by_vendor": top_clients_by_vendor,
     }
     return record
 

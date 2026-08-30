@@ -478,9 +478,11 @@ function periodLabel(months) {
 function aggregateMonths(months) {
   const agg = {
     total_neto: 0, count_facturas: 0, count_nc: 0, neto_facturas: 0, neto_nc: 0,
-    by_brand: {}, by_vendor: {}, by_vendor_brand: {}, by_day: [], top_clients: []
+    by_brand: {}, by_vendor: {}, by_vendor_brand: {}, by_day: [], top_clients: [],
+    by_vendor_day: {}, top_clients_by_vendor: {}
   };
   const clientMap = {};
+  const vendorClientMap = {};
   months.forEach(mm => {
     agg.total_neto     += mm.total_neto || 0;
     agg.count_facturas += mm.count_facturas || 0;
@@ -510,9 +512,30 @@ function aggregateMonths(months) {
       clientMap[key].count += c.count || 0;
       clientMap[key].neto  += c.neto  || 0;
     });
+    Object.entries(mm.by_vendor_day || {}).forEach(([k, days]) => {
+      const name = canonVendor(k);
+      agg.by_vendor_day[name] = agg.by_vendor_day[name] || [];
+      (days || []).forEach(d => agg.by_vendor_day[name].push(d));
+    });
+    Object.entries(mm.top_clients_by_vendor || {}).forEach(([k, clients]) => {
+      const name = canonVendor(k);
+      vendorClientMap[name] = vendorClientMap[name] || {};
+      (clients || []).forEach(c => {
+        const key = c.id || c.name;
+        if (!vendorClientMap[name][key]) vendorClientMap[name][key] = { name: c.name, count: 0, neto: 0 };
+        vendorClientMap[name][key].count += c.count || 0;
+        vendorClientMap[name][key].neto  += c.neto  || 0;
+      });
+    });
   });
   agg.by_day.sort((a, b) => a.date.localeCompare(b.date));
   agg.top_clients = Object.values(clientMap).sort((a, b) => b.neto - a.neto);
+  Object.keys(agg.by_vendor_day).forEach(name => {
+    agg.by_vendor_day[name].sort((a, b) => a.date.localeCompare(b.date));
+  });
+  Object.entries(vendorClientMap).forEach(([name, totals]) => {
+    agg.top_clients_by_vendor[name] = Object.values(totals).sort((a, b) => b.neto - a.neto);
+  });
   return agg;
 }
 
@@ -536,8 +559,10 @@ function aggregateTargets(months) {
 }
 
 // A vendor filter narrows the period aggregate down to one person's numbers.
-// Daily curve and top clients aren't broken down by vendor in the source data,
-// so they're marked unavailable (null) rather than silently showing totals.
+// count_facturas/count_nc stay null (that split isn't tracked per vendor);
+// by_day and top_clients default to [] when fetch_data.py hasn't been
+// re-run yet for a given month (older data won't have the by_vendor_day /
+// top_clients_by_vendor fields) rather than showing stale totals.
 function applyVendorFilter(agg, vendorName) {
   if (vendorName === 'all') return agg;
   const v = agg.by_vendor[vendorName] || { count: 0, neto: 0 };
@@ -548,8 +573,8 @@ function applyVendorFilter(agg, vendorName) {
     count_facturas: null,
     count_nc: null,
     by_brand: agg.by_vendor_brand[vendorName] || {},
-    by_day: null,
-    top_clients: null,
+    by_day: agg.by_vendor_day[vendorName] || [],
+    top_clients: agg.top_clients_by_vendor[vendorName] || [],
   };
 }
 
