@@ -180,9 +180,9 @@ def scan_nc_and_exentas_all_months():
 
 
 def fetch_document_details(doc_id):
-    """Returns {brand: neto} for ALL line items of a document (handles pagination)."""
+    """Returns {brand: {"neto": n, "qty": q}} for ALL line items of a document (handles pagination)."""
     try:
-        brand_neto = {}
+        brand_totals = {}
         offset = 0
         while True:
             data = get_json(
@@ -196,12 +196,13 @@ def fetch_document_details(doc_id):
                 if variant_id is None:
                     continue
                 brand = VARIANT_TO_BRAND.get(variant_id, "Otros")
-                neto = item.get("netAmount", 0)
-                brand_neto[brand] = brand_neto.get(brand, 0) + neto
+                totals = brand_totals.setdefault(brand, {"neto": 0, "qty": 0})
+                totals["neto"] += item.get("netAmount", 0)
+                totals["qty"] += item.get("quantity", 0)
             offset += len(items)
             if offset >= count or not items:
                 break
-        return brand_neto
+        return brand_totals
     except Exception:
         return {}
 
@@ -209,7 +210,7 @@ def fetch_document_details(doc_id):
 def fetch_brand_details(facturas, exenta_docs, nc_docs):
     """
     Fetches line-item details for all documents.
-    Returns {doc_id: {brand: signed_neto}}
+    Returns {doc_id: {brand: {"neto": signed_neto, "qty": signed_qty}}}
     Facturas/exentas -> positive; NCs -> negative.
     """
     all_docs = list(facturas) + list(exenta_docs) + list(nc_docs)
@@ -222,7 +223,9 @@ def fetch_brand_details(facturas, exenta_docs, nc_docs):
             print(f"\r    details {i}/{total}...", end="", flush=True)
         raw = fetch_document_details(d["id"])
         if d["id"] in nc_ids:
-            brand_details[d["id"]] = {b: -n for b, n in raw.items()}
+            brand_details[d["id"]] = {
+                b: {"neto": -v["neto"], "qty": -v["qty"]} for b, v in raw.items()
+            }
         else:
             brand_details[d["id"]] = raw
 
@@ -281,19 +284,27 @@ def build_month_record(year, month, facturas, nc_docs, exenta_docs, clients_meta
         for d in facturas + exenta_docs + nc_docs:
             vname = vendor_for(d)
             by_vendor_brand.setdefault(vname, {b: 0 for b in ALL_BRANDS})
-            for brand, signed_neto in brand_details.get(d["id"], {}).items():
+            for brand, vals in brand_details.get(d["id"], {}).items():
                 if brand in by_brand:
-                    by_brand[brand] += signed_neto
-                    by_vendor_brand[vname][brand] = by_vendor_brand[vname].get(brand, 0) + signed_neto
+                    by_brand[brand] += vals["neto"]
+                    by_vendor_brand[vname][brand] = by_vendor_brand[vname].get(brand, 0) + vals["neto"]
 
-    # Top clients (total and per vendor)
+    # Top clients (total and per vendor), including unit counts by brand
     by_client = {}
+    by_client_units = {}
     by_vendor_client = {}
+    by_vendor_client_units = {}
     for d in facturas + exenta_docs:
         cid = str(d.get("client", {}).get("id", "unknown"))
         by_client.setdefault(cid, {"count": 0, "neto": 0})
         by_client[cid]["count"] += 1
         by_client[cid]["neto"] += d.get("netAmount", 0)
+
+        doc_brands = brand_details.get(d["id"], {}) if brand_details else {}
+        units = by_client_units.setdefault(cid, {"Teoxane": 0, "RRS HA Long Lasting": 0})
+        for brand, vals in doc_brands.items():
+            if brand in units:
+                units[brand] += vals.get("qty", 0)
 
         vname = vendor_for(d)
         by_vendor_client.setdefault(vname, {})
@@ -301,16 +312,31 @@ def build_month_record(year, month, facturas, nc_docs, exenta_docs, clients_meta
         by_vendor_client[vname][cid]["count"] += 1
         by_vendor_client[vname][cid]["neto"] += d.get("netAmount", 0)
 
-    def top_n(client_totals, n=15):
-        return sorted(
-            [{"id": cid, **vals, "name": clients_meta.get(cid, {}).get("name", cid)}
-             for cid, vals in client_totals.items()],
-            key=lambda x: x["neto"],
-            reverse=True
-        )[:n]
+        vunits = by_vendor_client_units.setdefault(vname, {}).setdefault(
+            cid, {"Teoxane": 0, "RRS HA Long Lasting": 0}
+        )
+        for brand, vals in doc_brands.items():
+            if brand in vunits:
+                vunits[brand] += vals.get("qty", 0)
 
-    top_clients = top_n(by_client)
-    top_clients_by_vendor = {vname: top_n(totals) for vname, totals in by_vendor_client.items()}
+    def top_n(client_totals, units_map, n=15):
+        rows = []
+        for cid, vals in client_totals.items():
+            u = units_map.get(cid, {})
+            rows.append({
+                "id": cid,
+                **vals,
+                "teox_units": u.get("Teoxane", 0),
+                "rrs_units": u.get("RRS HA Long Lasting", 0),
+                "name": clients_meta.get(cid, {}).get("name", cid),
+            })
+        return sorted(rows, key=lambda x: x["neto"], reverse=True)[:n]
+
+    top_clients = top_n(by_client, by_client_units)
+    top_clients_by_vendor = {
+        vname: top_n(totals, by_vendor_client_units.get(vname, {}))
+        for vname, totals in by_vendor_client.items()
+    }
 
     record = {
         "year": year,

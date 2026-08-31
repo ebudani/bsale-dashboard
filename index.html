@@ -312,7 +312,7 @@
       <table id="table-clients">
         <thead>
           <tr>
-            <th>#</th><th>Cliente</th><th>Facturas</th><th>Neto</th><th>% del período</th>
+            <th>#</th><th>Cliente</th><th>Facturas</th><th>Neto</th><th>Unid. Teoxane</th><th>Unid. RRS</th><th>% del período</th>
           </tr>
         </thead>
         <tbody id="tbody-clients"></tbody>
@@ -508,9 +508,11 @@ function aggregateMonths(months) {
     (mm.by_day || []).forEach(d => agg.by_day.push(d));
     (mm.top_clients || []).forEach(c => {
       const key = c.id || c.name;
-      if (!clientMap[key]) clientMap[key] = { name: c.name, count: 0, neto: 0 };
-      clientMap[key].count += c.count || 0;
-      clientMap[key].neto  += c.neto  || 0;
+      if (!clientMap[key]) clientMap[key] = { name: c.name, count: 0, neto: 0, teox_units: 0, rrs_units: 0 };
+      clientMap[key].count      += c.count || 0;
+      clientMap[key].neto       += c.neto  || 0;
+      clientMap[key].teox_units += c.teox_units || 0;
+      clientMap[key].rrs_units  += c.rrs_units  || 0;
     });
     Object.entries(mm.by_vendor_day || {}).forEach(([k, days]) => {
       const name = canonVendor(k);
@@ -522,9 +524,11 @@ function aggregateMonths(months) {
       vendorClientMap[name] = vendorClientMap[name] || {};
       (clients || []).forEach(c => {
         const key = c.id || c.name;
-        if (!vendorClientMap[name][key]) vendorClientMap[name][key] = { name: c.name, count: 0, neto: 0 };
-        vendorClientMap[name][key].count += c.count || 0;
-        vendorClientMap[name][key].neto  += c.neto  || 0;
+        if (!vendorClientMap[name][key]) vendorClientMap[name][key] = { name: c.name, count: 0, neto: 0, teox_units: 0, rrs_units: 0 };
+        vendorClientMap[name][key].count      += c.count || 0;
+        vendorClientMap[name][key].neto       += c.neto  || 0;
+        vendorClientMap[name][key].teox_units += c.teox_units || 0;
+        vendorClientMap[name][key].rrs_units  += c.rrs_units  || 0;
       });
     });
   });
@@ -1014,6 +1018,8 @@ function renderTopClients(m, label, isMulti) {
       <td><strong>${c.name}</strong></td>
       <td>${c.count}</td>
       <td>${M(c.neto)}</td>
+      <td style="color:${BRAND_COLORS['Teoxane']}">${c.teox_units || 0}</td>
+      <td style="color:${BRAND_COLORS['RRS HA Long Lasting']}">${c.rrs_units || 0}</td>
       <td>${pct}%</td>
     `;
     tbody.appendChild(tr);
