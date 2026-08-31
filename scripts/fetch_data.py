@@ -32,8 +32,11 @@ TIPO_FACTURA = {"5"}
 TIPO_EXENTA  = {"15"}
 TIPO_NC      = {"2"}
 
+# Facturas electronicas are the newest document type adopted, so they occupy
+# a suffix of /documents.json starting at this offset (stable historically).
+# The end of that suffix is NOT fixed here -- it grows with every new factura,
+# so it's fetched fresh each run via get_total_document_count() in main().
 FACT_BLOCK_START = 3100
-FACT_BLOCK_END   = 5058
 NC_BLOCK_START   = 0
 NC_BLOCK_END     = 2128
 
@@ -115,25 +118,37 @@ def date_at_offset(offset, block_end):
     return items[0]["emissionDate"] if items else 99999999999
 
 
-def fetch_facturas_for_month(year, month):
+def get_total_document_count():
+    """
+    Total documents currently in the account. Facturas electronicas are the
+    newest/last block in /documents.json, so this IS the true upper bound of
+    that block -- it grows every time a new factura is issued. Fetching it
+    fresh on every run keeps recently-issued facturas from silently falling
+    outside the search range as the document count grows.
+    """
+    data = get_json(f"{BASE_URL}/documents.json?limit=1&offset=0")
+    return data.get("count", 0)
+
+
+def fetch_facturas_for_month(year, month, fact_block_end):
     """Binary search + paginated fetch within the facturas block."""
     start_ts = calendar.timegm(datetime.datetime(year, month, 1, 0, 0, 0).timetuple())
     last_day = calendar.monthrange(year, month)[1]
     end_ts = calendar.timegm(datetime.datetime(year, month, last_day, 23, 59, 59).timetuple())
 
-    lo, hi = FACT_BLOCK_START, FACT_BLOCK_END
+    lo, hi = FACT_BLOCK_START, fact_block_end
     while lo < hi:
         mid = (lo + hi) // 2
-        if date_at_offset(mid, FACT_BLOCK_END) < start_ts:
+        if date_at_offset(mid, fact_block_end) < start_ts:
             lo = mid + 1
         else:
             hi = mid
     s_off = lo
 
-    lo2, hi2 = s_off, FACT_BLOCK_END
+    lo2, hi2 = s_off, fact_block_end
     while lo2 < hi2:
         mid = (lo2 + hi2 + 1) // 2
-        if date_at_offset(mid, FACT_BLOCK_END) <= end_ts:
+        if date_at_offset(mid, fact_block_end) <= end_ts:
             lo2 = mid
         else:
             hi2 = mid - 1
@@ -145,7 +160,10 @@ def fetch_facturas_for_month(year, month):
         limit = min(50, e_off - off + 1)
         data = get_json(f"{BASE_URL}/documents.json?limit={limit}&offset={off}")
         for d in data.get("items", []):
-            if start_ts <= d.get("emissionDate", 0) <= end_ts:
+            if (
+                start_ts <= d.get("emissionDate", 0) <= end_ts
+                and d.get("document_type", {}).get("id") in TIPO_FACTURA
+            ):
                 docs.append(d)
         off += limit
     return docs
@@ -438,12 +456,16 @@ def main():
     client_to_vendor = build_client_to_vendor(clients, rut_to_vendor)
     print(f"Vendor lookup: {len(client_to_vendor)} clients mapped")
 
+    total_docs = get_total_document_count()
+    fact_block_end = total_docs - 1
+    print(f"Total documents in account: {total_docs} (facturas search range: {FACT_BLOCK_START}-{fact_block_end})")
+
     nc_by_month = scan_nc_and_exentas_all_months()
 
     for year, month in targets:
         label = f"{year}-{month:02d}"
         print(f"  Fetching facturas {label}...", end=" ", flush=True)
-        facturas = fetch_facturas_for_month(year, month)
+        facturas = fetch_facturas_for_month(year, month, fact_block_end)
         nc_data = nc_by_month.get((year, month), {"nc": [], "exenta": []})
         print(
             f"{len(facturas)} facturas | {len(nc_data['nc'])} NC | "
