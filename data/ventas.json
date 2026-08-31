@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-31T16:11:18.991993Z",
+  "updated_at": "2026-08-31T21:37:12.160787Z",
   "users": {
     "7": "Cindy Monsalves",
     "9": "Daisy Ponce",
@@ -4184,6 +4184,18 @@
     "1236": {
       "name": "Mauricio Saez Martínez",
       "rut": "17957548-5"
+    },
+    "1237": {
+      "name": "Romina Saravia Alvarez",
+      "rut": "17307609-6"
+    },
+    "1238": {
+      "name": "Servicios Médicos Patricia Ruth Cerda Soto E.I.R.L.",
+      "rut": "76648429-8"
+    },
+    "1239": {
+      "name": "Carolina Leal Venegas",
+      "rut": "20325177-7"
     }
   },
   "months": [
@@ -22773,11 +22785,11 @@
     {
       "year": 2026,
       "month": 8,
-      "count_facturas": 119,
+      "count_facturas": 114,
       "count_nc": 2,
-      "neto_facturas": 135895003,
+      "neto_facturas": 125733302,
       "neto_nc": 1912227,
-      "total_neto": 133982776,
+      "total_neto": 123821075,
       "by_day": [
         {
           "date": "2026-08-03",
@@ -22866,27 +22878,22 @@
         },
         {
           "date": "2026-08-27",
-          "count": 10,
-          "neto": 11781361
-        },
-        {
-          "date": "2026-08-28",
-          "count": 3,
-          "neto": 6489388
+          "count": 8,
+          "neto": 8109048
         }
       ],
       "by_vendor": {
         "Monica Urrutia": {
-          "count": 57,
-          "neto": 73929256
+          "count": 54,
+          "neto": 67439868
         },
         "Daisy Ponce": {
           "count": 21,
           "neto": 18648083
         },
         "Cindy Monsalves": {
-          "count": 41,
-          "neto": 41405437
+          "count": 39,
+          "neto": 37733124
         }
       },
       "by_vendor_day": {
@@ -22980,11 +22987,6 @@
             "date": "2026-08-27",
             "count": 3,
             "neto": 5657363
-          },
-          {
-            "date": "2026-08-28",
-            "count": 3,
-            "neto": 6489388
           }
         ],
         "Daisy Ponce": [
@@ -23127,20 +23129,20 @@
           },
           {
             "date": "2026-08-27",
-            "count": 5,
-            "neto": 5708674
+            "count": 3,
+            "neto": 2036361
           }
         ]
       },
       "by_brand": {
-        "Teoxane": 116174596,
-        "RRS HA Long Lasting": 17808180,
+        "Teoxane": 109585524,
+        "RRS HA Long Lasting": 14235551,
         "FINE": 0
       },
       "by_vendor_brand": {
         "Monica Urrutia": {
-          "Teoxane": 63829710,
-          "RRS HA Long Lasting": 10099546,
+          "Teoxane": 60912951,
+          "RRS HA Long Lasting": 6526917,
           "FINE": 0
         },
         "Daisy Ponce": {
@@ -23149,7 +23151,7 @@
           "FINE": 0
         },
         "Cindy Monsalves": {
-          "Teoxane": 37496157,
+          "Teoxane": 33823844,
           "RRS HA Long Lasting": 3909280,
           "FINE": 0
         }
@@ -23164,16 +23166,6 @@
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "Inversiones Altamira Spa"
-        },
-        {
-          "id": "921",
-          "count": 2,
-          "neto": 4831962,
-          "teox_neto": 4337290,
-          "teox_units": 40.0,
-          "rrs_neto": 494672,
-          "rrs_units": 5.0,
-          "name": "SOCIEDAD ODONTOLOGICA DEL MAULE SPA"
         },
         {
           "id": "1013",
@@ -23216,26 +23208,6 @@
           "name": "SERVICIOS MEDICOS TAOTE LTDA"
         },
         {
-          "id": "591",
-          "count": 3,
-          "neto": 3519558,
-          "teox_neto": 2420288,
-          "teox_units": 20.0,
-          "rrs_neto": 1099270,
-          "rrs_units": 10.0,
-          "name": "THE BEAUTY LAB SPA"
-        },
-        {
-          "id": "619",
-          "count": 1,
-          "neto": 3197484,
-          "teox_neto": 1218797,
-          "teox_units": 10.0,
-          "rrs_neto": 1978687,
-          "rrs_units": 20.0,
-          "name": "DERMATOLOGIA Y ACUPUNTURA LIMITADA"
-        },
-        {
           "id": "597",
           "count": 2,
           "neto": 3066326,
@@ -23256,6 +23228,16 @@
           "name": "CLINICA ÓPALO SPA"
         },
         {
+          "id": "921",
+          "count": 1,
+          "neto": 2639328,
+          "teox_neto": 2639328,
+          "teox_units": 25.0,
+          "rrs_neto": 0,
+          "rrs_units": 0,
+          "name": "SOCIEDAD ODONTOLOGICA DEL MAULE SPA"
+        },
+        {
           "id": "1221",
           "count": 1,
           "neto": 2546669,
@@ -23264,16 +23246,6 @@
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "Inversiones Mave SPA"
-        },
-        {
-          "id": "552",
-          "count": 1,
-          "neto": 2496281,
-          "teox_neto": 2496281,
-          "teox_units": 20.0,
-          "rrs_neto": 0,
-          "rrs_units": 0,
-          "name": "SOCIEDAD DE SERVICIOS MEDICOS Y ESTETICOS MPRS LIMITADA"
         },
         {
           "id": "916",
@@ -23304,20 +23276,40 @@
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "De Santiago Odontologia SPA"
+        },
+        {
+          "id": "469",
+          "count": 1,
+          "neto": 2437594,
+          "teox_neto": 2437594,
+          "teox_units": 20.0,
+          "rrs_neto": 0,
+          "rrs_units": 0,
+          "name": "ODONTOLOGÍA Y ESTÉTICA DRA GALLARDO SPA"
+        },
+        {
+          "id": "591",
+          "count": 2,
+          "neto": 2420288,
+          "teox_neto": 2420288,
+          "teox_units": 20.0,
+          "rrs_neto": 0,
+          "rrs_units": 0,
+          "name": "THE BEAUTY LAB SPA"
+        },
+        {
+          "id": "1019",
+          "count": 1,
+          "neto": 2375989,
+          "teox_neto": 2375989,
+          "teox_units": 20.0,
+          "rrs_neto": 0,
+          "rrs_units": 0,
+          "name": "CLÍNICA DRA. JAVIERA GUEVARA LIZANA LIMITADA"
         }
       ],
       "top_clients_by_vendor": {
         "Monica Urrutia": [
-          {
-            "id": "921",
-            "count": 2,
-            "neto": 4831962,
-            "teox_neto": 4337290,
-            "teox_units": 40.0,
-            "rrs_neto": 494672,
-            "rrs_units": 5.0,
-            "name": "SOCIEDAD ODONTOLOGICA DEL MAULE SPA"
-          },
           {
             "id": "1013",
             "count": 2,
@@ -23359,26 +23351,6 @@
             "name": "SERVICIOS MEDICOS TAOTE LTDA"
           },
           {
-            "id": "591",
-            "count": 3,
-            "neto": 3519558,
-            "teox_neto": 2420288,
-            "teox_units": 20.0,
-            "rrs_neto": 1099270,
-            "rrs_units": 10.0,
-            "name": "THE BEAUTY LAB SPA"
-          },
-          {
-            "id": "619",
-            "count": 1,
-            "neto": 3197484,
-            "teox_neto": 1218797,
-            "teox_units": 10.0,
-            "rrs_neto": 1978687,
-            "rrs_units": 20.0,
-            "name": "DERMATOLOGIA Y ACUPUNTURA LIMITADA"
-          },
-          {
             "id": "597",
             "count": 2,
             "neto": 3066326,
@@ -23387,6 +23359,16 @@
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "DR MATTATALL SPA"
+          },
+          {
+            "id": "921",
+            "count": 1,
+            "neto": 2639328,
+            "teox_neto": 2639328,
+            "teox_units": 25.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "SOCIEDAD ODONTOLOGICA DEL MAULE SPA"
           },
           {
             "id": "1221",
@@ -23429,6 +23411,16 @@
             "name": "ODONTOLOGÍA Y ESTÉTICA DRA GALLARDO SPA"
           },
           {
+            "id": "591",
+            "count": 2,
+            "neto": 2420288,
+            "teox_neto": 2420288,
+            "teox_units": 20.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "THE BEAUTY LAB SPA"
+          },
+          {
             "id": "1019",
             "count": 1,
             "neto": 2375989,
@@ -23457,6 +23449,16 @@
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SERVICIOS PROFESIONALES BEAUTY & SOUL LIMITADA"
+          },
+          {
+            "id": "888",
+            "count": 2,
+            "neto": 2033771,
+            "teox_neto": 2033771,
+            "teox_units": 15.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "SERVICIOS MEDICOS M Y H LIMITADA"
           }
         ],
         "Daisy Ponce": [
@@ -23623,16 +23625,6 @@
             "name": "Inversiones Altamira Spa"
           },
           {
-            "id": "552",
-            "count": 1,
-            "neto": 2496281,
-            "teox_neto": 2496281,
-            "teox_units": 20.0,
-            "rrs_neto": 0,
-            "rrs_units": 0,
-            "name": "SOCIEDAD DE SERVICIOS MEDICOS Y ESTETICOS MPRS LIMITADA"
-          },
-          {
             "id": "1091",
             "count": 1,
             "neto": 2437594,
@@ -23723,16 +23715,6 @@
             "name": "SERVICIOS ODONTOLOGICOS ROMAN MERDECH Y COMPANIA SPA"
           },
           {
-            "id": "1236",
-            "count": 1,
-            "neto": 1176032,
-            "teox_neto": 1176032,
-            "teox_units": 10.0,
-            "rrs_neto": 0,
-            "rrs_units": 0,
-            "name": "Mauricio Saez Martínez"
-          },
-          {
             "id": "934",
             "count": 1,
             "neto": 803325,
@@ -23761,6 +23743,26 @@
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SERVICIOS ODONTOLÓGICOS N R SPA"
+          },
+          {
+            "id": "1235",
+            "count": 1,
+            "neto": 696477,
+            "teox_neto": 696477,
+            "teox_units": 5.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "Dra. Barbara Guzman Spa"
+          },
+          {
+            "id": "1062",
+            "count": 1,
+            "neto": 695823,
+            "teox_neto": 695823,
+            "teox_units": 5.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "DRA. DASA SPA"
           }
         ]
       }
