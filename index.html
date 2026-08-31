@@ -252,9 +252,15 @@
     </div>
 
     <!-- Main charts -->
-    <div class="full-row card">
-      <h2>Ventas Netas Mensuales</h2>
-      <div class="chart-wrap"><canvas id="chart-monthly"></canvas></div>
+    <div class="charts-row full-row">
+      <div class="card">
+        <h2>Ventas Netas Mensuales</h2>
+        <div class="chart-wrap"><canvas id="chart-monthly"></canvas></div>
+      </div>
+      <div class="card">
+        <h2 id="chart-sku-title">Ventas por Producto — </h2>
+        <div class="chart-wrap"><canvas id="chart-sku"></canvas></div>
+      </div>
     </div>
 
     <!-- Daily + Brand by month -->
@@ -339,7 +345,8 @@ let selectedVendor = 'all';
 let periodMode = 'this_month';
 let customFromIdx = 0;
 let customToIdx = 0;
-let chartMonthly, chartDaily, chartBrands;
+let chartMonthly, chartDaily, chartBrands, chartSku;
+const SKU_COLORS = ['#2563eb', '#d97706', '#059669', '#dc2626', '#7c3aed', '#0891b2', '#db2777', '#65a30d', '#ea580c', '#4f46e5'];
 
 // by_vendor / by_vendor_brand keys are inconsistent across months (some store the
 // numeric Bsale user id, others already store the name) — always resolve through
@@ -481,7 +488,7 @@ function aggregateMonths(months) {
   const agg = {
     total_neto: 0, count_facturas: 0, count_nc: 0, neto_facturas: 0, neto_nc: 0,
     by_brand: {}, by_vendor: {}, by_vendor_brand: {}, by_day: [], top_clients: [],
-    by_vendor_day: {}, top_clients_by_vendor: {}
+    by_vendor_day: {}, top_clients_by_vendor: {}, by_sku: {}, by_vendor_sku: {}
   };
   const clientMap = {};
   const vendorClientMap = {};
@@ -493,6 +500,16 @@ function aggregateMonths(months) {
     agg.neto_nc        += mm.neto_nc || 0;
     Object.entries(mm.by_brand || {}).forEach(([b, v]) => {
       agg.by_brand[b] = (agg.by_brand[b] || 0) + v;
+    });
+    Object.entries(mm.by_sku || {}).forEach(([sku, v]) => {
+      agg.by_sku[sku] = (agg.by_sku[sku] || 0) + v;
+    });
+    Object.entries(mm.by_vendor_sku || {}).forEach(([k, skus]) => {
+      const name = canonVendor(k);
+      agg.by_vendor_sku[name] = agg.by_vendor_sku[name] || {};
+      Object.entries(skus || {}).forEach(([sku, v]) => {
+        agg.by_vendor_sku[name][sku] = (agg.by_vendor_sku[name][sku] || 0) + v;
+      });
     });
     Object.entries(mm.by_vendor || {}).forEach(([k, v]) => {
       const name = canonVendor(k);
@@ -585,6 +602,7 @@ function applyVendorFilter(agg, vendorName) {
     by_brand: agg.by_vendor_brand[vendorName] || {},
     by_day: agg.by_vendor_day[vendorName] || [],
     top_clients: agg.top_clients_by_vendor[vendorName] || [],
+    by_sku: agg.by_vendor_sku[vendorName] || {},
   };
 }
 
@@ -612,6 +630,7 @@ function render() {
 
   renderKPIs(view, t, label);
   renderMonthlyChart();
+  renderSkuChart(view, label);
   renderDailyChart(view, label, months.length > 1);
   renderBrandsChart();
   renderVendorTable(agg, label);
@@ -784,6 +803,59 @@ function renderMonthlyChart() {
           },
           grid: { color: '#f1f5f9' }
         }
+      }
+    }
+  });
+}
+
+// ── Sales by SKU (Producto / Servicio) pie ──────────────────────────────────
+function renderSkuChart(m, label) {
+  document.getElementById('chart-sku-title').textContent = `Ventas por Producto — ${label}`;
+
+  const entries = Object.entries(m.by_sku || {}).filter(([, v]) => v !== 0);
+  const total = entries.reduce((s, [, v]) => s + v, 0);
+  entries.sort((a, b) => b[1] - a[1]);
+
+  const TOP_N = 7;
+  const top = entries.slice(0, TOP_N);
+  const restSum = entries.slice(TOP_N).reduce((s, [, v]) => s + v, 0);
+  if (restSum > 0) top.push(['Otros', restSum]);
+
+  const labels = top.map(([sku]) => sku);
+  const values = top.map(([, v]) => v);
+  const colors = labels.map((_, i) => SKU_COLORS[i % SKU_COLORS.length]);
+
+  if (chartSku) chartSku.destroy();
+  chartSku = new Chart(document.getElementById('chart-sku'), {
+    type: 'doughnut',
+    data: {
+      labels,
+      datasets: [{
+        data: values,
+        backgroundColor: colors,
+        borderColor: '#ffffff',
+        borderWidth: 2,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          position: 'right',
+          labels: { boxWidth: 10, font: { size: 9 }, padding: 8 }
+        },
+        tooltip: {
+          callbacks: {
+            label: ctx => ` ${ctx.label}: ${M(ctx.raw)} (${total ? (ctx.raw/total*100).toFixed(1) : 0}%)`
+          }
+        },
+        datalabels: {
+          display: (ctx) => total && (ctx.dataset.data[ctx.dataIndex] / total) >= 0.05,
+          color: 'white',
+          font: { size: 9, weight: '600' },
+          formatter: (v) => `${(v/total*100).toFixed(0)}%`,
+        },
       }
     }
   });

@@ -198,9 +198,15 @@ def scan_nc_and_exentas_all_months():
 
 
 def fetch_document_details(doc_id):
-    """Returns {brand: {"neto": n, "qty": q}} for ALL line items of a document (handles pagination)."""
+    """
+    Returns {"by_brand": {brand: {"neto","qty"}}, "by_sku": {product_name: {"neto","qty"}}}
+    for ALL line items of a document (handles pagination). by_sku uses Bsale's own
+    "Producto / Servicio" description (the variant's description field), independent
+    of the hardcoded brand mapping.
+    """
     try:
         brand_totals = {}
+        sku_totals = {}
         offset = 0
         while True:
             data = get_json(
@@ -213,22 +219,30 @@ def fetch_document_details(doc_id):
                 variant_id = variant.get("id")
                 if variant_id is None:
                     continue
+                neto = item.get("netAmount", 0)
+                qty = item.get("quantity", 0)
+
                 brand = VARIANT_TO_BRAND.get(variant_id, "Otros")
-                totals = brand_totals.setdefault(brand, {"neto": 0, "qty": 0})
-                totals["neto"] += item.get("netAmount", 0)
-                totals["qty"] += item.get("quantity", 0)
+                bt = brand_totals.setdefault(brand, {"neto": 0, "qty": 0})
+                bt["neto"] += neto
+                bt["qty"] += qty
+
+                sku_name = variant.get("description") or f"Variante {variant_id}"
+                st = sku_totals.setdefault(sku_name, {"neto": 0, "qty": 0})
+                st["neto"] += neto
+                st["qty"] += qty
             offset += len(items)
             if offset >= count or not items:
                 break
-        return brand_totals
+        return {"by_brand": brand_totals, "by_sku": sku_totals}
     except Exception:
-        return {}
+        return {"by_brand": {}, "by_sku": {}}
 
 
 def fetch_brand_details(facturas, exenta_docs, nc_docs):
     """
     Fetches line-item details for all documents.
-    Returns {doc_id: {brand: {"neto": signed_neto, "qty": signed_qty}}}
+    Returns {doc_id: {"by_brand": {brand: {"neto","qty"}}, "by_sku": {product: {"neto","qty"}}}}
     Facturas/exentas -> positive; NCs -> negative.
     """
     all_docs = list(facturas) + list(exenta_docs) + list(nc_docs)
@@ -236,13 +250,17 @@ def fetch_brand_details(facturas, exenta_docs, nc_docs):
     total = len(all_docs)
     brand_details = {}
 
+    def negate(totals):
+        return {k: {"neto": -v["neto"], "qty": -v["qty"]} for k, v in totals.items()}
+
     for i, d in enumerate(all_docs, 1):
         if i % 20 == 0 or i == total:
             print(f"\r    details {i}/{total}...", end="", flush=True)
         raw = fetch_document_details(d["id"])
         if d["id"] in nc_ids:
             brand_details[d["id"]] = {
-                b: {"neto": -v["neto"], "qty": -v["qty"]} for b, v in raw.items()
+                "by_brand": negate(raw["by_brand"]),
+                "by_sku": negate(raw["by_sku"]),
             }
         else:
             brand_details[d["id"]] = raw
@@ -294,18 +312,27 @@ def build_month_record(year, month, facturas, nc_docs, exenta_docs, clients_meta
         by_vendor.setdefault(vname, {"count": 0, "neto": 0})
         by_vendor[vname]["neto"] -= d.get("netAmount", 0)
 
-    # By brand and by vendor+brand
+    # By brand, by vendor+brand, by SKU ("Producto / Servicio") and by vendor+SKU
     by_brand = {b: 0 for b in ALL_BRANDS}
     by_vendor_brand = {}
+    by_sku = {}
+    by_vendor_sku = {}
 
     if brand_details:
         for d in facturas + exenta_docs + nc_docs:
             vname = vendor_for(d)
+            doc_details = brand_details.get(d["id"], {})
+
             by_vendor_brand.setdefault(vname, {b: 0 for b in ALL_BRANDS})
-            for brand, vals in brand_details.get(d["id"], {}).items():
+            for brand, vals in doc_details.get("by_brand", {}).items():
                 if brand in by_brand:
                     by_brand[brand] += vals["neto"]
                     by_vendor_brand[vname][brand] = by_vendor_brand[vname].get(brand, 0) + vals["neto"]
+
+            by_vendor_sku.setdefault(vname, {})
+            for sku, vals in doc_details.get("by_sku", {}).items():
+                by_sku[sku] = by_sku.get(sku, 0) + vals["neto"]
+                by_vendor_sku[vname][sku] = by_vendor_sku[vname].get(sku, 0) + vals["neto"]
 
     # Top clients (total and per vendor), including neto + units by brand
     def empty_brand_totals():
@@ -321,7 +348,7 @@ def build_month_record(year, month, facturas, nc_docs, exenta_docs, clients_meta
         by_client[cid]["count"] += 1
         by_client[cid]["neto"] += d.get("netAmount", 0)
 
-        doc_brands = brand_details.get(d["id"], {}) if brand_details else {}
+        doc_brands = brand_details.get(d["id"], {}).get("by_brand", {}) if brand_details else {}
         brand_totals = by_client_brand.setdefault(cid, empty_brand_totals())
         for brand, vals in doc_brands.items():
             if brand in brand_totals:
@@ -381,6 +408,8 @@ def build_month_record(year, month, facturas, nc_docs, exenta_docs, clients_meta
         },
         "by_brand": by_brand,
         "by_vendor_brand": by_vendor_brand,
+        "by_sku": by_sku,
+        "by_vendor_sku": by_vendor_sku,
         "top_clients": top_clients,
         "top_clients_by_vendor": top_clients_by_vendor,
     }
