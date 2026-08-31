@@ -296,7 +296,9 @@
               <th>Vendedor</th>
               <th>Teoxane</th>
               <th>vs Obj</th>
-              <th>RRS</th>
+              <th>RRS LL</th>
+              <th>vs Obj</th>
+              <th>Total</th>
               <th>vs Obj</th>
             </tr>
           </thead>
@@ -944,7 +946,7 @@ function renderCumplTable(agg, t, label) {
   tbody.innerHTML = '';
 
   if (!t) {
-    tbody.innerHTML = '<tr><td colspan="5" style="color:#94a3b8;text-align:center">Sin objetivos para este período</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="7" style="color:#94a3b8;text-align:center">Sin objetivos para este período</td></tr>';
     return;
   }
 
@@ -952,7 +954,7 @@ function renderCumplTable(agg, t, label) {
   const vendorIds = Object.keys(t.by_vendor || {}).filter(name => filterName === 'all' || name === filterName);
 
   if (!vendorIds.length) {
-    tbody.innerHTML = '<tr><td colspan="5" style="color:#94a3b8;text-align:center">Sin objetivo para este vendedor</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="7" style="color:#94a3b8;text-align:center">Sin objetivo para este vendedor</td></tr>';
     return;
   }
 
@@ -965,6 +967,9 @@ function renderCumplTable(agg, t, label) {
     const rrsObj   = targets['RRS HA Long Lasting'] || 0;
     const teoxR = teoxObj ? teoxReal/teoxObj : null;
     const rrsR  = rrsObj  ? rrsReal/rrsObj   : null;
+    const totalReal = teoxReal + rrsReal;
+    const totalObj  = teoxObj + rrsObj;
+    const totalR    = totalObj ? totalReal/totalObj : null;
 
     const tr = document.createElement('tr');
     tr.innerHTML = `
@@ -973,6 +978,8 @@ function renderCumplTable(agg, t, label) {
       <td>${teoxR !== null ? `<span class="pill ${pillClass(teoxR)}">${PCT(teoxR)}</span><br><small>${M(teoxObj)}</small>` : '—'}</td>
       <td style="color:${BRAND_COLORS['RRS HA Long Lasting']}">${M(rrsReal)}</td>
       <td>${rrsR !== null ? `<span class="pill ${pillClass(rrsR)}">${PCT(rrsR)}</span><br><small>${M(rrsObj)}</small>` : '—'}</td>
+      <td><strong>${M(totalReal)}</strong></td>
+      <td>${totalR !== null ? `<span class="pill ${pillClass(totalR)}">${PCT(totalR)}</span><br><small>${M(totalObj)}</small>` : '—'}</td>
     `;
     tbody.appendChild(tr);
   });
@@ -983,6 +990,9 @@ function renderCumplTable(agg, t, label) {
     const totRrs  = vendorIds.reduce((s, u) => s + ((bvb[u]||{})['RRS HA Long Lasting']||0), 0);
     const tTeox   = vendorIds.reduce((s, u) => s + ((t.by_vendor[u]||{})['Teoxane']||0), 0);
     const tRrs    = vendorIds.reduce((s, u) => s + ((t.by_vendor[u]||{})['RRS HA Long Lasting']||0), 0);
+    const totTotal = totTeox + totRrs;
+    const tTotal    = tTeox + tRrs;
+
     const tr2 = document.createElement('tr');
     tr2.style.fontWeight = '700';
     tr2.style.background = '#f8fafc';
@@ -992,6 +1002,8 @@ function renderCumplTable(agg, t, label) {
       <td>${tTeox ? `<span class="pill ${pillClass(totTeox/tTeox)}">${PCT(totTeox/tTeox)}</span><br><small>${M(tTeox)}</small>` : '—'}</td>
       <td style="color:${BRAND_COLORS['RRS HA Long Lasting']}">${M(totRrs)}</td>
       <td>${tRrs ? `<span class="pill ${pillClass(totRrs/tRrs)}">${PCT(totRrs/tRrs)}</span><br><small>${M(tRrs)}</small>` : '—'}</td>
+      <td>${M(totTotal)}</td>
+      <td>${tTotal ? `<span class="pill ${pillClass(totTotal/tTotal)}">${PCT(totTotal/tTotal)}</span><br><small>${M(tTotal)}</small>` : '—'}</td>
     `;
     tbody.appendChild(tr2);
   }
