@@ -289,11 +289,14 @@ def build_month_record(year, month, facturas, nc_docs, exenta_docs, clients_meta
                     by_brand[brand] += vals["neto"]
                     by_vendor_brand[vname][brand] = by_vendor_brand[vname].get(brand, 0) + vals["neto"]
 
-    # Top clients (total and per vendor), including unit counts by brand
+    # Top clients (total and per vendor), including neto + units by brand
+    def empty_brand_totals():
+        return {"Teoxane": {"neto": 0, "qty": 0}, "RRS HA Long Lasting": {"neto": 0, "qty": 0}}
+
     by_client = {}
-    by_client_units = {}
+    by_client_brand = {}
     by_vendor_client = {}
-    by_vendor_client_units = {}
+    by_vendor_client_brand = {}
     for d in facturas + exenta_docs:
         cid = str(d.get("client", {}).get("id", "unknown"))
         by_client.setdefault(cid, {"count": 0, "neto": 0})
@@ -301,10 +304,11 @@ def build_month_record(year, month, facturas, nc_docs, exenta_docs, clients_meta
         by_client[cid]["neto"] += d.get("netAmount", 0)
 
         doc_brands = brand_details.get(d["id"], {}) if brand_details else {}
-        units = by_client_units.setdefault(cid, {"Teoxane": 0, "RRS HA Long Lasting": 0})
+        brand_totals = by_client_brand.setdefault(cid, empty_brand_totals())
         for brand, vals in doc_brands.items():
-            if brand in units:
-                units[brand] += vals.get("qty", 0)
+            if brand in brand_totals:
+                brand_totals[brand]["neto"] += vals.get("neto", 0)
+                brand_totals[brand]["qty"] += vals.get("qty", 0)
 
         vname = vendor_for(d)
         by_vendor_client.setdefault(vname, {})
@@ -312,29 +316,30 @@ def build_month_record(year, month, facturas, nc_docs, exenta_docs, clients_meta
         by_vendor_client[vname][cid]["count"] += 1
         by_vendor_client[vname][cid]["neto"] += d.get("netAmount", 0)
 
-        vunits = by_vendor_client_units.setdefault(vname, {}).setdefault(
-            cid, {"Teoxane": 0, "RRS HA Long Lasting": 0}
-        )
+        vbrand_totals = by_vendor_client_brand.setdefault(vname, {}).setdefault(cid, empty_brand_totals())
         for brand, vals in doc_brands.items():
-            if brand in vunits:
-                vunits[brand] += vals.get("qty", 0)
+            if brand in vbrand_totals:
+                vbrand_totals[brand]["neto"] += vals.get("neto", 0)
+                vbrand_totals[brand]["qty"] += vals.get("qty", 0)
 
-    def top_n(client_totals, units_map, n=15):
+    def top_n(client_totals, brand_map, n=15):
         rows = []
         for cid, vals in client_totals.items():
-            u = units_map.get(cid, {})
+            b = brand_map.get(cid, empty_brand_totals())
             rows.append({
                 "id": cid,
                 **vals,
-                "teox_units": u.get("Teoxane", 0),
-                "rrs_units": u.get("RRS HA Long Lasting", 0),
+                "teox_neto": b["Teoxane"]["neto"],
+                "teox_units": b["Teoxane"]["qty"],
+                "rrs_neto": b["RRS HA Long Lasting"]["neto"],
+                "rrs_units": b["RRS HA Long Lasting"]["qty"],
                 "name": clients_meta.get(cid, {}).get("name", cid),
             })
         return sorted(rows, key=lambda x: x["neto"], reverse=True)[:n]
 
-    top_clients = top_n(by_client, by_client_units)
+    top_clients = top_n(by_client, by_client_brand)
     top_clients_by_vendor = {
-        vname: top_n(totals, by_vendor_client_units.get(vname, {}))
+        vname: top_n(totals, by_vendor_client_brand.get(vname, {}))
         for vname, totals in by_vendor_client.items()
     }
 
