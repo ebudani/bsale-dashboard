@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-31T14:04:01.172099Z",
+  "updated_at": "2026-08-31T16:11:18.991993Z",
   "users": {
     "7": "Cindy Monsalves",
     "9": "Daisy Ponce",
@@ -22773,11 +22773,11 @@
     {
       "year": 2026,
       "month": 8,
-      "count_facturas": 122,
+      "count_facturas": 119,
       "count_nc": 2,
-      "neto_facturas": 148396086,
+      "neto_facturas": 135895003,
       "neto_nc": 1912227,
-      "total_neto": 146483859,
+      "total_neto": 133982776,
       "by_day": [
         {
           "date": "2026-08-03",
@@ -22871,14 +22871,14 @@
         },
         {
           "date": "2026-08-28",
-          "count": 6,
-          "neto": 18990471
+          "count": 3,
+          "neto": 6489388
         }
       ],
       "by_vendor": {
         "Monica Urrutia": {
-          "count": 58,
-          "neto": 74918599
+          "count": 57,
+          "neto": 73929256
         },
         "Daisy Ponce": {
           "count": 21,
@@ -22887,10 +22887,6 @@
         "Cindy Monsalves": {
           "count": 41,
           "neto": 41405437
-        },
-        "Francisca Salinas": {
-          "count": 2,
-          "neto": 11511740
         }
       },
       "by_vendor_day": {
@@ -22987,8 +22983,8 @@
           },
           {
             "date": "2026-08-28",
-            "count": 4,
-            "neto": 7478731
+            "count": 3,
+            "neto": 6489388
           }
         ],
         "Daisy Ponce": [
@@ -23134,24 +23130,17 @@
             "count": 5,
             "neto": 5708674
           }
-        ],
-        "Francisca Salinas": [
-          {
-            "date": "2026-08-28",
-            "count": 2,
-            "neto": 11511740
-          }
         ]
       },
       "by_brand": {
-        "Teoxane": 126226552,
-        "RRS HA Long Lasting": 20257307,
+        "Teoxane": 116174596,
+        "RRS HA Long Lasting": 17808180,
         "FINE": 0
       },
       "by_vendor_brand": {
         "Monica Urrutia": {
           "Teoxane": 63829710,
-          "RRS HA Long Lasting": 11088889,
+          "RRS HA Long Lasting": 10099546,
           "FINE": 0
         },
         "Daisy Ponce": {
@@ -23163,24 +23152,9 @@
           "Teoxane": 37496157,
           "RRS HA Long Lasting": 3909280,
           "FINE": 0
-        },
-        "Francisca Salinas": {
-          "Teoxane": 10051956,
-          "RRS HA Long Lasting": 1459784,
-          "FINE": 0
         }
       },
       "top_clients": [
-        {
-          "id": "860",
-          "count": 2,
-          "neto": 11511740,
-          "teox_neto": 10051956,
-          "teox_units": 89.0,
-          "rrs_neto": 1459784,
-          "rrs_units": 14.0,
-          "name": "Servicios De Salud Girardi Y Cia. Ltda"
-        },
         {
           "id": "1209",
           "count": 1,
@@ -23320,6 +23294,16 @@
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "BEAUTY LINE SPA"
+        },
+        {
+          "id": "1186",
+          "count": 1,
+          "neto": 2437594,
+          "teox_neto": 2437594,
+          "teox_units": 20.0,
+          "rrs_neto": 0,
+          "rrs_units": 0,
+          "name": "De Santiago Odontologia SPA"
         }
       ],
       "top_clients_by_vendor": {
@@ -23777,18 +23761,6 @@
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SERVICIOS ODONTOLÓGICOS N R SPA"
-          }
-        ],
-        "Francisca Salinas": [
-          {
-            "id": "860",
-            "count": 2,
-            "neto": 11511740,
-            "teox_neto": 10051956,
-            "teox_units": 89.0,
-            "rrs_neto": 1459784,
-            "rrs_units": 14.0,
-            "name": "Servicios De Salud Girardi Y Cia. Ltda"
           }
         ]
       }
