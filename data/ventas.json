@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-31T21:37:12.160787Z",
+  "updated_at": "2026-08-31T22:20:27.754248Z",
   "users": {
     "7": "Cindy Monsalves",
     "9": "Daisy Ponce",
@@ -4571,6 +4571,51 @@
           "FINE": 0
         }
       },
+      "by_sku": {
+        "23G x 38": 215233,
+        "Jeringa monodosis x 3mL (sin aguja)": 21561960,
+        "Jeringa monodosis 1ml (2 agujas 30G 1/2)": 811887,
+        "21G x 90": 1168724,
+        "19G x 90": 294912,
+        "30G x 25": 149895,
+        "21G x 70": 283989,
+        "LL24A\nRRS Long Lasting Jeringa monodosis x 3mL (sin aguja) J282824a": 6115200,
+        "BA020\nHilos Biocanula 23G x 38 AL23110020": 245981
+      },
+      "by_vendor_sku": {
+        "Daisy Ponce": {
+          "23G x 38": 61495,
+          "Jeringa monodosis x 3mL (sin aguja)": 2268945,
+          "Jeringa monodosis 1ml (2 agujas 30G 1/2)": 107044,
+          "21G x 70": 98304
+        },
+        "Cindy Monsalves": {
+          "Jeringa monodosis x 3mL (sin aguja)": 6865488,
+          "21G x 90": 76459,
+          "23G x 38": 30748
+        },
+        "Monica Urrutia": {
+          "Jeringa monodosis x 3mL (sin aguja)": 11430426,
+          "Jeringa monodosis 1ml (2 agujas 30G 1/2)": 602078,
+          "30G x 25": 149895,
+          "23G x 38": 122990,
+          "19G x 90": 196608,
+          "21G x 70": 87381
+        },
+        "Sin asignar": {
+          "Jeringa monodosis x 3mL (sin aguja)": 997101
+        },
+        "Francisca Salinas": {
+          "19G x 90": 98304,
+          "21G x 70": 98304,
+          "LL24A\nRRS Long Lasting Jeringa monodosis x 3mL (sin aguja) J282824a": 6115200,
+          "BA020\nHilos Biocanula 23G x 38 AL23110020": 245981
+        },
+        "Ivan Salinas": {
+          "21G x 90": 1092265,
+          "Jeringa monodosis 1ml (2 agujas 30G 1/2)": 102765
+        }
+      },
       "top_clients": [
         {
           "id": "860",
@@ -5407,6 +5452,41 @@
           "Teoxane": 0,
           "RRS HA Long Lasting": 1911000,
           "FINE": 0
+        }
+      },
+      "by_sku": {
+        "Jeringa monodosis x 3mL (sin aguja)": 21139188,
+        "Redensity 2 (2X1ml)": 1390620,
+        "RHA 2 (2X1ml)": 2717220,
+        "PureSense Ultra Deep (2X1.2ml)": 5008930,
+        "RHA 3 (2X1ml)": 1910150,
+        "RHA 4 (2X1.2ml)": 165300,
+        "23G x 38": 40997
+      },
+      "by_vendor_sku": {
+        "Cindy Monsalves": {
+          "Jeringa monodosis x 3mL (sin aguja)": 5331249,
+          "PureSense Ultra Deep (2X1.2ml)": 1577980,
+          "Redensity 2 (2X1ml)": 771420,
+          "RHA 3 (2X1ml)": 756470
+        },
+        "Sin asignar": {
+          "Jeringa monodosis x 3mL (sin aguja)": 1731807
+        },
+        "Monica Urrutia": {
+          "Jeringa monodosis x 3mL (sin aguja)": 10853157,
+          "Redensity 2 (2X1ml)": 619200,
+          "RHA 2 (2X1ml)": 2717220,
+          "PureSense Ultra Deep (2X1.2ml)": 3430950,
+          "RHA 3 (2X1ml)": 1153680,
+          "RHA 4 (2X1.2ml)": 165300
+        },
+        "Daisy Ponce": {
+          "Jeringa monodosis x 3mL (sin aguja)": 1311975
+        },
+        "Francisca Salinas": {
+          "Jeringa monodosis x 3mL (sin aguja)": 1911000,
+          "23G x 38": 40997
         }
       },
       "top_clients": [
@@ -6258,6 +6338,54 @@
           "Teoxane": 0,
           "RRS HA Long Lasting": 5037231,
           "FINE": 0
+        }
+      },
+      "by_sku": {
+        "Redensity 2 (2X1ml)": 3968040,
+        "PureSense Ultra Deep (2X1.2ml)": 18367790,
+        "RHA 3 (2X1ml)": 3200450,
+        "18G x 100": 717442,
+        "Jeringa monodosis x 3mL (sin aguja)": 29733674,
+        "RHA 2 (2X1ml)": 1502820,
+        "Redensity 1 (2X1ml)": 319200,
+        "RHA 1 (2X1ml)": 1514000,
+        "RHA 4 (2X1.2ml)": 3056600,
+        "21G x 70": 196608,
+        "Jeringa monodosis 1ml (2 agujas 30G 1/2)": 102765,
+        "23G x 38": 204985
+      },
+      "by_vendor_sku": {
+        "Cindy Monsalves": {
+          "Redensity 2 (2X1ml)": 2288460,
+          "PureSense Ultra Deep (2X1.2ml)": 7727990,
+          "RHA 3 (2X1ml)": 1234640,
+          "18G x 100": 717442,
+          "RHA 2 (2X1ml)": 617320,
+          "Jeringa monodosis x 3mL (sin aguja)": 2945525,
+          "RHA 4 (2X1.2ml)": 365400
+        },
+        "Monica Urrutia": {
+          "Jeringa monodosis x 3mL (sin aguja)": 19237258,
+          "PureSense Ultra Deep (2X1.2ml)": 10231170,
+          "Redensity 1 (2X1ml)": 319200,
+          "Redensity 2 (2X1ml)": 1679580,
+          "RHA 1 (2X1ml)": 1514000,
+          "RHA 4 (2X1.2ml)": 1870500,
+          "RHA 2 (2X1ml)": 885500,
+          "RHA 3 (2X1ml)": 1965810,
+          "21G x 70": 196608
+        },
+        "Daisy Ponce": {
+          "Jeringa monodosis x 3mL (sin aguja)": 2513660,
+          "PureSense Ultra Deep (2X1.2ml)": 408630,
+          "RHA 4 (2X1.2ml)": 820700
+        },
+        "Ivan Salinas": {
+          "Jeringa monodosis 1ml (2 agujas 30G 1/2)": 102765
+        },
+        "Francisca Salinas": {
+          "Jeringa monodosis x 3mL (sin aguja)": 5037231,
+          "23G x 38": 204985
         }
       },
       "top_clients": [
@@ -7144,6 +7272,69 @@
           "Teoxane": 2352600,
           "RRS HA Long Lasting": 4332018,
           "FINE": 0
+        }
+      },
+      "by_sku": {
+        "Jeringa monodosis x 3mL (sin aguja)": 22730874,
+        "PureSense Ultra Deep (2X1.2ml)": 24537180,
+        "Redensity 2 (2X1ml)": 9712650,
+        "23G x 38": 153738,
+        "RHA 1 (2X1ml)": 118000,
+        "RHA 4 (2X1.2ml)": 9059410,
+        "Redensity 1 (2X1ml)": 971780,
+        "Jeringa monodosis 1ml (2 agujas 30G 1/2)": 205531,
+        "21G x 70": 79008,
+        "RHA 2 (2X1ml)": 4498250,
+        "RHA 3 (2X1ml)": 5524180,
+        "Alimento para deportistas BTY": 528950,
+        "Alimento para deportistas PWR": 587921
+      },
+      "by_vendor_sku": {
+        "Monica Urrutia": {
+          "Jeringa monodosis x 3mL (sin aguja)": 12201653,
+          "PureSense Ultra Deep (2X1.2ml)": 9467880,
+          "Redensity 2 (2X1ml)": 4561440,
+          "23G x 38": 30747,
+          "RHA 1 (2X1ml)": 0,
+          "RHA 4 (2X1.2ml)": 5475200,
+          "Redensity 1 (2X1ml)": 0,
+          "21G x 70": 79008,
+          "RHA 3 (2X1ml)": 2059420,
+          "RHA 2 (2X1ml)": 2567950,
+          "Alimento para deportistas BTY": 528950,
+          "Alimento para deportistas PWR": 587921,
+          "Jeringa monodosis 1ml (2 agujas 30G 1/2)": 102766
+        },
+        "Cindy Monsalves": {
+          "Jeringa monodosis x 3mL (sin aguja)": 3977519,
+          "PureSense Ultra Deep (2X1.2ml)": 14050190,
+          "Redensity 2 (2X1ml)": 4718820,
+          "RHA 1 (2X1ml)": 118000,
+          "RHA 2 (2X1ml)": 761530,
+          "RHA 3 (2X1ml)": 1641970,
+          "RHA 4 (2X1.2ml)": 2230100,
+          "Redensity 1 (2X1ml)": 518000
+        },
+        "Daisy Ponce": {
+          "Jeringa monodosis x 3mL (sin aguja)": 2219684,
+          "RHA 2 (2X1ml)": 462990,
+          "RHA 3 (2X1ml)": 1234640,
+          "PureSense Ultra Deep (2X1.2ml)": 783850,
+          "RHA 4 (2X1.2ml)": 530700,
+          "Redensity 2 (2X1ml)": 314760
+        },
+        "Ivan Salinas": {
+          "Jeringa monodosis 1ml (2 agujas 30G 1/2)": 102765
+        },
+        "Francisca Salinas": {
+          "Jeringa monodosis x 3mL (sin aguja)": 4332018,
+          "23G x 38": 122991,
+          "Redensity 1 (2X1ml)": 453780,
+          "RHA 4 (2X1.2ml)": 823410,
+          "RHA 2 (2X1ml)": 705780,
+          "RHA 3 (2X1ml)": 588150,
+          "PureSense Ultra Deep (2X1.2ml)": 235260,
+          "Redensity 2 (2X1ml)": 117630
         }
       },
       "top_clients": [
@@ -8070,6 +8261,65 @@
           "Teoxane": 12504260,
           "RRS HA Long Lasting": 4835739,
           "FINE": 46591
+        }
+      },
+      "by_sku": {
+        "PureSense Ultra Deep (2X1.2ml)": 24112830,
+        "Jeringa monodosis x 3mL (sin aguja)": 31181634,
+        "23G x 38": 204984,
+        "Redensity 2 (2X1ml)": 10584240,
+        "Redensity 1 (2X1ml)": 3117510,
+        "RHA 1 (2X1ml)": 4532230,
+        "RHA 2 (2X1ml)": 6076790,
+        "RHA 3 (2X1ml)": 4467890,
+        "21G x 70": 706041,
+        "RHA 4 (2X1.2ml)": 5076420,
+        "Alimento para deportistas BTY": 93182
+      },
+      "by_vendor_sku": {
+        "Cindy Monsalves": {
+          "PureSense Ultra Deep (2X1.2ml)": 7301370,
+          "Jeringa monodosis x 3mL (sin aguja)": 6881385,
+          "Redensity 2 (2X1ml)": 1589280,
+          "RHA 2 (2X1ml)": 607200,
+          "RHA 3 (2X1ml)": 796950,
+          "21G x 70": 436906,
+          "RHA 4 (2X1.2ml)": 365400,
+          "Alimento para deportistas BTY": 46591,
+          "RHA 1 (2X1ml)": 618000
+        },
+        "Monica Urrutia": {
+          "Jeringa monodosis x 3mL (sin aguja)": 13135769,
+          "23G x 38": 204984,
+          "PureSense Ultra Deep (2X1.2ml)": 11261740,
+          "Redensity 2 (2X1ml)": 5134200,
+          "Redensity 1 (2X1ml)": 319200,
+          "RHA 1 (2X1ml)": 1444000,
+          "RHA 2 (2X1ml)": 2846250,
+          "RHA 3 (2X1ml)": 2965160,
+          "RHA 4 (2X1.2ml)": 1887900,
+          "21G x 70": 174762
+        },
+        "Daisy Ponce": {
+          "Jeringa monodosis x 3mL (sin aguja)": 3831597,
+          "PureSense Ultra Deep (2X1.2ml)": 1667930,
+          "Redensity 2 (2X1ml)": 152220
+        },
+        "Sin asignar": {
+          "Jeringa monodosis x 3mL (sin aguja)": 2497144,
+          "Redensity 2 (2X1ml)": 650160
+        },
+        "Francisca Salinas": {
+          "Alimento para deportistas BTY": 46591,
+          "Redensity 2 (2X1ml)": 3058380,
+          "Redensity 1 (2X1ml)": 2798310,
+          "RHA 2 (2X1ml)": 2623340,
+          "RHA 3 (2X1ml)": 705780,
+          "RHA 4 (2X1.2ml)": 2823120,
+          "PureSense Ultra Deep (2X1.2ml)": 3881790,
+          "RHA 1 (2X1ml)": 2470230,
+          "Jeringa monodosis x 3mL (sin aguja)": 4835739,
+          "21G x 70": 94373
         }
       },
       "top_clients": [
@@ -9011,6 +9261,62 @@
           "Teoxane": 15323450,
           "RRS HA Long Lasting": 5742442,
           "FINE": 0
+        }
+      },
+      "by_sku": {
+        "Jeringa monodosis x 3mL (sin aguja)": 28401713,
+        "Redensity 2 (2X1ml)": 12242370,
+        "PureSense Ultra Deep (2X1.2ml)": 26207550,
+        "RHA 3 (2X1ml)": 5965530,
+        "RHA 4 (2X1.2ml)": 13151820,
+        "Redensity 1 (2X1ml)": 2391950,
+        "RHA 2 (2X1ml)": 5585940,
+        "Alimento para deportistas BTY": 46672,
+        "23G x 38": 191317,
+        "RHA 1 (2X1ml)": 4645490
+      },
+      "by_vendor_sku": {
+        "Monica Urrutia": {
+          "Jeringa monodosis x 3mL (sin aguja)": 18444514,
+          "Redensity 2 (2X1ml)": 4610460,
+          "PureSense Ultra Deep (2X1.2ml)": 13721230,
+          "RHA 3 (2X1ml)": 3552120,
+          "RHA 4 (2X1.2ml)": 5930500,
+          "Redensity 1 (2X1ml)": 501200,
+          "RHA 2 (2X1ml)": 1652090,
+          "Alimento para deportistas BTY": 46672,
+          "RHA 1 (2X1ml)": 940000,
+          "23G x 38": 109324
+        },
+        "Cindy Monsalves": {
+          "PureSense Ultra Deep (2X1.2ml)": 6579200,
+          "RHA 2 (2X1ml)": 1075250,
+          "RHA 4 (2X1.2ml)": 2093800,
+          "Jeringa monodosis x 3mL (sin aguja)": 1829918,
+          "RHA 3 (2X1ml)": 622380,
+          "Redensity 2 (2X1ml)": 1741500
+        },
+        "Daisy Ponce": {
+          "Jeringa monodosis x 3mL (sin aguja)": 2384839,
+          "PureSense Ultra Deep (2X1.2ml)": 3084000,
+          "RHA 2 (2X1ml)": 0,
+          "RHA 3 (2X1ml)": 144210,
+          "RHA 4 (2X1.2ml)": 838100,
+          "RHA 1 (2X1ml)": 0,
+          "Redensity 2 (2X1ml)": 1511880
+        },
+        "Sin asignar": {
+          "23G x 38": 81993
+        },
+        "Francisca Salinas": {
+          "RHA 1 (2X1ml)": 3705490,
+          "RHA 2 (2X1ml)": 2858600,
+          "RHA 3 (2X1ml)": 1646820,
+          "RHA 4 (2X1.2ml)": 4289420,
+          "Redensity 2 (2X1ml)": 4378530,
+          "Redensity 1 (2X1ml)": 1890750,
+          "PureSense Ultra Deep (2X1.2ml)": 2823120,
+          "Jeringa monodosis x 3mL (sin aguja)": 5742442
         }
       },
       "top_clients": [
@@ -9977,6 +10283,65 @@
           "Teoxane": 0,
           "RRS HA Long Lasting": 0,
           "FINE": 0
+        }
+      },
+      "by_sku": {
+        "PureSense Ultra Deep (2X1.2ml)": 35348830,
+        "RHA 2 (2X1ml)": 8798862,
+        "RHA 3 (2X1ml)": 5973210,
+        "Redensity 2 (2X1ml)": 17311350,
+        "Jeringa monodosis x 3mL (sin aguja)": 20795042,
+        "23G x 38": 273311,
+        "RHA 4 (2X1.2ml)": 6980810,
+        "RHA 1 (2X1ml)": 4852750,
+        "Redensity 1 (2X1ml)": 1349630,
+        "Jeringa monodosis 1ml (2 agujas 30G 1/2)": 173910,
+        "Capacitación": 1000000
+      },
+      "by_vendor_sku": {
+        "Cindy Monsalves": {
+          "PureSense Ultra Deep (2X1.2ml)": 14687550,
+          "Jeringa monodosis x 3mL (sin aguja)": 4948417,
+          "Redensity 2 (2X1ml)": 5276100,
+          "RHA 3 (2X1ml)": 2160620,
+          "RHA 1 (2X1ml)": 228000,
+          "RHA 2 (2X1ml)": 1202762,
+          "RHA 4 (2X1.2ml)": 1357200,
+          "Redensity 1 (2X1ml)": 88200,
+          "Capacitación": 1000000
+        },
+        "Monica Urrutia": {
+          "RHA 2 (2X1ml)": 5677320,
+          "RHA 3 (2X1ml)": 2871550,
+          "Redensity 2 (2X1ml)": 7484580,
+          "RHA 4 (2X1.2ml)": 2105400,
+          "PureSense Ultra Deep (2X1.2ml)": 14060470,
+          "Jeringa monodosis x 3mL (sin aguja)": 9142982,
+          "Redensity 1 (2X1ml)": 1045800,
+          "RHA 1 (2X1ml)": 1562000,
+          "Jeringa monodosis 1ml (2 agujas 30G 1/2)": 71145
+        },
+        "Daisy Ponce": {
+          "Redensity 2 (2X1ml)": 1609920,
+          "PureSense Ultra Deep (2X1.2ml)": 3600570,
+          "RHA 2 (2X1ml)": 154330,
+          "23G x 38": 273311,
+          "RHA 4 (2X1.2ml)": 342200,
+          "Jeringa monodosis x 3mL (sin aguja)": 2774605,
+          "RHA 1 (2X1ml)": 122000
+        },
+        "Francisca Salinas": {
+          "PureSense Ultra Deep (2X1.2ml)": 3000240,
+          "RHA 2 (2X1ml)": 1764450,
+          "RHA 1 (2X1ml)": 2940750,
+          "RHA 4 (2X1.2ml)": 3176010,
+          "RHA 3 (2X1ml)": 941040,
+          "Redensity 2 (2X1ml)": 2940750,
+          "Redensity 1 (2X1ml)": 215630,
+          "Jeringa monodosis x 3mL (sin aguja)": 3929038
+        },
+        "Ivan Salinas": {
+          "Jeringa monodosis 1ml (2 agujas 30G 1/2)": 102765
         }
       },
       "top_clients": [
@@ -10969,6 +11334,66 @@
           "Teoxane": 3535470,
           "RRS HA Long Lasting": 2619359,
           "FINE": 0
+        }
+      },
+      "by_sku": {
+        "Jeringa monodosis x 3mL (sin aguja)": 21275904,
+        "Redensity 2 (2X1ml)": 15927210,
+        "PureSense Ultra Deep (2X1.2ml)": 41188210,
+        "RHA 3 (2X1ml)": 10698030,
+        "RHA 1 (2X1ml)": 1270000,
+        "RHA 2 (2X1ml)": 9439310,
+        "RHA 4 (2X1.2ml)": 17600630,
+        "Redensity 1 (2X1ml)": 2553960,
+        "Alimento para deportistas BTY": 186688,
+        "Alimento para deportistas SMOOTH": 475519
+      },
+      "by_vendor_sku": {
+        "Daisy Ponce": {
+          "Jeringa monodosis x 3mL (sin aguja)": 2140409,
+          "Redensity 2 (2X1ml)": 2324580,
+          "PureSense Ultra Deep (2X1.2ml)": 6126880,
+          "RHA 3 (2X1ml)": 1935450,
+          "RHA 2 (2X1ml)": 1085370,
+          "RHA 4 (2X1.2ml)": 3639500
+        },
+        "Monica Urrutia": {
+          "Redensity 2 (2X1ml)": 8330820,
+          "PureSense Ultra Deep (2X1.2ml)": 18969170,
+          "RHA 3 (2X1ml)": 4452800,
+          "Jeringa monodosis x 3mL (sin aguja)": 8885339,
+          "RHA 2 (2X1ml)": 4093540,
+          "RHA 4 (2X1.2ml)": 10036900,
+          "Alimento para deportistas BTY": 93344,
+          "Redensity 1 (2X1ml)": 1381800,
+          "RHA 1 (2X1ml)": 244000,
+          "Alimento para deportistas SMOOTH": 475519
+        },
+        "Cindy Monsalves": {
+          "Redensity 2 (2X1ml)": 4066080,
+          "PureSense Ultra Deep (2X1.2ml)": 15710410,
+          "RHA 1 (2X1ml)": 1026000,
+          "RHA 2 (2X1ml)": 3319360,
+          "RHA 3 (2X1ml)": 3721630,
+          "Jeringa monodosis x 3mL (sin aguja)": 6520955,
+          "Redensity 1 (2X1ml)": 264600,
+          "RHA 4 (2X1.2ml)": 2299700,
+          "Alimento para deportistas BTY": 46672
+        },
+        "Sin asignar": {
+          "Jeringa monodosis x 3mL (sin aguja)": 1109842
+        },
+        "Ivan Salinas": {
+          "Alimento para deportistas BTY": 46672
+        },
+        "Francisca Salinas": {
+          "Redensity 2 (2X1ml)": 1205730,
+          "PureSense Ultra Deep (2X1.2ml)": 381750,
+          "RHA 2 (2X1ml)": 941040,
+          "RHA 3 (2X1ml)": 588150,
+          "RHA 4 (2X1.2ml)": 1624530,
+          "Redensity 1 (2X1ml)": 907560,
+          "Jeringa monodosis x 3mL (sin aguja)": 2619359
         }
       },
       "top_clients": [
@@ -12034,6 +12459,68 @@
           "FINE": 0
         }
       },
+      "by_sku": {
+        "PureSense Ultra Deep (2X1.2ml)": 40974520,
+        "Redensity 2 (2X1ml)": 14567850,
+        "RHA 2 (2X1ml)": 7697240,
+        "RHA 3 (2X1ml)": 7306520,
+        "RHA 4 (2X1.2ml)": 10162500,
+        "Jeringa monodosis x 3mL (sin aguja)": 21620444,
+        "Redensity 1 (2X1ml)": 1739040,
+        "RHA 1 (2X1ml)": 3439410,
+        "Alimento para deportistas BTY": 46672,
+        "Ref: OC 4500107575": 0
+      },
+      "by_vendor_sku": {
+        "Cindy Monsalves": {
+          "PureSense Ultra Deep (2X1.2ml)": 13834310,
+          "Redensity 2 (2X1ml)": 4837500,
+          "RHA 2 (2X1ml)": 1657150,
+          "RHA 3 (2X1ml)": 2428800,
+          "Redensity 1 (2X1ml)": 176400,
+          "RHA 1 (2X1ml)": 916000,
+          "RHA 4 (2X1.2ml)": 3431640,
+          "Jeringa monodosis x 3mL (sin aguja)": 4280818
+        },
+        "Monica Urrutia": {
+          "PureSense Ultra Deep (2X1.2ml)": 21505760,
+          "RHA 4 (2X1.2ml)": 2784000,
+          "Redensity 2 (2X1ml)": 7002120,
+          "RHA 2 (2X1ml)": 2929740,
+          "RHA 3 (2X1ml)": 3309240,
+          "Alimento para deportistas BTY": 46672,
+          "Redensity 1 (2X1ml)": 957600,
+          "RHA 1 (2X1ml)": 1456000,
+          "Ref: OC 4500107575": 0,
+          "Jeringa monodosis x 3mL (sin aguja)": 9598809
+        },
+        "Sin asignar": {
+          "Redensity 2 (2X1ml)": 258000,
+          "PureSense Ultra Deep (2X1.2ml)": 647640,
+          "RHA 2 (2X1ml)": 253000,
+          "RHA 3 (2X1ml)": 0,
+          "Jeringa monodosis x 3mL (sin aguja)": 2061135
+        },
+        "Daisy Ponce": {
+          "Jeringa monodosis x 3mL (sin aguja)": 3564046,
+          "PureSense Ultra Deep (2X1.2ml)": 4163400,
+          "RHA 1 (2X1ml)": 244000,
+          "RHA 2 (2X1ml)": 622380,
+          "RHA 3 (2X1ml)": 627440,
+          "RHA 4 (2X1.2ml)": 182700,
+          "Redensity 2 (2X1ml)": 0
+        },
+        "Francisca Salinas": {
+          "RHA 2 (2X1ml)": 2234970,
+          "RHA 3 (2X1ml)": 941040,
+          "RHA 4 (2X1.2ml)": 3764160,
+          "Redensity 2 (2X1ml)": 2470230,
+          "Redensity 1 (2X1ml)": 605040,
+          "RHA 1 (2X1ml)": 823410,
+          "PureSense Ultra Deep (2X1.2ml)": 823410,
+          "Jeringa monodosis x 3mL (sin aguja)": 2115636
+        }
+      },
       "top_clients": [
         {
           "id": "860",
@@ -13080,6 +13567,66 @@
           "FINE": 0
         }
       },
+      "by_sku": {
+        "Jeringa monodosis x 3mL (sin aguja)": 30796455,
+        "PureSense Ultra Deep (2X1.2ml)": 43982050,
+        "RHA 1 (2X1ml)": 5539710,
+        "RHA 3 (2X1ml)": 5993300,
+        "RHA 2 (2X1ml)": 4405680,
+        "Redensity 1 (2X1ml)": 1849580,
+        "Redensity 2 (2X1ml)": 12343320,
+        "RHA 4 (2X1.2ml)": 21105970,
+        "RHA KISS (2X0.7ml)": 5046600,
+        "Alimento para deportistas BTY": 199134,
+        "Alimento para deportistas PWR": 110668
+      },
+      "by_vendor_sku": {
+        "Cindy Monsalves": {
+          "Jeringa monodosis x 3mL (sin aguja)": 9545958,
+          "PureSense Ultra Deep (2X1.2ml)": 10614100,
+          "RHA 1 (2X1ml)": 992000,
+          "Redensity 2 (2X1ml)": 1411260,
+          "RHA 4 (2X1.2ml)": 3787400,
+          "Redensity 1 (2X1ml)": 495600,
+          "RHA 3 (2X1ml)": 1771000,
+          "RHA 2 (2X1ml)": 0,
+          "Alimento para deportistas PWR": 110668,
+          "RHA KISS (2X0.7ml)": 1723800
+        },
+        "Monica Urrutia": {
+          "Jeringa monodosis x 3mL (sin aguja)": 13291676,
+          "PureSense Ultra Deep (2X1.2ml)": 25805370,
+          "RHA 1 (2X1ml)": 2548000,
+          "RHA 2 (2X1ml)": 1318130,
+          "Redensity 1 (2X1ml)": 900200,
+          "Redensity 2 (2X1ml)": 7458780,
+          "RHA 3 (2X1ml)": 1945570,
+          "RHA 4 (2X1.2ml)": 10973600,
+          "RHA KISS (2X0.7ml)": 3322800,
+          "Alimento para deportistas BTY": 199134
+        },
+        "Daisy Ponce": {
+          "PureSense Ultra Deep (2X1.2ml)": 5327610,
+          "RHA 3 (2X1ml)": 159390,
+          "RHA 2 (2X1ml)": 617320,
+          "RHA 4 (2X1.2ml)": 1757400,
+          "Jeringa monodosis x 3mL (sin aguja)": 3071883,
+          "Redensity 2 (2X1ml)": 650160
+        },
+        "Sin asignar": {
+          "Jeringa monodosis x 3mL (sin aguja)": 554921
+        },
+        "Francisca Salinas": {
+          "RHA 1 (2X1ml)": 1999710,
+          "PureSense Ultra Deep (2X1.2ml)": 2234970,
+          "RHA 2 (2X1ml)": 2470230,
+          "Redensity 2 (2X1ml)": 2823120,
+          "Redensity 1 (2X1ml)": 453780,
+          "RHA 4 (2X1.2ml)": 4587570,
+          "RHA 3 (2X1ml)": 2117340,
+          "Jeringa monodosis x 3mL (sin aguja)": 4332017
+        }
+      },
       "top_clients": [
         {
           "id": "860",
@@ -14096,6 +14643,71 @@
           "FINE": 0
         }
       },
+      "by_sku": {
+        "Jeringa monodosis x 3mL (sin aguja)": 26755116,
+        "Redensity 2 (2X1ml)": 14231880,
+        "PureSense Ultra Deep (2X1.2ml)": 40506020,
+        "RHA 4 (2X1.2ml)": 13838400,
+        "RHA KISS (2X0.7ml)": 4084600,
+        "Alimento para deportistas BTY": 93344,
+        "Redensity 1 (2X1ml)": 3683880,
+        "RHA 2 (2X1ml)": 7463200,
+        "RHA 3 (2X1ml)": 11206470,
+        "RHA 1 (2X1ml)": 3657560,
+        "Redensity 1 (1x3ml)": 410400
+      },
+      "by_vendor_sku": {
+        "Monica Urrutia": {
+          "Jeringa monodosis x 3mL (sin aguja)": 15148018,
+          "RHA 4 (2X1.2ml)": 6017500,
+          "PureSense Ultra Deep (2X1.2ml)": 20577990,
+          "Alimento para deportistas BTY": 93344,
+          "Redensity 1 (2X1ml)": 2473800,
+          "RHA 3 (2X1ml)": 5616600,
+          "RHA 2 (2X1ml)": 3382610,
+          "Redensity 2 (2X1ml)": 5074860,
+          "RHA KISS (2X0.7ml)": 629200,
+          "Redensity 1 (1x3ml)": 410400,
+          "RHA 1 (2X1ml)": 1530000
+        },
+        "Cindy Monsalves": {
+          "Redensity 2 (2X1ml)": 3635220,
+          "PureSense Ultra Deep (2X1.2ml)": 10639800,
+          "RHA 2 (2X1ml)": 781770,
+          "RHA 4 (2X1.2ml)": 2871000,
+          "RHA KISS (2X0.7ml)": 941200,
+          "RHA 1 (2X1ml)": 594000,
+          "RHA 3 (2X1ml)": 3822830,
+          "Jeringa monodosis x 3mL (sin aguja)": 4723434
+        },
+        "Daisy Ponce": {
+          "Redensity 2 (2X1ml)": 2373600,
+          "PureSense Ultra Deep (2X1.2ml)": 7288520,
+          "RHA KISS (2X0.7ml)": 1058200,
+          "Jeringa monodosis x 3mL (sin aguja)": 2549994,
+          "Redensity 1 (2X1ml)": 0,
+          "RHA 2 (2X1ml)": 627440,
+          "RHA 4 (2X1.2ml)": 1421000,
+          "RHA 1 (2X1ml)": 122000,
+          "RHA 3 (2X1ml)": 473110
+        },
+        "Sin asignar": {
+          "Jeringa monodosis x 3mL (sin aguja)": 1109842,
+          "Redensity 2 (2X1ml)": 325080,
+          "RHA 2 (2X1ml)": 318780
+        },
+        "Francisca Salinas": {
+          "Redensity 1 (2X1ml)": 1210080,
+          "RHA 2 (2X1ml)": 2352600,
+          "Redensity 2 (2X1ml)": 2823120,
+          "RHA 4 (2X1.2ml)": 3528900,
+          "RHA 3 (2X1ml)": 1293930,
+          "PureSense Ultra Deep (2X1.2ml)": 1999710,
+          "RHA 1 (2X1ml)": 1411560,
+          "RHA KISS (2X0.7ml)": 1456000,
+          "Jeringa monodosis x 3mL (sin aguja)": 3223828
+        }
+      },
       "top_clients": [
         {
           "id": "860",
@@ -15055,6 +15667,69 @@
           "Teoxane": 14294560,
           "RRS HA Long Lasting": 3626807,
           "FINE": 0
+        }
+      },
+      "by_sku": {
+        "PureSense Ultra Deep (2X1.2ml)": 31894580,
+        "Redensity 2 (2X1ml)": 15002940,
+        "RHA KISS (2X0.7ml)": 4760470,
+        "Jeringa monodosis x 3mL (sin aguja)": 28753864,
+        "RHA 4 (2X1.2ml)": 14500720,
+        "Redensity 1 (1x3ml)": 1128600,
+        "Redensity 1 (2X1ml)": 2404340,
+        "RHA 1 (2X1ml)": 2690970,
+        "RHA 2 (2X1ml)": 2925690,
+        "Jeringa monodosis 1ml (2 agujas 30G 1/2)": 427368,
+        "RHA 3 (2X1ml)": 1058670,
+        "Alimento para deportistas PWR": 216145,
+        "Alimento para deportistas BTY": 194465
+      },
+      "by_vendor_sku": {
+        "Monica Urrutia": {
+          "PureSense Ultra Deep (2X1.2ml)": 14649000,
+          "Redensity 2 (2X1ml)": 6687360,
+          "RHA KISS (2X0.7ml)": 1730860,
+          "Jeringa monodosis x 3mL (sin aguja)": 14976256,
+          "RHA 4 (2X1.2ml)": 6440580,
+          "Redensity 1 (1x3ml)": 1128600,
+          "Redensity 1 (2X1ml)": 957600,
+          "RHA 1 (2X1ml)": 456000,
+          "Alimento para deportistas PWR": 216145,
+          "Alimento para deportistas BTY": 194465
+        },
+        "Cindy Monsalves": {
+          "Jeringa monodosis x 3mL (sin aguja)": 7429046,
+          "Redensity 2 (2X1ml)": 3085680,
+          "PureSense Ultra Deep (2X1.2ml)": 10668070,
+          "RHA 1 (2X1ml)": 0,
+          "RHA 2 (2X1ml)": 617320,
+          "RHA 4 (2X1.2ml)": 2351900,
+          "RHA KISS (2X0.7ml)": 1106210,
+          "RHA 3 (2X1ml)": 0
+        },
+        "Daisy Ponce": {
+          "Jeringa monodosis x 3mL (sin aguja)": 2721755,
+          "Redensity 1 (2X1ml)": 85400,
+          "Redensity 2 (2X1ml)": 1112850,
+          "PureSense Ultra Deep (2X1.2ml)": 3166240,
+          "RHA 1 (2X1ml)": 0,
+          "RHA 2 (2X1ml)": 308660,
+          "RHA 4 (2X1.2ml)": 1238300,
+          "RHA KISS (2X0.7ml)": 803400
+        },
+        "Ivan Salinas": {
+          "Jeringa monodosis 1ml (2 agujas 30G 1/2)": 427368
+        },
+        "Francisca Salinas": {
+          "Redensity 2 (2X1ml)": 4117050,
+          "RHA 4 (2X1.2ml)": 4469940,
+          "Redensity 1 (2X1ml)": 1361340,
+          "RHA 1 (2X1ml)": 2234970,
+          "RHA 3 (2X1ml)": 1058670,
+          "PureSense Ultra Deep (2X1.2ml)": 3411270,
+          "RHA KISS (2X0.7ml)": 1120000,
+          "RHA 2 (2X1ml)": 1999710,
+          "Jeringa monodosis x 3mL (sin aguja)": 3626807
         }
       },
       "top_clients": [
@@ -16028,6 +16703,69 @@
           "FINE": 0
         }
       },
+      "by_sku": {
+        "Jeringa monodosis x 3mL (sin aguja)": 21897907,
+        "Redensity 2 (2X1ml)": 13523130,
+        "Alimento para deportistas BTY": 388930,
+        "RHA KISS (2X0.7ml)": 2900800,
+        "RHA 4 (2X1.2ml)": 10247310,
+        "PureSense Ultra Deep (2X1.2ml)": 41765110,
+        "RHA 3 (2X1ml)": 11200190,
+        "RHA 2 (2X1ml)": 9072520,
+        "RHA 1 (2X1ml)": 4531780,
+        "Redensity 1 (2X1ml)": 3459460,
+        "Redensity 1 (1x3ml)": 410400
+      },
+      "by_vendor_sku": {
+        "Cindy Monsalves": {
+          "Jeringa monodosis x 3mL (sin aguja)": 5654908,
+          "Redensity 2 (2X1ml)": 3676500,
+          "RHA KISS (2X0.7ml)": 163800,
+          "RHA 4 (2X1.2ml)": 3178400,
+          "PureSense Ultra Deep (2X1.2ml)": 19699050,
+          "RHA 2 (2X1ml)": 1394030,
+          "RHA 3 (2X1ml)": 3329480,
+          "Redensity 1 (2X1ml)": 831600,
+          "RHA 1 (2X1ml)": 692000
+        },
+        "Monica Urrutia": {
+          "Jeringa monodosis x 3mL (sin aguja)": 11204118,
+          "Redensity 2 (2X1ml)": 7964460,
+          "Alimento para deportistas BTY": 388930,
+          "RHA 4 (2X1.2ml)": 3535100,
+          "PureSense Ultra Deep (2X1.2ml)": 17206150,
+          "RHA 3 (2X1ml)": 6208620,
+          "RHA 1 (2X1ml)": 2508000,
+          "Redensity 1 (2X1ml)": 2476600,
+          "Redensity 1 (1x3ml)": 410400,
+          "RHA 2 (2X1ml)": 5406610,
+          "RHA KISS (2X0.7ml)": 1401400
+        },
+        "Sin asignar": {
+          "Jeringa monodosis x 3mL (sin aguja)": 554921
+        },
+        "Daisy Ponce": {
+          "Jeringa monodosis x 3mL (sin aguja)": 3778747,
+          "RHA 4 (2X1.2ml)": 1534100,
+          "RHA 1 (2X1ml)": 626000,
+          "RHA 2 (2X1ml)": 1801360,
+          "PureSense Ultra Deep (2X1.2ml)": 3330720,
+          "Redensity 2 (2X1ml)": 588240,
+          "RHA 3 (2X1ml)": 721050,
+          "RHA KISS (2X0.7ml)": 327600
+        },
+        "Francisca Salinas": {
+          "Redensity 2 (2X1ml)": 1293930,
+          "RHA 4 (2X1.2ml)": 1999710,
+          "RHA 1 (2X1ml)": 705780,
+          "RHA 3 (2X1ml)": 941040,
+          "PureSense Ultra Deep (2X1.2ml)": 1529190,
+          "RHA KISS (2X0.7ml)": 1008000,
+          "Redensity 1 (2X1ml)": 151260,
+          "RHA 2 (2X1ml)": 470520,
+          "Jeringa monodosis x 3mL (sin aguja)": 705213
+        }
+      },
       "top_clients": [
         {
           "id": "860",
@@ -16976,6 +17714,68 @@
           "Teoxane": 8424320,
           "RRS HA Long Lasting": 3929041,
           "FINE": 0
+        }
+      },
+      "by_sku": {
+        "PureSense Ultra Deep (2X1.2ml)": 46558160,
+        "RHA 3 (2X1ml)": 7626580,
+        "RHA 4 (2X1.2ml)": 14252710,
+        "Redensity 2 (2X1ml)": 10058010,
+        "Redensity 1 (2X1ml)": 915690,
+        "RHA 2 (2X1ml)": 7611400,
+        "Jeringa monodosis x 3mL (sin aguja)": 19585738,
+        "Redensity 1 (1x3ml)": 1641600,
+        "Alimento para deportistas BTY": 242695,
+        "RHA 1 (2X1ml)": 2762820,
+        "Ref: Orden de compra N°1210044663": 0,
+        "RHA KISS (2X0.7ml)": 1683800
+      },
+      "by_vendor_sku": {
+        "Monica Urrutia": {
+          "PureSense Ultra Deep (2X1.2ml)": 22893560,
+          "RHA 3 (2X1ml)": 2557830,
+          "RHA 4 (2X1.2ml)": 7124720,
+          "Redensity 2 (2X1ml)": 2598060,
+          "RHA 2 (2X1ml)": 3159970,
+          "Jeringa monodosis x 3mL (sin aguja)": 10708652,
+          "Redensity 1 (1x3ml)": 1641600,
+          "Ref: Orden de compra N°1210044663": 0,
+          "Redensity 1 (2X1ml)": 0,
+          "RHA 1 (2X1ml)": 884000
+        },
+        "Cindy Monsalves": {
+          "Redensity 2 (2X1ml)": 2894760,
+          "RHA 2 (2X1ml)": 2871550,
+          "RHA 3 (2X1ml)": 3339600,
+          "PureSense Ultra Deep (2X1.2ml)": 14412560,
+          "Jeringa monodosis x 3mL (sin aguja)": 2384839,
+          "RHA 4 (2X1.2ml)": 1963300,
+          "Alimento para deportistas BTY": 242695,
+          "Redensity 1 (2X1ml)": 165200,
+          "RHA 1 (2X1ml)": 114000,
+          "RHA KISS (2X0.7ml)": 327600
+        },
+        "Daisy Ponce": {
+          "Redensity 1 (2X1ml)": 523600,
+          "RHA 3 (2X1ml)": 905740,
+          "RHA 4 (2X1.2ml)": 2459200,
+          "PureSense Ultra Deep (2X1.2ml)": 7722850,
+          "Redensity 2 (2X1ml)": 2094960,
+          "RHA 1 (2X1ml)": 118000,
+          "RHA 2 (2X1ml)": 756470,
+          "RHA KISS (2X0.7ml)": 460200,
+          "Jeringa monodosis x 3mL (sin aguja)": 2563206
+        },
+        "Francisca Salinas": {
+          "Redensity 2 (2X1ml)": 2470230,
+          "RHA 1 (2X1ml)": 1646820,
+          "RHA 4 (2X1.2ml)": 2705490,
+          "RHA KISS (2X0.7ml)": 896000,
+          "PureSense Ultra Deep (2X1.2ml)": 1529190,
+          "RHA 3 (2X1ml)": 823410,
+          "Redensity 1 (2X1ml)": 226890,
+          "RHA 2 (2X1ml)": 823410,
+          "Jeringa monodosis x 3mL (sin aguja)": 3929041
         }
       },
       "top_clients": [
@@ -17991,6 +18791,81 @@
           "Teoxane": 8605049,
           "RRS HA Long Lasting": 2606757,
           "FINE": 0
+        }
+      },
+      "by_sku": {
+        "Jeringa monodosis x 3mL (sin aguja)": 23248205,
+        "Redensity 2 (2X1ml)": 12972941,
+        "PureSense Ultra Deep (2X1.2ml)": 42916196,
+        "RHA 1 (2X1ml)": 5729993,
+        "RHA 4 (2X1.2ml)": 17406871,
+        "RHA KISS (2X0.7ml)": 3101780,
+        "RHA 2 (2X1ml)": 7403015,
+        "Redensity 1 (1x3ml)": 9582816,
+        "Redensity 1 (2X1ml)": 3075601,
+        "RHA 3 (2X1ml)": 8799879,
+        "Alimento para deportistas PWR": 0,
+        "Alimento para deportistas BTY": 0,
+        "Ref: OC 128388": 0
+      },
+      "by_vendor_sku": {
+        "Daisy Ponce": {
+          "Jeringa monodosis x 3mL (sin aguja)": 2286272,
+          "PureSense Ultra Deep (2X1.2ml)": 3490677,
+          "RHA 1 (2X1ml)": 249600,
+          "Redensity 2 (2X1ml)": 1483809,
+          "Redensity 1 (2X1ml)": 0,
+          "RHA KISS (2X0.7ml)": 1502546,
+          "RHA 4 (2X1.2ml)": 1803568,
+          "RHA 2 (2X1ml)": 931445,
+          "RHA 3 (2X1ml)": 0
+        },
+        "Monica Urrutia": {
+          "Redensity 2 (2X1ml)": 7545882,
+          "PureSense Ultra Deep (2X1.2ml)": 20640389,
+          "RHA 1 (2X1ml)": 2480800,
+          "RHA 4 (2X1.2ml)": 9968112,
+          "Jeringa monodosis x 3mL (sin aguja)": 14820069,
+          "RHA KISS (2X0.7ml)": 691034,
+          "RHA 2 (2X1ml)": 3863208,
+          "Redensity 1 (1x3ml)": 5612400,
+          "Redensity 1 (2X1ml)": 2058000,
+          "RHA 3 (2X1ml)": 6291202,
+          "Alimento para deportistas BTY": 0,
+          "Alimento para deportistas PWR": 0
+        },
+        "Cindy Monsalves": {
+          "Jeringa monodosis x 3mL (sin aguja)": 3535107,
+          "PureSense Ultra Deep (2X1.2ml)": 15495971,
+          "RHA 4 (2X1.2ml)": 3565492,
+          "RHA 3 (2X1ml)": 1412954,
+          "Redensity 1 (1x3ml)": 1420416,
+          "Redensity 2 (2X1ml)": 2117045,
+          "RHA 2 (2X1ml)": 1102472,
+          "RHA KISS (2X0.7ml)": 460200,
+          "RHA 1 (2X1ml)": 686400,
+          "Redensity 1 (2X1ml)": 0
+        },
+        "Sin asignar": {
+          "Redensity 2 (2X1ml)": 0,
+          "PureSense Ultra Deep (2X1.2ml)": 1828195,
+          "Alimento para deportistas PWR": 0
+        },
+        "Ivan Salinas": {
+          "RHA 2 (2X1ml)": 288420,
+          "Ref: OC 128388": 0
+        },
+        "Francisca Salinas": {
+          "Jeringa monodosis x 3mL (sin aguja)": 2606757,
+          "RHA 2 (2X1ml)": 1217470,
+          "Redensity 1 (1x3ml)": 2550000,
+          "Redensity 2 (2X1ml)": 1826205,
+          "Redensity 1 (2X1ml)": 1017601,
+          "RHA 4 (2X1.2ml)": 2069699,
+          "PureSense Ultra Deep (2X1.2ml)": 1460964,
+          "RHA 1 (2X1ml)": 2313193,
+          "RHA 3 (2X1ml)": 1095723,
+          "RHA KISS (2X0.7ml)": 448000
         }
       },
       "top_clients": [
@@ -19072,6 +19947,74 @@
           "FINE": 0
         }
       },
+      "by_sku": {
+        "PureSense Ultra Deep (2X1.2ml)": 42578654,
+        "Redensity 1 (2X1ml)": 1122576,
+        "Redensity 1 (1x3ml)": 3424000,
+        "RHA 1 (2X1ml)": 3258218,
+        "RHA 2 (2X1ml)": 4781323,
+        "Jeringa monodosis x 3mL (sin aguja)": 27254668,
+        "RHA KISS (2X0.7ml)": 2338200,
+        "RHA 4 (2X1.2ml)": 10664000,
+        "Redensity 2 (2X1ml)": 8349745,
+        "RHA 3 (2X1ml)": 5926112,
+        "Ref: OC 128388": 0
+      },
+      "by_vendor_sku": {
+        "Monica Urrutia": {
+          "PureSense Ultra Deep (2X1.2ml)": 15296433,
+          "RHA KISS (2X0.7ml)": 1731600,
+          "Redensity 1 (1x3ml)": 2028600,
+          "RHA 4 (2X1.2ml)": 3902704,
+          "Jeringa monodosis x 3mL (sin aguja)": 18838746,
+          "Redensity 2 (2X1ml)": 3477429,
+          "RHA 3 (2X1ml)": 2591733,
+          "Redensity 1 (2X1ml)": 331968,
+          "RHA 1 (2X1ml)": 1422720,
+          "RHA 2 (2X1ml)": 2999568
+        },
+        "Cindy Monsalves": {
+          "PureSense Ultra Deep (2X1.2ml)": 16360209,
+          "Redensity 1 (2X1ml)": 790608,
+          "Redensity 1 (1x3ml)": 545400,
+          "RHA 1 (2X1ml)": 131040,
+          "RHA 2 (2X1ml)": 647276,
+          "Jeringa monodosis x 3mL (sin aguja)": 2720694,
+          "Redensity 2 (2X1ml)": 2449764,
+          "RHA 4 (2X1.2ml)": 2575664,
+          "RHA 3 (2X1ml)": 952495,
+          "RHA KISS (2X0.7ml)": 0
+        },
+        "Sin asignar": {
+          "Jeringa monodosis x 3mL (sin aguja)": 1154234,
+          "PureSense Ultra Deep (2X1.2ml)": 609398
+        },
+        "Daisy Ponce": {
+          "PureSense Ultra Deep (2X1.2ml)": 8242915,
+          "RHA 2 (2X1ml)": 160503,
+          "RHA 4 (2X1.2ml)": 1263704,
+          "RHA KISS (2X0.7ml)": 158600,
+          "Jeringa monodosis x 3mL (sin aguja)": 1621424,
+          "Redensity 2 (2X1ml)": 839841,
+          "RHA 1 (2X1ml)": 0,
+          "RHA 3 (2X1ml)": 920920
+        },
+        "Ivan Salinas": {
+          "RHA 2 (2X1ml)": 0,
+          "Ref: OC 128388": 0
+        },
+        "Francisca Salinas": {
+          "Jeringa monodosis x 3mL (sin aguja)": 2919570,
+          "Redensity 1 (1x3ml)": 850000,
+          "RHA KISS (2X0.7ml)": 448000,
+          "RHA 2 (2X1ml)": 973976,
+          "Redensity 2 (2X1ml)": 1582711,
+          "RHA 1 (2X1ml)": 1704458,
+          "RHA 4 (2X1.2ml)": 2921928,
+          "PureSense Ultra Deep (2X1.2ml)": 2069699,
+          "RHA 3 (2X1ml)": 1460964
+        }
+      },
       "top_clients": [
         {
           "id": "860",
@@ -20043,6 +20986,77 @@
           "Teoxane": 10003520,
           "RRS HA Long Lasting": 1668324,
           "FINE": 0
+        }
+      },
+      "by_sku": {
+        "Jeringa monodosis x 3mL (sin aguja)": 17209263,
+        "PureSense Ultra Deep (2X1.2ml)": 32603495,
+        "RHA 4 (2X1.2ml)": 13864778,
+        "RHA KISS (2X0.7ml)": 2790000,
+        "Redensity 2 (2X1ml)": 9875837,
+        "RHA 1 (2X1ml)": 2941647,
+        "RHA 3 (2X1ml)": 7880661,
+        "RHA 2 (2X1ml)": 5263049,
+        "Redensity 1 (2X1ml)": 3617949,
+        "Redensity 1 (1x3ml)": 9367600,
+        "Alimento para deportistas PWR": 50000,
+        "Alimento para deportistas BTY": 100000
+      },
+      "by_vendor_sku": {
+        "Daisy Ponce": {
+          "Jeringa monodosis x 3mL (sin aguja)": 4163488,
+          "PureSense Ultra Deep (2X1.2ml)": 2349391,
+          "Redensity 1 (1x3ml)": 513000,
+          "Redensity 2 (2X1ml)": 1338917,
+          "RHA 4 (2X1.2ml)": 1547208,
+          "RHA 2 (2X1ml)": 149978,
+          "RHA KISS (2X0.7ml)": 540800,
+          "RHA 3 (2X1ml)": 599914,
+          "RHA 1 (2X1ml)": 0,
+          "Alimento para deportistas PWR": 25000
+        },
+        "Monica Urrutia": {
+          "PureSense Ultra Deep (2X1.2ml)": 16688962,
+          "RHA 4 (2X1.2ml)": 6773936,
+          "RHA KISS (2X0.7ml)": 1973400,
+          "Redensity 2 (2X1ml)": 3925524,
+          "RHA 1 (2X1ml)": 1778400,
+          "Jeringa monodosis x 3mL (sin aguja)": 7626189,
+          "RHA 2 (2X1ml)": 2870640,
+          "Redensity 1 (2X1ml)": 2821728,
+          "RHA 3 (2X1ml)": 5541308,
+          "Redensity 1 (1x3ml)": 2813400,
+          "Alimento para deportistas BTY": 100000
+        },
+        "Cindy Monsalves": {
+          "PureSense Ultra Deep (2X1.2ml)": 12348335,
+          "RHA 4 (2X1.2ml)": 2865200,
+          "Redensity 2 (2X1ml)": 3759167,
+          "RHA 3 (2X1ml)": 1252451,
+          "RHA 2 (2X1ml)": 781467,
+          "Redensity 1 (2X1ml)": 91728,
+          "Redensity 1 (1x3ml)": 4780800,
+          "Jeringa monodosis x 3mL (sin aguja)": 2679473,
+          "RHA KISS (2X0.7ml)": 163800,
+          "RHA 1 (2X1ml)": 131040,
+          "Alimento para deportistas PWR": 25000
+        },
+        "Sin asignar": {
+          "Jeringa monodosis x 3mL (sin aguja)": 1071789,
+          "Redensity 1 (1x3ml)": 410400,
+          "PureSense Ultra Deep (2X1.2ml)": -609398
+        },
+        "Francisca Salinas": {
+          "RHA 4 (2X1.2ml)": 2678434,
+          "Redensity 2 (2X1ml)": 852229,
+          "PureSense Ultra Deep (2X1.2ml)": 1826205,
+          "RHA 1 (2X1ml)": 1032207,
+          "Redensity 1 (1x3ml)": 850000,
+          "RHA 2 (2X1ml)": 1460964,
+          "Redensity 1 (2X1ml)": 704493,
+          "RHA 3 (2X1ml)": 486988,
+          "RHA KISS (2X0.7ml)": 112000,
+          "Jeringa monodosis x 3mL (sin aguja)": 1668324
         }
       },
       "top_clients": [
@@ -21079,6 +22093,73 @@
           "Teoxane": 13674559,
           "RRS HA Long Lasting": 2189675,
           "FINE": 0
+        }
+      },
+      "by_sku": {
+        "Jeringa monodosis x 3mL (sin aguja)": 32557016,
+        "Redensity 2 (2X1ml)": 13786534,
+        "PureSense Ultra Deep (2X1.2ml)": 44369554,
+        "RHA 4 (2X1.2ml)": 16191831,
+        "Redensity 1 (1x3ml)": 9368200,
+        "RHA 2 (2X1ml)": 7207107,
+        "RHA 3 (2X1ml)": 6532992,
+        "RHA KISS (2X0.7ml)": 3033200,
+        "RHA 1 (2X1ml)": 2785928,
+        "Redensity 1 (2X1ml)": 7284437,
+        "Alimento para deportistas BTY": 150000
+      },
+      "by_vendor_sku": {
+        "Daisy Ponce": {
+          "Jeringa monodosis x 3mL (sin aguja)": 7880393,
+          "PureSense Ultra Deep (2X1.2ml)": 8539596,
+          "RHA 2 (2X1ml)": 620964,
+          "RHA 4 (2X1.2ml)": 1049568,
+          "RHA 3 (2X1ml)": 1583983,
+          "RHA KISS (2X0.7ml)": 0,
+          "Redensity 1 (2X1ml)": 0,
+          "Redensity 2 (2X1ml)": 611769,
+          "RHA 1 (2X1ml)": 118560,
+          "Redensity 1 (1x3ml)": 410400
+        },
+        "Monica Urrutia": {
+          "Redensity 2 (2X1ml)": 7770550,
+          "PureSense Ultra Deep (2X1.2ml)": 19128152,
+          "RHA 4 (2X1.2ml)": 8984664,
+          "Jeringa monodosis x 3mL (sin aguja)": 16482183,
+          "Redensity 1 (1x3ml)": 3981600,
+          "RHA 2 (2X1ml)": 4770894,
+          "RHA KISS (2X0.7ml)": 1809600,
+          "RHA 3 (2X1ml)": 3165334,
+          "RHA 1 (2X1ml)": 1909440,
+          "Redensity 1 (2X1ml)": 6971328,
+          "Alimento para deportistas BTY": 150000
+        },
+        "Cindy Monsalves": {
+          "Redensity 1 (1x3ml)": 3616200,
+          "Redensity 2 (2X1ml)": 2117046,
+          "RHA 4 (2X1.2ml)": 2626936,
+          "PureSense Ultra Deep (2X1.2ml)": 14080308,
+          "RHA 3 (2X1ml)": 931446,
+          "Jeringa monodosis x 3mL (sin aguja)": 4328378,
+          "RHA 2 (2X1ml)": 963020,
+          "RHA KISS (2X0.7ml)": 327600,
+          "RHA 1 (2X1ml)": 122720
+        },
+        "Sin asignar": {
+          "Jeringa monodosis x 3mL (sin aguja)": 1676387,
+          "PureSense Ultra Deep (2X1.2ml)": 673546
+        },
+        "Francisca Salinas": {
+          "RHA 3 (2X1ml)": 852229,
+          "Redensity 2 (2X1ml)": 3287169,
+          "RHA 1 (2X1ml)": 635208,
+          "RHA 2 (2X1ml)": 852229,
+          "RHA 4 (2X1.2ml)": 3530663,
+          "PureSense Ultra Deep (2X1.2ml)": 1947952,
+          "RHA KISS (2X0.7ml)": 896000,
+          "Redensity 1 (1x3ml)": 1360000,
+          "Redensity 1 (2X1ml)": 313109,
+          "Jeringa monodosis x 3mL (sin aguja)": 2189675
         }
       },
       "top_clients": [
@@ -22147,6 +23228,69 @@
           "FINE": 0
         }
       },
+      "by_sku": {
+        "Redensity 2 (2X1ml)": 16005916,
+        "PureSense Ultra Deep (2X1.2ml)": 38050129,
+        "RHA 2 (2X1ml)": 7861250,
+        "RHA 4 (2X1.2ml)": 14927517,
+        "RHA 3 (2X1ml)": 6359825,
+        "Redensity 1 (1x3ml)": 8151600,
+        "Jeringa monodosis x 3mL (sin aguja)": 31314685,
+        "RHA 1 (2X1ml)": 2769288,
+        "Redensity 1 (2X1ml)": 1580590,
+        "RHA KISS (2X0.7ml)": 1264800
+      },
+      "by_vendor_sku": {
+        "Cindy Monsalves": {
+          "Redensity 2 (2X1ml)": 4950505,
+          "PureSense Ultra Deep (2X1.2ml)": 12401793,
+          "RHA 2 (2X1ml)": 2799597,
+          "RHA 4 (2X1.2ml)": 6752824,
+          "RHA 1 (2X1ml)": 478400,
+          "Jeringa monodosis x 3mL (sin aguja)": 5709336,
+          "Redensity 1 (2X1ml)": 1027936,
+          "Redensity 1 (1x3ml)": 2538000,
+          "RHA 3 (2X1ml)": 2468065,
+          "RHA KISS (2X0.7ml)": 592800
+        },
+        "Daisy Ponce": {
+          "PureSense Ultra Deep (2X1.2ml)": 5538042,
+          "RHA 2 (2X1ml)": 952494,
+          "RHA 4 (2X1.2ml)": 729872,
+          "RHA 3 (2X1ml)": 978806,
+          "Redensity 1 (1x3ml)": 1351800,
+          "Jeringa monodosis x 3mL (sin aguja)": 8292621,
+          "RHA 1 (2X1ml)": 736320,
+          "Redensity 2 (2X1ml)": 829109
+        },
+        "Monica Urrutia": {
+          "PureSense Ultra Deep (2X1.2ml)": 18771077,
+          "RHA 3 (2X1ml)": 2425966,
+          "Redensity 1 (1x3ml)": 3241800,
+          "Redensity 2 (2X1ml)": 8521844,
+          "RHA 2 (2X1ml)": 2891689,
+          "RHA 4 (2X1.2ml)": 4644640,
+          "Jeringa monodosis x 3mL (sin aguja)": 13864547,
+          "Redensity 1 (2X1ml)": 82992,
+          "RHA 1 (2X1ml)": 919360,
+          "RHA KISS (2X0.7ml)": 0
+        },
+        "Sin asignar": {
+          "Jeringa monodosis x 3mL (sin aguja)": 1154234
+        },
+        "Francisca Salinas": {
+          "Jeringa monodosis x 3mL (sin aguja)": 2293947,
+          "Redensity 2 (2X1ml)": 1704458,
+          "RHA 4 (2X1.2ml)": 2800181,
+          "Redensity 1 (2X1ml)": 469662,
+          "PureSense Ultra Deep (2X1.2ml)": 1339217,
+          "RHA 1 (2X1ml)": 635208,
+          "RHA 2 (2X1ml)": 1217470,
+          "RHA 3 (2X1ml)": 486988,
+          "Redensity 1 (1x3ml)": 1020000,
+          "RHA KISS (2X0.7ml)": 672000
+        }
+      },
       "top_clients": [
         {
           "id": "860",
@@ -22785,11 +23929,11 @@
     {
       "year": 2026,
       "month": 8,
-      "count_facturas": 114,
+      "count_facturas": 125,
       "count_nc": 2,
-      "neto_facturas": 125733302,
+      "neto_facturas": 151280143,
       "neto_nc": 1912227,
-      "total_neto": 123821075,
+      "total_neto": 149367916,
       "by_day": [
         {
           "date": "2026-08-03",
@@ -22878,22 +24022,36 @@
         },
         {
           "date": "2026-08-27",
-          "count": 8,
-          "neto": 8109048
+          "count": 10,
+          "neto": 11781361
+        },
+        {
+          "date": "2026-08-28",
+          "count": 6,
+          "neto": 18990471
+        },
+        {
+          "date": "2026-08-31",
+          "count": 3,
+          "neto": 2884057
         }
       ],
       "by_vendor": {
         "Monica Urrutia": {
-          "count": 54,
-          "neto": 67439868
+          "count": 61,
+          "neto": 77802656
         },
         "Daisy Ponce": {
           "count": 21,
           "neto": 18648083
         },
         "Cindy Monsalves": {
-          "count": 39,
-          "neto": 37733124
+          "count": 41,
+          "neto": 41405437
+        },
+        "Francisca Salinas": {
+          "count": 2,
+          "neto": 11511740
         }
       },
       "by_vendor_day": {
@@ -22987,6 +24145,16 @@
             "date": "2026-08-27",
             "count": 3,
             "neto": 5657363
+          },
+          {
+            "date": "2026-08-28",
+            "count": 4,
+            "neto": 7478731
+          },
+          {
+            "date": "2026-08-31",
+            "count": 3,
+            "neto": 2884057
           }
         ],
         "Daisy Ponce": [
@@ -23129,20 +24297,27 @@
           },
           {
             "date": "2026-08-27",
-            "count": 3,
-            "neto": 2036361
+            "count": 5,
+            "neto": 5708674
+          }
+        ],
+        "Francisca Salinas": [
+          {
+            "date": "2026-08-28",
+            "count": 2,
+            "neto": 11511740
           }
         ]
       },
       "by_brand": {
-        "Teoxane": 109585524,
-        "RRS HA Long Lasting": 14235551,
+        "Teoxane": 128121266,
+        "RRS HA Long Lasting": 21246650,
         "FINE": 0
       },
       "by_vendor_brand": {
         "Monica Urrutia": {
-          "Teoxane": 60912951,
-          "RRS HA Long Lasting": 6526917,
+          "Teoxane": 65724424,
+          "RRS HA Long Lasting": 12078232,
           "FINE": 0
         },
         "Daisy Ponce": {
@@ -23151,12 +24326,88 @@
           "FINE": 0
         },
         "Cindy Monsalves": {
-          "Teoxane": 33823844,
+          "Teoxane": 37496157,
           "RRS HA Long Lasting": 3909280,
+          "FINE": 0
+        },
+        "Francisca Salinas": {
+          "Teoxane": 10051956,
+          "RRS HA Long Lasting": 1459784,
           "FINE": 0
         }
       },
+      "by_sku": {
+        "RHA 1 (2X1ml)": 4009180,
+        "RHA KISS (2X0.7ml)": 1737400,
+        "RHA 4 (2X1.2ml)": 22138468,
+        "RHA 3 (2X1ml)": 9383079,
+        "PureSense Ultra Deep (2X1.2ml)": 61234798,
+        "Redensity 2 (2X1ml)": 11725210,
+        "Redensity 1 (2X1ml)": 1731947,
+        "RHA 2 (2X1ml)": 8589384,
+        "Jeringa monodosis x 3mL (sin aguja)": 21246650,
+        "Redensity 1 (1x3ml)": 7571800
+      },
+      "by_vendor_sku": {
+        "Monica Urrutia": {
+          "RHA 1 (2X1ml)": 2751840,
+          "RHA KISS (2X0.7ml)": 1237600,
+          "RHA 4 (2X1.2ml)": 14718080,
+          "Redensity 1 (1x3ml)": 3337200,
+          "PureSense Ultra Deep (2X1.2ml)": 29363380,
+          "Redensity 2 (2X1ml)": 4319954,
+          "Jeringa monodosis x 3mL (sin aguja)": 12078232,
+          "RHA 2 (2X1ml)": 5086113,
+          "RHA 3 (2X1ml)": 4578289,
+          "Redensity 1 (2X1ml)": 331968
+        },
+        "Daisy Ponce": {
+          "RHA 3 (2X1ml)": 2681194,
+          "PureSense Ultra Deep (2X1.2ml)": 6158131,
+          "Redensity 2 (2X1ml)": 1502593,
+          "Redensity 1 (2X1ml)": 601328,
+          "RHA 1 (2X1ml)": 474240,
+          "RHA 2 (2X1ml)": 1594507,
+          "Jeringa monodosis x 3mL (sin aguja)": 3799354,
+          "Redensity 1 (1x3ml)": 567000,
+          "RHA 4 (2X1.2ml)": 1269736
+        },
+        "Cindy Monsalves": {
+          "PureSense Ultra Deep (2X1.2ml)": 23643588,
+          "RHA 3 (2X1ml)": 1636608,
+          "Redensity 2 (2X1ml)": 4319952,
+          "RHA 4 (2X1.2ml)": 3715712,
+          "Jeringa monodosis x 3mL (sin aguja)": 3909280,
+          "Redensity 1 (1x3ml)": 2307600,
+          "RHA 1 (2X1ml)": 253760,
+          "Redensity 1 (2X1ml)": 642096,
+          "RHA 2 (2X1ml)": 813041,
+          "RHA KISS (2X0.7ml)": 163800
+        },
+        "Francisca Salinas": {
+          "Jeringa monodosis x 3mL (sin aguja)": 1459784,
+          "RHA 2 (2X1ml)": 1095723,
+          "RHA 4 (2X1.2ml)": 2434940,
+          "PureSense Ultra Deep (2X1.2ml)": 2069699,
+          "Redensity 2 (2X1ml)": 1582711,
+          "Redensity 1 (1x3ml)": 1360000,
+          "RHA 1 (2X1ml)": 529340,
+          "Redensity 1 (2X1ml)": 156555,
+          "RHA 3 (2X1ml)": 486988,
+          "RHA KISS (2X0.7ml)": 336000
+        }
+      },
       "top_clients": [
+        {
+          "id": "860",
+          "count": 2,
+          "neto": 11511740,
+          "teox_neto": 10051956,
+          "teox_units": 89.0,
+          "rrs_neto": 1459784,
+          "rrs_units": 14.0,
+          "name": "Servicios De Salud Girardi Y Cia. Ltda"
+        },
         {
           "id": "1209",
           "count": 1,
@@ -23166,6 +24417,16 @@
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "Inversiones Altamira Spa"
+        },
+        {
+          "id": "921",
+          "count": 2,
+          "neto": 4831962,
+          "teox_neto": 4337290,
+          "teox_units": 40.0,
+          "rrs_neto": 494672,
+          "rrs_units": 5.0,
+          "name": "SOCIEDAD ODONTOLOGICA DEL MAULE SPA"
         },
         {
           "id": "1013",
@@ -23208,6 +24469,26 @@
           "name": "SERVICIOS MEDICOS TAOTE LTDA"
         },
         {
+          "id": "591",
+          "count": 3,
+          "neto": 3519558,
+          "teox_neto": 2420288,
+          "teox_units": 20.0,
+          "rrs_neto": 1099270,
+          "rrs_units": 10.0,
+          "name": "THE BEAUTY LAB SPA"
+        },
+        {
+          "id": "619",
+          "count": 1,
+          "neto": 3197484,
+          "teox_neto": 1218797,
+          "teox_units": 10.0,
+          "rrs_neto": 1978687,
+          "rrs_units": 20.0,
+          "name": "DERMATOLOGIA Y ACUPUNTURA LIMITADA"
+        },
+        {
           "id": "597",
           "count": 2,
           "neto": 3066326,
@@ -23228,14 +24509,14 @@
           "name": "CLINICA ÓPALO SPA"
         },
         {
-          "id": "921",
-          "count": 1,
-          "neto": 2639328,
-          "teox_neto": 2639328,
-          "teox_units": 25.0,
-          "rrs_neto": 0,
-          "rrs_units": 0,
-          "name": "SOCIEDAD ODONTOLOGICA DEL MAULE SPA"
+          "id": "487",
+          "count": 2,
+          "neto": 2590456,
+          "teox_neto": 611770,
+          "teox_units": 5.0,
+          "rrs_neto": 1978686,
+          "rrs_units": 20.0,
+          "name": "SOCIEDAD DE SERVICIOS MEDICOS MOELLER SPA"
         },
         {
           "id": "1221",
@@ -23248,6 +24529,16 @@
           "name": "Inversiones Mave SPA"
         },
         {
+          "id": "552",
+          "count": 1,
+          "neto": 2496281,
+          "teox_neto": 2496281,
+          "teox_units": 20.0,
+          "rrs_neto": 0,
+          "rrs_units": 0,
+          "name": "SOCIEDAD DE SERVICIOS MEDICOS Y ESTETICOS MPRS LIMITADA"
+        },
+        {
           "id": "916",
           "count": 1,
           "neto": 2475031,
@@ -23256,60 +24547,20 @@
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "SOCIEDAD ODONTOLOGICA BHER SPA"
-        },
-        {
-          "id": "1091",
-          "count": 1,
-          "neto": 2437594,
-          "teox_neto": 2437594,
-          "teox_units": 20.0,
-          "rrs_neto": 0,
-          "rrs_units": 0,
-          "name": "BEAUTY LINE SPA"
-        },
-        {
-          "id": "1186",
-          "count": 1,
-          "neto": 2437594,
-          "teox_neto": 2437594,
-          "teox_units": 20.0,
-          "rrs_neto": 0,
-          "rrs_units": 0,
-          "name": "De Santiago Odontologia SPA"
-        },
-        {
-          "id": "469",
-          "count": 1,
-          "neto": 2437594,
-          "teox_neto": 2437594,
-          "teox_units": 20.0,
-          "rrs_neto": 0,
-          "rrs_units": 0,
-          "name": "ODONTOLOGÍA Y ESTÉTICA DRA GALLARDO SPA"
-        },
-        {
-          "id": "591",
-          "count": 2,
-          "neto": 2420288,
-          "teox_neto": 2420288,
-          "teox_units": 20.0,
-          "rrs_neto": 0,
-          "rrs_units": 0,
-          "name": "THE BEAUTY LAB SPA"
-        },
-        {
-          "id": "1019",
-          "count": 1,
-          "neto": 2375989,
-          "teox_neto": 2375989,
-          "teox_units": 20.0,
-          "rrs_neto": 0,
-          "rrs_units": 0,
-          "name": "CLÍNICA DRA. JAVIERA GUEVARA LIZANA LIMITADA"
         }
       ],
       "top_clients_by_vendor": {
         "Monica Urrutia": [
+          {
+            "id": "921",
+            "count": 2,
+            "neto": 4831962,
+            "teox_neto": 4337290,
+            "teox_units": 40.0,
+            "rrs_neto": 494672,
+            "rrs_units": 5.0,
+            "name": "SOCIEDAD ODONTOLOGICA DEL MAULE SPA"
+          },
           {
             "id": "1013",
             "count": 2,
@@ -23351,6 +24602,26 @@
             "name": "SERVICIOS MEDICOS TAOTE LTDA"
           },
           {
+            "id": "591",
+            "count": 3,
+            "neto": 3519558,
+            "teox_neto": 2420288,
+            "teox_units": 20.0,
+            "rrs_neto": 1099270,
+            "rrs_units": 10.0,
+            "name": "THE BEAUTY LAB SPA"
+          },
+          {
+            "id": "619",
+            "count": 1,
+            "neto": 3197484,
+            "teox_neto": 1218797,
+            "teox_units": 10.0,
+            "rrs_neto": 1978687,
+            "rrs_units": 20.0,
+            "name": "DERMATOLOGIA Y ACUPUNTURA LIMITADA"
+          },
+          {
             "id": "597",
             "count": 2,
             "neto": 3066326,
@@ -23361,14 +24632,14 @@
             "name": "DR MATTATALL SPA"
           },
           {
-            "id": "921",
-            "count": 1,
-            "neto": 2639328,
-            "teox_neto": 2639328,
-            "teox_units": 25.0,
-            "rrs_neto": 0,
-            "rrs_units": 0,
-            "name": "SOCIEDAD ODONTOLOGICA DEL MAULE SPA"
+            "id": "487",
+            "count": 2,
+            "neto": 2590456,
+            "teox_neto": 611770,
+            "teox_units": 5.0,
+            "rrs_neto": 1978686,
+            "rrs_units": 20.0,
+            "name": "SOCIEDAD DE SERVICIOS MEDICOS MOELLER SPA"
           },
           {
             "id": "1221",
@@ -23411,16 +24682,6 @@
             "name": "ODONTOLOGÍA Y ESTÉTICA DRA GALLARDO SPA"
           },
           {
-            "id": "591",
-            "count": 2,
-            "neto": 2420288,
-            "teox_neto": 2420288,
-            "teox_units": 20.0,
-            "rrs_neto": 0,
-            "rrs_units": 0,
-            "name": "THE BEAUTY LAB SPA"
-          },
-          {
             "id": "1019",
             "count": 1,
             "neto": 2375989,
@@ -23439,26 +24700,6 @@
             "rrs_neto": 989343,
             "rrs_units": 10.0,
             "name": "TERRE SOCIEDAD DE PROFESIONALES LIMITADA"
-          },
-          {
-            "id": "995",
-            "count": 3,
-            "neto": 2044224,
-            "teox_neto": 2044224,
-            "teox_units": 15.0,
-            "rrs_neto": 0,
-            "rrs_units": 0,
-            "name": "SERVICIOS PROFESIONALES BEAUTY & SOUL LIMITADA"
-          },
-          {
-            "id": "888",
-            "count": 2,
-            "neto": 2033771,
-            "teox_neto": 2033771,
-            "teox_units": 15.0,
-            "rrs_neto": 0,
-            "rrs_units": 0,
-            "name": "SERVICIOS MEDICOS M Y H LIMITADA"
           }
         ],
         "Daisy Ponce": [
@@ -23625,6 +24866,16 @@
             "name": "Inversiones Altamira Spa"
           },
           {
+            "id": "552",
+            "count": 1,
+            "neto": 2496281,
+            "teox_neto": 2496281,
+            "teox_units": 20.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "SOCIEDAD DE SERVICIOS MEDICOS Y ESTETICOS MPRS LIMITADA"
+          },
+          {
             "id": "1091",
             "count": 1,
             "neto": 2437594,
@@ -23715,6 +24966,16 @@
             "name": "SERVICIOS ODONTOLOGICOS ROMAN MERDECH Y COMPANIA SPA"
           },
           {
+            "id": "1236",
+            "count": 1,
+            "neto": 1176032,
+            "teox_neto": 1176032,
+            "teox_units": 10.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "Mauricio Saez Martínez"
+          },
+          {
             "id": "934",
             "count": 1,
             "neto": 803325,
@@ -23743,26 +25004,18 @@
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SERVICIOS ODONTOLÓGICOS N R SPA"
-          },
+          }
+        ],
+        "Francisca Salinas": [
           {
-            "id": "1235",
-            "count": 1,
-            "neto": 696477,
-            "teox_neto": 696477,
-            "teox_units": 5.0,
-            "rrs_neto": 0,
-            "rrs_units": 0,
-            "name": "Dra. Barbara Guzman Spa"
-          },
-          {
-            "id": "1062",
-            "count": 1,
-            "neto": 695823,
-            "teox_neto": 695823,
-            "teox_units": 5.0,
-            "rrs_neto": 0,
-            "rrs_units": 0,
-            "name": "DRA. DASA SPA"
+            "id": "860",
+            "count": 2,
+            "neto": 11511740,
+            "teox_neto": 10051956,
+            "teox_units": 89.0,
+            "rrs_neto": 1459784,
+            "rrs_units": 14.0,
+            "name": "Servicios De Salud Girardi Y Cia. Ltda"
           }
         ]
       }
