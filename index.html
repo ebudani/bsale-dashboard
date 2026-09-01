@@ -43,7 +43,7 @@
   #updated-at { font-size: 11px; color: #94a3b8; }
 
   /* Filters */
-  .filter-group { display: flex; align-items: center; gap: 6px; }
+  .filter-group { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
   .filter-label {
     font-size: 10px;
     text-transform: uppercase;
@@ -60,7 +60,7 @@
     cursor: pointer;
   }
   .filter-select option { background: var(--navy); color: white; }
-  #custom-range { display: none; align-items: center; gap: 6px; }
+  #custom-range { display: none; align-items: center; gap: 6px; flex-wrap: wrap; }
 
   /* Main layout */
   main { padding: 20px 24px; max-width: 1400px; margin: 0 auto; }
@@ -99,7 +99,10 @@
     border-radius: 10px;
     padding: 18px;
     box-shadow: 0 1px 3px rgba(0,0,0,.08);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
+  .card table { min-width: max-content; }
   .card h2 {
     font-size: 13px;
     font-weight: 600;
