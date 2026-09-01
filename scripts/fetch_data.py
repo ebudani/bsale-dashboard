@@ -408,6 +408,20 @@ def build_month_record(year, month, facturas, nc_docs, exenta_docs, clients_meta
                 vbrand_totals[brand]["neto"] += vals.get("neto", 0)
                 vbrand_totals[brand]["qty"] += vals.get("qty", 0)
 
+    # Net returned units out of the productivity unit counts. NC line items
+    # already carry negative qty (fetch_brand_details negates them), so this
+    # just needs to add them in -- without touching who counts as a "client"
+    # that month, since a later return doesn't undo having bought.
+    for d in nc_docs:
+        nc_brands = brand_details.get(d["id"], {}).get("by_brand", {}) if brand_details else {}
+        vname_nc = vendor_for(d)
+        for brand in PRODUCTIVITY_BRANDS:
+            qty = nc_brands.get(brand, {}).get("qty", 0)
+            if qty:
+                brand_units[brand] += qty
+                vu = vendor_brand_units.setdefault(vname_nc, {b: 0 for b in PRODUCTIVITY_BRANDS})
+                vu[brand] += qty
+
     def top_n(client_totals, brand_map, n=15):
         rows = []
         for cid, vals in client_totals.items():
