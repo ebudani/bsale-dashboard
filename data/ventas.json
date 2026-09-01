@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-01T16:33:33.775205Z",
+  "updated_at": "2026-09-01T17:02:14.761595Z",
   "users": {
     "7": "Cindy Monsalves",
     "9": "Daisy Ponce",
@@ -5185,16 +5185,6 @@
         }
       },
       "brand_productivity_by_vendor": {
-        "Cindy Monsalves": {
-          "Teoxane": {
-            "clients": 0,
-            "units": 0
-          },
-          "RRS HA Long Lasting": {
-            "clients": 9,
-            "units": 72.0
-          }
-        },
         "Daisy Ponce": {
           "Teoxane": {
             "clients": 0,
@@ -5203,6 +5193,16 @@
           "RRS HA Long Lasting": {
             "clients": 5,
             "units": 21.0
+          }
+        },
+        "Cindy Monsalves": {
+          "Teoxane": {
+            "clients": 0,
+            "units": 0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 9,
+            "units": 72.0
           }
         },
         "Monica Urrutia": {
@@ -5233,6 +5233,16 @@
           "RRS HA Long Lasting": {
             "clients": 1,
             "units": 64.0
+          }
+        },
+        "Ivan Salinas": {
+          "Teoxane": {
+            "clients": 0,
+            "units": 0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 0,
+            "units": 0
           }
         }
       }
@@ -7119,6 +7129,16 @@
             "units": 23.0
           }
         },
+        "Ivan Salinas": {
+          "Teoxane": {
+            "clients": 0,
+            "units": 0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 0,
+            "units": 0
+          }
+        },
         "Francisca Salinas": {
           "Teoxane": {
             "clients": 0,
@@ -8075,7 +8095,7 @@
           "units": 444.0
         },
         "RRS HA Long Lasting": {
-          "clients": 20,
+          "clients": 19,
           "units": 225.0
         }
       },
@@ -8086,7 +8106,7 @@
             "units": 193.0
           },
           "RRS HA Long Lasting": {
-            "clients": 11,
+            "clients": 10,
             "units": 121.0
           }
         },
@@ -8108,6 +8128,16 @@
           "RRS HA Long Lasting": {
             "clients": 3,
             "units": 20.0
+          }
+        },
+        "Ivan Salinas": {
+          "Teoxane": {
+            "clients": 0,
+            "units": 0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 0,
+            "units": 0
           }
         },
         "Francisca Salinas": {
@@ -9142,7 +9172,7 @@
           "units": 491.0
         },
         "RRS HA Long Lasting": {
-          "clients": 38,
+          "clients": 37,
           "units": 302.0
         }
       },
@@ -9153,7 +9183,7 @@
             "units": 89.0
           },
           "RRS HA Long Lasting": {
-            "clients": 14,
+            "clients": 13,
             "units": 70.0
           }
         },
@@ -10214,6 +10244,16 @@
           "RRS HA Long Lasting": {
             "clients": 4,
             "units": 21.0
+          }
+        },
+        "Sin asignar": {
+          "Teoxane": {
+            "clients": 0,
+            "units": 0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 0,
+            "units": 0
           }
         },
         "Francisca Salinas": {
@@ -11352,6 +11392,16 @@
             "clients": 1,
             "units": 39.0
           }
+        },
+        "Ivan Salinas": {
+          "Teoxane": {
+            "clients": 0,
+            "units": 0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 0,
+            "units": 0
+          }
         }
       }
     },
@@ -12450,7 +12500,7 @@
       },
       "brand_productivity": {
         "Teoxane": {
-          "clients": 87,
+          "clients": 86,
           "units": 813.0
         },
         "RRS HA Long Lasting": {
@@ -12471,7 +12521,7 @@
         },
         "Monica Urrutia": {
           "Teoxane": {
-            "clients": 41,
+            "clients": 40,
             "units": 392.0
           },
           "RRS HA Long Lasting": {
@@ -12497,6 +12547,16 @@
           "RRS HA Long Lasting": {
             "clients": 1,
             "units": 10.0
+          }
+        },
+        "Ivan Salinas": {
+          "Teoxane": {
+            "clients": 0,
+            "units": 0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 0,
+            "units": 0
           }
         },
         "Francisca Salinas": {
@@ -13625,11 +13685,11 @@
       },
       "brand_productivity": {
         "Teoxane": {
-          "clients": 68,
+          "clients": 66,
           "units": 712.0
         },
         "RRS HA Long Lasting": {
-          "clients": 24,
+          "clients": 23,
           "units": 209.0
         }
       },
@@ -13646,17 +13706,17 @@
         },
         "Monica Urrutia": {
           "Teoxane": {
-            "clients": 29,
+            "clients": 28,
             "units": 337.0
           },
           "RRS HA Long Lasting": {
-            "clients": 8,
+            "clients": 7,
             "units": 96.0
           }
         },
         "Sin asignar": {
           "Teoxane": {
-            "clients": 3,
+            "clients": 2,
             "units": 7.0
           },
           "RRS HA Long Lasting": {
@@ -14783,7 +14843,7 @@
       },
       "brand_productivity": {
         "Teoxane": {
-          "clients": 74,
+          "clients": 73,
           "units": 824.0
         },
         "RRS HA Long Lasting": {
@@ -14794,7 +14854,7 @@
       "brand_productivity_by_vendor": {
         "Cindy Monsalves": {
           "Teoxane": {
-            "clients": 23,
+            "clients": 22,
             "units": 169.0
           },
           "RRS HA Long Lasting": {
@@ -15926,7 +15986,7 @@
       },
       "brand_productivity": {
         "Teoxane": {
-          "clients": 69,
+          "clients": 67,
           "units": 830.0
         },
         "RRS HA Long Lasting": {
@@ -15937,7 +15997,7 @@
       "brand_productivity_by_vendor": {
         "Monica Urrutia": {
           "Teoxane": {
-            "clients": 34,
+            "clients": 33,
             "units": 390.0
           },
           "RRS HA Long Lasting": {
@@ -15947,7 +16007,7 @@
         },
         "Cindy Monsalves": {
           "Teoxane": {
-            "clients": 23,
+            "clients": 22,
             "units": 184.0
           },
           "RRS HA Long Lasting": {
@@ -16986,7 +17046,7 @@
           "units": 635.0
         },
         "RRS HA Long Lasting": {
-          "clients": 34,
+          "clients": 33,
           "units": 277.0
         }
       },
@@ -17017,8 +17077,18 @@
             "units": 51.0
           },
           "RRS HA Long Lasting": {
-            "clients": 5,
+            "clients": 4,
             "units": 25.0
+          }
+        },
+        "Ivan Salinas": {
+          "Teoxane": {
+            "clients": 0,
+            "units": 0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 0,
+            "units": 0
           }
         },
         "Francisca Salinas": {
@@ -20316,7 +20386,7 @@
       },
       "brand_productivity": {
         "Teoxane": {
-          "clients": 73,
+          "clients": 72,
           "units": 937.0
         },
         "RRS HA Long Lasting": {
@@ -20357,7 +20427,7 @@
         },
         "Sin asignar": {
           "Teoxane": {
-            "clients": 2,
+            "clients": 1,
             "units": 15.0
           },
           "RRS HA Long Lasting": {
@@ -21525,11 +21595,11 @@
       },
       "brand_productivity": {
         "Teoxane": {
-          "clients": 61,
+          "clients": 60,
           "units": 670.0
         },
         "RRS HA Long Lasting": {
-          "clients": 24,
+          "clients": 23,
           "units": 264.0
         }
       },
@@ -21540,7 +21610,7 @@
             "units": 280.0
           },
           "RRS HA Long Lasting": {
-            "clients": 15,
+            "clients": 14,
             "units": 186.0
           }
         },
@@ -21576,7 +21646,7 @@
         },
         "Ivan Salinas": {
           "Teoxane": {
-            "clients": 1,
+            "clients": 0,
             "units": 0.0
           },
           "RRS HA Long Lasting": {
@@ -23834,7 +23904,7 @@
       },
       "brand_productivity": {
         "Teoxane": {
-          "clients": 74,
+          "clients": 73,
           "units": 959.0
         },
         "RRS HA Long Lasting": {
@@ -23855,7 +23925,7 @@
         },
         "Monica Urrutia": {
           "Teoxane": {
-            "clients": 40,
+            "clients": 39,
             "units": 529.0
           },
           "RRS HA Long Lasting": {
