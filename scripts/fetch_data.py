@@ -338,6 +338,15 @@ def build_month_record(year, month, facturas, nc_docs, exenta_docs, clients_meta
     def empty_brand_totals():
         return {"Teoxane": {"neto": 0, "qty": 0}, "RRS HA Long Lasting": {"neto": 0, "qty": 0}}
 
+    # Client/unit productivity per brand (total and per vendor): how many
+    # distinct clients bought each brand this month, and how many units,
+    # used for the "clientes, unidades, productividad" trend tables.
+    PRODUCTIVITY_BRANDS = ["Teoxane", "RRS HA Long Lasting"]
+    brand_clients = {b: set() for b in PRODUCTIVITY_BRANDS}
+    brand_units = {b: 0 for b in PRODUCTIVITY_BRANDS}
+    vendor_brand_clients = {}
+    vendor_brand_units = {}
+
     by_client = {}
     by_client_brand = {}
     by_vendor_client = {}
@@ -354,6 +363,17 @@ def build_month_record(year, month, facturas, nc_docs, exenta_docs, clients_meta
             if brand in brand_totals:
                 brand_totals[brand]["neto"] += vals.get("neto", 0)
                 brand_totals[brand]["qty"] += vals.get("qty", 0)
+
+        vname_p = vendor_for(d)
+        for brand in PRODUCTIVITY_BRANDS:
+            qty = doc_brands.get(brand, {}).get("qty", 0)
+            if qty > 0:
+                brand_clients[brand].add(cid)
+                brand_units[brand] += qty
+                vc = vendor_brand_clients.setdefault(vname_p, {b: set() for b in PRODUCTIVITY_BRANDS})
+                vu = vendor_brand_units.setdefault(vname_p, {b: 0 for b in PRODUCTIVITY_BRANDS})
+                vc[brand].add(cid)
+                vu[brand] += qty
 
         vname = vendor_for(d)
         by_vendor_client.setdefault(vname, {})
@@ -388,6 +408,15 @@ def build_month_record(year, month, facturas, nc_docs, exenta_docs, clients_meta
         for vname, totals in by_vendor_client.items()
     }
 
+    def productivity_dict(clients_map, units_map):
+        return {b: {"clients": len(clients_map[b]), "units": units_map[b]} for b in PRODUCTIVITY_BRANDS}
+
+    brand_productivity = productivity_dict(brand_clients, brand_units)
+    brand_productivity_by_vendor = {
+        vname: productivity_dict(vendor_brand_clients[vname], vendor_brand_units[vname])
+        for vname in vendor_brand_clients
+    }
+
     record = {
         "year": year,
         "month": month,
@@ -412,6 +441,8 @@ def build_month_record(year, month, facturas, nc_docs, exenta_docs, clients_meta
         "by_vendor_sku": by_vendor_sku,
         "top_clients": top_clients,
         "top_clients_by_vendor": top_clients_by_vendor,
+        "brand_productivity": brand_productivity,
+        "brand_productivity_by_vendor": brand_productivity_by_vendor,
     }
     return record
 

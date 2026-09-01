@@ -118,6 +118,9 @@
     gap: 16px;
     margin-bottom: 22px;
   }
+  .tables-row-3 { grid-template-columns: 1.2fr 1fr 1fr; }
+  .tables-row-3 table { font-size: 12px; }
+  .tables-row-3 th, .tables-row-3 td { padding: 6px 8px; }
   table { width: 100%; border-collapse: collapse; font-size: 13px; }
   th {
     background: var(--gray-100);
@@ -278,22 +281,8 @@
       </div>
     </div>
 
-    <!-- Vendor / cumplimiento table -->
-    <div class="tables-row">
-      <div class="card">
-        <h2 id="table-vendor-title">Vendedores — </h2>
-        <table id="table-vendor">
-          <thead>
-            <tr>
-              <th>Vendedor</th>
-              <th>Neto</th>
-              <th>Teoxane</th>
-              <th>RRS</th>
-            </tr>
-          </thead>
-          <tbody id="tbody-vendor"></tbody>
-        </table>
-      </div>
+    <!-- Cumplimiento / productividad por marca -->
+    <div class="tables-row tables-row-3">
       <div class="card">
         <h2 id="table-cumpl-title">Cumplimiento — </h2>
         <table id="table-cumpl">
@@ -309,6 +298,28 @@
             </tr>
           </thead>
           <tbody id="tbody-cumpl"></tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h2>Teoxane — Clientes, unidades y productividad por mes</h2>
+        <table id="table-prod-teox">
+          <thead>
+            <tr>
+              <th>Año</th><th>Mes</th><th>Periodo</th><th>N° Clientes</th><th>N° Unidades</th><th>Productividad<br><small>(unid./cliente)</small></th>
+            </tr>
+          </thead>
+          <tbody id="tbody-prod-teox"></tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h2>RRS HA Long Lasting — Clientes, unidades y productividad por mes</h2>
+        <table id="table-prod-rrs">
+          <thead>
+            <tr>
+              <th>Año</th><th>Mes</th><th>Periodo</th><th>N° Clientes</th><th>N° Unidades</th><th>Productividad<br><small>(unid./cliente)</small></th>
+            </tr>
+          </thead>
+          <tbody id="tbody-prod-rrs"></tbody>
         </table>
       </div>
     </div>
@@ -633,8 +644,9 @@ function render() {
   renderSkuChart(view, label);
   renderDailyChart(view, label, months.length > 1);
   renderBrandsChart();
-  renderVendorTable(agg, label);
   renderCumplTable(agg, t, label);
+  renderProductivityTable('tbody-prod-teox', 'Teoxane');
+  renderProductivityTable('tbody-prod-rrs', 'RRS HA Long Lasting');
   renderTopClients(view, label, months.length > 1);
 }
 
@@ -966,48 +978,33 @@ function renderBrandsChart() {
   });
 }
 
-// ── Vendor table ─────────────────────────────────────────────────────────────
-function renderVendorTable(agg, label) {
-  document.getElementById('table-vendor-title').textContent = `Vendedores — ${label}`;
-  const bv    = agg.by_vendor || {};
-  const bvb   = agg.by_vendor_brand || {};
-  const tbody = document.getElementById('tbody-vendor');
+// ── Brand productivity table (clients, units, unid./cliente per month) ──────
+// Always shows the trailing 12 months, like "Marcas por Mes"; respects the
+// Vendedor filter but not the Periodo filter.
+function renderProductivityTable(tbodyId, brand) {
+  const tbody = document.getElementById(tbodyId);
   tbody.innerHTML = '';
+  const last12 = allMonths.slice(-12).slice().reverse();
 
-  const filterName = selectedVendor;
-  const rows = Object.entries(bv)
-    .filter(([name]) => filterName === 'all' || name === filterName)
-    .map(([name, v]) => ({name, ...v}))
-    .sort((a, b) => b.neto - a.neto);
+  last12.forEach(m => {
+    const prod = selectedVendor === 'all'
+      ? (m.brand_productivity || {})[brand]
+      : ((m.brand_productivity_by_vendor || {})[selectedVendor] || {})[brand];
+    const clients = prod ? prod.clients : 0;
+    const units   = prod ? prod.units   : 0;
+    const productivity = clients ? units / clients : 0;
 
-  rows.forEach(r => {
-    const teox  = (bvb[r.name] || {})['Teoxane'] || 0;
-    const rrs   = (bvb[r.name] || {})['RRS HA Long Lasting'] || 0;
     const tr = document.createElement('tr');
     tr.innerHTML = `
-      <td><strong>${r.name}</strong></td>
-      <td>${M(r.neto)}</td>
-      <td style="color:${BRAND_COLORS['Teoxane']}">${M(teox)}</td>
-      <td style="color:${BRAND_COLORS['RRS HA Long Lasting']}">${M(rrs)}</td>
+      <td>${m.year}</td>
+      <td>${m.month}</td>
+      <td>${monthLabel(m.year, m.month)}</td>
+      <td>${clients}</td>
+      <td>${units}</td>
+      <td>${productivity.toFixed(1)}</td>
     `;
     tbody.appendChild(tr);
   });
-
-  if (filterName === 'all' && rows.length > 1) {
-    const totNeto = rows.reduce((s, r) => s + r.neto, 0);
-    const totTeox = rows.reduce((s, r) => s + ((bvb[r.name]||{})['Teoxane']||0), 0);
-    const totRrs  = rows.reduce((s, r) => s + ((bvb[r.name]||{})['RRS HA Long Lasting']||0), 0);
-    const tfoot = document.createElement('tr');
-    tfoot.style.fontWeight = '700';
-    tfoot.style.background = '#f8fafc';
-    tfoot.innerHTML = `
-      <td>Total</td>
-      <td>${M(totNeto)}</td>
-      <td style="color:${BRAND_COLORS['Teoxane']}">${M(totTeox)}</td>
-      <td style="color:${BRAND_COLORS['RRS HA Long Lasting']}">${M(totRrs)}</td>
-    `;
-    tbody.appendChild(tfoot);
-  }
 }
 
 // ── Cumplimiento table ───────────────────────────────────────────────────────
