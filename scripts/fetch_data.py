@@ -406,15 +406,33 @@ def build_month_record(year, month, facturas, nc_docs, exenta_docs, clients_meta
                 vbrand_totals[brand]["neto"] += vals.get("neto", 0)
                 vbrand_totals[brand]["qty"] += vals.get("qty", 0)
 
-    # Fold NC (returns) into the same per-client net qty before deriving
-    # clients/units, so a client who fully returned a brand this month drops
-    # out of that brand's client count entirely (net qty <= 0), not just its
-    # unit total. NC line items already carry negative qty (fetch_brand_details
-    # negates them).
+    # Fold NC (returns) into the same per-client totals -- both the
+    # productivity net qty (so a client who fully returned a brand this month
+    # drops out of that brand's client count entirely, not just its unit
+    # total) and the Top Clientes neto/units, which were previously gross-only
+    # and could overstate a client whose purchase was later returned. NC line
+    # items already carry negative qty/neto (fetch_brand_details negates them).
     for d in nc_docs:
         cid = str(d.get("client", {}).get("id", "unknown"))
         nc_brands = brand_details.get(d["id"], {}).get("by_brand", {}) if brand_details else {}
         vname_nc = vendor_for(d)
+
+        by_client.setdefault(cid, {"count": 0, "neto": 0})
+        by_client[cid]["neto"] -= d.get("netAmount", 0)
+        brand_totals = by_client_brand.setdefault(cid, empty_brand_totals())
+        for brand, vals in nc_brands.items():
+            if brand in brand_totals:
+                brand_totals[brand]["neto"] += vals.get("neto", 0)
+                brand_totals[brand]["qty"] += vals.get("qty", 0)
+
+        by_vendor_client.setdefault(vname_nc, {}).setdefault(cid, {"count": 0, "neto": 0})
+        by_vendor_client[vname_nc][cid]["neto"] -= d.get("netAmount", 0)
+        vbrand_totals = by_vendor_client_brand.setdefault(vname_nc, {}).setdefault(cid, empty_brand_totals())
+        for brand, vals in nc_brands.items():
+            if brand in vbrand_totals:
+                vbrand_totals[brand]["neto"] += vals.get("neto", 0)
+                vbrand_totals[brand]["qty"] += vals.get("qty", 0)
+
         cbq = client_brand_qty.setdefault(cid, {b: 0 for b in PRODUCTIVITY_BRANDS})
         vcbq = vendor_client_brand_qty.setdefault(vname_nc, {}).setdefault(cid, {b: 0 for b in PRODUCTIVITY_BRANDS})
         for brand in PRODUCTIVITY_BRANDS:
