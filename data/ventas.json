@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-01T13:42:52.984900Z",
+  "updated_at": "2026-09-01T16:00:01.784355Z",
   "users": {
     "7": "Cindy Monsalves",
     "9": "Daisy Ponce",
@@ -4196,6 +4196,18 @@
     "1239": {
       "name": "Carolina Leal Venegas",
       "rut": "20325177-7"
+    },
+    "1240": {
+      "name": "Clínica Dental Dra.Nicole Díaz García Spa",
+      "rut": "77907931-7"
+    },
+    "1241": {
+      "name": "Constanza Wilson",
+      "rut": "18394189-5"
+    },
+    "1242": {
+      "name": "Amanda Miranda",
+      "rut": "20244474-1"
     }
   },
   "months": [
@@ -4536,7 +4548,7 @@
       },
       "by_brand": {
         "Teoxane": 0,
-        "RRS HA Long Lasting": 21561960,
+        "RRS HA Long Lasting": 27677160,
         "FINE": 0
       },
       "by_vendor_brand": {
@@ -4562,7 +4574,7 @@
         },
         "Francisca Salinas": {
           "Teoxane": 0,
-          "RRS HA Long Lasting": 0,
+          "RRS HA Long Lasting": 6115200,
           "FINE": 0
         },
         "Ivan Salinas": {
@@ -4623,8 +4635,8 @@
           "neto": 6361181,
           "teox_neto": 0,
           "teox_units": 0,
-          "rrs_neto": 0,
-          "rrs_units": 0,
+          "rrs_neto": 6115200,
+          "rrs_units": 64.0,
           "name": "Servicios De Salud Girardi Y Cia. Ltda"
         },
         {
@@ -5114,8 +5126,8 @@
             "neto": 6361181,
             "teox_neto": 0,
             "teox_units": 0,
-            "rrs_neto": 0,
-            "rrs_units": 0,
+            "rrs_neto": 6115200,
+            "rrs_units": 64.0,
             "name": "Servicios De Salud Girardi Y Cia. Ltda"
           },
           {
@@ -5168,8 +5180,8 @@
           "units": 0
         },
         "RRS HA Long Lasting": {
-          "clients": 27,
-          "units": 242.0
+          "clients": 28,
+          "units": 306.0
         }
       },
       "brand_productivity_by_vendor": {
@@ -5211,6 +5223,16 @@
           "RRS HA Long Lasting": {
             "clients": 2,
             "units": 9.0
+          }
+        },
+        "Francisca Salinas": {
+          "Teoxane": {
+            "clients": 0,
+            "units": 0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 1,
+            "units": 64.0
           }
         }
       }
@@ -5475,13 +5497,13 @@
         ]
       },
       "by_brand": {
-        "Teoxane": 9801600,
+        "Teoxane": 11192220,
         "RRS HA Long Lasting": 21139188,
         "FINE": 0
       },
       "by_vendor_brand": {
         "Cindy Monsalves": {
-          "Teoxane": 2334450,
+          "Teoxane": 3105870,
           "RRS HA Long Lasting": 5331249,
           "FINE": 0
         },
@@ -5491,7 +5513,7 @@
           "FINE": 0
         },
         "Monica Urrutia": {
-          "Teoxane": 7467150,
+          "Teoxane": 8086350,
           "RRS HA Long Lasting": 10853157,
           "FINE": 0
         },
@@ -5546,8 +5568,8 @@
           "id": "536",
           "count": 3,
           "neto": 3606660,
-          "teox_neto": 1460340,
-          "teox_units": 13.0,
+          "teox_neto": 1754460,
+          "teox_units": 15.0,
           "rrs_neto": 1852200,
           "rrs_units": 20.0,
           "name": "ATENEA SPA"
@@ -5586,8 +5608,8 @@
           "id": "870",
           "count": 1,
           "neto": 1812480,
-          "teox_neto": 1203600,
-          "teox_units": 10.0,
+          "teox_neto": 1812480,
+          "teox_units": 15.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "SOCIEDAD ODONTOLÓGICA INTEGRAL DELLA ROSA SPA"
@@ -5666,8 +5688,8 @@
           "id": "873",
           "count": 1,
           "neto": 972720,
-          "teox_neto": 647640,
-          "teox_units": 5.0,
+          "teox_neto": 972720,
+          "teox_units": 7.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "SERVICIOS ODONTOLOGICOS MAINO Y COMPANIA LIMITADA"
@@ -5699,8 +5721,8 @@
             "id": "870",
             "count": 1,
             "neto": 1812480,
-            "teox_neto": 1203600,
-            "teox_units": 10.0,
+            "teox_neto": 1812480,
+            "teox_units": 15.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SOCIEDAD ODONTOLÓGICA INTEGRAL DELLA ROSA SPA"
@@ -5749,8 +5771,8 @@
             "id": "872",
             "count": 1,
             "neto": 645750,
-            "teox_neto": 483210,
-            "teox_units": 4.0,
+            "teox_neto": 645750,
+            "teox_units": 5.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SOCIEDAD MEDICA VERGARA & CIA. LIMITADA"
@@ -5863,8 +5885,8 @@
             "id": "536",
             "count": 3,
             "neto": 3606660,
-            "teox_neto": 1460340,
-            "teox_units": 13.0,
+            "teox_neto": 1754460,
+            "teox_units": 15.0,
             "rrs_neto": 1852200,
             "rrs_units": 20.0,
             "name": "ATENEA SPA"
@@ -5933,8 +5955,8 @@
             "id": "873",
             "count": 1,
             "neto": 972720,
-            "teox_neto": 647640,
-            "teox_units": 5.0,
+            "teox_neto": 972720,
+            "teox_units": 7.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SERVICIOS ODONTOLOGICOS MAINO Y COMPANIA LIMITADA"
@@ -6038,7 +6060,7 @@
       "brand_productivity": {
         "Teoxane": {
           "clients": 9,
-          "units": 82.0
+          "units": 92.0
         },
         "RRS HA Long Lasting": {
           "clients": 25,
@@ -6049,7 +6071,7 @@
         "Cindy Monsalves": {
           "Teoxane": {
             "clients": 3,
-            "units": 19.0
+            "units": 25.0
           },
           "RRS HA Long Lasting": {
             "clients": 11,
@@ -6069,7 +6091,7 @@
         "Monica Urrutia": {
           "Teoxane": {
             "clients": 6,
-            "units": 63.0
+            "units": 67.0
           },
           "RRS HA Long Lasting": {
             "clients": 9,
@@ -6423,18 +6445,18 @@
         ]
       },
       "by_brand": {
-        "Teoxane": 27641660,
+        "Teoxane": 31928900,
         "RRS HA Long Lasting": 29733674,
         "FINE": 0
       },
       "by_vendor_brand": {
         "Cindy Monsalves": {
-          "Teoxane": 9945350,
+          "Teoxane": 12233810,
           "RRS HA Long Lasting": 2945525,
           "FINE": 0
         },
         "Monica Urrutia": {
-          "Teoxane": 16466980,
+          "Teoxane": 18465760,
           "RRS HA Long Lasting": 19237258,
           "FINE": 0
         },
@@ -6517,8 +6539,8 @@
           "id": "597",
           "count": 2,
           "neto": 4450720,
-          "teox_neto": 3543280,
-          "teox_units": 30.0,
+          "teox_neto": 4450720,
+          "teox_units": 40.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "DR MATTATALL SPA"
@@ -6647,8 +6669,8 @@
           "id": "547",
           "count": 1,
           "neto": 1521020,
-          "teox_neto": 303260,
-          "teox_units": 2.0,
+          "teox_neto": 1521020,
+          "teox_units": 13.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "ODONTOLOGIA Y ESTETICA SELFCARE SPA"
@@ -6680,8 +6702,8 @@
             "id": "547",
             "count": 1,
             "neto": 1521020,
-            "teox_neto": 303260,
-            "teox_units": 2.0,
+            "teox_neto": 1521020,
+            "teox_units": 13.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "ODONTOLOGIA Y ESTETICA SELFCARE SPA"
@@ -6720,8 +6742,8 @@
             "id": "875",
             "count": 1,
             "neto": 650160,
-            "teox_neto": 0,
-            "teox_units": 0,
+            "teox_neto": 650160,
+            "teox_units": 5.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "BEATRIZ ELENA HAYDE GARRIDO ALVAREZ"
@@ -6730,8 +6752,8 @@
             "id": "876",
             "count": 1,
             "neto": 648270,
-            "teox_neto": 485730,
-            "teox_units": 4.0,
+            "teox_neto": 648270,
+            "teox_units": 5.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "FCAAVILA SPA"
@@ -6812,8 +6834,8 @@
             "id": "597",
             "count": 2,
             "neto": 4450720,
-            "teox_neto": 3543280,
-            "teox_units": 30.0,
+            "teox_neto": 4450720,
+            "teox_units": 40.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "DR MATTATALL SPA"
@@ -6952,8 +6974,8 @@
             "id": "881",
             "count": 1,
             "neto": 1247450,
-            "teox_neto": 1090070,
-            "teox_units": 9.0,
+            "teox_neto": 1247450,
+            "teox_units": 10.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "EVENTOS TRIAGUS SPA"
@@ -7058,8 +7080,8 @@
       },
       "brand_productivity": {
         "Teoxane": {
-          "clients": 31,
-          "units": 243.0
+          "clients": 33,
+          "units": 280.0
         },
         "RRS HA Long Lasting": {
           "clients": 27,
@@ -7069,8 +7091,8 @@
       "brand_productivity_by_vendor": {
         "Cindy Monsalves": {
           "Teoxane": {
-            "clients": 12,
-            "units": 91.0
+            "clients": 14,
+            "units": 109.0
           },
           "RRS HA Long Lasting": {
             "clients": 5,
@@ -7080,7 +7102,7 @@
         "Monica Urrutia": {
           "Teoxane": {
             "clients": 16,
-            "units": 146.0
+            "units": 165.0
           },
           "RRS HA Long Lasting": {
             "clients": 17,
@@ -7409,23 +7431,23 @@
         ]
       },
       "by_brand": {
-        "Teoxane": 43737020,
+        "Teoxane": 54421450,
         "RRS HA Long Lasting": 22730874,
         "FINE": 1116871
       },
       "by_vendor_brand": {
         "Monica Urrutia": {
-          "Teoxane": 19570450,
+          "Teoxane": 24131890,
           "RRS HA Long Lasting": 12201653,
           "FINE": 1116871
         },
         "Cindy Monsalves": {
-          "Teoxane": 18801790,
+          "Teoxane": 24038610,
           "RRS HA Long Lasting": 3977519,
           "FINE": 0
         },
         "Daisy Ponce": {
-          "Teoxane": 3012180,
+          "Teoxane": 3326940,
           "RRS HA Long Lasting": 2219684,
           "FINE": 0
         },
@@ -7435,7 +7457,7 @@
           "FINE": 0
         },
         "Francisca Salinas": {
-          "Teoxane": 2352600,
+          "Teoxane": 2924010,
           "RRS HA Long Lasting": 4332018,
           "FINE": 0
         }
@@ -7518,8 +7540,8 @@
           "id": "860",
           "count": 2,
           "neto": 7379019,
-          "teox_neto": 2352600,
-          "teox_units": 20.0,
+          "teox_neto": 2924010,
+          "teox_units": 27.0,
           "rrs_neto": 4332018,
           "rrs_units": 43.0,
           "name": "Servicios De Salud Girardi Y Cia. Ltda"
@@ -7528,8 +7550,8 @@
           "id": "591",
           "count": 2,
           "neto": 6924240,
-          "teox_neto": 4106400,
-          "teox_units": 30.0,
+          "teox_neto": 6924240,
+          "teox_units": 60.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "THE BEAUTY LAB SPA"
@@ -7568,8 +7590,8 @@
           "id": "613",
           "count": 1,
           "neto": 2934360,
-          "teox_neto": 1757880,
-          "teox_units": 15.0,
+          "teox_neto": 2934360,
+          "teox_units": 25.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "CENTRO MÉDICO Y ESTÉTICO DRA. SIERRALTA SPA"
@@ -7578,8 +7600,8 @@
           "id": "911",
           "count": 1,
           "neto": 2384310,
-          "teox_neto": 1649010,
-          "teox_units": 14.0,
+          "teox_neto": 2384310,
+          "teox_units": 19.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "MATIAS GATICA SERVICIOS ODONTOLOGICOS EMPRESA INDIVIDUAL DE RESPONSABI"
@@ -7588,8 +7610,8 @@
           "id": "918",
           "count": 1,
           "neto": 2335290,
-          "teox_neto": 1599990,
-          "teox_units": 14.0,
+          "teox_neto": 2335290,
+          "teox_units": 20.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "BARROS Y VASQUEZ BIO FACE LIMITADA"
@@ -7598,8 +7620,8 @@
           "id": "888",
           "count": 3,
           "neto": 1986390,
-          "teox_neto": 1498770,
-          "teox_units": 12.0,
+          "teox_neto": 1986390,
+          "teox_units": 15.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "SERVICIOS MEDICOS M Y H LIMITADA"
@@ -7608,8 +7630,8 @@
           "id": "908",
           "count": 1,
           "neto": 1937560,
-          "teox_neto": 1633120,
-          "teox_units": 13.0,
+          "teox_neto": 1937560,
+          "teox_units": 15.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "MEDICINA ESTÉTICA DRA. ANGELA AGUILAR SPA"
@@ -7618,8 +7640,8 @@
           "id": "905",
           "count": 1,
           "neto": 1872660,
-          "teox_neto": 1416000,
-          "teox_units": 12.0,
+          "teox_neto": 1872660,
+          "teox_units": 15.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "PALLINI LTDA."
@@ -7628,8 +7650,8 @@
           "id": "912",
           "count": 1,
           "neto": 1861450,
-          "teox_neto": 1100350,
-          "teox_units": 8.0,
+          "teox_neto": 1861450,
+          "teox_units": 15.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "ODONTOLOGIA Y ESTETICA PALERMO SPA"
@@ -7671,8 +7693,8 @@
             "id": "591",
             "count": 2,
             "neto": 6924240,
-            "teox_neto": 4106400,
-            "teox_units": 30.0,
+            "teox_neto": 6924240,
+            "teox_units": 60.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "THE BEAUTY LAB SPA"
@@ -7711,8 +7733,8 @@
             "id": "613",
             "count": 1,
             "neto": 2934360,
-            "teox_neto": 1757880,
-            "teox_units": 15.0,
+            "teox_neto": 2934360,
+            "teox_units": 25.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "CENTRO MÉDICO Y ESTÉTICO DRA. SIERRALTA SPA"
@@ -7721,8 +7743,8 @@
             "id": "888",
             "count": 3,
             "neto": 1986390,
-            "teox_neto": 1498770,
-            "teox_units": 12.0,
+            "teox_neto": 1986390,
+            "teox_units": 15.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SERVICIOS MEDICOS M Y H LIMITADA"
@@ -7731,8 +7753,8 @@
             "id": "908",
             "count": 1,
             "neto": 1937560,
-            "teox_neto": 1633120,
-            "teox_units": 13.0,
+            "teox_neto": 1937560,
+            "teox_units": 15.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "MEDICINA ESTÉTICA DRA. ANGELA AGUILAR SPA"
@@ -7761,8 +7783,8 @@
             "id": "471",
             "count": 2,
             "neto": 1462050,
-            "teox_neto": 1020870,
-            "teox_units": 9.0,
+            "teox_neto": 1462050,
+            "teox_units": 12.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "CESAR IGNACIO ZAPATA SEPULVEDA"
@@ -7813,8 +7835,8 @@
             "id": "911",
             "count": 1,
             "neto": 2384310,
-            "teox_neto": 1649010,
-            "teox_units": 14.0,
+            "teox_neto": 2384310,
+            "teox_units": 19.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "MATIAS GATICA SERVICIOS ODONTOLOGICOS EMPRESA INDIVIDUAL DE RESPONSABI"
@@ -7823,8 +7845,8 @@
             "id": "918",
             "count": 1,
             "neto": 2335290,
-            "teox_neto": 1599990,
-            "teox_units": 14.0,
+            "teox_neto": 2335290,
+            "teox_units": 20.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "BARROS Y VASQUEZ BIO FACE LIMITADA"
@@ -7833,8 +7855,8 @@
             "id": "905",
             "count": 1,
             "neto": 1872660,
-            "teox_neto": 1416000,
-            "teox_units": 12.0,
+            "teox_neto": 1872660,
+            "teox_units": 15.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "PALLINI LTDA."
@@ -7843,8 +7865,8 @@
             "id": "912",
             "count": 1,
             "neto": 1861450,
-            "teox_neto": 1100350,
-            "teox_units": 8.0,
+            "teox_neto": 1861450,
+            "teox_units": 15.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "ODONTOLOGIA Y ESTETICA PALERMO SPA"
@@ -7863,8 +7885,8 @@
             "id": "910",
             "count": 1,
             "neto": 1725750,
-            "teox_neto": 1560550,
-            "teox_units": 13.0,
+            "teox_neto": 1725750,
+            "teox_units": 15.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "CENTRO DE ESTETICA LHARMONIE LIMITADA"
@@ -7873,8 +7895,8 @@
             "id": "914",
             "count": 2,
             "neto": 1292760,
-            "teox_neto": 642600,
-            "teox_units": 6.0,
+            "teox_neto": 1292760,
+            "teox_units": 10.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SERVICIOS ODONTOLOGICOS JENNIFER FEHRENBERG ARAVENA SPA"
@@ -7965,8 +7987,8 @@
             "id": "580",
             "count": 1,
             "neto": 1290760,
-            "teox_neto": 976000,
-            "teox_units": 8.0,
+            "teox_neto": 1290760,
+            "teox_units": 10.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SERVICIOS MEDICOS ODONTOLOGICOS KINESICOS DEPORTIVOS ESTETICOS Y COSME"
@@ -8039,8 +8061,8 @@
             "id": "860",
             "count": 2,
             "neto": 7379019,
-            "teox_neto": 2352600,
-            "teox_units": 20.0,
+            "teox_neto": 2924010,
+            "teox_units": 27.0,
             "rrs_neto": 4332018,
             "rrs_units": 43.0,
             "name": "Servicios De Salud Girardi Y Cia. Ltda"
@@ -8049,8 +8071,8 @@
       },
       "brand_productivity": {
         "Teoxane": {
-          "clients": 38,
-          "units": 433.0
+          "clients": 41,
+          "units": 537.0
         },
         "RRS HA Long Lasting": {
           "clients": 20,
@@ -8061,7 +8083,7 @@
         "Monica Urrutia": {
           "Teoxane": {
             "clients": 14,
-            "units": 230.0
+            "units": 281.0
           },
           "RRS HA Long Lasting": {
             "clients": 11,
@@ -8070,8 +8092,8 @@
         },
         "Cindy Monsalves": {
           "Teoxane": {
-            "clients": 20,
-            "units": 158.0
+            "clients": 23,
+            "units": 202.0
           },
           "RRS HA Long Lasting": {
             "clients": 5,
@@ -8081,7 +8103,7 @@
         "Daisy Ponce": {
           "Teoxane": {
             "clients": 3,
-            "units": 25.0
+            "units": 27.0
           },
           "RRS HA Long Lasting": {
             "clients": 3,
@@ -8091,7 +8113,7 @@
         "Francisca Salinas": {
           "Teoxane": {
             "clients": 1,
-            "units": 20.0
+            "units": 27.0
           },
           "RRS HA Long Lasting": {
             "clients": 1,
@@ -8450,33 +8472,33 @@
         ]
       },
       "by_brand": {
-        "Teoxane": 44266160,
+        "Teoxane": 57967910,
         "RRS HA Long Lasting": 31181634,
         "FINE": 93182
       },
       "by_vendor_brand": {
         "Cindy Monsalves": {
-          "Teoxane": 9688920,
+          "Teoxane": 11278200,
           "RRS HA Long Lasting": 6881385,
           "FINE": 46591
         },
         "Monica Urrutia": {
-          "Teoxane": 20405050,
+          "Teoxane": 25858450,
           "RRS HA Long Lasting": 13135769,
           "FINE": 0
         },
         "Daisy Ponce": {
-          "Teoxane": 1667930,
+          "Teoxane": 1820150,
           "RRS HA Long Lasting": 3831597,
           "FINE": 0
         },
         "Sin asignar": {
-          "Teoxane": 0,
+          "Teoxane": 650160,
           "RRS HA Long Lasting": 2497144,
           "FINE": 0
         },
         "Francisca Salinas": {
-          "Teoxane": 12504260,
+          "Teoxane": 18360950,
           "RRS HA Long Lasting": 4835739,
           "FINE": 46591
         }
@@ -8545,8 +8567,8 @@
           "id": "860",
           "count": 2,
           "neto": 23291061,
-          "teox_neto": 12504260,
-          "teox_units": 104.0,
+          "teox_neto": 18360950,
+          "teox_units": 167.0,
           "rrs_neto": 4835739,
           "rrs_units": 48.0,
           "name": "Servicios De Salud Girardi Y Cia. Ltda"
@@ -8555,8 +8577,8 @@
           "id": "613",
           "count": 1,
           "neto": 2934360,
-          "teox_neto": 1757880,
-          "teox_units": 15.0,
+          "teox_neto": 2934360,
+          "teox_units": 25.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "CENTRO MÉDICO Y ESTÉTICO DRA. SIERRALTA SPA"
@@ -8575,8 +8597,8 @@
           "id": "921",
           "count": 1,
           "neto": 2526240,
-          "teox_neto": 1618800,
-          "teox_units": 15.0,
+          "teox_neto": 2526240,
+          "teox_units": 25.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "SOCIEDAD ODONTOLOGICA DEL MAULE SPA"
@@ -8585,8 +8607,8 @@
           "id": "651",
           "count": 2,
           "neto": 2388641,
-          "teox_neto": 1529280,
-          "teox_units": 12.0,
+          "teox_neto": 1833720,
+          "teox_units": 15.0,
           "rrs_neto": 554921,
           "rrs_units": 5.0,
           "name": "OSVAL LIMITADA"
@@ -8595,8 +8617,8 @@
           "id": "469",
           "count": 1,
           "neto": 2348400,
-          "teox_neto": 1171920,
-          "teox_units": 10.0,
+          "teox_neto": 2348400,
+          "teox_units": 20.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "ODONTOLOGÍA Y ESTÉTICA DRA GALLARDO SPA"
@@ -8615,8 +8637,8 @@
           "id": "597",
           "count": 1,
           "neto": 2289120,
-          "teox_neto": 1700880,
-          "teox_units": 12.0,
+          "teox_neto": 2289120,
+          "teox_units": 19.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "DR MATTATALL SPA"
@@ -8625,8 +8647,8 @@
           "id": "810",
           "count": 2,
           "neto": 2262073,
-          "teox_neto": 0,
-          "teox_units": 0,
+          "teox_neto": 650160,
+          "teox_units": 5.0,
           "rrs_neto": 1611913,
           "rrs_units": 15.0,
           "name": "SERVICIOS MEDICOS DRA LUCIANA SEBASTIANELLI SPA"
@@ -8635,8 +8657,8 @@
           "id": "718",
           "count": 3,
           "neto": 2027306,
-          "teox_neto": 874380,
-          "teox_units": 8.0,
+          "teox_neto": 1168500,
+          "teox_units": 10.0,
           "rrs_neto": 858806,
           "rrs_units": 10.0,
           "name": "SOCIEDAD ODONTOLOGICA BERRIOS AGUILERA LIMITADA"
@@ -8655,8 +8677,8 @@
           "id": "920",
           "count": 1,
           "neto": 1820150,
-          "teox_neto": 1667930,
-          "teox_units": 14.0,
+          "teox_neto": 1820150,
+          "teox_units": 15.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "ASESORÍAS E INVERSIONES SF SPA"
@@ -8698,8 +8720,8 @@
             "id": "718",
             "count": 3,
             "neto": 2027306,
-            "teox_neto": 874380,
-            "teox_units": 8.0,
+            "teox_neto": 1168500,
+            "teox_units": 10.0,
             "rrs_neto": 858806,
             "rrs_units": 10.0,
             "name": "SOCIEDAD ODONTOLOGICA BERRIOS AGUILERA LIMITADA"
@@ -8758,8 +8780,8 @@
             "id": "587",
             "count": 1,
             "neto": 650160,
-            "teox_neto": 0,
-            "teox_units": 0,
+            "teox_neto": 650160,
+            "teox_units": 5.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SERVICIOS ODONTOLOGICOS ROMAN MERDECH Y COMPANIA SPA"
@@ -8850,8 +8872,8 @@
             "id": "613",
             "count": 1,
             "neto": 2934360,
-            "teox_neto": 1757880,
-            "teox_units": 15.0,
+            "teox_neto": 2934360,
+            "teox_units": 25.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "CENTRO MÉDICO Y ESTÉTICO DRA. SIERRALTA SPA"
@@ -8870,8 +8892,8 @@
             "id": "921",
             "count": 1,
             "neto": 2526240,
-            "teox_neto": 1618800,
-            "teox_units": 15.0,
+            "teox_neto": 2526240,
+            "teox_units": 25.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SOCIEDAD ODONTOLOGICA DEL MAULE SPA"
@@ -8880,8 +8902,8 @@
             "id": "651",
             "count": 2,
             "neto": 2388641,
-            "teox_neto": 1529280,
-            "teox_units": 12.0,
+            "teox_neto": 1833720,
+            "teox_units": 15.0,
             "rrs_neto": 554921,
             "rrs_units": 5.0,
             "name": "OSVAL LIMITADA"
@@ -8890,8 +8912,8 @@
             "id": "469",
             "count": 1,
             "neto": 2348400,
-            "teox_neto": 1171920,
-            "teox_units": 10.0,
+            "teox_neto": 2348400,
+            "teox_units": 20.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "ODONTOLOGÍA Y ESTÉTICA DRA GALLARDO SPA"
@@ -8910,8 +8932,8 @@
             "id": "597",
             "count": 1,
             "neto": 2289120,
-            "teox_neto": 1700880,
-            "teox_units": 12.0,
+            "teox_neto": 2289120,
+            "teox_units": 19.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "DR MATTATALL SPA"
@@ -8920,8 +8942,8 @@
             "id": "810",
             "count": 2,
             "neto": 2262073,
-            "teox_neto": 0,
-            "teox_units": 0,
+            "teox_neto": 650160,
+            "teox_units": 5.0,
             "rrs_neto": 1611913,
             "rrs_units": 15.0,
             "name": "SERVICIOS MEDICOS DRA LUCIANA SEBASTIANELLI SPA"
@@ -8950,8 +8972,8 @@
             "id": "888",
             "count": 2,
             "neto": 1289610,
-            "teox_neto": 801990,
-            "teox_units": 7.0,
+            "teox_neto": 1289610,
+            "teox_units": 10.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SERVICIOS MEDICOS M Y H LIMITADA"
@@ -9002,8 +9024,8 @@
             "id": "920",
             "count": 1,
             "neto": 1820150,
-            "teox_neto": 1667930,
-            "teox_units": 14.0,
+            "teox_neto": 1820150,
+            "teox_units": 15.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "ASESORÍAS E INVERSIONES SF SPA"
@@ -9084,8 +9106,8 @@
             "id": "928",
             "count": 1,
             "neto": 650160,
-            "teox_neto": 0,
-            "teox_units": 0,
+            "teox_neto": 650160,
+            "teox_units": 5.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "928"
@@ -9096,8 +9118,8 @@
             "id": "860",
             "count": 2,
             "neto": 23291061,
-            "teox_neto": 12504260,
-            "teox_units": 104.0,
+            "teox_neto": 18360950,
+            "teox_units": 167.0,
             "rrs_neto": 4835739,
             "rrs_units": 48.0,
             "name": "Servicios De Salud Girardi Y Cia. Ltda"
@@ -9116,8 +9138,8 @@
       },
       "brand_productivity": {
         "Teoxane": {
-          "clients": 36,
-          "units": 369.0
+          "clients": 41,
+          "units": 498.0
         },
         "RRS HA Long Lasting": {
           "clients": 38,
@@ -9127,8 +9149,8 @@
       "brand_productivity_by_vendor": {
         "Cindy Monsalves": {
           "Teoxane": {
-            "clients": 13,
-            "units": 86.0
+            "clients": 16,
+            "units": 96.0
           },
           "RRS HA Long Lasting": {
             "clients": 14,
@@ -9137,8 +9159,8 @@
         },
         "Monica Urrutia": {
           "Teoxane": {
-            "clients": 21,
-            "units": 165.0
+            "clients": 22,
+            "units": 215.0
           },
           "RRS HA Long Lasting": {
             "clients": 16,
@@ -9148,7 +9170,7 @@
         "Daisy Ponce": {
           "Teoxane": {
             "clients": 1,
-            "units": 14.0
+            "units": 15.0
           },
           "RRS HA Long Lasting": {
             "clients": 5,
@@ -9157,8 +9179,8 @@
         },
         "Sin asignar": {
           "Teoxane": {
-            "clients": 0,
-            "units": 0
+            "clients": 1,
+            "units": 5.0
           },
           "RRS HA Long Lasting": {
             "clients": 2,
@@ -9168,7 +9190,7 @@
         "Francisca Salinas": {
           "Teoxane": {
             "clients": 1,
-            "units": 104.0
+            "units": 167.0
           },
           "RRS HA Long Lasting": {
             "clients": 1,
@@ -9512,23 +9534,23 @@
         ]
       },
       "by_brand": {
-        "Teoxane": 55556330,
+        "Teoxane": 70190650,
         "RRS HA Long Lasting": 28401713,
         "FINE": 46672
       },
       "by_vendor_brand": {
         "Monica Urrutia": {
-          "Teoxane": 25795940,
+          "Teoxane": 30907600,
           "RRS HA Long Lasting": 18444514,
           "FINE": 46672
         },
         "Cindy Monsalves": {
-          "Teoxane": 10370630,
+          "Teoxane": 12112130,
           "RRS HA Long Lasting": 1829918,
           "FINE": 0
         },
         "Daisy Ponce": {
-          "Teoxane": 4066310,
+          "Teoxane": 5578190,
           "RRS HA Long Lasting": 2384839,
           "FINE": 0
         },
@@ -9538,7 +9560,7 @@
           "FINE": 0
         },
         "Francisca Salinas": {
-          "Teoxane": 15323450,
+          "Teoxane": 21592730,
           "RRS HA Long Lasting": 5742442,
           "FINE": 0
         }
@@ -9604,8 +9626,8 @@
           "id": "860",
           "count": 2,
           "neto": 27335172,
-          "teox_neto": 15323450,
-          "teox_units": 123.0,
+          "teox_neto": 21592730,
+          "teox_units": 182.0,
           "rrs_neto": 5742442,
           "rrs_units": 57.0,
           "name": "Servicios De Salud Girardi Y Cia. Ltda"
@@ -9614,8 +9636,8 @@
           "id": "569",
           "count": 3,
           "neto": 7067430,
-          "teox_neto": 4903710,
-          "teox_units": 39.0,
+          "teox_neto": 7067430,
+          "teox_units": 58.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "SERVICIOS MEDICOS TAOTE LTDA"
@@ -9624,8 +9646,8 @@
           "id": "921",
           "count": 3,
           "neto": 3640480,
-          "teox_neto": 2669360,
-          "teox_units": 20.0,
+          "teox_neto": 3640480,
+          "teox_units": 30.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "SOCIEDAD ODONTOLOGICA DEL MAULE SPA"
@@ -9654,8 +9676,8 @@
           "id": "916",
           "count": 2,
           "neto": 3083130,
-          "teox_neto": 2347830,
-          "teox_units": 20.0,
+          "teox_neto": 3083130,
+          "teox_units": 25.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "SOCIEDAD ODONTOLOGICA BHER SPA"
@@ -9664,8 +9686,8 @@
           "id": "948",
           "count": 2,
           "neto": 3006180,
-          "teox_neto": 2123820,
-          "teox_units": 16.0,
+          "teox_neto": 3006180,
+          "teox_units": 23.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "SERVICIOS ODONTOLOGICOS Y ESTETICOS FLORENCIA CÀCERES RIVEROS E.I.R.L."
@@ -9684,8 +9706,8 @@
           "id": "941",
           "count": 2,
           "neto": 2510760,
-          "teox_neto": 1881240,
-          "teox_units": 14.0,
+          "teox_neto": 2510760,
+          "teox_units": 20.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "LUIS ALFARO MACAYA SPA"
@@ -9694,8 +9716,8 @@
           "id": "710",
           "count": 1,
           "neto": 2414520,
-          "teox_neto": 1238040,
-          "teox_units": 10.0,
+          "teox_neto": 2414520,
+          "teox_units": 20.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "SOCIEDAD MOELLER Y FUENTEALBA SPA"
@@ -9704,8 +9726,8 @@
           "id": "469",
           "count": 2,
           "neto": 2348400,
-          "teox_neto": 1171920,
-          "teox_units": 12.0,
+          "teox_neto": 2348400,
+          "teox_units": 20.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "ODONTOLOGÍA Y ESTÉTICA DRA GALLARDO SPA"
@@ -9757,8 +9779,8 @@
             "id": "569",
             "count": 3,
             "neto": 7067430,
-            "teox_neto": 4903710,
-            "teox_units": 39.0,
+            "teox_neto": 7067430,
+            "teox_units": 58.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SERVICIOS MEDICOS TAOTE LTDA"
@@ -9767,8 +9789,8 @@
             "id": "921",
             "count": 3,
             "neto": 3640480,
-            "teox_neto": 2669360,
-            "teox_units": 20.0,
+            "teox_neto": 3640480,
+            "teox_units": 30.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SOCIEDAD ODONTOLOGICA DEL MAULE SPA"
@@ -9797,8 +9819,8 @@
             "id": "916",
             "count": 2,
             "neto": 3083130,
-            "teox_neto": 2347830,
-            "teox_units": 20.0,
+            "teox_neto": 3083130,
+            "teox_units": 25.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SOCIEDAD ODONTOLOGICA BHER SPA"
@@ -9817,8 +9839,8 @@
             "id": "941",
             "count": 2,
             "neto": 2510760,
-            "teox_neto": 1881240,
-            "teox_units": 14.0,
+            "teox_neto": 2510760,
+            "teox_units": 20.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "LUIS ALFARO MACAYA SPA"
@@ -9827,8 +9849,8 @@
             "id": "710",
             "count": 1,
             "neto": 2414520,
-            "teox_neto": 1238040,
-            "teox_units": 10.0,
+            "teox_neto": 2414520,
+            "teox_units": 20.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SOCIEDAD MOELLER Y FUENTEALBA SPA"
@@ -9837,8 +9859,8 @@
             "id": "469",
             "count": 2,
             "neto": 2348400,
-            "teox_neto": 1171920,
-            "teox_units": 12.0,
+            "teox_neto": 2348400,
+            "teox_units": 20.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "ODONTOLOGÍA Y ESTÉTICA DRA GALLARDO SPA"
@@ -9897,8 +9919,8 @@
             "id": "720",
             "count": 2,
             "neto": 1825041,
-            "teox_neto": 976000,
-            "teox_units": 8.0,
+            "teox_neto": 1270120,
+            "teox_units": 10.0,
             "rrs_neto": 554921,
             "rrs_units": 5.0,
             "name": "FG ODONTOLOGIA Y ESTETICA SPA"
@@ -9909,8 +9931,8 @@
             "id": "950",
             "count": 2,
             "neto": 1877970,
-            "teox_neto": 1269090,
-            "teox_units": 10.0,
+            "teox_neto": 1877970,
+            "teox_units": 15.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SERVICIOS PROFESIONALES JAVIERA MERCADO GOMEZ SPA"
@@ -9939,8 +9961,8 @@
             "id": "952",
             "count": 1,
             "neto": 1352980,
-            "teox_neto": 1195600,
-            "teox_units": 9.0,
+            "teox_neto": 1352980,
+            "teox_units": 10.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "ALEJANDRA BARBARA CARRILLO PUGA CIRUJANO DENTISTA EMPRESA INDIVIDUAL D"
@@ -9949,8 +9971,8 @@
             "id": "633",
             "count": 3,
             "neto": 1252740,
-            "teox_neto": 318780,
-            "teox_units": 3.0,
+            "teox_neto": 1252740,
+            "teox_units": 10.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SOCIEDAD MEDICOS DENTAL DE VALDIVIA SPA"
@@ -9979,8 +10001,8 @@
             "id": "953",
             "count": 1,
             "neto": 650160,
-            "teox_neto": 0,
-            "teox_units": 0,
+            "teox_neto": 650160,
+            "teox_units": 5.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "MEDICAL SMP CHILE SPA"
@@ -10061,8 +10083,8 @@
             "id": "948",
             "count": 2,
             "neto": 3006180,
-            "teox_neto": 2123820,
-            "teox_units": 16.0,
+            "teox_neto": 3006180,
+            "teox_units": 23.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SERVICIOS ODONTOLOGICOS Y ESTETICOS FLORENCIA CÀCERES RIVEROS E.I.R.L."
@@ -10081,8 +10103,8 @@
             "id": "678",
             "count": 2,
             "neto": 1276730,
-            "teox_neto": 647210,
-            "teox_units": 6.0,
+            "teox_neto": 1276730,
+            "teox_units": 10.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "PARRA CAMPOS ODONTOLOGÍA SPA"
@@ -10145,8 +10167,8 @@
             "id": "860",
             "count": 2,
             "neto": 27335172,
-            "teox_neto": 15323450,
-            "teox_units": 123.0,
+            "teox_neto": 21592730,
+            "teox_units": 182.0,
             "rrs_neto": 5742442,
             "rrs_units": 57.0,
             "name": "Servicios De Salud Girardi Y Cia. Ltda"
@@ -10155,8 +10177,8 @@
       },
       "brand_productivity": {
         "Teoxane": {
-          "clients": 38,
-          "units": 490.0
+          "clients": 39,
+          "units": 640.0
         },
         "RRS HA Long Lasting": {
           "clients": 25,
@@ -10167,7 +10189,7 @@
         "Monica Urrutia": {
           "Teoxane": {
             "clients": 22,
-            "units": 248.0
+            "units": 310.0
           },
           "RRS HA Long Lasting": {
             "clients": 16,
@@ -10176,8 +10198,8 @@
         },
         "Cindy Monsalves": {
           "Teoxane": {
-            "clients": 12,
-            "units": 87.0
+            "clients": 13,
+            "units": 105.0
           },
           "RRS HA Long Lasting": {
             "clients": 4,
@@ -10187,7 +10209,7 @@
         "Daisy Ponce": {
           "Teoxane": {
             "clients": 3,
-            "units": 32.0
+            "units": 43.0
           },
           "RRS HA Long Lasting": {
             "clients": 4,
@@ -10197,7 +10219,7 @@
         "Francisca Salinas": {
           "Teoxane": {
             "clients": 1,
-            "units": 123.0
+            "units": 182.0
           },
           "RRS HA Long Lasting": {
             "clients": 1,
@@ -10586,28 +10608,28 @@
         ]
       },
       "by_brand": {
-        "Teoxane": 61954462,
+        "Teoxane": 80615442,
         "RRS HA Long Lasting": 20795042,
         "FINE": 0
       },
       "by_vendor_brand": {
         "Cindy Monsalves": {
-          "Teoxane": 19636132,
+          "Teoxane": 25000432,
           "RRS HA Long Lasting": 4948417,
           "FINE": 0
         },
         "Monica Urrutia": {
-          "Teoxane": 26276740,
+          "Teoxane": 34807120,
           "RRS HA Long Lasting": 9142982,
           "FINE": 0
         },
         "Daisy Ponce": {
-          "Teoxane": 4219100,
+          "Teoxane": 5829020,
           "RRS HA Long Lasting": 2774605,
           "FINE": 0
         },
         "Francisca Salinas": {
-          "Teoxane": 11822490,
+          "Teoxane": 14978870,
           "RRS HA Long Lasting": 3929038,
           "FINE": 0
         },
@@ -10681,8 +10703,8 @@
           "id": "860",
           "count": 2,
           "neto": 18260268,
-          "teox_neto": 11174850,
-          "teox_units": 95.0,
+          "teox_neto": 14331230,
+          "teox_units": 122.0,
           "rrs_neto": 3929038,
           "rrs_units": 39.0,
           "name": "Servicios De Salud Girardi Y Cia. Ltda"
@@ -10691,8 +10713,8 @@
           "id": "871",
           "count": 2,
           "neto": 4744680,
-          "teox_neto": 2391720,
-          "teox_units": 24.0,
+          "teox_neto": 4744680,
+          "teox_units": 40.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "FRANCISCA ÁLVAREZ QUINTANA SPA"
@@ -10701,8 +10723,8 @@
           "id": "613",
           "count": 2,
           "neto": 4117680,
-          "teox_neto": 0,
-          "teox_units": 4.0,
+          "teox_neto": 4117680,
+          "teox_units": 41.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "CENTRO MÉDICO Y ESTÉTICO DRA. SIERRALTA SPA"
@@ -10711,8 +10733,8 @@
           "id": "597",
           "count": 2,
           "neto": 3814440,
-          "teox_neto": 3176040,
-          "teox_units": 26.0,
+          "teox_neto": 3814440,
+          "teox_units": 36.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "DR MATTATALL SPA"
@@ -10721,8 +10743,8 @@
           "id": "901",
           "count": 2,
           "neto": 3661470,
-          "teox_neto": 2636820,
-          "teox_units": 24.0,
+          "teox_neto": 3519180,
+          "teox_units": 30.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "Universidad Mayor"
@@ -10731,8 +10753,8 @@
           "id": "487",
           "count": 2,
           "neto": 3653625,
-          "teox_neto": 1162800,
-          "teox_units": 10.0,
+          "teox_neto": 1751040,
+          "teox_units": 15.0,
           "rrs_neto": 1902585,
           "rrs_units": 20.0,
           "name": "SOCIEDAD DE SERVICIOS MEDICOS MOELLER SPA"
@@ -10741,8 +10763,8 @@
           "id": "777",
           "count": 4,
           "neto": 3106841,
-          "teox_neto": 1912080,
-          "teox_units": 16.0,
+          "teox_neto": 2551920,
+          "teox_units": 20.0,
           "rrs_neto": 554921,
           "rrs_units": 5.0,
           "name": "SERVICIOS MEDICOS SANTIAGO SPA"
@@ -10761,8 +10783,8 @@
           "id": "888",
           "count": 3,
           "neto": 2575390,
-          "teox_neto": 2098090,
-          "teox_units": 17.0,
+          "teox_neto": 2575390,
+          "teox_units": 20.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "SERVICIOS MEDICOS M Y H LIMITADA"
@@ -10781,8 +10803,8 @@
           "id": "705",
           "count": 3,
           "neto": 2492062,
-          "teox_neto": 1295280,
-          "teox_units": 10.0,
+          "teox_neto": 1945440,
+          "teox_units": 15.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "BPE ODONTOLOGIA Y ESTETICA FACIAL SPA"
@@ -10801,8 +10823,8 @@
           "id": "921",
           "count": 1,
           "neto": 1938000,
-          "teox_neto": 1618800,
-          "teox_units": 15.0,
+          "teox_neto": 1938000,
+          "teox_units": 20.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "SOCIEDAD ODONTOLOGICA DEL MAULE SPA"
@@ -10821,8 +10843,8 @@
           "id": "920",
           "count": 1,
           "neto": 1859090,
-          "teox_neto": 1706870,
-          "teox_units": 14.0,
+          "teox_neto": 1859090,
+          "teox_units": 15.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "ASESORÍAS E INVERSIONES SF SPA"
@@ -10864,8 +10886,8 @@
             "id": "932",
             "count": 1,
             "neto": 1259040,
-            "teox_neto": 0,
-            "teox_units": 0,
+            "teox_neto": 1259040,
+            "teox_units": 10.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "CLINICA NEO SPA"
@@ -10954,8 +10976,8 @@
             "id": "879",
             "count": 1,
             "neto": 808290,
-            "teox_neto": 483210,
-            "teox_units": 4.0,
+            "teox_neto": 808290,
+            "teox_units": 6.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SERVICIOS ODONTOLOGICOS RDENT SPA"
@@ -10964,8 +10986,8 @@
             "id": "975",
             "count": 1,
             "neto": 739715,
-            "teox_neto": 323820,
-            "teox_units": 2.0,
+            "teox_neto": 574560,
+            "teox_units": 5.0,
             "rrs_neto": 165155,
             "rrs_units": 1.0,
             "name": "DRA. ANDY GUTI SPA"
@@ -10986,8 +11008,8 @@
             "id": "871",
             "count": 2,
             "neto": 4744680,
-            "teox_neto": 2391720,
-            "teox_units": 24.0,
+            "teox_neto": 4744680,
+            "teox_units": 40.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "FRANCISCA ÁLVAREZ QUINTANA SPA"
@@ -10996,8 +11018,8 @@
             "id": "613",
             "count": 2,
             "neto": 4117680,
-            "teox_neto": 0,
-            "teox_units": 4.0,
+            "teox_neto": 4117680,
+            "teox_units": 41.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "CENTRO MÉDICO Y ESTÉTICO DRA. SIERRALTA SPA"
@@ -11006,8 +11028,8 @@
             "id": "597",
             "count": 2,
             "neto": 3814440,
-            "teox_neto": 3176040,
-            "teox_units": 26.0,
+            "teox_neto": 3814440,
+            "teox_units": 36.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "DR MATTATALL SPA"
@@ -11016,8 +11038,8 @@
             "id": "901",
             "count": 2,
             "neto": 3661470,
-            "teox_neto": 2636820,
-            "teox_units": 24.0,
+            "teox_neto": 3519180,
+            "teox_units": 30.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "Universidad Mayor"
@@ -11026,8 +11048,8 @@
             "id": "487",
             "count": 2,
             "neto": 3653625,
-            "teox_neto": 1162800,
-            "teox_units": 10.0,
+            "teox_neto": 1751040,
+            "teox_units": 15.0,
             "rrs_neto": 1902585,
             "rrs_units": 20.0,
             "name": "SOCIEDAD DE SERVICIOS MEDICOS MOELLER SPA"
@@ -11036,8 +11058,8 @@
             "id": "777",
             "count": 4,
             "neto": 3106841,
-            "teox_neto": 1912080,
-            "teox_units": 16.0,
+            "teox_neto": 2551920,
+            "teox_units": 20.0,
             "rrs_neto": 554921,
             "rrs_units": 5.0,
             "name": "SERVICIOS MEDICOS SANTIAGO SPA"
@@ -11056,8 +11078,8 @@
             "id": "888",
             "count": 3,
             "neto": 2575390,
-            "teox_neto": 2098090,
-            "teox_units": 17.0,
+            "teox_neto": 2575390,
+            "teox_units": 20.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SERVICIOS MEDICOS M Y H LIMITADA"
@@ -11066,8 +11088,8 @@
             "id": "921",
             "count": 1,
             "neto": 1938000,
-            "teox_neto": 1618800,
-            "teox_units": 15.0,
+            "teox_neto": 1938000,
+            "teox_units": 20.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SOCIEDAD ODONTOLOGICA DEL MAULE SPA"
@@ -11106,8 +11128,8 @@
             "id": "963",
             "count": 1,
             "neto": 1624430,
-            "teox_neto": 1309670,
-            "teox_units": 10.0,
+            "teox_neto": 1624430,
+            "teox_units": 12.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SOCIEDAD ODONTOLÓGICA HV LIMITADA"
@@ -11116,8 +11138,8 @@
             "id": "958",
             "count": 2,
             "neto": 1600270,
-            "teox_neto": 1285510,
-            "teox_units": 11.0,
+            "teox_neto": 1600270,
+            "teox_units": 13.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SERVICIOS ODONTOLOGICOS INDEPENDIENTES CONSTANZA HERRERA MACIAS E.I.R."
@@ -11138,8 +11160,8 @@
             "id": "705",
             "count": 3,
             "neto": 2492062,
-            "teox_neto": 1295280,
-            "teox_units": 10.0,
+            "teox_neto": 1945440,
+            "teox_units": 15.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "BPE ODONTOLOGIA Y ESTETICA FACIAL SPA"
@@ -11148,8 +11170,8 @@
             "id": "920",
             "count": 1,
             "neto": 1859090,
-            "teox_neto": 1706870,
-            "teox_units": 14.0,
+            "teox_neto": 1859090,
+            "teox_units": 15.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "ASESORÍAS E INVERSIONES SF SPA"
@@ -11178,8 +11200,8 @@
             "id": "960",
             "count": 1,
             "neto": 650160,
-            "teox_neto": 0,
-            "teox_units": 0,
+            "teox_neto": 650160,
+            "teox_units": 5.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "CENTRO DE MEDICINA CLINICA ESTETICA Y REPARADORA CLIMER SPA"
@@ -11208,8 +11230,8 @@
             "id": "801",
             "count": 1,
             "neto": 627690,
-            "teox_neto": 470310,
-            "teox_units": 4.0,
+            "teox_neto": 627690,
+            "teox_units": 5.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "CLINICA DRA ORIANNA ESCORIHUELA SPA"
@@ -11250,8 +11272,8 @@
             "id": "860",
             "count": 2,
             "neto": 18260268,
-            "teox_neto": 11174850,
-            "teox_units": 95.0,
+            "teox_neto": 14331230,
+            "teox_units": 122.0,
             "rrs_neto": 3929038,
             "rrs_units": 39.0,
             "name": "Servicios De Salud Girardi Y Cia. Ltda"
@@ -11282,8 +11304,8 @@
       },
       "brand_productivity": {
         "Teoxane": {
-          "clients": 58,
-          "units": 583.0
+          "clients": 65,
+          "units": 773.0
         },
         "RRS HA Long Lasting": {
           "clients": 24,
@@ -11293,8 +11315,8 @@
       "brand_productivity_by_vendor": {
         "Cindy Monsalves": {
           "Teoxane": {
-            "clients": 25,
-            "units": 167.0
+            "clients": 30,
+            "units": 208.0
           },
           "RRS HA Long Lasting": {
             "clients": 11,
@@ -11303,8 +11325,8 @@
         },
         "Monica Urrutia": {
           "Teoxane": {
-            "clients": 25,
-            "units": 271.0
+            "clients": 26,
+            "units": 381.0
           },
           "RRS HA Long Lasting": {
             "clients": 8,
@@ -11313,8 +11335,8 @@
         },
         "Daisy Ponce": {
           "Teoxane": {
-            "clients": 6,
-            "units": 45.0
+            "clients": 7,
+            "units": 57.0
           },
           "RRS HA Long Lasting": {
             "clients": 4,
@@ -11324,7 +11346,7 @@
         "Francisca Salinas": {
           "Teoxane": {
             "clients": 2,
-            "units": 100.0
+            "units": 127.0
           },
           "RRS HA Long Lasting": {
             "clients": 1,
@@ -11684,23 +11706,23 @@
         ]
       },
       "by_brand": {
-        "Teoxane": 80196180,
+        "Teoxane": 98677350,
         "RRS HA Long Lasting": 21275904,
         "FINE": 662207
       },
       "by_vendor_brand": {
         "Daisy Ponce": {
-          "Teoxane": 12787200,
+          "Teoxane": 15111780,
           "RRS HA Long Lasting": 2140409,
           "FINE": 0
         },
         "Monica Urrutia": {
-          "Teoxane": 37796410,
+          "Teoxane": 47509030,
           "RRS HA Long Lasting": 8885339,
           "FINE": 568863
         },
         "Cindy Monsalves": {
-          "Teoxane": 26077100,
+          "Teoxane": 30407780,
           "RRS HA Long Lasting": 6520955,
           "FINE": 46672
         },
@@ -11715,7 +11737,7 @@
           "FINE": 46672
         },
         "Francisca Salinas": {
-          "Teoxane": 3535470,
+          "Teoxane": 5648760,
           "RRS HA Long Lasting": 2619359,
           "FINE": 0
         }
@@ -11785,8 +11807,8 @@
           "id": "860",
           "count": 2,
           "neto": 7643969,
-          "teox_neto": 3058380,
-          "teox_units": 26.0,
+          "teox_neto": 5024610,
+          "teox_units": 47.0,
           "rrs_neto": 2619359,
           "rrs_units": 26.0,
           "name": "Servicios De Salud Girardi Y Cia. Ltda"
@@ -11795,8 +11817,8 @@
           "id": "487",
           "count": 1,
           "neto": 3839179,
-          "teox_neto": 1824000,
-          "teox_units": 15.0,
+          "teox_neto": 2412240,
+          "teox_units": 20.0,
           "rrs_neto": 1426939,
           "rrs_units": 15.0,
           "name": "SOCIEDAD DE SERVICIOS MEDICOS MOELLER SPA"
@@ -11815,8 +11837,8 @@
           "id": "921",
           "count": 1,
           "neto": 3085912,
-          "teox_neto": 2400840,
-          "teox_units": 20.0,
+          "teox_neto": 3039240,
+          "teox_units": 30.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "SOCIEDAD ODONTOLOGICA DEL MAULE SPA"
@@ -11825,8 +11847,8 @@
           "id": "963",
           "count": 2,
           "neto": 2671800,
-          "teox_neto": 2042280,
-          "teox_units": 14.0,
+          "teox_neto": 2671800,
+          "teox_units": 20.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "SOCIEDAD ODONTOLÓGICA HV LIMITADA"
@@ -11855,8 +11877,8 @@
           "id": "845",
           "count": 1,
           "neto": 2412240,
-          "teox_neto": 1824000,
-          "teox_units": 15.0,
+          "teox_neto": 2412240,
+          "teox_units": 20.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "SOCIEDAD MEDICA AMMM SPA"
@@ -11865,8 +11887,8 @@
           "id": "469",
           "count": 1,
           "neto": 2348400,
-          "teox_neto": 1171920,
-          "teox_units": 12.0,
+          "teox_neto": 2348400,
+          "teox_units": 20.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "ODONTOLOGÍA Y ESTÉTICA DRA GALLARDO SPA"
@@ -11875,8 +11897,8 @@
           "id": "1013",
           "count": 1,
           "neto": 2348400,
-          "teox_neto": 1171920,
-          "teox_units": 12.0,
+          "teox_neto": 2348400,
+          "teox_units": 20.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "THE FACE PROJECT SPA"
@@ -11885,8 +11907,8 @@
           "id": "810",
           "count": 1,
           "neto": 2337000,
-          "teox_neto": 1748760,
-          "teox_units": 16.0,
+          "teox_neto": 2337000,
+          "teox_units": 20.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "SERVICIOS MEDICOS DRA LUCIANA SEBASTIANELLI SPA"
@@ -11925,8 +11947,8 @@
           "id": "727",
           "count": 1,
           "neto": 1845681,
-          "teox_neto": 976000,
-          "teox_units": 8.0,
+          "teox_neto": 1290760,
+          "teox_units": 10.0,
           "rrs_neto": 554921,
           "rrs_units": 5.0,
           "name": "SERVICIOS MEDICOS ODONTOLOGICOS ESTETICOS Y COSMETOLOGICOS LIMITADA"
@@ -11938,8 +11960,8 @@
             "id": "845",
             "count": 1,
             "neto": 2412240,
-            "teox_neto": 1824000,
-            "teox_units": 15.0,
+            "teox_neto": 2412240,
+            "teox_units": 20.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SOCIEDAD MEDICA AMMM SPA"
@@ -11968,8 +11990,8 @@
             "id": "727",
             "count": 1,
             "neto": 1845681,
-            "teox_neto": 976000,
-            "teox_units": 8.0,
+            "teox_neto": 1290760,
+            "teox_units": 10.0,
             "rrs_neto": 554921,
             "rrs_units": 5.0,
             "name": "SERVICIOS MEDICOS ODONTOLOGICOS ESTETICOS Y COSMETOLOGICOS LIMITADA"
@@ -11998,8 +12020,8 @@
             "id": "705",
             "count": 1,
             "neto": 1259040,
-            "teox_neto": 0,
-            "teox_units": 0,
+            "teox_neto": 1259040,
+            "teox_units": 10.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "BPE ODONTOLOGIA Y ESTETICA FACIAL SPA"
@@ -12028,8 +12050,8 @@
             "id": "984",
             "count": 1,
             "neto": 645750,
-            "teox_neto": 483210,
-            "teox_units": 4.0,
+            "teox_neto": 645750,
+            "teox_units": 5.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "MARTIN SILVA VILCHES"
@@ -12080,8 +12102,8 @@
             "id": "487",
             "count": 1,
             "neto": 3839179,
-            "teox_neto": 1824000,
-            "teox_units": 15.0,
+            "teox_neto": 2412240,
+            "teox_units": 20.0,
             "rrs_neto": 1426939,
             "rrs_units": 15.0,
             "name": "SOCIEDAD DE SERVICIOS MEDICOS MOELLER SPA"
@@ -12090,8 +12112,8 @@
             "id": "921",
             "count": 1,
             "neto": 3085912,
-            "teox_neto": 2400840,
-            "teox_units": 20.0,
+            "teox_neto": 3039240,
+            "teox_units": 30.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SOCIEDAD ODONTOLOGICA DEL MAULE SPA"
@@ -12100,8 +12122,8 @@
             "id": "963",
             "count": 2,
             "neto": 2671800,
-            "teox_neto": 2042280,
-            "teox_units": 14.0,
+            "teox_neto": 2671800,
+            "teox_units": 20.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SOCIEDAD ODONTOLÓGICA HV LIMITADA"
@@ -12130,8 +12152,8 @@
             "id": "469",
             "count": 1,
             "neto": 2348400,
-            "teox_neto": 1171920,
-            "teox_units": 12.0,
+            "teox_neto": 2348400,
+            "teox_units": 20.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "ODONTOLOGÍA Y ESTÉTICA DRA GALLARDO SPA"
@@ -12140,8 +12162,8 @@
             "id": "1013",
             "count": 1,
             "neto": 2348400,
-            "teox_neto": 1171920,
-            "teox_units": 12.0,
+            "teox_neto": 2348400,
+            "teox_units": 20.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "THE FACE PROJECT SPA"
@@ -12150,8 +12172,8 @@
             "id": "810",
             "count": 1,
             "neto": 2337000,
-            "teox_neto": 1748760,
-            "teox_units": 16.0,
+            "teox_neto": 2337000,
+            "teox_units": 20.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SERVICIOS MEDICOS DRA LUCIANA SEBASTIANELLI SPA"
@@ -12180,8 +12202,8 @@
             "id": "474",
             "count": 2,
             "neto": 1737390,
-            "teox_neto": 1280730,
-            "teox_units": 10.0,
+            "teox_neto": 1737390,
+            "teox_units": 13.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SERVICIOS MEDICOS BARRERA LOPEZ LIMITADA"
@@ -12242,8 +12264,8 @@
             "id": "488",
             "count": 1,
             "neto": 1797140,
-            "teox_neto": 1492700,
-            "teox_units": 13.0,
+            "teox_neto": 1797140,
+            "teox_units": 15.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "ODONTOLOGÌA Y ESTÈTICA DANIELLA LILLO VIDAURRE E.I.R.L."
@@ -12252,8 +12274,8 @@
             "id": "898",
             "count": 2,
             "neto": 1692120,
-            "teox_neto": 1041960,
-            "teox_units": 10.0,
+            "teox_neto": 1692120,
+            "teox_units": 15.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SKIN BY CATALINA SPA"
@@ -12262,8 +12284,8 @@
             "id": "950",
             "count": 1,
             "neto": 1682640,
-            "teox_neto": 1388520,
-            "teox_units": 13.0,
+            "teox_neto": 1682640,
+            "teox_units": 15.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SERVICIOS PROFESIONALES JAVIERA MERCADO GOMEZ SPA"
@@ -12282,8 +12304,8 @@
             "id": "879",
             "count": 2,
             "neto": 1365731,
-            "teox_neto": 485730,
-            "teox_units": 4.0,
+            "teox_neto": 810810,
+            "teox_units": 6.0,
             "rrs_neto": 554921,
             "rrs_units": 5.0,
             "name": "SERVICIOS ODONTOLOGICOS RDENT SPA"
@@ -12332,8 +12354,8 @@
             "id": "1005",
             "count": 1,
             "neto": 1172490,
-            "teox_neto": 1025430,
-            "teox_units": 9.0,
+            "teox_neto": 1172490,
+            "teox_units": 10.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "MADELEIN CATALINA URREJOLA TOLEDO E.I.R.L."
@@ -12408,8 +12430,8 @@
             "id": "860",
             "count": 2,
             "neto": 7643969,
-            "teox_neto": 3058380,
-            "teox_units": 26.0,
+            "teox_neto": 5024610,
+            "teox_units": 47.0,
             "rrs_neto": 2619359,
             "rrs_units": 26.0,
             "name": "Servicios De Salud Girardi Y Cia. Ltda"
@@ -12418,8 +12440,8 @@
             "id": "994",
             "count": 2,
             "neto": 1206120,
-            "teox_neto": 912000,
-            "teox_units": 8.0,
+            "teox_neto": 1206120,
+            "teox_units": 10.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "ROMINA BELEN GONZALEZ KOWAL"
@@ -12428,8 +12450,8 @@
       },
       "brand_productivity": {
         "Teoxane": {
-          "clients": 82,
-          "units": 685.0
+          "clients": 87,
+          "units": 848.0
         },
         "RRS HA Long Lasting": {
           "clients": 28,
@@ -12439,8 +12461,8 @@
       "brand_productivity_by_vendor": {
         "Daisy Ponce": {
           "Teoxane": {
-            "clients": 11,
-            "units": 101.0
+            "clients": 12,
+            "units": 119.0
           },
           "RRS HA Long Lasting": {
             "clients": 3,
@@ -12449,8 +12471,8 @@
         },
         "Monica Urrutia": {
           "Teoxane": {
-            "clients": 39,
-            "units": 318.0
+            "clients": 41,
+            "units": 407.0
           },
           "RRS HA Long Lasting": {
             "clients": 10,
@@ -12459,8 +12481,8 @@
         },
         "Cindy Monsalves": {
           "Teoxane": {
-            "clients": 30,
-            "units": 232.0
+            "clients": 32,
+            "units": 265.0
           },
           "RRS HA Long Lasting": {
             "clients": 13,
@@ -12480,7 +12502,7 @@
         "Francisca Salinas": {
           "Teoxane": {
             "clients": 2,
-            "units": 34.0
+            "units": 57.0
           },
           "RRS HA Long Lasting": {
             "clients": 1,
@@ -12874,23 +12896,23 @@
         ]
       },
       "by_brand": {
-        "Teoxane": 69580190,
+        "Teoxane": 85887080,
         "RRS HA Long Lasting": 21620444,
         "FINE": 46672
       },
       "by_vendor_brand": {
         "Cindy Monsalves": {
-          "Teoxane": 22267900,
+          "Teoxane": 27281800,
           "RRS HA Long Lasting": 4280818,
           "FINE": 0
         },
         "Monica Urrutia": {
-          "Teoxane": 31984740,
+          "Teoxane": 39944460,
           "RRS HA Long Lasting": 9598809,
           "FINE": 46672
         },
         "Sin asignar": {
-          "Teoxane": 900640,
+          "Teoxane": 1158640,
           "RRS HA Long Lasting": 2061135,
           "FINE": 0
         },
@@ -12900,7 +12922,7 @@
           "FINE": 0
         },
         "Francisca Salinas": {
-          "Teoxane": 8586990,
+          "Teoxane": 11662260,
           "RRS HA Long Lasting": 2115636,
           "FINE": 0
         }
@@ -12972,8 +12994,8 @@
           "id": "860",
           "count": 3,
           "neto": 25715896,
-          "teox_neto": 17309350,
-          "teox_units": 146.0,
+          "teox_neto": 23600260,
+          "teox_units": 204.0,
           "rrs_neto": 2115636,
           "rrs_units": 21.0,
           "name": "Servicios De Salud Girardi Y Cia. Ltda"
@@ -12982,8 +13004,8 @@
           "id": "487",
           "count": 1,
           "neto": 5193158,
-          "teox_neto": 1162800,
-          "teox_units": 10.0,
+          "teox_neto": 2339280,
+          "teox_units": 20.0,
           "rrs_neto": 2853878,
           "rrs_units": 30.0,
           "name": "SOCIEDAD DE SERVICIOS MEDICOS MOELLER SPA"
@@ -12992,8 +13014,8 @@
           "id": "921",
           "count": 1,
           "neto": 4083480,
-          "teox_neto": 2856840,
-          "teox_units": 25.0,
+          "teox_neto": 4083480,
+          "teox_units": 40.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "SOCIEDAD ODONTOLOGICA DEL MAULE SPA"
@@ -13002,8 +13024,8 @@
           "id": "600",
           "count": 2,
           "neto": 3062390,
-          "teox_neto": 2290970,
-          "teox_units": 20.0,
+          "teox_neto": 3062390,
+          "teox_units": 25.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "CLÍNICA DRA.ROMINA VARGAS SPA"
@@ -13012,8 +13034,8 @@
           "id": "1013",
           "count": 2,
           "neto": 2714460,
-          "teox_neto": 2554860,
-          "teox_units": 21.0,
+          "teox_neto": 2714460,
+          "teox_units": 25.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "THE FACE PROJECT SPA"
@@ -13022,8 +13044,8 @@
           "id": "986",
           "count": 2,
           "neto": 2513200,
-          "teox_neto": 1254160,
-          "teox_units": 10.0,
+          "teox_neto": 2513200,
+          "teox_units": 20.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "CLINICA ODONTOLOGICA Y ESTETICA DRA. NATALIA DROGUETT SPA"
@@ -13032,8 +13054,8 @@
           "id": "1031",
           "count": 1,
           "neto": 2359731,
-          "teox_neto": 1348150,
-          "teox_units": 10.0,
+          "teox_neto": 1804810,
+          "teox_units": 15.0,
           "rrs_neto": 554921,
           "rrs_units": 5.0,
           "name": "DRA. JAEL BITRAN SPA"
@@ -13042,8 +13064,8 @@
           "id": "591",
           "count": 1,
           "neto": 2348400,
-          "teox_neto": 1171920,
-          "teox_units": 10.0,
+          "teox_neto": 2348400,
+          "teox_units": 20.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "THE BEAUTY LAB SPA"
@@ -13072,8 +13094,8 @@
           "id": "791",
           "count": 1,
           "neto": 2335290,
-          "teox_neto": 1599990,
-          "teox_units": 15.0,
+          "teox_neto": 2335290,
+          "teox_units": 20.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "791"
@@ -13082,8 +13104,8 @@
           "id": "1019",
           "count": 1,
           "neto": 2335290,
-          "teox_neto": 1599990,
-          "teox_units": 15.0,
+          "teox_neto": 2335290,
+          "teox_units": 20.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "CLÍNICA DRA. JAVIERA GUEVARA LIZANA LIMITADA"
@@ -13125,8 +13147,8 @@
             "id": "600",
             "count": 2,
             "neto": 3062390,
-            "teox_neto": 2290970,
-            "teox_units": 20.0,
+            "teox_neto": 3062390,
+            "teox_units": 25.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "CLÍNICA DRA.ROMINA VARGAS SPA"
@@ -13135,8 +13157,8 @@
             "id": "1031",
             "count": 1,
             "neto": 2359731,
-            "teox_neto": 1348150,
-            "teox_units": 10.0,
+            "teox_neto": 1804810,
+            "teox_units": 15.0,
             "rrs_neto": 554921,
             "rrs_units": 5.0,
             "name": "DRA. JAEL BITRAN SPA"
@@ -13145,8 +13167,8 @@
             "id": "910",
             "count": 1,
             "neto": 1899800,
-            "teox_neto": 1290920,
-            "teox_units": 11.0,
+            "teox_neto": 1899800,
+            "teox_units": 15.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "CENTRO DE ESTETICA LHARMONIE LIMITADA"
@@ -13165,8 +13187,8 @@
             "id": "1034",
             "count": 1,
             "neto": 1721400,
-            "teox_neto": 1574340,
-            "teox_units": 13.0,
+            "teox_neto": 1721400,
+            "teox_units": 15.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "KIAKAHA ODONTOLOGÍA SPA"
@@ -13175,8 +13197,8 @@
             "id": "912",
             "count": 1,
             "neto": 1513940,
-            "teox_neto": 905060,
-            "teox_units": 8.0,
+            "teox_neto": 1513940,
+            "teox_units": 13.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "ODONTOLOGIA Y ESTETICA PALERMO SPA"
@@ -13215,8 +13237,8 @@
             "id": "1026",
             "count": 1,
             "neto": 1227210,
-            "teox_neto": 933090,
-            "teox_units": 7.0,
+            "teox_neto": 1227210,
+            "teox_units": 10.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "AURIA ALEJANDRA SUAZO DURAN"
@@ -13226,7 +13248,7 @@
             "count": 1,
             "neto": 1071341,
             "teox_neto": 516420,
-            "teox_units": 4.0,
+            "teox_units": 5.0,
             "rrs_neto": 554921,
             "rrs_units": 5.0,
             "name": "CECILIA BEATRIZ FUENTES BARAHONA"
@@ -13265,8 +13287,8 @@
             "id": "1015",
             "count": 1,
             "neto": 650160,
-            "teox_neto": 0,
-            "teox_units": 0,
+            "teox_neto": 650160,
+            "teox_units": 5.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "MED & CAPACITACIONES SPA"
@@ -13277,8 +13299,8 @@
             "id": "487",
             "count": 1,
             "neto": 5193158,
-            "teox_neto": 1162800,
-            "teox_units": 10.0,
+            "teox_neto": 2339280,
+            "teox_units": 20.0,
             "rrs_neto": 2853878,
             "rrs_units": 30.0,
             "name": "SOCIEDAD DE SERVICIOS MEDICOS MOELLER SPA"
@@ -13287,8 +13309,8 @@
             "id": "921",
             "count": 1,
             "neto": 4083480,
-            "teox_neto": 2856840,
-            "teox_units": 25.0,
+            "teox_neto": 4083480,
+            "teox_units": 40.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SOCIEDAD ODONTOLOGICA DEL MAULE SPA"
@@ -13297,8 +13319,8 @@
             "id": "1013",
             "count": 2,
             "neto": 2714460,
-            "teox_neto": 2554860,
-            "teox_units": 21.0,
+            "teox_neto": 2714460,
+            "teox_units": 25.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "THE FACE PROJECT SPA"
@@ -13307,8 +13329,8 @@
             "id": "986",
             "count": 2,
             "neto": 2513200,
-            "teox_neto": 1254160,
-            "teox_units": 10.0,
+            "teox_neto": 2513200,
+            "teox_units": 20.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "CLINICA ODONTOLOGICA Y ESTETICA DRA. NATALIA DROGUETT SPA"
@@ -13317,8 +13339,8 @@
             "id": "591",
             "count": 1,
             "neto": 2348400,
-            "teox_neto": 1171920,
-            "teox_units": 10.0,
+            "teox_neto": 2348400,
+            "teox_units": 20.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "THE BEAUTY LAB SPA"
@@ -13347,8 +13369,8 @@
             "id": "1019",
             "count": 1,
             "neto": 2335290,
-            "teox_neto": 1599990,
-            "teox_units": 15.0,
+            "teox_neto": 2335290,
+            "teox_units": 20.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "CLÍNICA DRA. JAVIERA GUEVARA LIZANA LIMITADA"
@@ -13429,8 +13451,8 @@
             "id": "791",
             "count": 1,
             "neto": 2335290,
-            "teox_neto": 1599990,
-            "teox_units": 15.0,
+            "teox_neto": 2335290,
+            "teox_units": 20.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "791"
@@ -13469,8 +13491,8 @@
             "id": "928",
             "count": 1,
             "neto": 511000,
-            "teox_neto": 253000,
-            "teox_units": 1.0,
+            "teox_neto": 511000,
+            "teox_units": 2.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "928"
@@ -13492,7 +13514,7 @@
             "count": 1,
             "neto": 1531620,
             "teox_neto": 1254160,
-            "teox_units": 9.0,
+            "teox_units": 10.0,
             "rrs_neto": 277460,
             "rrs_units": 2.0,
             "name": "SERVICIOS ODONTOLOGICOS Y ESTETICOS FLORENCIA CÀCERES RIVEROS E.I.R.L."
@@ -13593,8 +13615,8 @@
             "id": "860",
             "count": 3,
             "neto": 25715896,
-            "teox_neto": 17309350,
-            "teox_units": 146.0,
+            "teox_neto": 23600260,
+            "teox_units": 204.0,
             "rrs_neto": 2115636,
             "rrs_units": 21.0,
             "name": "Servicios De Salud Girardi Y Cia. Ltda"
@@ -13603,8 +13625,8 @@
       },
       "brand_productivity": {
         "Teoxane": {
-          "clients": 65,
-          "units": 674.0
+          "clients": 68,
+          "units": 854.0
         },
         "RRS HA Long Lasting": {
           "clients": 24,
@@ -13614,8 +13636,8 @@
       "brand_productivity_by_vendor": {
         "Cindy Monsalves": {
           "Teoxane": {
-            "clients": 26,
-            "units": 177.0
+            "clients": 28,
+            "units": 220.0
           },
           "RRS HA Long Lasting": {
             "clients": 8,
@@ -13624,8 +13646,8 @@
         },
         "Monica Urrutia": {
           "Teoxane": {
-            "clients": 28,
-            "units": 285.0
+            "clients": 29,
+            "units": 357.0
           },
           "RRS HA Long Lasting": {
             "clients": 8,
@@ -13635,7 +13657,7 @@
         "Sin asignar": {
           "Teoxane": {
             "clients": 3,
-            "units": 21.0
+            "units": 27.0
           },
           "RRS HA Long Lasting": {
             "clients": 2,
@@ -13645,7 +13667,7 @@
         "Daisy Ponce": {
           "Teoxane": {
             "clients": 7,
-            "units": 45.0
+            "units": 46.0
           },
           "RRS HA Long Lasting": {
             "clients": 5,
@@ -13655,7 +13677,7 @@
         "Francisca Salinas": {
           "Teoxane": {
             "clients": 1,
-            "units": 146.0
+            "units": 204.0
           },
           "RRS HA Long Lasting": {
             "clients": 1,
@@ -14044,23 +14066,23 @@
         ]
       },
       "by_brand": {
-        "Teoxane": 86073310,
+        "Teoxane": 100266210,
         "RRS HA Long Lasting": 30796455,
         "FINE": 309802
       },
       "by_vendor_brand": {
         "Cindy Monsalves": {
-          "Teoxane": 18888300,
+          "Teoxane": 20795160,
           "RRS HA Long Lasting": 9545958,
           "FINE": 110668
         },
         "Monica Urrutia": {
-          "Teoxane": 45913470,
+          "Teoxane": 54272450,
           "RRS HA Long Lasting": 13291676,
           "FINE": 199134
         },
         "Daisy Ponce": {
-          "Teoxane": 7861720,
+          "Teoxane": 8511880,
           "RRS HA Long Lasting": 3071883,
           "FINE": 0
         },
@@ -14070,7 +14092,7 @@
           "FINE": 0
         },
         "Francisca Salinas": {
-          "Teoxane": 13409820,
+          "Teoxane": 16686720,
           "RRS HA Long Lasting": 4332017,
           "FINE": 0
         }
@@ -14140,8 +14162,8 @@
           "id": "860",
           "count": 2,
           "neto": 21018737,
-          "teox_neto": 13409820,
-          "teox_units": 114.0,
+          "teox_neto": 16686720,
+          "teox_units": 144.0,
           "rrs_neto": 4332017,
           "rrs_units": 43.0,
           "name": "Servicios De Salud Girardi Y Cia. Ltda"
@@ -14150,8 +14172,8 @@
           "id": "597",
           "count": 3,
           "neto": 3936320,
-          "teox_neto": 2987600,
-          "teox_units": 25.0,
+          "teox_neto": 3936320,
+          "teox_units": 35.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "DR MATTATALL SPA"
@@ -14170,8 +14192,8 @@
           "id": "569",
           "count": 3,
           "neto": 3315120,
-          "teox_neto": 1953960,
-          "teox_units": 16.0,
+          "teox_neto": 3315120,
+          "teox_units": 34.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "SERVICIOS MEDICOS TAOTE LTDA"
@@ -14180,8 +14202,8 @@
           "id": "438",
           "count": 3,
           "neto": 3091680,
-          "teox_neto": 1915200,
-          "teox_units": 15.0,
+          "teox_neto": 3091680,
+          "teox_units": 25.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "SOCIEDAD PROFESIONAL MEDICA ESTETICA ODONTOLOGICA Y EDUCACIONAL FAGA L"
@@ -14210,8 +14232,8 @@
           "id": "474",
           "count": 2,
           "neto": 2555900,
-          "teox_neto": 2241140,
-          "teox_units": 18.0,
+          "teox_neto": 2555900,
+          "teox_units": 20.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "SERVICIOS MEDICOS BARRERA LOPEZ LIMITADA"
@@ -14220,8 +14242,8 @@
           "id": "475",
           "count": 2,
           "neto": 2552746,
-          "teox_neto": 0,
-          "teox_units": 0,
+          "teox_neto": 650160,
+          "teox_units": 5.0,
           "rrs_neto": 1902586,
           "rrs_units": 20.0,
           "name": "NEWLIFE SPA"
@@ -14250,8 +14272,8 @@
           "id": "1052",
           "count": 1,
           "neto": 2344980,
-          "teox_neto": 2050860,
-          "teox_units": 16.0,
+          "teox_neto": 2344980,
+          "teox_units": 20.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "SERVICIOS MEDICOS LIMITADA"
@@ -14270,8 +14292,8 @@
           "id": "715",
           "count": 1,
           "neto": 2185182,
-          "teox_neto": 592800,
-          "teox_units": 5.0,
+          "teox_neto": 1181040,
+          "teox_units": 10.0,
           "rrs_neto": 1004142,
           "rrs_units": 10.0,
           "name": "CLINICA CHLOE SPA"
@@ -14280,8 +14302,8 @@
           "id": "487",
           "count": 1,
           "neto": 2127773,
-          "teox_neto": 0,
-          "teox_units": 0,
+          "teox_neto": 1176480,
+          "teox_units": 10.0,
           "rrs_neto": 951293,
           "rrs_units": 10.0,
           "name": "SOCIEDAD DE SERVICIOS MEDICOS MOELLER SPA"
@@ -14314,7 +14336,7 @@
             "count": 1,
             "neto": 1830180,
             "teox_neto": 1830180,
-            "teox_units": 12.0,
+            "teox_units": 15.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "CLÍNICA DRA.ROMINA VARGAS SPA"
@@ -14323,8 +14345,8 @@
             "id": "975",
             "count": 1,
             "neto": 1553470,
-            "teox_neto": 753430,
-            "teox_units": 5.0,
+            "teox_neto": 1553470,
+            "teox_units": 16.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "DRA. ANDY GUTI SPA"
@@ -14343,8 +14365,8 @@
             "id": "1040",
             "count": 2,
             "neto": 1203191,
-            "teox_neto": 485730,
-            "teox_units": 4.0,
+            "teox_neto": 648270,
+            "teox_units": 5.0,
             "rrs_neto": 554921,
             "rrs_units": 5.0,
             "name": "ODONTOLOGÍA DIANDRA TORRES CONTARDO E.I.R.L."
@@ -14363,8 +14385,8 @@
             "id": "1046",
             "count": 1,
             "neto": 1082696,
-            "teox_neto": 459990,
-            "teox_units": 4.0,
+            "teox_neto": 607050,
+            "teox_units": 5.0,
             "rrs_neto": 475646,
             "rrs_units": 5.0,
             "name": "SERVICIOS MEDICOS E INVERSIONES SCIENTIA MEDICUS VITAE SPA"
@@ -14445,8 +14467,8 @@
             "id": "597",
             "count": 3,
             "neto": 3936320,
-            "teox_neto": 2987600,
-            "teox_units": 25.0,
+            "teox_neto": 3936320,
+            "teox_units": 35.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "DR MATTATALL SPA"
@@ -14465,8 +14487,8 @@
             "id": "569",
             "count": 3,
             "neto": 3315120,
-            "teox_neto": 1953960,
-            "teox_units": 16.0,
+            "teox_neto": 3315120,
+            "teox_units": 34.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SERVICIOS MEDICOS TAOTE LTDA"
@@ -14475,8 +14497,8 @@
             "id": "438",
             "count": 3,
             "neto": 3091680,
-            "teox_neto": 1915200,
-            "teox_units": 15.0,
+            "teox_neto": 3091680,
+            "teox_units": 25.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SOCIEDAD PROFESIONAL MEDICA ESTETICA ODONTOLOGICA Y EDUCACIONAL FAGA L"
@@ -14485,8 +14507,8 @@
             "id": "474",
             "count": 2,
             "neto": 2555900,
-            "teox_neto": 2241140,
-            "teox_units": 18.0,
+            "teox_neto": 2555900,
+            "teox_units": 20.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SERVICIOS MEDICOS BARRERA LOPEZ LIMITADA"
@@ -14495,8 +14517,8 @@
             "id": "475",
             "count": 2,
             "neto": 2552746,
-            "teox_neto": 0,
-            "teox_units": 0,
+            "teox_neto": 650160,
+            "teox_units": 5.0,
             "rrs_neto": 1902586,
             "rrs_units": 20.0,
             "name": "NEWLIFE SPA"
@@ -14525,8 +14547,8 @@
             "id": "1052",
             "count": 1,
             "neto": 2344980,
-            "teox_neto": 2050860,
-            "teox_units": 16.0,
+            "teox_neto": 2344980,
+            "teox_units": 20.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SERVICIOS MEDICOS LIMITADA"
@@ -14535,8 +14557,8 @@
             "id": "715",
             "count": 1,
             "neto": 2185182,
-            "teox_neto": 592800,
-            "teox_units": 5.0,
+            "teox_neto": 1181040,
+            "teox_units": 10.0,
             "rrs_neto": 1004142,
             "rrs_units": 10.0,
             "name": "CLINICA CHLOE SPA"
@@ -14545,8 +14567,8 @@
             "id": "487",
             "count": 1,
             "neto": 2127773,
-            "teox_neto": 0,
-            "teox_units": 0,
+            "teox_neto": 1176480,
+            "teox_units": 10.0,
             "rrs_neto": 951293,
             "rrs_units": 10.0,
             "name": "SOCIEDAD DE SERVICIOS MEDICOS MOELLER SPA"
@@ -14565,8 +14587,8 @@
             "id": "777",
             "count": 1,
             "neto": 1906080,
-            "teox_neto": 1464900,
-            "teox_units": 13.0,
+            "teox_neto": 1906080,
+            "teox_units": 16.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SERVICIOS MEDICOS SANTIAGO SPA"
@@ -14585,8 +14607,8 @@
             "id": "517",
             "count": 1,
             "neto": 1890950,
-            "teox_neto": 1738730,
-            "teox_units": 14.0,
+            "teox_neto": 1890950,
+            "teox_units": 15.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SOCIEDAD MEDICA DE TECNOLOGÍA LIMITADA"
@@ -14647,8 +14669,8 @@
             "id": "1059",
             "count": 1,
             "neto": 650160,
-            "teox_neto": 0,
-            "teox_units": 0,
+            "teox_neto": 650160,
+            "teox_units": 5.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SERVICIOS ODONTOLOGICOS R Y C LIMITADA"
@@ -14751,8 +14773,8 @@
             "id": "860",
             "count": 2,
             "neto": 21018737,
-            "teox_neto": 13409820,
-            "teox_units": 114.0,
+            "teox_neto": 16686720,
+            "teox_units": 144.0,
             "rrs_neto": 4332017,
             "rrs_units": 43.0,
             "name": "Servicios De Salud Girardi Y Cia. Ltda"
@@ -14761,8 +14783,8 @@
       },
       "brand_productivity": {
         "Teoxane": {
-          "clients": 68,
-          "units": 712.0
+          "clients": 74,
+          "units": 862.0
         },
         "RRS HA Long Lasting": {
           "clients": 40,
@@ -14772,8 +14794,8 @@
       "brand_productivity_by_vendor": {
         "Cindy Monsalves": {
           "Teoxane": {
-            "clients": 22,
-            "units": 151.0
+            "clients": 23,
+            "units": 174.0
           },
           "RRS HA Long Lasting": {
             "clients": 20,
@@ -14782,8 +14804,8 @@
         },
         "Monica Urrutia": {
           "Teoxane": {
-            "clients": 38,
-            "units": 385.0
+            "clients": 42,
+            "units": 477.0
           },
           "RRS HA Long Lasting": {
             "clients": 11,
@@ -14792,8 +14814,8 @@
         },
         "Daisy Ponce": {
           "Teoxane": {
-            "clients": 7,
-            "units": 62.0
+            "clients": 8,
+            "units": 67.0
           },
           "RRS HA Long Lasting": {
             "clients": 7,
@@ -14813,7 +14835,7 @@
         "Francisca Salinas": {
           "Teoxane": {
             "clients": 1,
-            "units": 114.0
+            "units": 144.0
           },
           "RRS HA Long Lasting": {
             "clients": 1,
@@ -15182,33 +15204,33 @@
         ]
       },
       "by_brand": {
-        "Teoxane": 80756250,
+        "Teoxane": 99082410,
         "RRS HA Long Lasting": 26755116,
         "FINE": 93344
       },
       "by_vendor_brand": {
         "Monica Urrutia": {
-          "Teoxane": 37753900,
+          "Teoxane": 45712960,
           "RRS HA Long Lasting": 15148018,
           "FINE": 93344
         },
         "Cindy Monsalves": {
-          "Teoxane": 19650600,
+          "Teoxane": 23285820,
           "RRS HA Long Lasting": 4723434,
           "FINE": 0
         },
         "Daisy Ponce": {
-          "Teoxane": 10990270,
+          "Teoxane": 13363870,
           "RRS HA Long Lasting": 2549994,
           "FINE": 0
         },
         "Sin asignar": {
-          "Teoxane": 318780,
+          "Teoxane": 643860,
           "RRS HA Long Lasting": 1109842,
           "FINE": 0
         },
         "Francisca Salinas": {
-          "Teoxane": 12042700,
+          "Teoxane": 16075900,
           "RRS HA Long Lasting": 3223828,
           "FINE": 0
         }
@@ -15283,8 +15305,8 @@
           "id": "860",
           "count": 2,
           "neto": 19299728,
-          "teox_neto": 12042700,
-          "teox_units": 103.0,
+          "teox_neto": 16075900,
+          "teox_units": 143.0,
           "rrs_neto": 3223828,
           "rrs_units": 32.0,
           "name": "Servicios De Salud Girardi Y Cia. Ltda"
@@ -15303,8 +15325,8 @@
           "id": "779",
           "count": 3,
           "neto": 6086474,
-          "teox_neto": 3678370,
-          "teox_units": 30.0,
+          "teox_neto": 3972490,
+          "teox_units": 33.0,
           "rrs_neto": 2113984,
           "rrs_units": 20.0,
           "name": "TERRE SOCIEDAD DE PROFESIONALES LIMITADA"
@@ -15313,8 +15335,8 @@
           "id": "487",
           "count": 1,
           "neto": 4314826,
-          "teox_neto": 1824000,
-          "teox_units": 15.0,
+          "teox_neto": 2412240,
+          "teox_units": 20.0,
           "rrs_neto": 1902586,
           "rrs_units": 20.0,
           "name": "SOCIEDAD DE SERVICIOS MEDICOS MOELLER SPA"
@@ -15323,8 +15345,8 @@
           "id": "705",
           "count": 2,
           "neto": 4162041,
-          "teox_neto": 2577700,
-          "teox_units": 23.0,
+          "teox_neto": 3607120,
+          "teox_units": 30.0,
           "rrs_neto": 554921,
           "rrs_units": 5.0,
           "name": "BPE ODONTOLOGIA Y ESTETICA FACIAL SPA"
@@ -15333,8 +15355,8 @@
           "id": "1078",
           "count": 1,
           "neto": 3515190,
-          "teox_neto": 3141270,
-          "teox_units": 25.0,
+          "teox_neto": 3515190,
+          "teox_units": 30.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "Sonia Roffe"
@@ -15343,8 +15365,8 @@
           "id": "569",
           "count": 2,
           "neto": 2888152,
-          "teox_neto": 869820,
-          "teox_units": 6.0,
+          "teox_neto": 1936860,
+          "teox_units": 20.0,
           "rrs_neto": 951292,
           "rrs_units": 10.0,
           "name": "SERVICIOS MEDICOS TAOTE LTDA"
@@ -15393,8 +15415,8 @@
           "id": "600",
           "count": 2,
           "neto": 2449180,
-          "teox_neto": 2144740,
-          "teox_units": 18.0,
+          "teox_neto": 2449180,
+          "teox_units": 20.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "CLÍNICA DRA.ROMINA VARGAS SPA"
@@ -15413,8 +15435,8 @@
           "id": "1019",
           "count": 1,
           "neto": 2347260,
-          "teox_neto": 1464900,
-          "teox_units": 14.0,
+          "teox_neto": 2347260,
+          "teox_units": 20.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "CLÍNICA DRA. JAVIERA GUEVARA LIZANA LIMITADA"
@@ -15446,8 +15468,8 @@
             "id": "779",
             "count": 3,
             "neto": 6086474,
-            "teox_neto": 3678370,
-            "teox_units": 30.0,
+            "teox_neto": 3972490,
+            "teox_units": 33.0,
             "rrs_neto": 2113984,
             "rrs_units": 20.0,
             "name": "TERRE SOCIEDAD DE PROFESIONALES LIMITADA"
@@ -15456,8 +15478,8 @@
             "id": "487",
             "count": 1,
             "neto": 4314826,
-            "teox_neto": 1824000,
-            "teox_units": 15.0,
+            "teox_neto": 2412240,
+            "teox_units": 20.0,
             "rrs_neto": 1902586,
             "rrs_units": 20.0,
             "name": "SOCIEDAD DE SERVICIOS MEDICOS MOELLER SPA"
@@ -15466,8 +15488,8 @@
             "id": "1078",
             "count": 1,
             "neto": 3515190,
-            "teox_neto": 3141270,
-            "teox_units": 25.0,
+            "teox_neto": 3515190,
+            "teox_units": 30.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "Sonia Roffe"
@@ -15476,8 +15498,8 @@
             "id": "569",
             "count": 2,
             "neto": 2888152,
-            "teox_neto": 869820,
-            "teox_units": 6.0,
+            "teox_neto": 1936860,
+            "teox_units": 20.0,
             "rrs_neto": 951292,
             "rrs_units": 10.0,
             "name": "SERVICIOS MEDICOS TAOTE LTDA"
@@ -15516,8 +15538,8 @@
             "id": "1019",
             "count": 1,
             "neto": 2347260,
-            "teox_neto": 1464900,
-            "teox_units": 14.0,
+            "teox_neto": 2347260,
+            "teox_units": 20.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "CLÍNICA DRA. JAVIERA GUEVARA LIZANA LIMITADA"
@@ -15556,8 +15578,8 @@
             "id": "921",
             "count": 1,
             "neto": 1762440,
-            "teox_neto": 1032840,
-            "teox_units": 10.0,
+            "teox_neto": 1762440,
+            "teox_units": 20.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SOCIEDAD ODONTOLOGICA DEL MAULE SPA"
@@ -15598,8 +15620,8 @@
             "id": "600",
             "count": 2,
             "neto": 2449180,
-            "teox_neto": 2144740,
-            "teox_units": 18.0,
+            "teox_neto": 2449180,
+            "teox_units": 20.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "CLÍNICA DRA.ROMINA VARGAS SPA"
@@ -15608,8 +15630,8 @@
             "id": "1070",
             "count": 1,
             "neto": 1965880,
-            "teox_neto": 1357000,
-            "teox_units": 11.0,
+            "teox_neto": 1965880,
+            "teox_units": 16.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "MAGNOLIA TECNOLOGIA MEDICA Y ESTETICA SPA"
@@ -15628,8 +15650,8 @@
             "id": "912",
             "count": 1,
             "neto": 1760560,
-            "teox_neto": 1456120,
-            "teox_units": 13.0,
+            "teox_neto": 1760560,
+            "teox_units": 15.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "ODONTOLOGIA Y ESTETICA PALERMO SPA"
@@ -15638,8 +15660,8 @@
             "id": "1016",
             "count": 1,
             "neto": 1296860,
-            "teox_neto": 1139480,
-            "teox_units": 9.0,
+            "teox_neto": 1296860,
+            "teox_units": 10.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "ODONTOESTETICA DOCTORA CAMILA ROJAS ESTETICA SPA"
@@ -15648,8 +15670,8 @@
             "id": "942",
             "count": 2,
             "neto": 1296540,
-            "teox_neto": 971460,
-            "teox_units": 8.0,
+            "teox_neto": 1296540,
+            "teox_units": 10.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "Nazarena Francisca Avila Yañez"
@@ -15688,8 +15710,8 @@
             "id": "997",
             "count": 1,
             "neto": 771750,
-            "teox_neto": 609210,
-            "teox_units": 5.0,
+            "teox_neto": 771750,
+            "teox_units": 6.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "ESENCIA GLOBAL SPA"
@@ -15728,8 +15750,8 @@
             "id": "1082",
             "count": 1,
             "neto": 718770,
-            "teox_neto": 571710,
-            "teox_units": 5.0,
+            "teox_neto": 718770,
+            "teox_units": 6.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "AMERICA ANDREA CATHERINE ARELLANO CID"
@@ -15740,8 +15762,8 @@
             "id": "705",
             "count": 2,
             "neto": 4162041,
-            "teox_neto": 2577700,
-            "teox_units": 23.0,
+            "teox_neto": 3607120,
+            "teox_units": 30.0,
             "rrs_neto": 554921,
             "rrs_units": 5.0,
             "name": "BPE ODONTOLOGIA Y ESTETICA FACIAL SPA"
@@ -15760,8 +15782,8 @@
             "id": "1074",
             "count": 1,
             "neto": 1829000,
-            "teox_neto": 1220120,
-            "teox_units": 10.0,
+            "teox_neto": 1829000,
+            "teox_units": 15.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "LVER ARMONIZACION OROFACIAL SPA"
@@ -15801,7 +15823,7 @@
             "count": 1,
             "neto": 684180,
             "teox_neto": 684180,
-            "teox_units": 4.0,
+            "teox_units": 5.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SERVICIOS ODONTOLÓGICOS CATALINA CONTRERAS SAAVEDRA SPA"
@@ -15830,8 +15852,8 @@
             "id": "1072",
             "count": 1,
             "neto": 588240,
-            "teox_neto": 0,
-            "teox_units": 0,
+            "teox_neto": 588240,
+            "teox_units": 5.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "ODONTOLOGIA Y ESTETICA CLAUDIA TAMARA CORDERO CHAU E.I.R.L."
@@ -15840,8 +15862,8 @@
             "id": "1073",
             "count": 1,
             "neto": 586530,
-            "teox_neto": 439470,
-            "teox_units": 4.0,
+            "teox_neto": 586530,
+            "teox_units": 5.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "CLÍNICA DENTAL Y ESTÉTICA ELEVEN SPA"
@@ -15882,8 +15904,8 @@
             "id": "928",
             "count": 1,
             "neto": 643860,
-            "teox_neto": 318780,
-            "teox_units": 3.0,
+            "teox_neto": 643860,
+            "teox_units": 5.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "928"
@@ -15894,8 +15916,8 @@
             "id": "860",
             "count": 2,
             "neto": 19299728,
-            "teox_neto": 12042700,
-            "teox_units": 103.0,
+            "teox_neto": 16075900,
+            "teox_units": 143.0,
             "rrs_neto": 3223828,
             "rrs_units": 32.0,
             "name": "Servicios De Salud Girardi Y Cia. Ltda"
@@ -15904,8 +15926,8 @@
       },
       "brand_productivity": {
         "Teoxane": {
-          "clients": 65,
-          "units": 769.0
+          "clients": 69,
+          "units": 940.0
         },
         "RRS HA Long Lasting": {
           "clients": 27,
@@ -15915,8 +15937,8 @@
       "brand_productivity_by_vendor": {
         "Monica Urrutia": {
           "Teoxane": {
-            "clients": 32,
-            "units": 410.0
+            "clients": 34,
+            "units": 495.0
           },
           "RRS HA Long Lasting": {
             "clients": 12,
@@ -15925,8 +15947,8 @@
         },
         "Cindy Monsalves": {
           "Teoxane": {
-            "clients": 22,
-            "units": 164.0
+            "clients": 23,
+            "units": 189.0
           },
           "RRS HA Long Lasting": {
             "clients": 9,
@@ -15935,8 +15957,8 @@
         },
         "Daisy Ponce": {
           "Teoxane": {
-            "clients": 9,
-            "units": 89.0
+            "clients": 10,
+            "units": 108.0
           },
           "RRS HA Long Lasting": {
             "clients": 4,
@@ -15946,7 +15968,7 @@
         "Sin asignar": {
           "Teoxane": {
             "clients": 1,
-            "units": 3.0
+            "units": 5.0
           },
           "RRS HA Long Lasting": {
             "clients": 1,
@@ -15956,7 +15978,7 @@
         "Francisca Salinas": {
           "Teoxane": {
             "clients": 1,
-            "units": 103.0
+            "units": 143.0
           },
           "RRS HA Long Lasting": {
             "clients": 1,
@@ -16270,23 +16292,23 @@
         ]
       },
       "by_brand": {
-        "Teoxane": 57831100,
+        "Teoxane": 76366980,
         "RRS HA Long Lasting": 28753864,
         "FINE": 410610
       },
       "by_vendor_brand": {
         "Monica Urrutia": {
-          "Teoxane": 23276440,
+          "Teoxane": 32050000,
           "RRS HA Long Lasting": 14976256,
           "FINE": 410610
         },
         "Cindy Monsalves": {
-          "Teoxane": 14743500,
+          "Teoxane": 17829180,
           "RRS HA Long Lasting": 7429046,
           "FINE": 0
         },
         "Daisy Ponce": {
-          "Teoxane": 5516600,
+          "Teoxane": 6714850,
           "RRS HA Long Lasting": 2721755,
           "FINE": 0
         },
@@ -16296,7 +16318,7 @@
           "FINE": 0
         },
         "Francisca Salinas": {
-          "Teoxane": 14294560,
+          "Teoxane": 19772950,
           "RRS HA Long Lasting": 3626807,
           "FINE": 0
         }
@@ -16369,8 +16391,8 @@
           "id": "860",
           "count": 4,
           "neto": 23399757,
-          "teox_neto": 14294560,
-          "teox_units": 122.0,
+          "teox_neto": 19772950,
+          "teox_units": 175.0,
           "rrs_neto": 3626807,
           "rrs_units": 36.0,
           "name": "Servicios De Salud Girardi Y Cia. Ltda"
@@ -16379,8 +16401,8 @@
           "id": "487",
           "count": 1,
           "neto": 5202279,
-          "teox_neto": 1171920,
-          "teox_units": 10.0,
+          "teox_neto": 2348400,
+          "teox_units": 20.0,
           "rrs_neto": 2853879,
           "rrs_units": 30.0,
           "name": "SOCIEDAD DE SERVICIOS MEDICOS MOELLER SPA"
@@ -16389,8 +16411,8 @@
           "id": "547",
           "count": 2,
           "neto": 4688820,
-          "teox_neto": 3218220,
-          "teox_units": 30.0,
+          "teox_neto": 4688820,
+          "teox_units": 40.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "ODONTOLOGIA Y ESTETICA SELFCARE SPA"
@@ -16409,8 +16431,8 @@
           "id": "1013",
           "count": 1,
           "neto": 2348400,
-          "teox_neto": 1171920,
-          "teox_units": 10.0,
+          "teox_neto": 2348400,
+          "teox_units": 20.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "THE FACE PROJECT SPA"
@@ -16419,8 +16441,8 @@
           "id": "597",
           "count": 2,
           "neto": 2079360,
-          "teox_neto": 1041960,
-          "teox_units": 9.0,
+          "teox_neto": 2079360,
+          "teox_units": 22.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "DR MATTATALL SPA"
@@ -16449,8 +16471,8 @@
           "id": "912",
           "count": 1,
           "neto": 1859090,
-          "teox_neto": 1402430,
-          "teox_units": 12.0,
+          "teox_neto": 1859090,
+          "teox_units": 15.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "ODONTOLOGIA Y ESTETICA PALERMO SPA"
@@ -16459,8 +16481,8 @@
           "id": "438",
           "count": 1,
           "neto": 1835400,
-          "teox_neto": 1247160,
-          "teox_units": 10.0,
+          "teox_neto": 1835400,
+          "teox_units": 15.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "SOCIEDAD PROFESIONAL MEDICA ESTETICA ODONTOLOGICA Y EDUCACIONAL FAGA L"
@@ -16469,8 +16491,8 @@
           "id": "587",
           "count": 1,
           "neto": 1822510,
-          "teox_neto": 1061410,
-          "teox_units": 10.0,
+          "teox_neto": 1822510,
+          "teox_units": 15.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "SERVICIOS ODONTOLOGICOS ROMAN MERDECH Y COMPANIA SPA"
@@ -16499,8 +16521,8 @@
           "id": "954",
           "count": 1,
           "neto": 1810320,
-          "teox_neto": 1171920,
-          "teox_units": 8.0,
+          "teox_neto": 1810320,
+          "teox_units": 20.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "THE FACE BAR SPA"
@@ -16522,8 +16544,8 @@
             "id": "487",
             "count": 1,
             "neto": 5202279,
-            "teox_neto": 1171920,
-            "teox_units": 10.0,
+            "teox_neto": 2348400,
+            "teox_units": 20.0,
             "rrs_neto": 2853879,
             "rrs_units": 30.0,
             "name": "SOCIEDAD DE SERVICIOS MEDICOS MOELLER SPA"
@@ -16542,8 +16564,8 @@
             "id": "1013",
             "count": 1,
             "neto": 2348400,
-            "teox_neto": 1171920,
-            "teox_units": 10.0,
+            "teox_neto": 2348400,
+            "teox_units": 20.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "THE FACE PROJECT SPA"
@@ -16552,8 +16574,8 @@
             "id": "597",
             "count": 2,
             "neto": 2079360,
-            "teox_neto": 1041960,
-            "teox_units": 9.0,
+            "teox_neto": 2079360,
+            "teox_units": 22.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "DR MATTATALL SPA"
@@ -16582,8 +16604,8 @@
             "id": "438",
             "count": 1,
             "neto": 1835400,
-            "teox_neto": 1247160,
-            "teox_units": 10.0,
+            "teox_neto": 1835400,
+            "teox_units": 15.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SOCIEDAD PROFESIONAL MEDICA ESTETICA ODONTOLOGICA Y EDUCACIONAL FAGA L"
@@ -16602,8 +16624,8 @@
             "id": "954",
             "count": 1,
             "neto": 1810320,
-            "teox_neto": 1171920,
-            "teox_units": 8.0,
+            "teox_neto": 1810320,
+            "teox_units": 20.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "THE FACE BAR SPA"
@@ -16612,8 +16634,8 @@
             "id": "921",
             "count": 2,
             "neto": 1732800,
-            "teox_neto": 1322400,
-            "teox_units": 10.0,
+            "teox_neto": 1732800,
+            "teox_units": 15.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SOCIEDAD ODONTOLOGICA DEL MAULE SPA"
@@ -16642,8 +16664,8 @@
             "id": "530",
             "count": 2,
             "neto": 1509596,
-            "teox_neto": 325710,
-            "teox_units": 3.0,
+            "teox_neto": 650790,
+            "teox_units": 5.0,
             "rrs_neto": 858806,
             "rrs_units": 7.0,
             "name": "INVERSIONES, INMOBILIARIA Y SERVICIOS CLINICOS THEA SPA"
@@ -16662,8 +16684,8 @@
             "id": "474",
             "count": 1,
             "neto": 1290760,
-            "teox_neto": 976000,
-            "teox_units": 8.0,
+            "teox_neto": 1290760,
+            "teox_units": 10.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SERVICIOS MEDICOS BARRERA LOPEZ LIMITADA"
@@ -16674,8 +16696,8 @@
             "id": "547",
             "count": 2,
             "neto": 4688820,
-            "teox_neto": 3218220,
-            "teox_units": 30.0,
+            "teox_neto": 4688820,
+            "teox_units": 40.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "ODONTOLOGIA Y ESTETICA SELFCARE SPA"
@@ -16684,8 +16706,8 @@
             "id": "912",
             "count": 1,
             "neto": 1859090,
-            "teox_neto": 1402430,
-            "teox_units": 12.0,
+            "teox_neto": 1859090,
+            "teox_units": 15.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "ODONTOLOGIA Y ESTETICA PALERMO SPA"
@@ -16694,8 +16716,8 @@
             "id": "587",
             "count": 1,
             "neto": 1822510,
-            "teox_neto": 1061410,
-            "teox_units": 10.0,
+            "teox_neto": 1822510,
+            "teox_units": 15.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SERVICIOS ODONTOLOGICOS ROMAN MERDECH Y COMPANIA SPA"
@@ -16714,8 +16736,8 @@
             "id": "600",
             "count": 2,
             "neto": 1411540,
-            "teox_neto": 1254160,
-            "teox_units": 10.0,
+            "teox_neto": 1411540,
+            "teox_units": 11.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "CLÍNICA DRA.ROMINA VARGAS SPA"
@@ -16784,8 +16806,8 @@
             "id": "872",
             "count": 1,
             "neto": 689850,
-            "teox_neto": 527310,
-            "teox_units": 4.0,
+            "teox_neto": 689850,
+            "teox_units": 5.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SOCIEDAD MEDICA VERGARA & CIA. LIMITADA"
@@ -16814,8 +16836,8 @@
             "id": "964",
             "count": 1,
             "neto": 650160,
-            "teox_neto": 0,
-            "teox_units": 0,
+            "teox_neto": 650160,
+            "teox_units": 5.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SERVICIOS DENTALES GARCÍA Y GAÑAN SPA"
@@ -16846,8 +16868,8 @@
             "id": "1085",
             "count": 1,
             "neto": 1220610,
-            "teox_neto": 977830,
-            "teox_units": 7.0,
+            "teox_neto": 1220610,
+            "teox_units": 10.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "INSTITUTO ODONTOLOGICO ACONCAGUA SPA"
@@ -16866,8 +16888,8 @@
             "id": "974",
             "count": 1,
             "neto": 1002230,
-            "teox_neto": 687470,
-            "teox_units": 4.0,
+            "teox_neto": 1002230,
+            "teox_units": 6.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SERVICIOS ODONTOLÓGICOS ALEXANDRA MAC-KAY MARTINI SPA"
@@ -16876,8 +16898,8 @@
             "id": "801",
             "count": 1,
             "neto": 652050,
-            "teox_neto": 489510,
-            "teox_units": 3.0,
+            "teox_neto": 652050,
+            "teox_units": 5.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "CLINICA DRA ORIANNA ESCORIHUELA SPA"
@@ -16896,8 +16918,8 @@
             "id": "456",
             "count": 1,
             "neto": 640080,
-            "teox_neto": 161910,
-            "teox_units": 1.0,
+            "teox_neto": 640080,
+            "teox_units": 5.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SERVICIOS ODONTOLOGICOS CARLA SOFIA BASTIAS NASI E.I.R.L"
@@ -16950,8 +16972,8 @@
             "id": "860",
             "count": 4,
             "neto": 23399757,
-            "teox_neto": 14294560,
-            "teox_units": 122.0,
+            "teox_neto": 19772950,
+            "teox_units": 175.0,
             "rrs_neto": 3626807,
             "rrs_units": 36.0,
             "name": "Servicios De Salud Girardi Y Cia. Ltda"
@@ -16960,8 +16982,8 @@
       },
       "brand_productivity": {
         "Teoxane": {
-          "clients": 49,
-          "units": 478.0
+          "clients": 53,
+          "units": 652.0
         },
         "RRS HA Long Lasting": {
           "clients": 34,
@@ -16971,8 +16993,8 @@
       "brand_productivity_by_vendor": {
         "Monica Urrutia": {
           "Teoxane": {
-            "clients": 25,
-            "units": 182.0
+            "clients": 28,
+            "units": 266.0
           },
           "RRS HA Long Lasting": {
             "clients": 14,
@@ -16981,8 +17003,8 @@
         },
         "Cindy Monsalves": {
           "Teoxane": {
-            "clients": 16,
-            "units": 134.0
+            "clients": 17,
+            "units": 160.0
           },
           "RRS HA Long Lasting": {
             "clients": 14,
@@ -16992,7 +17014,7 @@
         "Daisy Ponce": {
           "Teoxane": {
             "clients": 7,
-            "units": 40.0
+            "units": 51.0
           },
           "RRS HA Long Lasting": {
             "clients": 5,
@@ -17002,7 +17024,7 @@
         "Francisca Salinas": {
           "Teoxane": {
             "clients": 1,
-            "units": 122.0
+            "units": 175.0
           },
           "RRS HA Long Lasting": {
             "clients": 1,
@@ -17356,18 +17378,18 @@
         ]
       },
       "by_brand": {
-        "Teoxane": 79717710,
+        "Teoxane": 97110700,
         "RRS HA Long Lasting": 21897907,
         "FINE": 388930
       },
       "by_vendor_brand": {
         "Cindy Monsalves": {
-          "Teoxane": 28456760,
+          "Teoxane": 32964860,
           "RRS HA Long Lasting": 5654908,
           "FINE": 0
         },
         "Monica Urrutia": {
-          "Teoxane": 36265880,
+          "Teoxane": 47117340,
           "RRS HA Long Lasting": 11204118,
           "FINE": 388930
         },
@@ -17377,12 +17399,12 @@
           "FINE": 0
         },
         "Daisy Ponce": {
-          "Teoxane": 8340830,
+          "Teoxane": 8929070,
           "RRS HA Long Lasting": 3778747,
           "FINE": 0
         },
         "Francisca Salinas": {
-          "Teoxane": 6654240,
+          "Teoxane": 8099430,
           "RRS HA Long Lasting": 705213,
           "FINE": 0
         }
@@ -17455,8 +17477,8 @@
           "id": "860",
           "count": 2,
           "neto": 8804643,
-          "teox_neto": 6654240,
-          "teox_units": 57.0,
+          "teox_neto": 8099430,
+          "teox_units": 70.0,
           "rrs_neto": 705213,
           "rrs_units": 7.0,
           "name": "Servicios De Salud Girardi Y Cia. Ltda"
@@ -17475,8 +17497,8 @@
           "id": "487",
           "count": 1,
           "neto": 3660466,
-          "teox_neto": 1169640,
-          "teox_units": 10.0,
+          "teox_neto": 1757880,
+          "teox_units": 15.0,
           "rrs_neto": 1902586,
           "rrs_units": 20.0,
           "name": "SOCIEDAD DE SERVICIOS MEDICOS MOELLER SPA"
@@ -17485,8 +17507,8 @@
           "id": "1093",
           "count": 2,
           "neto": 3625550,
-          "teox_neto": 3473330,
-          "teox_units": 29.0,
+          "teox_neto": 3625550,
+          "teox_units": 30.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "GM dental care & esthetics spa"
@@ -17495,8 +17517,8 @@
           "id": "542",
           "count": 2,
           "neto": 3497520,
-          "teox_neto": 3332320,
-          "teox_units": 27.0,
+          "teox_neto": 3497520,
+          "teox_units": 29.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "CLINICA ESTETICA LAV SPA"
@@ -17525,8 +17547,8 @@
           "id": "1013",
           "count": 1,
           "neto": 2893320,
-          "teox_neto": 2414520,
-          "teox_units": 21.0,
+          "teox_neto": 2893320,
+          "teox_units": 30.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "THE FACE PROJECT SPA"
@@ -17535,8 +17557,8 @@
           "id": "597",
           "count": 1,
           "neto": 2868240,
-          "teox_neto": 2280000,
-          "teox_units": 20.0,
+          "teox_neto": 2868240,
+          "teox_units": 25.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "DR MATTATALL SPA"
@@ -17555,8 +17577,8 @@
           "id": "591",
           "count": 2,
           "neto": 2737330,
-          "teox_neto": 1171920,
-          "teox_units": 10.0,
+          "teox_neto": 2348400,
+          "teox_units": 20.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "THE BEAUTY LAB SPA"
@@ -17565,8 +17587,8 @@
           "id": "921",
           "count": 2,
           "neto": 2667600,
-          "teox_neto": 1618800,
-          "teox_units": 15.0,
+          "teox_neto": 2667600,
+          "teox_units": 30.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "SOCIEDAD ODONTOLOGICA DEL MAULE SPA"
@@ -17575,8 +17597,8 @@
           "id": "903",
           "count": 2,
           "neto": 2430640,
-          "teox_neto": 1254160,
-          "teox_units": 10.0,
+          "teox_neto": 2430640,
+          "teox_units": 20.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "INVERSIONES Y SERVICIOS MEDICOS JUAN OPAZO SPA"
@@ -17608,8 +17630,8 @@
             "id": "1093",
             "count": 2,
             "neto": 3625550,
-            "teox_neto": 3473330,
-            "teox_units": 29.0,
+            "teox_neto": 3625550,
+            "teox_units": 30.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "GM dental care & esthetics spa"
@@ -17638,8 +17660,8 @@
             "id": "1001",
             "count": 1,
             "neto": 1955633,
-            "teox_neto": 697680,
-            "teox_units": 6.0,
+            "teox_neto": 1004340,
+            "teox_units": 10.0,
             "rrs_neto": 951293,
             "rrs_units": 10.0,
             "name": "COMERCIAL SMS SPA"
@@ -17648,8 +17670,8 @@
             "id": "912",
             "count": 1,
             "neto": 1899210,
-            "teox_neto": 1442550,
-            "teox_units": 12.0,
+            "teox_neto": 1899210,
+            "teox_units": 15.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "ODONTOLOGIA Y ESTETICA PALERMO SPA"
@@ -17688,8 +17710,8 @@
             "id": "1009",
             "count": 3,
             "neto": 1610280,
-            "teox_neto": 1285200,
-            "teox_units": 10.0,
+            "teox_neto": 1610280,
+            "teox_units": 12.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "PAMELA AILEEN LIZANA BECERRA"
@@ -17698,8 +17720,8 @@
             "id": "1079",
             "count": 1,
             "neto": 1534000,
-            "teox_neto": 1203600,
-            "teox_units": 10.0,
+            "teox_neto": 1534000,
+            "teox_units": 15.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "MEDICINA ESTETICA FACIAL SEMEF SPA"
@@ -17708,8 +17730,8 @@
             "id": "965",
             "count": 1,
             "neto": 1411540,
-            "teox_neto": 1254160,
-            "teox_units": 10.0,
+            "teox_neto": 1411540,
+            "teox_units": 11.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "CLINICA ODONTOLOGICA Y ESTETICA IGNACIA QUIERO E.I.R.L."
@@ -17738,8 +17760,8 @@
             "id": "918",
             "count": 3,
             "neto": 1292760,
-            "teox_neto": 1130220,
-            "teox_units": 9.0,
+            "teox_neto": 1292760,
+            "teox_units": 10.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "BARROS Y VASQUEZ BIO FACE LIMITADA"
@@ -17748,8 +17770,8 @@
             "id": "600",
             "count": 1,
             "neto": 1255380,
-            "teox_neto": 940620,
-            "teox_units": 8.0,
+            "teox_neto": 1255380,
+            "teox_units": 10.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "CLÍNICA DRA.ROMINA VARGAS SPA"
@@ -17770,8 +17792,8 @@
             "id": "487",
             "count": 1,
             "neto": 3660466,
-            "teox_neto": 1169640,
-            "teox_units": 10.0,
+            "teox_neto": 1757880,
+            "teox_units": 15.0,
             "rrs_neto": 1902586,
             "rrs_units": 20.0,
             "name": "SOCIEDAD DE SERVICIOS MEDICOS MOELLER SPA"
@@ -17780,8 +17802,8 @@
             "id": "542",
             "count": 2,
             "neto": 3497520,
-            "teox_neto": 3332320,
-            "teox_units": 27.0,
+            "teox_neto": 3497520,
+            "teox_units": 29.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "CLINICA ESTETICA LAV SPA"
@@ -17800,8 +17822,8 @@
             "id": "1013",
             "count": 1,
             "neto": 2893320,
-            "teox_neto": 2414520,
-            "teox_units": 21.0,
+            "teox_neto": 2893320,
+            "teox_units": 30.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "THE FACE PROJECT SPA"
@@ -17810,8 +17832,8 @@
             "id": "597",
             "count": 1,
             "neto": 2868240,
-            "teox_neto": 2280000,
-            "teox_units": 20.0,
+            "teox_neto": 2868240,
+            "teox_units": 25.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "DR MATTATALL SPA"
@@ -17820,8 +17842,8 @@
             "id": "591",
             "count": 2,
             "neto": 2737330,
-            "teox_neto": 1171920,
-            "teox_units": 10.0,
+            "teox_neto": 2348400,
+            "teox_units": 20.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "THE BEAUTY LAB SPA"
@@ -17830,8 +17852,8 @@
             "id": "921",
             "count": 2,
             "neto": 2667600,
-            "teox_neto": 1618800,
-            "teox_units": 15.0,
+            "teox_neto": 2667600,
+            "teox_units": 30.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SOCIEDAD ODONTOLOGICA DEL MAULE SPA"
@@ -17840,8 +17862,8 @@
             "id": "903",
             "count": 2,
             "neto": 2430640,
-            "teox_neto": 1254160,
-            "teox_units": 10.0,
+            "teox_neto": 2430640,
+            "teox_units": 20.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "INVERSIONES Y SERVICIOS MEDICOS JUAN OPAZO SPA"
@@ -17860,8 +17882,8 @@
             "id": "986",
             "count": 2,
             "neto": 2348400,
-            "teox_neto": 1171920,
-            "teox_units": 10.0,
+            "teox_neto": 2348400,
+            "teox_units": 20.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "CLINICA ODONTOLOGICA Y ESTETICA DRA. NATALIA DROGUETT SPA"
@@ -17870,8 +17892,8 @@
             "id": "1019",
             "count": 1,
             "neto": 2335290,
-            "teox_neto": 1599990,
-            "teox_units": 15.0,
+            "teox_neto": 2335290,
+            "teox_units": 20.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "CLÍNICA DRA. JAVIERA GUEVARA LIZANA LIMITADA"
@@ -17944,8 +17966,8 @@
             "id": "705",
             "count": 1,
             "neto": 2358090,
-            "teox_neto": 1769850,
-            "teox_units": 16.0,
+            "teox_neto": 2358090,
+            "teox_units": 20.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "BPE ODONTOLOGIA Y ESTETICA FACIAL SPA"
@@ -18026,8 +18048,8 @@
             "id": "860",
             "count": 2,
             "neto": 8804643,
-            "teox_neto": 6654240,
-            "teox_units": 57.0,
+            "teox_neto": 8099430,
+            "teox_units": 70.0,
             "rrs_neto": 705213,
             "rrs_units": 7.0,
             "name": "Servicios De Salud Girardi Y Cia. Ltda"
@@ -18036,8 +18058,8 @@
       },
       "brand_productivity": {
         "Teoxane": {
-          "clients": 64,
-          "units": 710.0
+          "clients": 71,
+          "units": 877.0
         },
         "RRS HA Long Lasting": {
           "clients": 28,
@@ -18047,8 +18069,8 @@
       "brand_productivity_by_vendor": {
         "Cindy Monsalves": {
           "Teoxane": {
-            "clients": 27,
-            "units": 254.0
+            "clients": 29,
+            "units": 294.0
           },
           "RRS HA Long Lasting": {
             "clients": 7,
@@ -18057,8 +18079,8 @@
         },
         "Monica Urrutia": {
           "Teoxane": {
-            "clients": 31,
-            "units": 328.0
+            "clients": 36,
+            "units": 438.0
           },
           "RRS HA Long Lasting": {
             "clients": 14,
@@ -18078,7 +18100,7 @@
         "Daisy Ponce": {
           "Teoxane": {
             "clients": 5,
-            "units": 71.0
+            "units": 75.0
           },
           "RRS HA Long Lasting": {
             "clients": 5,
@@ -18088,7 +18110,7 @@
         "Francisca Salinas": {
           "Teoxane": {
             "clients": 1,
-            "units": 57.0
+            "units": 70.0
           },
           "RRS HA Long Lasting": {
             "clients": 1,
@@ -18436,28 +18458,28 @@
         ]
       },
       "by_brand": {
-        "Teoxane": 80495470,
+        "Teoxane": 93110770,
         "RRS HA Long Lasting": 19585738,
         "FINE": 242695
       },
       "by_vendor_brand": {
         "Monica Urrutia": {
-          "Teoxane": 36620080,
+          "Teoxane": 40859740,
           "RRS HA Long Lasting": 10708652,
           "FINE": 0
         },
         "Cindy Monsalves": {
-          "Teoxane": 23028610,
+          "Teoxane": 26088570,
           "RRS HA Long Lasting": 2384839,
           "FINE": 242695
         },
         "Daisy Ponce": {
-          "Teoxane": 12422460,
+          "Teoxane": 15041020,
           "RRS HA Long Lasting": 2563206,
           "FINE": 0
         },
         "Francisca Salinas": {
-          "Teoxane": 8424320,
+          "Teoxane": 11121440,
           "RRS HA Long Lasting": 3929041,
           "FINE": 0
         }
@@ -18529,8 +18551,8 @@
           "id": "860",
           "count": 2,
           "neto": 15050481,
-          "teox_neto": 8424320,
-          "teox_units": 72.0,
+          "teox_neto": 11121440,
+          "teox_units": 96.0,
           "rrs_neto": 3929041,
           "rrs_units": 39.0,
           "name": "Servicios De Salud Girardi Y Cia. Ltda"
@@ -18559,8 +18581,8 @@
           "id": "1110",
           "count": 2,
           "neto": 3619060,
-          "teox_neto": 2705740,
-          "teox_units": 23.0,
+          "teox_neto": 3619060,
+          "teox_units": 29.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "CLÍNICA ODONTOLÓGICA GUEVARA TELLO LIMITADA"
@@ -18569,8 +18591,8 @@
           "id": "487",
           "count": 1,
           "neto": 3402293,
-          "teox_neto": 1041960,
-          "teox_units": 10.0,
+          "teox_neto": 2451000,
+          "teox_units": 25.0,
           "rrs_neto": 951293,
           "rrs_units": 10.0,
           "name": "SOCIEDAD DE SERVICIOS MEDICOS MOELLER SPA"
@@ -18589,8 +18611,8 @@
           "id": "974",
           "count": 2,
           "neto": 3105110,
-          "teox_neto": 2800670,
-          "teox_units": 23.0,
+          "teox_neto": 3105110,
+          "teox_units": 25.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "SERVICIOS ODONTOLÓGICOS ALEXANDRA MAC-KAY MARTINI SPA"
@@ -18599,8 +18621,8 @@
           "id": "920",
           "count": 1,
           "neto": 2965710,
-          "teox_neto": 2818650,
-          "teox_units": 24.0,
+          "teox_neto": 2965710,
+          "teox_units": 25.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "ASESORÍAS E INVERSIONES SF SPA"
@@ -18609,8 +18631,8 @@
           "id": "705",
           "count": 1,
           "neto": 2934360,
-          "teox_neto": 1757880,
-          "teox_units": 15.0,
+          "teox_neto": 2934360,
+          "teox_units": 25.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "BPE ODONTOLOGIA Y ESTETICA FACIAL SPA"
@@ -18649,8 +18671,8 @@
           "id": "597",
           "count": 3,
           "neto": 1985880,
-          "teox_neto": 576840,
-          "teox_units": 5.0,
+          "teox_neto": 1985880,
+          "teox_units": 20.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "DR MATTATALL SPA"
@@ -18669,8 +18691,8 @@
           "id": "1105",
           "count": 1,
           "neto": 1864990,
-          "teox_neto": 1560550,
-          "teox_units": 13.0,
+          "teox_neto": 1864990,
+          "teox_units": 15.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "ANTIVILO SPA"
@@ -18702,8 +18724,8 @@
             "id": "1110",
             "count": 2,
             "neto": 3619060,
-            "teox_neto": 2705740,
-            "teox_units": 23.0,
+            "teox_neto": 3619060,
+            "teox_units": 29.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "CLÍNICA ODONTOLÓGICA GUEVARA TELLO LIMITADA"
@@ -18712,8 +18734,8 @@
             "id": "487",
             "count": 1,
             "neto": 3402293,
-            "teox_neto": 1041960,
-            "teox_units": 10.0,
+            "teox_neto": 2451000,
+            "teox_units": 25.0,
             "rrs_neto": 951293,
             "rrs_units": 10.0,
             "name": "SOCIEDAD DE SERVICIOS MEDICOS MOELLER SPA"
@@ -18762,8 +18784,8 @@
             "id": "597",
             "count": 3,
             "neto": 1985880,
-            "teox_neto": 576840,
-            "teox_units": 5.0,
+            "teox_neto": 1985880,
+            "teox_units": 20.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "DR MATTATALL SPA"
@@ -18864,8 +18886,8 @@
             "id": "535",
             "count": 1,
             "neto": 1669700,
-            "teox_neto": 1504500,
-            "teox_units": 10.0,
+            "teox_neto": 1669700,
+            "teox_units": 15.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SOCIEDAD MEDICA PROFESIONAL VERONA Y COMPAÑÍA LTDA"
@@ -18874,8 +18896,8 @@
             "id": "1106",
             "count": 1,
             "neto": 1516890,
-            "teox_neto": 1364670,
-            "teox_units": 13.0,
+            "teox_neto": 1516890,
+            "teox_units": 15.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "CAMILA ANDREA JELDRES VERDUGO"
@@ -18904,8 +18926,8 @@
             "id": "1018",
             "count": 2,
             "neto": 1313150,
-            "teox_neto": 1155770,
-            "teox_units": 9.0,
+            "teox_neto": 1313150,
+            "teox_units": 10.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "MARIA JOSE SUBBRERO MASSERANO"
@@ -18924,8 +18946,8 @@
             "id": "600",
             "count": 1,
             "neto": 1255380,
-            "teox_neto": 940620,
-            "teox_units": 8.0,
+            "teox_neto": 1255380,
+            "teox_units": 10.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "CLÍNICA DRA.ROMINA VARGAS SPA"
@@ -18944,8 +18966,8 @@
             "id": "1040",
             "count": 1,
             "neto": 1252330,
-            "teox_neto": 1094950,
-            "teox_units": 9.0,
+            "teox_neto": 1252330,
+            "teox_units": 10.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "ODONTOLOGÍA DIANDRA TORRES CONTARDO E.I.R.L."
@@ -18986,8 +19008,8 @@
             "id": "974",
             "count": 2,
             "neto": 3105110,
-            "teox_neto": 2800670,
-            "teox_units": 23.0,
+            "teox_neto": 3105110,
+            "teox_units": 25.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SERVICIOS ODONTOLÓGICOS ALEXANDRA MAC-KAY MARTINI SPA"
@@ -18996,8 +19018,8 @@
             "id": "920",
             "count": 1,
             "neto": 2965710,
-            "teox_neto": 2818650,
-            "teox_units": 24.0,
+            "teox_neto": 2965710,
+            "teox_units": 25.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "ASESORÍAS E INVERSIONES SF SPA"
@@ -19006,8 +19028,8 @@
             "id": "705",
             "count": 1,
             "neto": 2934360,
-            "teox_neto": 1757880,
-            "teox_units": 15.0,
+            "teox_neto": 2934360,
+            "teox_units": 25.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "BPE ODONTOLOGIA Y ESTETICA FACIAL SPA"
@@ -19016,8 +19038,8 @@
             "id": "1105",
             "count": 1,
             "neto": 1864990,
-            "teox_neto": 1560550,
-            "teox_units": 13.0,
+            "teox_neto": 1864990,
+            "teox_units": 15.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "ANTIVILO SPA"
@@ -19036,8 +19058,8 @@
             "id": "593",
             "count": 2,
             "neto": 1358280,
-            "teox_neto": 1195740,
-            "teox_units": 8.0,
+            "teox_neto": 1358280,
+            "teox_units": 10.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "ODONTOLOGÍA Y ESTÉTICA INTEGRAL AVANZADA PILAR ROJO CASTRO E.I.R.L."
@@ -19046,8 +19068,8 @@
             "id": "893",
             "count": 1,
             "neto": 1164490,
-            "teox_neto": 993690,
-            "teox_units": 6.0,
+            "teox_neto": 1164490,
+            "teox_units": 10.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SERVICIOS ODONTOLÓGICOS Y ESTÉTICOS NBF SPA"
@@ -19086,8 +19108,8 @@
             "id": "948",
             "count": 1,
             "neto": 352800,
-            "teox_neto": 0,
-            "teox_units": 0,
+            "teox_neto": 352800,
+            "teox_units": 5.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SERVICIOS ODONTOLOGICOS Y ESTETICOS FLORENCIA CÀCERES RIVEROS E.I.R.L."
@@ -19098,8 +19120,8 @@
             "id": "860",
             "count": 2,
             "neto": 15050481,
-            "teox_neto": 8424320,
-            "teox_units": 72.0,
+            "teox_neto": 11121440,
+            "teox_units": 96.0,
             "rrs_neto": 3929041,
             "rrs_units": 39.0,
             "name": "Servicios De Salud Girardi Y Cia. Ltda"
@@ -19108,8 +19130,8 @@
       },
       "brand_productivity": {
         "Teoxane": {
-          "clients": 53,
-          "units": 683.0
+          "clients": 57,
+          "units": 803.0
         },
         "RRS HA Long Lasting": {
           "clients": 17,
@@ -19120,37 +19142,37 @@
         "Monica Urrutia": {
           "Teoxane": {
             "clients": 22,
-            "units": 328.0
+            "units": 371.0
           },
           "RRS HA Long Lasting": {
             "clients": 9,
             "units": 118.0
           }
         },
-        "Daisy Ponce": {
-          "Teoxane": {
-            "clients": 8,
-            "units": 99.0
-          },
-          "RRS HA Long Lasting": {
-            "clients": 2,
-            "units": 25.0
-          }
-        },
         "Cindy Monsalves": {
           "Teoxane": {
-            "clients": 22,
-            "units": 184.0
+            "clients": 25,
+            "units": 211.0
           },
           "RRS HA Long Lasting": {
             "clients": 5,
             "units": 21.0
           }
         },
+        "Daisy Ponce": {
+          "Teoxane": {
+            "clients": 9,
+            "units": 125.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 2,
+            "units": 25.0
+          }
+        },
         "Francisca Salinas": {
           "Teoxane": {
             "clients": 1,
-            "units": 72.0
+            "units": 96.0
           },
           "RRS HA Long Lasting": {
             "clients": 1,
@@ -19555,23 +19577,23 @@
         ]
       },
       "by_brand": {
-        "Teoxane": 85357734,
+        "Teoxane": 110989092,
         "RRS HA Long Lasting": 23248205,
         "FINE": 0
       },
       "by_vendor_brand": {
         "Daisy Ponce": {
-          "Teoxane": 7977836,
+          "Teoxane": 9461645,
           "RRS HA Long Lasting": 2286272,
           "FINE": 0
         },
         "Monica Urrutia": {
-          "Teoxane": 43934745,
+          "Teoxane": 59151027,
           "RRS HA Long Lasting": 14820069,
           "FINE": 0
         },
         "Cindy Monsalves": {
-          "Teoxane": 22723489,
+          "Teoxane": 26260950,
           "RRS HA Long Lasting": 3535107,
           "FINE": 0
         },
@@ -19586,7 +19608,7 @@
           "FINE": 0
         },
         "Francisca Salinas": {
-          "Teoxane": 8605049,
+          "Teoxane": 13998855,
           "RRS HA Long Lasting": 2606757,
           "FINE": 0
         }
@@ -19671,8 +19693,8 @@
           "id": "860",
           "count": 2,
           "neto": 16605612,
-          "teox_neto": 8605049,
-          "teox_units": 71.0,
+          "teox_neto": 13998855,
+          "teox_units": 129.0,
           "rrs_neto": 2606757,
           "rrs_units": 25.0,
           "name": "Servicios De Salud Girardi Y Cia. Ltda"
@@ -19681,8 +19703,8 @@
           "id": "921",
           "count": 3,
           "neto": 7452408,
-          "teox_neto": 4252200,
-          "teox_units": 35.0,
+          "teox_neto": 7452408,
+          "teox_units": 75.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "SOCIEDAD ODONTOLOGICA DEL MAULE SPA"
@@ -19691,8 +19713,8 @@
           "id": "1091",
           "count": 3,
           "neto": 7118343,
-          "teox_neto": 6691527,
-          "teox_units": 55.0,
+          "teox_neto": 7118343,
+          "teox_units": 60.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "BEAUTY LINE SPA"
@@ -19701,8 +19723,8 @@
           "id": "779",
           "count": 2,
           "neto": 5393055,
-          "teox_neto": 3660550,
-          "teox_units": 30.0,
+          "teox_neto": 4293785,
+          "teox_units": 35.0,
           "rrs_neto": 1099270,
           "rrs_units": 10.0,
           "name": "TERRE SOCIEDAD DE PROFESIONALES LIMITADA"
@@ -19711,8 +19733,8 @@
           "id": "591",
           "count": 2,
           "neto": 5077472,
-          "teox_neto": 3406320,
-          "teox_units": 30.0,
+          "teox_neto": 4582800,
+          "teox_units": 40.0,
           "rrs_neto": 494672,
           "rrs_units": 5.0,
           "name": "THE BEAUTY LAB SPA"
@@ -19731,8 +19753,8 @@
           "id": "888",
           "count": 3,
           "neto": 3441505,
-          "teox_neto": 2786805,
-          "teox_units": 21.0,
+          "teox_neto": 3441505,
+          "teox_units": 25.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "SERVICIOS MEDICOS M Y H LIMITADA"
@@ -19751,8 +19773,8 @@
           "id": "597",
           "count": 4,
           "neto": 2793456,
-          "teox_neto": 1771286,
-          "teox_units": 15.0,
+          "teox_neto": 2793456,
+          "teox_units": 25.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "DR MATTATALL SPA"
@@ -19761,8 +19783,8 @@
           "id": "569",
           "count": 1,
           "neto": 2647722,
-          "teox_neto": 1209312,
-          "teox_units": 10.0,
+          "teox_neto": 2153050,
+          "teox_units": 20.0,
           "rrs_neto": 494672,
           "rrs_units": 5.0,
           "name": "SERVICIOS MEDICOS TAOTE LTDA"
@@ -19791,8 +19813,8 @@
           "id": "487",
           "count": 1,
           "neto": 2506185,
-          "teox_neto": 0,
-          "teox_units": 0,
+          "teox_neto": 1022170,
+          "teox_units": 10.0,
           "rrs_neto": 1484015,
           "rrs_units": 15.0,
           "name": "SOCIEDAD DE SERVICIOS MEDICOS MOELLER SPA"
@@ -19824,8 +19846,8 @@
             "id": "974",
             "count": 2,
             "neto": 1941461,
-            "teox_neto": 1788519,
-            "teox_units": 14.0,
+            "teox_neto": 1941461,
+            "teox_units": 15.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SERVICIOS ODONTOLÓGICOS ALEXANDRA MAC-KAY MARTINI SPA"
@@ -19834,8 +19856,8 @@
             "id": "1105",
             "count": 1,
             "neto": 1921182,
-            "teox_neto": 1604564,
-            "teox_units": 13.0,
+            "teox_neto": 1921182,
+            "teox_units": 15.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "ANTIVILO SPA"
@@ -19874,8 +19896,8 @@
             "id": "686",
             "count": 1,
             "neto": 676166,
-            "teox_neto": 0,
-            "teox_units": 0,
+            "teox_neto": 676166,
+            "teox_units": 5.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "ODONTOLOGÍA MARÍA-JESÚS GHIRINGHELLI MORALES E.I.R.L."
@@ -19894,8 +19916,8 @@
             "id": "678",
             "count": 1,
             "neto": 637509,
-            "teox_neto": 299426,
-            "teox_units": 2.0,
+            "teox_neto": 637509,
+            "teox_units": 5.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "PARRA CAMPOS ODONTOLOGÍA SPA"
@@ -19946,8 +19968,8 @@
             "id": "921",
             "count": 3,
             "neto": 7452408,
-            "teox_neto": 4252200,
-            "teox_units": 35.0,
+            "teox_neto": 7452408,
+            "teox_units": 75.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SOCIEDAD ODONTOLOGICA DEL MAULE SPA"
@@ -19956,8 +19978,8 @@
             "id": "779",
             "count": 2,
             "neto": 5393055,
-            "teox_neto": 3660550,
-            "teox_units": 30.0,
+            "teox_neto": 4293785,
+            "teox_units": 35.0,
             "rrs_neto": 1099270,
             "rrs_units": 10.0,
             "name": "TERRE SOCIEDAD DE PROFESIONALES LIMITADA"
@@ -19966,8 +19988,8 @@
             "id": "591",
             "count": 2,
             "neto": 5077472,
-            "teox_neto": 3406320,
-            "teox_units": 30.0,
+            "teox_neto": 4582800,
+            "teox_units": 40.0,
             "rrs_neto": 494672,
             "rrs_units": 5.0,
             "name": "THE BEAUTY LAB SPA"
@@ -19986,8 +20008,8 @@
             "id": "888",
             "count": 3,
             "neto": 3441505,
-            "teox_neto": 2786805,
-            "teox_units": 21.0,
+            "teox_neto": 3441505,
+            "teox_units": 25.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SERVICIOS MEDICOS M Y H LIMITADA"
@@ -19996,8 +20018,8 @@
             "id": "597",
             "count": 4,
             "neto": 2793456,
-            "teox_neto": 1771286,
-            "teox_units": 15.0,
+            "teox_neto": 2793456,
+            "teox_units": 25.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "DR MATTATALL SPA"
@@ -20006,8 +20028,8 @@
             "id": "569",
             "count": 1,
             "neto": 2647722,
-            "teox_neto": 1209312,
-            "teox_units": 10.0,
+            "teox_neto": 2153050,
+            "teox_units": 20.0,
             "rrs_neto": 494672,
             "rrs_units": 5.0,
             "name": "SERVICIOS MEDICOS TAOTE LTDA"
@@ -20036,8 +20058,8 @@
             "id": "487",
             "count": 1,
             "neto": 2506185,
-            "teox_neto": 0,
-            "teox_units": 0,
+            "teox_neto": 1022170,
+            "teox_units": 10.0,
             "rrs_neto": 1484015,
             "rrs_units": 15.0,
             "name": "SOCIEDAD DE SERVICIOS MEDICOS MOELLER SPA"
@@ -20066,8 +20088,8 @@
             "id": "916",
             "count": 2,
             "neto": 2221997,
-            "teox_neto": 1199827,
-            "teox_units": 10.0,
+            "teox_neto": 2221997,
+            "teox_units": 20.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SOCIEDAD ODONTOLOGICA BHER SPA"
@@ -20086,8 +20108,8 @@
             "id": "1008",
             "count": 2,
             "neto": 1912685,
-            "teox_neto": 1596067,
-            "teox_units": 13.0,
+            "teox_neto": 1912685,
+            "teox_units": 15.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "ODONTOLOGÍA Y ESTÉTICA CCL SPA"
@@ -20098,8 +20120,8 @@
             "id": "1091",
             "count": 3,
             "neto": 7118343,
-            "teox_neto": 6691527,
-            "teox_units": 55.0,
+            "teox_neto": 7118343,
+            "teox_units": 60.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "BEAUTY LINE SPA"
@@ -20128,8 +20150,8 @@
             "id": "912",
             "count": 1,
             "neto": 1837118,
-            "teox_neto": 1203883,
-            "teox_units": 10.0,
+            "teox_neto": 1837118,
+            "teox_units": 15.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "ODONTOLOGIA Y ESTETICA PALERMO SPA"
@@ -20138,8 +20160,8 @@
             "id": "600",
             "count": 1,
             "neto": 1469271,
-            "teox_neto": 978245,
-            "teox_units": 8.0,
+            "teox_neto": 1469271,
+            "teox_units": 11.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "CLÍNICA DRA.ROMINA VARGAS SPA"
@@ -20149,7 +20171,7 @@
             "count": 1,
             "neto": 1334680,
             "teox_neto": 1334680,
-            "teox_units": 9.0,
+            "teox_units": 10.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "MARIA JOSE SUBBRERO MASSERANO"
@@ -20158,8 +20180,8 @@
             "id": "978",
             "count": 1,
             "neto": 1306864,
-            "teox_neto": 652163,
-            "teox_units": 5.0,
+            "teox_neto": 1306864,
+            "teox_units": 10.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "PRESTACIONES ODONTOLÓGICAS Y MÉDICAS DE ESPECIALIDADES QUILAMAPU LIMIT"
@@ -20178,8 +20200,8 @@
             "id": "870",
             "count": 1,
             "neto": 1239590,
-            "teox_neto": 1136990,
-            "teox_units": 9.0,
+            "teox_neto": 1239590,
+            "teox_units": 12.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SOCIEDAD ODONTOLÓGICA INTEGRAL DELLA ROSA SPA"
@@ -20218,8 +20240,8 @@
             "id": "1122",
             "count": 1,
             "neto": 674856,
-            "teox_neto": 336773,
-            "teox_units": 3.0,
+            "teox_neto": 674856,
+            "teox_units": 5.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "Sociedad Dermatológica Epifanía Spa"
@@ -20260,8 +20282,8 @@
             "id": "1116",
             "count": 1,
             "neto": 257587,
-            "teox_neto": 0,
-            "teox_units": 0,
+            "teox_neto": 257587,
+            "teox_units": 1.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "1116"
@@ -20284,8 +20306,8 @@
             "id": "860",
             "count": 2,
             "neto": 16605612,
-            "teox_neto": 8605049,
-            "teox_units": 71.0,
+            "teox_neto": 13998855,
+            "teox_units": 129.0,
             "rrs_neto": 2606757,
             "rrs_units": 25.0,
             "name": "Servicios De Salud Girardi Y Cia. Ltda"
@@ -20294,8 +20316,8 @@
       },
       "brand_productivity": {
         "Teoxane": {
-          "clients": 64,
-          "units": 697.0
+          "clients": 73,
+          "units": 960.0
         },
         "RRS HA Long Lasting": {
           "clients": 23,
@@ -20305,8 +20327,8 @@
       "brand_productivity_by_vendor": {
         "Daisy Ponce": {
           "Teoxane": {
-            "clients": 7,
-            "units": 64.0
+            "clients": 8,
+            "units": 75.0
           },
           "RRS HA Long Lasting": {
             "clients": 4,
@@ -20315,8 +20337,8 @@
         },
         "Monica Urrutia": {
           "Teoxane": {
-            "clients": 33,
-            "units": 351.0
+            "clients": 37,
+            "units": 510.0
           },
           "RRS HA Long Lasting": {
             "clients": 12,
@@ -20325,12 +20347,22 @@
         },
         "Cindy Monsalves": {
           "Teoxane": {
-            "clients": 21,
-            "units": 192.0
+            "clients": 24,
+            "units": 226.0
           },
           "RRS HA Long Lasting": {
             "clients": 6,
             "units": 31.0
+          }
+        },
+        "Sin asignar": {
+          "Teoxane": {
+            "clients": 2,
+            "units": 16.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 0,
+            "units": 0
           }
         },
         "Ivan Salinas": {
@@ -20343,20 +20375,10 @@
             "units": 0
           }
         },
-        "Sin asignar": {
-          "Teoxane": {
-            "clients": 1,
-            "units": 15.0
-          },
-          "RRS HA Long Lasting": {
-            "clients": 0,
-            "units": 0
-          }
-        },
         "Francisca Salinas": {
           "Teoxane": {
             "clients": 1,
-            "units": 71.0
+            "units": 129.0
           },
           "RRS HA Long Lasting": {
             "clients": 1,
@@ -20781,18 +20803,18 @@
         ]
       },
       "by_brand": {
-        "Teoxane": 69546507,
+        "Teoxane": 82442828,
         "RRS HA Long Lasting": 27254668,
         "FINE": 0
       },
       "by_vendor_brand": {
         "Monica Urrutia": {
-          "Teoxane": 27944758,
+          "Teoxane": 33782755,
           "RRS HA Long Lasting": 18838746,
           "FINE": 0
         },
         "Cindy Monsalves": {
-          "Teoxane": 20666684,
+          "Teoxane": 24452456,
           "RRS HA Long Lasting": 2720694,
           "FINE": 0
         },
@@ -20802,7 +20824,7 @@
           "FINE": 0
         },
         "Daisy Ponce": {
-          "Teoxane": 10746642,
+          "Teoxane": 11586483,
           "RRS HA Long Lasting": 1621424,
           "FINE": 0
         },
@@ -20812,7 +20834,7 @@
           "FINE": 0
         },
         "Francisca Salinas": {
-          "Teoxane": 9579025,
+          "Teoxane": 12011736,
           "RRS HA Long Lasting": 2919570,
           "FINE": 0
         }
@@ -20890,8 +20912,8 @@
           "id": "860",
           "count": 2,
           "neto": 14931306,
-          "teox_neto": 9579025,
-          "teox_units": 79.0,
+          "teox_neto": 12011736,
+          "teox_units": 102.0,
           "rrs_neto": 2919570,
           "rrs_units": 28.0,
           "name": "Servicios De Salud Girardi Y Cia. Ltda"
@@ -20900,8 +20922,8 @@
           "id": "536",
           "count": 4,
           "neto": 5772071,
-          "teox_neto": 1218796,
-          "teox_units": 10.0,
+          "teox_neto": 1629196,
+          "teox_units": 15.0,
           "rrs_neto": 4142875,
           "rrs_units": 45.0,
           "name": "ATENEA SPA"
@@ -20910,8 +20932,8 @@
           "id": "487",
           "count": 1,
           "neto": 5476759,
-          "teox_neto": 1896960,
-          "teox_units": 15.0,
+          "teox_neto": 2508730,
+          "teox_units": 20.0,
           "rrs_neto": 2968029,
           "rrs_units": 30.0,
           "name": "SOCIEDAD DE SERVICIOS MEDICOS MOELLER SPA"
@@ -20940,8 +20962,8 @@
           "id": "593",
           "count": 2,
           "neto": 2691124,
-          "teox_neto": 2363774,
-          "teox_units": 17.0,
+          "teox_neto": 2691124,
+          "teox_units": 20.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "ODONTOLOGÍA Y ESTÉTICA INTEGRAL AVANZADA PILAR ROJO CASTRO E.I.R.L."
@@ -20971,7 +20993,7 @@
           "count": 1,
           "neto": 2476718,
           "teox_neto": 2476718,
-          "teox_units": 18.0,
+          "teox_units": 19.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "ASESORÍAS E INVERSIONES SF SPA"
@@ -20980,8 +21002,8 @@
           "id": "1091",
           "count": 1,
           "neto": 2439965,
-          "teox_neto": 1828195,
-          "teox_units": 16.0,
+          "teox_neto": 2439965,
+          "teox_units": 20.0,
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "BEAUTY LINE SPA"
@@ -20990,8 +21012,8 @@
           "id": "469",
           "count": 1,
           "neto": 2325239,
-          "teox_neto": 1218797,
-          "teox_units": 10.0,
+          "teox_neto": 1830567,
+          "teox_units": 15.0,
           "rrs_neto": 494672,
           "rrs_units": 5.0,
           "name": "ODONTOLOGÍA Y ESTÉTICA DRA GALLARDO SPA"
@@ -21010,8 +21032,8 @@
           "id": "475",
           "count": 1,
           "neto": 2284572,
-          "teox_neto": 0,
-          "teox_units": 0,
+          "teox_neto": 305885,
+          "teox_units": 2.0,
           "rrs_neto": 1978687,
           "rrs_units": 20.0,
           "name": "NEWLIFE SPA"
@@ -21043,8 +21065,8 @@
             "id": "536",
             "count": 4,
             "neto": 5772071,
-            "teox_neto": 1218796,
-            "teox_units": 10.0,
+            "teox_neto": 1629196,
+            "teox_units": 15.0,
             "rrs_neto": 4142875,
             "rrs_units": 45.0,
             "name": "ATENEA SPA"
@@ -21053,8 +21075,8 @@
             "id": "487",
             "count": 1,
             "neto": 5476759,
-            "teox_neto": 1896960,
-            "teox_units": 15.0,
+            "teox_neto": 2508730,
+            "teox_units": 20.0,
             "rrs_neto": 2968029,
             "rrs_units": 30.0,
             "name": "SOCIEDAD DE SERVICIOS MEDICOS MOELLER SPA"
@@ -21093,8 +21115,8 @@
             "id": "469",
             "count": 1,
             "neto": 2325239,
-            "teox_neto": 1218797,
-            "teox_units": 10.0,
+            "teox_neto": 1830567,
+            "teox_units": 15.0,
             "rrs_neto": 494672,
             "rrs_units": 5.0,
             "name": "ODONTOLOGÍA Y ESTÉTICA DRA GALLARDO SPA"
@@ -21113,8 +21135,8 @@
             "id": "475",
             "count": 1,
             "neto": 2284572,
-            "teox_neto": 0,
-            "teox_units": 0,
+            "teox_neto": 305885,
+            "teox_units": 2.0,
             "rrs_neto": 1978687,
             "rrs_units": 20.0,
             "name": "NEWLIFE SPA"
@@ -21163,8 +21185,8 @@
             "id": "1124",
             "count": 1,
             "neto": 1654280,
-            "teox_neto": 648523,
-            "teox_units": 6.0,
+            "teox_neto": 1159608,
+            "teox_units": 10.0,
             "rrs_neto": 494672,
             "rrs_units": 5.0,
             "name": "JL servicios médicos limitada"
@@ -21205,8 +21227,8 @@
             "id": "1091",
             "count": 1,
             "neto": 2439965,
-            "teox_neto": 1828195,
-            "teox_units": 16.0,
+            "teox_neto": 2439965,
+            "teox_units": 20.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "BEAUTY LINE SPA"
@@ -21225,8 +21247,8 @@
             "id": "1079",
             "count": 1,
             "neto": 1595360,
-            "teox_neto": 1251744,
-            "teox_units": 10.0,
+            "teox_neto": 1595360,
+            "teox_units": 15.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "MEDICINA ESTETICA FACIAL SEMEF SPA"
@@ -21255,8 +21277,8 @@
             "id": "950",
             "count": 1,
             "neto": 1303287,
-            "teox_neto": 986669,
-            "teox_units": 9.0,
+            "teox_neto": 1303287,
+            "teox_units": 11.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SERVICIOS PROFESIONALES JAVIERA MERCADO GOMEZ SPA"
@@ -21265,8 +21287,8 @@
             "id": "975",
             "count": 1,
             "neto": 1007427,
-            "teox_neto": 652163,
-            "teox_units": 5.0,
+            "teox_neto": 1007427,
+            "teox_units": 10.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "DRA. ANDY GUTI SPA"
@@ -21285,8 +21307,8 @@
             "id": "1136",
             "count": 3,
             "neto": 897776,
-            "teox_neto": 296806,
-            "teox_units": 2.0,
+            "teox_neto": 897776,
+            "teox_units": 8.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "Servicios Odontológicos Mafrasa Limitada"
@@ -21305,8 +21327,8 @@
             "id": "1068",
             "count": 1,
             "neto": 695823,
-            "teox_neto": 526781,
-            "teox_units": 3.0,
+            "teox_neto": 695823,
+            "teox_units": 5.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "ALL SMILES SPA"
@@ -21315,8 +21337,8 @@
             "id": "1137",
             "count": 1,
             "neto": 693202,
-            "teox_neto": 524160,
-            "teox_units": 4.0,
+            "teox_neto": 693202,
+            "teox_units": 5.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "Villa Dental SpA"
@@ -21325,8 +21347,8 @@
             "id": "1104",
             "count": 1,
             "neto": 675511,
-            "teox_neto": 168386,
-            "teox_units": 2.0,
+            "teox_neto": 675511,
+            "teox_units": 5.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "ESTETICA ABURTO SPA"
@@ -21369,8 +21391,8 @@
             "id": "593",
             "count": 2,
             "neto": 2691124,
-            "teox_neto": 2363774,
-            "teox_units": 17.0,
+            "teox_neto": 2691124,
+            "teox_units": 20.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "ODONTOLOGÍA Y ESTÉTICA INTEGRAL AVANZADA PILAR ROJO CASTRO E.I.R.L."
@@ -21380,7 +21402,7 @@
             "count": 1,
             "neto": 2476718,
             "teox_neto": 2476718,
-            "teox_units": 18.0,
+            "teox_units": 19.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "ASESORÍAS E INVERSIONES SF SPA"
@@ -21439,8 +21461,8 @@
             "id": "960",
             "count": 1,
             "neto": 676166,
-            "teox_neto": 0,
-            "teox_units": 0,
+            "teox_neto": 676166,
+            "teox_units": 5.0,
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "CENTRO DE MEDICINA CLINICA ESTETICA Y REPARADORA CLIMER SPA"
@@ -21493,8 +21515,8 @@
             "id": "860",
             "count": 2,
             "neto": 14931306,
-            "teox_neto": 9579025,
-            "teox_units": 79.0,
+            "teox_neto": 12011736,
+            "teox_units": 102.0,
             "rrs_neto": 2919570,
             "rrs_units": 28.0,
             "name": "Servicios De Salud Girardi Y Cia. Ltda"
@@ -21503,8 +21525,8 @@
       },
       "brand_productivity": {
         "Teoxane": {
-          "clients": 57,
-          "units": 567.0
+          "clients": 61,
+          "units": 687.0
         },
         "RRS HA Long Lasting": {
           "clients": 24,
@@ -21514,8 +21536,8 @@
       "brand_productivity_by_vendor": {
         "Monica Urrutia": {
           "Teoxane": {
-            "clients": 22,
-            "units": 231.0
+            "clients": 25,
+            "units": 285.0
           },
           "RRS HA Long Lasting": {
             "clients": 15,
@@ -21525,7 +21547,7 @@
         "Cindy Monsalves": {
           "Teoxane": {
             "clients": 24,
-            "units": 160.0
+            "units": 194.0
           },
           "RRS HA Long Lasting": {
             "clients": 4,
@@ -21544,8 +21566,8 @@
         },
         "Daisy Ponce": {
           "Teoxane": {
-            "clients": 8,
-            "units": 90.0
+            "clients": 9,
+            "units": 99.0
           },
           "RRS HA Long Lasting": {
             "clients": 3,
@@ -21565,7 +21587,7 @@
         "Francisca Salinas": {
           "Teoxane": {
             "clients": 1,
-            "units": 79.0
+            "units": 102.0
           },
           "RRS HA Long Lasting": {
             "clients": 1,
