@@ -244,6 +244,18 @@
   @media (max-width: 900px) {
     .charts-row, .tables-row, .bottom-row { grid-template-columns: 1fr; }
   }
+
+  @media (max-width: 480px) {
+    main { padding: 12px; }
+    .card { padding: 12px; }
+    table { font-size: 11px; }
+    th, td { padding: 5px 6px; }
+    th small { font-size: 8px; }
+    .tables-row-3 table { font-size: 10px; }
+    .tables-row-3 th, .tables-row-3 td { padding: 4px 5px; }
+    .pill { padding: 1px 6px; font-size: 10px; }
+    #table-clients th, #table-clients td { padding: 5px 6px; }
+  }
 </style>
 </head>
 <body>
@@ -375,7 +387,7 @@
         <table id="table-prod-teox">
           <thead>
             <tr>
-              <th>Año</th><th>Mes</th><th>Periodo</th><th>N° Clientes</th><th>N° Unidades</th><th>Productividad<br><small>(unid./cliente)</small></th>
+              <th>Período</th><th>N° Clientes</th><th>N° Unidades</th><th>Productividad<br><small>(unid./cliente)</small></th>
             </tr>
           </thead>
           <tbody id="tbody-prod-teox"></tbody>
@@ -386,7 +398,7 @@
         <table id="table-prod-rrs">
           <thead>
             <tr>
-              <th>Año</th><th>Mes</th><th>Periodo</th><th>N° Clientes</th><th>N° Unidades</th><th>Productividad<br><small>(unid./cliente)</small></th>
+              <th>Período</th><th>N° Clientes</th><th>N° Unidades</th><th>Productividad<br><small>(unid./cliente)</small></th>
             </tr>
           </thead>
           <tbody id="tbody-prod-rrs"></tbody>
@@ -401,7 +413,7 @@
       <table id="table-clients">
         <thead>
           <tr>
-            <th>#</th><th>Cliente</th><th>Facturas</th><th>$ Neto Total</th><th>$ Neto Teoxane</th><th>Unid. Teoxane</th><th>$ Neto RRS HA LL</th><th>Unid. RRS HA LL</th><th>% del período</th>
+            <th>#</th><th>Cliente</th><th>Facturas</th><th>$ Neto Total</th><th>Teoxane</th><th>RRS HA LL</th><th>%</th>
           </tr>
         </thead>
         <tbody id="tbody-clients"></tbody>
@@ -1112,8 +1124,6 @@ function renderProductivityTable(tbodyId, brand) {
 
     const tr = document.createElement('tr');
     tr.innerHTML = `
-      <td>${m.year}</td>
-      <td>${m.month}</td>
       <td>${monthLabel(m.year, m.month)}</td>
       <td>${clients}</td>
       <td>${units}</td>
@@ -1216,13 +1226,11 @@ function renderTopClients(m, label, isMulti) {
     const tr = document.createElement('tr');
     tr.innerHTML = `
       <td style="color:#94a3b8;width:28px">${i+1}</td>
-      <td><strong>${c.name}</strong></td>
+      <td style="max-width:130px;white-space:normal;line-height:1.3"><strong>${c.name}</strong></td>
       <td>${c.count}</td>
       <td>${M(c.neto)}</td>
-      <td style="color:${BRAND_COLORS['Teoxane']}">${M(c.teox_neto || 0)}</td>
-      <td style="color:${BRAND_COLORS['Teoxane']}">${c.teox_units || 0}</td>
-      <td style="color:${BRAND_COLORS['RRS HA Long Lasting']}">${M(c.rrs_neto || 0)}</td>
-      <td style="color:${BRAND_COLORS['RRS HA Long Lasting']}">${c.rrs_units || 0}</td>
+      <td style="color:${BRAND_COLORS['Teoxane']}">${M(c.teox_neto || 0)}<br><small>${c.teox_units || 0}u</small></td>
+      <td style="color:${BRAND_COLORS['RRS HA Long Lasting']}">${M(c.rrs_neto || 0)}<br><small>${c.rrs_units || 0}u</small></td>
       <td>${pct}%</td>
     `;
     tbody.appendChild(tr);
