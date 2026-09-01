@@ -637,7 +637,11 @@ function render() {
   const months = monthsForPeriod();
   const label  = periodLabel(months);
   const agg    = aggregateMonths(months);
-  const t      = aggregateTargets(months);
+  // Cumplimiento only makes sense against a single month's objective -- not
+  // every month has one loaded yet, so summing targets across a multi-month
+  // period would silently compare a full period's sales against whichever
+  // few months happen to have a target, understating how much is really owed.
+  const t      = months.length === 1 ? aggregateTargets(months) : null;
   const view   = applyVendorFilter(agg, selectedVendor);
 
   renderKPIs(view, t, label);
