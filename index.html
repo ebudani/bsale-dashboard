@@ -118,9 +118,15 @@
     gap: 16px;
     margin-bottom: 22px;
   }
-  .tables-row-3 { grid-template-columns: 1.2fr 1fr 1fr; }
+  .tables-row-3 { grid-template-columns: 1.5fr 1fr 1fr; }
   .tables-row-3 table { font-size: 12px; }
   .tables-row-3 th, .tables-row-3 td { padding: 6px 8px; }
+  .grouped-head thead th { text-align: center; }
+  .grouped-head thead tr:first-child th { border-bottom: none; }
+  .grouped-head thead tr:last-child th { padding-top: 2px; font-size: 10px; text-transform: none; color: var(--gray-600); }
+  .grouped-head th.group-start { border-left: 1px solid var(--gray-200); }
+  .grouped-head td.group-start { border-left: 1px solid var(--gray-200); }
+  .grouped-head tbody td:first-child { text-align: left; }
   table { width: 100%; border-collapse: collapse; font-size: 13px; }
   th {
     background: var(--gray-100);
@@ -285,15 +291,20 @@
     <div class="tables-row tables-row-3">
       <div class="card">
         <h2 id="table-cumpl-title">Cumplimiento — </h2>
-        <table id="table-cumpl">
+        <table id="table-cumpl" class="grouped-head">
           <thead>
             <tr>
-              <th>Vendedor</th>
-              <th>Teoxane</th>
+              <th rowspan="2">Vendedor</th>
+              <th colspan="2" class="group-start" style="color:#2563eb">Teoxane</th>
+              <th colspan="2" class="group-start" style="color:#d97706">RRS LL</th>
+              <th colspan="2" class="group-start">Total</th>
+            </tr>
+            <tr>
+              <th class="group-start">Real</th>
               <th>vs Obj</th>
-              <th>RRS LL</th>
+              <th class="group-start">Real</th>
               <th>vs Obj</th>
-              <th>Total</th>
+              <th class="group-start">Real</th>
               <th>vs Obj</th>
             </tr>
           </thead>
@@ -1048,11 +1059,11 @@ function renderCumplTable(agg, t, label) {
     const tr = document.createElement('tr');
     tr.innerHTML = `
       <td><strong>${name}</strong></td>
-      <td style="color:${BRAND_COLORS['Teoxane']}">${M(teoxReal)}</td>
+      <td class="group-start" style="color:${BRAND_COLORS['Teoxane']}">${M(teoxReal)}</td>
       <td>${teoxR !== null ? `<span class="pill ${pillClass(teoxR)}">${PCT0(teoxR)}</span><br><small>${M(teoxObj)}</small>` : '—'}</td>
-      <td style="color:${BRAND_COLORS['RRS HA Long Lasting']}">${M(rrsReal)}</td>
+      <td class="group-start" style="color:${BRAND_COLORS['RRS HA Long Lasting']}">${M(rrsReal)}</td>
       <td>${rrsR !== null ? `<span class="pill ${pillClass(rrsR)}">${PCT0(rrsR)}</span><br><small>${M(rrsObj)}</small>` : '—'}</td>
-      <td><strong>${M(totalReal)}</strong></td>
+      <td class="group-start"><strong>${M(totalReal)}</strong></td>
       <td>${totalR !== null ? `<span class="pill ${pillClass(totalR)}">${PCT0(totalR)}</span><br><small>${M(totalObj)}</small>` : '—'}</td>
     `;
     tbody.appendChild(tr);
@@ -1072,11 +1083,11 @@ function renderCumplTable(agg, t, label) {
     tr2.style.background = '#f8fafc';
     tr2.innerHTML = `
       <td>Total</td>
-      <td style="color:${BRAND_COLORS['Teoxane']}">${M(totTeox)}</td>
+      <td class="group-start" style="color:${BRAND_COLORS['Teoxane']}">${M(totTeox)}</td>
       <td>${tTeox ? `<span class="pill ${pillClass(totTeox/tTeox)}">${PCT0(totTeox/tTeox)}</span><br><small>${M(tTeox)}</small>` : '—'}</td>
-      <td style="color:${BRAND_COLORS['RRS HA Long Lasting']}">${M(totRrs)}</td>
+      <td class="group-start" style="color:${BRAND_COLORS['RRS HA Long Lasting']}">${M(totRrs)}</td>
       <td>${tRrs ? `<span class="pill ${pillClass(totRrs/tRrs)}">${PCT0(totRrs/tRrs)}</span><br><small>${M(tRrs)}</small>` : '—'}</td>
-      <td>${M(totTotal)}</td>
+      <td class="group-start">${M(totTotal)}</td>
       <td>${tTotal ? `<span class="pill ${pillClass(totTotal/tTotal)}">${PCT0(totTotal/tTotal)}</span><br><small>${M(tTotal)}</small>` : '—'}</td>
     `;
     tbody.appendChild(tr2);
