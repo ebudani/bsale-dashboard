@@ -360,13 +360,14 @@ def build_month_record(year, month, facturas, nc_docs, exenta_docs, clients_meta
         return {"Teoxane": {"neto": 0, "qty": 0}, "RRS HA Long Lasting": {"neto": 0, "qty": 0}}
 
     # Client/unit productivity per brand (total and per vendor): how many
-    # distinct clients bought each brand this month, and how many units,
-    # used for the "clientes, unidades, productividad" trend tables.
+    # distinct clients have a net-positive purchase of each brand this month
+    # (a client who bought and then fully returned it via NC doesn't count),
+    # and how many net units, used for the "clientes, unidades, productividad"
+    # trend tables. Accumulated per client first, across facturas/exentas/NC,
+    # so a same-month return can net a client's total down to zero.
     PRODUCTIVITY_BRANDS = ["Teoxane", "RRS HA Long Lasting"]
-    brand_clients = {b: set() for b in PRODUCTIVITY_BRANDS}
-    brand_units = {b: 0 for b in PRODUCTIVITY_BRANDS}
-    vendor_brand_clients = {}
-    vendor_brand_units = {}
+    client_brand_qty = {}          # cid -> {brand: net qty}
+    vendor_client_brand_qty = {}   # vname -> cid -> {brand: net qty}
 
     by_client = {}
     by_client_brand = {}
@@ -386,15 +387,12 @@ def build_month_record(year, month, facturas, nc_docs, exenta_docs, clients_meta
                 brand_totals[brand]["qty"] += vals.get("qty", 0)
 
         vname_p = vendor_for(d)
+        cbq = client_brand_qty.setdefault(cid, {b: 0 for b in PRODUCTIVITY_BRANDS})
+        vcbq = vendor_client_brand_qty.setdefault(vname_p, {}).setdefault(cid, {b: 0 for b in PRODUCTIVITY_BRANDS})
         for brand in PRODUCTIVITY_BRANDS:
             qty = doc_brands.get(brand, {}).get("qty", 0)
-            if qty > 0:
-                brand_clients[brand].add(cid)
-                brand_units[brand] += qty
-                vc = vendor_brand_clients.setdefault(vname_p, {b: set() for b in PRODUCTIVITY_BRANDS})
-                vu = vendor_brand_units.setdefault(vname_p, {b: 0 for b in PRODUCTIVITY_BRANDS})
-                vc[brand].add(cid)
-                vu[brand] += qty
+            cbq[brand] += qty
+            vcbq[brand] += qty
 
         vname = vendor_for(d)
         by_vendor_client.setdefault(vname, {})
@@ -408,19 +406,38 @@ def build_month_record(year, month, facturas, nc_docs, exenta_docs, clients_meta
                 vbrand_totals[brand]["neto"] += vals.get("neto", 0)
                 vbrand_totals[brand]["qty"] += vals.get("qty", 0)
 
-    # Net returned units out of the productivity unit counts. NC line items
-    # already carry negative qty (fetch_brand_details negates them), so this
-    # just needs to add them in -- without touching who counts as a "client"
-    # that month, since a later return doesn't undo having bought.
+    # Fold NC (returns) into the same per-client net qty before deriving
+    # clients/units, so a client who fully returned a brand this month drops
+    # out of that brand's client count entirely (net qty <= 0), not just its
+    # unit total. NC line items already carry negative qty (fetch_brand_details
+    # negates them).
     for d in nc_docs:
+        cid = str(d.get("client", {}).get("id", "unknown"))
         nc_brands = brand_details.get(d["id"], {}).get("by_brand", {}) if brand_details else {}
         vname_nc = vendor_for(d)
+        cbq = client_brand_qty.setdefault(cid, {b: 0 for b in PRODUCTIVITY_BRANDS})
+        vcbq = vendor_client_brand_qty.setdefault(vname_nc, {}).setdefault(cid, {b: 0 for b in PRODUCTIVITY_BRANDS})
         for brand in PRODUCTIVITY_BRANDS:
             qty = nc_brands.get(brand, {}).get("qty", 0)
-            if qty:
-                brand_units[brand] += qty
-                vu = vendor_brand_units.setdefault(vname_nc, {b: 0 for b in PRODUCTIVITY_BRANDS})
-                vu[brand] += qty
+            cbq[brand] += qty
+            vcbq[brand] += qty
+
+    def derive_productivity(per_client):
+        clients = {b: set() for b in PRODUCTIVITY_BRANDS}
+        units = {b: 0 for b in PRODUCTIVITY_BRANDS}
+        for cid, brands in per_client.items():
+            for brand in PRODUCTIVITY_BRANDS:
+                qty = brands.get(brand, 0)
+                units[brand] += qty
+                if qty > 0:
+                    clients[brand].add(cid)
+        return clients, units
+
+    brand_clients, brand_units = derive_productivity(client_brand_qty)
+    vendor_brand_clients = {}
+    vendor_brand_units = {}
+    for vname_d, per_client in vendor_client_brand_qty.items():
+        vendor_brand_clients[vname_d], vendor_brand_units[vname_d] = derive_productivity(per_client)
 
     def top_n(client_totals, brand_map, n=15):
         rows = []
