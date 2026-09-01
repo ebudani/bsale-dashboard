@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-01T08:07:26.204967Z",
+  "updated_at": "2026-09-01T13:42:52.984900Z",
   "users": {
     "7": "Cindy Monsalves",
     "9": "Daisy Ponce",
@@ -5161,6 +5161,58 @@
             "name": "CENTRO OFTALMOLOGICO NUEVA PROVIDENCIA SPA"
           }
         ]
+      },
+      "brand_productivity": {
+        "Teoxane": {
+          "clients": 0,
+          "units": 0
+        },
+        "RRS HA Long Lasting": {
+          "clients": 27,
+          "units": 242.0
+        }
+      },
+      "brand_productivity_by_vendor": {
+        "Cindy Monsalves": {
+          "Teoxane": {
+            "clients": 0,
+            "units": 0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 9,
+            "units": 72.0
+          }
+        },
+        "Daisy Ponce": {
+          "Teoxane": {
+            "clients": 0,
+            "units": 0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 5,
+            "units": 21.0
+          }
+        },
+        "Monica Urrutia": {
+          "Teoxane": {
+            "clients": 0,
+            "units": 0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 11,
+            "units": 140.0
+          }
+        },
+        "Sin asignar": {
+          "Teoxane": {
+            "clients": 0,
+            "units": 0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 2,
+            "units": 9.0
+          }
+        }
       }
     },
     {
@@ -5982,6 +6034,68 @@
             "name": "Servicios De Salud Girardi Y Cia. Ltda"
           }
         ]
+      },
+      "brand_productivity": {
+        "Teoxane": {
+          "clients": 9,
+          "units": 82.0
+        },
+        "RRS HA Long Lasting": {
+          "clients": 25,
+          "units": 219.0
+        }
+      },
+      "brand_productivity_by_vendor": {
+        "Cindy Monsalves": {
+          "Teoxane": {
+            "clients": 3,
+            "units": 19.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 11,
+            "units": 54.0
+          }
+        },
+        "Sin asignar": {
+          "Teoxane": {
+            "clients": 0,
+            "units": 0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 2,
+            "units": 18.0
+          }
+        },
+        "Monica Urrutia": {
+          "Teoxane": {
+            "clients": 6,
+            "units": 63.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 9,
+            "units": 114.0
+          }
+        },
+        "Daisy Ponce": {
+          "Teoxane": {
+            "clients": 0,
+            "units": 0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 2,
+            "units": 13.0
+          }
+        },
+        "Francisca Salinas": {
+          "Teoxane": {
+            "clients": 0,
+            "units": 0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 1,
+            "units": 20.0
+          }
+        }
       }
     },
     {
@@ -6941,6 +7055,58 @@
             "name": "Servicios De Salud Girardi Y Cia. Ltda"
           }
         ]
+      },
+      "brand_productivity": {
+        "Teoxane": {
+          "clients": 31,
+          "units": 243.0
+        },
+        "RRS HA Long Lasting": {
+          "clients": 27,
+          "units": 296.0
+        }
+      },
+      "brand_productivity_by_vendor": {
+        "Cindy Monsalves": {
+          "Teoxane": {
+            "clients": 12,
+            "units": 91.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 5,
+            "units": 27.0
+          }
+        },
+        "Monica Urrutia": {
+          "Teoxane": {
+            "clients": 16,
+            "units": 146.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 17,
+            "units": 196.0
+          }
+        },
+        "Daisy Ponce": {
+          "Teoxane": {
+            "clients": 3,
+            "units": 6.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 4,
+            "units": 23.0
+          }
+        },
+        "Francisca Salinas": {
+          "Teoxane": {
+            "clients": 0,
+            "units": 0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 1,
+            "units": 50.0
+          }
+        }
       }
     },
     {
@@ -7880,6 +8046,58 @@
             "name": "Servicios De Salud Girardi Y Cia. Ltda"
           }
         ]
+      },
+      "brand_productivity": {
+        "Teoxane": {
+          "clients": 38,
+          "units": 433.0
+        },
+        "RRS HA Long Lasting": {
+          "clients": 20,
+          "units": 240.0
+        }
+      },
+      "brand_productivity_by_vendor": {
+        "Monica Urrutia": {
+          "Teoxane": {
+            "clients": 14,
+            "units": 230.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 11,
+            "units": 136.0
+          }
+        },
+        "Cindy Monsalves": {
+          "Teoxane": {
+            "clients": 20,
+            "units": 158.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 5,
+            "units": 41.0
+          }
+        },
+        "Daisy Ponce": {
+          "Teoxane": {
+            "clients": 3,
+            "units": 25.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 3,
+            "units": 20.0
+          }
+        },
+        "Francisca Salinas": {
+          "Teoxane": {
+            "clients": 1,
+            "units": 20.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 1,
+            "units": 43.0
+          }
+        }
       }
     },
     {
@@ -8895,6 +9113,68 @@
             "name": "DANIEL ALBERTO TORRES MULLER"
           }
         ]
+      },
+      "brand_productivity": {
+        "Teoxane": {
+          "clients": 36,
+          "units": 369.0
+        },
+        "RRS HA Long Lasting": {
+          "clients": 38,
+          "units": 306.0
+        }
+      },
+      "brand_productivity_by_vendor": {
+        "Cindy Monsalves": {
+          "Teoxane": {
+            "clients": 13,
+            "units": 86.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 14,
+            "units": 74.0
+          }
+        },
+        "Monica Urrutia": {
+          "Teoxane": {
+            "clients": 21,
+            "units": 165.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 16,
+            "units": 128.0
+          }
+        },
+        "Daisy Ponce": {
+          "Teoxane": {
+            "clients": 1,
+            "units": 14.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 5,
+            "units": 35.0
+          }
+        },
+        "Sin asignar": {
+          "Teoxane": {
+            "clients": 0,
+            "units": 0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 2,
+            "units": 21.0
+          }
+        },
+        "Francisca Salinas": {
+          "Teoxane": {
+            "clients": 1,
+            "units": 104.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 1,
+            "units": 48.0
+          }
+        }
       }
     },
     {
@@ -9872,6 +10152,58 @@
             "name": "Servicios De Salud Girardi Y Cia. Ltda"
           }
         ]
+      },
+      "brand_productivity": {
+        "Teoxane": {
+          "clients": 38,
+          "units": 490.0
+        },
+        "RRS HA Long Lasting": {
+          "clients": 25,
+          "units": 284.0
+        }
+      },
+      "brand_productivity_by_vendor": {
+        "Monica Urrutia": {
+          "Teoxane": {
+            "clients": 22,
+            "units": 248.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 16,
+            "units": 185.0
+          }
+        },
+        "Cindy Monsalves": {
+          "Teoxane": {
+            "clients": 12,
+            "units": 87.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 4,
+            "units": 21.0
+          }
+        },
+        "Daisy Ponce": {
+          "Teoxane": {
+            "clients": 3,
+            "units": 32.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 4,
+            "units": 21.0
+          }
+        },
+        "Francisca Salinas": {
+          "Teoxane": {
+            "clients": 1,
+            "units": 123.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 1,
+            "units": 57.0
+          }
+        }
       }
     },
     {
@@ -10947,6 +11279,58 @@
             "name": "SOC MEDICA MEDI-MED LIMITADA"
           }
         ]
+      },
+      "brand_productivity": {
+        "Teoxane": {
+          "clients": 58,
+          "units": 583.0
+        },
+        "RRS HA Long Lasting": {
+          "clients": 24,
+          "units": 202.0
+        }
+      },
+      "brand_productivity_by_vendor": {
+        "Cindy Monsalves": {
+          "Teoxane": {
+            "clients": 25,
+            "units": 167.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 11,
+            "units": 46.0
+          }
+        },
+        "Monica Urrutia": {
+          "Teoxane": {
+            "clients": 25,
+            "units": 271.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 8,
+            "units": 92.0
+          }
+        },
+        "Daisy Ponce": {
+          "Teoxane": {
+            "clients": 6,
+            "units": 45.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 4,
+            "units": 25.0
+          }
+        },
+        "Francisca Salinas": {
+          "Teoxane": {
+            "clients": 2,
+            "units": 100.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 1,
+            "units": 39.0
+          }
+        }
       }
     },
     {
@@ -12041,6 +12425,68 @@
             "name": "ROMINA BELEN GONZALEZ KOWAL"
           }
         ]
+      },
+      "brand_productivity": {
+        "Teoxane": {
+          "clients": 82,
+          "units": 685.0
+        },
+        "RRS HA Long Lasting": {
+          "clients": 28,
+          "units": 212.0
+        }
+      },
+      "brand_productivity_by_vendor": {
+        "Daisy Ponce": {
+          "Teoxane": {
+            "clients": 11,
+            "units": 101.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 3,
+            "units": 20.0
+          }
+        },
+        "Monica Urrutia": {
+          "Teoxane": {
+            "clients": 39,
+            "units": 318.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 10,
+            "units": 91.0
+          }
+        },
+        "Cindy Monsalves": {
+          "Teoxane": {
+            "clients": 30,
+            "units": 232.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 13,
+            "units": 65.0
+          }
+        },
+        "Sin asignar": {
+          "Teoxane": {
+            "clients": 0,
+            "units": 0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 1,
+            "units": 10.0
+          }
+        },
+        "Francisca Salinas": {
+          "Teoxane": {
+            "clients": 2,
+            "units": 34.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 1,
+            "units": 26.0
+          }
+        }
       }
     },
     {
@@ -13154,6 +13600,68 @@
             "name": "Servicios De Salud Girardi Y Cia. Ltda"
           }
         ]
+      },
+      "brand_productivity": {
+        "Teoxane": {
+          "clients": 65,
+          "units": 674.0
+        },
+        "RRS HA Long Lasting": {
+          "clients": 24,
+          "units": 234.0
+        }
+      },
+      "brand_productivity_by_vendor": {
+        "Cindy Monsalves": {
+          "Teoxane": {
+            "clients": 26,
+            "units": 177.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 8,
+            "units": 39.0
+          }
+        },
+        "Monica Urrutia": {
+          "Teoxane": {
+            "clients": 28,
+            "units": 285.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 8,
+            "units": 116.0
+          }
+        },
+        "Sin asignar": {
+          "Teoxane": {
+            "clients": 3,
+            "units": 21.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 2,
+            "units": 20.0
+          }
+        },
+        "Daisy Ponce": {
+          "Teoxane": {
+            "clients": 7,
+            "units": 45.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 5,
+            "units": 38.0
+          }
+        },
+        "Francisca Salinas": {
+          "Teoxane": {
+            "clients": 1,
+            "units": 146.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 1,
+            "units": 21.0
+          }
+        }
       }
     },
     {
@@ -14250,6 +14758,68 @@
             "name": "Servicios De Salud Girardi Y Cia. Ltda"
           }
         ]
+      },
+      "brand_productivity": {
+        "Teoxane": {
+          "clients": 68,
+          "units": 712.0
+        },
+        "RRS HA Long Lasting": {
+          "clients": 40,
+          "units": 308.0
+        }
+      },
+      "brand_productivity_by_vendor": {
+        "Cindy Monsalves": {
+          "Teoxane": {
+            "clients": 22,
+            "units": 151.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 20,
+            "units": 95.0
+          }
+        },
+        "Monica Urrutia": {
+          "Teoxane": {
+            "clients": 38,
+            "units": 385.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 11,
+            "units": 135.0
+          }
+        },
+        "Daisy Ponce": {
+          "Teoxane": {
+            "clients": 7,
+            "units": 62.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 7,
+            "units": 30.0
+          }
+        },
+        "Sin asignar": {
+          "Teoxane": {
+            "clients": 0,
+            "units": 0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 1,
+            "units": 5.0
+          }
+        },
+        "Francisca Salinas": {
+          "Teoxane": {
+            "clients": 1,
+            "units": 114.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 1,
+            "units": 43.0
+          }
+        }
       }
     },
     {
@@ -15331,6 +15901,68 @@
             "name": "Servicios De Salud Girardi Y Cia. Ltda"
           }
         ]
+      },
+      "brand_productivity": {
+        "Teoxane": {
+          "clients": 65,
+          "units": 769.0
+        },
+        "RRS HA Long Lasting": {
+          "clients": 27,
+          "units": 261.0
+        }
+      },
+      "brand_productivity_by_vendor": {
+        "Monica Urrutia": {
+          "Teoxane": {
+            "clients": 32,
+            "units": 410.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 12,
+            "units": 153.0
+          }
+        },
+        "Cindy Monsalves": {
+          "Teoxane": {
+            "clients": 22,
+            "units": 164.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 9,
+            "units": 44.0
+          }
+        },
+        "Daisy Ponce": {
+          "Teoxane": {
+            "clients": 9,
+            "units": 89.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 4,
+            "units": 22.0
+          }
+        },
+        "Sin asignar": {
+          "Teoxane": {
+            "clients": 1,
+            "units": 3.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 1,
+            "units": 10.0
+          }
+        },
+        "Francisca Salinas": {
+          "Teoxane": {
+            "clients": 1,
+            "units": 103.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 1,
+            "units": 32.0
+          }
+        }
       }
     },
     {
@@ -16325,6 +16957,58 @@
             "name": "Servicios De Salud Girardi Y Cia. Ltda"
           }
         ]
+      },
+      "brand_productivity": {
+        "Teoxane": {
+          "clients": 49,
+          "units": 478.0
+        },
+        "RRS HA Long Lasting": {
+          "clients": 34,
+          "units": 287.0
+        }
+      },
+      "brand_productivity_by_vendor": {
+        "Monica Urrutia": {
+          "Teoxane": {
+            "clients": 25,
+            "units": 182.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 14,
+            "units": 148.0
+          }
+        },
+        "Cindy Monsalves": {
+          "Teoxane": {
+            "clients": 16,
+            "units": 134.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 14,
+            "units": 73.0
+          }
+        },
+        "Daisy Ponce": {
+          "Teoxane": {
+            "clients": 7,
+            "units": 40.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 5,
+            "units": 30.0
+          }
+        },
+        "Francisca Salinas": {
+          "Teoxane": {
+            "clients": 1,
+            "units": 122.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 1,
+            "units": 36.0
+          }
+        }
       }
     },
     {
@@ -17349,6 +18033,68 @@
             "name": "Servicios De Salud Girardi Y Cia. Ltda"
           }
         ]
+      },
+      "brand_productivity": {
+        "Teoxane": {
+          "clients": 64,
+          "units": 710.0
+        },
+        "RRS HA Long Lasting": {
+          "clients": 28,
+          "units": 218.0
+        }
+      },
+      "brand_productivity_by_vendor": {
+        "Cindy Monsalves": {
+          "Teoxane": {
+            "clients": 27,
+            "units": 254.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 7,
+            "units": 55.0
+          }
+        },
+        "Monica Urrutia": {
+          "Teoxane": {
+            "clients": 31,
+            "units": 328.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 14,
+            "units": 116.0
+          }
+        },
+        "Sin asignar": {
+          "Teoxane": {
+            "clients": 0,
+            "units": 0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 1,
+            "units": 5.0
+          }
+        },
+        "Daisy Ponce": {
+          "Teoxane": {
+            "clients": 5,
+            "units": 71.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 5,
+            "units": 35.0
+          }
+        },
+        "Francisca Salinas": {
+          "Teoxane": {
+            "clients": 1,
+            "units": 57.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 1,
+            "units": 7.0
+          }
+        }
       }
     },
     {
@@ -18359,6 +19105,58 @@
             "name": "Servicios De Salud Girardi Y Cia. Ltda"
           }
         ]
+      },
+      "brand_productivity": {
+        "Teoxane": {
+          "clients": 53,
+          "units": 683.0
+        },
+        "RRS HA Long Lasting": {
+          "clients": 17,
+          "units": 203.0
+        }
+      },
+      "brand_productivity_by_vendor": {
+        "Monica Urrutia": {
+          "Teoxane": {
+            "clients": 22,
+            "units": 328.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 9,
+            "units": 118.0
+          }
+        },
+        "Daisy Ponce": {
+          "Teoxane": {
+            "clients": 8,
+            "units": 99.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 2,
+            "units": 25.0
+          }
+        },
+        "Cindy Monsalves": {
+          "Teoxane": {
+            "clients": 22,
+            "units": 184.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 5,
+            "units": 21.0
+          }
+        },
+        "Francisca Salinas": {
+          "Teoxane": {
+            "clients": 1,
+            "units": 72.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 1,
+            "units": 39.0
+          }
+        }
       }
     },
     {
@@ -19493,6 +20291,78 @@
             "name": "Servicios De Salud Girardi Y Cia. Ltda"
           }
         ]
+      },
+      "brand_productivity": {
+        "Teoxane": {
+          "clients": 64,
+          "units": 697.0
+        },
+        "RRS HA Long Lasting": {
+          "clients": 23,
+          "units": 219.0
+        }
+      },
+      "brand_productivity_by_vendor": {
+        "Daisy Ponce": {
+          "Teoxane": {
+            "clients": 7,
+            "units": 64.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 4,
+            "units": 20.0
+          }
+        },
+        "Monica Urrutia": {
+          "Teoxane": {
+            "clients": 33,
+            "units": 351.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 12,
+            "units": 143.0
+          }
+        },
+        "Cindy Monsalves": {
+          "Teoxane": {
+            "clients": 21,
+            "units": 192.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 6,
+            "units": 31.0
+          }
+        },
+        "Ivan Salinas": {
+          "Teoxane": {
+            "clients": 1,
+            "units": 4.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 0,
+            "units": 0
+          }
+        },
+        "Sin asignar": {
+          "Teoxane": {
+            "clients": 1,
+            "units": 15.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 0,
+            "units": 0
+          }
+        },
+        "Francisca Salinas": {
+          "Teoxane": {
+            "clients": 1,
+            "units": 71.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 1,
+            "units": 25.0
+          }
+        }
       }
     },
     {
@@ -20630,6 +21500,78 @@
             "name": "Servicios De Salud Girardi Y Cia. Ltda"
           }
         ]
+      },
+      "brand_productivity": {
+        "Teoxane": {
+          "clients": 57,
+          "units": 567.0
+        },
+        "RRS HA Long Lasting": {
+          "clients": 24,
+          "units": 294.0
+        }
+      },
+      "brand_productivity_by_vendor": {
+        "Monica Urrutia": {
+          "Teoxane": {
+            "clients": 22,
+            "units": 231.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 15,
+            "units": 216.0
+          }
+        },
+        "Cindy Monsalves": {
+          "Teoxane": {
+            "clients": 24,
+            "units": 160.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 4,
+            "units": 25.0
+          }
+        },
+        "Sin asignar": {
+          "Teoxane": {
+            "clients": 1,
+            "units": 5.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 1,
+            "units": 10.0
+          }
+        },
+        "Daisy Ponce": {
+          "Teoxane": {
+            "clients": 8,
+            "units": 90.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 3,
+            "units": 15.0
+          }
+        },
+        "Ivan Salinas": {
+          "Teoxane": {
+            "clients": 1,
+            "units": 2.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 0,
+            "units": 0
+          }
+        },
+        "Francisca Salinas": {
+          "Teoxane": {
+            "clients": 1,
+            "units": 79.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 1,
+            "units": 28.0
+          }
+        }
       }
     },
     {
@@ -21682,6 +22624,68 @@
             "name": "Servicios De Salud Girardi Y Cia. Ltda"
           }
         ]
+      },
+      "brand_productivity": {
+        "Teoxane": {
+          "clients": 68,
+          "units": 784.0
+        },
+        "RRS HA Long Lasting": {
+          "clients": 26,
+          "units": 169.0
+        }
+      },
+      "brand_productivity_by_vendor": {
+        "Daisy Ponce": {
+          "Teoxane": {
+            "clients": 8,
+            "units": 57.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 6,
+            "units": 41.0
+          }
+        },
+        "Monica Urrutia": {
+          "Teoxane": {
+            "clients": 34,
+            "units": 407.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 10,
+            "units": 78.0
+          }
+        },
+        "Cindy Monsalves": {
+          "Teoxane": {
+            "clients": 24,
+            "units": 226.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 7,
+            "units": 24.0
+          }
+        },
+        "Sin asignar": {
+          "Teoxane": {
+            "clients": 1,
+            "units": 5.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 2,
+            "units": 10.0
+          }
+        },
+        "Francisca Salinas": {
+          "Teoxane": {
+            "clients": 1,
+            "units": 89.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 1,
+            "units": 16.0
+          }
+        }
       }
     },
     {
@@ -22805,6 +23809,68 @@
             "name": "Servicios De Salud Girardi Y Cia. Ltda"
           }
         ]
+      },
+      "brand_productivity": {
+        "Teoxane": {
+          "clients": 74,
+          "units": 989.0
+        },
+        "RRS HA Long Lasting": {
+          "clients": 30,
+          "units": 324.0
+        }
+      },
+      "brand_productivity_by_vendor": {
+        "Daisy Ponce": {
+          "Teoxane": {
+            "clients": 11,
+            "units": 113.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 7,
+            "units": 73.0
+          }
+        },
+        "Monica Urrutia": {
+          "Teoxane": {
+            "clients": 40,
+            "units": 534.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 13,
+            "units": 161.0
+          }
+        },
+        "Cindy Monsalves": {
+          "Teoxane": {
+            "clients": 21,
+            "units": 217.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 8,
+            "units": 54.0
+          }
+        },
+        "Sin asignar": {
+          "Teoxane": {
+            "clients": 1,
+            "units": 5.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 1,
+            "units": 15.0
+          }
+        },
+        "Francisca Salinas": {
+          "Teoxane": {
+            "clients": 1,
+            "units": 120.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 1,
+            "units": 21.0
+          }
+        }
       }
     },
     {
@@ -23924,16 +24990,78 @@
             "name": "Servicios De Salud Girardi Y Cia. Ltda"
           }
         ]
+      },
+      "brand_productivity": {
+        "Teoxane": {
+          "clients": 69,
+          "units": 813.0
+        },
+        "RRS HA Long Lasting": {
+          "clients": 32,
+          "units": 300.0
+        }
+      },
+      "brand_productivity_by_vendor": {
+        "Cindy Monsalves": {
+          "Teoxane": {
+            "clients": 25,
+            "units": 277.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 9,
+            "units": 54.0
+          }
+        },
+        "Daisy Ponce": {
+          "Teoxane": {
+            "clients": 12,
+            "units": 93.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 9,
+            "units": 78.0
+          }
+        },
+        "Monica Urrutia": {
+          "Teoxane": {
+            "clients": 31,
+            "units": 351.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 12,
+            "units": 136.0
+          }
+        },
+        "Sin asignar": {
+          "Teoxane": {
+            "clients": 0,
+            "units": 0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 1,
+            "units": 10.0
+          }
+        },
+        "Francisca Salinas": {
+          "Teoxane": {
+            "clients": 1,
+            "units": 92.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 1,
+            "units": 22.0
+          }
+        }
       }
     },
     {
       "year": 2026,
       "month": 8,
-      "count_facturas": 125,
+      "count_facturas": 127,
       "count_nc": 2,
-      "neto_facturas": 151280143,
+      "neto_facturas": 153624333,
       "neto_nc": 1912227,
-      "total_neto": 149367916,
+      "total_neto": 151712106,
       "by_day": [
         {
           "date": "2026-08-03",
@@ -24032,8 +25160,8 @@
         },
         {
           "date": "2026-08-31",
-          "count": 3,
-          "neto": 2884057
+          "count": 5,
+          "neto": 5228247
         }
       ],
       "by_vendor": {
@@ -24050,8 +25178,8 @@
           "neto": 41405437
         },
         "Francisca Salinas": {
-          "count": 2,
-          "neto": 11511740
+          "count": 4,
+          "neto": 13855930
         }
       },
       "by_vendor_day": {
@@ -24306,12 +25434,17 @@
             "date": "2026-08-28",
             "count": 2,
             "neto": 11511740
+          },
+          {
+            "date": "2026-08-31",
+            "count": 2,
+            "neto": 2344190
           }
         ]
       },
       "by_brand": {
-        "Teoxane": 128121266,
-        "RRS HA Long Lasting": 21246650,
+        "Teoxane": 130048375,
+        "RRS HA Long Lasting": 21663731,
         "FINE": 0
       },
       "by_vendor_brand": {
@@ -24331,22 +25464,22 @@
           "FINE": 0
         },
         "Francisca Salinas": {
-          "Teoxane": 10051956,
-          "RRS HA Long Lasting": 1459784,
+          "Teoxane": 11979065,
+          "RRS HA Long Lasting": 1876865,
           "FINE": 0
         }
       },
       "by_sku": {
-        "RHA 1 (2X1ml)": 4009180,
-        "RHA KISS (2X0.7ml)": 1737400,
-        "RHA 4 (2X1.2ml)": 22138468,
-        "RHA 3 (2X1ml)": 9383079,
-        "PureSense Ultra Deep (2X1.2ml)": 61234798,
-        "Redensity 2 (2X1ml)": 11725210,
-        "Redensity 1 (2X1ml)": 1731947,
-        "RHA 2 (2X1ml)": 8589384,
-        "Jeringa monodosis x 3mL (sin aguja)": 21246650,
-        "Redensity 1 (1x3ml)": 7571800
+        "RHA 1 (2X1ml)": 4115048,
+        "RHA KISS (2X0.7ml)": 1849400,
+        "RHA 4 (2X1.2ml)": 22625456,
+        "RHA 3 (2X1ml)": 9504826,
+        "PureSense Ultra Deep (2X1.2ml)": 61478292,
+        "Redensity 2 (2X1ml)": 12212198,
+        "Redensity 1 (2X1ml)": 1810224,
+        "RHA 2 (2X1ml)": 8711131,
+        "Jeringa monodosis x 3mL (sin aguja)": 21663731,
+        "Redensity 1 (1x3ml)": 7741800
       },
       "by_vendor_sku": {
         "Monica Urrutia": {
@@ -24385,27 +25518,27 @@
           "RHA KISS (2X0.7ml)": 163800
         },
         "Francisca Salinas": {
-          "Jeringa monodosis x 3mL (sin aguja)": 1459784,
-          "RHA 2 (2X1ml)": 1095723,
-          "RHA 4 (2X1.2ml)": 2434940,
-          "PureSense Ultra Deep (2X1.2ml)": 2069699,
-          "Redensity 2 (2X1ml)": 1582711,
-          "Redensity 1 (1x3ml)": 1360000,
-          "RHA 1 (2X1ml)": 529340,
-          "Redensity 1 (2X1ml)": 156555,
-          "RHA 3 (2X1ml)": 486988,
-          "RHA KISS (2X0.7ml)": 336000
+          "Jeringa monodosis x 3mL (sin aguja)": 1876865,
+          "RHA 2 (2X1ml)": 1217470,
+          "RHA 4 (2X1.2ml)": 2921928,
+          "PureSense Ultra Deep (2X1.2ml)": 2313193,
+          "Redensity 2 (2X1ml)": 2069699,
+          "Redensity 1 (1x3ml)": 1530000,
+          "RHA 1 (2X1ml)": 635208,
+          "Redensity 1 (2X1ml)": 234832,
+          "RHA 3 (2X1ml)": 608735,
+          "RHA KISS (2X0.7ml)": 448000
         }
       },
       "top_clients": [
         {
           "id": "860",
-          "count": 2,
-          "neto": 11511740,
-          "teox_neto": 10051956,
-          "teox_units": 89.0,
-          "rrs_neto": 1459784,
-          "rrs_units": 14.0,
+          "count": 4,
+          "neto": 13855930,
+          "teox_neto": 11979065,
+          "teox_units": 106.0,
+          "rrs_neto": 1876865,
+          "rrs_units": 18.0,
           "name": "Servicios De Salud Girardi Y Cia. Ltda"
         },
         {
@@ -25009,15 +26142,67 @@
         "Francisca Salinas": [
           {
             "id": "860",
-            "count": 2,
-            "neto": 11511740,
-            "teox_neto": 10051956,
-            "teox_units": 89.0,
-            "rrs_neto": 1459784,
-            "rrs_units": 14.0,
+            "count": 4,
+            "neto": 13855930,
+            "teox_neto": 11979065,
+            "teox_units": 106.0,
+            "rrs_neto": 1876865,
+            "rrs_units": 18.0,
             "name": "Servicios De Salud Girardi Y Cia. Ltda"
           }
         ]
+      },
+      "brand_productivity": {
+        "Teoxane": {
+          "clients": 89,
+          "units": 1068.0
+        },
+        "RRS HA Long Lasting": {
+          "clients": 25,
+          "units": 211.0
+        }
+      },
+      "brand_productivity_by_vendor": {
+        "Monica Urrutia": {
+          "Teoxane": {
+            "clients": 39,
+            "units": 540.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 13,
+            "units": 121.0
+          }
+        },
+        "Daisy Ponce": {
+          "Teoxane": {
+            "clients": 15,
+            "units": 119.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 5,
+            "units": 36.0
+          }
+        },
+        "Cindy Monsalves": {
+          "Teoxane": {
+            "clients": 34,
+            "units": 303.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 6,
+            "units": 36.0
+          }
+        },
+        "Francisca Salinas": {
+          "Teoxane": {
+            "clients": 1,
+            "units": 106.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 1,
+            "units": 18.0
+          }
+        }
       }
     },
     {
@@ -25040,7 +26225,18 @@
       "by_sku": {},
       "by_vendor_sku": {},
       "top_clients": [],
-      "top_clients_by_vendor": {}
+      "top_clients_by_vendor": {},
+      "brand_productivity": {
+        "Teoxane": {
+          "clients": 0,
+          "units": 0
+        },
+        "RRS HA Long Lasting": {
+          "clients": 0,
+          "units": 0
+        }
+      },
+      "brand_productivity_by_vendor": {}
     }
   ]
 }
