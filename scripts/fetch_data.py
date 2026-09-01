@@ -40,7 +40,11 @@ FACT_BLOCK_START = 3100
 NC_BLOCK_START   = 0
 NC_BLOCK_END     = 2128
 
-# variant_id -> brand name (hardcoded from product catalog)
+# variant_id -> brand name, for the handful of variants confirmed by id.
+# This alone silently misses brand-new/renamed catalog variants (that's what
+# caused several months of Teoxane sales to be undercounted), so
+# classify_brand() below also matches on the product's own name/description
+# as the primary, self-maintaining signal.
 VARIANT_TO_BRAND = {
     68:  "RRS HA Long Lasting",
     94:  "Teoxane", 95:  "Teoxane", 96:  "Teoxane", 97:  "Teoxane",
@@ -48,6 +52,23 @@ VARIANT_TO_BRAND = {
     100: "FINE", 101: "FINE", 113: "FINE",
 }
 ALL_BRANDS = ["Teoxane", "RRS HA Long Lasting", "FINE"]
+
+# Product-name substrings (lowercased) confirmed against this account's real
+# sales history -- these are the actual Teoxane/RRS product line names Bsale
+# uses in "Producto / Servicio", independent of any variant id.
+TEOXANE_NAME_MARKERS = ["rha ", "rha1", "rha2", "rha3", "rha4", "redensity", "puresense"]
+RRS_NAME_MARKERS = ["rrs", "jeringa monodosis x 3ml"]
+
+
+def classify_brand(variant_id, description):
+    if variant_id in VARIANT_TO_BRAND:
+        return VARIANT_TO_BRAND[variant_id]
+    name = (description or "").lower()
+    if any(marker in name for marker in TEOXANE_NAME_MARKERS):
+        return "Teoxane"
+    if any(marker in name for marker in RRS_NAME_MARKERS):
+        return "RRS HA Long Lasting"
+    return "Otros"
 
 
 def get_json(url):
@@ -221,13 +242,13 @@ def fetch_document_details(doc_id):
                     continue
                 neto = item.get("netAmount", 0)
                 qty = item.get("quantity", 0)
+                sku_name = variant.get("description") or f"Variante {variant_id}"
 
-                brand = VARIANT_TO_BRAND.get(variant_id, "Otros")
+                brand = classify_brand(variant_id, sku_name)
                 bt = brand_totals.setdefault(brand, {"neto": 0, "qty": 0})
                 bt["neto"] += neto
                 bt["qty"] += qty
 
-                sku_name = variant.get("description") or f"Variante {variant_id}"
                 st = sku_totals.setdefault(sku_name, {"neto": 0, "qty": 0})
                 st["neto"] += neto
                 st["qty"] += qty
