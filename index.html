@@ -378,6 +378,7 @@ const M = v => {
 };
 
 const PCT = v => `${(v * 100).toFixed(1)}%`;
+const PCT0 = v => `${Math.round(v * 100)}%`;
 
 function monthLabel(year, month) {
   const names = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
@@ -1044,11 +1045,11 @@ function renderCumplTable(agg, t, label) {
     tr.innerHTML = `
       <td><strong>${name}</strong></td>
       <td style="color:${BRAND_COLORS['Teoxane']}">${M(teoxReal)}</td>
-      <td>${teoxR !== null ? `<span class="pill ${pillClass(teoxR)}">${PCT(teoxR)}</span><br><small>${M(teoxObj)}</small>` : '—'}</td>
+      <td>${teoxR !== null ? `<span class="pill ${pillClass(teoxR)}">${PCT0(teoxR)}</span><br><small>${M(teoxObj)}</small>` : '—'}</td>
       <td style="color:${BRAND_COLORS['RRS HA Long Lasting']}">${M(rrsReal)}</td>
-      <td>${rrsR !== null ? `<span class="pill ${pillClass(rrsR)}">${PCT(rrsR)}</span><br><small>${M(rrsObj)}</small>` : '—'}</td>
+      <td>${rrsR !== null ? `<span class="pill ${pillClass(rrsR)}">${PCT0(rrsR)}</span><br><small>${M(rrsObj)}</small>` : '—'}</td>
       <td><strong>${M(totalReal)}</strong></td>
-      <td>${totalR !== null ? `<span class="pill ${pillClass(totalR)}">${PCT(totalR)}</span><br><small>${M(totalObj)}</small>` : '—'}</td>
+      <td>${totalR !== null ? `<span class="pill ${pillClass(totalR)}">${PCT0(totalR)}</span><br><small>${M(totalObj)}</small>` : '—'}</td>
     `;
     tbody.appendChild(tr);
   });
@@ -1068,11 +1069,11 @@ function renderCumplTable(agg, t, label) {
     tr2.innerHTML = `
       <td>Total</td>
       <td style="color:${BRAND_COLORS['Teoxane']}">${M(totTeox)}</td>
-      <td>${tTeox ? `<span class="pill ${pillClass(totTeox/tTeox)}">${PCT(totTeox/tTeox)}</span><br><small>${M(tTeox)}</small>` : '—'}</td>
+      <td>${tTeox ? `<span class="pill ${pillClass(totTeox/tTeox)}">${PCT0(totTeox/tTeox)}</span><br><small>${M(tTeox)}</small>` : '—'}</td>
       <td style="color:${BRAND_COLORS['RRS HA Long Lasting']}">${M(totRrs)}</td>
-      <td>${tRrs ? `<span class="pill ${pillClass(totRrs/tRrs)}">${PCT(totRrs/tRrs)}</span><br><small>${M(tRrs)}</small>` : '—'}</td>
+      <td>${tRrs ? `<span class="pill ${pillClass(totRrs/tRrs)}">${PCT0(totRrs/tRrs)}</span><br><small>${M(tRrs)}</small>` : '—'}</td>
       <td>${M(totTotal)}</td>
-      <td>${tTotal ? `<span class="pill ${pillClass(totTotal/tTotal)}">${PCT(totTotal/tTotal)}</span><br><small>${M(tTotal)}</small>` : '—'}</td>
+      <td>${tTotal ? `<span class="pill ${pillClass(totTotal/tTotal)}">${PCT0(totTotal/tTotal)}</span><br><small>${M(tTotal)}</small>` : '—'}</td>
     `;
     tbody.appendChild(tr2);
   }
