@@ -170,6 +170,52 @@
   #loading { text-align: center; padding: 60px; color: var(--gray-600); font-size: 16px; }
   #content { display: none; }
 
+  /* PIN gate */
+  #pin-gate {
+    position: fixed;
+    inset: 0;
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  #pin-gate .pin-box {
+    background: white;
+    border-radius: 12px;
+    padding: 32px 36px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,.3);
+  }
+  #pin-gate h1 { font-size: 17px; margin-bottom: 4px; }
+  #pin-gate h1 span { color: var(--blue); }
+  #pin-gate p { font-size: 12px; color: var(--gray-600); margin-bottom: 18px; }
+  #pin-input {
+    width: 100%;
+    font-size: 26px;
+    letter-spacing: 12px;
+    text-align: center;
+    padding: 10px 0;
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    margin-bottom: 14px;
+  }
+  #pin-input:focus { outline: 2px solid var(--blue); border-color: var(--blue); }
+  #pin-submit {
+    width: 100%;
+    padding: 10px;
+    background: var(--blue);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  #pin-submit:hover { background: #1e40af; }
+  #pin-error { color: var(--red); font-size: 12px; margin-top: 10px; display: none; }
+
   /* Unavailable-per-vendor placeholder */
   .unavailable {
     display: flex;
@@ -198,6 +244,16 @@
 </style>
 </head>
 <body>
+
+<div id="pin-gate">
+  <div class="pin-box">
+    <h1>AestheticsPro <span>· Ventas</span></h1>
+    <p>Ingresá el PIN para continuar</p>
+    <input type="password" id="pin-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" autocomplete="off" placeholder="••••">
+    <button id="pin-submit">Entrar</button>
+    <div id="pin-error">PIN incorrecto</div>
+  </div>
+</div>
 
 <header>
   <h1>AestheticsPro <span>· Ventas</span></h1>
@@ -353,6 +409,47 @@
 </main>
 
 <script>
+// ── PIN gate ───────────────────────────────────────────────────────────────
+// Deterrent only, not real access control: this is a public static site, so
+// data/ventas.json and data/targets.json are reachable directly by URL
+// regardless of this gate. The PIN is stored hashed just so it isn't sitting
+// in plain text in "view source".
+const PIN_HASH = '38bc3d1c4787dd15fb6b16dccd548786cb773da29ffeb075602c76d2ca87f9fd';
+const PIN_STORAGE_KEY = 'aestheticspro-pin-ok';
+
+async function sha256Hex(text) {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text));
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+function unlockGate() {
+  document.getElementById('pin-gate').style.display = 'none';
+}
+
+async function submitPin() {
+  const input = document.getElementById('pin-input');
+  const value = input.value.trim();
+  if (await sha256Hex(value) === PIN_HASH) {
+    localStorage.setItem(PIN_STORAGE_KEY, '1');
+    unlockGate();
+  } else {
+    document.getElementById('pin-error').style.display = 'block';
+    input.value = '';
+    input.focus();
+  }
+}
+
+document.getElementById('pin-submit').addEventListener('click', submitPin);
+document.getElementById('pin-input').addEventListener('keydown', e => {
+  if (e.key === 'Enter') submitPin();
+});
+
+if (localStorage.getItem(PIN_STORAGE_KEY) === '1') {
+  unlockGate();
+} else {
+  document.getElementById('pin-input').focus();
+}
+
 // ── Config ─────────────────────────────────────────────────────────────────
 const BRANDS = ['Teoxane', 'RRS HA Long Lasting'];
 const BRAND_COLORS = { 'Teoxane': '#2563eb', 'RRS HA Long Lasting': '#d97706', 'FINE': '#059669' };
