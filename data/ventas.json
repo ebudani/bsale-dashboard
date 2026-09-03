@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-02T08:06:44.181076Z",
+  "updated_at": "2026-09-03T08:06:33.597117Z",
   "users": {
     "7": "Cindy Monsalves",
     "9": "Daisy Ponce",
@@ -4220,6 +4220,10 @@
     "1245": {
       "name": "ODONTOLOGIA SLS DENT SPA",
       "rut": "77678316-1"
+    },
+    "1246": {
+      "name": "Inversiones Y Servicios Regenova Spa",
+      "rut": "78458537-9"
     }
   },
   "months": [
