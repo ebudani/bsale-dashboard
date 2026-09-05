@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-04T08:07:04.017628Z",
+  "updated_at": "2026-09-05T08:07:10.880792Z",
   "users": {
     "7": "Cindy Monsalves",
     "9": "Daisy Ponce",
@@ -4240,6 +4240,22 @@
     "1250": {
       "name": "Bruggemann spa",
       "rut": "77801061-5"
+    },
+    "1251": {
+      "name": "DRA CAMILA FORNI E.I.R.L.",
+      "rut": "76813645-9"
+    },
+    "1252": {
+      "name": "Servicio Odontológico Macarena Hald Spa",
+      "rut": "77408221-2"
+    },
+    "1253": {
+      "name": "ZIBÁ ODONTOLOGÍA & ESTÉTICA FACIAL SPA",
+      "rut": "77954165-7"
+    },
+    "1254": {
+      "name": "SERVICIOS ODONTOLÓGICOS MILB SPA",
+      "rut": "77341785-7"
     }
   },
   "months": [
@@ -26342,11 +26358,11 @@
     {
       "year": 2026,
       "month": 9,
-      "count_facturas": 28,
+      "count_facturas": 29,
       "count_nc": 0,
-      "neto_facturas": 29601924,
+      "neto_facturas": 31980513,
       "neto_nc": 0,
-      "total_neto": 29601924,
+      "total_neto": 31980513,
       "by_day": [
         {
           "date": "2026-09-01",
@@ -26362,6 +26378,11 @@
           "date": "2026-09-03",
           "count": 15,
           "neto": 21789746
+        },
+        {
+          "date": "2026-09-04",
+          "count": 1,
+          "neto": 2378589
         }
       ],
       "by_vendor": {
@@ -26378,8 +26399,8 @@
           "neto": 3395903
         },
         "Daisy Ponce": {
-          "count": 2,
-          "neto": 1918872
+          "count": 3,
+          "neto": 4297461
         }
       },
       "by_vendor_day": {
@@ -26439,12 +26460,17 @@
             "date": "2026-09-02",
             "count": 1,
             "neto": 577117
+          },
+          {
+            "date": "2026-09-04",
+            "count": 1,
+            "neto": 2378589
           }
         ]
       },
       "by_brand": {
-        "Teoxane": 22862022,
-        "RRS HA Long Lasting": 6739902,
+        "Teoxane": 24869607,
+        "RRS HA Long Lasting": 7110906,
         "FINE": 0
       },
       "by_vendor_brand": {
@@ -26464,22 +26490,22 @@
           "FINE": 0
         },
         "Daisy Ponce": {
-          "Teoxane": 1341755,
-          "RRS HA Long Lasting": 577117,
+          "Teoxane": 3349340,
+          "RRS HA Long Lasting": 948121,
           "FINE": 0
         }
       },
       "by_sku": {
-        "Jeringa monodosis x 3mL (sin aguja)": 6739902,
+        "Jeringa monodosis x 3mL (sin aguja)": 7110906,
         "RHA KISS (2X0.7ml)": 429000,
-        "PureSense Ultra Deep (2X1.2ml)": 11722899,
-        "RHA 4 (2X1.2ml)": 3278392,
+        "PureSense Ultra Deep (2X1.2ml)": 12332297,
+        "RHA 4 (2X1.2ml)": 3622216,
         "RHA 3 (2X1ml)": 594651,
         "RHA 1 (2X1ml)": 948480,
-        "RHA 2 (2X1ml)": 1070898,
-        "Redensity 2 (2X1ml)": 1561622,
-        "RHA 3 (2X1.2ml)": 638000,
-        "Redensity 1 (1x3ml)": 1614600,
+        "RHA 2 (2X1ml)": 1220876,
+        "Redensity 2 (2X1ml)": 1867507,
+        "RHA 3 (2X1.2ml)": 1133900,
+        "Redensity 1 (1x3ml)": 1717200,
         "Redensity 1 (2X1ml)": 80080,
         "RHA Kiss Volume (2X1ml)": 923400
       },
@@ -26516,12 +26542,14 @@
           "RHA 1 (2X1ml)": 0
         },
         "Daisy Ponce": {
-          "PureSense Ultra Deep (2X1.2ml)": 489122,
-          "RHA 4 (2X1.2ml)": 367952,
+          "PureSense Ultra Deep (2X1.2ml)": 1098520,
+          "RHA 4 (2X1.2ml)": 711776,
           "RHA 1 (2X1ml)": 0,
-          "RHA 2 (2X1ml)": 321006,
-          "Redensity 2 (2X1ml)": 163675,
-          "Jeringa monodosis x 3mL (sin aguja)": 577117
+          "RHA 2 (2X1ml)": 470984,
+          "Redensity 2 (2X1ml)": 469560,
+          "Jeringa monodosis x 3mL (sin aguja)": 948121,
+          "RHA 3 (2X1.2ml)": 495900,
+          "Redensity 1 (1x3ml)": 102600
         }
       },
       "top_clients": [
@@ -26564,6 +26592,16 @@
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "SERVICIOS MEDICOS LIMITADA"
+        },
+        {
+          "id": "920",
+          "count": 1,
+          "neto": 2378589,
+          "teox_neto": 2007585,
+          "teox_units": 17.0,
+          "rrs_neto": 371004,
+          "rrs_units": 3.0,
+          "name": "ASESORÍAS E INVERSIONES SF SPA"
         },
         {
           "id": "954",
@@ -26664,16 +26702,6 @@
           "rrs_neto": 989344,
           "rrs_units": 10.0,
           "name": "SOCIEDAD DE SERVICIOS INTEGRALES DE SALUD Y ESTÉTICA LIMITADA"
-        },
-        {
-          "id": "1071",
-          "count": 1,
-          "neto": 648523,
-          "teox_neto": 648523,
-          "teox_units": 5.0,
-          "rrs_neto": 0,
-          "rrs_units": 0,
-          "name": "SERVICIOS MEDICOS JOHN JAIRO BONILLA AVILA GLANZ MEDICAL E.I.R.L."
         }
       ],
       "top_clients_by_vendor": {
@@ -26925,6 +26953,16 @@
         ],
         "Daisy Ponce": [
           {
+            "id": "920",
+            "count": 1,
+            "neto": 2378589,
+            "teox_neto": 2007585,
+            "teox_units": 17.0,
+            "rrs_neto": 371004,
+            "rrs_units": 3.0,
+            "name": "ASESORÍAS E INVERSIONES SF SPA"
+          },
+          {
             "id": "974",
             "count": 1,
             "neto": 1341755,
@@ -26948,12 +26986,12 @@
       },
       "brand_productivity": {
         "Teoxane": {
-          "clients": 19,
-          "units": 187.0
+          "clients": 20,
+          "units": 204.0
         },
         "RRS HA Long Lasting": {
-          "clients": 9,
-          "units": 63.0
+          "clients": 10,
+          "units": 66.0
         }
       },
       "brand_productivity_by_vendor": {
@@ -26989,12 +27027,12 @@
         },
         "Daisy Ponce": {
           "Teoxane": {
-            "clients": 1,
-            "units": 10.0
+            "clients": 2,
+            "units": 27.0
           },
           "RRS HA Long Lasting": {
-            "clients": 1,
-            "units": 5.0
+            "clients": 2,
+            "units": 8.0
           }
         }
       }
