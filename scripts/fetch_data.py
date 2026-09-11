@@ -91,10 +91,15 @@ def fetch_users():
 
 def load_rut_to_vendor():
     """Loads RUT -> vendor_name mapping from data/vendedores.json."""
-    if os.path.exists(VENDORS_FILE):
-        with open(VENDORS_FILE, "r", encoding="utf-8") as f:
-            return json.load(f)
-    return {}
+    if not os.path.exists(VENDORS_FILE):
+        return {}
+    with open(VENDORS_FILE, "r", encoding="utf-8") as f:
+        raw = json.load(f)
+    raw.pop("_note", None)
+    # Blank VENDEDOR cells in the source spreadsheet get written here as the
+    # literal string "nan" -- not a real assignment. Left unfiltered, any RUT
+    # sharing that gets grouped into a bogus "nan" vendor bucket.
+    return {rut: v for rut, v in raw.items() if str(v).strip().lower() != "nan"}
 
 
 def build_client_to_vendor(clients_meta, rut_to_vendor):
@@ -294,7 +299,7 @@ def fetch_brand_details(facturas, exenta_docs, nc_docs):
 # -- Aggregation ---------------------------------------------------------------
 
 def build_month_record(year, month, facturas, nc_docs, exenta_docs, clients_meta,
-                       brand_details=None, client_to_vendor=None):
+                       brand_details=None, client_to_vendor=None, client_activity=None):
     neto_facturas = sum(d.get("netAmount", 0) for d in facturas + exenta_docs)
     neto_nc       = sum(d.get("netAmount", 0) for d in nc_docs)
     total_neto    = neto_facturas - neto_nc
@@ -440,6 +445,15 @@ def build_month_record(year, month, facturas, nc_docs, exenta_docs, clients_meta
             cbq[brand] += qty
             vcbq[brand] += qty
 
+    # Full (uncapped) per-client net for the month, merged into the running
+    # cross-month roster used by the "Cartera en riesgo" view -- top_clients
+    # below only keeps the top 15, which isn't enough to tell whether a client
+    # outside that top 15 bought this month at all.
+    if client_activity is not None:
+        month_key = f"{year}-{month:02d}"
+        for cid, vals in by_client.items():
+            client_activity.setdefault(cid, {})[month_key] = round(vals["neto"])
+
     def derive_productivity(per_client):
         clients = {b: set() for b in PRODUCTIVITY_BRANDS}
         units = {b: 0 for b in PRODUCTIVITY_BRANDS}
@@ -526,18 +540,25 @@ def load_existing():
         return (
             data.get("users", {}),
             data.get("clients", {}),
-            {(r["year"], r["month"]): r for r in data.get("months", [])}
+            {(r["year"], r["month"]): r for r in data.get("months", [])},
+            data.get("client_activity", {}),
         )
-    return {}, {}, {}
+    return {}, {}, {}, {}
 
 
-def save(users, clients, months_dict):
+def save(users, clients, months_dict, client_activity, client_vendor):
     months = sorted(months_dict.values(), key=lambda r: (r["year"], r["month"]))
     output = {
         "updated_at": datetime.datetime.utcnow().isoformat() + "Z",
         "users": users,
         "clients": clients,
         "months": months,
+        # Cross-month roster for the "Cartera en riesgo" view: every client's
+        # net sales per month (not capped to a top-N), plus which vendor each
+        # is assigned to. Rebuilt incrementally -- a daily run only touches
+        # the current month's entries; a --backfill run repopulates it fully.
+        "client_activity": client_activity,
+        "client_vendor": client_vendor,
     }
     os.makedirs(os.path.dirname(OUT_FILE), exist_ok=True)
     with open(OUT_FILE, "w", encoding="utf-8") as f:
@@ -564,7 +585,7 @@ def main():
     args = parser.parse_args()
 
     today = datetime.date.today()
-    _, _, existing = load_existing()
+    _, _, existing, client_activity = load_existing()
 
     if args.backfill:
         from_year, from_month = map(int, args.from_month.split("-"))
@@ -606,7 +627,7 @@ def main():
 
         record = build_month_record(
             year, month, facturas, nc_data["nc"], nc_data["exenta"],
-            clients, brand_details, client_to_vendor
+            clients, brand_details, client_to_vendor, client_activity
         )
         existing[(year, month)] = record
         print(
@@ -615,7 +636,7 @@ def main():
             f"RRS ${record['by_brand'].get('RRS HA Long Lasting', 0):,.0f}"
         )
 
-    save(users, clients, existing)
+    save(users, clients, existing, client_activity, client_to_vendor)
 
 
 if __name__ == "__main__":

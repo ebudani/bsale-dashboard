@@ -240,6 +240,27 @@
     z-index: 1;
   }
   .approx-note { font-size: 10px; color: #94a3b8; font-weight: 400; text-transform: none; letter-spacing: 0; margin-left: 6px; }
+  .pill.neutral { background: var(--gray-200); color: var(--gray-600); }
+
+  /* Cartera en riesgo */
+  .risk-toolbar { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+  .risk-chip {
+    font-family: inherit; font-size: 12px; font-weight: 600; color: var(--gray-600);
+    background: var(--gray-100); border: 1px solid var(--gray-200); border-radius: 999px;
+    padding: 5px 12px; cursor: pointer;
+  }
+  .risk-chip .n { opacity: .7; margin-left: 4px; }
+  .risk-chip.active { background: var(--navy); color: white; border-color: var(--navy); }
+  .risk-search {
+    margin-left: auto; font-family: inherit; font-size: 13px; padding: 6px 10px;
+    border: 1px solid var(--gray-200); border-radius: 6px; min-width: 200px;
+  }
+  #table-risk th { cursor: pointer; user-select: none; }
+  #table-risk th .arrow { opacity: .4; margin-left: 3px; }
+  #table-risk td.risk-name { max-width: 220px; white-space: normal; line-height: 1.3; }
+  #table-risk td.risk-name small { display: block; color: #94a3b8; font-weight: 400; }
+  .risk-caption { font-size: 11px; color: #94a3b8; margin: -6px 0 12px; }
+  .risk-count { font-size: 11px; color: #94a3b8; margin-top: 8px; }
 
   @media (max-width: 900px) {
     .charts-row, .tables-row, .bottom-row { grid-template-columns: 1fr; }
@@ -420,6 +441,27 @@
       </table>
     </div>
 
+    <!-- Cartera en riesgo -->
+    <div class="card">
+      <h2 id="table-risk-title">Cartera en riesgo — </h2>
+      <div class="risk-caption">Independiente del filtro de Periodo: compara siempre el mes en curso y el mes anterior a hoy.</div>
+      <div class="risk-toolbar" id="risk-toolbar"></div>
+      <table id="table-risk">
+        <thead>
+          <tr>
+            <th data-key="name">Cuenta <span class="arrow"></span></th>
+            <th data-key="vendor">Vendedor <span class="arrow"></span></th>
+            <th data-key="status">Estado <span class="arrow"></span></th>
+            <th data-key="current">Mes en curso <span class="arrow"></span></th>
+            <th data-key="prev">Mes anterior <span class="arrow"></span></th>
+            <th data-key="lastMonth">Última compra <span class="arrow"></span></th>
+          </tr>
+        </thead>
+        <tbody id="tbody-risk"></tbody>
+      </table>
+      <div class="risk-count" id="risk-count"></div>
+    </div>
+
   </div><!-- #content -->
 </main>
 
@@ -475,6 +517,13 @@ Chart.defaults.set('plugins.datalabels', { display: false });
 let allMonths = [];
 let usersMap  = {};
 let targetsData = {};
+let clientsMeta = {};
+let clientActivity = {};
+let clientVendorMap = {};
+let riskStatusFilter = 'todas';
+let riskSearch = '';
+let riskSortKey = 'status';
+let riskSortDir = 1;
 let selectedVendor = 'all';
 let periodMode = 'this_month';
 let customFromIdx = 0;
@@ -523,9 +572,12 @@ async function loadData() {
   const ventas  = await vRes.json();
   const targets = await tRes.json();
 
-  allMonths   = ventas.months || [];
-  usersMap    = ventas.users  || {};
-  targetsData = targets.months || {};
+  allMonths     = ventas.months || [];
+  usersMap      = ventas.users  || {};
+  targetsData   = targets.months || {};
+  clientsMeta   = ventas.clients || {};
+  clientActivity = ventas.client_activity || {};
+  clientVendorMap = ventas.client_vendor || {};
 
   document.getElementById('updated-at').textContent =
     'Actualizado: ' + (ventas.updated_at || '').slice(0, 16).replace('T', ' ') + ' UTC';
@@ -776,6 +828,7 @@ function render() {
   renderProductivityTable('tbody-prod-teox', 'Teoxane');
   renderProductivityTable('tbody-prod-rrs', 'RRS HA Long Lasting');
   renderTopClients(view, label, months.length > 1);
+  renderCarteraRiesgo();
 }
 
 // ── KPI Cards ───────────────────────────────────────────────────────────────
@@ -1234,6 +1287,136 @@ function renderTopClients(m, label, isMulti) {
       <td>${pct}%</td>
     `;
     tbody.appendChild(tr);
+  });
+}
+
+// ── Cartera en riesgo ─────────────────────────────────────────────────────────
+// Independent of the Periodo filter -- always compares "today"'s calendar
+// month against the previous one, since that's what "en riesgo" means
+// regardless of which historical range is being reviewed elsewhere on the page.
+const RISK_STATUS_LABEL = { activa: 'Activa', atencion: 'Atención', riesgo: 'En riesgo', nuevo: 'Sin historial' };
+const RISK_STATUS_RANK  = { riesgo: 0, atencion: 1, nuevo: 2, activa: 3 };
+
+function riskMonthKeys() {
+  const now = new Date();
+  const y = now.getUTCFullYear(), m = now.getUTCMonth() + 1; // 1-12
+  const prevY = m === 1 ? y - 1 : y;
+  const prevM = m === 1 ? 12 : m - 1;
+  return {
+    current: `${y}-${String(m).padStart(2, '0')}`,
+    prev: `${prevY}-${String(prevM).padStart(2, '0')}`,
+    currentLabel: monthLabel(y, m),
+    prevLabel: monthLabel(prevY, prevM),
+  };
+}
+
+function buildRiskRoster() {
+  const { current, prev } = riskMonthKeys();
+  const rows = [];
+  for (const cid in clientVendorMap) {
+    const vendor = clientVendorMap[cid];
+    if (selectedVendor !== 'all' && vendor !== selectedVendor) continue;
+    const months = clientActivity[cid] || {};
+    const curVal = months[current] || 0;
+    const prevVal = months[prev] || 0;
+    let lastMonth = null, everBought = false;
+    Object.keys(months).sort().forEach(mk => {
+      if (months[mk] > 0) { everBought = true; lastMonth = mk; }
+    });
+    let status;
+    if (curVal > 0) status = 'activa';
+    else if (!everBought) status = 'nuevo';
+    else if (prevVal > 0) status = 'atencion';
+    else status = 'riesgo';
+
+    const meta = clientsMeta[cid] || {};
+    rows.push({
+      cid, vendor, status,
+      name: meta.name || cid,
+      rut: meta.rut || '',
+      current: curVal, prev: prevVal,
+      lastMonth,
+    });
+  }
+  return rows;
+}
+
+function renderRiskToolbar(rows) {
+  const counts = { todas: rows.length, activa: 0, atencion: 0, riesgo: 0, nuevo: 0 };
+  rows.forEach(r => counts[r.status]++);
+  const defs = [
+    ['todas', 'Todas'], ['activa', 'Activas'], ['atencion', 'Atención'],
+    ['riesgo', 'En riesgo'], ['nuevo', 'Sin historial'],
+  ];
+  const toolbar = document.getElementById('risk-toolbar');
+  toolbar.innerHTML = defs.map(([key, label]) => `
+    <button class="risk-chip ${riskStatusFilter === key ? 'active' : ''}" data-status="${key}">
+      ${label}<span class="n">${counts[key] || 0}</span>
+    </button>
+  `).join('') + `<input class="risk-search" type="search" placeholder="Buscar cuenta o RUT…" value="${riskSearch.replace(/"/g,'&quot;')}">`;
+
+  toolbar.querySelectorAll('.risk-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      riskStatusFilter = chip.dataset.status;
+      renderCarteraRiesgo();
+    });
+  });
+  const search = toolbar.querySelector('.risk-search');
+  search.addEventListener('input', e => {
+    riskSearch = e.target.value;
+    renderRiskTable(buildRiskRoster());
+  });
+}
+
+function renderRiskTable(rows) {
+  const { current, prev, currentLabel, prevLabel } = riskMonthKeys();
+  document.querySelector('#table-risk thead th[data-key="current"]').innerHTML = `Mes en curso (${currentLabel}) <span class="arrow"></span>`;
+  document.querySelector('#table-risk thead th[data-key="prev"]').innerHTML = `Mes anterior (${prevLabel}) <span class="arrow"></span>`;
+
+  let filtered = rows;
+  if (riskStatusFilter !== 'todas') filtered = filtered.filter(r => r.status === riskStatusFilter);
+  if (riskSearch.trim()) {
+    const q = riskSearch.trim().toLowerCase();
+    filtered = filtered.filter(r => r.name.toLowerCase().includes(q) || r.rut.toLowerCase().includes(q));
+  }
+  filtered = filtered.slice().sort((a, b) => {
+    let av = riskSortKey === 'status' ? RISK_STATUS_RANK[a.status] : a[riskSortKey];
+    let bv = riskSortKey === 'status' ? RISK_STATUS_RANK[b.status] : b[riskSortKey];
+    if (riskSortKey === 'lastMonth') { av = av || ''; bv = bv || ''; }
+    if (typeof av === 'string') return riskSortDir * av.localeCompare(bv);
+    return riskSortDir * ((av || 0) - (bv || 0));
+  });
+
+  document.getElementById('tbody-risk').innerHTML = filtered.map(r => `
+    <tr>
+      <td class="risk-name"><strong>${r.name}</strong><small>${r.rut}</small></td>
+      <td>${r.vendor}</td>
+      <td><span class="pill ${r.status === 'activa' ? 'ok' : r.status === 'atencion' ? 'mid' : r.status === 'riesgo' ? 'low' : 'neutral'}">${RISK_STATUS_LABEL[r.status]}</span></td>
+      <td>${r.current ? M(r.current) : '—'}</td>
+      <td>${r.prev ? M(r.prev) : '—'}</td>
+      <td>${r.lastMonth ? monthLabel(...r.lastMonth.split('-').map(Number)) : '—'}</td>
+    </tr>
+  `).join('');
+  document.getElementById('risk-count').textContent =
+    `${filtered.length} de ${rows.length} cuenta${rows.length === 1 ? '' : 's'}`;
+}
+
+function renderCarteraRiesgo() {
+  const label = selectedVendor === 'all' ? 'Todos los vendedores' : selectedVendor;
+  document.getElementById('table-risk-title').textContent = `Cartera en riesgo — ${label}`;
+  const rows = buildRiskRoster();
+  renderRiskToolbar(rows);
+  renderRiskTable(rows);
+
+  document.querySelectorAll('#table-risk thead th[data-key]').forEach(th => {
+    th.onclick = () => {
+      const key = th.dataset.key;
+      if (riskSortKey === key) riskSortDir *= -1;
+      else { riskSortKey = key; riskSortDir = (key === 'name' || key === 'vendor') ? 1 : -1; }
+      document.querySelectorAll('#table-risk thead .arrow').forEach(a => a.textContent = '');
+      th.querySelector('.arrow').textContent = riskSortDir === 1 ? '↑' : '↓';
+      renderRiskTable(buildRiskRoster());
+    };
   });
 }
 

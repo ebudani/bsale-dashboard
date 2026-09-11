@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-01T17:30:32.281056Z",
+  "updated_at": "2026-09-11T13:08:29.404731Z",
   "users": {
     "7": "Cindy Monsalves",
     "9": "Daisy Ponce",
@@ -3578,7 +3578,7 @@
       "rut": "77496632-3"
     },
     "1082": {
-      "name": "AMERICA ANDREA CATHERINE ARELLANO CID",
+      "name": "AMERICA ARELLANO CID",
       "rut": "17410660-6"
     },
     "1083": {
@@ -3772,10 +3772,6 @@
     "1131": {
       "name": "LUMIA SPA",
       "rut": "78368158-7"
-    },
-    "1132": {
-      "name": "servicios odontologicos y esteticos dra Galeb spa",
-      "rut": "77891671-1"
     },
     "1133": {
       "name": "SERVICIOS ODONTOLOGICOS GIULIANA BIGNOTTI SPA",
@@ -4212,6 +4208,110 @@
     "1243": {
       "name": "Clinica Gutierrez S.A",
       "rut": "96793590-5"
+    },
+    "1244": {
+      "name": "Karla Quevedo Muñoz",
+      "rut": "19586386-5"
+    },
+    "1245": {
+      "name": "ODONTOLOGIA SLS DENT SPA",
+      "rut": "77678316-1"
+    },
+    "1246": {
+      "name": "Inversiones Y Servicios Regenova Spa",
+      "rut": "78458537-9"
+    },
+    "1247": {
+      "name": "ANGELA VALERIA ARROYO SOBARZO SERVICIOS ODONTOLOGICOS",
+      "rut": "77096577-2"
+    },
+    "1248": {
+      "name": "SOCIEDAD DE PROFESIONALES DE SALUD SKIN LAB CAVANCHA LIMITADA",
+      "rut": "78481627-3"
+    },
+    "1249": {
+      "name": "MH ALLESTHETIC",
+      "rut": "77989094-5"
+    },
+    "1250": {
+      "name": "Bruggemann spa",
+      "rut": "77801061-5"
+    },
+    "1251": {
+      "name": "DRA CAMILA FORNI E.I.R.L.",
+      "rut": "76813645-9"
+    },
+    "1252": {
+      "name": "Servicio Odontológico Macarena Hald Spa",
+      "rut": "77408221-2"
+    },
+    "1253": {
+      "name": "ZIBÁ ODONTOLOGÍA & ESTÉTICA FACIAL SPA",
+      "rut": "77954165-7"
+    },
+    "1254": {
+      "name": "SERVICIOS ODONTOLÓGICOS MILB SPA",
+      "rut": "77341785-7"
+    },
+    "1255": {
+      "name": "THEREVOLVECLINIC SPA",
+      "rut": "78439037-3"
+    },
+    "1256": {
+      "name": "DANIELA ANDRADES SPA",
+      "rut": "78396309-4"
+    },
+    "1257": {
+      "name": "ODONTOLOGIA Y ESTETICA ULLOA SPA",
+      "rut": "78438634-1"
+    },
+    "1258": {
+      "name": "Yelitza Carolina Muñoz Salazar",
+      "rut": "26330799-2"
+    },
+    "1259": {
+      "name": "BelleClinique",
+      "rut": "77402567-7"
+    },
+    "1260": {
+      "name": "Quiropráctica y kinesiologia Simon Villalobos Spa",
+      "rut": "77470694-1"
+    },
+    "1261": {
+      "name": "Sociedad  Dr.Jaime Robles Pantoja y Cia. Ltda.",
+      "rut": "76838920-9"
+    },
+    "1262": {
+      "name": "Centro de estética dental Dermodent ltda",
+      "rut": "76791345-1"
+    },
+    "1263": {
+      "name": "ODONTOLOGIA ESTETICA MARCELA CASTILLO CASTRO EIRL",
+      "rut": "77535647-2"
+    },
+    "1264": {
+      "name": "VENUS CENTRO DE DERMOESTETICA Y BIENESTAR SPA",
+      "rut": "78148071-1"
+    },
+    "1265": {
+      "name": "Odontología Sapunar SpA",
+      "rut": "78295955-7"
+    },
+    "1266": {
+      "name": "SERVICIOS ODONTOLOGICOS Y ESTETICOS GALEB SPA",
+      "rut": "77891671-1"
+    },
+    "1267": {
+      "name": "SALUD Y BIENESTAR INTEGRAL SPA",
+      "rut": "78209021-6"
+    },
+    "1268": {
+      "name": "Servicios Odontológicos Ximena Álvarez Spa",
+      "rut": "77547056-9"
+    },
+    "1269": {
+      "name": "Servicios Odontológicos Maria Osorio",
+      "rut": "77525527-7"
     }
   },
   "months": [
@@ -26314,143 +26414,548 @@
     {
       "year": 2026,
       "month": 9,
-      "count_facturas": 4,
+      "count_facturas": 108,
       "count_nc": 0,
-      "neto_facturas": 2614914,
+      "neto_facturas": 92850771,
       "neto_nc": 0,
-      "total_neto": 2614914,
+      "total_neto": 92850771,
       "by_day": [
         {
           "date": "2026-09-01",
-          "count": 4,
-          "neto": 2614914
+          "count": 7,
+          "neto": 5332153
+        },
+        {
+          "date": "2026-09-02",
+          "count": 6,
+          "neto": 2480025
+        },
+        {
+          "date": "2026-09-03",
+          "count": 15,
+          "neto": 21789746
+        },
+        {
+          "date": "2026-09-04",
+          "count": 1,
+          "neto": 2378589
+        },
+        {
+          "date": "2026-09-06",
+          "count": 9,
+          "neto": 6978229
+        },
+        {
+          "date": "2026-09-07",
+          "count": 27,
+          "neto": 21416558
+        },
+        {
+          "date": "2026-09-08",
+          "count": 5,
+          "neto": 5833334
+        },
+        {
+          "date": "2026-09-09",
+          "count": 13,
+          "neto": 8178378
+        },
+        {
+          "date": "2026-09-10",
+          "count": 25,
+          "neto": 18463759
         }
       ],
       "by_vendor": {
-        "Monica Urrutia": {
-          "count": 2,
-          "neto": 1747793
+        "Daisy Ponce": {
+          "count": 22,
+          "neto": 19025371
         },
         "Cindy Monsalves": {
-          "count": 1,
-          "neto": 577117
+          "count": 36,
+          "neto": 27371146
+        },
+        "Monica Urrutia": {
+          "count": 27,
+          "neto": 33517868
         },
         "Sin asignar": {
-          "count": 1,
-          "neto": 290004
+          "count": 23,
+          "neto": 12936386
         }
       },
       "by_vendor_day": {
-        "Monica Urrutia": [
+        "Daisy Ponce": [
           {
             "date": "2026-09-01",
             "count": 2,
-            "neto": 1747793
+            "neto": 2441025
+          },
+          {
+            "date": "2026-09-02",
+            "count": 1,
+            "neto": 577117
+          },
+          {
+            "date": "2026-09-04",
+            "count": 1,
+            "neto": 2378589
+          },
+          {
+            "date": "2026-09-06",
+            "count": 1,
+            "neto": 1035758
+          },
+          {
+            "date": "2026-09-07",
+            "count": 6,
+            "neto": 5273161
+          },
+          {
+            "date": "2026-09-08",
+            "count": 1,
+            "neto": 507528
+          },
+          {
+            "date": "2026-09-09",
+            "count": 4,
+            "neto": 2381197
+          },
+          {
+            "date": "2026-09-10",
+            "count": 6,
+            "neto": 4430996
           }
         ],
         "Cindy Monsalves": [
           {
             "date": "2026-09-01",
+            "count": 4,
+            "neto": 2242605
+          },
+          {
+            "date": "2026-09-02",
+            "count": 3,
+            "neto": 1675252
+          },
+          {
+            "date": "2026-09-03",
+            "count": 3,
+            "neto": 3952064
+          },
+          {
+            "date": "2026-09-06",
+            "count": 3,
+            "neto": 2228611
+          },
+          {
+            "date": "2026-09-07",
+            "count": 9,
+            "neto": 6074248
+          },
+          {
+            "date": "2026-09-08",
+            "count": 2,
+            "neto": 1781041
+          },
+          {
+            "date": "2026-09-09",
+            "count": 3,
+            "neto": 1733263
+          },
+          {
+            "date": "2026-09-10",
+            "count": 9,
+            "neto": 7684062
+          }
+        ],
+        "Monica Urrutia": [
+          {
+            "date": "2026-09-01",
             "count": 1,
-            "neto": 577117
+            "neto": 648523
+          },
+          {
+            "date": "2026-09-03",
+            "count": 10,
+            "neto": 16901923
+          },
+          {
+            "date": "2026-09-06",
+            "count": 1,
+            "neto": 1218797
+          },
+          {
+            "date": "2026-09-07",
+            "count": 3,
+            "neto": 4016359
+          },
+          {
+            "date": "2026-09-08",
+            "count": 2,
+            "neto": 3544765
+          },
+          {
+            "date": "2026-09-09",
+            "count": 5,
+            "neto": 3441569
+          },
+          {
+            "date": "2026-09-10",
+            "count": 5,
+            "neto": 3745932
           }
         ],
         "Sin asignar": [
           {
-            "date": "2026-09-01",
+            "date": "2026-09-02",
+            "count": 2,
+            "neto": 227656
+          },
+          {
+            "date": "2026-09-03",
+            "count": 2,
+            "neto": 935759
+          },
+          {
+            "date": "2026-09-06",
+            "count": 4,
+            "neto": 2495063
+          },
+          {
+            "date": "2026-09-07",
+            "count": 9,
+            "neto": 6052790
+          },
+          {
+            "date": "2026-09-09",
             "count": 1,
-            "neto": 290004
+            "neto": 622349
+          },
+          {
+            "date": "2026-09-10",
+            "count": 5,
+            "neto": 2602769
           }
         ]
       },
       "by_brand": {
-        "Teoxane": 938527,
-        "RRS HA Long Lasting": 1676387,
+        "Teoxane": 75743371,
+        "RRS HA Long Lasting": 17107400,
         "FINE": 0
       },
       "by_vendor_brand": {
-        "Monica Urrutia": {
-          "Teoxane": 648523,
-          "RRS HA Long Lasting": 1099270,
+        "Daisy Ponce": {
+          "Teoxane": 14092395,
+          "RRS HA Long Lasting": 4932976,
           "FINE": 0
         },
         "Cindy Monsalves": {
-          "Teoxane": 0,
-          "RRS HA Long Lasting": 577117,
+          "Teoxane": 23125212,
+          "RRS HA Long Lasting": 4245934,
+          "FINE": 0
+        },
+        "Monica Urrutia": {
+          "Teoxane": 29464308,
+          "RRS HA Long Lasting": 4053560,
           "FINE": 0
         },
         "Sin asignar": {
-          "Teoxane": 290004,
-          "RRS HA Long Lasting": 0,
+          "Teoxane": 9061456,
+          "RRS HA Long Lasting": 3874930,
           "FINE": 0
         }
       },
       "by_sku": {
-        "Jeringa monodosis x 3mL (sin aguja)": 1676387,
-        "RHA KISS (2X0.7ml)": 143000,
-        "PureSense Ultra Deep (2X1.2ml)": 451703,
-        "RHA 4 (2X1.2ml)": 343824,
-        "RHA 3 (2X1ml)": 0
+        "Jeringa monodosis x 3mL (sin aguja)": 17107400,
+        "RHA KISS (2X0.7ml)": 756600,
+        "PureSense Ultra Deep (2X1.2ml)": 33578384,
+        "TEOSYAL RHA 4 (2X1.2ml)": 8453848,
+        "TEOSYAL RHA 3 (2X1ml)": 1794478,
+        "TEOSYAL RHA 1 (2X1ml)": 3785600,
+        "TEOSYAL RHA 2 (2X1ml)": 6812174,
+        "Redensity 2 (2X1ml)": 5084663,
+        "RHA 3 (2X1.2ml)": 2621600,
+        "Redensity 1 (1x3ml)": 6730200,
+        "Redensity 1 (2X1ml)": 661024,
+        "RHA Kiss Volume (2X1ml)": 5464800
       },
       "by_vendor_sku": {
-        "Monica Urrutia": {
-          "Jeringa monodosis x 3mL (sin aguja)": 1099270,
-          "RHA 4 (2X1.2ml)": 343824,
-          "PureSense Ultra Deep (2X1.2ml)": 304699,
-          "RHA 3 (2X1ml)": 0
+        "Daisy Ponce": {
+          "Jeringa monodosis x 3mL (sin aguja)": 4932976,
+          "PureSense Ultra Deep (2X1.2ml)": 7072228,
+          "TEOSYAL RHA 4 (2X1.2ml)": 1399424,
+          "TEOSYAL RHA 1 (2X1ml)": 351520,
+          "TEOSYAL RHA 2 (2X1ml)": 1536619,
+          "Redensity 2 (2X1ml)": 1245004,
+          "RHA 3 (2X1.2ml)": 495900,
+          "Redensity 1 (1x3ml)": 1125000,
+          "RHA Kiss Volume (2X1ml)": 866700
         },
         "Cindy Monsalves": {
-          "Jeringa monodosis x 3mL (sin aguja)": 577117
+          "Jeringa monodosis x 3mL (sin aguja)": 4245934,
+          "RHA KISS (2X0.7ml)": 429000,
+          "PureSense Ultra Deep (2X1.2ml)": 9619408,
+          "TEOSYAL RHA 3 (2X1ml)": 744629,
+          "TEOSYAL RHA 4 (2X1.2ml)": 2068976,
+          "RHA 3 (2X1.2ml)": 1960400,
+          "Redensity 2 (2X1ml)": 453460,
+          "Redensity 1 (1x3ml)": 2410200,
+          "RHA Kiss Volume (2X1ml)": 2308500,
+          "TEOSYAL RHA 1 (2X1ml)": 1537120,
+          "TEOSYAL RHA 2 (2X1ml)": 1344543,
+          "Redensity 1 (2X1ml)": 248976
+        },
+        "Monica Urrutia": {
+          "TEOSYAL RHA 4 (2X1.2ml)": 4125888,
+          "PureSense Ultra Deep (2X1.2ml)": 13235704,
+          "TEOSYAL RHA 3 (2X1ml)": 1049849,
+          "Redensity 2 (2X1ml)": 2326335,
+          "TEOSYAL RHA 2 (2X1ml)": 2881164,
+          "RHA Kiss Volume (2X1ml)": 1846800,
+          "Jeringa monodosis x 3mL (sin aguja)": 4053560,
+          "TEOSYAL RHA 1 (2X1ml)": 1778400,
+          "Redensity 1 (1x3ml)": 1560600,
+          "Redensity 1 (2X1ml)": 331968,
+          "RHA KISS (2X0.7ml)": 327600
         },
         "Sin asignar": {
-          "RHA KISS (2X0.7ml)": 143000,
-          "PureSense Ultra Deep (2X1.2ml)": 147004
+          "Redensity 2 (2X1ml)": 1059864,
+          "Redensity 1 (2X1ml)": 80080,
+          "Jeringa monodosis x 3mL (sin aguja)": 3874930,
+          "PureSense Ultra Deep (2X1.2ml)": 3651044,
+          "TEOSYAL RHA 4 (2X1.2ml)": 859560,
+          "TEOSYAL RHA 2 (2X1ml)": 1049848,
+          "TEOSYAL RHA 1 (2X1ml)": 118560,
+          "Redensity 1 (1x3ml)": 1634400,
+          "RHA Kiss Volume (2X1ml)": 442800,
+          "RHA 3 (2X1.2ml)": 165300
         }
       },
       "top_clients": [
         {
-          "id": "499",
-          "count": 1,
-          "neto": 1099270,
-          "teox_neto": 0,
-          "teox_units": 0,
-          "rrs_neto": 1099270,
-          "rrs_units": 10.0,
-          "name": "SOCIEDAD CLINICA DENTAL CARRASCO Y RENTERIA LTDA"
-        },
-        {
-          "id": "1071",
-          "count": 1,
-          "neto": 648523,
-          "teox_neto": 648523,
-          "teox_units": 5.0,
+          "id": "871",
+          "count": 2,
+          "neto": 3083426,
+          "teox_neto": 3083426,
+          "teox_units": 25.0,
           "rrs_neto": 0,
           "rrs_units": 0,
-          "name": "SERVICIOS MEDICOS JOHN JAIRO BONILLA AVILA GLANZ MEDICAL E.I.R.L."
+          "name": "FRANCISCA ÁLVAREZ QUINTANA SPA"
         },
         {
-          "id": "774",
+          "id": "1209",
           "count": 1,
-          "neto": 577117,
-          "teox_neto": 0,
-          "teox_units": 0,
-          "rrs_neto": 577117,
+          "neto": 3046992,
+          "teox_neto": 3046992,
+          "teox_units": 25.0,
+          "rrs_neto": 0,
+          "rrs_units": 0,
+          "name": "Inversiones Altamira Spa"
+        },
+        {
+          "id": "950",
+          "count": 1,
+          "neto": 2840333,
+          "teox_neto": 2840333,
+          "teox_units": 25.0,
+          "rrs_neto": 0,
+          "rrs_units": 0,
+          "name": "SERVICIOS PROFESIONALES JAVIERA MERCADO GOMEZ SPA"
+        },
+        {
+          "id": "517",
+          "count": 1,
+          "neto": 2740517,
+          "teox_neto": 2245845,
+          "teox_units": 19.0,
+          "rrs_neto": 494672,
           "rrs_units": 5.0,
-          "name": "BIUTIKA SPA"
+          "name": "SOCIEDAD MEDICA DE TECNOLOGÍA LIMITADA"
         },
         {
-          "id": "1240",
+          "id": "1052",
           "count": 1,
-          "neto": 290004,
-          "teox_neto": 290004,
-          "teox_units": 2.0,
+          "neto": 2438779,
+          "teox_neto": 2438779,
+          "teox_units": 20.0,
           "rrs_neto": 0,
           "rrs_units": 0,
-          "name": "Clínica Dental Dra.Nicole Díaz García Spa"
+          "name": "SERVICIOS MEDICOS LIMITADA"
+        },
+        {
+          "id": "1186",
+          "count": 1,
+          "neto": 2437594,
+          "teox_neto": 2437594,
+          "teox_units": 20.0,
+          "rrs_neto": 0,
+          "rrs_units": 0,
+          "name": "De Santiago Odontologia SPA"
+        },
+        {
+          "id": "920",
+          "count": 1,
+          "neto": 2378589,
+          "teox_neto": 2007585,
+          "teox_units": 17.0,
+          "rrs_neto": 371004,
+          "rrs_units": 3.0,
+          "name": "ASESORÍAS E INVERSIONES SF SPA"
+        },
+        {
+          "id": "954",
+          "count": 1,
+          "neto": 2352230,
+          "teox_neto": 2352230,
+          "teox_units": 20.0,
+          "rrs_neto": 0,
+          "rrs_units": 0,
+          "name": "THE FACE BAR SPA"
+        },
+        {
+          "id": "810",
+          "count": 1,
+          "neto": 2068418,
+          "teox_neto": 1821082,
+          "teox_units": 15.0,
+          "rrs_neto": 247336,
+          "rrs_units": 2.0,
+          "name": "SERVICIOS MEDICOS DRA LUCIANA SEBASTIANELLI SPA"
+        },
+        {
+          "id": "705",
+          "count": 1,
+          "neto": 1886207,
+          "teox_neto": 1886207,
+          "teox_units": 15.0,
+          "rrs_neto": 0,
+          "rrs_units": 0,
+          "name": "BPE ODONTOLOGIA Y ESTETICA FACIAL SPA"
+        },
+        {
+          "id": "1248",
+          "count": 2,
+          "neto": 1794177,
+          "teox_neto": 1794177,
+          "teox_units": 15.0,
+          "rrs_neto": 0,
+          "rrs_units": 0,
+          "name": "SOCIEDAD DE PROFESIONALES DE SALUD SKIN LAB CAVANCHA LIMITADA"
+        },
+        {
+          "id": "1010",
+          "count": 1,
+          "neto": 1713469,
+          "teox_neto": 1218797,
+          "teox_units": 10.0,
+          "rrs_neto": 494672,
+          "rrs_units": 5.0,
+          "name": "JAVIERA IGNACIA FLORES ALMARZA"
+        },
+        {
+          "id": "967",
+          "count": 1,
+          "neto": 1594723,
+          "teox_neto": 1594723,
+          "teox_units": 13.0,
+          "rrs_neto": 0,
+          "rrs_units": 0,
+          "name": "DRA CONSTANZA RODRIGUEZ SPA"
+        },
+        {
+          "id": "1172",
+          "count": 2,
+          "neto": 1587525,
+          "teox_neto": 515736,
+          "teox_units": 3.0,
+          "rrs_neto": 1071789,
+          "rrs_units": 10.0,
+          "name": "CONSULTORA Y SERVICIOS MEDICOS NATALY ROJO ROMERO"
+        },
+        {
+          "id": "963",
+          "count": 2,
+          "neto": 1556875,
+          "teox_neto": 1556875,
+          "teox_units": 15.0,
+          "rrs_neto": 0,
+          "rrs_units": 0,
+          "name": "SOCIEDAD ODONTOLÓGICA HV LIMITADA"
         }
       ],
       "top_clients_by_vendor": {
-        "Monica Urrutia": [
+        "Daisy Ponce": [
+          {
+            "id": "920",
+            "count": 1,
+            "neto": 2378589,
+            "teox_neto": 2007585,
+            "teox_units": 17.0,
+            "rrs_neto": 371004,
+            "rrs_units": 3.0,
+            "name": "ASESORÍAS E INVERSIONES SF SPA"
+          },
+          {
+            "id": "705",
+            "count": 1,
+            "neto": 1886207,
+            "teox_neto": 1886207,
+            "teox_units": 15.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "BPE ODONTOLOGIA Y ESTETICA FACIAL SPA"
+          },
+          {
+            "id": "1172",
+            "count": 2,
+            "neto": 1587525,
+            "teox_neto": 515736,
+            "teox_units": 3.0,
+            "rrs_neto": 1071789,
+            "rrs_units": 10.0,
+            "name": "CONSULTORA Y SERVICIOS MEDICOS NATALY ROJO ROMERO"
+          },
+          {
+            "id": "974",
+            "count": 1,
+            "neto": 1341755,
+            "teox_neto": 1341755,
+            "teox_units": 10.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "SERVICIOS ODONTOLÓGICOS ALEXANDRA MAC-KAY MARTINI SPA"
+          },
+          {
+            "id": "593",
+            "count": 2,
+            "neto": 1305758,
+            "teox_neto": 1305758,
+            "teox_units": 12.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "ODONTOLOGÍA Y ESTÉTICA INTEGRAL AVANZADA PILAR ROJO CASTRO E.I.R.L."
+          },
+          {
+            "id": "943",
+            "count": 1,
+            "neto": 1172740,
+            "teox_neto": 1172740,
+            "teox_units": 10.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "SOCIEDAD COMERCIAL Y SERVICIOS ODONTOLOGICOS CONTIDENTAL LIMITADA"
+          },
+          {
+            "id": "845",
+            "count": 1,
+            "neto": 1104070,
+            "teox_neto": 609398,
+            "teox_units": 5.0,
+            "rrs_neto": 494672,
+            "rrs_units": 5.0,
+            "name": "SOCIEDAD MEDICA AMMM SPA"
+          },
           {
             "id": "499",
             "count": 1,
@@ -26462,83 +26967,3862 @@
             "name": "SOCIEDAD CLINICA DENTAL CARRASCO Y RENTERIA LTDA"
           },
           {
-            "id": "1071",
+            "id": "568",
             "count": 1,
-            "neto": 648523,
-            "teox_neto": 648523,
+            "neto": 989343,
+            "teox_neto": 0,
+            "teox_units": 0,
+            "rrs_neto": 989343,
+            "rrs_units": 10.0,
+            "name": "INVERSIONES Y ESPECIALIDADES MEDICOS Y ODONTOLOGICAS DE LA VEGA SPA"
+          },
+          {
+            "id": "1182",
+            "count": 1,
+            "neto": 822798,
+            "teox_neto": 822798,
+            "teox_units": 7.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "ITALO BERRIOS MUÑOZ"
+          },
+          {
+            "id": "1207",
+            "count": 1,
+            "neto": 781722,
+            "teox_neto": 575609,
+            "teox_units": 5.0,
+            "rrs_neto": 206113,
+            "rrs_units": 2.0,
+            "name": "Inversiones y Servicios Médicos Soho Spa"
+          },
+          {
+            "id": "698",
+            "count": 1,
+            "neto": 717563,
+            "teox_neto": 511450,
+            "teox_units": 5.0,
+            "rrs_neto": 206113,
+            "rrs_units": 2.0,
+            "name": "KATHERINE ANTONELLA SCALIA MOLINA ESTETICA FACIAL EMPRESA INDIVIDUAL D"
+          },
+          {
+            "id": "678",
+            "count": 1,
+            "neto": 627182,
+            "teox_neto": 627182,
             "teox_units": 5.0,
             "rrs_neto": 0,
             "rrs_units": 0,
-            "name": "SERVICIOS MEDICOS JOHN JAIRO BONILLA AVILA GLANZ MEDICAL E.I.R.L."
+            "name": "PARRA CAMPOS ODONTOLOGÍA SPA"
+          },
+          {
+            "id": "1101",
+            "count": 1,
+            "neto": 609398,
+            "teox_neto": 609398,
+            "teox_units": 5.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "CLINICA PAULA SPA"
+          },
+          {
+            "id": "686",
+            "count": 1,
+            "neto": 609398,
+            "teox_neto": 609398,
+            "teox_units": 5.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "ODONTOLOGÍA MARÍA-JESÚS GHIRINGHELLI MORALES E.I.R.L."
           }
         ],
         "Cindy Monsalves": [
           {
-            "id": "774",
+            "id": "1209",
+            "count": 1,
+            "neto": 3046992,
+            "teox_neto": 3046992,
+            "teox_units": 25.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "Inversiones Altamira Spa"
+          },
+          {
+            "id": "950",
+            "count": 1,
+            "neto": 2840333,
+            "teox_neto": 2840333,
+            "teox_units": 25.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "SERVICIOS PROFESIONALES JAVIERA MERCADO GOMEZ SPA"
+          },
+          {
+            "id": "967",
+            "count": 1,
+            "neto": 1594723,
+            "teox_neto": 1594723,
+            "teox_units": 13.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "DRA CONSTANZA RODRIGUEZ SPA"
+          },
+          {
+            "id": "1242",
+            "count": 1,
+            "neto": 1230768,
+            "teox_neto": 1230768,
+            "teox_units": 10.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "Amanda Miranda"
+          },
+          {
+            "id": "600",
+            "count": 1,
+            "neto": 1209312,
+            "teox_neto": 1209312,
+            "teox_units": 10.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "CLÍNICA DRA.ROMINA VARGAS SPA"
+          },
+          {
+            "id": "929",
+            "count": 2,
+            "neto": 1109314,
+            "teox_neto": 614642,
+            "teox_units": 5.0,
+            "rrs_neto": 494672,
+            "rrs_units": 5.0,
+            "name": "SERVICIOS ODONTOLOGICOS DRA. PAULA ALBASINI SPA"
+          },
+          {
+            "id": "1143",
+            "count": 1,
+            "neto": 1085874,
+            "teox_neto": 962206,
+            "teox_units": 7.0,
+            "rrs_neto": 123668,
+            "rrs_units": 3.0,
+            "name": "Daniela Navarrete Aravena"
+          },
+          {
+            "id": "1070",
+            "count": 1,
+            "neto": 1019798,
+            "teox_neto": 1019798,
+            "teox_units": 10.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "MAGNOLIA TECNOLOGIA MEDICA Y ESTETICA SPA"
+          },
+          {
+            "id": "1150",
+            "count": 2,
+            "neto": 989344,
+            "teox_neto": 0,
+            "teox_units": 0,
+            "rrs_neto": 989344,
+            "rrs_units": 10.0,
+            "name": "SOCIEDAD DE SERVICIOS INTEGRALES DE SALUD Y ESTÉTICA LIMITADA"
+          },
+          {
+            "id": "1136",
+            "count": 1,
+            "neto": 905072,
+            "teox_neto": 410400,
+            "teox_units": 5.0,
+            "rrs_neto": 494672,
+            "rrs_units": 5.0,
+            "name": "Servicios Odontológicos Mafrasa Limitada"
+          },
+          {
+            "id": "1108",
+            "count": 1,
+            "neto": 762340,
+            "teox_neto": 762340,
+            "teox_units": 6.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "HEALTHY BODIES W&G SPA"
+          },
+          {
+            "id": "905",
+            "count": 1,
+            "neto": 695167,
+            "teox_neto": 695167,
+            "teox_units": 5.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "PALLINI LTDA."
+          },
+          {
+            "id": "1082",
+            "count": 1,
+            "neto": 661474,
+            "teox_neto": 661474,
+            "teox_units": 5.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "AMERICA ARELLANO CID"
+          },
+          {
+            "id": "934",
+            "count": 1,
+            "neto": 632062,
+            "teox_neto": 632062,
+            "teox_units": 5.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "SERVICIOS ODONTOLÓGICOS NICOLÁS GONZÁLEZ QUINTEROS E.I.R.L."
+          },
+          {
+            "id": "900",
+            "count": 1,
+            "neto": 624219,
+            "teox_neto": 624219,
+            "teox_units": 5.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "CMG ODONTOLOGÍA & MEDICINA ESTÉTICA SPA"
+          }
+        ],
+        "Monica Urrutia": [
+          {
+            "id": "871",
+            "count": 2,
+            "neto": 3083426,
+            "teox_neto": 3083426,
+            "teox_units": 25.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "FRANCISCA ÁLVAREZ QUINTANA SPA"
+          },
+          {
+            "id": "517",
+            "count": 1,
+            "neto": 2740517,
+            "teox_neto": 2245845,
+            "teox_units": 19.0,
+            "rrs_neto": 494672,
+            "rrs_units": 5.0,
+            "name": "SOCIEDAD MEDICA DE TECNOLOGÍA LIMITADA"
+          },
+          {
+            "id": "1052",
+            "count": 1,
+            "neto": 2438779,
+            "teox_neto": 2438779,
+            "teox_units": 20.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "SERVICIOS MEDICOS LIMITADA"
+          },
+          {
+            "id": "1186",
+            "count": 1,
+            "neto": 2437594,
+            "teox_neto": 2437594,
+            "teox_units": 20.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "De Santiago Odontologia SPA"
+          },
+          {
+            "id": "954",
+            "count": 1,
+            "neto": 2352230,
+            "teox_neto": 2352230,
+            "teox_units": 20.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "THE FACE BAR SPA"
+          },
+          {
+            "id": "810",
+            "count": 1,
+            "neto": 2068418,
+            "teox_neto": 1821082,
+            "teox_units": 15.0,
+            "rrs_neto": 247336,
+            "rrs_units": 2.0,
+            "name": "SERVICIOS MEDICOS DRA LUCIANA SEBASTIANELLI SPA"
+          },
+          {
+            "id": "1010",
+            "count": 1,
+            "neto": 1713469,
+            "teox_neto": 1218797,
+            "teox_units": 10.0,
+            "rrs_neto": 494672,
+            "rrs_units": 5.0,
+            "name": "JAVIERA IGNACIA FLORES ALMARZA"
+          },
+          {
+            "id": "963",
+            "count": 2,
+            "neto": 1556875,
+            "teox_neto": 1556875,
+            "teox_units": 15.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "SOCIEDAD ODONTOLÓGICA HV LIMITADA"
+          },
+          {
+            "id": "986",
+            "count": 1,
+            "neto": 1306230,
+            "teox_neto": 1306230,
+            "teox_units": 10.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "CLINICA ODONTOLOGICA Y ESTETICA DRA. NATALIA DROGUETT SPA"
+          },
+          {
+            "id": "597",
+            "count": 1,
+            "neto": 1299418,
+            "teox_neto": 1299418,
+            "teox_units": 10.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "DR MATTATALL SPA"
+          },
+          {
+            "id": "1035",
+            "count": 1,
+            "neto": 1218797,
+            "teox_neto": 1218797,
+            "teox_units": 10.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "MEDICINA ESTETICA FACIAL DRA. HEIDY CORTEZ SPA"
+          },
+          {
+            "id": "1013",
+            "count": 1,
+            "neto": 1199827,
+            "teox_neto": 1199827,
+            "teox_units": 12.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "THE FACE PROJECT SPA"
+          },
+          {
+            "id": "1129",
+            "count": 1,
+            "neto": 1107171,
+            "teox_neto": 612499,
+            "teox_units": 5.0,
+            "rrs_neto": 494672,
+            "rrs_units": 5.0,
+            "name": "WHITING MEDICINA ESTETICA SPA"
+          },
+          {
+            "id": "627",
+            "count": 1,
+            "neto": 1099270,
+            "teox_neto": 0,
+            "teox_units": 0,
+            "rrs_neto": 1099270,
+            "rrs_units": 10.0,
+            "name": "VITAL STETIC SPA"
+          },
+          {
+            "id": "862",
+            "count": 1,
+            "neto": 1099270,
+            "teox_neto": 0,
+            "teox_units": 0,
+            "rrs_neto": 1099270,
+            "rrs_units": 10.0,
+            "name": "SOCIEDAD CLINICA CHICUREO SPA"
+          }
+        ],
+        "Sin asignar": [
+          {
+            "id": "1248",
+            "count": 2,
+            "neto": 1794177,
+            "teox_neto": 1794177,
+            "teox_units": 15.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "SOCIEDAD DE PROFESIONALES DE SALUD SKIN LAB CAVANCHA LIMITADA"
+          },
+          {
+            "id": "1267",
+            "count": 1,
+            "neto": 1209312,
+            "teox_neto": 1209312,
+            "teox_units": 10.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "SALUD Y BIENESTAR INTEGRAL SPA"
+          },
+          {
+            "id": "1254",
+            "count": 1,
+            "neto": 1206986,
+            "teox_neto": 1206986,
+            "teox_units": 10.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "SERVICIOS ODONTOLÓGICOS MILB SPA"
+          },
+          {
+            "id": "1255",
+            "count": 1,
+            "neto": 1122398,
+            "teox_neto": 1122398,
+            "teox_units": 10.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "THEREVOLVECLINIC SPA"
+          },
+          {
+            "id": "1246",
+            "count": 1,
+            "neto": 820800,
+            "teox_neto": 820800,
+            "teox_units": 10.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "Inversiones Y Servicios Regenova Spa"
+          },
+          {
+            "id": "1252",
+            "count": 1,
+            "neto": 649709,
+            "teox_neto": 649709,
+            "teox_units": 5.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "Servicio Odontológico Macarena Hald Spa"
+          },
+          {
+            "id": "1256",
+            "count": 1,
+            "neto": 648572,
+            "teox_neto": 153900,
+            "teox_units": 1.0,
+            "rrs_neto": 494672,
+            "rrs_units": 5.0,
+            "name": "DANIELA ANDRADES SPA"
+          },
+          {
+            "id": "1251",
+            "count": 1,
+            "neto": 641676,
+            "teox_neto": 147004,
+            "teox_units": 1.0,
+            "rrs_neto": 494672,
+            "rrs_units": 5.0,
+            "name": "DRA CAMILA FORNI E.I.R.L."
+          },
+          {
+            "id": "1247",
+            "count": 1,
+            "neto": 626589,
+            "teox_neto": 626589,
+            "teox_units": 5.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "ANGELA VALERIA ARROYO SOBARZO SERVICIOS ODONTOLOGICOS"
+          },
+          {
+            "id": "1265",
+            "count": 1,
+            "neto": 622349,
+            "teox_neto": 622349,
+            "teox_units": 5.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "Odontología Sapunar SpA"
+          },
+          {
+            "id": "1261",
             "count": 1,
             "neto": 577117,
             "teox_neto": 0,
             "teox_units": 0,
             "rrs_neto": 577117,
             "rrs_units": 5.0,
-            "name": "BIUTIKA SPA"
-          }
-        ],
-        "Sin asignar": [
+            "name": "Sociedad  Dr.Jaime Robles Pantoja y Cia. Ltda."
+          },
           {
-            "id": "1240",
+            "id": "1259",
             "count": 1,
-            "neto": 290004,
-            "teox_neto": 290004,
-            "teox_units": 2.0,
-            "rrs_neto": 0,
-            "rrs_units": 0,
-            "name": "Clínica Dental Dra.Nicole Díaz García Spa"
+            "neto": 494672,
+            "teox_neto": 0,
+            "teox_units": 0,
+            "rrs_neto": 494672,
+            "rrs_units": 5.0,
+            "name": "BelleClinique"
+          },
+          {
+            "id": "1250",
+            "count": 1,
+            "neto": 494672,
+            "teox_neto": 0,
+            "teox_units": 0,
+            "rrs_neto": 494672,
+            "rrs_units": 5.0,
+            "name": "Bruggemann spa"
+          },
+          {
+            "id": "590",
+            "count": 1,
+            "neto": 494672,
+            "teox_neto": 0,
+            "teox_units": 0,
+            "rrs_neto": 494672,
+            "rrs_units": 5.0,
+            "name": "PIAL ODONTOLOGÍA INTEGRAL Y ESTÉTICA FACIAL SPA"
+          },
+          {
+            "id": "1249",
+            "count": 1,
+            "neto": 309170,
+            "teox_neto": 0,
+            "teox_units": 0,
+            "rrs_neto": 309170,
+            "rrs_units": 3.0,
+            "name": "MH ALLESTHETIC"
           }
         ]
       },
       "brand_productivity": {
         "Teoxane": {
-          "clients": 2,
-          "units": 7.0
+          "clients": 82,
+          "units": 639.0
         },
         "RRS HA Long Lasting": {
-          "clients": 2,
-          "units": 15.0
+          "clients": 32,
+          "units": 167.0
         }
       },
       "brand_productivity_by_vendor": {
-        "Monica Urrutia": {
+        "Daisy Ponce": {
           "Teoxane": {
-            "clients": 1,
-            "units": 5.0
+            "clients": 17,
+            "units": 118.0
           },
           "RRS HA Long Lasting": {
-            "clients": 1,
-            "units": 10.0
+            "clients": 8,
+            "units": 47.0
           }
         },
         "Cindy Monsalves": {
           "Teoxane": {
-            "clients": 0,
-            "units": 0
+            "clients": 28,
+            "units": 195.0
           },
           "RRS HA Long Lasting": {
-            "clients": 1,
-            "units": 5.0
+            "clients": 8,
+            "units": 43.0
+          }
+        },
+        "Monica Urrutia": {
+          "Teoxane": {
+            "clients": 22,
+            "units": 248.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 7,
+            "units": 39.0
           }
         },
         "Sin asignar": {
           "Teoxane": {
-            "clients": 1,
-            "units": 2.0
+            "clients": 15,
+            "units": 78.0
           },
           "RRS HA Long Lasting": {
-            "clients": 0,
-            "units": 0
+            "clients": 9,
+            "units": 38.0
           }
         }
       }
     }
-  ]
+  ],
+  "client_activity": {
+    "980": {
+      "2025-07": 1000000
+    },
+    "785": {
+      "2024-12": 98784,
+      "2025-08": 0,
+      "2025-09": 165155,
+      "2025-12": 165155
+    },
+    "429": {
+      "2024-12": 2060214,
+      "2026-04": 0,
+      "2025-02": 1407672
+    },
+    "822": {
+      "2025-01": 518616,
+      "2025-03": 1014490,
+      "2025-04": 855635,
+      "2025-05": 707490,
+      "2025-08": 810905,
+      "2026-01": 455155,
+      "2026-06": 301600,
+      "2026-07": 263120,
+      "2026-08": 735790
+    },
+    "570": {
+      "2025-01": 324135,
+      "2024-12": 1407672,
+      "2025-02": 648270,
+      "2025-03": 1506214,
+      "2025-04": 1506214,
+      "2025-07": 1506214,
+      "2025-08": 1506214,
+      "2025-10": 1506214,
+      "2026-01": 1506214,
+      "2026-02": 1506214,
+      "2026-05": 1566460,
+      "2026-07": 1566460,
+      "2026-08": 1566460
+    },
+    "597": {
+      "2025-03": 3196560,
+      "2025-07": 2134080,
+      "2025-04": 647640,
+      "2025-05": 2289120,
+      "2025-08": 1171920,
+      "2025-09": 808260,
+      "2025-10": 3936320,
+      "2025-12": 2079360,
+      "2026-01": 2868240,
+      "2026-02": 1985880,
+      "2026-03": 2793456,
+      "2026-04": 474240,
+      "2026-05": 2418806,
+      "2026-06": 2314474,
+      "2026-08": 3066326,
+      "2026-09": 1299418
+    },
+    "869": {
+      "2025-03": 1254160,
+      "2025-07": 966420,
+      "2025-02": 637560,
+      "2025-05": 1285200,
+      "2025-08": 893190,
+      "2025-09": 585960,
+      "2025-11": 648270,
+      "2025-12": 323820,
+      "2026-01": 323820
+    },
+    "884": {
+      "2025-03": 1819560,
+      "2025-08": 1819560,
+      "2025-04": 1819560,
+      "2025-06": 1819560,
+      "2025-09": 1819560,
+      "2025-11": 1819560,
+      "2025-12": 606520,
+      "2026-01": 3426920,
+      "2026-02": 1819560,
+      "2026-04": 1892342,
+      "2026-06": 1892342,
+      "2026-09": 561199
+    },
+    "584": {
+      "2025-03": 1004142,
+      "2024-12": 987840,
+      "2025-06": 1056992,
+      "2025-12": 1704632,
+      "2026-04": 1099270
+    },
+    "895": {
+      "2025-03": 506520,
+      "2025-04": 159390,
+      "2025-05": 665910,
+      "2025-10": 645120,
+      "2026-01": 1232200
+    },
+    "591": {
+      "2025-04": 3879840,
+      "2025-06": 472000,
+      "2025-07": 1115080,
+      "2025-08": 475519,
+      "2025-09": 2348400,
+      "2025-10": 976000,
+      "2025-11": 1254160,
+      "2025-12": 410610,
+      "2026-01": 2737330,
+      "2026-03": 5077472,
+      "2026-04": 1978687,
+      "2026-05": 1703984,
+      "2026-06": 150000,
+      "2026-07": 2442336,
+      "2026-08": 3519558
+    },
+    "903": {
+      "2025-04": 1819560,
+      "2026-05": 1882525,
+      "2025-06": 647640,
+      "2025-07": 1254160,
+      "2025-08": 1254160,
+      "2025-10": 1254160,
+      "2025-11": 1254160,
+      "2026-01": 2430640,
+      "2026-02": 1254160,
+      "2026-03": 1304326,
+      "2026-06": 1304326,
+      "2026-08": 841932,
+      "2026-09": 1068732
+    },
+    "914": {
+      "2025-04": 646380
+    },
+    "916": {
+      "2025-04": 4202921,
+      "2025-06": 3083130,
+      "2025-08": 2525100,
+      "2025-12": 1322400,
+      "2026-01": 1171920,
+      "2026-03": 2221997,
+      "2026-08": 2475031
+    },
+    "782": {
+      "2025-04": 0,
+      "2025-09": 46672,
+      "2025-02": 987840,
+      "2025-03": 1902586,
+      "2025-06": 1949258,
+      "2025-08": 46672,
+      "2025-11": 1995930,
+      "2026-01": 1902586,
+      "2026-04": 1978687,
+      "2026-07": 1978687
+    },
+    "934": {
+      "2025-05": 660870,
+      "2026-08": 803325,
+      "2026-09": 632062
+    },
+    "733": {
+      "2025-05": 0
+    },
+    "847": {
+      "2025-05": 972806,
+      "2024-12": 98784,
+      "2026-09": 624218
+    },
+    "921": {
+      "2025-06": 2383880,
+      "2026-02": 2485200,
+      "2025-05": 2526240,
+      "2025-07": 1938000,
+      "2025-08": 3085912,
+      "2025-09": 4083480,
+      "2025-10": 3354654,
+      "2025-11": 1762440,
+      "2025-12": 1732800,
+      "2026-01": 2667600,
+      "2026-03": 7452408,
+      "2026-04": 1216608,
+      "2026-05": 2513654,
+      "2026-06": 2641700,
+      "2026-07": 1514470,
+      "2026-08": 4831962
+    },
+    "917": {
+      "2025-06": -1202561,
+      "2025-04": 1202561
+    },
+    "941": {
+      "2025-06": 1255380
+    },
+    "569": {
+      "2025-06": 2527380,
+      "2025-10": 2115840,
+      "2024-12": 926100,
+      "2025-03": 1528133,
+      "2025-07": 319200,
+      "2025-09": 453720,
+      "2025-11": 2888152,
+      "2026-01": 1539533,
+      "2026-03": 2647722,
+      "2026-06": 2011513,
+      "2026-08": 4013716
+    },
+    "633": {
+      "2025-06": 643860,
+      "2025-04": 1251720,
+      "2025-08": 1144076,
+      "2025-09": 1026540,
+      "2026-02": 647010,
+      "2026-05": 494672
+    },
+    "705": {
+      "2025-07": 923471,
+      "2025-08": 1259040,
+      "2025-11": 4162041,
+      "2026-01": 2358090,
+      "2026-02": 2934360,
+      "2026-04": 1892342,
+      "2026-06": 1950635,
+      "2026-07": 1884979,
+      "2026-08": 1969292,
+      "2026-09": 1886207
+    },
+    "888": {
+      "2025-07": 1937830,
+      "2025-03": 648900,
+      "2025-04": 1986390,
+      "2025-05": 1289610,
+      "2025-06": 647640,
+      "2025-08": 689220,
+      "2025-09": 1242990,
+      "2025-10": 1421280,
+      "2025-11": 645120,
+      "2025-12": 652680,
+      "2026-03": 3441505,
+      "2026-05": 1362056,
+      "2026-06": 2080800,
+      "2026-07": 1303692,
+      "2026-08": 2033771
+    },
+    "613": {
+      "2025-07": 1764720,
+      "2025-04": 2934360,
+      "2025-05": 2934360,
+      "2025-06": 3497520
+    },
+    "901": {
+      "2025-07": 1830735,
+      "2025-09": 0,
+      "2025-04": 951293,
+      "2025-08": 1769850,
+      "2026-06": 2773350
+    },
+    "871": {
+      "2025-07": 2330160,
+      "2025-02": 3479280,
+      "2025-09": 2037180,
+      "2025-10": 330600,
+      "2026-01": 2367780,
+      "2026-04": 2630027,
+      "2026-07": 2512287,
+      "2026-09": 3083426
+    },
+    "965": {
+      "2025-07": 1246840,
+      "2026-01": 1411540,
+      "2026-07": 609991
+    },
+    "777": {
+      "2025-07": 3106841,
+      "2025-03": 554921,
+      "2025-05": 475646,
+      "2025-06": 1202561,
+      "2025-08": 951293,
+      "2025-09": 1298430,
+      "2025-10": 1906080,
+      "2025-12": 650160,
+      "2026-01": 648270,
+      "2026-07": 673546
+    },
+    "963": {
+      "2025-08": 1334680,
+      "2025-07": 1624430,
+      "2025-10": 1911600,
+      "2025-11": 643230,
+      "2026-01": 1249280,
+      "2026-02": 640710,
+      "2026-03": 1813803,
+      "2026-06": 787601,
+      "2026-07": 2907199,
+      "2026-09": 1556875
+    },
+    "994": {
+      "2025-08": 624150
+    },
+    "791": {
+      "2025-09": 0,
+      "2025-06": 81993
+    },
+    "477": {
+      "2025-09": 647640,
+      "2025-05": 648270,
+      "2025-06": 810810,
+      "2025-08": 647640,
+      "2025-12": 1819560,
+      "2026-03": 673546,
+      "2026-05": 673546,
+      "2026-06": 673546,
+      "2026-08": 673546
+    },
+    "922": {
+      "2025-09": 554921,
+      "2025-05": 554921,
+      "2025-06": 554921,
+      "2025-07": 554921,
+      "2025-11": 554921,
+      "2025-12": 554921
+    },
+    "860": {
+      "2025-09": 13777896,
+      "2025-01": 6361181,
+      "2025-02": 1951997,
+      "2025-03": 5242216,
+      "2025-04": 7379019,
+      "2025-05": 23291061,
+      "2025-06": 27335172,
+      "2025-07": 18260268,
+      "2025-08": 7643969,
+      "2025-10": 21018737,
+      "2025-11": 19299728,
+      "2025-12": 23399757,
+      "2026-01": 8804643,
+      "2026-02": 15050481,
+      "2026-03": 16605612,
+      "2026-04": 14931306,
+      "2026-05": 11671844,
+      "2026-06": 15864234,
+      "2026-07": 12639131,
+      "2026-08": 13855930
+    },
+    "438": {
+      "2025-10": 1842240,
+      "2025-05": 165155,
+      "2025-08": 1249440,
+      "2025-11": 467400,
+      "2025-12": 1835400,
+      "2026-05": 2501616,
+      "2026-06": 611770
+    },
+    "1053": {
+      "2025-10": 0
+    },
+    "474": {
+      "2025-10": 1277950,
+      "2025-02": 324135,
+      "2025-03": 653225,
+      "2025-05": 647640,
+      "2025-07": 646380,
+      "2025-08": 1737390,
+      "2025-11": 1173060,
+      "2025-12": 1290760,
+      "2026-08": 1486785
+    },
+    "715": {
+      "2025-11": 1153680,
+      "2025-01": 1407672,
+      "2025-03": 1902586,
+      "2025-08": 585390,
+      "2025-10": 2185182,
+      "2026-03": 1978687,
+      "2026-05": 2084468
+    },
+    "620": {
+      "2025-11": 0,
+      "2026-02": 11981400
+    },
+    "883": {
+      "2025-11": 0,
+      "2025-03": 1254160,
+      "2025-07": 1254160,
+      "2025-10": 1254160,
+      "2026-02": 1295280,
+      "2026-04": 2651418
+    },
+    "547": {
+      "2025-12": 2344410,
+      "2025-03": 1521020
+    },
+    "943": {
+      "2025-12": 1254160,
+      "2025-06": 1295280,
+      "2025-07": 647640,
+      "2025-08": 585960,
+      "2025-09": 647640,
+      "2025-10": 647640,
+      "2025-11": 647640,
+      "2026-07": 673546,
+      "2026-08": 673546,
+      "2026-09": 1172740
+    },
+    "1075": {
+      "2025-12": 554921,
+      "2025-11": 297279
+    },
+    "890": {
+      "2026-01": 334100,
+      "2025-03": 1819560,
+      "2025-05": 1819560,
+      "2025-08": 647640,
+      "2025-09": 1254160,
+      "2025-10": 1254160,
+      "2025-11": 1295280,
+      "2025-12": 961180,
+      "2026-02": 1295280,
+      "2026-06": 1304326
+    },
+    "517": {
+      "2026-01": 1864591,
+      "2024-12": 3582519,
+      "2025-01": 1407672,
+      "2025-03": 1506214,
+      "2025-05": 2540146,
+      "2025-06": 637560,
+      "2025-08": 1701716,
+      "2025-09": 1056992,
+      "2025-10": 1890950,
+      "2025-11": 2390452,
+      "2025-12": 1056992,
+      "2026-02": 2153854,
+      "2026-03": 1377917,
+      "2026-04": 1566460,
+      "2026-05": 2672093,
+      "2026-06": 2567417,
+      "2026-07": 2171663,
+      "2026-09": 2740517
+    },
+    "1009": {
+      "2026-01": 964530,
+      "2025-08": 643230,
+      "2025-12": 324450,
+      "2026-04": 672235,
+      "2026-08": 674856
+    },
+    "1093": {
+      "2026-01": 1812480,
+      "2026-06": 1846983
+    },
+    "542": {
+      "2026-01": 1748760,
+      "2026-04": 2950854
+    },
+    "900": {
+      "2026-01": 647640,
+      "2025-04": 647640,
+      "2025-08": 1244400,
+      "2025-10": 647640,
+      "2025-11": 667170,
+      "2026-02": 665910,
+      "2026-04": 673546,
+      "2026-05": 599914,
+      "2026-08": 674201,
+      "2026-09": 624219
+    },
+    "536": {
+      "2026-02": 2378232,
+      "2026-04": 3987828,
+      "2025-01": 1274985,
+      "2025-02": 3606660,
+      "2025-03": 2162850,
+      "2025-05": 432630,
+      "2025-06": 951293,
+      "2025-07": 3065386,
+      "2025-08": 1528133,
+      "2025-09": 1642952,
+      "2025-10": 1537253,
+      "2025-11": 1537253,
+      "2025-12": 3794378,
+      "2026-01": 1528133,
+      "2026-05": 1281725,
+      "2026-06": 4539178,
+      "2026-07": 2993283,
+      "2026-08": 1003200
+    },
+    "1110": {
+      "2026-02": 1809530
+    },
+    "1116": {
+      "2026-03": 0
+    },
+    "1091": {
+      "2026-03": 4680749,
+      "2025-12": 1819560,
+      "2026-01": 1820150,
+      "2026-02": 1810120,
+      "2026-04": 2439965,
+      "2026-05": 878400,
+      "2026-06": 2437594,
+      "2026-07": 2438779,
+      "2026-08": 2437594
+    },
+    "1097": {
+      "2026-03": 288420,
+      "2026-04": 0
+    },
+    "593": {
+      "2026-04": 1323358,
+      "2025-01": 98304,
+      "2025-09": 647640,
+      "2025-11": 830340,
+      "2025-12": 647640,
+      "2026-02": 1358280,
+      "2026-03": 1218797,
+      "2026-06": 673546,
+      "2026-07": 1931651,
+      "2026-08": 1941481,
+      "2026-09": 1305758
+    },
+    "1080": {
+      "2026-05": 1972101,
+      "2026-07": 1642831,
+      "2025-11": 1250500,
+      "2026-02": 805140,
+      "2026-03": 674201,
+      "2026-04": 674201
+    },
+    "1148": {
+      "2026-05": -609398,
+      "2026-04": 609398
+    },
+    "1068": {
+      "2026-05": 725408,
+      "2025-11": 650790,
+      "2026-04": 695823,
+      "2026-06": 2054406,
+      "2026-08": 670925
+    },
+    "1173": {
+      "2026-06": 3110382
+    },
+    "893": {
+      "2026-06": 2482647,
+      "2025-03": 530700,
+      "2025-04": 771650,
+      "2025-08": 2039630,
+      "2026-02": 1164490,
+      "2026-08": 1388067
+    },
+    "1002": {
+      "2026-06": 577117,
+      "2025-08": 475646
+    },
+    "995": {
+      "2026-08": 1520064,
+      "2025-08": 1415200,
+      "2025-09": 1378440,
+      "2025-10": 730800,
+      "2025-12": 1888000,
+      "2026-01": 1643340,
+      "2026-03": 1377917,
+      "2026-04": 1402045,
+      "2026-05": 760032,
+      "2026-06": 1388067,
+      "2026-07": 1423094
+    },
+    "908": {
+      "2026-08": 2752661,
+      "2025-04": 1937560,
+      "2025-08": 623580,
+      "2025-09": 627080,
+      "2025-10": 1316380,
+      "2026-02": 2065480
+    },
+    "824": {
+      "2024-12": 672966,
+      "2025-01": 478485,
+      "2025-02": 324135,
+      "2025-05": 990930,
+      "2025-08": 1109842,
+      "2025-09": 554921,
+      "2025-10": 554921,
+      "2025-11": 1109842,
+      "2026-01": 554921,
+      "2026-04": 1154234,
+      "2026-05": 577117,
+      "2026-06": 1676387,
+      "2026-07": 1154234
+    },
+    "479": {
+      "2024-12": 588345,
+      "2025-11": 975240
+    },
+    "443": {
+      "2024-12": 159030,
+      "2025-01": 98304
+    },
+    "458": {
+      "2024-12": 196608,
+      "2025-06": 642600,
+      "2025-08": 807660,
+      "2026-03": 579804,
+      "2026-05": 816789,
+      "2026-06": 691236,
+      "2026-08": 635594,
+      "2026-09": 630511
+    },
+    "600": {
+      "2024-12": 1407672,
+      "2025-07": 645750,
+      "2025-08": 1162800,
+      "2025-09": 3062390,
+      "2025-10": 1830180,
+      "2025-11": 2449180,
+      "2025-12": 1411540,
+      "2026-01": 1255380,
+      "2026-02": 1255380,
+      "2026-03": 1469271,
+      "2026-05": 1895411,
+      "2026-07": 2755221,
+      "2026-09": 1209312
+    },
+    "566": {
+      "2024-12": 153737
+    },
+    "830": {
+      "2024-12": 518616,
+      "2025-01": 324135,
+      "2025-02": 648270,
+      "2025-03": 554921,
+      "2025-05": 554921,
+      "2025-06": 554921,
+      "2025-07": 554921,
+      "2025-08": 554921,
+      "2025-09": 554921,
+      "2025-11": 554921,
+      "2026-01": 554921,
+      "2026-03": 554921
+    },
+    "562": {
+      "2024-12": 299791,
+      "2025-10": 1247160,
+      "2025-11": 1247160,
+      "2026-03": 1631981,
+      "2026-04": 1133234,
+      "2026-05": 1388067
+    },
+    "793": {
+      "2024-12": 324135,
+      "2025-01": 431179,
+      "2025-05": 554921,
+      "2025-07": 554921,
+      "2025-10": 554921,
+      "2026-01": 554921,
+      "2026-07": 577117
+    },
+    "774": {
+      "2024-12": 324135,
+      "2025-01": 518616,
+      "2025-04": 554921,
+      "2025-06": 554921,
+      "2025-09": 554921,
+      "2025-10": 554921,
+      "2025-11": 554921,
+      "2026-02": 554921,
+      "2026-04": 577117,
+      "2026-07": 577117,
+      "2026-09": 577117
+    },
+    "568": {
+      "2024-12": 987840,
+      "2025-07": 554921,
+      "2026-02": 1056992,
+      "2026-07": 577117,
+      "2026-08": 577117,
+      "2026-09": 989343
+    },
+    "480": {
+      "2024-12": 172872,
+      "2025-02": 864360,
+      "2025-04": 1017940,
+      "2025-07": 647780,
+      "2025-08": 1110480,
+      "2025-12": 647780
+    },
+    "763": {
+      "2024-12": 681215
+    },
+    "745": {
+      "2024-12": 839664,
+      "2025-01": 2938824,
+      "2025-02": 419832,
+      "2025-04": 898444,
+      "2025-05": 449222,
+      "2025-09": 898443,
+      "2025-10": 898444
+    },
+    "846": {
+      "2024-12": 518616,
+      "2025-04": 554921,
+      "2025-06": 554921,
+      "2025-10": 554921,
+      "2025-12": 1056992,
+      "2026-01": 554921
+    },
+    "748": {
+      "2024-12": 296352
+    },
+    "848": {
+      "2024-12": 98784
+    },
+    "807": {
+      "2024-12": 98784
+    },
+    "849": {
+      "2024-12": 93844
+    },
+    "850": {
+      "2024-12": 187688
+    },
+    "851": {
+      "2024-12": 154350
+    },
+    "505": {
+      "2024-12": 288177
+    },
+    "852": {
+      "2024-12": 324135
+    },
+    "651": {
+      "2024-12": 1407672,
+      "2025-02": 1407672,
+      "2025-03": 3367664,
+      "2025-04": 1839620,
+      "2025-05": 2388641,
+      "2025-06": 2902751,
+      "2025-08": 2443020,
+      "2025-09": 1160520,
+      "2025-10": 1216121,
+      "2025-11": 554921,
+      "2025-12": 1680572,
+      "2026-01": 1694040,
+      "2026-02": 1095540,
+      "2026-04": 1855038,
+      "2026-05": 599913,
+      "2026-06": 4555075,
+      "2026-07": 1685924,
+      "2026-08": 4261048
+    },
+    "502": {
+      "2024-12": 1064748,
+      "2025-01": 518616
+    },
+    "853": {
+      "2024-12": 231525
+    },
+    "854": {
+      "2024-12": 30748
+    },
+    "855": {
+      "2024-12": 518616
+    },
+    "773": {
+      "2024-12": 1876896,
+      "2025-02": 1876896,
+      "2025-04": 3237038,
+      "2025-09": 1506214,
+      "2025-10": 1902586,
+      "2026-03": 3957374,
+      "2026-07": 1566460
+    },
+    "842": {
+      "2024-12": 745275
+    },
+    "856": {
+      "2024-12": 641414
+    },
+    "857": {
+      "2024-12": 174762,
+      "2025-05": 174762
+    },
+    "478": {
+      "2024-12": 4239722
+    },
+    "858": {
+      "2025-01": 61495,
+      "2025-09": 647640
+    },
+    "859": {
+      "2025-01": 324135
+    },
+    "861": {
+      "2025-01": 987840,
+      "2025-10": 475646,
+      "2026-01": 1056992,
+      "2026-02": 1506214
+    },
+    "493": {
+      "2025-01": 324135,
+      "2025-03": 554921,
+      "2025-06": 554921,
+      "2025-11": 297279
+    },
+    "598": {
+      "2025-01": 253193,
+      "2025-11": 1244400,
+      "2026-08": 1377917
+    },
+    "549": {
+      "2025-01": 76459,
+      "2025-07": 650160,
+      "2026-01": 650160,
+      "2026-07": 676166
+    },
+    "427": {
+      "2025-01": 98304
+    },
+    "862": {
+      "2025-01": 1407672,
+      "2025-05": 1056992,
+      "2025-10": 1056992,
+      "2026-02": 1056992,
+      "2026-09": 1099270
+    },
+    "792": {
+      "2025-01": 324135,
+      "2025-03": 1056992,
+      "2025-05": 1056992,
+      "2025-10": 297279,
+      "2026-01": 1056992,
+      "2026-03": 577117
+    },
+    "646": {
+      "2025-01": 758124,
+      "2025-03": 102765,
+      "2025-07": 102765
+    },
+    "826": {
+      "2025-01": 308700
+    },
+    "863": {
+      "2025-01": 436906
+    },
+    "636": {
+      "2025-01": 231525
+    },
+    "487": {
+      "2025-01": 1778112,
+      "2025-03": 951293,
+      "2025-04": 951293,
+      "2025-05": 951293,
+      "2025-06": 1902586,
+      "2025-07": 3653625,
+      "2025-08": 3839179,
+      "2025-09": 5193158,
+      "2025-10": 2127773,
+      "2025-11": 4314826,
+      "2025-12": 5202279,
+      "2026-01": 3660466,
+      "2026-02": 3402293,
+      "2026-03": 2506185,
+      "2026-04": 5476759,
+      "2026-05": 3492786,
+      "2026-06": 5684696,
+      "2026-08": 2590456
+    },
+    "475": {
+      "2025-01": 940800,
+      "2025-02": 940800,
+      "2025-03": 1902586,
+      "2025-05": 1902586,
+      "2025-06": 1902586,
+      "2025-07": 1902586,
+      "2025-08": 1902586,
+      "2025-10": 2552746,
+      "2025-11": 1902586,
+      "2025-12": 1902586,
+      "2026-02": 1902586,
+      "2026-04": 2284572,
+      "2026-06": 2284572
+    },
+    "864": {
+      "2025-01": 1361367,
+      "2025-02": 1407672,
+      "2025-03": 1506214,
+      "2025-05": 554921,
+      "2025-07": 1056992,
+      "2025-10": 475646,
+      "2026-01": 1056992,
+      "2026-03": 1099270,
+      "2026-08": 577117
+    },
+    "760": {
+      "2025-01": 354883,
+      "2025-02": 324135,
+      "2025-05": 554921,
+      "2025-06": 1109842,
+      "2026-02": 165155
+    },
+    "504": {
+      "2025-01": 469493,
+      "2025-04": 554921
+    },
+    "607": {
+      "2025-01": 518616
+    },
+    "865": {
+      "2025-01": 324135
+    },
+    "534": {
+      "2025-01": 87381,
+      "2025-03": 98304
+    },
+    "677": {
+      "2025-01": 324135,
+      "2025-07": 483210
+    },
+    "627": {
+      "2025-01": 987840,
+      "2025-10": 554921,
+      "2025-11": 554921,
+      "2025-12": 554921,
+      "2026-01": 554921,
+      "2026-03": 577117,
+      "2026-04": 577117,
+      "2026-05": 577117,
+      "2026-06": 1367590,
+      "2026-07": 1099270,
+      "2026-09": 1099270
+    },
+    "619": {
+      "2025-01": 1407672,
+      "2025-03": 1902586,
+      "2025-06": 1902586,
+      "2025-11": 2479426,
+      "2026-01": 1192481,
+      "2026-03": 2578601,
+      "2026-06": 1978687,
+      "2026-08": 3197484
+    },
+    "866": {
+      "2025-02": 324135,
+      "2025-12": 165155
+    },
+    "580": {
+      "2025-02": 324135,
+      "2025-04": 1290760
+    },
+    "820": {
+      "2025-02": 324135
+    },
+    "735": {
+      "2025-02": 231525
+    },
+    "794": {
+      "2025-02": 987840,
+      "2025-03": 554921,
+      "2025-04": 1109842,
+      "2025-05": 1109842,
+      "2025-06": 1109842,
+      "2025-07": 1109842,
+      "2025-08": 1109842,
+      "2025-09": 2061135,
+      "2025-12": 554921,
+      "2026-06": 4177227,
+      "2026-07": 3957374,
+      "2026-08": 1978687
+    },
+    "467": {
+      "2025-02": 1407672,
+      "2025-05": 1506214,
+      "2025-09": 1506214,
+      "2026-03": 1828195
+    },
+    "499": {
+      "2025-02": 1407672,
+      "2025-11": 1056992,
+      "2026-05": 494672,
+      "2026-09": 1099270
+    },
+    "867": {
+      "2025-02": 324135
+    },
+    "868": {
+      "2025-02": 647640,
+      "2025-04": 258000
+    },
+    "471": {
+      "2025-02": 604770,
+      "2025-03": 851580,
+      "2025-04": 1462050,
+      "2025-07": 1132590,
+      "2025-08": 1171920,
+      "2025-10": 647640,
+      "2025-12": 604770,
+      "2026-03": 609398,
+      "2026-05": 1058923,
+      "2026-06": 1058923,
+      "2026-07": 628961,
+      "2026-08": 609398
+    },
+    "870": {
+      "2025-02": 1812480,
+      "2025-04": 1254160,
+      "2025-08": 647640,
+      "2025-10": 1115080,
+      "2025-11": 647640,
+      "2025-12": 647640,
+      "2026-01": 2074579,
+      "2026-03": 1239590,
+      "2026-05": 1973338,
+      "2026-07": 2292042,
+      "2026-08": 1880070
+    },
+    "668": {
+      "2025-02": 231525,
+      "2025-05": 554921,
+      "2026-01": 554921
+    },
+    "779": {
+      "2025-02": 637560,
+      "2025-04": 4405616,
+      "2025-05": 1056992,
+      "2025-07": 1234640,
+      "2025-08": 1182180,
+      "2025-09": 2311152,
+      "2025-10": 1810120,
+      "2025-11": 6086474,
+      "2025-12": 1254160,
+      "2026-01": 4415432,
+      "2026-02": 1234640,
+      "2026-03": 5393055,
+      "2026-05": 2208140,
+      "2026-06": 2189170,
+      "2026-08": 2208140
+    },
+    "872": {
+      "2025-02": 645750,
+      "2025-05": 640080,
+      "2025-07": 640080,
+      "2025-08": 666540,
+      "2025-12": 689850,
+      "2026-06": 717444
+    },
+    "873": {
+      "2025-02": 972720,
+      "2025-12": 647640,
+      "2026-03": 673546,
+      "2026-04": 673546,
+      "2026-05": 609398,
+      "2026-07": 673546
+    },
+    "874": {
+      "2025-02": 231525,
+      "2025-06": 165155
+    },
+    "875": {
+      "2025-03": 650160,
+      "2025-07": 650160,
+      "2025-08": 650160,
+      "2026-02": 650160
+    },
+    "535": {
+      "2025-03": 1961842,
+      "2025-05": 436906,
+      "2025-10": 2325600,
+      "2026-02": 1669700,
+      "2026-07": 1294176
+    },
+    "876": {
+      "2025-03": 648270
+    },
+    "679": {
+      "2025-03": 660620,
+      "2025-06": 554921,
+      "2025-07": 720076,
+      "2026-01": 554921,
+      "2026-02": 554921
+    },
+    "877": {
+      "2025-03": 1234640
+    },
+    "786": {
+      "2025-03": 164314
+    },
+    "878": {
+      "2025-03": 258000
+    },
+    "879": {
+      "2025-03": 647640,
+      "2025-07": 808290,
+      "2025-08": 1365731,
+      "2026-01": 648900,
+      "2026-05": 673546,
+      "2026-08": 673546,
+      "2026-09": 615600
+    },
+    "880": {
+      "2025-03": 647640
+    },
+    "881": {
+      "2025-03": 1247450,
+      "2025-06": 645120,
+      "2025-08": 645120,
+      "2025-10": 649530,
+      "2026-01": 653310,
+      "2026-04": 659786,
+      "2026-05": 659786,
+      "2026-06": 668959,
+      "2026-08": 1916408,
+      "2026-09": 659131
+    },
+    "577": {
+      "2025-03": 754921,
+      "2025-04": 554921,
+      "2025-05": 554921,
+      "2025-07": 554921,
+      "2025-08": 554921,
+      "2025-10": 1566842,
+      "2026-02": 200000,
+      "2026-03": 873923,
+      "2026-08": 633579
+    },
+    "882": {
+      "2025-03": 647640,
+      "2025-05": 647640,
+      "2025-06": 647640
+    },
+    "885": {
+      "2025-03": 1812480,
+      "2025-05": 2333846
+    },
+    "886": {
+      "2025-03": 554921
+    },
+    "712": {
+      "2025-03": 165155,
+      "2026-02": 554921
+    },
+    "887": {
+      "2025-03": 809550,
+      "2025-04": 809550,
+      "2025-05": 809550,
+      "2025-06": 809550,
+      "2025-07": 809550,
+      "2025-08": 809550,
+      "2025-10": 1619100,
+      "2025-12": 809550,
+      "2026-01": 809550,
+      "2026-02": 1619100,
+      "2026-04": 841932,
+      "2026-06": 841932,
+      "2026-08": 841932
+    },
+    "839": {
+      "2025-03": 554921
+    },
+    "889": {
+      "2025-03": 547000
+    },
+    "891": {
+      "2025-03": 647640,
+      "2025-04": 1271850,
+      "2025-07": 1254160,
+      "2025-09": 1254160,
+      "2025-12": 1254160,
+      "2026-02": 1254160,
+      "2026-06": 1892342
+    },
+    "892": {
+      "2025-03": 506520,
+      "2025-04": 159390,
+      "2025-07": 689220
+    },
+    "801": {
+      "2025-03": 151630,
+      "2025-07": 627690,
+      "2025-09": 115609,
+      "2025-12": 652050,
+      "2026-06": 2586528
+    },
+    "831": {
+      "2025-03": 611730,
+      "2025-05": 575820,
+      "2025-06": 611730,
+      "2025-07": 687330,
+      "2025-09": 1169980
+    },
+    "894": {
+      "2025-03": 1215400,
+      "2025-04": 1152001,
+      "2025-05": 1056992,
+      "2026-08": 673546
+    },
+    "548": {
+      "2025-03": 504000,
+      "2025-05": 504000,
+      "2025-07": 504000,
+      "2025-10": 200000,
+      "2025-11": 504000
+    },
+    "896": {
+      "2025-03": 346826,
+      "2025-10": 686700,
+      "2025-11": 684180
+    },
+    "897": {
+      "2025-04": 647640
+    },
+    "898": {
+      "2025-04": 647640,
+      "2025-05": 1295280,
+      "2025-06": 647640,
+      "2025-07": 1202561,
+      "2025-08": 1692120
+    },
+    "899": {
+      "2025-04": 1254160,
+      "2025-06": 645120,
+      "2025-08": 1254160,
+      "2025-12": 651420,
+      "2026-05": 674201,
+      "2026-08": 668959
+    },
+    "652": {
+      "2025-04": 30747
+    },
+    "698": {
+      "2025-04": 554921,
+      "2025-05": 554921,
+      "2026-09": 717563
+    },
+    "902": {
+      "2025-04": 951293,
+      "2025-12": 554921,
+      "2026-04": 577117
+    },
+    "595": {
+      "2025-04": 102765
+    },
+    "583": {
+      "2025-04": 79008
+    },
+    "904": {
+      "2025-04": 650160
+    },
+    "905": {
+      "2025-04": 1872660,
+      "2025-05": 647640,
+      "2025-07": 648270,
+      "2025-09": 483210,
+      "2025-11": 825300,
+      "2026-02": 642600,
+      "2026-03": 673546,
+      "2026-06": 671581,
+      "2026-08": 1364127,
+      "2026-09": 695167
+    },
+    "906": {
+      "2025-04": 665910
+    },
+    "907": {
+      "2025-04": 1116871
+    },
+    "447": {
+      "2025-04": 102766,
+      "2026-01": 283754
+    },
+    "909": {
+      "2025-04": 1264530,
+      "2025-11": 684180,
+      "2026-04": 1218293,
+      "2026-06": 622710,
+      "2026-09": 507528
+    },
+    "910": {
+      "2025-04": 1725750,
+      "2025-09": 1899800,
+      "2026-01": 1378440,
+      "2026-06": 1367766
+    },
+    "911": {
+      "2025-04": 2384310,
+      "2025-07": 648270,
+      "2026-03": 171761,
+      "2026-06": 649438
+    },
+    "912": {
+      "2025-04": 1861450,
+      "2025-06": 1868530,
+      "2025-09": 1513940,
+      "2025-10": 342200,
+      "2025-11": 1760560,
+      "2025-12": 1859090,
+      "2026-01": 1899210,
+      "2026-03": 1837118,
+      "2026-05": 1975793,
+      "2026-07": 1906455
+    },
+    "913": {
+      "2025-04": 650160,
+      "2025-07": 650160,
+      "2025-11": 730800,
+      "2026-02": 650160,
+      "2026-07": 1410906
+    },
+    "757": {
+      "2025-04": 645120,
+      "2025-05": 581400,
+      "2025-06": 1197521,
+      "2025-12": 475646,
+      "2026-03": 1504344,
+      "2026-08": 1296713,
+      "2026-09": 577525
+    },
+    "915": {
+      "2025-04": 352800
+    },
+    "918": {
+      "2025-04": 2335290,
+      "2025-07": 1452150,
+      "2026-01": 1292760,
+      "2026-04": 670925
+    },
+    "462": {
+      "2025-04": 874950,
+      "2025-07": 909720,
+      "2025-08": 1109790,
+      "2026-02": 1314420,
+      "2026-07": 798501
+    },
+    "630": {
+      "2025-05": 40997
+    },
+    "919": {
+      "2025-05": 163987
+    },
+    "476": {
+      "2025-05": 165155,
+      "2025-06": 554921,
+      "2025-12": 554921,
+      "2026-02": 554921,
+      "2026-08": 171761
+    },
+    "510": {
+      "2025-05": 554921,
+      "2025-08": 1052486,
+      "2025-12": 554921,
+      "2026-03": 577117,
+      "2026-07": 620089
+    },
+    "520": {
+      "2025-05": 554921,
+      "2025-08": 733020,
+      "2025-10": 647640
+    },
+    "920": {
+      "2025-05": 1820150,
+      "2025-07": 1859090,
+      "2025-08": 1839030,
+      "2025-10": 2674440,
+      "2025-11": 2674440,
+      "2026-02": 2965710,
+      "2026-04": 2476718,
+      "2026-09": 2378589
+    },
+    "469": {
+      "2025-05": 2348400,
+      "2025-06": 2348400,
+      "2025-07": 1819560,
+      "2025-08": 2348400,
+      "2025-09": 2343840,
+      "2025-11": 2343840,
+      "2025-12": 1176480,
+      "2026-01": 1171920,
+      "2026-03": 2343840,
+      "2026-04": 2325239,
+      "2026-05": 2208140,
+      "2026-06": 3583436,
+      "2026-07": 2442336,
+      "2026-08": 2437594
+    },
+    "810": {
+      "2025-05": 2262073,
+      "2025-08": 2337000,
+      "2025-10": 1816710,
+      "2026-01": 647640,
+      "2026-09": 2068418
+    },
+    "923": {
+      "2025-05": 647640,
+      "2025-07": 2412240,
+      "2025-11": 730800,
+      "2026-04": 1388067,
+      "2026-08": 760032
+    },
+    "925": {
+      "2025-05": 129000
+    },
+    "926": {
+      "2025-05": 554921,
+      "2025-10": 1056992
+    },
+    "718": {
+      "2025-05": 2027306,
+      "2025-10": 475646
+    },
+    "927": {
+      "2025-05": 475646
+    },
+    "728": {
+      "2025-05": 581400
+    },
+    "928": {
+      "2025-05": 650160,
+      "2025-09": 511000,
+      "2025-11": 643860
+    },
+    "929": {
+      "2025-05": 330310,
+      "2026-09": 1109314
+    },
+    "930": {
+      "2025-05": 585960
+    },
+    "764": {
+      "2025-05": 475646
+    },
+    "932": {
+      "2025-05": 516000,
+      "2025-07": 1259040
+    },
+    "933": {
+      "2025-05": 95129,
+      "2026-07": 388000
+    },
+    "587": {
+      "2025-05": 650160,
+      "2025-09": 1254160,
+      "2025-12": 1822510,
+      "2026-03": 1304326,
+      "2026-06": 1304326,
+      "2026-08": 1304326
+    },
+    "935": {
+      "2025-05": 46591
+    },
+    "931": {
+      "2025-05": 46591,
+      "2025-08": 46672,
+      "2026-03": 577117,
+      "2026-09": 489060
+    },
+    "936": {
+      "2025-05": 277828
+    },
+    "491": {
+      "2025-05": 253000,
+      "2025-08": 637560,
+      "2025-10": 1539610,
+      "2026-01": 1369412,
+      "2026-03": 669614,
+      "2026-06": 845343,
+      "2026-08": 674856
+    },
+    "937": {
+      "2025-05": 380516
+    },
+    "938": {
+      "2025-05": 504000
+    },
+    "939": {
+      "2025-05": 645120,
+      "2026-04": 298178,
+      "2026-05": 871555,
+      "2026-06": 695167
+    },
+    "659": {
+      "2025-05": 585960,
+      "2025-08": 587100,
+      "2025-11": 648900
+    },
+    "940": {
+      "2025-05": 1819560
+    },
+    "710": {
+      "2025-06": 2414520
+    },
+    "942": {
+      "2025-06": 647640,
+      "2025-08": 585960,
+      "2025-09": 648270,
+      "2025-11": 1296540,
+      "2026-01": 648900
+    },
+    "720": {
+      "2025-06": 1825041,
+      "2025-08": 365400,
+      "2025-09": 365400
+    },
+    "944": {
+      "2025-06": 165155
+    },
+    "751": {
+      "2025-06": 1202561,
+      "2025-08": 1244400
+    },
+    "945": {
+      "2025-06": 3329525
+    },
+    "946": {
+      "2025-06": 663390,
+      "2026-02": 1486836
+    },
+    "947": {
+      "2025-06": 647640
+    },
+    "678": {
+      "2025-06": 1276730,
+      "2026-03": 637509,
+      "2026-05": 987832,
+      "2026-07": 1036989,
+      "2026-08": 453600,
+      "2026-09": 627182
+    },
+    "948": {
+      "2025-06": 3006180,
+      "2025-09": 1531620,
+      "2026-01": 608580,
+      "2026-02": 352800,
+      "2026-03": 1185450,
+      "2026-05": 687648,
+      "2026-08": 665683
+    },
+    "949": {
+      "2025-06": 109324
+    },
+    "581": {
+      "2025-06": 1056992,
+      "2025-12": 554921
+    },
+    "950": {
+      "2025-06": 1877970,
+      "2025-08": 1682640,
+      "2026-04": 1303287,
+      "2026-05": 620963,
+      "2026-07": 2823506,
+      "2026-09": 2840333
+    },
+    "951": {
+      "2025-06": 647640
+    },
+    "952": {
+      "2025-06": 1352980,
+      "2025-08": 730800,
+      "2025-09": 730800,
+      "2025-10": 661200,
+      "2025-12": 730800,
+      "2026-01": 730800,
+      "2026-02": 730800,
+      "2026-03": 760032,
+      "2026-04": 760032
+    },
+    "953": {
+      "2025-06": 650160
+    },
+    "954": {
+      "2025-06": 1916910,
+      "2025-08": 1256700,
+      "2025-11": 1276800,
+      "2025-12": 1810320,
+      "2026-01": 1276800,
+      "2026-03": 1882733,
+      "2026-05": 2323776,
+      "2026-06": 7248758,
+      "2026-09": 2352230
+    },
+    "955": {
+      "2025-07": 1254160
+    },
+    "956": {
+      "2025-07": 554921,
+      "2025-10": 554921,
+      "2026-01": 554921
+    },
+    "957": {
+      "2025-07": 647640
+    },
+    "958": {
+      "2025-07": 1600270,
+      "2025-08": 353800,
+      "2025-09": 648900,
+      "2025-12": 1119960,
+      "2026-01": 154330,
+      "2026-04": 453600,
+      "2026-06": 453600,
+      "2026-07": 1149423,
+      "2026-08": 1148767,
+      "2026-09": 1078486
+    },
+    "959": {
+      "2025-07": 1287720,
+      "2025-10": 643860,
+      "2026-01": 667170,
+      "2026-03": 691740,
+      "2026-07": 1390605
+    },
+    "960": {
+      "2025-07": 650160,
+      "2026-04": 676166
+    },
+    "961": {
+      "2025-07": 554921
+    },
+    "962": {
+      "2025-07": 1355693,
+      "2025-10": 627080
+    },
+    "964": {
+      "2025-07": 650160,
+      "2025-12": 650160,
+      "2026-05": 676166
+    },
+    "966": {
+      "2025-07": 647640,
+      "2026-04": 673546
+    },
+    "552": {
+      "2025-07": 647640,
+      "2025-10": 730800,
+      "2025-12": 689220,
+      "2026-03": 3223398,
+      "2026-05": 2496281,
+      "2026-07": 2567417,
+      "2026-08": 2496281
+    },
+    "967": {
+      "2025-07": 1251720,
+      "2026-09": 1594723
+    },
+    "663": {
+      "2025-07": 647640
+    },
+    "968": {
+      "2025-07": 495465,
+      "2026-04": 577117
+    },
+    "969": {
+      "2025-07": 99093
+    },
+    "970": {
+      "2025-07": 99093
+    },
+    "971": {
+      "2025-07": 647640,
+      "2025-08": 647640,
+      "2026-06": 494672
+    },
+    "972": {
+      "2025-07": 571410,
+      "2025-09": 666540,
+      "2025-11": 684180,
+      "2026-02": 645750,
+      "2026-03": 467208,
+      "2026-04": 1354103,
+      "2026-06": 1572825,
+      "2026-07": 716789,
+      "2026-09": 648523
+    },
+    "973": {
+      "2025-07": 647640,
+      "2026-02": 647640,
+      "2026-07": 673546
+    },
+    "800": {
+      "2025-07": 165155
+    },
+    "974": {
+      "2025-07": 746640,
+      "2025-08": 1865380,
+      "2025-09": 1172420,
+      "2025-10": 1334680,
+      "2025-11": 1232200,
+      "2025-12": 1002230,
+      "2026-01": 2857850,
+      "2026-02": 3105110,
+      "2026-03": 1941461,
+      "2026-04": 1364594,
+      "2026-07": 1226929,
+      "2026-09": 1341755
+    },
+    "975": {
+      "2025-07": 739715,
+      "2025-10": 1553470,
+      "2026-01": 968680,
+      "2026-04": 1007427,
+      "2026-05": 1088825,
+      "2026-07": 1007427,
+      "2026-09": 474240
+    },
+    "976": {
+      "2025-07": 645120,
+      "2025-10": 645120
+    },
+    "977": {
+      "2025-07": 127512
+    },
+    "978": {
+      "2025-07": 587100,
+      "2025-10": 604770,
+      "2026-03": 1306864
+    },
+    "979": {
+      "2025-07": 375060,
+      "2025-09": 165300
+    },
+    "981": {
+      "2025-07": 642600,
+      "2025-09": 643230,
+      "2025-11": 670320
+    },
+    "982": {
+      "2025-08": 728460,
+      "2025-10": 297279
+    },
+    "983": {
+      "2025-08": 979210,
+      "2025-12": 554921,
+      "2026-01": 1202561
+    },
+    "984": {
+      "2025-08": 645750
+    },
+    "985": {
+      "2025-08": 647640,
+      "2026-05": 761748,
+      "2026-08": 673546
+    },
+    "986": {
+      "2025-08": 650160,
+      "2025-09": 2513200,
+      "2025-10": 2508320,
+      "2025-11": 2508320,
+      "2026-01": 2348400,
+      "2026-02": 2467200,
+      "2026-03": 1304326,
+      "2026-04": 1304326,
+      "2026-05": 2430481,
+      "2026-06": 2459528,
+      "2026-07": 2309112,
+      "2026-08": 863554,
+      "2026-09": 1306230
+    },
+    "987": {
+      "2025-08": 427140
+    },
+    "814": {
+      "2025-08": 600210,
+      "2025-10": 504000,
+      "2026-08": 676822,
+      "2026-09": 410400
+    },
+    "988": {
+      "2025-08": 46672
+    },
+    "989": {
+      "2025-08": 475646
+    },
+    "990": {
+      "2025-08": 475646,
+      "2025-12": 554921
+    },
+    "991": {
+      "2025-08": 165155
+    },
+    "992": {
+      "2025-08": 581400
+    },
+    "993": {
+      "2025-08": 475646
+    },
+    "996": {
+      "2025-08": 581400
+    },
+    "997": {
+      "2025-08": 583680,
+      "2025-11": 771750
+    },
+    "998": {
+      "2025-08": 475646
+    },
+    "845": {
+      "2025-08": 2412240,
+      "2026-01": 2400840,
+      "2026-09": 1104070
+    },
+    "604": {
+      "2025-08": 1254160
+    },
+    "999": {
+      "2025-08": 1223520,
+      "2025-09": 647640,
+      "2025-12": 647640,
+      "2026-01": 1244400,
+      "2026-03": 673546,
+      "2026-04": 673546,
+      "2026-05": 410400
+    },
+    "1000": {
+      "2025-08": 1165080
+    },
+    "1001": {
+      "2025-08": 1059326,
+      "2026-01": 1955633,
+      "2026-05": 494672
+    },
+    "1003": {
+      "2025-08": 475646,
+      "2025-11": 554921
+    },
+    "1004": {
+      "2025-08": 587670
+    },
+    "1005": {
+      "2025-08": 1172490
+    },
+    "1006": {
+      "2025-08": 475646
+    },
+    "1007": {
+      "2025-08": 475646
+    },
+    "1008": {
+      "2025-08": 690480,
+      "2025-09": 647640,
+      "2025-10": 1295030,
+      "2025-11": 648900,
+      "2026-01": 1295280,
+      "2026-02": 1810120,
+      "2026-03": 1912685,
+      "2026-04": 2303898,
+      "2026-06": 2221997,
+      "2026-07": 2028972,
+      "2026-08": 1666361
+    },
+    "488": {
+      "2025-08": 1797140,
+      "2026-02": 1791240,
+      "2026-08": 518264
+    },
+    "1010": {
+      "2025-08": 647640,
+      "2025-09": 1285200,
+      "2025-10": 647640,
+      "2025-11": 1297170,
+      "2025-12": 651420,
+      "2026-05": 673546,
+      "2026-06": 1168218,
+      "2026-07": 673546,
+      "2026-08": 2020638,
+      "2026-09": 1713469
+    },
+    "1011": {
+      "2025-08": 1486570,
+      "2025-09": 647640
+    },
+    "468": {
+      "2025-08": 1302350,
+      "2025-10": 1284660,
+      "2025-12": 1298080,
+      "2026-03": 1207534,
+      "2026-05": 3057286,
+      "2026-08": 2778138
+    },
+    "727": {
+      "2025-08": 1845681
+    },
+    "629": {
+      "2025-08": 1165080
+    },
+    "1012": {
+      "2025-08": 642600
+    },
+    "739": {
+      "2025-08": 650160,
+      "2026-06": 676166
+    },
+    "1013": {
+      "2025-08": 2348400,
+      "2025-09": 2714460,
+      "2025-12": 2348400,
+      "2026-01": 2893320,
+      "2026-03": 2574530,
+      "2026-04": 1309402,
+      "2026-08": 4802964,
+      "2026-09": 1199827
+    },
+    "1014": {
+      "2025-08": 963900
+    },
+    "1015": {
+      "2025-09": 650160,
+      "2026-01": 650160,
+      "2026-08": 676166
+    },
+    "1016": {
+      "2025-09": 645120,
+      "2025-11": 1296860
+    },
+    "1017": {
+      "2025-09": 535500
+    },
+    "1018": {
+      "2025-09": 1334680,
+      "2026-02": 1313150,
+      "2026-03": 1334680,
+      "2026-05": 1548570
+    },
+    "1020": {
+      "2025-09": 647640,
+      "2026-05": 905072,
+      "2026-06": 673546
+    },
+    "1021": {
+      "2025-09": 530310
+    },
+    "1022": {
+      "2025-09": 554921,
+      "2025-12": 1056992,
+      "2026-07": 1978687
+    },
+    "1023": {
+      "2025-09": 804510,
+      "2025-10": 647640,
+      "2025-11": 972720
+    },
+    "825": {
+      "2025-09": 554921
+    },
+    "1024": {
+      "2025-09": 1071341
+    },
+    "1025": {
+      "2025-09": 645750
+    },
+    "1026": {
+      "2025-09": 1227210
+    },
+    "1027": {
+      "2025-09": 825300
+    },
+    "1028": {
+      "2025-09": 1902586
+    },
+    "1019": {
+      "2025-09": 2335290,
+      "2025-10": 2346120,
+      "2025-11": 2347260,
+      "2026-01": 2335290,
+      "2026-03": 2428109,
+      "2026-04": 2132894,
+      "2026-05": 165984,
+      "2026-08": 2375989
+    },
+    "1029": {
+      "2025-09": 645120
+    },
+    "1030": {
+      "2025-09": 647640,
+      "2026-04": 673546
+    },
+    "1031": {
+      "2025-09": 2359731
+    },
+    "1032": {
+      "2025-09": 647640,
+      "2026-06": 676166
+    },
+    "1033": {
+      "2025-09": 536130,
+      "2026-09": 406120
+    },
+    "1034": {
+      "2025-09": 1721400,
+      "2025-10": 661200,
+      "2026-01": 1819560,
+      "2026-03": 1973338,
+      "2026-05": 3134733,
+      "2026-06": 1641600,
+      "2026-07": 2334720,
+      "2026-08": 1641600
+    },
+    "673": {
+      "2025-09": 650160
+    },
+    "1035": {
+      "2025-09": 2343840,
+      "2026-02": 1819560,
+      "2026-07": 1304326,
+      "2026-09": 1218797
+    },
+    "1036": {
+      "2025-10": 138730
+    },
+    "1037": {
+      "2025-10": 650160,
+      "2026-08": 676166
+    },
+    "1038": {
+      "2025-10": 2711350
+    },
+    "1039": {
+      "2025-10": 650160
+    },
+    "1040": {
+      "2025-10": 1203191,
+      "2025-12": 554921,
+      "2026-01": 645750,
+      "2026-02": 1252330,
+      "2026-03": 673546,
+      "2026-08": 670925,
+      "2026-09": 494672
+    },
+    "1041": {
+      "2025-10": 588240,
+      "2026-07": 676166
+    },
+    "1042": {
+      "2025-10": 883239,
+      "2025-12": 554921,
+      "2026-06": 577117
+    },
+    "1043": {
+      "2025-10": 594558,
+      "2026-03": 577117,
+      "2026-05": 494672,
+      "2026-09": 494672
+    },
+    "1044": {
+      "2025-10": 297279
+    },
+    "1045": {
+      "2025-10": 110668
+    },
+    "1046": {
+      "2025-10": 1082696,
+      "2025-11": 1202561,
+      "2026-03": 1202561
+    },
+    "1047": {
+      "2025-10": 297279,
+      "2025-12": 1056992
+    },
+    "1048": {
+      "2025-10": 297279
+    },
+    "451": {
+      "2025-10": 772925,
+      "2026-06": 494672
+    },
+    "1049": {
+      "2025-10": 297279
+    },
+    "1050": {
+      "2025-10": 1176480,
+      "2026-07": 2083420
+    },
+    "1051": {
+      "2025-10": 475646
+    },
+    "707": {
+      "2025-10": 297279,
+      "2025-11": 554921,
+      "2026-02": 554921
+    },
+    "731": {
+      "2025-10": 297279,
+      "2026-01": 647640,
+      "2026-05": 609398
+    },
+    "603": {
+      "2025-10": 1796886,
+      "2026-09": 806208
+    },
+    "1052": {
+      "2025-10": 2344980,
+      "2026-09": 2438779
+    },
+    "1054": {
+      "2025-10": 475646
+    },
+    "1055": {
+      "2025-10": 297279
+    },
+    "1056": {
+      "2025-10": 587670,
+      "2026-08": 577117,
+      "2026-09": 678938
+    },
+    "1057": {
+      "2025-10": 624150
+    },
+    "1058": {
+      "2025-10": 554921
+    },
+    "1059": {
+      "2025-10": 650160
+    },
+    "1060": {
+      "2025-10": 651420,
+      "2025-11": 645120,
+      "2025-12": 649530,
+      "2026-01": 647640,
+      "2026-02": 647640,
+      "2026-03": 673546,
+      "2026-04": 673546,
+      "2026-05": 1250525,
+      "2026-07": 1972797
+    },
+    "1061": {
+      "2025-10": 651420
+    },
+    "1062": {
+      "2025-10": 730800,
+      "2026-08": 695823
+    },
+    "1063": {
+      "2025-10": 647640
+    },
+    "1064": {
+      "2025-11": 1109842,
+      "2026-03": 577117
+    },
+    "1065": {
+      "2025-11": 1334680,
+      "2026-06": 1767357
+    },
+    "1066": {
+      "2025-11": 1717150
+    },
+    "1067": {
+      "2025-11": 330310,
+      "2026-05": 577117
+    },
+    "1069": {
+      "2025-11": 297279
+    },
+    "1070": {
+      "2025-11": 1965880,
+      "2026-09": 1019798
+    },
+    "1071": {
+      "2025-11": 730800,
+      "2026-03": 529462,
+      "2026-09": 648523
+    },
+    "1072": {
+      "2025-11": 588240,
+      "2026-05": 611770
+    },
+    "1073": {
+      "2025-11": 586530
+    },
+    "1074": {
+      "2025-11": 1829000
+    },
+    "511": {
+      "2025-11": 297279
+    },
+    "1076": {
+      "2025-11": 650160
+    },
+    "1077": {
+      "2025-11": 2867112
+    },
+    "1078": {
+      "2025-11": 3515190
+    },
+    "1079": {
+      "2025-11": 1244400,
+      "2026-01": 1534000,
+      "2026-04": 1595360,
+      "2026-08": 1889274
+    },
+    "1081": {
+      "2025-11": 637560
+    },
+    "1082": {
+      "2025-11": 718770,
+      "2026-03": 297000,
+      "2026-08": 494672,
+      "2026-09": 661474
+    },
+    "530": {
+      "2025-12": 1509596
+    },
+    "1083": {
+      "2025-12": 297279
+    },
+    "1084": {
+      "2025-12": 297279,
+      "2026-09": 282004
+    },
+    "1085": {
+      "2025-12": 1220610,
+      "2026-01": 703710,
+      "2026-06": 668304
+    },
+    "1086": {
+      "2025-12": 247733,
+      "2026-05": 25000
+    },
+    "1087": {
+      "2025-12": 554921
+    },
+    "1088": {
+      "2025-12": 1360990
+    },
+    "1089": {
+      "2025-12": 427368
+    },
+    "456": {
+      "2025-12": 640080,
+      "2026-06": 1304326
+    },
+    "575": {
+      "2025-12": 585960
+    },
+    "1090": {
+      "2025-12": 1099796,
+      "2026-03": 297000,
+      "2026-05": 1148892
+    },
+    "1092": {
+      "2025-12": 650160
+    },
+    "545": {
+      "2026-01": 645750
+    },
+    "674": {
+      "2026-01": 554921
+    },
+    "585": {
+      "2026-01": 650160
+    },
+    "1094": {
+      "2026-01": 1897440
+    },
+    "1095": {
+      "2026-01": 650160
+    },
+    "1096": {
+      "2026-01": 444339
+    },
+    "1098": {
+      "2026-01": 144210
+    },
+    "1099": {
+      "2026-02": 297279
+    },
+    "465": {
+      "2026-02": 643230
+    },
+    "1101": {
+      "2026-02": 647640,
+      "2026-03": 673546,
+      "2026-04": 1209312,
+      "2026-06": 1280323,
+      "2026-07": 1336608,
+      "2026-09": 609398
+    },
+    "1103": {
+      "2026-02": 1234640
+    },
+    "701": {
+      "2026-02": 648270,
+      "2026-05": 607027
+    },
+    "1104": {
+      "2026-02": 650160,
+      "2026-04": 675511,
+      "2026-05": 676167,
+      "2026-07": 598853
+    },
+    "1105": {
+      "2026-02": 1864990,
+      "2026-03": 1921182
+    },
+    "1107": {
+      "2026-02": 647640
+    },
+    "1106": {
+      "2026-02": 1516890
+    },
+    "1108": {
+      "2026-02": 647640,
+      "2026-03": 663062,
+      "2026-05": 609398,
+      "2026-06": 673546,
+      "2026-07": 663062,
+      "2026-09": 762340
+    },
+    "1109": {
+      "2026-02": 1250500,
+      "2026-06": 1304326
+    },
+    "1112": {
+      "2026-02": 647640
+    },
+    "1113": {
+      "2026-02": 649530
+    },
+    "1114": {
+      "2026-03": 554921
+    },
+    "1115": {
+      "2026-03": 502071
+    },
+    "1120": {
+      "2026-03": 149978
+    },
+    "1121": {
+      "2026-03": 257587
+    },
+    "1122": {
+      "2026-03": 674856
+    },
+    "1123": {
+      "2026-03": 208000
+    },
+    "1117": {
+      "2026-03": 534560
+    },
+    "1118": {
+      "2026-03": 577117,
+      "2026-05": 577117,
+      "2026-07": 577117,
+      "2026-08": 1566460
+    },
+    "428": {
+      "2026-03": 1099270,
+      "2026-08": 1099270
+    },
+    "1126": {
+      "2026-03": 668304
+    },
+    "1128": {
+      "2026-03": 297000,
+      "2026-05": 878400,
+      "2026-06": 1641600,
+      "2026-07": 1878492
+    },
+    "1129": {
+      "2026-03": 1314476,
+      "2026-06": 494672,
+      "2026-09": 1107171
+    },
+    "686": {
+      "2026-03": 676166,
+      "2026-09": 609398
+    },
+    "1131": {
+      "2026-03": 671581
+    },
+    "1130": {
+      "2026-03": 198000
+    },
+    "1133": {
+      "2026-03": 297000
+    },
+    "1134": {
+      "2026-03": 529462,
+      "2026-05": 1888661,
+      "2026-08": 668816
+    },
+    "1135": {
+      "2026-04": 3784684,
+      "2026-05": 1892342,
+      "2026-08": 1892342
+    },
+    "1136": {
+      "2026-04": 897776,
+      "2026-05": 1317204,
+      "2026-06": 1031517,
+      "2026-07": 1799147,
+      "2026-08": 2313781,
+      "2026-09": 905072
+    },
+    "1139": {
+      "2026-04": 1304326,
+      "2026-09": 607027
+    },
+    "1137": {
+      "2026-04": 693202,
+      "2026-07": 692547
+    },
+    "1141": {
+      "2026-04": 577117,
+      "2026-06": 577117
+    },
+    "1140": {
+      "2026-04": 626589
+    },
+    "1142": {
+      "2026-04": 529462
+    },
+    "1143": {
+      "2026-04": 671581,
+      "2026-05": 610584,
+      "2026-07": 673546,
+      "2026-09": 1085874
+    },
+    "1144": {
+      "2026-04": 673546
+    },
+    "1146": {
+      "2026-04": 673546,
+      "2026-07": 577117
+    },
+    "1124": {
+      "2026-04": 1654280,
+      "2026-06": 611770
+    },
+    "1147": {
+      "2026-04": 1566460
+    },
+    "1132": {
+      "2026-04": 1301789,
+      "2026-06": 1299251,
+      "2026-08": 1284026
+    },
+    "1149": {
+      "2026-04": 494672
+    },
+    "1150": {
+      "2026-04": 989343,
+      "2026-06": 494672,
+      "2026-09": 989344
+    },
+    "1151": {
+      "2026-04": 609398
+    },
+    "1153": {
+      "2026-05": 171761
+    },
+    "1154": {
+      "2026-05": 609398
+    },
+    "788": {
+      "2026-05": 171761
+    },
+    "1155": {
+      "2026-05": 453600
+    },
+    "1156": {
+      "2026-05": 453600
+    },
+    "1158": {
+      "2026-05": 268320
+    },
+    "1163": {
+      "2026-05": 676166
+    },
+    "1162": {
+      "2026-05": 494672
+    },
+    "1165": {
+      "2026-05": 494672
+    },
+    "1160": {
+      "2026-05": 494672
+    },
+    "1164": {
+      "2026-05": 1509015,
+      "2026-07": 577117
+    },
+    "1167": {
+      "2026-05": 673546
+    },
+    "561": {
+      "2026-05": 1106442
+    },
+    "1166": {
+      "2026-05": 671581
+    },
+    "1161": {
+      "2026-05": 494672
+    },
+    "1170": {
+      "2026-05": 673546
+    },
+    "1171": {
+      "2026-06": 1306864,
+      "2026-07": 673546
+    },
+    "1172": {
+      "2026-06": 1099270,
+      "2026-07": 577117,
+      "2026-09": 1587525
+    },
+    "1174": {
+      "2026-06": 826858
+    },
+    "514": {
+      "2026-06": 577117,
+      "2026-07": 577117
+    },
+    "1175": {
+      "2026-06": 670925,
+      "2026-07": 674201
+    },
+    "1176": {
+      "2026-06": 171761,
+      "2026-08": 171761
+    },
+    "1180": {
+      "2026-06": 670925
+    },
+    "1182": {
+      "2026-06": 673546,
+      "2026-09": 822798
+    },
+    "1181": {
+      "2026-06": 603200,
+      "2026-07": 603200
+    },
+    "1179": {
+      "2026-06": 692547
+    },
+    "1186": {
+      "2026-06": 673546,
+      "2026-07": 2437594,
+      "2026-08": 2437594,
+      "2026-09": 2437594
+    },
+    "1184": {
+      "2026-06": 668959,
+      "2026-08": 644852
+    },
+    "1189": {
+      "2026-06": 673546
+    },
+    "1188": {
+      "2026-07": 692547
+    },
+    "1192": {
+      "2026-07": 171761,
+      "2026-08": 577117
+    },
+    "1194": {
+      "2026-07": 924404
+    },
+    "1197": {
+      "2026-07": 605249
+    },
+    "1199": {
+      "2026-07": 1566460
+    },
+    "772": {
+      "2026-07": 936624
+    },
+    "1201": {
+      "2026-07": 1978687
+    },
+    "1200": {
+      "2026-07": 410400
+    },
+    "1202": {
+      "2026-07": 2420996
+    },
+    "1195": {
+      "2026-07": 526452
+    },
+    "439": {
+      "2026-07": 673546
+    },
+    "1204": {
+      "2026-07": 442320
+    },
+    "1205": {
+      "2026-07": 577117
+    },
+    "1190": {
+      "2026-07": 595107
+    },
+    "1198": {
+      "2026-07": 1099270
+    },
+    "1206": {
+      "2026-07": 494672,
+      "2026-09": 494672
+    },
+    "1207": {
+      "2026-07": 647473,
+      "2026-09": 781722
+    },
+    "1210": {
+      "2026-08": 1601497
+    },
+    "1209": {
+      "2026-08": 6093984,
+      "2026-09": 3046992
+    },
+    "1214": {
+      "2026-08": 673545
+    },
+    "1216": {
+      "2026-08": 268320
+    },
+    "1119": {
+      "2026-08": 1892342
+    },
+    "1219": {
+      "2026-08": 577117,
+      "2026-09": 577117
+    },
+    "1221": {
+      "2026-08": 2546669
+    },
+    "1223": {
+      "2026-08": 99000
+    },
+    "1224": {
+      "2026-08": 673546
+    },
+    "1218": {
+      "2026-08": 149978
+    },
+    "1225": {
+      "2026-08": 1150801
+    },
+    "1227": {
+      "2026-08": 147004,
+      "2026-09": 497724
+    },
+    "1228": {
+      "2026-08": 267280
+    },
+    "1230": {
+      "2026-08": 1388067
+    },
+    "1229": {
+      "2026-08": 80080
+    },
+    "1169": {
+      "2026-08": 366912
+    },
+    "1231": {
+      "2026-08": 716789
+    },
+    "1213": {
+      "2026-08": 692547
+    },
+    "1232": {
+      "2026-08": 268320
+    },
+    "1235": {
+      "2026-08": 696477
+    },
+    "1234": {
+      "2026-08": 147004
+    },
+    "1236": {
+      "2026-08": 1176032
+    },
+    "1240": {
+      "2026-09": 290004
+    },
+    "1243": {
+      "2026-09": 565604
+    },
+    "1242": {
+      "2026-09": 1230768
+    },
+    "1245": {
+      "2026-09": 147576
+    },
+    "1217": {
+      "2026-09": 613580
+    },
+    "1241": {
+      "2026-09": 567000
+    },
+    "1244": {
+      "2026-09": 80080
+    },
+    "1249": {
+      "2026-09": 309170
+    },
+    "1247": {
+      "2026-09": 626589
+    },
+    "1252": {
+      "2026-09": 649709
+    },
+    "1253": {
+      "2026-09": 147576
+    },
+    "1255": {
+      "2026-09": 1122398
+    },
+    "1248": {
+      "2026-09": 1794177
+    },
+    "1254": {
+      "2026-09": 1206986
+    },
+    "1251": {
+      "2026-09": 641676
+    },
+    "1246": {
+      "2026-09": 820800
+    },
+    "1259": {
+      "2026-09": 494672
+    },
+    "1258": {
+      "2026-09": 135000
+    },
+    "1261": {
+      "2026-09": 577117
+    },
+    "1256": {
+      "2026-09": 648572
+    },
+    "1257": {
+      "2026-09": 309170
+    },
+    "1233": {
+      "2026-09": 605249
+    },
+    "1265": {
+      "2026-09": 622349
+    },
+    "1250": {
+      "2026-09": 494672
+    },
+    "1267": {
+      "2026-09": 1209312
+    },
+    "1264": {
+      "2026-09": 206113
+    },
+    "590": {
+      "2026-09": 494672
+    },
+    "1269": {
+      "2026-09": 198000
+    },
+    "1237": {
+      "2026-09": 99000
+    },
+    "1266": {
+      "2026-09": 102600
+    }
+  },
+  "client_vendor": {
+    "427": "Francisca Salinas",
+    "428": "Monica Urrutia",
+    "429": "Monica Urrutia",
+    "438": "Monica Urrutia",
+    "439": "Monica Urrutia",
+    "443": "Francisca Salinas",
+    "447": "Monica Urrutia",
+    "451": "Cindy Monsalves",
+    "456": "Daisy Ponce",
+    "458": "Monica Urrutia",
+    "462": "Cindy Monsalves",
+    "465": "Cindy Monsalves",
+    "468": "Daisy Ponce",
+    "469": "Monica Urrutia",
+    "471": "Monica Urrutia",
+    "474": "Monica Urrutia",
+    "475": "Monica Urrutia",
+    "476": "Monica Urrutia",
+    "477": "Monica Urrutia",
+    "478": "Francisca Salinas",
+    "479": "Monica Urrutia",
+    "480": "Cindy Monsalves",
+    "487": "Monica Urrutia",
+    "488": "Cindy Monsalves",
+    "491": "Monica Urrutia",
+    "493": "Monica Urrutia",
+    "499": "Daisy Ponce",
+    "504": "Monica Urrutia",
+    "505": "Monica Urrutia",
+    "510": "Monica Urrutia",
+    "511": "Cindy Monsalves",
+    "514": "Cindy Monsalves",
+    "517": "Monica Urrutia",
+    "520": "Monica Urrutia",
+    "530": "Monica Urrutia",
+    "534": "Monica Urrutia",
+    "535": "Cindy Monsalves",
+    "536": "Monica Urrutia",
+    "542": "Monica Urrutia",
+    "545": "Cindy Monsalves",
+    "547": "Cindy Monsalves",
+    "548": "Monica Urrutia",
+    "549": "Cindy Monsalves",
+    "552": "Cindy Monsalves",
+    "561": "Monica Urrutia",
+    "562": "Monica Urrutia",
+    "566": "Monica Urrutia",
+    "568": "Daisy Ponce",
+    "569": "Monica Urrutia",
+    "570": "Monica Urrutia",
+    "575": "Monica Urrutia",
+    "577": "Monica Urrutia",
+    "580": "Daisy Ponce",
+    "581": "Monica Urrutia",
+    "583": "Monica Urrutia",
+    "584": "Monica Urrutia",
+    "585": "Monica Urrutia",
+    "587": "Cindy Monsalves",
+    "591": "Monica Urrutia",
+    "593": "Daisy Ponce",
+    "595": "Ivan Salinas",
+    "597": "Monica Urrutia",
+    "598": "Monica Urrutia",
+    "600": "Cindy Monsalves",
+    "603": "Monica Urrutia",
+    "604": "Cindy Monsalves",
+    "607": "Cindy Monsalves",
+    "613": "Monica Urrutia",
+    "619": "Monica Urrutia",
+    "620": "Monica Urrutia",
+    "627": "Monica Urrutia",
+    "629": "Monica Urrutia",
+    "630": "Monica Urrutia",
+    "633": "Cindy Monsalves",
+    "636": "Cindy Monsalves",
+    "646": "Ivan Salinas",
+    "651": "Monica Urrutia",
+    "652": "Monica Urrutia",
+    "659": "Cindy Monsalves",
+    "663": "Cindy Monsalves",
+    "668": "Cindy Monsalves",
+    "673": "Cindy Monsalves",
+    "674": "Daisy Ponce",
+    "677": "Cindy Monsalves",
+    "678": "Daisy Ponce",
+    "679": "Monica Urrutia",
+    "686": "Daisy Ponce",
+    "698": "Daisy Ponce",
+    "701": "Monica Urrutia",
+    "705": "Daisy Ponce",
+    "707": "Cindy Monsalves",
+    "710": "Monica Urrutia",
+    "712": "Cindy Monsalves",
+    "715": "Monica Urrutia",
+    "718": "Cindy Monsalves",
+    "720": "Monica Urrutia",
+    "727": "Daisy Ponce",
+    "728": "Monica Urrutia",
+    "731": "Cindy Monsalves",
+    "733": "Cindy Monsalves",
+    "735": "Cindy Monsalves",
+    "739": "Monica Urrutia",
+    "745": "Cindy Monsalves",
+    "748": "Monica Urrutia",
+    "751": "Monica Urrutia",
+    "757": "Monica Urrutia",
+    "760": "Cindy Monsalves",
+    "763": "Ivan Salinas",
+    "764": "Cindy Monsalves",
+    "772": "Cindy Monsalves",
+    "773": "Monica Urrutia",
+    "774": "Cindy Monsalves",
+    "777": "Monica Urrutia",
+    "779": "Monica Urrutia",
+    "782": "Monica Urrutia",
+    "785": "Monica Urrutia",
+    "786": "Cindy Monsalves",
+    "788": "Cindy Monsalves",
+    "792": "Daisy Ponce",
+    "793": "Daisy Ponce",
+    "794": "Daisy Ponce",
+    "800": "Cindy Monsalves",
+    "801": "Daisy Ponce",
+    "807": "Monica Urrutia",
+    "810": "Monica Urrutia",
+    "814": "Cindy Monsalves",
+    "820": "Cindy Monsalves",
+    "822": "Monica Urrutia",
+    "825": "Daisy Ponce",
+    "826": "Daisy Ponce",
+    "830": "Cindy Monsalves",
+    "831": "Monica Urrutia",
+    "839": "Daisy Ponce",
+    "842": "Daisy Ponce",
+    "845": "Daisy Ponce",
+    "846": "Daisy Ponce",
+    "847": "Cindy Monsalves",
+    "848": "Monica Urrutia",
+    "849": "Monica Urrutia",
+    "850": "Monica Urrutia",
+    "851": "Francisca Salinas",
+    "852": "Francisca Salinas",
+    "853": "Monica Urrutia",
+    "854": "Monica Urrutia",
+    "855": "Ivan Salinas",
+    "856": "Francisca Salinas",
+    "857": "Monica Urrutia",
+    "858": "Daisy Ponce",
+    "859": "Cindy Monsalves",
+    "860": "Francisca Salinas",
+    "861": "Daisy Ponce",
+    "862": "Monica Urrutia",
+    "863": "Ivan Salinas",
+    "864": "Cindy Monsalves",
+    "865": "Daisy Ponce",
+    "866": "Cindy Monsalves",
+    "867": "Cindy Monsalves",
+    "868": "Cindy Monsalves",
+    "869": "Monica Urrutia",
+    "870": "Cindy Monsalves",
+    "871": "Monica Urrutia",
+    "872": "Cindy Monsalves",
+    "873": "Monica Urrutia",
+    "874": "Cindy Monsalves",
+    "875": "Cindy Monsalves",
+    "876": "Cindy Monsalves",
+    "877": "Cindy Monsalves",
+    "878": "Cindy Monsalves",
+    "879": "Cindy Monsalves",
+    "880": "Cindy Monsalves",
+    "881": "Monica Urrutia",
+    "882": "Cindy Monsalves",
+    "883": "Cindy Monsalves",
+    "884": "Cindy Monsalves",
+    "885": "Monica Urrutia",
+    "886": "Cindy Monsalves",
+    "887": "Monica Urrutia",
+    "888": "Monica Urrutia",
+    "889": "Daisy Ponce",
+    "890": "Monica Urrutia",
+    "891": "Cindy Monsalves",
+    "892": "Cindy Monsalves",
+    "893": "Daisy Ponce",
+    "894": "Monica Urrutia",
+    "895": "Cindy Monsalves",
+    "896": "Daisy Ponce",
+    "897": "Cindy Monsalves",
+    "898": "Cindy Monsalves",
+    "899": "Cindy Monsalves",
+    "900": "Cindy Monsalves",
+    "901": "Monica Urrutia",
+    "902": "Cindy Monsalves",
+    "903": "Monica Urrutia",
+    "904": "Cindy Monsalves",
+    "905": "Cindy Monsalves",
+    "906": "Cindy Monsalves",
+    "907": "Monica Urrutia",
+    "908": "Monica Urrutia",
+    "909": "Daisy Ponce",
+    "910": "Cindy Monsalves",
+    "911": "Cindy Monsalves",
+    "912": "Cindy Monsalves",
+    "913": "Cindy Monsalves",
+    "914": "Cindy Monsalves",
+    "915": "Cindy Monsalves",
+    "916": "Monica Urrutia",
+    "917": "Cindy Monsalves",
+    "918": "Cindy Monsalves",
+    "919": "Monica Urrutia",
+    "920": "Daisy Ponce",
+    "921": "Monica Urrutia",
+    "922": "Daisy Ponce",
+    "923": "Cindy Monsalves",
+    "925": "Cindy Monsalves",
+    "926": "Cindy Monsalves",
+    "927": "Cindy Monsalves",
+    "929": "Cindy Monsalves",
+    "930": "Cindy Monsalves",
+    "931": "Cindy Monsalves",
+    "932": "Cindy Monsalves",
+    "933": "Monica Urrutia",
+    "934": "Cindy Monsalves",
+    "935": "Francisca Salinas",
+    "936": "Cindy Monsalves",
+    "937": "Cindy Monsalves",
+    "938": "Cindy Monsalves",
+    "939": "Monica Urrutia",
+    "940": "Cindy Monsalves",
+    "941": "Daisy Ponce",
+    "942": "Cindy Monsalves",
+    "943": "Daisy Ponce",
+    "944": "Daisy Ponce",
+    "945": "Monica Urrutia",
+    "946": "Cindy Monsalves",
+    "947": "Cindy Monsalves",
+    "948": "Daisy Ponce",
+    "949": "Monica Urrutia",
+    "950": "Cindy Monsalves",
+    "951": "Cindy Monsalves",
+    "952": "Cindy Monsalves",
+    "953": "Cindy Monsalves",
+    "954": "Monica Urrutia",
+    "955": "Cindy Monsalves",
+    "956": "Cindy Monsalves",
+    "957": "Francisca Salinas",
+    "958": "Monica Urrutia",
+    "959": "Monica Urrutia",
+    "960": "Daisy Ponce",
+    "961": "Cindy Monsalves",
+    "962": "Monica Urrutia",
+    "963": "Monica Urrutia",
+    "964": "Cindy Monsalves",
+    "965": "Cindy Monsalves",
+    "966": "Daisy Ponce",
+    "967": "Cindy Monsalves",
+    "968": "Cindy Monsalves",
+    "969": "Cindy Monsalves",
+    "970": "Cindy Monsalves",
+    "971": "Cindy Monsalves",
+    "972": "Monica Urrutia",
+    "973": "Monica Urrutia",
+    "974": "Daisy Ponce",
+    "975": "Cindy Monsalves",
+    "976": "Cindy Monsalves",
+    "977": "Cindy Monsalves",
+    "978": "Cindy Monsalves",
+    "979": "Cindy Monsalves",
+    "980": "Cindy Monsalves",
+    "981": "Cindy Monsalves",
+    "982": "Cindy Monsalves",
+    "983": "Cindy Monsalves",
+    "984": "Daisy Ponce",
+    "985": "Daisy Ponce",
+    "986": "Monica Urrutia",
+    "987": "Cindy Monsalves",
+    "988": "Ivan Salinas",
+    "989": "Cindy Monsalves",
+    "990": "Cindy Monsalves",
+    "991": "Cindy Monsalves",
+    "992": "Daisy Ponce",
+    "993": "Daisy Ponce",
+    "994": "Francisca Salinas",
+    "995": "Monica Urrutia",
+    "996": "Cindy Monsalves",
+    "997": "Cindy Monsalves",
+    "998": "Cindy Monsalves",
+    "999": "Cindy Monsalves",
+    "1000": "Cindy Monsalves",
+    "1001": "Cindy Monsalves",
+    "1002": "Monica Urrutia",
+    "1003": "Cindy Monsalves",
+    "1004": "Cindy Monsalves",
+    "1005": "Cindy Monsalves",
+    "1006": "Cindy Monsalves",
+    "1007": "Cindy Monsalves",
+    "1008": "Monica Urrutia",
+    "1009": "Cindy Monsalves",
+    "1010": "Monica Urrutia",
+    "1011": "Cindy Monsalves",
+    "1012": "Daisy Ponce",
+    "1013": "Monica Urrutia",
+    "1014": "Cindy Monsalves",
+    "1015": "Cindy Monsalves",
+    "1016": "Cindy Monsalves",
+    "1017": "Cindy Monsalves",
+    "1018": "Cindy Monsalves",
+    "1019": "Monica Urrutia",
+    "1021": "Cindy Monsalves",
+    "1022": "Cindy Monsalves",
+    "1023": "Monica Urrutia",
+    "1024": "Cindy Monsalves",
+    "1025": "Cindy Monsalves",
+    "1026": "Cindy Monsalves",
+    "1027": "Daisy Ponce",
+    "1028": "Monica Urrutia",
+    "1029": "Daisy Ponce",
+    "1030": "Cindy Monsalves",
+    "1031": "Cindy Monsalves",
+    "1032": "Cindy Monsalves",
+    "1033": "Cindy Monsalves",
+    "1034": "Cindy Monsalves",
+    "1035": "Monica Urrutia",
+    "1036": "Cindy Monsalves",
+    "1037": "Cindy Monsalves",
+    "1038": "Cindy Monsalves",
+    "1039": "Monica Urrutia",
+    "1040": "Cindy Monsalves",
+    "1041": "Monica Urrutia",
+    "1042": "Daisy Ponce",
+    "1043": "Daisy Ponce",
+    "1044": "Cindy Monsalves",
+    "1045": "Cindy Monsalves",
+    "1046": "Cindy Monsalves",
+    "1047": "Cindy Monsalves",
+    "1048": "Cindy Monsalves",
+    "1049": "Cindy Monsalves",
+    "1050": "Monica Urrutia",
+    "1051": "Cindy Monsalves",
+    "1052": "Monica Urrutia",
+    "1053": "Cindy Monsalves",
+    "1054": "Cindy Monsalves",
+    "1055": "Daisy Ponce",
+    "1056": "Monica Urrutia",
+    "1057": "Cindy Monsalves",
+    "1058": "Cindy Monsalves",
+    "1059": "Daisy Ponce",
+    "1060": "Cindy Monsalves",
+    "1061": "Cindy Monsalves",
+    "1062": "Cindy Monsalves",
+    "1063": "Daisy Ponce",
+    "1064": "Daisy Ponce",
+    "1065": "Monica Urrutia",
+    "1066": "Monica Urrutia",
+    "1067": "Daisy Ponce",
+    "1068": "Cindy Monsalves",
+    "1069": "Cindy Monsalves",
+    "1070": "Cindy Monsalves",
+    "1071": "Monica Urrutia",
+    "1072": "Daisy Ponce",
+    "1073": "Daisy Ponce",
+    "1074": "Daisy Ponce",
+    "1075": "Cindy Monsalves",
+    "1076": "Cindy Monsalves",
+    "1077": "Cindy Monsalves",
+    "1078": "Monica Urrutia",
+    "1079": "Cindy Monsalves",
+    "1080": "Monica Urrutia",
+    "1081": "Cindy Monsalves",
+    "1082": "Cindy Monsalves",
+    "1083": "Cindy Monsalves",
+    "1084": "Daisy Ponce",
+    "1085": "Daisy Ponce",
+    "1086": "Cindy Monsalves",
+    "1087": "Cindy Monsalves",
+    "1088": "Cindy Monsalves",
+    "1089": "Ivan Salinas",
+    "1090": "Monica Urrutia",
+    "1091": "Cindy Monsalves",
+    "1092": "Monica Urrutia",
+    "1093": "Cindy Monsalves",
+    "1094": "Cindy Monsalves",
+    "1095": "Monica Urrutia",
+    "1096": "Monica Urrutia",
+    "1097": "Ivan Salinas",
+    "1098": "Cindy Monsalves",
+    "1099": "Monica Urrutia",
+    "1101": "Daisy Ponce",
+    "1103": "Cindy Monsalves",
+    "1104": "Cindy Monsalves",
+    "1105": "Daisy Ponce",
+    "1106": "Cindy Monsalves",
+    "1107": "Cindy Monsalves",
+    "1108": "Cindy Monsalves",
+    "1109": "Monica Urrutia",
+    "1110": "Monica Urrutia",
+    "1112": "Daisy Ponce",
+    "1113": "Cindy Monsalves",
+    "1114": "Daisy Ponce",
+    "1115": "Monica Urrutia",
+    "1117": "Cindy Monsalves",
+    "1118": "Cindy Monsalves",
+    "1119": "Cindy Monsalves",
+    "1120": "Cindy Monsalves",
+    "1121": "Monica Urrutia",
+    "1122": "Cindy Monsalves",
+    "1123": "Cindy Monsalves",
+    "1124": "Monica Urrutia",
+    "1126": "Cindy Monsalves",
+    "1128": "Cindy Monsalves",
+    "1129": "Monica Urrutia",
+    "1130": "Monica Urrutia",
+    "1131": "Monica Urrutia",
+    "1133": "Cindy Monsalves",
+    "1134": "Monica Urrutia",
+    "1135": "Monica Urrutia",
+    "1136": "Cindy Monsalves",
+    "1137": "Cindy Monsalves",
+    "1139": "Cindy Monsalves",
+    "1140": "Cindy Monsalves",
+    "1141": "Daisy Ponce",
+    "1142": "Cindy Monsalves",
+    "1143": "Cindy Monsalves",
+    "1144": "Cindy Monsalves",
+    "1145": "Cindy Monsalves",
+    "1146": "Monica Urrutia",
+    "1147": "Monica Urrutia",
+    "1149": "Daisy Ponce",
+    "1150": "Cindy Monsalves",
+    "1151": "Cindy Monsalves",
+    "1153": "Cindy Monsalves",
+    "1154": "Daisy Ponce",
+    "1155": "Monica Urrutia",
+    "1156": "Cindy Monsalves",
+    "1157": "Cindy Monsalves",
+    "1158": "Daisy Ponce",
+    "1159": "Daisy Ponce",
+    "1160": "Daisy Ponce",
+    "1161": "Cindy Monsalves",
+    "1162": "Daisy Ponce",
+    "1163": "Monica Urrutia",
+    "1164": "Daisy Ponce",
+    "1165": "Monica Urrutia",
+    "1166": "Cindy Monsalves",
+    "1167": "Daisy Ponce",
+    "1168": "Cindy Monsalves",
+    "1169": "Cindy Monsalves",
+    "1170": "Monica Urrutia",
+    "1171": "Monica Urrutia",
+    "1172": "Daisy Ponce",
+    "1173": "Cindy Monsalves",
+    "1174": "Cindy Monsalves",
+    "1175": "Cindy Monsalves",
+    "1176": "Daisy Ponce",
+    "1177": "Daisy Ponce",
+    "1178": "Daisy Ponce",
+    "1179": "Monica Urrutia",
+    "1180": "Daisy Ponce",
+    "1181": "Cindy Monsalves",
+    "1182": "Daisy Ponce",
+    "1183": "Daisy Ponce",
+    "1184": "Cindy Monsalves",
+    "1185": "Cindy Monsalves",
+    "1186": "Monica Urrutia",
+    "1187": "Monica Urrutia",
+    "1188": "Daisy Ponce",
+    "1189": "Cindy Monsalves",
+    "1190": "Daisy Ponce",
+    "1191": "Daisy Ponce",
+    "1192": "Daisy Ponce",
+    "1193": "Cindy Monsalves",
+    "1194": "Cindy Monsalves",
+    "1195": "Daisy Ponce",
+    "1196": "Cindy Monsalves",
+    "1197": "Cindy Monsalves",
+    "1198": "Monica Urrutia",
+    "1199": "Daisy Ponce",
+    "1200": "Daisy Ponce",
+    "1201": "Monica Urrutia",
+    "1202": "Monica Urrutia",
+    "1204": "Daisy Ponce",
+    "1205": "Cindy Monsalves",
+    "1206": "Cindy Monsalves",
+    "1207": "Daisy Ponce",
+    "1208": "Daisy Ponce",
+    "1209": "Cindy Monsalves",
+    "1210": "Daisy Ponce",
+    "1211": "Cindy Monsalves",
+    "1212": "Cindy Monsalves",
+    "1213": "Cindy Monsalves",
+    "1214": "Cindy Monsalves",
+    "1216": "Daisy Ponce",
+    "1217": "Cindy Monsalves",
+    "1218": "Cindy Monsalves",
+    "1219": "Cindy Monsalves",
+    "1220": "Cindy Monsalves",
+    "1221": "Monica Urrutia",
+    "1222": "Daisy Ponce",
+    "1223": "Cindy Monsalves",
+    "1224": "Cindy Monsalves",
+    "1225": "Daisy Ponce",
+    "1226": "Cindy Monsalves",
+    "1227": "Cindy Monsalves",
+    "1228": "Monica Urrutia",
+    "1229": "Daisy Ponce",
+    "1230": "Monica Urrutia",
+    "1231": "Cindy Monsalves",
+    "1232": "Daisy Ponce",
+    "1233": "Daisy Ponce",
+    "1234": "Daisy Ponce",
+    "1235": "Cindy Monsalves",
+    "1236": "Cindy Monsalves",
+    "1237": "Cindy Monsalves",
+    "1238": "Cindy Monsalves",
+    "1239": "Cindy Monsalves",
+    "1240": "Cindy Monsalves",
+    "1241": "Cindy Monsalves",
+    "1242": "Cindy Monsalves",
+    "1243": "Cindy Monsalves",
+    "1266": "Daisy Ponce"
+  }
 }
