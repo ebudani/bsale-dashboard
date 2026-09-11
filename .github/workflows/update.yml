@@ -2,7 +2,7 @@ name: Update Bsale Data
 
 on:
   schedule:
-    - cron: "0 8 * * *"   # 8:00 UTC = 5:00 AM Chile (hora Santiago)
+    - cron: "0 20 * * *"   # 20:00 UTC = 17:00 Chile (hora Santiago)
   workflow_dispatch:        # permite correrlo manualmente desde GitHub
     inputs:
       mode:
