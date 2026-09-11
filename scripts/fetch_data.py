@@ -18,7 +18,9 @@ import os
 import json
 import calendar
 import datetime
+import time
 import urllib.request
+import urllib.error
 import argparse
 
 TOKEN = os.environ.get("BSALE_TOKEN", "")
@@ -71,10 +73,25 @@ def classify_brand(variant_id, description):
     return "Otros"
 
 
-def get_json(url):
+def get_json(url, retries=5):
+    """
+    GET with retry/backoff. Plain urllib has none, so a single transient
+    Bsale hiccup (429, brief 5xx) kills the whole run -- this script makes
+    hundreds of sequential calls per run (one per document, for line-item
+    detail), so that's not a hypothetical: it's what failed the run of
+    2026-09-11 14:28 UTC after ~10 minutes.
+    """
     req = urllib.request.Request(url, headers=HEADERS)
-    with urllib.request.urlopen(req) as r:
-        return json.load(r)
+    for attempt in range(retries):
+        try:
+            with urllib.request.urlopen(req, timeout=30) as r:
+                return json.load(r)
+        except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError) as e:
+            if attempt == retries - 1:
+                raise
+            wait = 2 ** attempt
+            print(f"\n  [retry] {url} -> {e} (intento {attempt+1}/{retries}, esperando {wait}s)", flush=True)
+            time.sleep(wait)
 
 
 # -- Metadata ------------------------------------------------------------------
