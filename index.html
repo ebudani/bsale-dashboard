@@ -538,7 +538,45 @@ let periodMode = 'this_month';
 let customFromIdx = 0;
 let customToIdx = 0;
 let chartMonthly, chartDaily, chartBrands, chartSku;
+// Base de 10 colores muy distinguibles para los productos top; si el
+// catalogo historico tiene mas SKUs que colores base, se generan tonos
+// adicionales igualmente espaciados en el circulo de matices en vez de
+// reciclar los primeros 10 (eso volveria a producir 2 productos con el
+// mismo color, el problema que se esta arreglando aca).
 const SKU_COLORS = ['#2563eb', '#d97706', '#059669', '#dc2626', '#7c3aed', '#0891b2', '#db2777', '#65a30d', '#ea580c', '#4f46e5'];
+const SKU_OTROS_COLOR = '#94a3b8';
+let skuColorMap = {};
+
+function skuPalette(n) {
+  const colors = SKU_COLORS.slice(0, n);
+  for (let i = colors.length; i < n; i++) {
+    const hue = Math.round((360 / n) * i);
+    colors.push(`hsl(${hue}, 65%, 45%)`);
+  }
+  return colors;
+}
+
+// Un color fijo por producto, sin importar el periodo elegido -- si el color
+// cambiara segun el ranking de ventas de cada filtro, confunde (mismo
+// producto, color distinto de un mes a otro). Se calcula una sola vez sobre
+// TODO el historico, ordenado por venta acumulada, asi el color de cada
+// producto no depende de que periodo este mirando el usuario.
+function buildSkuColorMap() {
+  const totals = {};
+  allMonths.forEach(m => {
+    Object.entries(m.by_sku || {}).forEach(([sku, v]) => {
+      totals[sku] = (totals[sku] || 0) + v;
+    });
+  });
+  const ranked = Object.entries(totals).sort((a, b) => b[1] - a[1]).map(([sku]) => sku);
+  const palette = skuPalette(ranked.length);
+  skuColorMap = {};
+  ranked.forEach((sku, i) => { skuColorMap[sku] = palette[i]; });
+}
+
+function skuColor(sku) {
+  return sku === 'Otros' ? SKU_OTROS_COLOR : (skuColorMap[sku] || SKU_OTROS_COLOR);
+}
 
 // by_vendor / by_vendor_brand keys are inconsistent across months (some store the
 // numeric Bsale user id, others already store the name) — always resolve through
@@ -600,6 +638,7 @@ async function loadData() {
   document.getElementById('updated-at').textContent =
     'Actualizado: ' + (ventas.updated_at || '').slice(0, 16).replace('T', ' ') + ' UTC';
 
+  buildSkuColorMap();
   buildVendorSelector();
   buildCustomRangeSelectors();
   render();
@@ -1034,7 +1073,7 @@ function renderSkuChart(m, label) {
 
   const labels = top.map(([sku]) => sku);
   const values = top.map(([, v]) => v);
-  const colors = labels.map((_, i) => SKU_COLORS[i % SKU_COLORS.length]);
+  const colors = labels.map(skuColor);
 
   if (chartSku) chartSku.destroy();
   chartSku = new Chart(document.getElementById('chart-sku'), {
