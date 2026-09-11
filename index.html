@@ -1313,7 +1313,7 @@ function renderTopClients(m, label, isMulti) {
 // month against the previous one, since that's what "en riesgo" means
 // regardless of which historical range is being reviewed elsewhere on the page.
 const RISK_STATUS_LABEL = { activa: 'Activa', atencion: 'Atención', riesgo: 'En riesgo', nuevo: 'Sin historial' };
-const RISK_STATUS_RANK  = { riesgo: 0, atencion: 1, nuevo: 2, activa: 3 };
+const RISK_STATUS_RANK  = { atencion: 0, riesgo: 1, nuevo: 2, activa: 3 };
 
 function riskMonthKeys() {
   const now = new Date();
