@@ -316,7 +316,8 @@ def fetch_brand_details(facturas, exenta_docs, nc_docs):
 # -- Aggregation ---------------------------------------------------------------
 
 def build_month_record(year, month, facturas, nc_docs, exenta_docs, clients_meta,
-                       brand_details=None, client_to_vendor=None, client_activity=None):
+                       brand_details=None, client_to_vendor=None, client_activity=None,
+                       last_purchase_brands=None):
     neto_facturas = sum(d.get("netAmount", 0) for d in facturas + exenta_docs)
     neto_nc       = sum(d.get("netAmount", 0) for d in nc_docs)
     total_neto    = neto_facturas - neto_nc
@@ -470,6 +471,19 @@ def build_month_record(year, month, facturas, nc_docs, exenta_docs, clients_meta
         month_key = f"{year}-{month:02d}"
         for cid, vals in by_client.items():
             client_activity.setdefault(cid, {})[month_key] = round(vals["neto"])
+            # Brand breakdown of THIS purchase, for the "Cartera en riesgo"
+            # view's "que compro / de que tamano era" column. by_client_brand
+            # is already computed above for every client (not just top 15),
+            # so this is free -- no extra API calls. Only recorded on a
+            # positive month (an actual purchase), so it always reflects the
+            # most recent real purchase once the caller has walked all months.
+            if vals["neto"] > 0 and last_purchase_brands is not None:
+                b = by_client_brand.get(cid, empty_brand_totals())
+                last_purchase_brands[cid] = {
+                    "month": month_key,
+                    "Teoxane": round(b["Teoxane"]["neto"]),
+                    "RRS HA Long Lasting": round(b["RRS HA Long Lasting"]["neto"]),
+                }
 
     def derive_productivity(per_client):
         clients = {b: set() for b in PRODUCTIVITY_BRANDS}
@@ -559,11 +573,12 @@ def load_existing():
             data.get("clients", {}),
             {(r["year"], r["month"]): r for r in data.get("months", [])},
             data.get("client_activity", {}),
+            data.get("last_purchase_brands", {}),
         )
-    return {}, {}, {}, {}
+    return {}, {}, {}, {}, {}
 
 
-def save(users, clients, months_dict, client_activity, client_vendor):
+def save(users, clients, months_dict, client_activity, client_vendor, last_purchase_brands):
     months = sorted(months_dict.values(), key=lambda r: (r["year"], r["month"]))
     output = {
         "updated_at": datetime.datetime.utcnow().isoformat() + "Z",
@@ -576,6 +591,9 @@ def save(users, clients, months_dict, client_activity, client_vendor):
         # the current month's entries; a --backfill run repopulates it fully.
         "client_activity": client_activity,
         "client_vendor": client_vendor,
+        # Brand breakdown (Teoxane / RRS) of each client's most recent
+        # positive-neto month -- "how big was that client" at a glance.
+        "last_purchase_brands": last_purchase_brands,
     }
     os.makedirs(os.path.dirname(OUT_FILE), exist_ok=True)
     with open(OUT_FILE, "w", encoding="utf-8") as f:
@@ -602,7 +620,7 @@ def main():
     args = parser.parse_args()
 
     today = datetime.date.today()
-    _, _, existing, client_activity = load_existing()
+    _, _, existing, client_activity, last_purchase_brands = load_existing()
 
     if args.backfill:
         from_year, from_month = map(int, args.from_month.split("-"))
@@ -644,7 +662,8 @@ def main():
 
         record = build_month_record(
             year, month, facturas, nc_data["nc"], nc_data["exenta"],
-            clients, brand_details, client_to_vendor, client_activity
+            clients, brand_details, client_to_vendor, client_activity,
+            last_purchase_brands
         )
         existing[(year, month)] = record
         print(
@@ -653,7 +672,7 @@ def main():
             f"RRS ${record['by_brand'].get('RRS HA Long Lasting', 0):,.0f}"
         )
 
-    save(users, clients, existing, client_activity, client_to_vendor)
+    save(users, clients, existing, client_activity, client_to_vendor, last_purchase_brands)
 
 
 if __name__ == "__main__":

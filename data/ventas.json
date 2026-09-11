@@ -29997,5 +29997,2642 @@
     "1242": "Cindy Monsalves",
     "1243": "Cindy Monsalves",
     "1266": "Daisy Ponce"
+  },
+  "last_purchase_brands": {
+    "869": {
+      "month": "2026-01",
+      "Teoxane": 323820,
+      "RRS HA Long Lasting": 0
+    },
+    "782": {
+      "month": "2026-07",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 1978687
+    },
+    "884": {
+      "month": "2026-09",
+      "Teoxane": 561199,
+      "RRS HA Long Lasting": 0
+    },
+    "584": {
+      "month": "2026-04",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 1099270
+    },
+    "980": {
+      "month": "2025-07",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 0
+    },
+    "570": {
+      "month": "2026-08",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 1566460
+    },
+    "903": {
+      "month": "2026-09",
+      "Teoxane": 1068732,
+      "RRS HA Long Lasting": 0
+    },
+    "895": {
+      "month": "2026-01",
+      "Teoxane": 1232200,
+      "RRS HA Long Lasting": 0
+    },
+    "597": {
+      "month": "2026-09",
+      "Teoxane": 1299418,
+      "RRS HA Long Lasting": 0
+    },
+    "785": {
+      "month": "2025-12",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 165155
+    },
+    "822": {
+      "month": "2026-08",
+      "Teoxane": 735790,
+      "RRS HA Long Lasting": 0
+    },
+    "429": {
+      "month": "2025-02",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 1407672
+    },
+    "916": {
+      "month": "2026-08",
+      "Teoxane": 2475031,
+      "RRS HA Long Lasting": 0
+    },
+    "934": {
+      "month": "2026-09",
+      "Teoxane": 632062,
+      "RRS HA Long Lasting": 0
+    },
+    "847": {
+      "month": "2026-09",
+      "Teoxane": 624218,
+      "RRS HA Long Lasting": 0
+    },
+    "914": {
+      "month": "2025-04",
+      "Teoxane": 646380,
+      "RRS HA Long Lasting": 0
+    },
+    "917": {
+      "month": "2025-04",
+      "Teoxane": 647640,
+      "RRS HA Long Lasting": 554921
+    },
+    "633": {
+      "month": "2026-05",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 494672
+    },
+    "705": {
+      "month": "2026-09",
+      "Teoxane": 1886207,
+      "RRS HA Long Lasting": 0
+    },
+    "965": {
+      "month": "2026-07",
+      "Teoxane": 609991,
+      "RRS HA Long Lasting": 0
+    },
+    "901": {
+      "month": "2026-06",
+      "Teoxane": 2773350,
+      "RRS HA Long Lasting": 0
+    },
+    "569": {
+      "month": "2026-08",
+      "Teoxane": 3519044,
+      "RRS HA Long Lasting": 494672
+    },
+    "591": {
+      "month": "2026-08",
+      "Teoxane": 2420288,
+      "RRS HA Long Lasting": 1099270
+    },
+    "921": {
+      "month": "2026-08",
+      "Teoxane": 4337290,
+      "RRS HA Long Lasting": 494672
+    },
+    "888": {
+      "month": "2026-08",
+      "Teoxane": 2033771,
+      "RRS HA Long Lasting": 0
+    },
+    "871": {
+      "month": "2026-09",
+      "Teoxane": 3083426,
+      "RRS HA Long Lasting": 0
+    },
+    "777": {
+      "month": "2026-07",
+      "Teoxane": 673546,
+      "RRS HA Long Lasting": 0
+    },
+    "791": {
+      "month": "2025-06",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 0
+    },
+    "613": {
+      "month": "2025-07",
+      "Teoxane": 1764720,
+      "RRS HA Long Lasting": 0
+    },
+    "922": {
+      "month": "2025-12",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 554921
+    },
+    "941": {
+      "month": "2025-06",
+      "Teoxane": 1255380,
+      "RRS HA Long Lasting": 0
+    },
+    "477": {
+      "month": "2026-08",
+      "Teoxane": 673546,
+      "RRS HA Long Lasting": 0
+    },
+    "620": {
+      "month": "2026-02",
+      "Teoxane": 11981400,
+      "RRS HA Long Lasting": 0
+    },
+    "438": {
+      "month": "2026-06",
+      "Teoxane": 611770,
+      "RRS HA Long Lasting": 0
+    },
+    "963": {
+      "month": "2026-09",
+      "Teoxane": 1556875,
+      "RRS HA Long Lasting": 0
+    },
+    "715": {
+      "month": "2026-05",
+      "Teoxane": 2084468,
+      "RRS HA Long Lasting": 0
+    },
+    "943": {
+      "month": "2026-09",
+      "Teoxane": 1172740,
+      "RRS HA Long Lasting": 0
+    },
+    "994": {
+      "month": "2025-08",
+      "Teoxane": 624150,
+      "RRS HA Long Lasting": 0
+    },
+    "890": {
+      "month": "2026-06",
+      "Teoxane": 1304326,
+      "RRS HA Long Lasting": 0
+    },
+    "517": {
+      "month": "2026-09",
+      "Teoxane": 2245845,
+      "RRS HA Long Lasting": 494672
+    },
+    "474": {
+      "month": "2026-08",
+      "Teoxane": 1342506,
+      "RRS HA Long Lasting": 144279
+    },
+    "1009": {
+      "month": "2026-08",
+      "Teoxane": 674856,
+      "RRS HA Long Lasting": 0
+    },
+    "542": {
+      "month": "2026-04",
+      "Teoxane": 2950854,
+      "RRS HA Long Lasting": 0
+    },
+    "536": {
+      "month": "2026-08",
+      "Teoxane": 1003200,
+      "RRS HA Long Lasting": 0
+    },
+    "900": {
+      "month": "2026-09",
+      "Teoxane": 624219,
+      "RRS HA Long Lasting": 0
+    },
+    "883": {
+      "month": "2026-04",
+      "Teoxane": 2651418,
+      "RRS HA Long Lasting": 0
+    },
+    "1093": {
+      "month": "2026-06",
+      "Teoxane": 1846983,
+      "RRS HA Long Lasting": 0
+    },
+    "1091": {
+      "month": "2026-08",
+      "Teoxane": 2437594,
+      "RRS HA Long Lasting": 0
+    },
+    "547": {
+      "month": "2025-12",
+      "Teoxane": 2344410,
+      "RRS HA Long Lasting": 0
+    },
+    "1075": {
+      "month": "2025-12",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 554921
+    },
+    "1148": {
+      "month": "2026-04",
+      "Teoxane": 609398,
+      "RRS HA Long Lasting": 0
+    },
+    "1068": {
+      "month": "2026-08",
+      "Teoxane": 670925,
+      "RRS HA Long Lasting": 0
+    },
+    "893": {
+      "month": "2026-08",
+      "Teoxane": 1388067,
+      "RRS HA Long Lasting": 0
+    },
+    "860": {
+      "month": "2026-08",
+      "Teoxane": 11979065,
+      "RRS HA Long Lasting": 1876865
+    },
+    "1110": {
+      "month": "2026-02",
+      "Teoxane": 1809530,
+      "RRS HA Long Lasting": 0
+    },
+    "593": {
+      "month": "2026-09",
+      "Teoxane": 1305758,
+      "RRS HA Long Lasting": 0
+    },
+    "479": {
+      "month": "2025-11",
+      "Teoxane": 975240,
+      "RRS HA Long Lasting": 0
+    },
+    "1097": {
+      "month": "2026-03",
+      "Teoxane": 288420,
+      "RRS HA Long Lasting": 0
+    },
+    "443": {
+      "month": "2025-01",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 0
+    },
+    "1080": {
+      "month": "2026-07",
+      "Teoxane": 1642831,
+      "RRS HA Long Lasting": 0
+    },
+    "458": {
+      "month": "2026-09",
+      "Teoxane": 630511,
+      "RRS HA Long Lasting": 0
+    },
+    "824": {
+      "month": "2026-07",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 1154234
+    },
+    "600": {
+      "month": "2026-09",
+      "Teoxane": 1209312,
+      "RRS HA Long Lasting": 0
+    },
+    "1173": {
+      "month": "2026-06",
+      "Teoxane": 2121039,
+      "RRS HA Long Lasting": 989343
+    },
+    "566": {
+      "month": "2024-12",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 0
+    },
+    "1002": {
+      "month": "2026-06",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 577117
+    },
+    "562": {
+      "month": "2026-05",
+      "Teoxane": 1388067,
+      "RRS HA Long Lasting": 0
+    },
+    "830": {
+      "month": "2026-03",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 554921
+    },
+    "793": {
+      "month": "2026-07",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 577117
+    },
+    "774": {
+      "month": "2026-09",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 577117
+    },
+    "568": {
+      "month": "2026-09",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 989343
+    },
+    "995": {
+      "month": "2026-08",
+      "Teoxane": 1520064,
+      "RRS HA Long Lasting": 0
+    },
+    "480": {
+      "month": "2025-12",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 647780
+    },
+    "763": {
+      "month": "2024-12",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 0
+    },
+    "908": {
+      "month": "2026-08",
+      "Teoxane": 2752661,
+      "RRS HA Long Lasting": 0
+    },
+    "846": {
+      "month": "2026-01",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 554921
+    },
+    "748": {
+      "month": "2024-12",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 296352
+    },
+    "848": {
+      "month": "2024-12",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 98784
+    },
+    "807": {
+      "month": "2024-12",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 98784
+    },
+    "849": {
+      "month": "2024-12",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 93844
+    },
+    "850": {
+      "month": "2024-12",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 187688
+    },
+    "851": {
+      "month": "2024-12",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 154350
+    },
+    "745": {
+      "month": "2025-10",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 898444
+    },
+    "852": {
+      "month": "2024-12",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 324135
+    },
+    "502": {
+      "month": "2025-01",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 518616
+    },
+    "853": {
+      "month": "2024-12",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 231525
+    },
+    "773": {
+      "month": "2026-07",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 1566460
+    },
+    "505": {
+      "month": "2024-12",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 0
+    },
+    "854": {
+      "month": "2024-12",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 0
+    },
+    "855": {
+      "month": "2024-12",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 518616
+    },
+    "842": {
+      "month": "2024-12",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 0
+    },
+    "856": {
+      "month": "2024-12",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 0
+    },
+    "857": {
+      "month": "2025-05",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 0
+    },
+    "651": {
+      "month": "2026-08",
+      "Teoxane": 4261048,
+      "RRS HA Long Lasting": 0
+    },
+    "478": {
+      "month": "2024-12",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 4108650
+    },
+    "858": {
+      "month": "2025-09",
+      "Teoxane": 647640,
+      "RRS HA Long Lasting": 0
+    },
+    "859": {
+      "month": "2025-01",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 324135
+    },
+    "861": {
+      "month": "2026-02",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 1506214
+    },
+    "493": {
+      "month": "2025-11",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 297279
+    },
+    "598": {
+      "month": "2026-08",
+      "Teoxane": 1377917,
+      "RRS HA Long Lasting": 0
+    },
+    "549": {
+      "month": "2026-07",
+      "Teoxane": 676166,
+      "RRS HA Long Lasting": 0
+    },
+    "792": {
+      "month": "2026-03",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 577117
+    },
+    "427": {
+      "month": "2025-01",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 0
+    },
+    "862": {
+      "month": "2026-09",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 1099270
+    },
+    "646": {
+      "month": "2025-07",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 0
+    },
+    "863": {
+      "month": "2025-01",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 0
+    },
+    "636": {
+      "month": "2025-01",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 231525
+    },
+    "475": {
+      "month": "2026-06",
+      "Teoxane": 305885,
+      "RRS HA Long Lasting": 1978687
+    },
+    "864": {
+      "month": "2026-08",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 577117
+    },
+    "760": {
+      "month": "2026-02",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 165155
+    },
+    "504": {
+      "month": "2025-04",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 554921
+    },
+    "607": {
+      "month": "2025-01",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 518616
+    },
+    "826": {
+      "month": "2025-01",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 308700
+    },
+    "487": {
+      "month": "2026-08",
+      "Teoxane": 611770,
+      "RRS HA Long Lasting": 1978686
+    },
+    "865": {
+      "month": "2025-01",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 324135
+    },
+    "534": {
+      "month": "2025-03",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 0
+    },
+    "627": {
+      "month": "2026-09",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 1099270
+    },
+    "677": {
+      "month": "2025-07",
+      "Teoxane": 483210,
+      "RRS HA Long Lasting": 0
+    },
+    "820": {
+      "month": "2025-02",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 324135
+    },
+    "580": {
+      "month": "2025-04",
+      "Teoxane": 1290760,
+      "RRS HA Long Lasting": 0
+    },
+    "619": {
+      "month": "2026-08",
+      "Teoxane": 1218797,
+      "RRS HA Long Lasting": 1978687
+    },
+    "866": {
+      "month": "2025-12",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 165155
+    },
+    "735": {
+      "month": "2025-02",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 231525
+    },
+    "794": {
+      "month": "2026-08",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 1978687
+    },
+    "467": {
+      "month": "2026-03",
+      "Teoxane": 1828195,
+      "RRS HA Long Lasting": 0
+    },
+    "499": {
+      "month": "2026-09",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 1099270
+    },
+    "868": {
+      "month": "2025-04",
+      "Teoxane": 258000,
+      "RRS HA Long Lasting": 0
+    },
+    "867": {
+      "month": "2025-02",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 324135
+    },
+    "471": {
+      "month": "2026-08",
+      "Teoxane": 609398,
+      "RRS HA Long Lasting": 0
+    },
+    "870": {
+      "month": "2026-08",
+      "Teoxane": 1880070,
+      "RRS HA Long Lasting": 0
+    },
+    "668": {
+      "month": "2026-01",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 554921
+    },
+    "779": {
+      "month": "2026-08",
+      "Teoxane": 1218797,
+      "RRS HA Long Lasting": 989343
+    },
+    "872": {
+      "month": "2026-06",
+      "Teoxane": 717444,
+      "RRS HA Long Lasting": 0
+    },
+    "874": {
+      "month": "2025-06",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 165155
+    },
+    "873": {
+      "month": "2026-07",
+      "Teoxane": 673546,
+      "RRS HA Long Lasting": 0
+    },
+    "875": {
+      "month": "2026-02",
+      "Teoxane": 650160,
+      "RRS HA Long Lasting": 0
+    },
+    "535": {
+      "month": "2026-07",
+      "Teoxane": 1294176,
+      "RRS HA Long Lasting": 0
+    },
+    "679": {
+      "month": "2026-02",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 554921
+    },
+    "876": {
+      "month": "2025-03",
+      "Teoxane": 648270,
+      "RRS HA Long Lasting": 0
+    },
+    "877": {
+      "month": "2025-03",
+      "Teoxane": 1234640,
+      "RRS HA Long Lasting": 0
+    },
+    "786": {
+      "month": "2025-03",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 164314
+    },
+    "878": {
+      "month": "2025-03",
+      "Teoxane": 258000,
+      "RRS HA Long Lasting": 0
+    },
+    "879": {
+      "month": "2026-09",
+      "Teoxane": 615600,
+      "RRS HA Long Lasting": 0
+    },
+    "880": {
+      "month": "2025-03",
+      "Teoxane": 647640,
+      "RRS HA Long Lasting": 0
+    },
+    "881": {
+      "month": "2026-09",
+      "Teoxane": 659131,
+      "RRS HA Long Lasting": 0
+    },
+    "577": {
+      "month": "2026-08",
+      "Teoxane": 633579,
+      "RRS HA Long Lasting": 0
+    },
+    "882": {
+      "month": "2025-06",
+      "Teoxane": 647640,
+      "RRS HA Long Lasting": 0
+    },
+    "885": {
+      "month": "2025-05",
+      "Teoxane": 1858200,
+      "RRS HA Long Lasting": 475646
+    },
+    "886": {
+      "month": "2025-03",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 554921
+    },
+    "712": {
+      "month": "2026-02",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 554921
+    },
+    "887": {
+      "month": "2026-08",
+      "Teoxane": 841932,
+      "RRS HA Long Lasting": 0
+    },
+    "839": {
+      "month": "2025-03",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 554921
+    },
+    "889": {
+      "month": "2025-03",
+      "Teoxane": 547000,
+      "RRS HA Long Lasting": 0
+    },
+    "892": {
+      "month": "2025-07",
+      "Teoxane": 689220,
+      "RRS HA Long Lasting": 0
+    },
+    "891": {
+      "month": "2026-06",
+      "Teoxane": 1892342,
+      "RRS HA Long Lasting": 0
+    },
+    "801": {
+      "month": "2026-06",
+      "Teoxane": 1597185,
+      "RRS HA Long Lasting": 989343
+    },
+    "831": {
+      "month": "2025-09",
+      "Teoxane": 1169980,
+      "RRS HA Long Lasting": 0
+    },
+    "894": {
+      "month": "2026-08",
+      "Teoxane": 673546,
+      "RRS HA Long Lasting": 0
+    },
+    "548": {
+      "month": "2025-11",
+      "Teoxane": 504000,
+      "RRS HA Long Lasting": 0
+    },
+    "896": {
+      "month": "2025-11",
+      "Teoxane": 684180,
+      "RRS HA Long Lasting": 0
+    },
+    "897": {
+      "month": "2025-04",
+      "Teoxane": 647640,
+      "RRS HA Long Lasting": 0
+    },
+    "899": {
+      "month": "2026-08",
+      "Teoxane": 668959,
+      "RRS HA Long Lasting": 0
+    },
+    "652": {
+      "month": "2025-04",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 0
+    },
+    "698": {
+      "month": "2026-09",
+      "Teoxane": 511450,
+      "RRS HA Long Lasting": 206113
+    },
+    "902": {
+      "month": "2026-04",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 577117
+    },
+    "595": {
+      "month": "2025-04",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 0
+    },
+    "904": {
+      "month": "2025-04",
+      "Teoxane": 650160,
+      "RRS HA Long Lasting": 0
+    },
+    "583": {
+      "month": "2025-04",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 0
+    },
+    "905": {
+      "month": "2026-09",
+      "Teoxane": 695167,
+      "RRS HA Long Lasting": 0
+    },
+    "906": {
+      "month": "2025-04",
+      "Teoxane": 665910,
+      "RRS HA Long Lasting": 0
+    },
+    "898": {
+      "month": "2025-08",
+      "Teoxane": 1692120,
+      "RRS HA Long Lasting": 0
+    },
+    "907": {
+      "month": "2025-04",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 0
+    },
+    "447": {
+      "month": "2026-01",
+      "Teoxane": 151630,
+      "RRS HA Long Lasting": 132124
+    },
+    "909": {
+      "month": "2026-09",
+      "Teoxane": 507528,
+      "RRS HA Long Lasting": 0
+    },
+    "911": {
+      "month": "2026-06",
+      "Teoxane": 505159,
+      "RRS HA Long Lasting": 144279
+    },
+    "912": {
+      "month": "2026-07",
+      "Teoxane": 1906455,
+      "RRS HA Long Lasting": 0
+    },
+    "913": {
+      "month": "2026-07",
+      "Teoxane": 1410906,
+      "RRS HA Long Lasting": 0
+    },
+    "757": {
+      "month": "2026-09",
+      "Teoxane": 453857,
+      "RRS HA Long Lasting": 123668
+    },
+    "915": {
+      "month": "2025-04",
+      "Teoxane": 352800,
+      "RRS HA Long Lasting": 0
+    },
+    "918": {
+      "month": "2026-04",
+      "Teoxane": 670925,
+      "RRS HA Long Lasting": 0
+    },
+    "462": {
+      "month": "2026-07",
+      "Teoxane": 798501,
+      "RRS HA Long Lasting": 0
+    },
+    "910": {
+      "month": "2026-06",
+      "Teoxane": 1367766,
+      "RRS HA Long Lasting": 0
+    },
+    "630": {
+      "month": "2025-05",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 0
+    },
+    "919": {
+      "month": "2025-05",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 0
+    },
+    "476": {
+      "month": "2026-08",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 171761
+    },
+    "510": {
+      "month": "2026-07",
+      "Teoxane": 331531,
+      "RRS HA Long Lasting": 288558
+    },
+    "520": {
+      "month": "2025-10",
+      "Teoxane": 647640,
+      "RRS HA Long Lasting": 0
+    },
+    "920": {
+      "month": "2026-09",
+      "Teoxane": 2007585,
+      "RRS HA Long Lasting": 371004
+    },
+    "469": {
+      "month": "2026-08",
+      "Teoxane": 2437594,
+      "RRS HA Long Lasting": 0
+    },
+    "923": {
+      "month": "2026-08",
+      "Teoxane": 760032,
+      "RRS HA Long Lasting": 0
+    },
+    "810": {
+      "month": "2026-09",
+      "Teoxane": 1821082,
+      "RRS HA Long Lasting": 247336
+    },
+    "926": {
+      "month": "2025-10",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 1056992
+    },
+    "925": {
+      "month": "2025-05",
+      "Teoxane": 129000,
+      "RRS HA Long Lasting": 0
+    },
+    "718": {
+      "month": "2025-10",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 475646
+    },
+    "927": {
+      "month": "2025-05",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 475646
+    },
+    "728": {
+      "month": "2025-05",
+      "Teoxane": 581400,
+      "RRS HA Long Lasting": 0
+    },
+    "928": {
+      "month": "2025-11",
+      "Teoxane": 643860,
+      "RRS HA Long Lasting": 0
+    },
+    "764": {
+      "month": "2025-05",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 475646
+    },
+    "932": {
+      "month": "2025-07",
+      "Teoxane": 1259040,
+      "RRS HA Long Lasting": 0
+    },
+    "930": {
+      "month": "2025-05",
+      "Teoxane": 585960,
+      "RRS HA Long Lasting": 0
+    },
+    "933": {
+      "month": "2026-07",
+      "Teoxane": 388000,
+      "RRS HA Long Lasting": 0
+    },
+    "587": {
+      "month": "2026-08",
+      "Teoxane": 1304326,
+      "RRS HA Long Lasting": 0
+    },
+    "935": {
+      "month": "2025-05",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 0
+    },
+    "929": {
+      "month": "2026-09",
+      "Teoxane": 614642,
+      "RRS HA Long Lasting": 494672
+    },
+    "931": {
+      "month": "2026-09",
+      "Teoxane": 489060,
+      "RRS HA Long Lasting": 0
+    },
+    "936": {
+      "month": "2025-05",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 277828
+    },
+    "491": {
+      "month": "2026-08",
+      "Teoxane": 674856,
+      "RRS HA Long Lasting": 0
+    },
+    "937": {
+      "month": "2025-05",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 380516
+    },
+    "938": {
+      "month": "2025-05",
+      "Teoxane": 504000,
+      "RRS HA Long Lasting": 0
+    },
+    "939": {
+      "month": "2026-06",
+      "Teoxane": 695167,
+      "RRS HA Long Lasting": 0
+    },
+    "940": {
+      "month": "2025-05",
+      "Teoxane": 1819560,
+      "RRS HA Long Lasting": 0
+    },
+    "659": {
+      "month": "2025-11",
+      "Teoxane": 648900,
+      "RRS HA Long Lasting": 0
+    },
+    "710": {
+      "month": "2025-06",
+      "Teoxane": 2414520,
+      "RRS HA Long Lasting": 0
+    },
+    "720": {
+      "month": "2025-09",
+      "Teoxane": 365400,
+      "RRS HA Long Lasting": 0
+    },
+    "944": {
+      "month": "2025-06",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 165155
+    },
+    "751": {
+      "month": "2025-08",
+      "Teoxane": 1244400,
+      "RRS HA Long Lasting": 0
+    },
+    "946": {
+      "month": "2026-02",
+      "Teoxane": 689220,
+      "RRS HA Long Lasting": 554921
+    },
+    "942": {
+      "month": "2026-01",
+      "Teoxane": 648900,
+      "RRS HA Long Lasting": 0
+    },
+    "947": {
+      "month": "2025-06",
+      "Teoxane": 647640,
+      "RRS HA Long Lasting": 0
+    },
+    "678": {
+      "month": "2026-09",
+      "Teoxane": 627182,
+      "RRS HA Long Lasting": 0
+    },
+    "948": {
+      "month": "2026-08",
+      "Teoxane": 665683,
+      "RRS HA Long Lasting": 0
+    },
+    "949": {
+      "month": "2025-06",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 0
+    },
+    "581": {
+      "month": "2025-12",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 554921
+    },
+    "950": {
+      "month": "2026-09",
+      "Teoxane": 2840333,
+      "RRS HA Long Lasting": 0
+    },
+    "951": {
+      "month": "2025-06",
+      "Teoxane": 647640,
+      "RRS HA Long Lasting": 0
+    },
+    "952": {
+      "month": "2026-04",
+      "Teoxane": 760032,
+      "RRS HA Long Lasting": 0
+    },
+    "953": {
+      "month": "2025-06",
+      "Teoxane": 650160,
+      "RRS HA Long Lasting": 0
+    },
+    "954": {
+      "month": "2026-09",
+      "Teoxane": 2352230,
+      "RRS HA Long Lasting": 0
+    },
+    "956": {
+      "month": "2026-01",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 554921
+    },
+    "955": {
+      "month": "2025-07",
+      "Teoxane": 1254160,
+      "RRS HA Long Lasting": 0
+    },
+    "945": {
+      "month": "2025-06",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 3329525
+    },
+    "957": {
+      "month": "2025-07",
+      "Teoxane": 647640,
+      "RRS HA Long Lasting": 0
+    },
+    "959": {
+      "month": "2026-07",
+      "Teoxane": 1390605,
+      "RRS HA Long Lasting": 0
+    },
+    "960": {
+      "month": "2026-04",
+      "Teoxane": 676166,
+      "RRS HA Long Lasting": 0
+    },
+    "961": {
+      "month": "2025-07",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 554921
+    },
+    "962": {
+      "month": "2025-10",
+      "Teoxane": 627080,
+      "RRS HA Long Lasting": 0
+    },
+    "964": {
+      "month": "2026-05",
+      "Teoxane": 676166,
+      "RRS HA Long Lasting": 0
+    },
+    "552": {
+      "month": "2026-08",
+      "Teoxane": 2496281,
+      "RRS HA Long Lasting": 0
+    },
+    "967": {
+      "month": "2026-09",
+      "Teoxane": 1594723,
+      "RRS HA Long Lasting": 0
+    },
+    "966": {
+      "month": "2026-04",
+      "Teoxane": 673546,
+      "RRS HA Long Lasting": 0
+    },
+    "663": {
+      "month": "2025-07",
+      "Teoxane": 647640,
+      "RRS HA Long Lasting": 0
+    },
+    "958": {
+      "month": "2026-09",
+      "Teoxane": 1078486,
+      "RRS HA Long Lasting": 0
+    },
+    "968": {
+      "month": "2026-04",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 577117
+    },
+    "969": {
+      "month": "2025-07",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 99093
+    },
+    "970": {
+      "month": "2025-07",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 99093
+    },
+    "971": {
+      "month": "2026-06",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 494672
+    },
+    "972": {
+      "month": "2026-09",
+      "Teoxane": 648523,
+      "RRS HA Long Lasting": 0
+    },
+    "973": {
+      "month": "2026-07",
+      "Teoxane": 673546,
+      "RRS HA Long Lasting": 0
+    },
+    "800": {
+      "month": "2025-07",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 165155
+    },
+    "974": {
+      "month": "2026-09",
+      "Teoxane": 1341755,
+      "RRS HA Long Lasting": 0
+    },
+    "975": {
+      "month": "2026-09",
+      "Teoxane": 474240,
+      "RRS HA Long Lasting": 0
+    },
+    "976": {
+      "month": "2025-10",
+      "Teoxane": 645120,
+      "RRS HA Long Lasting": 0
+    },
+    "978": {
+      "month": "2026-03",
+      "Teoxane": 1306864,
+      "RRS HA Long Lasting": 0
+    },
+    "977": {
+      "month": "2025-07",
+      "Teoxane": 127512,
+      "RRS HA Long Lasting": 0
+    },
+    "979": {
+      "month": "2025-09",
+      "Teoxane": 165300,
+      "RRS HA Long Lasting": 0
+    },
+    "981": {
+      "month": "2025-11",
+      "Teoxane": 670320,
+      "RRS HA Long Lasting": 0
+    },
+    "982": {
+      "month": "2025-10",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 297279
+    },
+    "983": {
+      "month": "2026-01",
+      "Teoxane": 647640,
+      "RRS HA Long Lasting": 554921
+    },
+    "984": {
+      "month": "2025-08",
+      "Teoxane": 645750,
+      "RRS HA Long Lasting": 0
+    },
+    "985": {
+      "month": "2026-08",
+      "Teoxane": 673546,
+      "RRS HA Long Lasting": 0
+    },
+    "986": {
+      "month": "2026-09",
+      "Teoxane": 1306230,
+      "RRS HA Long Lasting": 0
+    },
+    "987": {
+      "month": "2025-08",
+      "Teoxane": 427140,
+      "RRS HA Long Lasting": 0
+    },
+    "989": {
+      "month": "2025-08",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 475646
+    },
+    "814": {
+      "month": "2026-09",
+      "Teoxane": 410400,
+      "RRS HA Long Lasting": 0
+    },
+    "988": {
+      "month": "2025-08",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 0
+    },
+    "990": {
+      "month": "2025-12",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 554921
+    },
+    "992": {
+      "month": "2025-08",
+      "Teoxane": 581400,
+      "RRS HA Long Lasting": 0
+    },
+    "991": {
+      "month": "2025-08",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 165155
+    },
+    "993": {
+      "month": "2025-08",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 475646
+    },
+    "996": {
+      "month": "2025-08",
+      "Teoxane": 581400,
+      "RRS HA Long Lasting": 0
+    },
+    "997": {
+      "month": "2025-11",
+      "Teoxane": 771750,
+      "RRS HA Long Lasting": 0
+    },
+    "998": {
+      "month": "2025-08",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 475646
+    },
+    "845": {
+      "month": "2026-09",
+      "Teoxane": 609398,
+      "RRS HA Long Lasting": 494672
+    },
+    "604": {
+      "month": "2025-08",
+      "Teoxane": 1254160,
+      "RRS HA Long Lasting": 0
+    },
+    "999": {
+      "month": "2026-05",
+      "Teoxane": 410400,
+      "RRS HA Long Lasting": 0
+    },
+    "1000": {
+      "month": "2025-08",
+      "Teoxane": 1165080,
+      "RRS HA Long Lasting": 0
+    },
+    "1001": {
+      "month": "2026-05",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 494672
+    },
+    "1003": {
+      "month": "2025-11",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 554921
+    },
+    "1004": {
+      "month": "2025-08",
+      "Teoxane": 587670,
+      "RRS HA Long Lasting": 0
+    },
+    "1005": {
+      "month": "2025-08",
+      "Teoxane": 1172490,
+      "RRS HA Long Lasting": 0
+    },
+    "1006": {
+      "month": "2025-08",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 475646
+    },
+    "1007": {
+      "month": "2025-08",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 475646
+    },
+    "488": {
+      "month": "2026-08",
+      "Teoxane": 518264,
+      "RRS HA Long Lasting": 0
+    },
+    "1008": {
+      "month": "2026-08",
+      "Teoxane": 1666361,
+      "RRS HA Long Lasting": 0
+    },
+    "1011": {
+      "month": "2025-09",
+      "Teoxane": 647640,
+      "RRS HA Long Lasting": 0
+    },
+    "1010": {
+      "month": "2026-09",
+      "Teoxane": 1218797,
+      "RRS HA Long Lasting": 494672
+    },
+    "468": {
+      "month": "2026-08",
+      "Teoxane": 2283466,
+      "RRS HA Long Lasting": 494672
+    },
+    "727": {
+      "month": "2025-08",
+      "Teoxane": 1290760,
+      "RRS HA Long Lasting": 554921
+    },
+    "629": {
+      "month": "2025-08",
+      "Teoxane": 1165080,
+      "RRS HA Long Lasting": 0
+    },
+    "1012": {
+      "month": "2025-08",
+      "Teoxane": 642600,
+      "RRS HA Long Lasting": 0
+    },
+    "739": {
+      "month": "2026-06",
+      "Teoxane": 676166,
+      "RRS HA Long Lasting": 0
+    },
+    "1013": {
+      "month": "2026-09",
+      "Teoxane": 1199827,
+      "RRS HA Long Lasting": 0
+    },
+    "1014": {
+      "month": "2025-08",
+      "Teoxane": 963900,
+      "RRS HA Long Lasting": 0
+    },
+    "1015": {
+      "month": "2026-08",
+      "Teoxane": 676166,
+      "RRS HA Long Lasting": 0
+    },
+    "1016": {
+      "month": "2025-11",
+      "Teoxane": 1296860,
+      "RRS HA Long Lasting": 0
+    },
+    "1017": {
+      "month": "2025-09",
+      "Teoxane": 535500,
+      "RRS HA Long Lasting": 0
+    },
+    "1021": {
+      "month": "2025-09",
+      "Teoxane": 200000,
+      "RRS HA Long Lasting": 330310
+    },
+    "1020": {
+      "month": "2026-06",
+      "Teoxane": 673546,
+      "RRS HA Long Lasting": 0
+    },
+    "1023": {
+      "month": "2025-11",
+      "Teoxane": 972720,
+      "RRS HA Long Lasting": 0
+    },
+    "1022": {
+      "month": "2026-07",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 1978687
+    },
+    "825": {
+      "month": "2025-09",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 554921
+    },
+    "1024": {
+      "month": "2025-09",
+      "Teoxane": 516420,
+      "RRS HA Long Lasting": 554921
+    },
+    "1025": {
+      "month": "2025-09",
+      "Teoxane": 645750,
+      "RRS HA Long Lasting": 0
+    },
+    "1026": {
+      "month": "2025-09",
+      "Teoxane": 1227210,
+      "RRS HA Long Lasting": 0
+    },
+    "1018": {
+      "month": "2026-05",
+      "Teoxane": 1548570,
+      "RRS HA Long Lasting": 0
+    },
+    "1027": {
+      "month": "2025-09",
+      "Teoxane": 825300,
+      "RRS HA Long Lasting": 0
+    },
+    "1019": {
+      "month": "2026-08",
+      "Teoxane": 2375989,
+      "RRS HA Long Lasting": 0
+    },
+    "1028": {
+      "month": "2025-09",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 1902586
+    },
+    "1030": {
+      "month": "2026-04",
+      "Teoxane": 673546,
+      "RRS HA Long Lasting": 0
+    },
+    "1029": {
+      "month": "2025-09",
+      "Teoxane": 645120,
+      "RRS HA Long Lasting": 0
+    },
+    "1031": {
+      "month": "2025-09",
+      "Teoxane": 1804810,
+      "RRS HA Long Lasting": 554921
+    },
+    "1033": {
+      "month": "2026-09",
+      "Teoxane": 406120,
+      "RRS HA Long Lasting": 0
+    },
+    "1032": {
+      "month": "2026-06",
+      "Teoxane": 676166,
+      "RRS HA Long Lasting": 0
+    },
+    "1034": {
+      "month": "2026-08",
+      "Teoxane": 1641600,
+      "RRS HA Long Lasting": 0
+    },
+    "673": {
+      "month": "2025-09",
+      "Teoxane": 650160,
+      "RRS HA Long Lasting": 0
+    },
+    "1035": {
+      "month": "2026-09",
+      "Teoxane": 1218797,
+      "RRS HA Long Lasting": 0
+    },
+    "1036": {
+      "month": "2025-10",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 138730
+    },
+    "1037": {
+      "month": "2026-08",
+      "Teoxane": 676166,
+      "RRS HA Long Lasting": 0
+    },
+    "1039": {
+      "month": "2025-10",
+      "Teoxane": 650160,
+      "RRS HA Long Lasting": 0
+    },
+    "1040": {
+      "month": "2026-09",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 494672
+    },
+    "1041": {
+      "month": "2026-07",
+      "Teoxane": 676166,
+      "RRS HA Long Lasting": 0
+    },
+    "1042": {
+      "month": "2026-06",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 577117
+    },
+    "1043": {
+      "month": "2026-09",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 494672
+    },
+    "1044": {
+      "month": "2025-10",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 297279
+    },
+    "1045": {
+      "month": "2025-10",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 0
+    },
+    "1046": {
+      "month": "2026-03",
+      "Teoxane": 647640,
+      "RRS HA Long Lasting": 554921
+    },
+    "1047": {
+      "month": "2025-12",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 1056992
+    },
+    "1048": {
+      "month": "2025-10",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 297279
+    },
+    "451": {
+      "month": "2026-06",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 494672
+    },
+    "1049": {
+      "month": "2025-10",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 297279
+    },
+    "1050": {
+      "month": "2026-07",
+      "Teoxane": 1836084,
+      "RRS HA Long Lasting": 247336
+    },
+    "1038": {
+      "month": "2025-10",
+      "Teoxane": 2711350,
+      "RRS HA Long Lasting": 0
+    },
+    "1051": {
+      "month": "2025-10",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 475646
+    },
+    "707": {
+      "month": "2026-02",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 554921
+    },
+    "731": {
+      "month": "2026-05",
+      "Teoxane": 609398,
+      "RRS HA Long Lasting": 0
+    },
+    "603": {
+      "month": "2026-09",
+      "Teoxane": 806208,
+      "RRS HA Long Lasting": 0
+    },
+    "1052": {
+      "month": "2026-09",
+      "Teoxane": 2438779,
+      "RRS HA Long Lasting": 0
+    },
+    "1054": {
+      "month": "2025-10",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 475646
+    },
+    "1055": {
+      "month": "2025-10",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 297279
+    },
+    "1056": {
+      "month": "2026-09",
+      "Teoxane": 678938,
+      "RRS HA Long Lasting": 0
+    },
+    "1057": {
+      "month": "2025-10",
+      "Teoxane": 624150,
+      "RRS HA Long Lasting": 0
+    },
+    "1058": {
+      "month": "2025-10",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 554921
+    },
+    "1059": {
+      "month": "2025-10",
+      "Teoxane": 650160,
+      "RRS HA Long Lasting": 0
+    },
+    "1061": {
+      "month": "2025-10",
+      "Teoxane": 651420,
+      "RRS HA Long Lasting": 0
+    },
+    "1062": {
+      "month": "2026-08",
+      "Teoxane": 695823,
+      "RRS HA Long Lasting": 0
+    },
+    "1063": {
+      "month": "2025-10",
+      "Teoxane": 647640,
+      "RRS HA Long Lasting": 0
+    },
+    "1064": {
+      "month": "2026-03",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 577117
+    },
+    "1065": {
+      "month": "2026-06",
+      "Teoxane": 1767357,
+      "RRS HA Long Lasting": 0
+    },
+    "1066": {
+      "month": "2025-11",
+      "Teoxane": 1717150,
+      "RRS HA Long Lasting": 0
+    },
+    "1060": {
+      "month": "2026-07",
+      "Teoxane": 1972797,
+      "RRS HA Long Lasting": 0
+    },
+    "1067": {
+      "month": "2026-05",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 577117
+    },
+    "1069": {
+      "month": "2025-11",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 297279
+    },
+    "1070": {
+      "month": "2026-09",
+      "Teoxane": 1019798,
+      "RRS HA Long Lasting": 0
+    },
+    "1071": {
+      "month": "2026-09",
+      "Teoxane": 648523,
+      "RRS HA Long Lasting": 0
+    },
+    "1072": {
+      "month": "2026-05",
+      "Teoxane": 611770,
+      "RRS HA Long Lasting": 0
+    },
+    "1073": {
+      "month": "2025-11",
+      "Teoxane": 586530,
+      "RRS HA Long Lasting": 0
+    },
+    "1074": {
+      "month": "2025-11",
+      "Teoxane": 1829000,
+      "RRS HA Long Lasting": 0
+    },
+    "511": {
+      "month": "2025-11",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 297279
+    },
+    "1076": {
+      "month": "2025-11",
+      "Teoxane": 650160,
+      "RRS HA Long Lasting": 0
+    },
+    "1077": {
+      "month": "2025-11",
+      "Teoxane": 1810120,
+      "RRS HA Long Lasting": 1056992
+    },
+    "1078": {
+      "month": "2025-11",
+      "Teoxane": 3515190,
+      "RRS HA Long Lasting": 0
+    },
+    "1079": {
+      "month": "2026-08",
+      "Teoxane": 1889274,
+      "RRS HA Long Lasting": 0
+    },
+    "1081": {
+      "month": "2025-11",
+      "Teoxane": 637560,
+      "RRS HA Long Lasting": 0
+    },
+    "1082": {
+      "month": "2026-09",
+      "Teoxane": 661474,
+      "RRS HA Long Lasting": 0
+    },
+    "1083": {
+      "month": "2025-12",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 297279
+    },
+    "1084": {
+      "month": "2026-09",
+      "Teoxane": 282004,
+      "RRS HA Long Lasting": 0
+    },
+    "1085": {
+      "month": "2026-06",
+      "Teoxane": 668304,
+      "RRS HA Long Lasting": 0
+    },
+    "1086": {
+      "month": "2026-05",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 0
+    },
+    "1087": {
+      "month": "2025-12",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 554921
+    },
+    "1088": {
+      "month": "2025-12",
+      "Teoxane": 1030680,
+      "RRS HA Long Lasting": 330310
+    },
+    "530": {
+      "month": "2025-12",
+      "Teoxane": 650790,
+      "RRS HA Long Lasting": 858806
+    },
+    "456": {
+      "month": "2026-06",
+      "Teoxane": 1304326,
+      "RRS HA Long Lasting": 0
+    },
+    "575": {
+      "month": "2025-12",
+      "Teoxane": 585960,
+      "RRS HA Long Lasting": 0
+    },
+    "1090": {
+      "month": "2026-05",
+      "Teoxane": 1148892,
+      "RRS HA Long Lasting": 0
+    },
+    "1092": {
+      "month": "2025-12",
+      "Teoxane": 650160,
+      "RRS HA Long Lasting": 0
+    },
+    "545": {
+      "month": "2026-01",
+      "Teoxane": 645750,
+      "RRS HA Long Lasting": 0
+    },
+    "674": {
+      "month": "2026-01",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 554921
+    },
+    "585": {
+      "month": "2026-01",
+      "Teoxane": 650160,
+      "RRS HA Long Lasting": 0
+    },
+    "1094": {
+      "month": "2026-01",
+      "Teoxane": 1897440,
+      "RRS HA Long Lasting": 0
+    },
+    "1095": {
+      "month": "2026-01",
+      "Teoxane": 650160,
+      "RRS HA Long Lasting": 0
+    },
+    "1096": {
+      "month": "2026-01",
+      "Teoxane": 147060,
+      "RRS HA Long Lasting": 297279
+    },
+    "1098": {
+      "month": "2026-01",
+      "Teoxane": 144210,
+      "RRS HA Long Lasting": 0
+    },
+    "1099": {
+      "month": "2026-02",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 297279
+    },
+    "465": {
+      "month": "2026-02",
+      "Teoxane": 643230,
+      "RRS HA Long Lasting": 0
+    },
+    "1103": {
+      "month": "2026-02",
+      "Teoxane": 1234640,
+      "RRS HA Long Lasting": 0
+    },
+    "1089": {
+      "month": "2025-12",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 0
+    },
+    "1101": {
+      "month": "2026-09",
+      "Teoxane": 609398,
+      "RRS HA Long Lasting": 0
+    },
+    "701": {
+      "month": "2026-05",
+      "Teoxane": 607027,
+      "RRS HA Long Lasting": 0
+    },
+    "1104": {
+      "month": "2026-07",
+      "Teoxane": 598853,
+      "RRS HA Long Lasting": 0
+    },
+    "1105": {
+      "month": "2026-03",
+      "Teoxane": 1921182,
+      "RRS HA Long Lasting": 0
+    },
+    "1107": {
+      "month": "2026-02",
+      "Teoxane": 647640,
+      "RRS HA Long Lasting": 0
+    },
+    "1106": {
+      "month": "2026-02",
+      "Teoxane": 1516890,
+      "RRS HA Long Lasting": 0
+    },
+    "1108": {
+      "month": "2026-09",
+      "Teoxane": 762340,
+      "RRS HA Long Lasting": 0
+    },
+    "1109": {
+      "month": "2026-06",
+      "Teoxane": 1304326,
+      "RRS HA Long Lasting": 0
+    },
+    "1112": {
+      "month": "2026-02",
+      "Teoxane": 647640,
+      "RRS HA Long Lasting": 0
+    },
+    "1113": {
+      "month": "2026-02",
+      "Teoxane": 649530,
+      "RRS HA Long Lasting": 0
+    },
+    "1114": {
+      "month": "2026-03",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 554921
+    },
+    "1120": {
+      "month": "2026-03",
+      "Teoxane": 149978,
+      "RRS HA Long Lasting": 0
+    },
+    "1121": {
+      "month": "2026-03",
+      "Teoxane": 257587,
+      "RRS HA Long Lasting": 0
+    },
+    "1123": {
+      "month": "2026-03",
+      "Teoxane": 208000,
+      "RRS HA Long Lasting": 0
+    },
+    "1122": {
+      "month": "2026-03",
+      "Teoxane": 674856,
+      "RRS HA Long Lasting": 0
+    },
+    "1117": {
+      "month": "2026-03",
+      "Teoxane": 534560,
+      "RRS HA Long Lasting": 0
+    },
+    "1118": {
+      "month": "2026-08",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 1566460
+    },
+    "428": {
+      "month": "2026-08",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 1099270
+    },
+    "1115": {
+      "month": "2026-03",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 502071
+    },
+    "1128": {
+      "month": "2026-07",
+      "Teoxane": 1878492,
+      "RRS HA Long Lasting": 0
+    },
+    "1126": {
+      "month": "2026-03",
+      "Teoxane": 668304,
+      "RRS HA Long Lasting": 0
+    },
+    "1129": {
+      "month": "2026-09",
+      "Teoxane": 612499,
+      "RRS HA Long Lasting": 494672
+    },
+    "686": {
+      "month": "2026-09",
+      "Teoxane": 609398,
+      "RRS HA Long Lasting": 0
+    },
+    "1131": {
+      "month": "2026-03",
+      "Teoxane": 671581,
+      "RRS HA Long Lasting": 0
+    },
+    "1130": {
+      "month": "2026-03",
+      "Teoxane": 198000,
+      "RRS HA Long Lasting": 0
+    },
+    "1133": {
+      "month": "2026-03",
+      "Teoxane": 297000,
+      "RRS HA Long Lasting": 0
+    },
+    "1134": {
+      "month": "2026-08",
+      "Teoxane": 421480,
+      "RRS HA Long Lasting": 247336
+    },
+    "1135": {
+      "month": "2026-08",
+      "Teoxane": 1892342,
+      "RRS HA Long Lasting": 0
+    },
+    "1136": {
+      "month": "2026-09",
+      "Teoxane": 410400,
+      "RRS HA Long Lasting": 494672
+    },
+    "1141": {
+      "month": "2026-06",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 577117
+    },
+    "1137": {
+      "month": "2026-07",
+      "Teoxane": 692547,
+      "RRS HA Long Lasting": 0
+    },
+    "1139": {
+      "month": "2026-09",
+      "Teoxane": 607027,
+      "RRS HA Long Lasting": 0
+    },
+    "1140": {
+      "month": "2026-04",
+      "Teoxane": 626589,
+      "RRS HA Long Lasting": 0
+    },
+    "1142": {
+      "month": "2026-04",
+      "Teoxane": 529462,
+      "RRS HA Long Lasting": 0
+    },
+    "1143": {
+      "month": "2026-09",
+      "Teoxane": 962206,
+      "RRS HA Long Lasting": 123668
+    },
+    "1144": {
+      "month": "2026-04",
+      "Teoxane": 673546,
+      "RRS HA Long Lasting": 0
+    },
+    "1146": {
+      "month": "2026-07",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 577117
+    },
+    "1147": {
+      "month": "2026-04",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 1566460
+    },
+    "1132": {
+      "month": "2026-08",
+      "Teoxane": 1284026,
+      "RRS HA Long Lasting": 0
+    },
+    "1149": {
+      "month": "2026-04",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 494672
+    },
+    "1151": {
+      "month": "2026-04",
+      "Teoxane": 609398,
+      "RRS HA Long Lasting": 0
+    },
+    "1124": {
+      "month": "2026-06",
+      "Teoxane": 611770,
+      "RRS HA Long Lasting": 0
+    },
+    "1153": {
+      "month": "2026-05",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 171761
+    },
+    "788": {
+      "month": "2026-05",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 171761
+    },
+    "1154": {
+      "month": "2026-05",
+      "Teoxane": 609398,
+      "RRS HA Long Lasting": 0
+    },
+    "1155": {
+      "month": "2026-05",
+      "Teoxane": 453600,
+      "RRS HA Long Lasting": 0
+    },
+    "1156": {
+      "month": "2026-05",
+      "Teoxane": 453600,
+      "RRS HA Long Lasting": 0
+    },
+    "1158": {
+      "month": "2026-05",
+      "Teoxane": 268320,
+      "RRS HA Long Lasting": 0
+    },
+    "1163": {
+      "month": "2026-05",
+      "Teoxane": 676166,
+      "RRS HA Long Lasting": 0
+    },
+    "1150": {
+      "month": "2026-09",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 989344
+    },
+    "1162": {
+      "month": "2026-05",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 494672
+    },
+    "1165": {
+      "month": "2026-05",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 494672
+    },
+    "1160": {
+      "month": "2026-05",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 494672
+    },
+    "1164": {
+      "month": "2026-07",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 577117
+    },
+    "1167": {
+      "month": "2026-05",
+      "Teoxane": 673546,
+      "RRS HA Long Lasting": 0
+    },
+    "561": {
+      "month": "2026-05",
+      "Teoxane": 611770,
+      "RRS HA Long Lasting": 494672
+    },
+    "1166": {
+      "month": "2026-05",
+      "Teoxane": 671581,
+      "RRS HA Long Lasting": 0
+    },
+    "1161": {
+      "month": "2026-05",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 494672
+    },
+    "1170": {
+      "month": "2026-05",
+      "Teoxane": 673546,
+      "RRS HA Long Lasting": 0
+    },
+    "1171": {
+      "month": "2026-07",
+      "Teoxane": 673546,
+      "RRS HA Long Lasting": 0
+    },
+    "1174": {
+      "month": "2026-06",
+      "Teoxane": 332186,
+      "RRS HA Long Lasting": 494672
+    },
+    "514": {
+      "month": "2026-07",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 577117
+    },
+    "1176": {
+      "month": "2026-08",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 171761
+    },
+    "1175": {
+      "month": "2026-07",
+      "Teoxane": 674201,
+      "RRS HA Long Lasting": 0
+    },
+    "1180": {
+      "month": "2026-06",
+      "Teoxane": 670925,
+      "RRS HA Long Lasting": 0
+    },
+    "1182": {
+      "month": "2026-09",
+      "Teoxane": 822798,
+      "RRS HA Long Lasting": 0
+    },
+    "1172": {
+      "month": "2026-09",
+      "Teoxane": 515736,
+      "RRS HA Long Lasting": 1071789
+    },
+    "1179": {
+      "month": "2026-06",
+      "Teoxane": 692547,
+      "RRS HA Long Lasting": 0
+    },
+    "1184": {
+      "month": "2026-08",
+      "Teoxane": 500573,
+      "RRS HA Long Lasting": 144279
+    },
+    "1186": {
+      "month": "2026-09",
+      "Teoxane": 2437594,
+      "RRS HA Long Lasting": 0
+    },
+    "1189": {
+      "month": "2026-06",
+      "Teoxane": 673546,
+      "RRS HA Long Lasting": 0
+    },
+    "1192": {
+      "month": "2026-08",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 577117
+    },
+    "1188": {
+      "month": "2026-07",
+      "Teoxane": 692547,
+      "RRS HA Long Lasting": 0
+    },
+    "1194": {
+      "month": "2026-07",
+      "Teoxane": 780125,
+      "RRS HA Long Lasting": 144279
+    },
+    "1181": {
+      "month": "2026-07",
+      "Teoxane": 603200,
+      "RRS HA Long Lasting": 0
+    },
+    "1197": {
+      "month": "2026-07",
+      "Teoxane": 605249,
+      "RRS HA Long Lasting": 0
+    },
+    "1199": {
+      "month": "2026-07",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 1566460
+    },
+    "772": {
+      "month": "2026-07",
+      "Teoxane": 936624,
+      "RRS HA Long Lasting": 0
+    },
+    "1201": {
+      "month": "2026-07",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 1978687
+    },
+    "1202": {
+      "month": "2026-07",
+      "Teoxane": 2420996,
+      "RRS HA Long Lasting": 0
+    },
+    "1200": {
+      "month": "2026-07",
+      "Teoxane": 410400,
+      "RRS HA Long Lasting": 0
+    },
+    "1195": {
+      "month": "2026-07",
+      "Teoxane": 526452,
+      "RRS HA Long Lasting": 0
+    },
+    "439": {
+      "month": "2026-07",
+      "Teoxane": 673546,
+      "RRS HA Long Lasting": 0
+    },
+    "1190": {
+      "month": "2026-07",
+      "Teoxane": 450828,
+      "RRS HA Long Lasting": 144279
+    },
+    "1204": {
+      "month": "2026-07",
+      "Teoxane": 442320,
+      "RRS HA Long Lasting": 0
+    },
+    "1205": {
+      "month": "2026-07",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 577117
+    },
+    "1198": {
+      "month": "2026-07",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 1099270
+    },
+    "1206": {
+      "month": "2026-09",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 494672
+    },
+    "1207": {
+      "month": "2026-09",
+      "Teoxane": 575609,
+      "RRS HA Long Lasting": 206113
+    },
+    "1210": {
+      "month": "2026-08",
+      "Teoxane": 1601497,
+      "RRS HA Long Lasting": 0
+    },
+    "1214": {
+      "month": "2026-08",
+      "Teoxane": 673545,
+      "RRS HA Long Lasting": 0
+    },
+    "1209": {
+      "month": "2026-09",
+      "Teoxane": 3046992,
+      "RRS HA Long Lasting": 0
+    },
+    "1216": {
+      "month": "2026-08",
+      "Teoxane": 268320,
+      "RRS HA Long Lasting": 0
+    },
+    "1119": {
+      "month": "2026-08",
+      "Teoxane": 1892342,
+      "RRS HA Long Lasting": 0
+    },
+    "1219": {
+      "month": "2026-09",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 577117
+    },
+    "1221": {
+      "month": "2026-08",
+      "Teoxane": 2546669,
+      "RRS HA Long Lasting": 0
+    },
+    "1223": {
+      "month": "2026-08",
+      "Teoxane": 99000,
+      "RRS HA Long Lasting": 0
+    },
+    "1224": {
+      "month": "2026-08",
+      "Teoxane": 673546,
+      "RRS HA Long Lasting": 0
+    },
+    "1218": {
+      "month": "2026-08",
+      "Teoxane": 149978,
+      "RRS HA Long Lasting": 0
+    },
+    "1227": {
+      "month": "2026-09",
+      "Teoxane": 497724,
+      "RRS HA Long Lasting": 0
+    },
+    "1225": {
+      "month": "2026-08",
+      "Teoxane": 1150801,
+      "RRS HA Long Lasting": 0
+    },
+    "1228": {
+      "month": "2026-08",
+      "Teoxane": 267280,
+      "RRS HA Long Lasting": 0
+    },
+    "1230": {
+      "month": "2026-08",
+      "Teoxane": 1388067,
+      "RRS HA Long Lasting": 0
+    },
+    "1229": {
+      "month": "2026-08",
+      "Teoxane": 80080,
+      "RRS HA Long Lasting": 0
+    },
+    "1169": {
+      "month": "2026-08",
+      "Teoxane": 366912,
+      "RRS HA Long Lasting": 0
+    },
+    "1231": {
+      "month": "2026-08",
+      "Teoxane": 716789,
+      "RRS HA Long Lasting": 0
+    },
+    "1213": {
+      "month": "2026-08",
+      "Teoxane": 692547,
+      "RRS HA Long Lasting": 0
+    },
+    "1232": {
+      "month": "2026-08",
+      "Teoxane": 268320,
+      "RRS HA Long Lasting": 0
+    },
+    "1235": {
+      "month": "2026-08",
+      "Teoxane": 696477,
+      "RRS HA Long Lasting": 0
+    },
+    "1234": {
+      "month": "2026-08",
+      "Teoxane": 147004,
+      "RRS HA Long Lasting": 0
+    },
+    "1236": {
+      "month": "2026-08",
+      "Teoxane": 1176032,
+      "RRS HA Long Lasting": 0
+    },
+    "1240": {
+      "month": "2026-09",
+      "Teoxane": 290004,
+      "RRS HA Long Lasting": 0
+    },
+    "1242": {
+      "month": "2026-09",
+      "Teoxane": 1230768,
+      "RRS HA Long Lasting": 0
+    },
+    "1217": {
+      "month": "2026-09",
+      "Teoxane": 613580,
+      "RRS HA Long Lasting": 0
+    },
+    "1245": {
+      "month": "2026-09",
+      "Teoxane": 147576,
+      "RRS HA Long Lasting": 0
+    },
+    "1241": {
+      "month": "2026-09",
+      "Teoxane": 567000,
+      "RRS HA Long Lasting": 0
+    },
+    "1244": {
+      "month": "2026-09",
+      "Teoxane": 80080,
+      "RRS HA Long Lasting": 0
+    },
+    "1249": {
+      "month": "2026-09",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 309170
+    },
+    "1247": {
+      "month": "2026-09",
+      "Teoxane": 626589,
+      "RRS HA Long Lasting": 0
+    },
+    "1252": {
+      "month": "2026-09",
+      "Teoxane": 649709,
+      "RRS HA Long Lasting": 0
+    },
+    "1243": {
+      "month": "2026-09",
+      "Teoxane": 565604,
+      "RRS HA Long Lasting": 0
+    },
+    "1253": {
+      "month": "2026-09",
+      "Teoxane": 147576,
+      "RRS HA Long Lasting": 0
+    },
+    "1255": {
+      "month": "2026-09",
+      "Teoxane": 1122398,
+      "RRS HA Long Lasting": 0
+    },
+    "1254": {
+      "month": "2026-09",
+      "Teoxane": 1206986,
+      "RRS HA Long Lasting": 0
+    },
+    "1251": {
+      "month": "2026-09",
+      "Teoxane": 147004,
+      "RRS HA Long Lasting": 494672
+    },
+    "1246": {
+      "month": "2026-09",
+      "Teoxane": 820800,
+      "RRS HA Long Lasting": 0
+    },
+    "1248": {
+      "month": "2026-09",
+      "Teoxane": 1794177,
+      "RRS HA Long Lasting": 0
+    },
+    "1259": {
+      "month": "2026-09",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 494672
+    },
+    "1256": {
+      "month": "2026-09",
+      "Teoxane": 153900,
+      "RRS HA Long Lasting": 494672
+    },
+    "1258": {
+      "month": "2026-09",
+      "Teoxane": 135000,
+      "RRS HA Long Lasting": 0
+    },
+    "1261": {
+      "month": "2026-09",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 577117
+    },
+    "1257": {
+      "month": "2026-09",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 309170
+    },
+    "1233": {
+      "month": "2026-09",
+      "Teoxane": 605249,
+      "RRS HA Long Lasting": 0
+    },
+    "1250": {
+      "month": "2026-09",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 494672
+    },
+    "1265": {
+      "month": "2026-09",
+      "Teoxane": 622349,
+      "RRS HA Long Lasting": 0
+    },
+    "590": {
+      "month": "2026-09",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 494672
+    },
+    "1267": {
+      "month": "2026-09",
+      "Teoxane": 1209312,
+      "RRS HA Long Lasting": 0
+    },
+    "1264": {
+      "month": "2026-09",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 206113
+    },
+    "1269": {
+      "month": "2026-09",
+      "Teoxane": 198000,
+      "RRS HA Long Lasting": 0
+    },
+    "1237": {
+      "month": "2026-09",
+      "Teoxane": 99000,
+      "RRS HA Long Lasting": 0
+    },
+    "1266": {
+      "month": "2026-09",
+      "Teoxane": 102600,
+      "RRS HA Long Lasting": 0
+    }
   }
 }
