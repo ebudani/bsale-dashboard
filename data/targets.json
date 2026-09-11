@@ -18,6 +18,15 @@
         "Francisca Salinas":  { "Teoxane": 10500000, "RRS HA Long Lasting": 1780000 },
         "Monica Urrutia":     { "Teoxane": 48500000, "RRS HA Long Lasting": 9000000 }
       }
+    },
+    "2026-09": {
+      "total": 131910000,
+      "by_vendor": {
+        "Cindy Monsalves":    { "Teoxane": 32780000, "RRS HA Long Lasting": 6000000 },
+        "Daisy Ponce":        { "Teoxane": 11500000, "RRS HA Long Lasting": 7000000 },
+        "Francisca Salinas":  { "Teoxane": 10500000, "RRS HA Long Lasting": 1780000 },
+        "Monica Urrutia":     { "Teoxane": 53350000, "RRS HA Long Lasting": 9000000 }
+      }
     }
   }
 }
