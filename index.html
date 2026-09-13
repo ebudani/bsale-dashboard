@@ -130,6 +130,7 @@
   .grouped-head th.group-start { border-left: 1px solid var(--gray-200); }
   .grouped-head td.group-start { border-left: 1px solid var(--gray-200); }
   .grouped-head tbody td:first-child { text-align: left; }
+  .cumpl-total-row td { background: var(--gray-200); font-weight: 700; }
   table { width: 100%; border-collapse: collapse; font-size: 13px; }
   th {
     background: var(--gray-100);
@@ -1299,8 +1300,7 @@ function renderCumplTable(agg, t, label) {
     const tTotal    = tTeox + tRrs;
 
     const tr2 = document.createElement('tr');
-    tr2.style.fontWeight = '700';
-    tr2.style.background = '#f8fafc';
+    tr2.className = 'cumpl-total-row';
     tr2.innerHTML = `
       <td>Total</td>
       <td class="group-start" style="color:${BRAND_COLORS['Teoxane']}">${M(totTeox)}</td>
