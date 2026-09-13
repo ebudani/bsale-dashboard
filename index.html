@@ -1258,7 +1258,14 @@ function renderCumplTable(agg, t, label) {
   }
 
   const filterName = selectedVendor;
-  const vendorIds = Object.keys(t.by_vendor || {}).filter(name => filterName === 'all' || name === filterName);
+  const targetVendorIds = Object.keys(t.by_vendor || {}).filter(name => filterName === 'all' || name === filterName);
+  // Any vendor with real sales this period but no loaded objective (e.g. "Sin
+  // asignar") still needs a row -- otherwise the Total below silently omits
+  // their sales and no longer matches the company-wide KPI cards up top.
+  const extraVendorIds = Object.keys(bvb).filter(name =>
+    !targetVendorIds.includes(name) && (filterName === 'all' || name === filterName)
+  );
+  const vendorIds = [...targetVendorIds, ...extraVendorIds];
 
   if (!vendorIds.length) {
     tbody.innerHTML = '<tr><td colspan="7" style="color:#94a3b8;text-align:center">Sin objetivo para este vendedor</td></tr>';
