@@ -446,8 +446,8 @@
       </table>
     </div>
 
-    <!-- Cartera en riesgo -->
-    <div class="card">
+    <!-- Cartera en riesgo (solo con un vendedor puntual seleccionado arriba) -->
+    <div class="card" id="cartera-riesgo-card">
       <h2 id="table-risk-title">Cartera en riesgo — </h2>
       <div class="risk-caption">Independiente del filtro de Periodo: compara siempre el mes en curso y el mes anterior a hoy.</div>
       <div class="risk-toolbar" id="risk-toolbar"></div>
@@ -1463,8 +1463,13 @@ function renderRiskTable(rows) {
 }
 
 function renderCarteraRiesgo() {
-  const label = selectedVendor === 'all' ? 'Todos los vendedores' : selectedVendor;
-  document.getElementById('table-risk-title').textContent = `Cartera en riesgo — ${label}`;
+  const card = document.getElementById('cartera-riesgo-card');
+  if (selectedVendor === 'all') {
+    card.style.display = 'none';
+    return;
+  }
+  card.style.display = 'block';
+  document.getElementById('table-risk-title').textContent = `Cartera en riesgo — ${selectedVendor}`;
   const rows = buildRiskRoster();
   renderRiskToolbar(rows);
   renderRiskTable(rows);
