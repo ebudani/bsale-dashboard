@@ -131,6 +131,8 @@
   .grouped-head td.group-start { border-left: 1px solid var(--gray-200); }
   .grouped-head tbody td:first-child { text-align: left; }
   .cumpl-total-row td { background: var(--gray-200); font-weight: 700; }
+  .grouped-head .col-total { background: var(--gray-100); }
+  .cumpl-total-row td.col-total { background: var(--gray-200); }
   table { width: 100%; border-collapse: collapse; font-size: 13px; }
   th {
     background: var(--gray-100);
@@ -395,15 +397,15 @@
               <th rowspan="2">Vendedor</th>
               <th colspan="2" class="group-start" style="color:#2563eb">Teoxane</th>
               <th colspan="2" class="group-start" style="color:#d97706">RRS LL</th>
-              <th colspan="2" class="group-start">Total</th>
+              <th colspan="2" class="group-start col-total">Total</th>
             </tr>
             <tr>
               <th class="group-start">Real</th>
               <th>vs Obj</th>
               <th class="group-start">Real</th>
               <th>vs Obj</th>
-              <th class="group-start">Real</th>
-              <th>vs Obj</th>
+              <th class="group-start col-total">Real</th>
+              <th class="col-total">vs Obj</th>
             </tr>
           </thead>
           <tbody id="tbody-cumpl"></tbody>
@@ -1284,8 +1286,8 @@ function renderCumplTable(agg, t, label) {
       <td>${teoxR !== null ? `<span class="pill ${pillClass(teoxR)}">${PCT0(teoxR)}</span><br><small>${M(teoxObj)}</small>` : '—'}</td>
       <td class="group-start" style="color:${BRAND_COLORS['RRS HA Long Lasting']}">${M(rrsReal)}</td>
       <td>${rrsR !== null ? `<span class="pill ${pillClass(rrsR)}">${PCT0(rrsR)}</span><br><small>${M(rrsObj)}</small>` : '—'}</td>
-      <td class="group-start"><strong>${M(totalReal)}</strong></td>
-      <td>${totalR !== null ? `<span class="pill ${pillClass(totalR)}">${PCT0(totalR)}</span><br><small>${M(totalObj)}</small>` : '—'}</td>
+      <td class="group-start col-total"><strong>${M(totalReal)}</strong></td>
+      <td class="col-total">${totalR !== null ? `<span class="pill ${pillClass(totalR)}">${PCT0(totalR)}</span><br><small>${M(totalObj)}</small>` : '—'}</td>
     `;
     tbody.appendChild(tr);
   });
@@ -1307,8 +1309,8 @@ function renderCumplTable(agg, t, label) {
       <td>${tTeox ? `<span class="pill ${pillClass(totTeox/tTeox)}">${PCT0(totTeox/tTeox)}</span><br><small>${M(tTeox)}</small>` : '—'}</td>
       <td class="group-start" style="color:${BRAND_COLORS['RRS HA Long Lasting']}">${M(totRrs)}</td>
       <td>${tRrs ? `<span class="pill ${pillClass(totRrs/tRrs)}">${PCT0(totRrs/tRrs)}</span><br><small>${M(tRrs)}</small>` : '—'}</td>
-      <td class="group-start">${M(totTotal)}</td>
-      <td>${tTotal ? `<span class="pill ${pillClass(totTotal/tTotal)}">${PCT0(totTotal/tTotal)}</span><br><small>${M(tTotal)}</small>` : '—'}</td>
+      <td class="group-start col-total">${M(totTotal)}</td>
+      <td class="col-total">${tTotal ? `<span class="pill ${pillClass(totTotal/tTotal)}">${PCT0(totTotal/tTotal)}</span><br><small>${M(tTotal)}</small>` : '—'}</td>
     `;
     tbody.appendChild(tr2);
   }
