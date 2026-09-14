@@ -271,6 +271,22 @@
 
   @media (max-width: 900px) {
     .charts-row, .tables-row, .bottom-row { grid-template-columns: 1fr; }
+
+    /* Custom card order on mobile only. #content becomes a flex column
+       (!important needed: JS sets it to display:block inline on load) and
+       the row wrappers flatten via display:contents so their cards can be
+       freely reordered across what were separate grid rows on desktop. */
+    #content { display: flex !important; flex-direction: column; }
+    .charts-row.full-row, .bottom-row, .tables-row-3 { display: contents; }
+    #card-monthly        { order: 1; }
+    #card-brands         { order: 2; }
+    #card-cumpl          { order: 3; }
+    #card-sku            { order: 4; }
+    #card-daily          { order: 5; }
+    #card-teox           { order: 6; }
+    #card-rrs            { order: 7; }
+    #card-topclientes    { order: 8; }
+    #cartera-riesgo-card { order: 9; }
   }
 
   @media (max-width: 480px) {
@@ -361,11 +377,11 @@
 
     <!-- Main charts -->
     <div class="charts-row full-row">
-      <div class="card">
+      <div class="card" id="card-monthly">
         <h2>Ventas Netas Mensuales</h2>
         <div class="chart-wrap"><canvas id="chart-monthly"></canvas></div>
       </div>
-      <div class="card">
+      <div class="card" id="card-sku">
         <h2 id="chart-sku-title">Ventas por Producto — </h2>
         <div class="chart-wrap"><canvas id="chart-sku"></canvas></div>
       </div>
@@ -373,14 +389,14 @@
 
     <!-- Daily + Brand by month -->
     <div class="bottom-row">
-      <div class="card">
+      <div class="card" id="card-daily">
         <h2 id="chart-daily-title">Curva Diaria — </h2>
         <div class="chart-wrap">
           <canvas id="chart-daily"></canvas>
           <div id="chart-daily-unavailable" class="unavailable" style="display:none">No disponible por vendedor</div>
         </div>
       </div>
-      <div class="card">
+      <div class="card" id="card-brands">
         <h2>Marcas por Mes (últimos 12)</h2>
         <div class="chart-wrap"><canvas id="chart-brands"></canvas></div>
       </div>
@@ -388,7 +404,7 @@
 
     <!-- Cumplimiento / productividad por marca -->
     <div class="tables-row tables-row-3">
-      <div class="card">
+      <div class="card" id="card-cumpl">
         <h2 id="table-cumpl-title">Cumplimiento — </h2>
         <table id="table-cumpl" class="grouped-head">
           <thead>
@@ -410,7 +426,7 @@
           <tbody id="tbody-cumpl"></tbody>
         </table>
       </div>
-      <div class="card">
+      <div class="card" id="card-teox">
         <h2>Teoxane — Clientes, unidades y productividad por mes</h2>
         <table id="table-prod-teox">
           <thead>
@@ -421,7 +437,7 @@
           <tbody id="tbody-prod-teox"></tbody>
         </table>
       </div>
-      <div class="card">
+      <div class="card" id="card-rrs">
         <h2>RRS HA Long Lasting — Clientes, unidades y productividad por mes</h2>
         <table id="table-prod-rrs">
           <thead>
@@ -435,7 +451,7 @@
     </div>
 
     <!-- Top clients -->
-    <div class="card">
+    <div class="card" id="card-topclientes">
       <h2 id="table-clients-title">Top 10 Clientes — </h2>
       <div id="clients-unavailable" class="unavailable" style="display:none">No disponible por vendedor</div>
       <table id="table-clients">
