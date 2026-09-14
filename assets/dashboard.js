@@ -58,6 +58,10 @@ let riskSearch = '';
 let riskSortKey = 'status';
 let riskSortDir = 1;
 let selectedVendor = 'all';
+// Which render function period/vendor changes call -- full render() on
+// index.html, renderVendorSimple() on the personal vendor.html page.
+// Set once in loadData(), once we know which page/mode this is.
+let renderDispatch = null;
 let periodMode = 'this_month';
 let customFromIdx = 0;
 let customToIdx = 0;
@@ -166,7 +170,8 @@ async function loadData() {
   buildVendorSelector();
   if (!applyVendorLock()) return; // window.LOCKED_VENDOR set but not a real vendor -- bail, error already shown
   buildCustomRangeSelectors();
-  render();
+  renderDispatch = window.SIMPLE_MODE ? renderVendorSimple : render;
+  renderDispatch();
   document.getElementById('loading').style.display = 'none';
   document.getElementById('content').classList.add('loaded');
 }
@@ -209,7 +214,7 @@ function buildVendorSelector() {
 
 function selectVendor(v) {
   selectedVendor = v;
-  render();
+  renderDispatch();
 }
 
 // ── Periodo selector ─────────────────────────────────────────────────────────
@@ -232,13 +237,13 @@ function buildCustomRangeSelectors() {
 function onPeriodChange(mode) {
   periodMode = mode;
   document.getElementById('custom-range').style.display = mode === 'custom' ? 'inline-flex' : 'none';
-  render();
+  renderDispatch();
 }
 
 function onCustomRangeChange() {
   customFromIdx = parseInt(document.getElementById('custom-from').value);
   customToIdx   = parseInt(document.getElementById('custom-to').value);
-  render();
+  renderDispatch();
 }
 
 function monthsForPeriod() {
@@ -514,6 +519,49 @@ function renderKPIs(m, t, label) {
 
 function sumVendorTargets(t, brand) {
   return Object.values(t.by_vendor || {}).reduce((s, bv) => s + (bv[brand] || 0), 0);
+}
+
+// ── Personal vendor page (vendor.html) ──────────────────────────────────────
+// Deliberately not the full dashboard: just the 5 KPIs plus a per-brand
+// cumplimiento breakdown, per what was asked for that page specifically.
+function renderVendorSimple() {
+  const months = monthsForPeriod();
+  const label  = periodLabel(months);
+  const agg    = aggregateMonths(months);
+  const t      = months.length === 1 ? aggregateTargets(months) : null;
+  const view   = applyVendorFilter(agg, selectedVendor);
+
+  renderKPIs(view, t, label);
+  renderCumplDetail(view, t);
+}
+
+function renderCumplDetail(view, t) {
+  const wrap = document.getElementById('cumpl-detail');
+  if (!wrap) return;
+
+  const vendorTarget = t ? (t.by_vendor[selectedVendor] || {}) : {};
+  const teoxReal = (view.by_brand || {})['Teoxane'] || 0;
+  const rrsReal  = (view.by_brand || {})['RRS HA Long Lasting'] || 0;
+  const teoxObj  = vendorTarget['Teoxane'] || 0;
+  const rrsObj   = vendorTarget['RRS HA Long Lasting'] || 0;
+
+  const rows = [
+    { label: 'Teoxane', color: BRAND_COLORS['Teoxane'], real: teoxReal, obj: teoxObj },
+    { label: 'RRS HA Long Lasting', color: BRAND_COLORS['RRS HA Long Lasting'], real: rrsReal, obj: rrsObj },
+    { label: 'Total', real: teoxReal + rrsReal, obj: teoxObj + rrsObj, isTotal: true },
+  ];
+
+  wrap.innerHTML = rows.map(r => {
+    const ratio = r.obj ? r.real / r.obj : null;
+    return `
+      <div class="cumpl-detail-row${r.isTotal ? ' cumpl-detail-total' : ''}">
+        <span class="cumpl-detail-label"${r.color ? ` style="color:${r.color}"` : ''}>${r.label}</span>
+        <span class="cumpl-detail-real">${M(r.real)}</span>
+        ${ratio !== null
+          ? `<span class="pill ${pillClass(ratio)}">${PCT0(ratio)}</span><span class="cumpl-detail-obj">Obj: ${M(r.obj)}</span>`
+          : '<span class="cumpl-detail-obj">Sin objetivo</span>'}
+      </div>`;
+  }).join('');
 }
 
 // ── Monthly trend chart ─────────────────────────────────────────────────────

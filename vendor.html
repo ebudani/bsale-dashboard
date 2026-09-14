@@ -24,7 +24,8 @@
   <h1>AestheticsPro <span>· Ventas</span></h1>
   <div class="header-right">
     <span id="updated-at">Cargando…</span>
-    <div class="filter-group" id="vendor-filter-group">
+    <!-- No hay selector de Vendedor: esta vista queda fija a quien indique ?v= -->
+    <div class="filter-group" id="vendor-filter-group" style="display:none">
       <span class="filter-label">Vendedor</span>
       <select id="vendor-select" class="filter-select" onchange="selectVendor(this.value)"></select>
     </div>
@@ -81,123 +82,17 @@
       </div>
     </div>
 
-    <!-- Main charts -->
-    <div class="charts-row full-row">
-      <div class="card" id="card-monthly">
-        <h2>Ventas Netas Mensuales</h2>
-        <div class="chart-wrap"><canvas id="chart-monthly"></canvas></div>
-      </div>
-      <div class="card" id="card-sku">
-        <h2 id="chart-sku-title">Ventas por Producto — </h2>
-        <div class="chart-wrap"><canvas id="chart-sku"></canvas></div>
-      </div>
-    </div>
-
-    <!-- Daily + Brand by month -->
-    <div class="bottom-row">
-      <div class="card" id="card-daily">
-        <h2 id="chart-daily-title">Curva Diaria — </h2>
-        <div class="chart-wrap">
-          <canvas id="chart-daily"></canvas>
-          <div id="chart-daily-unavailable" class="unavailable" style="display:none">No disponible por vendedor</div>
-        </div>
-      </div>
-      <div class="card" id="card-brands">
-        <h2>Marcas por Mes (últimos 12)</h2>
-        <div class="chart-wrap"><canvas id="chart-brands"></canvas></div>
-      </div>
-    </div>
-
-    <!-- Cumplimiento / productividad por marca -->
-    <div class="tables-row tables-row-3">
-      <div class="card" id="card-cumpl">
-        <h2 id="table-cumpl-title">Cumplimiento — </h2>
-        <table id="table-cumpl" class="grouped-head">
-          <thead>
-            <tr>
-              <th rowspan="2">Vendedor</th>
-              <th colspan="2" class="group-start" style="color:#2563eb">Teoxane</th>
-              <th colspan="2" class="group-start" style="color:#d97706">RRS LL</th>
-              <th colspan="2" class="group-start col-total">Total</th>
-            </tr>
-            <tr>
-              <th class="group-start">Real</th>
-              <th>vs Obj</th>
-              <th class="group-start">Real</th>
-              <th>vs Obj</th>
-              <th class="group-start col-total">Real</th>
-              <th class="col-total">vs Obj</th>
-            </tr>
-          </thead>
-          <tbody id="tbody-cumpl"></tbody>
-        </table>
-      </div>
-      <div class="card" id="card-teox">
-        <h2>Teoxane — Clientes, unidades y productividad por mes</h2>
-        <table id="table-prod-teox">
-          <thead>
-            <tr>
-              <th>Período</th><th>N° Clientes</th><th>N° Unidades</th><th>Productividad<br><small>(unid./cliente)</small></th>
-            </tr>
-          </thead>
-          <tbody id="tbody-prod-teox"></tbody>
-        </table>
-      </div>
-      <div class="card" id="card-rrs">
-        <h2>RRS HA Long Lasting — Clientes, unidades y productividad por mes</h2>
-        <table id="table-prod-rrs">
-          <thead>
-            <tr>
-              <th>Período</th><th>N° Clientes</th><th>N° Unidades</th><th>Productividad<br><small>(unid./cliente)</small></th>
-            </tr>
-          </thead>
-          <tbody id="tbody-prod-rrs"></tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- Top clients -->
-    <div class="card" id="card-topclientes">
-      <h2 id="table-clients-title">Top 10 Clientes — </h2>
-      <div id="clients-unavailable" class="unavailable" style="display:none">No disponible por vendedor</div>
-      <table id="table-clients">
-        <thead>
-          <tr>
-            <th>#</th><th>Cliente</th><th>Facturas</th><th>$ Neto Total</th><th>Teoxane</th><th>RRS HA LL</th><th>%</th>
-          </tr>
-        </thead>
-        <tbody id="tbody-clients"></tbody>
-      </table>
-    </div>
-
-    <!-- Cartera en riesgo (solo con un vendedor puntual seleccionado arriba) -->
-    <div class="card" id="cartera-riesgo-card">
-      <h2 id="table-risk-title">Cartera en riesgo — </h2>
-      <div class="risk-caption">Independiente del filtro de Periodo: compara siempre el mes en curso y el mes anterior a hoy.</div>
-      <div class="risk-toolbar" id="risk-toolbar"></div>
-      <div class="risk-table-scroll">
-        <table id="table-risk">
-          <thead>
-            <tr>
-              <th data-key="name">Cuenta <span class="arrow"></span></th>
-              <th data-key="vendor">Vendedor <span class="arrow"></span></th>
-              <th data-key="status">Estado <span class="arrow"></span></th>
-              <th data-key="current">Mes en curso <span class="arrow"></span></th>
-              <th data-key="prev">Mes anterior <span class="arrow"></span></th>
-              <th data-key="lastMonth">Última compra <span class="arrow"></span></th>
-              <th data-key="lastAmount">Monto por producto (esa compra) <span class="arrow"></span></th>
-            </tr>
-          </thead>
-          <tbody id="tbody-risk"></tbody>
-        </table>
-      </div>
-      <div class="risk-count" id="risk-count"></div>
+    <!-- Detalle de cumplimiento por marca -->
+    <div class="card">
+      <h2>Detalle de Cumplimiento</h2>
+      <div id="cumpl-detail"></div>
     </div>
 
   </div><!-- #content -->
 </main>
 
 <script>
+  window.SIMPLE_MODE = true;
   // Which vendor this link is pinned to -- ?v=monica etc. Add a new entry
   // here (not a new HTML file) any time another vendor needs their own link.
   const VENDOR_LINKS = {
