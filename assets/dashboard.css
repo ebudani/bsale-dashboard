@@ -78,21 +78,6 @@
   .kpi .val  { font-size: 22px; font-weight: 700; }
   .kpi .sub  { font-size: 11px; color: var(--gray-600); margin-top: 3px; }
 
-  /* Cumplimiento detail (vendor.html) */
-  .cumpl-detail-row {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: 5px 14px;
-    padding: 14px 4px;
-    border-bottom: 1px solid var(--gray-200);
-  }
-  .cumpl-detail-row:last-child { border-bottom: none; }
-  .cumpl-detail-row.cumpl-detail-total { font-weight: 700; }
-  .cumpl-detail-label { flex: 1 1 120px; font-size: 14px; white-space: nowrap; }
-  .cumpl-detail-real { font-size: 16px; font-weight: 700; }
-  .cumpl-detail-obj { font-size: 12px; color: var(--gray-600); white-space: nowrap; margin-left: auto; }
-
   /* Charts row */
   .charts-row {
     display: grid;
@@ -307,8 +292,8 @@
     .tables-row-3 th, .tables-row-3 td { padding: 4px 5px; }
     /* Cumplimiento has 7 columns -- tighten further so it fits the card
        width on a phone without needing horizontal scroll. */
-    #table-cumpl { font-size: 9px; }
-    #table-cumpl th, #table-cumpl td { padding: 4px 3px; }
+    #table-cumpl, #table-cumpl-detail { font-size: 9px; }
+    #table-cumpl th, #table-cumpl td, #table-cumpl-detail th, #table-cumpl-detail td { padding: 4px 3px; }
     .pill { padding: 1px 6px; font-size: 10px; }
     #table-clients th, #table-clients td { padding: 5px 6px; }
   }

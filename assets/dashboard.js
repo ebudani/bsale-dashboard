@@ -522,8 +522,10 @@ function sumVendorTargets(t, brand) {
 }
 
 // ── Personal vendor page (vendor.html) ──────────────────────────────────────
-// Deliberately not the full dashboard: just the 5 KPIs plus a per-brand
-// cumplimiento breakdown, per what was asked for that page specifically.
+// Deliberately not the full dashboard: just the 5 KPIs (period-filtered, like
+// index.html) plus a Cumplimiento table fixed to the current and previous
+// month -- independent of the Período selector, same idea as Cartera en
+// riesgo on the main dashboard.
 function renderVendorSimple() {
   const months = monthsForPeriod();
   const label  = periodLabel(months);
@@ -532,35 +534,49 @@ function renderVendorSimple() {
   const view   = applyVendorFilter(agg, selectedVendor);
 
   renderKPIs(view, t, label);
-  renderCumplDetail(view, t);
+  renderCumplDetail();
 }
 
-function renderCumplDetail(view, t) {
-  const wrap = document.getElementById('cumpl-detail');
-  if (!wrap) return;
+function renderCumplDetail() {
+  const tbody = document.getElementById('tbody-cumpl-detail');
+  if (!tbody || !allMonths.length) return;
 
-  const vendorTarget = t ? (t.by_vendor[selectedVendor] || {}) : {};
-  const teoxReal = (view.by_brand || {})['Teoxane'] || 0;
-  const rrsReal  = (view.by_brand || {})['RRS HA Long Lasting'] || 0;
-  const teoxObj  = vendorTarget['Teoxane'] || 0;
-  const rrsObj   = vendorTarget['RRS HA Long Lasting'] || 0;
+  const curMonth  = allMonths[allMonths.length - 1];
+  const prevMonth = allMonths.length > 1 ? allMonths[allMonths.length - 2] : null;
+  const periods = [curMonth, prevMonth].filter(Boolean).map(mm => ({
+    label: monthLabel(mm.year, mm.month),
+    view: applyVendorFilter(aggregateMonths([mm]), selectedVendor),
+    t: aggregateTargets([mm]),
+  }));
 
-  const rows = [
-    { label: 'Teoxane', color: BRAND_COLORS['Teoxane'], real: teoxReal, obj: teoxObj },
-    { label: 'RRS HA Long Lasting', color: BRAND_COLORS['RRS HA Long Lasting'], real: rrsReal, obj: rrsObj },
-    { label: 'Total', real: teoxReal + rrsReal, obj: teoxObj + rrsObj, isTotal: true },
-  ];
+  const cell = (real, obj) => {
+    const ratio = obj ? real / obj : null;
+    return `<td class="group-start">${M(real)}</td>` +
+      (ratio !== null
+        ? `<td><span class="pill ${pillClass(ratio)}">${PCT0(ratio)}</span><br><small>${M(obj)}</small></td>`
+        : `<td>—</td>`);
+  };
 
-  wrap.innerHTML = rows.map(r => {
-    const ratio = r.obj ? r.real / r.obj : null;
+  tbody.innerHTML = periods.map(p => {
+    const vendorTarget = p.t ? (p.t.by_vendor[selectedVendor] || {}) : {};
+    const teoxReal = (p.view.by_brand || {})['Teoxane'] || 0;
+    const rrsReal  = (p.view.by_brand || {})['RRS HA Long Lasting'] || 0;
+    const teoxObj  = vendorTarget['Teoxane'] || 0;
+    const rrsObj   = vendorTarget['RRS HA Long Lasting'] || 0;
+    const totalReal = teoxReal + rrsReal;
+    const totalObj  = teoxObj + rrsObj;
+    const totalRatio = totalObj ? totalReal / totalObj : null;
+
     return `
-      <div class="cumpl-detail-row${r.isTotal ? ' cumpl-detail-total' : ''}">
-        <span class="cumpl-detail-label"${r.color ? ` style="color:${r.color}"` : ''}>${r.label}</span>
-        <span class="cumpl-detail-real">${M(r.real)}</span>
-        ${ratio !== null
-          ? `<span class="pill ${pillClass(ratio)}">${PCT0(ratio)}</span><span class="cumpl-detail-obj">Obj: ${M(r.obj)}</span>`
-          : '<span class="cumpl-detail-obj">Sin objetivo</span>'}
-      </div>`;
+      <tr>
+        <td><strong>${p.label}</strong></td>
+        ${cell(teoxReal, teoxObj)}
+        ${cell(rrsReal, rrsObj)}
+        <td class="group-start col-total"><strong>${M(totalReal)}</strong></td>
+        <td class="col-total">${totalRatio !== null
+          ? `<span class="pill ${pillClass(totalRatio)}">${PCT0(totalRatio)}</span><br><small>${M(totalObj)}</small>`
+          : '—'}</td>
+      </tr>`;
   }).join('');
 }
 
