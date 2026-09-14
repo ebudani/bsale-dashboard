@@ -27,7 +27,6 @@ TOKEN = os.environ.get("BSALE_TOKEN", "")
 BASE_URL = "https://api.bsale.io/v1"
 DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
 OUT_FILE = os.path.join(DATA_DIR, "ventas.json")
-VENDORS_FILE = os.path.join(DATA_DIR, "vendedores.json")
 HEADERS = {"access_token": TOKEN}
 
 TIPO_FACTURA = {"5"}
@@ -106,35 +105,30 @@ def fetch_users():
     return users
 
 
-def load_rut_to_vendor():
-    """Loads RUT -> vendor_name mapping from data/vendedores.json."""
-    if not os.path.exists(VENDORS_FILE):
-        return {}
-    with open(VENDORS_FILE, "r", encoding="utf-8") as f:
-        raw = json.load(f)
-    raw.pop("_note", None)
-    # Blank VENDEDOR cells in the source spreadsheet get written here as the
-    # literal string "nan" -- not a real assignment. Left unfiltered, any RUT
-    # sharing that gets grouped into a bogus "nan" vendor bucket.
-    return {rut: v for rut, v in raw.items() if str(v).strip().lower() != "nan"}
-
-
-def build_client_to_vendor(clients_meta, rut_to_vendor):
-    """Returns {client_id_str: vendor_name} using RUT-based lookup."""
-    result = {}
-    for cid, info in clients_meta.items():
-        rut = (info.get("rut") or "").strip()
-        if rut in rut_to_vendor:
-            result[cid] = rut_to_vendor[rut]
-    return result
+def fetch_vendor_options(vendedor_attr_id):
+    """
+    Returns {option_id_str: vendor_name} for the "Vendedor" dynamic
+    attribute's list options (e.g. {"53": "Monica Urrutia"}). A client's own
+    attribute "value" holds this option's id, NOT the option's own "value"
+    field (a separate, unrelated ordinal Bsale also stores per option).
+    """
+    data = get_json(f"{BASE_URL}/dynamic_attributes/{vendedor_attr_id}/details.json?limit=200")
+    return {str(d["id"]): d["name"] for d in data.get("items", [])}
 
 
 def fetch_clients():
-    """Returns {client_id_str: {name, rut}}. Fetches all pages."""
+    """
+    Returns ({client_id_str: {name, rut}}, {client_id_str: vendor_name}).
+    Vendor comes straight from each client's "Vendedor" additional attribute
+    in Bsale (Atributos adicionales), resolved via expand=[attributes] --
+    no more manual RUT->vendor spreadsheet/fuzzy matching.
+    """
     clients = {}
+    vendor_value_by_client = {}
+    vendedor_attr_id = None
     offset = 0
     while True:
-        data = get_json(f"{BASE_URL}/clients.json?limit=50&offset={offset}")
+        data = get_json(f"{BASE_URL}/clients.json?limit=50&offset={offset}&expand=[attributes]")
         items = data.get("items", [])
         if not items:
             break
@@ -145,10 +139,23 @@ def fetch_clients():
             last    = (c.get("lastName") or "").strip()
             name    = company if company else f"{first} {last}".strip()
             clients[cid] = {"name": name, "rut": c.get("code", "")}
+            for attr in (c.get("attributes") or {}).get("items", []):
+                if attr.get("name") == "Vendedor" and attr.get("value"):
+                    vendedor_attr_id = attr["id"]
+                    vendor_value_by_client[cid] = attr["value"]
         if offset + 50 >= data.get("count", 0):
             break
         offset += 50
-    return clients
+
+    client_to_vendor = {}
+    if vendedor_attr_id is not None:
+        options = fetch_vendor_options(vendedor_attr_id)
+        for cid, value in vendor_value_by_client.items():
+            vendor_name = options.get(value)
+            if vendor_name:
+                client_to_vendor[cid] = vendor_name
+
+    return clients, client_to_vendor
 
 
 # -- Document fetching ---------------------------------------------------------
@@ -635,12 +642,9 @@ def main():
     print(f"{len(users)} users")
 
     print("Fetching clients...", end=" ", flush=True)
-    clients = fetch_clients()
+    clients, client_to_vendor = fetch_clients()
     print(f"{len(clients)} clients")
-
-    rut_to_vendor = load_rut_to_vendor()
-    client_to_vendor = build_client_to_vendor(clients, rut_to_vendor)
-    print(f"Vendor lookup: {len(client_to_vendor)} clients mapped")
+    print(f"Vendor lookup: {len(client_to_vendor)} clients mapped (from Bsale 'Vendedor' attribute)")
 
     total_docs = get_total_document_count()
     fact_block_end = total_docs - 1
