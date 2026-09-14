@@ -167,42 +167,44 @@
       </div>
     </div>
 
-    <!-- Top clients -->
-    <div class="card" id="card-topclientes">
-      <h2 id="table-clients-title">Top 10 Clientes — </h2>
-      <div id="clients-unavailable" class="unavailable" style="display:none">No disponible por vendedor</div>
-      <table id="table-clients">
-        <thead>
-          <tr>
-            <th>#</th><th>Cliente</th><th>Facturas</th><th>$ Neto Total</th><th>Teoxane</th><th>RRS HA LL</th><th>%</th>
-          </tr>
-        </thead>
-        <tbody id="tbody-clients"></tbody>
-      </table>
-    </div>
-
-    <!-- Cartera en riesgo (solo con un vendedor puntual seleccionado arriba) -->
-    <div class="card" id="cartera-riesgo-card">
-      <h2 id="table-risk-title">Cartera en riesgo — </h2>
-      <div class="risk-caption">Independiente del filtro de Periodo: compara siempre el mes en curso y el mes anterior a hoy.</div>
-      <div class="risk-toolbar" id="risk-toolbar"></div>
-      <div class="risk-table-scroll">
-        <table id="table-risk">
+    <!-- Top clients + Cartera en riesgo (esta solo con un vendedor puntual
+         seleccionado arriba) lado a lado en escritorio, apiladas en mobile. -->
+    <div class="tables-row">
+      <div class="card" id="card-topclientes">
+        <h2 id="table-clients-title">Top 10 Clientes — </h2>
+        <div id="clients-unavailable" class="unavailable" style="display:none">No disponible por vendedor</div>
+        <table id="table-clients">
           <thead>
             <tr>
-              <th data-key="name">Cuenta <span class="arrow"></span></th>
-              <th data-key="vendor">Vendedor <span class="arrow"></span></th>
-              <th data-key="status">Estado <span class="arrow"></span></th>
-              <th data-key="current">Mes en curso <span class="arrow"></span></th>
-              <th data-key="prev">Mes anterior <span class="arrow"></span></th>
-              <th data-key="lastMonth">Última compra <span class="arrow"></span></th>
-              <th data-key="lastAmount">Monto por producto (esa compra) <span class="arrow"></span></th>
+              <th>#</th><th>Cliente</th><th>Facturas</th><th>$ Neto Total</th><th>Teoxane</th><th>RRS HA LL</th><th>%</th>
             </tr>
           </thead>
-          <tbody id="tbody-risk"></tbody>
+          <tbody id="tbody-clients"></tbody>
         </table>
       </div>
-      <div class="risk-count" id="risk-count"></div>
+
+      <div class="card" id="cartera-riesgo-card">
+        <h2 id="table-risk-title">Cartera en riesgo — </h2>
+        <div class="risk-caption">Independiente del filtro de Periodo: compara siempre el mes en curso y el mes anterior a hoy.</div>
+        <div class="risk-toolbar" id="risk-toolbar"></div>
+        <div class="risk-table-scroll">
+          <table id="table-risk">
+            <thead>
+              <tr>
+                <th data-key="name">Cuenta <span class="arrow"></span></th>
+                <th data-key="vendor">Vendedor <span class="arrow"></span></th>
+                <th data-key="status">Estado <span class="arrow"></span></th>
+                <th data-key="current">Mes en curso <span class="arrow"></span></th>
+                <th data-key="prev">Mes anterior <span class="arrow"></span></th>
+                <th data-key="lastMonth">Última compra <span class="arrow"></span></th>
+                <th data-key="lastAmount">Monto por producto (esa compra) <span class="arrow"></span></th>
+              </tr>
+            </thead>
+            <tbody id="tbody-risk"></tbody>
+          </table>
+        </div>
+        <div class="risk-count" id="risk-count"></div>
+      </div>
     </div>
 
   </div><!-- #content -->
