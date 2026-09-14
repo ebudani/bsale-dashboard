@@ -113,8 +113,18 @@
     margin-bottom: 22px;
   }
   .tables-row-3 { grid-template-columns: 1.5fr 1fr 1fr; }
-  .tables-row-3 table { font-size: 12px; }
-  .tables-row-3 th, .tables-row-3 td { padding: 6px 8px; }
+  /* .card table sets min-width:max-content globally so wide tables (like
+     Cartera en riesgo) scroll instead of squeezing -- but these three are
+     meant to fit their grid column exactly, at any window width, so they
+     need to be able to shrink/wrap instead. */
+  .tables-row-3 table { font-size: 12px; min-width: 0; }
+  .tables-row-3 th, .tables-row-3 td { padding: 6px 4px; }
+  .tables-row-3 th { overflow-wrap: break-word; }
+  /* "Productividad" alone is still wider than these two narrower (1fr)
+     columns can spare -- a touch smaller than Cumplimiento's 1.5fr table,
+     and not uppercased (mixed-case renders narrower for this word). */
+  #table-prod-teox, #table-prod-rrs { font-size: 11px; }
+  #table-prod-teox th, #table-prod-rrs th { text-transform: none; }
   .grouped-head thead th { text-align: center; }
   .grouped-head thead tr:first-child th { border-bottom: none; }
   .grouped-head thead tr:last-child th { padding-top: 2px; font-size: 10px; text-transform: none; color: var(--gray-600); }
@@ -260,6 +270,15 @@
   #table-risk tr.risk-row-nuevo:hover td { background: var(--gray-200); }
   .risk-caption { font-size: 11px; color: #94a3b8; margin: -6px 0 12px; }
   .risk-count { font-size: 11px; color: #94a3b8; margin-top: 8px; }
+
+  /* Cumplimiento + Teoxane + RRS (7, 4 and 4 columns in 1.5fr/1fr/1fr) need
+     more room than the other 2-column rows to stay legible without
+     scrolling -- collapse to 1 column earlier than the general 900px
+     breakpoint below, instead of squeezing into an unreadable sliver on a
+     not-quite-wide-enough window. */
+  @media (max-width: 1150px) {
+    .tables-row-3 { grid-template-columns: 1fr; }
+  }
 
   @media (max-width: 900px) {
     .charts-row, .tables-row, .bottom-row { grid-template-columns: 1fr; }
