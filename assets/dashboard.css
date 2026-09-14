@@ -1,0 +1,299 @@
+  :root {
+    --navy:    #0f2547;
+    --blue:    #1d4ed8;
+    --teox:    #2563eb;
+    --rrs:     #d97706;
+    --fine:    #059669;
+    --green:   #16a34a;
+    --red:     #dc2626;
+    --gray-50: #f8fafc;
+    --gray-100:#f1f5f9;
+    --gray-200:#e2e8f0;
+    --gray-600:#475569;
+    --gray-900:#0f172a;
+    --white:   #ffffff;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--gray-50); color: var(--gray-900); font-size: 14px; }
+
+  /* Header */
+  header {
+    background: var(--navy);
+    color: white;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  header h1 { font-size: 18px; font-weight: 700; letter-spacing: .3px; }
+  header h1 span { color: #93c5fd; }
+  .header-right { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  #updated-at { font-size: 11px; color: #94a3b8; }
+
+  /* Filters */
+  .filter-group { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .filter-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    color: #93c5fd;
+  }
+  .filter-select {
+    background: rgba(255,255,255,.12);
+    border: 1px solid rgba(255,255,255,.3);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  .filter-select option { background: var(--navy); color: white; }
+  #custom-range { display: none; align-items: center; gap: 6px; flex-wrap: wrap; }
+
+  /* Main layout */
+  main { padding: 20px 24px; max-width: 1400px; margin: 0 auto; }
+
+  /* KPI cards */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
+    margin-bottom: 22px;
+  }
+  .kpi {
+    background: white;
+    border-radius: 10px;
+    padding: 16px 18px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.08);
+    border-left: 4px solid var(--blue);
+  }
+  .kpi.teox  { border-color: var(--teox); }
+  .kpi.rrs   { border-color: var(--rrs); }
+  .kpi.green { border-color: var(--green); }
+  .kpi.red   { border-color: var(--red); }
+  .kpi label { font-size: 11px; text-transform: uppercase; letter-spacing: .5px; color: var(--gray-600); display: block; margin-bottom: 6px; }
+  .kpi .val  { font-size: 22px; font-weight: 700; }
+  .kpi .sub  { font-size: 11px; color: var(--gray-600); margin-top: 3px; }
+
+  /* Charts row */
+  .charts-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 16px;
+    margin-bottom: 22px;
+  }
+  .card {
+    background: white;
+    border-radius: 10px;
+    padding: 18px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.08);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .card table { min-width: max-content; }
+  .card h2 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gray-600);
+    text-transform: uppercase;
+    letter-spacing: .4px;
+    margin-bottom: 14px;
+  }
+
+  .chart-wrap { position: relative; height: 220px; }
+
+  /* Tables row */
+  .tables-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 22px;
+  }
+  .tables-row-3 { grid-template-columns: 1.5fr 1fr 1fr; }
+  .tables-row-3 table { font-size: 12px; }
+  .tables-row-3 th, .tables-row-3 td { padding: 6px 8px; }
+  .grouped-head thead th { text-align: center; }
+  .grouped-head thead tr:first-child th { border-bottom: none; }
+  .grouped-head thead tr:last-child th { padding-top: 2px; font-size: 10px; text-transform: none; color: var(--gray-600); }
+  .grouped-head th.group-start { border-left: 1px solid var(--gray-200); }
+  .grouped-head td.group-start { border-left: 1px solid var(--gray-200); }
+  .grouped-head tbody td:first-child { text-align: left; }
+  .cumpl-total-row td { background: var(--gray-200); font-weight: 700; }
+  .grouped-head .col-total { background: var(--gray-200); }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th {
+    background: var(--gray-100);
+    padding: 8px 10px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+    color: var(--gray-600);
+    border-bottom: 1px solid var(--gray-200);
+  }
+  td { padding: 8px 10px; border-bottom: 1px solid var(--gray-200); }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: var(--gray-50); }
+  .pill {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 600;
+  }
+  .pill.ok  { background: #dcfce7; color: #15803d; }
+  .pill.low { background: #fee2e2; color: #b91c1c; }
+  .pill.mid { background: #fef3c7; color: #92400e; }
+
+  /* Wide chart */
+  .full-row { margin-bottom: 22px; }
+  .full-row .chart-wrap { height: 200px; }
+
+  /* Daily + brand side by side */
+  .bottom-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 22px;
+  }
+  .bottom-row .chart-wrap { height: 180px; }
+
+  /* Loading state */
+  #loading { text-align: center; padding: 60px; color: var(--gray-600); font-size: 16px; }
+  #content { display: none; }
+  #content.loaded { display: block; }
+
+  /* PIN gate */
+  #pin-gate {
+    position: fixed;
+    inset: 0;
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  #pin-gate .pin-box {
+    background: white;
+    border-radius: 12px;
+    padding: 32px 36px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,.3);
+  }
+  #pin-gate h1 { font-size: 17px; margin-bottom: 4px; }
+  #pin-gate h1 span { color: var(--blue); }
+  #pin-gate p { font-size: 12px; color: var(--gray-600); margin-bottom: 18px; }
+  #pin-input {
+    width: 100%;
+    font-size: 26px;
+    letter-spacing: 12px;
+    text-align: center;
+    padding: 10px 0;
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    margin-bottom: 14px;
+  }
+  #pin-input:focus { outline: 2px solid var(--blue); border-color: var(--blue); }
+  #pin-submit {
+    width: 100%;
+    padding: 10px;
+    background: var(--blue);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  #pin-submit:hover { background: #1e40af; }
+  #pin-error { color: var(--red); font-size: 12px; margin-top: 10px; display: none; }
+
+  /* Unavailable-per-vendor placeholder */
+  .unavailable {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 120px;
+    color: #94a3b8;
+    font-size: 12px;
+    text-align: center;
+    padding: 0 16px;
+  }
+  /* Inside a chart card: cover the whole area so it doesn't matter what
+     Chart.js does to the canvas's own display style underneath it. */
+  .chart-wrap .unavailable {
+    position: absolute;
+    inset: 0;
+    background: var(--white);
+    z-index: 1;
+  }
+  .approx-note { font-size: 10px; color: #94a3b8; font-weight: 400; text-transform: none; letter-spacing: 0; margin-left: 6px; }
+  .pill.neutral { background: var(--gray-200); color: var(--gray-600); }
+
+  /* Cartera en riesgo */
+  .risk-toolbar { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+  .risk-chip {
+    font-family: inherit; font-size: 12px; font-weight: 600; color: var(--gray-600);
+    background: var(--gray-100); border: 1px solid var(--gray-200); border-radius: 999px;
+    padding: 5px 12px; cursor: pointer;
+  }
+  .risk-chip .n { opacity: .7; margin-left: 4px; }
+  .risk-chip.active { background: var(--navy); color: white; border-color: var(--navy); }
+  .risk-search {
+    margin-left: auto; font-family: inherit; font-size: 13px; padding: 6px 10px;
+    border: 1px solid var(--gray-200); border-radius: 6px; min-width: 200px;
+  }
+  .risk-table-scroll { max-height: 65vh; overflow: auto; border: 1px solid var(--gray-200); border-radius: 8px; }
+  #table-risk { margin: 0; }
+  #table-risk th { cursor: pointer; user-select: none; position: sticky; top: 0; z-index: 2; box-shadow: 0 1px 0 var(--gray-200); }
+  #table-risk th .arrow { opacity: .4; margin-left: 3px; }
+  #table-risk td.risk-name { max-width: 220px; white-space: normal; line-height: 1.3; }
+  #table-risk td.risk-name small { display: block; color: #94a3b8; font-weight: 400; }
+  #table-risk td.risk-brands { font-size: 12px; color: var(--gray-600); white-space: nowrap; }
+  #table-risk tr.risk-row-nuevo td { background: var(--gray-100); color: var(--gray-600); }
+  #table-risk tr.risk-row-nuevo:hover td { background: var(--gray-200); }
+  .risk-caption { font-size: 11px; color: #94a3b8; margin: -6px 0 12px; }
+  .risk-count { font-size: 11px; color: #94a3b8; margin-top: 8px; }
+
+  @media (max-width: 900px) {
+    .charts-row, .tables-row, .bottom-row { grid-template-columns: 1fr; }
+
+    /* Custom card order on mobile only. #content becomes a flex column
+       (only once .loaded -- stays display:none, same as desktop, until
+       data has actually rendered) and the row wrappers flatten via
+       display:contents so their cards can be freely reordered across what
+       were separate grid rows on desktop. */
+    #content.loaded { display: flex; flex-direction: column; }
+    .charts-row.full-row, .bottom-row, .tables-row-3 { display: contents; }
+    #card-monthly        { order: 1; }
+    #card-brands         { order: 2; }
+    #card-cumpl          { order: 3; }
+    #card-sku            { order: 4; }
+    #card-daily          { order: 5; }
+    #card-teox           { order: 6; }
+    #card-rrs            { order: 7; }
+    #card-topclientes    { order: 8; }
+    #cartera-riesgo-card { order: 9; }
+  }
+
+  @media (max-width: 480px) {
+    main { padding: 12px; }
+    .card { padding: 12px; }
+    table { font-size: 11px; }
+    th, td { padding: 5px 6px; }
+    th small { font-size: 8px; }
+    .tables-row-3 table { font-size: 10px; }
+    .tables-row-3 th, .tables-row-3 td { padding: 4px 5px; }
+    /* Cumplimiento has 7 columns -- tighten further so it fits the card
+       width on a phone without needing horizontal scroll. */
+    #table-cumpl { font-size: 9px; }
+    #table-cumpl th, #table-cumpl td { padding: 4px 3px; }
+    .pill { padding: 1px 6px; font-size: 10px; }
+    #table-clients th, #table-clients td { padding: 5px 6px; }
+  }

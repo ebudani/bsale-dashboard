@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AestheticsPro · Dashboard Ventas</title>
+<title>AestheticsPro · Mi Dashboard</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
 <link rel="stylesheet" href="assets/dashboard.css">
@@ -197,6 +197,21 @@
   </div><!-- #content -->
 </main>
 
+<script>
+  // Which vendor this link is pinned to -- ?v=monica etc. Add a new entry
+  // here (not a new HTML file) any time another vendor needs their own link.
+  const VENDOR_LINKS = {
+    monica: 'Monica Urrutia',
+    daisy: 'Daisy Ponce',
+    cindy: 'Cindy Monsalves',
+    francisca: 'Francisca Salinas',
+  };
+  const code = new URLSearchParams(location.search).get('v');
+  // Unknown/missing code still sets LOCKED_VENDOR (to a value no real vendor
+  // has) so dashboard.js's applyVendorLock() shows its "link inválido" error
+  // instead of silently falling through to the unlocked all-vendors view.
+  window.LOCKED_VENDOR = VENDOR_LINKS[code] || '__invalid__';
+</script>
 <script src="assets/dashboard.js"></script>
 </body>
 </html>
