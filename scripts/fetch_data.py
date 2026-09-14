@@ -633,6 +633,22 @@ def main():
         from_year, from_month = map(int, args.from_month.split("-"))
         targets = list(months_range(from_year, from_month, today.year, today.month))
         print(f"Backfill: {len(targets)} months ({args.from_month} -> {today.year}-{today.month:02d})")
+
+        # A --backfill fully regenerates the tracked window, so anything in
+        # client_activity/last_purchase_brands from before it is a stale
+        # leftover from an earlier, wider data pull -- left unpruned, it
+        # silently widens "ever bought" past what the dashboard itself ever
+        # displays (e.g. a client whose only sale was Dec 2024, invisible
+        # everywhere else, still counting as "has history" in Cartera en
+        # riesgo instead of "Sin historial").
+        cutoff = args.from_month
+        for cid in list(client_activity.keys()):
+            client_activity[cid] = {mk: v for mk, v in client_activity[cid].items() if mk >= cutoff}
+            if not client_activity[cid]:
+                del client_activity[cid]
+        for cid in list(last_purchase_brands.keys()):
+            if last_purchase_brands[cid].get("month", "") < cutoff:
+                del last_purchase_brands[cid]
     else:
         targets = [(today.year, today.month)]
         print(f"Daily mode: {today.year}-{today.month:02d}")

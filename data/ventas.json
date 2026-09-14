@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-14T01:09:31.286991Z",
+  "updated_at": "2026-09-14T15:38:36.681541Z",
   "users": {
     "7": "Cindy Monsalves",
     "9": "Daisy Ponce",
@@ -2746,7 +2746,7 @@
       "rut": "76999941-8"
     },
     "872": {
-      "name": "Paula Vergara",
+      "name": "Sociedad Médica Vergara & Cía. Ltda.",
       "rut": "76112204-5"
     },
     "873": {
@@ -4312,6 +4312,18 @@
     "1269": {
       "name": "Maira Osorio Osorio",
       "rut": "77525527-7"
+    },
+    "1270": {
+      "name": "Servicios Odontológicos Sanident Ltda",
+      "rut": "76981985-1"
+    },
+    "1271": {
+      "name": "Yenabeth Martinez",
+      "rut": "19107689-3"
+    },
+    "1272": {
+      "name": "Yenabeth Martinez Muñoz SPA",
+      "rut": "77939694-0"
     }
   },
   "months": [
@@ -4958,7 +4970,7 @@
             "teox_units": 5.0,
             "rrs_neto": 0,
             "rrs_units": 0,
-            "name": "Paula Vergara"
+            "name": "Sociedad Médica Vergara & Cía. Ltda."
           },
           {
             "id": "745",
@@ -8027,7 +8039,7 @@
             "teox_units": 5.0,
             "rrs_neto": 0,
             "rrs_units": 0,
-            "name": "Paula Vergara"
+            "name": "Sociedad Médica Vergara & Cía. Ltda."
           },
           {
             "id": "930",
@@ -16038,7 +16050,7 @@
             "teox_units": 5.0,
             "rrs_neto": 0,
             "rrs_units": 0,
-            "name": "Paula Vergara"
+            "name": "Sociedad Médica Vergara & Cía. Ltda."
           },
           {
             "id": "552",
@@ -23005,7 +23017,7 @@
             "teox_units": 5.0,
             "rrs_neto": 0,
             "rrs_units": 0,
-            "name": "Paula Vergara"
+            "name": "Sociedad Médica Vergara & Cía. Ltda."
           },
           {
             "id": "1032",
@@ -25512,11 +25524,11 @@
     {
       "year": 2026,
       "month": 9,
-      "count_facturas": 108,
+      "count_facturas": 117,
       "count_nc": 0,
-      "neto_facturas": 92850771,
+      "neto_facturas": 99640161,
       "neto_nc": 0,
-      "total_neto": 92850771,
+      "total_neto": 99640161,
       "by_day": [
         {
           "date": "2026-09-01",
@@ -25562,20 +25574,25 @@
           "date": "2026-09-10",
           "count": 25,
           "neto": 18463759
+        },
+        {
+          "date": "2026-09-14",
+          "count": 9,
+          "neto": 6789390
         }
       ],
       "by_vendor": {
         "Daisy Ponce": {
-          "count": 29,
-          "neto": 22313383
+          "count": 34,
+          "neto": 26083410
         },
         "Cindy Monsalves": {
-          "count": 46,
-          "neto": 34810889
+          "count": 48,
+          "neto": 36015600
         },
         "Monica Urrutia": {
-          "count": 32,
-          "neto": 35231827
+          "count": 34,
+          "neto": 37046479
         },
         "Sin asignar": {
           "count": 1,
@@ -25628,6 +25645,11 @@
             "date": "2026-09-10",
             "count": 8,
             "neto": 5846421
+          },
+          {
+            "date": "2026-09-14",
+            "count": 5,
+            "neto": 3770027
           }
         ],
         "Cindy Monsalves": [
@@ -25670,6 +25692,11 @@
             "date": "2026-09-10",
             "count": 10,
             "neto": 8178734
+          },
+          {
+            "date": "2026-09-14",
+            "count": 2,
+            "neto": 1204711
           }
         ],
         "Monica Urrutia": [
@@ -25707,6 +25734,11 @@
             "date": "2026-09-10",
             "count": 6,
             "neto": 3943932
+          },
+          {
+            "date": "2026-09-14",
+            "count": 2,
+            "neto": 1814652
           }
         ],
         "Sin asignar": [
@@ -25718,23 +25750,23 @@
         ]
       },
       "by_brand": {
-        "Teoxane": 75743371,
-        "RRS HA Long Lasting": 17107400,
+        "Teoxane": 79805196,
+        "RRS HA Long Lasting": 19834965,
         "FINE": 0
       },
       "by_vendor_brand": {
         "Daisy Ponce": {
-          "Teoxane": 16370452,
-          "RRS HA Long Lasting": 5942931,
+          "Teoxane": 17412914,
+          "RRS HA Long Lasting": 8670496,
           "FINE": 0
         },
         "Cindy Monsalves": {
-          "Teoxane": 29575611,
+          "Teoxane": 30780322,
           "RRS HA Long Lasting": 5235278,
           "FINE": 0
         },
         "Monica Urrutia": {
-          "Teoxane": 29797308,
+          "Teoxane": 31611960,
           "RRS HA Long Lasting": 5434519,
           "FINE": 0
         },
@@ -25745,55 +25777,55 @@
         }
       },
       "by_sku": {
-        "Jeringa monodosis x 3mL (sin aguja)": 17107400,
+        "Jeringa monodosis x 3mL (sin aguja)": 19834965,
         "RHA KISS (2X0.7ml)": 756600,
-        "PureSense Ultra Deep (2X1.2ml)": 33578384,
-        "TEOSYAL RHA 4 (2X1.2ml)": 8453848,
-        "TEOSYAL RHA 3 (2X1ml)": 1794478,
+        "PureSense Ultra Deep (2X1.2ml)": 34404279,
+        "TEOSYAL RHA 4 (2X1.2ml)": 9485320,
+        "TEOSYAL RHA 3 (2X1ml)": 2544370,
         "TEOSYAL RHA 1 (2X1ml)": 3785600,
-        "TEOSYAL RHA 2 (2X1ml)": 6812174,
+        "TEOSYAL RHA 2 (2X1ml)": 6977940,
         "Redensity 2 (2X1ml)": 5084663,
-        "RHA 3 (2X1.2ml)": 2621600,
-        "Redensity 1 (1x3ml)": 6730200,
+        "RHA 3 (2X1.2ml)": 2987000,
+        "Redensity 1 (1x3ml)": 7345800,
         "Redensity 1 (2X1ml)": 661024,
-        "RHA Kiss Volume (2X1ml)": 5464800
+        "RHA Kiss Volume (2X1ml)": 5772600
       },
       "by_vendor_sku": {
         "Daisy Ponce": {
-          "Jeringa monodosis x 3mL (sin aguja)": 5942931,
-          "PureSense Ultra Deep (2X1.2ml)": 8133329,
-          "TEOSYAL RHA 4 (2X1.2ml)": 1571336,
+          "Jeringa monodosis x 3mL (sin aguja)": 8670496,
+          "PureSense Ultra Deep (2X1.2ml)": 8285679,
+          "TEOSYAL RHA 4 (2X1.2ml)": 1743248,
           "TEOSYAL RHA 1 (2X1ml)": 351520,
           "TEOSYAL RHA 2 (2X1ml)": 2286511,
           "Redensity 2 (2X1ml)": 1540156,
           "RHA 3 (2X1.2ml)": 495900,
-          "Redensity 1 (1x3ml)": 1125000,
-          "RHA Kiss Volume (2X1ml)": 866700
+          "Redensity 1 (1x3ml)": 1535400,
+          "RHA Kiss Volume (2X1ml)": 1174500
         },
         "Cindy Monsalves": {
           "Jeringa monodosis x 3mL (sin aguja)": 5235278,
           "RHA KISS (2X0.7ml)": 429000,
-          "PureSense Ultra Deep (2X1.2ml)": 12209351,
+          "PureSense Ultra Deep (2X1.2ml)": 12882896,
           "TEOSYAL RHA 3 (2X1ml)": 744629,
           "TEOSYAL RHA 4 (2X1.2ml)": 2756624,
-          "RHA 3 (2X1.2ml)": 2125700,
+          "RHA 3 (2X1.2ml)": 2491100,
           "Redensity 2 (2X1ml)": 1218172,
           "Redensity 1 (1x3ml)": 3846600,
           "Redensity 1 (2X1ml)": 329056,
           "RHA Kiss Volume (2X1ml)": 2616300,
           "TEOSYAL RHA 1 (2X1ml)": 1655680,
-          "TEOSYAL RHA 2 (2X1ml)": 1644499
+          "TEOSYAL RHA 2 (2X1ml)": 1810265
         },
         "Monica Urrutia": {
-          "TEOSYAL RHA 4 (2X1.2ml)": 4125888,
+          "TEOSYAL RHA 4 (2X1.2ml)": 4985448,
           "PureSense Ultra Deep (2X1.2ml)": 13235704,
-          "TEOSYAL RHA 3 (2X1ml)": 1049849,
+          "TEOSYAL RHA 3 (2X1ml)": 1799741,
           "Redensity 2 (2X1ml)": 2326335,
           "TEOSYAL RHA 2 (2X1ml)": 2881164,
           "RHA Kiss Volume (2X1ml)": 1981800,
           "Jeringa monodosis x 3mL (sin aguja)": 5434519,
           "TEOSYAL RHA 1 (2X1ml)": 1778400,
-          "Redensity 1 (1x3ml)": 1758600,
+          "Redensity 1 (1x3ml)": 1963800,
           "Redensity 1 (2X1ml)": 331968,
           "RHA KISS (2X0.7ml)": 327600
         },
@@ -25893,6 +25925,16 @@
           "name": "Luciana Sebastianelli Luciana Sebastianelli"
         },
         {
+          "id": "794",
+          "count": 1,
+          "neto": 1978687,
+          "teox_neto": 0,
+          "teox_units": 0,
+          "rrs_neto": 1978687,
+          "rrs_units": 20.0,
+          "name": "IGNACIO JARA"
+        },
+        {
           "id": "705",
           "count": 1,
           "neto": 1886207,
@@ -25941,16 +25983,6 @@
           "rrs_neto": 1071789,
           "rrs_units": 10.0,
           "name": "NATALY ROJO ROMERO"
-        },
-        {
-          "id": "963",
-          "count": 2,
-          "neto": 1556875,
-          "teox_neto": 1556875,
-          "teox_units": 15.0,
-          "rrs_neto": 0,
-          "rrs_units": 0,
-          "name": "Valentina Suarez"
         }
       ],
       "top_clients_by_vendor": {
@@ -25964,6 +25996,16 @@
             "rrs_neto": 371004,
             "rrs_units": 3.0,
             "name": "Sofia Ciuffardi"
+          },
+          {
+            "id": "794",
+            "count": 1,
+            "neto": 1978687,
+            "teox_neto": 0,
+            "teox_units": 0,
+            "rrs_neto": 1978687,
+            "rrs_units": 20.0,
+            "name": "IGNACIO JARA"
           },
           {
             "id": "705",
@@ -26006,6 +26048,16 @@
             "name": "Pilar Rojo"
           },
           {
+            "id": "568",
+            "count": 2,
+            "neto": 1297143,
+            "teox_neto": 307800,
+            "teox_units": 2.0,
+            "rrs_neto": 989343,
+            "rrs_units": 10.0,
+            "name": "CONSTANZA ZUÑIGA"
+          },
+          {
             "id": "1267",
             "count": 1,
             "neto": 1209312,
@@ -26046,16 +26098,6 @@
             "name": "FABIOLA CARRASCO"
           },
           {
-            "id": "568",
-            "count": 1,
-            "neto": 989343,
-            "teox_neto": 0,
-            "teox_units": 0,
-            "rrs_neto": 989343,
-            "rrs_units": 10.0,
-            "name": "CONSTANZA ZUÑIGA"
-          },
-          {
             "id": "1182",
             "count": 1,
             "neto": 822798,
@@ -26076,6 +26118,16 @@
             "name": "Antonio Poblete"
           },
           {
+            "id": "1268",
+            "count": 1,
+            "neto": 734662,
+            "teox_neto": 734662,
+            "teox_units": 8.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "Ximena Alvarez"
+          },
+          {
             "id": "698",
             "count": 1,
             "neto": 717563,
@@ -26084,26 +26136,6 @@
             "rrs_neto": 206113,
             "rrs_units": 2.0,
             "name": "Katherine Scalia"
-          },
-          {
-            "id": "1251",
-            "count": 1,
-            "neto": 641676,
-            "teox_neto": 147004,
-            "teox_units": 1.0,
-            "rrs_neto": 494672,
-            "rrs_units": 5.0,
-            "name": "Camila Forni"
-          },
-          {
-            "id": "678",
-            "count": 1,
-            "neto": 627182,
-            "teox_neto": 627182,
-            "teox_units": 5.0,
-            "rrs_neto": 0,
-            "rrs_units": 0,
-            "name": "CAMILA PARRA"
           }
         ],
         "Cindy Monsalves": [
@@ -26146,6 +26178,16 @@
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "Constanza Rodriguez"
+          },
+          {
+            "id": "1136",
+            "count": 2,
+            "neto": 1575997,
+            "teox_neto": 1081325,
+            "teox_units": 10.0,
+            "rrs_neto": 494672,
+            "rrs_units": 5.0,
+            "name": "Maria francisca Salvo"
           },
           {
             "id": "1242",
@@ -26226,16 +26268,6 @@
             "rrs_neto": 989344,
             "rrs_units": 10.0,
             "name": "GIOVANNA CICHERO"
-          },
-          {
-            "id": "1136",
-            "count": 1,
-            "neto": 905072,
-            "teox_neto": 410400,
-            "teox_units": 5.0,
-            "rrs_neto": 494672,
-            "rrs_units": 5.0,
-            "name": "Maria francisca Salvo"
           },
           {
             "id": "1246",
@@ -26360,6 +26392,16 @@
             "name": "Robert Mattatall"
           },
           {
+            "id": "651",
+            "count": 1,
+            "neto": 1287562,
+            "teox_neto": 1287562,
+            "teox_units": 10.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "Carla Nave"
+          },
+          {
             "id": "1035",
             "count": 1,
             "neto": 1218797,
@@ -26398,16 +26440,6 @@
             "rrs_neto": 1099270,
             "rrs_units": 10.0,
             "name": "Vital Stetic Vital Stetic"
-          },
-          {
-            "id": "862",
-            "count": 1,
-            "neto": 1099270,
-            "teox_neto": 0,
-            "teox_units": 0,
-            "rrs_neto": 1099270,
-            "rrs_units": 10.0,
-            "name": "Barbara Gacitua"
           }
         ],
         "Sin asignar": [
@@ -26425,29 +26457,29 @@
       },
       "brand_productivity": {
         "Teoxane": {
-          "clients": 82,
-          "units": 639.0
+          "clients": 87,
+          "units": 673.0
         },
         "RRS HA Long Lasting": {
-          "clients": 32,
-          "units": 167.0
+          "clients": 35,
+          "units": 193.0
         }
       },
       "brand_productivity_by_vendor": {
         "Daisy Ponce": {
           "Teoxane": {
-            "clients": 22,
-            "units": 136.0
+            "clients": 24,
+            "units": 146.0
           },
           "RRS HA Long Lasting": {
-            "clients": 11,
-            "units": 57.0
+            "clients": 14,
+            "units": 83.0
           }
         },
         "Cindy Monsalves": {
           "Teoxane": {
-            "clients": 36,
-            "units": 252.0
+            "clients": 37,
+            "units": 261.0
           },
           "RRS HA Long Lasting": {
             "clients": 10,
@@ -26456,8 +26488,8 @@
         },
         "Monica Urrutia": {
           "Teoxane": {
-            "clients": 24,
-            "units": 251.0
+            "clients": 26,
+            "units": 266.0
           },
           "RRS HA Long Lasting": {
             "clients": 10,
@@ -26482,13 +26514,11 @@
       "2025-07": 1000000
     },
     "785": {
-      "2024-12": 98784,
       "2025-08": 0,
       "2025-09": 165155,
       "2025-12": 165155
     },
     "429": {
-      "2024-12": 2060214,
       "2026-04": 0,
       "2025-02": 1407672
     },
@@ -26505,7 +26535,6 @@
     },
     "570": {
       "2025-01": -1407672,
-      "2024-12": 1407672,
       "2025-02": 648270,
       "2025-03": 1506214,
       "2025-04": 1506214,
@@ -26563,7 +26592,6 @@
     },
     "584": {
       "2025-03": 1004142,
-      "2024-12": 987840,
       "2025-06": 1056992,
       "2025-12": 1704632,
       "2026-04": 1099270
@@ -26641,7 +26669,6 @@
     },
     "847": {
       "2025-05": 972806,
-      "2024-12": 98784,
       "2026-09": 624218
     },
     "921": {
@@ -26672,7 +26699,6 @@
     "569": {
       "2025-06": 2527380,
       "2025-10": 2115840,
-      "2024-12": 926100,
       "2025-03": 1528133,
       "2025-07": 319200,
       "2025-09": 453720,
@@ -26897,7 +26923,6 @@
     },
     "517": {
       "2026-01": 1864591,
-      "2024-12": 3582519,
       "2025-01": 1407672,
       "2025-03": 1506214,
       "2025-05": 2540146,
@@ -27052,7 +27077,6 @@
       "2026-02": 2065480
     },
     "824": {
-      "2024-12": 672966,
       "2025-01": 478485,
       "2025-02": 324135,
       "2025-05": 990930,
@@ -27067,15 +27091,12 @@
       "2026-07": 1154234
     },
     "479": {
-      "2024-12": 588345,
       "2025-11": 975240
     },
     "443": {
-      "2024-12": 159030,
       "2025-01": 98304
     },
     "458": {
-      "2024-12": 196608,
       "2025-06": 642600,
       "2025-08": 807660,
       "2026-03": 579804,
@@ -27085,7 +27106,6 @@
       "2026-09": 630511
     },
     "600": {
-      "2024-12": 1407672,
       "2025-07": 645750,
       "2025-08": 1162800,
       "2025-09": 3062390,
@@ -27099,11 +27119,7 @@
       "2026-07": 2755221,
       "2026-09": 1209312
     },
-    "566": {
-      "2024-12": 153737
-    },
     "830": {
-      "2024-12": 518616,
       "2025-01": 324135,
       "2025-02": 648270,
       "2025-03": 554921,
@@ -27117,7 +27133,6 @@
       "2026-03": 554921
     },
     "562": {
-      "2024-12": 299791,
       "2025-10": 1247160,
       "2025-11": 1247160,
       "2026-03": 1631981,
@@ -27125,7 +27140,6 @@
       "2026-05": 1388067
     },
     "793": {
-      "2024-12": 324135,
       "2025-01": 431179,
       "2025-05": 554921,
       "2025-07": 554921,
@@ -27134,7 +27148,6 @@
       "2026-07": 577117
     },
     "774": {
-      "2024-12": 324135,
       "2025-01": 518616,
       "2025-04": 554921,
       "2025-06": 554921,
@@ -27147,26 +27160,20 @@
       "2026-09": 577117
     },
     "568": {
-      "2024-12": 987840,
       "2025-07": 554921,
       "2026-02": 1056992,
       "2026-07": 577117,
       "2026-08": 577117,
-      "2026-09": 989343
+      "2026-09": 1297143
     },
     "480": {
-      "2024-12": 172872,
       "2025-02": 864360,
       "2025-04": 1017940,
       "2025-07": 647780,
       "2025-08": 1110480,
       "2025-12": 647780
     },
-    "763": {
-      "2024-12": 681215
-    },
     "745": {
-      "2024-12": 839664,
       "2025-01": 2938824,
       "2025-02": 419832,
       "2025-04": 898444,
@@ -27175,39 +27182,13 @@
       "2025-10": 898444
     },
     "846": {
-      "2024-12": 518616,
       "2025-04": 554921,
       "2025-06": 554921,
       "2025-10": 554921,
       "2025-12": 1056992,
       "2026-01": 554921
     },
-    "748": {
-      "2024-12": 296352
-    },
-    "848": {
-      "2024-12": 98784
-    },
-    "807": {
-      "2024-12": 98784
-    },
-    "849": {
-      "2024-12": 93844
-    },
-    "850": {
-      "2024-12": 187688
-    },
-    "851": {
-      "2024-12": 154350
-    },
-    "505": {
-      "2024-12": 288177
-    },
-    "852": {
-      "2024-12": 324135
-    },
     "651": {
-      "2024-12": 1407672,
       "2025-02": 1407672,
       "2025-03": 3367664,
       "2025-04": 1839620,
@@ -27224,23 +27205,13 @@
       "2026-05": 599913,
       "2026-06": 4555075,
       "2026-07": 1685924,
-      "2026-08": 4261048
+      "2026-08": 4261048,
+      "2026-09": 1287562
     },
     "502": {
-      "2024-12": 1064748,
       "2025-01": 518616
     },
-    "853": {
-      "2024-12": 231525
-    },
-    "854": {
-      "2024-12": 30748
-    },
-    "855": {
-      "2024-12": 518616
-    },
     "773": {
-      "2024-12": 1876896,
       "2025-02": 1876896,
       "2025-04": 3237038,
       "2025-09": 1506214,
@@ -27248,18 +27219,8 @@
       "2026-03": 3957374,
       "2026-07": 1566460
     },
-    "842": {
-      "2024-12": 745275
-    },
-    "856": {
-      "2024-12": 641414
-    },
     "857": {
-      "2024-12": 174762,
       "2025-05": 174762
-    },
-    "478": {
-      "2024-12": 4239722
     },
     "858": {
       "2025-01": 61495,
@@ -27443,7 +27404,8 @@
       "2025-12": 554921,
       "2026-06": 4177227,
       "2026-07": 3957374,
-      "2026-08": 1978687
+      "2026-08": 1978687,
+      "2026-09": 1978687
     },
     "467": {
       "2025-02": 1407672,
@@ -27519,7 +27481,8 @@
       "2025-07": 640080,
       "2025-08": 666540,
       "2025-12": 689850,
-      "2026-06": 717444
+      "2026-06": 717444,
+      "2026-09": 533786
     },
     "873": {
       "2025-02": 972720,
@@ -28608,7 +28571,8 @@
     },
     "1064": {
       "2025-11": 1109842,
-      "2026-03": 577117
+      "2026-03": 577117,
+      "2026-09": 577117
     },
     "1065": {
       "2025-11": 1334680,
@@ -28863,7 +28827,7 @@
       "2026-06": 1031517,
       "2026-07": 1799147,
       "2026-08": 2313781,
-      "2026-09": 905072
+      "2026-09": 1575997
     },
     "1139": {
       "2026-04": 1304326,
@@ -28990,7 +28954,8 @@
     },
     "1176": {
       "2026-06": 171761,
-      "2026-08": 171761
+      "2026-08": 171761,
+      "2026-09": 171761
     },
     "1180": {
       "2026-06": 670925
@@ -29231,6 +29196,12 @@
     },
     "1266": {
       "2026-09": 102600
+    },
+    "1268": {
+      "2026-09": 734662
+    },
+    "1270": {
+      "2026-09": 527090
     }
   },
   "client_vendor": {
@@ -29771,7 +29742,10 @@
     "1266": "Daisy Ponce",
     "1267": "Daisy Ponce",
     "1268": "Daisy Ponce",
-    "1269": "Monica Urrutia"
+    "1269": "Monica Urrutia",
+    "1270": "Monica Urrutia",
+    "1271": "Monica Urrutia",
+    "1272": "Monica Urrutia"
   },
   "last_purchase_brands": {
     "869": {
@@ -30094,11 +30068,6 @@
       "Teoxane": 2121039,
       "RRS HA Long Lasting": 989343
     },
-    "566": {
-      "month": "2024-12",
-      "Teoxane": 0,
-      "RRS HA Long Lasting": 0
-    },
     "1002": {
       "month": "2026-06",
       "Teoxane": 0,
@@ -30126,7 +30095,7 @@
     },
     "568": {
       "month": "2026-09",
-      "Teoxane": 0,
+      "Teoxane": 307800,
       "RRS HA Long Lasting": 989343
     },
     "995": {
@@ -30139,11 +30108,6 @@
       "Teoxane": 0,
       "RRS HA Long Lasting": 647780
     },
-    "763": {
-      "month": "2024-12",
-      "Teoxane": 0,
-      "RRS HA Long Lasting": 0
-    },
     "908": {
       "month": "2026-08",
       "Teoxane": 2752661,
@@ -30154,85 +30118,20 @@
       "Teoxane": 0,
       "RRS HA Long Lasting": 554921
     },
-    "748": {
-      "month": "2024-12",
-      "Teoxane": 0,
-      "RRS HA Long Lasting": 296352
-    },
-    "848": {
-      "month": "2024-12",
-      "Teoxane": 0,
-      "RRS HA Long Lasting": 98784
-    },
-    "807": {
-      "month": "2024-12",
-      "Teoxane": 0,
-      "RRS HA Long Lasting": 98784
-    },
-    "849": {
-      "month": "2024-12",
-      "Teoxane": 0,
-      "RRS HA Long Lasting": 93844
-    },
-    "850": {
-      "month": "2024-12",
-      "Teoxane": 0,
-      "RRS HA Long Lasting": 187688
-    },
-    "851": {
-      "month": "2024-12",
-      "Teoxane": 0,
-      "RRS HA Long Lasting": 154350
-    },
     "745": {
       "month": "2025-10",
       "Teoxane": 0,
       "RRS HA Long Lasting": 898444
-    },
-    "852": {
-      "month": "2024-12",
-      "Teoxane": 0,
-      "RRS HA Long Lasting": 324135
     },
     "502": {
       "month": "2025-01",
       "Teoxane": 0,
       "RRS HA Long Lasting": 518616
     },
-    "853": {
-      "month": "2024-12",
-      "Teoxane": 0,
-      "RRS HA Long Lasting": 231525
-    },
     "773": {
       "month": "2026-07",
       "Teoxane": 0,
       "RRS HA Long Lasting": 1566460
-    },
-    "505": {
-      "month": "2024-12",
-      "Teoxane": 0,
-      "RRS HA Long Lasting": 0
-    },
-    "854": {
-      "month": "2024-12",
-      "Teoxane": 0,
-      "RRS HA Long Lasting": 0
-    },
-    "855": {
-      "month": "2024-12",
-      "Teoxane": 0,
-      "RRS HA Long Lasting": 518616
-    },
-    "842": {
-      "month": "2024-12",
-      "Teoxane": 0,
-      "RRS HA Long Lasting": 0
-    },
-    "856": {
-      "month": "2024-12",
-      "Teoxane": 0,
-      "RRS HA Long Lasting": 0
     },
     "857": {
       "month": "2025-05",
@@ -30240,14 +30139,9 @@
       "RRS HA Long Lasting": 0
     },
     "651": {
-      "month": "2026-08",
-      "Teoxane": 4261048,
+      "month": "2026-09",
+      "Teoxane": 1287562,
       "RRS HA Long Lasting": 0
-    },
-    "478": {
-      "month": "2024-12",
-      "Teoxane": 0,
-      "RRS HA Long Lasting": 4108650
     },
     "858": {
       "month": "2025-09",
@@ -30390,7 +30284,7 @@
       "RRS HA Long Lasting": 231525
     },
     "794": {
-      "month": "2026-08",
+      "month": "2026-09",
       "Teoxane": 0,
       "RRS HA Long Lasting": 1978687
     },
@@ -30435,8 +30329,8 @@
       "RRS HA Long Lasting": 989343
     },
     "872": {
-      "month": "2026-06",
-      "Teoxane": 717444,
+      "month": "2026-09",
+      "Teoxane": 533786,
       "RRS HA Long Lasting": 0
     },
     "874": {
@@ -31505,7 +31399,7 @@
       "RRS HA Long Lasting": 0
     },
     "1064": {
-      "month": "2026-03",
+      "month": "2026-09",
       "Teoxane": 0,
       "RRS HA Long Lasting": 577117
     },
@@ -31846,7 +31740,7 @@
     },
     "1136": {
       "month": "2026-09",
-      "Teoxane": 410400,
+      "Teoxane": 1081325,
       "RRS HA Long Lasting": 494672
     },
     "1141": {
@@ -32015,7 +31909,7 @@
       "RRS HA Long Lasting": 577117
     },
     "1176": {
-      "month": "2026-08",
+      "month": "2026-09",
       "Teoxane": 0,
       "RRS HA Long Lasting": 171761
     },
@@ -32407,6 +32301,16 @@
     "1266": {
       "month": "2026-09",
       "Teoxane": 102600,
+      "RRS HA Long Lasting": 0
+    },
+    "1268": {
+      "month": "2026-09",
+      "Teoxane": 734662,
+      "RRS HA Long Lasting": 0
+    },
+    "1270": {
+      "month": "2026-09",
+      "Teoxane": 527090,
       "RRS HA Long Lasting": 0
     }
   }
