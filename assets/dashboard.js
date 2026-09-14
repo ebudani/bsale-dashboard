@@ -218,9 +218,12 @@ function selectVendor(v) {
 }
 
 // ── Periodo selector ─────────────────────────────────────────────────────────
+// vendor.html has no Período filter at all (SIMPLE_MODE is always "this
+// month"), so these elements don't exist there -- bail quietly.
 function buildCustomRangeSelectors() {
   const from = document.getElementById('custom-from');
   const to   = document.getElementById('custom-to');
+  if (!from || !to) return;
   from.innerHTML = '';
   to.innerHTML   = '';
   allMonths.forEach((m, i) => {
@@ -522,10 +525,9 @@ function sumVendorTargets(t, brand) {
 }
 
 // ── Personal vendor page (vendor.html) ──────────────────────────────────────
-// Deliberately not the full dashboard: just the 5 KPIs (period-filtered, like
-// index.html) plus a Cumplimiento table fixed to the current and previous
-// month -- independent of the Período selector, same idea as Cartera en
-// riesgo on the main dashboard.
+// A fixed subset of the main dashboard's own render functions/data (no
+// duplicated logic), always for "this month" -- there's no Período selector
+// on this page, periodMode just stays at its default.
 function renderVendorSimple() {
   const months = monthsForPeriod();
   const label  = periodLabel(months);
@@ -535,6 +537,11 @@ function renderVendorSimple() {
 
   renderKPIs(view, t, label);
   renderCumplDetail();
+  renderMonthlyChart();
+  renderDailyChart(view, 'Mes actual', false);
+  renderProductivityTable('tbody-prod-teox', 'Teoxane');
+  renderProductivityTable('tbody-prod-rrs', 'RRS HA Long Lasting');
+  renderTopClients(view, label, false);
 }
 
 function renderCumplDetail() {

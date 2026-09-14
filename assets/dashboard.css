@@ -295,5 +295,15 @@
     #table-cumpl, #table-cumpl-detail { font-size: 9px; }
     #table-cumpl th, #table-cumpl td, #table-cumpl-detail th, #table-cumpl-detail td { padding: 4px 3px; }
     .pill { padding: 1px 6px; font-size: 10px; }
-    #table-clients th, #table-clients td { padding: 5px 6px; }
+    /* Top clientes also has 7 columns, incl. two-line brand cells -- same
+       treatment as Cumplimiento so it fits without horizontal scroll.
+       overflow-wrap lets single long header words (FACTURAS, TOTAL) break
+       onto a 2nd line instead of forcing their column wide. */
+    /* .card table sets min-width:max-content globally (so wide tables
+       scroll instead of squeezing) -- that's exactly what stops this one
+       from wrapping, so undo it here. */
+    #table-clients { font-size: 9px; min-width: 0; }
+    #table-clients th, #table-clients td { padding: 4px 3px; }
+    #table-clients th { overflow-wrap: break-word; }
+    #table-clients td[style*="max-width"] { max-width: 60px !important; }
   }

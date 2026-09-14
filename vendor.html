@@ -29,23 +29,6 @@
       <span class="filter-label">Vendedor</span>
       <select id="vendor-select" class="filter-select" onchange="selectVendor(this.value)"></select>
     </div>
-    <div class="filter-group">
-      <span class="filter-label">Periodo</span>
-      <select id="period-select" class="filter-select" onchange="onPeriodChange(this.value)">
-        <option value="this_month">Este mes</option>
-        <option value="prev_month">Mes anterior</option>
-        <option value="this_year">Año actual</option>
-        <option value="prev_year">Año anterior</option>
-        <option value="all_time">Todo</option>
-        <option value="custom">Personalizar</option>
-      </select>
-      <div id="custom-range">
-        <span class="filter-label">Desde</span>
-        <select id="custom-from" class="filter-select" onchange="onCustomRangeChange()"></select>
-        <span class="filter-label">Hasta</span>
-        <select id="custom-to" class="filter-select" onchange="onCustomRangeChange()"></select>
-      </div>
-    </div>
   </div>
 </header>
 
@@ -103,6 +86,60 @@
           </tr>
         </thead>
         <tbody id="tbody-cumpl-detail"></tbody>
+      </table>
+    </div>
+
+    <!-- Todas las tarjetas siguientes van una debajo de otra (una sola
+         columna) a propósito: así se ven bien en el celular sin necesitar
+         ningún truco de reordenamiento como el dashboard principal. -->
+
+    <div class="card">
+      <h2>Ventas Netas Mensuales</h2>
+      <div class="chart-wrap"><canvas id="chart-monthly"></canvas></div>
+    </div>
+
+    <div class="card">
+      <h2 id="chart-daily-title">Curva Diaria — </h2>
+      <div class="chart-wrap">
+        <canvas id="chart-daily"></canvas>
+        <div id="chart-daily-unavailable" class="unavailable" style="display:none">No disponible por vendedor</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Teoxane — Clientes, unidades y productividad por mes</h2>
+      <table id="table-prod-teox">
+        <thead>
+          <tr>
+            <th>Período</th><th>N° Clientes</th><th>N° Unidades</th><th>Productividad<br><small>(unid./cliente)</small></th>
+          </tr>
+        </thead>
+        <tbody id="tbody-prod-teox"></tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>RRS HA Long Lasting — Clientes, unidades y productividad por mes</h2>
+      <table id="table-prod-rrs">
+        <thead>
+          <tr>
+            <th>Período</th><th>N° Clientes</th><th>N° Unidades</th><th>Productividad<br><small>(unid./cliente)</small></th>
+          </tr>
+        </thead>
+        <tbody id="tbody-prod-rrs"></tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2 id="table-clients-title">Top 10 Clientes — </h2>
+      <div id="clients-unavailable" class="unavailable" style="display:none">No disponible por vendedor</div>
+      <table id="table-clients">
+        <thead>
+          <tr>
+            <th>#</th><th>Cliente</th><th>Facturas</th><th>$ Neto Total</th><th>Teoxane</th><th>RRS HA LL</th><th>%</th>
+          </tr>
+        </thead>
+        <tbody id="tbody-clients"></tbody>
       </table>
     </div>
 
