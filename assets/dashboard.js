@@ -542,6 +542,7 @@ function renderVendorSimple() {
   renderProductivityTable('tbody-prod-teox', 'Teoxane');
   renderProductivityTable('tbody-prod-rrs', 'RRS HA Long Lasting');
   renderTopClients(view, label, false);
+  renderCarteraRiesgo();
 }
 
 function renderCumplDetail() {

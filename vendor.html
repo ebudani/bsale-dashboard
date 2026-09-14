@@ -143,6 +143,30 @@
       </table>
     </div>
 
+    <!-- Independiente del filtro de Periodo: compara siempre mes en curso vs mes anterior -->
+    <div class="card" id="cartera-riesgo-card">
+      <h2 id="table-risk-title">Cartera en riesgo — </h2>
+      <div class="risk-caption">Independiente del filtro de Periodo: compara siempre el mes en curso y el mes anterior a hoy.</div>
+      <div class="risk-toolbar" id="risk-toolbar"></div>
+      <div class="risk-table-scroll">
+        <table id="table-risk">
+          <thead>
+            <tr>
+              <th data-key="name">Cuenta <span class="arrow"></span></th>
+              <th data-key="vendor">Vendedor <span class="arrow"></span></th>
+              <th data-key="status">Estado <span class="arrow"></span></th>
+              <th data-key="current">Mes en curso <span class="arrow"></span></th>
+              <th data-key="prev">Mes anterior <span class="arrow"></span></th>
+              <th data-key="lastMonth">Última compra <span class="arrow"></span></th>
+              <th data-key="lastAmount">Monto por producto (esa compra) <span class="arrow"></span></th>
+            </tr>
+          </thead>
+          <tbody id="tbody-risk"></tbody>
+        </table>
+      </div>
+      <div class="risk-count" id="risk-count"></div>
+    </div>
+
   </div><!-- #content -->
 </main>
 
