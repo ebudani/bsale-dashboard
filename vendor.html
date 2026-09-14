@@ -97,7 +97,15 @@
       </div>
 
       <div class="card">
-        <h2 id="table-clients-title">Top 10 Clientes — </h2>
+        <div class="card-header-row">
+          <h2 id="table-clients-title">Top 10 Clientes — </h2>
+          <select id="top-clients-period-select" class="card-filter-select" onchange="onTopClientsPeriodChange(this.value)">
+            <option value="ytd">YTD</option>
+            <option value="this_month" selected>Mes actual</option>
+            <option value="prev_month">Mes anterior</option>
+            <option value="last_3">Últimos 3 meses</option>
+          </select>
+        </div>
         <div id="clients-unavailable" class="unavailable" style="display:none">No disponible por vendedor</div>
         <table id="table-clients">
           <thead>

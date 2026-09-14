@@ -105,6 +105,27 @@
 
   .chart-wrap { position: relative; height: 220px; }
 
+  /* Per-card period filter (vendor.html: Top 10 Clientes) */
+  .card-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .card-header-row h2 { margin-bottom: 0; }
+  .card-filter-select {
+    font-family: inherit;
+    font-size: 12px;
+    padding: 5px 10px;
+    border: 1px solid var(--gray-200);
+    border-radius: 6px;
+    background: var(--gray-50);
+    color: var(--gray-900);
+    cursor: pointer;
+  }
+
   /* Tables row */
   .tables-row {
     display: grid;
@@ -130,6 +151,7 @@
   #table-cumpl-detail { font-size: 12px; min-width: 0; }
   #table-cumpl-detail th, #table-cumpl-detail td { padding: 6px 4px; }
   #table-cumpl-detail th { overflow-wrap: break-word; }
+  #table-cumpl-detail td.col-total { text-align: center; }
   /* Scoped to .tables-row so index.html's own full-width Top Clientes card
      (not inside any .tables-row) keeps its normal, more spacious sizing. */
   .tables-row #table-clients { font-size: 10px; min-width: 0; }

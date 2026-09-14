@@ -537,8 +537,44 @@ function renderVendorSimple() {
 
   renderKPIs(view, t, label);
   renderCumplDetail();
-  renderTopClients(view, label, false);
+  renderTopClientsForVendor();
   renderCarteraRiesgo();
+}
+
+// Top 10 Clientes on vendor.html has its own period filter (YTD / mes
+// actual / mes anterior / últimos 3 meses), independent of the rest of the
+// page (KPIs and Cumplimiento always show "mes actual").
+let topClientsPeriod = 'this_month';
+
+function monthsForTopClientsPeriod() {
+  const refIdx = allMonths.length - 1;
+  const ref = allMonths[refIdx];
+  switch (topClientsPeriod) {
+    case 'prev_month': return refIdx > 0 ? [allMonths[refIdx - 1]] : [ref];
+    case 'last_3': return allMonths.slice(-3);
+    case 'ytd': return allMonths.filter(m => m.year === ref.year);
+    default: return [ref]; // this_month
+  }
+}
+
+function topClientsPeriodLabel(months) {
+  if (!months.length) return '—';
+  if (months.length === 1) return monthLabel(months[0].year, months[0].month);
+  const first = months[0], last = months[months.length - 1];
+  return `${monthLabel(first.year, first.month)} – ${monthLabel(last.year, last.month)}`;
+}
+
+function renderTopClientsForVendor() {
+  const months = monthsForTopClientsPeriod();
+  const label  = topClientsPeriodLabel(months);
+  const agg    = aggregateMonths(months);
+  const view   = applyVendorFilter(agg, selectedVendor);
+  renderTopClients(view, label, months.length > 1);
+}
+
+function onTopClientsPeriodChange(mode) {
+  topClientsPeriod = mode;
+  renderTopClientsForVendor();
 }
 
 function renderCumplDetail() {
