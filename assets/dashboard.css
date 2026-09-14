@@ -125,6 +125,11 @@
      and not uppercased (mixed-case renders narrower for this word). */
   #table-prod-teox, #table-prod-rrs { font-size: 11px; }
   #table-prod-teox th, #table-prod-rrs th { text-transform: none; }
+  /* vendor.html: Cumplimiento -- Mes actual y mes anterior paired with
+     Curva Diaria in a .tables-row (half width, same squeeze as above). */
+  #table-cumpl-detail { font-size: 12px; min-width: 0; }
+  #table-cumpl-detail th, #table-cumpl-detail td { padding: 6px 4px; }
+  #table-cumpl-detail th { overflow-wrap: break-word; }
   .grouped-head thead th { text-align: center; }
   .grouped-head thead tr:first-child th { border-bottom: none; }
   .grouped-head thead tr:last-child th { padding-top: 2px; font-size: 10px; text-transform: none; color: var(--gray-600); }

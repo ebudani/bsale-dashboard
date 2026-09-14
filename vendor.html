@@ -65,28 +65,40 @@
       </div>
     </div>
 
-    <!-- Detalle de cumplimiento: mes actual vs mes anterior, independiente del filtro de Periodo -->
-    <div class="card">
-      <h2>Cumplimiento — Mes actual y mes anterior</h2>
-      <table id="table-cumpl-detail" class="grouped-head">
-        <thead>
-          <tr>
-            <th rowspan="2">Período</th>
-            <th colspan="2" class="group-start" style="color:#2563eb">Teoxane</th>
-            <th colspan="2" class="group-start" style="color:#d97706">RRS LL</th>
-            <th colspan="2" class="group-start col-total">Total</th>
-          </tr>
-          <tr>
-            <th class="group-start">Real</th>
-            <th>vs Obj</th>
-            <th class="group-start">Real</th>
-            <th>vs Obj</th>
-            <th class="group-start col-total">Real</th>
-            <th class="col-total">vs Obj</th>
-          </tr>
-        </thead>
-        <tbody id="tbody-cumpl-detail"></tbody>
-      </table>
+    <!-- Cumplimiento (mes actual vs mes anterior, independiente del filtro
+         de Periodo) y Curva Diaria lado a lado en escritorio (>900px);
+         se apilan en mobile como el resto de la pagina. -->
+    <div class="tables-row">
+      <div class="card">
+        <h2>Cumplimiento — Mes actual y mes anterior</h2>
+        <table id="table-cumpl-detail" class="grouped-head">
+          <thead>
+            <tr>
+              <th rowspan="2">Período</th>
+              <th colspan="2" class="group-start" style="color:#2563eb">Teoxane</th>
+              <th colspan="2" class="group-start" style="color:#d97706">RRS LL</th>
+              <th colspan="2" class="group-start col-total">Total</th>
+            </tr>
+            <tr>
+              <th class="group-start">Real</th>
+              <th>vs Obj</th>
+              <th class="group-start">Real</th>
+              <th>vs Obj</th>
+              <th class="group-start col-total">Real</th>
+              <th class="col-total">vs Obj</th>
+            </tr>
+          </thead>
+          <tbody id="tbody-cumpl-detail"></tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h2 id="chart-daily-title">Curva Diaria — </h2>
+        <div class="chart-wrap">
+          <canvas id="chart-daily"></canvas>
+          <div id="chart-daily-unavailable" class="unavailable" style="display:none">No disponible por vendedor</div>
+        </div>
+      </div>
     </div>
 
     <!-- Todas las tarjetas siguientes van una debajo de otra (una sola
@@ -96,14 +108,6 @@
     <div class="card">
       <h2>Ventas Netas Mensuales</h2>
       <div class="chart-wrap"><canvas id="chart-monthly"></canvas></div>
-    </div>
-
-    <div class="card">
-      <h2 id="chart-daily-title">Curva Diaria — </h2>
-      <div class="chart-wrap">
-        <canvas id="chart-daily"></canvas>
-        <div id="chart-daily-unavailable" class="unavailable" style="display:none">No disponible por vendedor</div>
-      </div>
     </div>
 
     <!-- Lado a lado en escritorio (>900px); se apilan en una columna en
