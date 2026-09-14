@@ -537,10 +537,6 @@ function renderVendorSimple() {
 
   renderKPIs(view, t, label);
   renderCumplDetail();
-  renderMonthlyChart();
-  renderDailyChart(view, 'Mes actual', false);
-  renderProductivityTable('tbody-prod-teox', 'Teoxane');
-  renderProductivityTable('tbody-prod-rrs', 'RRS HA Long Lasting');
   renderTopClients(view, label, false);
   renderCarteraRiesgo();
 }
