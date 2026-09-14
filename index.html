@@ -131,6 +131,17 @@
           </thead>
           <tbody id="tbody-cumpl"></tbody>
         </table>
+
+        <!-- Solo visible cuando hay cuentas sin vendedor asignado con ventas en el periodo -->
+        <div id="sinasignar-detail" style="display:none">
+          <h2 id="sinasignar-title" style="margin-top:16px">Cuentas sin asignar — </h2>
+          <table id="table-sinasignar">
+            <thead>
+              <tr><th>Cliente</th><th>Facturas</th><th>$ Neto</th></tr>
+            </thead>
+            <tbody id="tbody-sinasignar"></tbody>
+          </table>
+        </div>
       </div>
       <div class="card" id="card-teox">
         <h2>Teoxane — Clientes, unidades y productividad por mes</h2>

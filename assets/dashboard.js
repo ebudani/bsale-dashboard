@@ -437,6 +437,7 @@ function render() {
   renderDailyChart(view, label, months.length > 1);
   renderBrandsChart();
   renderCumplTable(agg, t, label);
+  renderSinAsignarDetail(agg, label);
   renderProductivityTable('tbody-prod-teox', 'Teoxane');
   renderProductivityTable('tbody-prod-rrs', 'RRS HA Long Lasting');
   renderTopClients(view, label, months.length > 1);
@@ -969,6 +970,30 @@ function renderCumplTable(agg, t, label) {
     `;
     tbody.appendChild(tr2);
   }
+}
+
+// Cuentas sin vendedor asignado en Bsale -- solo tiene sentido mirando el
+// total de la empresa (con un vendedor puntual seleccionado, Cumplimiento ya
+// no muestra la fila "Sin asignar"), y solo si hubo ventas de esas cuentas
+// en el periodo.
+function renderSinAsignarDetail(agg, label) {
+  const wrap = document.getElementById('sinasignar-detail');
+  if (!wrap) return;
+
+  const rows = (agg.top_clients_by_vendor || {})['Sin asignar'] || [];
+  if (selectedVendor !== 'all' || !rows.length) {
+    wrap.style.display = 'none';
+    return;
+  }
+  wrap.style.display = 'block';
+  document.getElementById('sinasignar-title').textContent = `Cuentas sin asignar — ${label}`;
+  document.getElementById('tbody-sinasignar').innerHTML = rows.map(c => `
+    <tr>
+      <td>${c.name}</td>
+      <td>${c.count}</td>
+      <td>${M(c.neto)}</td>
+    </tr>
+  `).join('');
 }
 
 // ── Top clients ──────────────────────────────────────────────────────────────
