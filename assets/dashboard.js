@@ -419,6 +419,28 @@ function vendorBrandForMonth(mm, vendorName, brand) {
     .reduce((s, [, brands]) => s + ((brands || {})[brand] || 0), 0);
 }
 
+// Dashboard principal only: with a specific vendor selected, Top Clientes
+// moves in under Cumplimiento (same column) so Cartera en riesgo can take
+// the full row width instead of sharing it -- with "Todos" nothing changes.
+// DOM move rather than pure CSS since the two live in different grid rows.
+function layoutTopClientsForVendorFilter() {
+  const cumplSlot = document.getElementById('cumpl-slot');
+  const topRow = document.getElementById('topclientes-cartera-row');
+  const topCard = document.getElementById('card-topclientes');
+  if (!cumplSlot || !topRow || !topCard) return;
+
+  const isVendor = selectedVendor !== 'all';
+  const inCumplSlot = topCard.parentElement === cumplSlot;
+
+  if (isVendor && !inCumplSlot) {
+    cumplSlot.appendChild(topCard);
+    topRow.classList.add('single-col');
+  } else if (!isVendor && inCumplSlot) {
+    topRow.insertBefore(topCard, topRow.firstChild);
+    topRow.classList.remove('single-col');
+  }
+}
+
 // ── Render all ──────────────────────────────────────────────────────────────
 function render() {
   const months = monthsForPeriod();
@@ -431,6 +453,7 @@ function render() {
   const t      = months.length === 1 ? aggregateTargets(months) : null;
   const view   = applyVendorFilter(agg, selectedVendor);
 
+  layoutTopClientsForVendorFilter();
   renderKPIs(view, t, label);
   renderMonthlyChart();
   renderSkuChart(view, label);

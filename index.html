@@ -110,6 +110,7 @@
 
     <!-- Cumplimiento / productividad por marca -->
     <div class="tables-row tables-row-3">
+      <div id="cumpl-slot">
       <div class="card" id="card-cumpl">
         <h2 id="table-cumpl-title">Cumplimiento — </h2>
         <table id="table-cumpl" class="grouped-head">
@@ -143,6 +144,7 @@
           </table>
         </div>
       </div>
+      </div><!-- #cumpl-slot -->
       <div class="card" id="card-teox">
         <h2>Teoxane — Clientes, unidades y productividad por mes</h2>
         <table id="table-prod-teox">
@@ -168,8 +170,12 @@
     </div>
 
     <!-- Top clients + Cartera en riesgo (esta solo con un vendedor puntual
-         seleccionado arriba) lado a lado en escritorio, apiladas en mobile. -->
-    <div class="tables-row">
+         seleccionado arriba) lado a lado en escritorio, apiladas en mobile.
+         Con un vendedor puntual seleccionado, #card-topclientes se muda
+         dentro de #cumpl-slot (ver layoutTopClientsForVendorFilter en
+         dashboard.js) y esta fila queda con Cartera en riesgo sola, a lo
+         ancho. -->
+    <div class="tables-row" id="topclientes-cartera-row">
       <div class="card" id="card-topclientes">
         <h2 id="table-clients-title">Top 10 Clientes — </h2>
         <div id="clients-unavailable" class="unavailable" style="display:none">No disponible por vendedor</div>

@@ -134,6 +134,11 @@
     margin-bottom: 22px;
   }
   .tables-row-3 { grid-template-columns: 1.5fr 1fr 1fr; }
+  /* Dashboard principal: con un vendedor puntual seleccionado, Top Clientes
+     se muda dentro de #cumpl-slot (debajo de Cumplimiento) y esta fila
+     queda con Cartera en riesgo sola -- a lo ancho en vez de a mitad. */
+  #cumpl-slot .card:not(:last-child) { margin-bottom: 16px; }
+  .tables-row.single-col { grid-template-columns: 1fr; }
   /* .card table sets min-width:max-content globally so wide tables (like
      Cartera en riesgo) scroll instead of squeezing -- but these three are
      meant to fit their grid column exactly, at any window width, so they
@@ -341,15 +346,22 @@
        were separate grid rows on desktop. */
     #content.loaded { display: flex; flex-direction: column; }
     .charts-row.full-row, .bottom-row, .tables-row-3 { display: contents; }
-    #card-monthly        { order: 1; }
-    #card-brands         { order: 2; }
-    #card-cumpl          { order: 3; }
-    #card-sku            { order: 4; }
-    #card-daily          { order: 5; }
-    #card-teox           { order: 6; }
-    #card-rrs            { order: 7; }
-    #card-topclientes    { order: 8; }
-    #cartera-riesgo-card { order: 9; }
+    #card-monthly            { order: 1; }
+    #card-brands             { order: 2; }
+    /* Not #card-cumpl directly -- it's nested inside #cumpl-slot now (so
+       Top Clientes can be moved in below it for a selected vendor; see
+       layoutTopClientsForVendorFilter in dashboard.js), and order only
+       affects direct flex children. */
+    #cumpl-slot              { order: 3; }
+    #card-sku                { order: 4; }
+    #card-daily              { order: 5; }
+    #card-teox               { order: 6; }
+    #card-rrs                { order: 7; }
+    /* Same reasoning: #card-topclientes/#cartera-riesgo-card live inside
+       this row, not as direct flex children, except when Top Clientes gets
+       moved into #cumpl-slot instead (then it just follows Cumplimiento's
+       own order:3 there, which is already the desired position). */
+    #topclientes-cartera-row { order: 8; }
   }
 
   @media (max-width: 480px) {
