@@ -118,10 +118,14 @@
       </div>
     </div>
 
-    <!-- Independiente del filtro de Periodo: compara siempre mes en curso vs mes anterior -->
     <div class="card" id="cartera-riesgo-card">
       <h2 id="table-risk-title">Cartera en riesgo — </h2>
-      <div class="risk-caption">Independiente del filtro de Periodo: compara siempre el mes en curso y el mes anterior a hoy.</div>
+      <div class="risk-legend">
+        <span><span class="pill ok">Activa</span> compró este mes</span>
+        <span><span class="pill mid">Atención</span> no compró este mes, sí el anterior</span>
+        <span><span class="pill low">En riesgo</span> no compró estos dos meses, pero compró antes</span>
+        <span><span class="pill neutral">Sin historial</span> nunca compró</span>
+      </div>
       <div class="risk-toolbar" id="risk-toolbar"></div>
       <div class="risk-table-scroll">
         <table id="table-risk">

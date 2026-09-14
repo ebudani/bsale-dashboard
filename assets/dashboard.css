@@ -303,6 +303,15 @@
   #table-risk tr.risk-row-nuevo td { background: var(--gray-100); color: var(--gray-600); }
   #table-risk tr.risk-row-nuevo:hover td { background: var(--gray-200); }
   .risk-caption { font-size: 11px; color: #94a3b8; margin: -6px 0 12px; }
+  .risk-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+    font-size: 12px;
+    color: var(--gray-600);
+    margin: -6px 0 14px;
+  }
+  .risk-legend .pill { margin-right: 6px; }
   .risk-count { font-size: 11px; color: #94a3b8; margin-top: 8px; }
 
   /* Cumplimiento + Teoxane + RRS (7, 4 and 4 columns in 1.5fr/1fr/1fr) need
