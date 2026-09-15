@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-15T17:02:28.198241Z",
+  "updated_at": "2026-09-15T21:12:22.573754Z",
   "users": {
     "7": "Cindy Monsalves",
     "9": "Daisy Ponce",
@@ -28397,11 +28397,11 @@
     {
       "year": 2026,
       "month": 9,
-      "count_facturas": 120,
+      "count_facturas": 121,
       "count_nc": 0,
-      "neto_facturas": 103937637,
+      "neto_facturas": 104083237,
       "neto_nc": 0,
-      "total_neto": 103937637,
+      "total_neto": 104083237,
       "by_day": [
         {
           "date": "2026-09-01",
@@ -28455,8 +28455,8 @@
         },
         {
           "date": "2026-09-15",
-          "count": 1,
-          "neto": 1597003
+          "count": 2,
+          "neto": 1742603
         }
       ],
       "by_vendor": {
@@ -28475,6 +28475,10 @@
         "Sin asignar": {
           "count": 3,
           "neto": 2581225
+        },
+        "Freddy Inzunza": {
+          "count": 1,
+          "neto": 145600
         }
       },
       "by_vendor_day": {
@@ -28635,10 +28639,17 @@
             "count": 2,
             "neto": 2086553
           }
+        ],
+        "Freddy Inzunza": [
+          {
+            "date": "2026-09-15",
+            "count": 1,
+            "neto": 145600
+          }
         ]
       },
       "by_brand": {
-        "Teoxane": 84102672,
+        "Teoxane": 84248272,
         "RRS HA Long Lasting": 19834965,
         "FINE": 0
       },
@@ -28661,6 +28672,11 @@
         "Sin asignar": {
           "Teoxane": 2086553,
           "RRS HA Long Lasting": 494672,
+          "FINE": 0
+        },
+        "Freddy Inzunza": {
+          "Teoxane": 145600,
+          "RRS HA Long Lasting": 0,
           "FINE": 0
         }
       },
@@ -28706,8 +28722,8 @@
           "qty": 98.0
         },
         "Redensity 1 (2X1ml)": {
-          "neto": 661024,
-          "qty": 14.0
+          "neto": 806624,
+          "qty": 15.0
         },
         "RHA Kiss Volume (2X1ml)": {
           "neto": 5937300,
@@ -28868,6 +28884,12 @@
           },
           "RHA Kiss Volume (2X1ml)": {
             "neto": 164700,
+            "qty": 1.0
+          }
+        },
+        "Freddy Inzunza": {
+          "Redensity 1 (2X1ml)": {
+            "neto": 145600,
             "qty": 1.0
           }
         }
@@ -29512,12 +29534,24 @@
             "rrs_units": 5.0,
             "name": "PIAL ODONTOLOGÍA INTEGRAL Y ESTÉTICA FACIAL SPA"
           }
+        ],
+        "Freddy Inzunza": [
+          {
+            "id": "1273",
+            "count": 1,
+            "neto": 145600,
+            "teox_neto": 145600,
+            "teox_units": 1.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "Ecodent spa"
+          }
         ]
       },
       "brand_productivity": {
         "Teoxane": {
-          "clients": 90,
-          "units": 706.0
+          "clients": 91,
+          "units": 707.0
         },
         "RRS HA Long Lasting": {
           "clients": 36,
@@ -29563,6 +29597,16 @@
           "RRS HA Long Lasting": {
             "clients": 1,
             "units": 5.0
+          }
+        },
+        "Freddy Inzunza": {
+          "Teoxane": {
+            "clients": 1,
+            "units": 1.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 0,
+            "units": 0
           }
         }
       }
@@ -32266,6 +32310,9 @@
     },
     "1272": {
       "2026-09": 1147706
+    },
+    "1273": {
+      "2026-09": 145600
     }
   },
   "client_vendor": {
@@ -35381,6 +35428,11 @@
     "1272": {
       "month": "2026-09",
       "Teoxane": 1147706,
+      "RRS HA Long Lasting": 0
+    },
+    "1273": {
+      "month": "2026-09",
+      "Teoxane": 145600,
       "RRS HA Long Lasting": 0
     }
   }

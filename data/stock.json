@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-09-15T16:31:21.396198Z",
+  "updated_at": "2026-09-15T21:12:23.186666Z",
   "items": [
     {
       "sku": "Jeringa monodosis x 3mL (sin aguja)",
       "code": "LL24A",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 282.0,
-      "quantity_available": 282.0,
+      "quantity": 279.0,
+      "quantity_available": 279.0,
       "quantity_reserved": 0.0
     },
     {
@@ -15,8 +15,8 @@
       "code": "910049/02",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 63.0,
-      "quantity_available": 63.0,
+      "quantity": 62.0,
+      "quantity_available": 62.0,
       "quantity_reserved": 0.0
     },
     {
@@ -33,8 +33,8 @@
       "code": "940012/01",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 41.0,
-      "quantity_available": 41.0,
+      "quantity": 38.0,
+      "quantity_available": 38.0,
       "quantity_reserved": 0.0
     },
     {
@@ -51,8 +51,8 @@
       "code": "940011/01",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 33.0,
-      "quantity_available": 33.0,
+      "quantity": 31.0,
+      "quantity_available": 31.0,
       "quantity_reserved": 0.0
     },
     {
@@ -96,8 +96,8 @@
       "code": "25221/2",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 71.0,
-      "quantity_available": 71.0,
+      "quantity": 66.0,
+      "quantity_available": 66.0,
       "quantity_reserved": 0.0
     },
     {
@@ -105,8 +105,8 @@
       "code": "910070/02",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 102.0,
-      "quantity_available": 102.0,
+      "quantity": 101.0,
+      "quantity_available": 101.0,
       "quantity_reserved": 0.0
     },
     {
