@@ -3,8 +3,14 @@
 // data/ventas.json and data/targets.json are reachable directly by URL
 // regardless of this gate. The PIN is stored hashed just so it isn't sitting
 // in plain text in "view source".
-const PIN_HASH = '38bc3d1c4787dd15fb6b16dccd548786cb773da29ffeb075602c76d2ca87f9fd';
-const PIN_STORAGE_KEY = 'aestheticspro-pin-ok';
+//
+// vendor.html sets window.LOCKED_PIN_HASH/LOCKED_CODE (per vendedora) before
+// this script loads; index.html sets neither, so it keeps the original
+// admin PIN below. The storage key is also per-vendedora -- otherwise
+// unlocking with Monica's PIN would (same origin, same localStorage)
+// silently unlock Daisy's or Cindy's link too.
+const PIN_HASH = window.LOCKED_PIN_HASH || '38bc3d1c4787dd15fb6b16dccd548786cb773da29ffeb075602c76d2ca87f9fd';
+const PIN_STORAGE_KEY = 'aestheticspro-pin-ok' + (window.LOCKED_CODE ? '-' + window.LOCKED_CODE : '');
 
 async function sha256Hex(text) {
   const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text));
