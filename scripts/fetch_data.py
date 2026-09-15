@@ -382,8 +382,15 @@ def build_month_record(year, month, facturas, nc_docs, exenta_docs, clients_meta
 
             by_vendor_sku.setdefault(vname, {})
             for sku, vals in doc_details.get("by_sku", {}).items():
-                by_sku[sku] = by_sku.get(sku, 0) + vals["neto"]
-                by_vendor_sku[vname][sku] = by_vendor_sku[vname].get(sku, 0) + vals["neto"]
+                # qty added for the Stock page (demand vs. current stock, both
+                # in units) -- neto alone was enough for the "Ventas por
+                # Producto" chart, which is why this was neto-only before.
+                bs = by_sku.setdefault(sku, {"neto": 0, "qty": 0})
+                bs["neto"] += vals["neto"]
+                bs["qty"] += vals["qty"]
+                bvs = by_vendor_sku[vname].setdefault(sku, {"neto": 0, "qty": 0})
+                bvs["neto"] += vals["neto"]
+                bvs["qty"] += vals["qty"]
 
     # Top clients (total and per vendor), including neto + units by brand
     def empty_brand_totals():

@@ -1,0 +1,140 @@
+{
+  "updated_at": "2026-09-15T16:31:21.396198Z",
+  "items": [
+    {
+      "sku": "Jeringa monodosis x 3mL (sin aguja)",
+      "code": "LL24A",
+      "office_id": 1,
+      "office_name": "Casa Matriz",
+      "quantity": 282.0,
+      "quantity_available": 282.0,
+      "quantity_reserved": 0.0
+    },
+    {
+      "sku": "PureSense Ultra Deep (2X1.2ml)",
+      "code": "910049/02",
+      "office_id": 1,
+      "office_name": "Casa Matriz",
+      "quantity": 63.0,
+      "quantity_available": 63.0,
+      "quantity_reserved": 0.0
+    },
+    {
+      "sku": "TEOSYAL RHA 1 (2X1ml)",
+      "code": "940001/01",
+      "office_id": 1,
+      "office_name": "Casa Matriz",
+      "quantity": 104.0,
+      "quantity_available": 104.0,
+      "quantity_reserved": 0.0
+    },
+    {
+      "sku": "TEOSYAL RHA 2 (2X1ml)",
+      "code": "940012/01",
+      "office_id": 1,
+      "office_name": "Casa Matriz",
+      "quantity": 41.0,
+      "quantity_available": 41.0,
+      "quantity_reserved": 0.0
+    },
+    {
+      "sku": "TEOSYAL RHA 3 (2X1ml)",
+      "code": "940013/01",
+      "office_id": 1,
+      "office_name": "Casa Matriz",
+      "quantity": 87.0,
+      "quantity_available": 87.0,
+      "quantity_reserved": 0.0
+    },
+    {
+      "sku": "TEOSYAL RHA 4 (2X1.2ml)",
+      "code": "940011/01",
+      "office_id": 1,
+      "office_name": "Casa Matriz",
+      "quantity": 33.0,
+      "quantity_available": 33.0,
+      "quantity_reserved": 0.0
+    },
+    {
+      "sku": "Alimento para deportistas BTY",
+      "code": "FBTY10",
+      "office_id": 1,
+      "office_name": "Casa Matriz",
+      "quantity": 14.0,
+      "quantity_available": 14.0,
+      "quantity_reserved": 0.0
+    },
+    {
+      "sku": "Alimento para deportistas PWR",
+      "code": "FPWR14",
+      "office_id": 1,
+      "office_name": "Casa Matriz",
+      "quantity": 21.0,
+      "quantity_available": 21.0,
+      "quantity_reserved": 0.0
+    },
+    {
+      "sku": "RHA KISS (2X0.7ml)",
+      "code": "940010/01",
+      "office_id": 1,
+      "office_name": "Casa Matriz",
+      "quantity": 0.0,
+      "quantity_available": 0.0,
+      "quantity_reserved": 0.0
+    },
+    {
+      "sku": "Alimento para deportistas SMOOTH",
+      "code": "FSMTH",
+      "office_id": 1,
+      "office_name": "Casa Matriz",
+      "quantity": 0.0,
+      "quantity_available": 0.0,
+      "quantity_reserved": 0.0
+    },
+    {
+      "sku": "Redensity 1 (1x3ml)",
+      "code": "25221/2",
+      "office_id": 1,
+      "office_name": "Casa Matriz",
+      "quantity": 71.0,
+      "quantity_available": 71.0,
+      "quantity_reserved": 0.0
+    },
+    {
+      "sku": "Redensity 1 (2X1ml)",
+      "code": "910070/02",
+      "office_id": 1,
+      "office_name": "Casa Matriz",
+      "quantity": 102.0,
+      "quantity_available": 102.0,
+      "quantity_reserved": 0.0
+    },
+    {
+      "sku": "Redensity 2 (2X1ml)",
+      "code": "910043/01",
+      "office_id": 1,
+      "office_name": "Casa Matriz",
+      "quantity": 4.0,
+      "quantity_available": 4.0,
+      "quantity_reserved": 0.0
+    },
+    {
+      "sku": "RHA 3 (2X1.2ml)",
+      "code": "78819786491958",
+      "office_id": 1,
+      "office_name": "Casa Matriz",
+      "quantity": 57.0,
+      "quantity_available": 57.0,
+      "quantity_reserved": 0.0
+    },
+    {
+      "sku": "RHA Kiss Volume (2X1ml)",
+      "code": "78819789403573",
+      "office_id": 1,
+      "office_name": "Casa Matriz",
+      "quantity": 34.0,
+      "quantity_available": 34.0,
+      "quantity_reserved": 0.0
+    }
+  ]
+}

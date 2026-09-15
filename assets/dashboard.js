@@ -1,49 +1,5 @@
-// ── PIN gate ───────────────────────────────────────────────────────────────
-// Deterrent only, not real access control: this is a public static site, so
-// data/ventas.json and data/targets.json are reachable directly by URL
-// regardless of this gate. The PIN is stored hashed just so it isn't sitting
-// in plain text in "view source".
-//
-// vendor.html sets window.LOCKED_PIN_HASH/LOCKED_CODE (per vendedora) before
-// this script loads; index.html sets neither, so it keeps the original
-// admin PIN below. The storage key is also per-vendedora -- otherwise
-// unlocking with Monica's PIN would (same origin, same localStorage)
-// silently unlock Daisy's or Cindy's link too.
-const PIN_HASH = window.LOCKED_PIN_HASH || '38bc3d1c4787dd15fb6b16dccd548786cb773da29ffeb075602c76d2ca87f9fd';
-const PIN_STORAGE_KEY = 'aestheticspro-pin-ok' + (window.LOCKED_CODE ? '-' + window.LOCKED_CODE : '');
-
-async function sha256Hex(text) {
-  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text));
-  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
-}
-
-function unlockGate() {
-  document.getElementById('pin-gate').style.display = 'none';
-}
-
-async function submitPin() {
-  const input = document.getElementById('pin-input');
-  const value = input.value.trim();
-  if (await sha256Hex(value) === PIN_HASH) {
-    localStorage.setItem(PIN_STORAGE_KEY, '1');
-    unlockGate();
-  } else {
-    document.getElementById('pin-error').style.display = 'block';
-    input.value = '';
-    input.focus();
-  }
-}
-
-document.getElementById('pin-submit').addEventListener('click', submitPin);
-document.getElementById('pin-input').addEventListener('keydown', e => {
-  if (e.key === 'Enter') submitPin();
-});
-
-if (localStorage.getItem(PIN_STORAGE_KEY) === '1') {
-  unlockGate();
-} else {
-  document.getElementById('pin-input').focus();
-}
+// PIN gate lives in assets/pin-gate.js (shared with vendor.html and
+// stock.html) -- loaded as a separate <script> before this file.
 
 // ── Config ─────────────────────────────────────────────────────────────────
 const BRANDS = ['Teoxane', 'RRS HA Long Lasting'];
@@ -99,7 +55,7 @@ function buildSkuColorMap() {
   const totals = {};
   allMonths.forEach(m => {
     Object.entries(m.by_sku || {}).forEach(([sku, v]) => {
-      totals[sku] = (totals[sku] || 0) + v;
+      totals[sku] = (totals[sku] || 0) + v.neto;
     });
   });
   const ranked = Object.entries(totals).sort((a, b) => b[1] - a[1]).map(([sku]) => sku);
@@ -307,13 +263,17 @@ function aggregateMonths(months) {
       agg.by_brand[b] = (agg.by_brand[b] || 0) + v;
     });
     Object.entries(mm.by_sku || {}).forEach(([sku, v]) => {
-      agg.by_sku[sku] = (agg.by_sku[sku] || 0) + v;
+      const bs = agg.by_sku[sku] || (agg.by_sku[sku] = { neto: 0, qty: 0 });
+      bs.neto += v.neto || 0;
+      bs.qty  += v.qty  || 0;
     });
     Object.entries(mm.by_vendor_sku || {}).forEach(([k, skus]) => {
       const name = canonVendor(k);
       agg.by_vendor_sku[name] = agg.by_vendor_sku[name] || {};
       Object.entries(skus || {}).forEach(([sku, v]) => {
-        agg.by_vendor_sku[name][sku] = (agg.by_vendor_sku[name][sku] || 0) + v;
+        const bvs = agg.by_vendor_sku[name][sku] || (agg.by_vendor_sku[name][sku] = { neto: 0, qty: 0 });
+        bvs.neto += v.neto || 0;
+        bvs.qty  += v.qty  || 0;
       });
     });
     Object.entries(mm.by_vendor || {}).forEach(([k, v]) => {
@@ -743,7 +703,9 @@ function renderMonthlyChart() {
 function renderSkuChart(m, label) {
   document.getElementById('chart-sku-title').textContent = `Ventas por Producto — ${label}`;
 
-  const entries = Object.entries(m.by_sku || {}).filter(([, v]) => v !== 0);
+  const entries = Object.entries(m.by_sku || {})
+    .map(([sku, v]) => [sku, v.neto])
+    .filter(([, v]) => v !== 0);
   const total = entries.reduce((s, [, v]) => s + v, 0);
   entries.sort((a, b) => b[1] - a[1]);
 

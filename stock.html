@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AestheticsPro · Stock</title>
+<link rel="stylesheet" href="assets/dashboard.css">
+</head>
+<body>
+
+<div id="pin-gate">
+  <div class="pin-box">
+    <h1>AestheticsPro <span>· Ventas</span></h1>
+    <p>Ingresá el PIN para continuar</p>
+    <input type="password" id="pin-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" autocomplete="off" placeholder="••••">
+    <button id="pin-submit">Entrar</button>
+    <div id="pin-error">PIN incorrecto</div>
+  </div>
+</div>
+
+<header>
+  <h1>AestheticsPro <span>· Stock</span></h1>
+  <div class="header-right">
+    <span id="updated-at">Cargando…</span>
+    <a href="index.html" class="filter-select" style="text-decoration:none">← Ventas</a>
+  </div>
+</header>
+
+<main>
+  <div id="loading">Cargando datos…</div>
+  <div id="content">
+
+    <div class="kpi-grid">
+      <div class="kpi red">
+        <label>Quiebre</label>
+        <div class="val" id="kpi-quiebre">—</div>
+        <div class="sub">Sin stock o menos de 1 mes de cobertura</div>
+      </div>
+      <div class="kpi" style="border-color:#d97706">
+        <label>Stock bajo</label>
+        <div class="val" id="kpi-bajo">—</div>
+        <div class="sub">Menos de 2 meses de cobertura</div>
+      </div>
+      <div class="kpi green">
+        <label>OK</label>
+        <div class="val" id="kpi-ok">—</div>
+        <div class="sub">Cobertura saludable</div>
+      </div>
+      <div class="kpi">
+        <label>Total productos</label>
+        <div class="val" id="kpi-total-skus">—</div>
+        <div class="sub">Con stock en Bsale</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Stock y alertas de reposición</h2>
+      <div class="risk-caption">Demanda mensual = promedio de unidades vendidas en los últimos 3 meses. Cobertura = stock actual ÷ demanda mensual. Stock recomendado = demanda mensual × 2 meses de resguardo.</div>
+      <table id="table-stock">
+        <thead>
+          <tr>
+            <th>Producto</th><th>Sucursal</th><th>Stock actual</th><th>Demanda mensual<br><small>(prom. 3 meses)</small></th><th>Cobertura</th><th>Stock recomendado</th><th>Estado</th>
+          </tr>
+        </thead>
+        <tbody id="tbody-stock"></tbody>
+      </table>
+    </div>
+
+  </div><!-- #content -->
+</main>
+
+<script src="assets/pin-gate.js"></script>
+<script src="assets/stock.js"></script>
+</body>
+</html>
