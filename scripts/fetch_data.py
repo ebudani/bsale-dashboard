@@ -118,7 +118,7 @@ def fetch_vendor_options(vendedor_attr_id):
 
 def fetch_clients():
     """
-    Returns ({client_id_str: {name, rut}}, {client_id_str: vendor_name}).
+    Returns ({client_id_str: {name, rut, firstName, lastName, phone}}, {client_id_str: vendor_name}).
     Vendor comes straight from each client's "Vendedor" additional attribute
     in Bsale (Atributos adicionales), resolved via expand=[attributes] --
     no more manual RUT->vendor spreadsheet/fuzzy matching.
@@ -138,7 +138,11 @@ def fetch_clients():
             first   = (c.get("firstName") or "").strip()
             last    = (c.get("lastName") or "").strip()
             name    = company if company else f"{first} {last}".strip()
-            clients[cid] = {"name": name, "rut": c.get("code", "")}
+            clients[cid] = {
+                "name": name, "rut": c.get("code", ""),
+                "firstName": first, "lastName": last,
+                "phone": (c.get("phone") or "").strip(),
+            }
             for attr in (c.get("attributes") or {}).get("items", []):
                 if attr.get("name") == "Vendedor" and attr.get("value"):
                     vendedor_attr_id = attr["id"]

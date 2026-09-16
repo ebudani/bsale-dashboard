@@ -1040,6 +1040,21 @@ function riskMonthKeys() {
   };
 }
 
+// Nombre de contacto de la cuenta, solo cuando aporta algo distinto de la
+// Razon Social -- en Bsale, para varias empresas cargadas sin el campo
+// "company", el firstName y el lastName quedan los dos con el mismo nombre
+// de la empresa (no es un contacto real), y para personas naturales el
+// nombre ya es la Razon Social. En ambos casos no se muestra de nuevo.
+function contactNameFor(meta) {
+  const fn = (meta.firstName || '').trim();
+  const ln = (meta.lastName || '').trim();
+  const full = `${fn} ${ln}`.trim();
+  if (!full) return '';
+  if (fn && fn === ln) return '';
+  if (full.toLowerCase() === (meta.name || '').trim().toLowerCase()) return '';
+  return full;
+}
+
 function buildRiskRoster() {
   const { current, prev } = riskMonthKeys();
   const rows = [];
@@ -1066,6 +1081,8 @@ function buildRiskRoster() {
       cid, vendor, status,
       name: meta.name || cid,
       rut: meta.rut || '',
+      contact: contactNameFor(meta),
+      phone: meta.phone || '',
       current: curVal, prev: prevVal,
       lastMonth, lastBrands,
       lastAmount: lastBrands ? (lastBrands['Teoxane'] || 0) + (lastBrands['RRS HA Long Lasting'] || 0) : 0,
@@ -1110,7 +1127,10 @@ function renderRiskTable(rows) {
   if (riskStatusFilter !== 'todas') filtered = filtered.filter(r => r.status === riskStatusFilter);
   if (riskSearch.trim()) {
     const q = riskSearch.trim().toLowerCase();
-    filtered = filtered.filter(r => r.name.toLowerCase().includes(q) || r.rut.toLowerCase().includes(q));
+    filtered = filtered.filter(r =>
+      r.name.toLowerCase().includes(q) || r.rut.toLowerCase().includes(q) ||
+      r.contact.toLowerCase().includes(q) || r.phone.includes(q)
+    );
   }
   filtered = filtered.slice().sort((a, b) => {
     let av = riskSortKey === 'status' ? RISK_STATUS_RANK[a.status] : a[riskSortKey];
@@ -1122,7 +1142,10 @@ function renderRiskTable(rows) {
 
   document.getElementById('tbody-risk').innerHTML = filtered.map(r => `
     <tr class="${r.status === 'nuevo' ? 'risk-row-nuevo' : ''}">
-      <td class="risk-name"><strong>${r.name}</strong><small>${r.rut}</small></td>
+      <td class="risk-name">
+        <strong>${r.name}</strong><small>${r.rut}</small>
+        ${r.contact ? `<small class="risk-contact">${r.contact}${r.phone ? ' · ' + r.phone : ''}</small>` : (r.phone ? `<small class="risk-contact">${r.phone}</small>` : '')}
+      </td>
       <td>${r.vendor}</td>
       <td><span class="pill ${r.status === 'activa' ? 'ok' : r.status === 'atencion' ? 'mid' : r.status === 'riesgo' ? 'low' : 'neutral'}">${RISK_STATUS_LABEL[r.status]}</span></td>
       <td>${r.current ? M(r.current) : '—'}</td>
