@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-15T21:12:23.186666Z",
+  "updated_at": "2026-09-16T20:41:32.775210Z",
   "items": [
     {
       "sku": "Jeringa monodosis x 3mL (sin aguja)",
@@ -15,35 +15,35 @@
       "code": "910049/02",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 62.0,
-      "quantity_available": 62.0,
-      "quantity_reserved": 0.0
+      "quantity": 45.0,
+      "quantity_available": 42.0,
+      "quantity_reserved": 3.0
     },
     {
       "sku": "TEOSYAL RHA 1 (2X1ml)",
       "code": "940001/01",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 104.0,
-      "quantity_available": 104.0,
-      "quantity_reserved": 0.0
+      "quantity": 97.0,
+      "quantity_available": 96.0,
+      "quantity_reserved": 1.0
     },
     {
       "sku": "TEOSYAL RHA 2 (2X1ml)",
       "code": "940012/01",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 38.0,
-      "quantity_available": 38.0,
-      "quantity_reserved": 0.0
+      "quantity": 31.0,
+      "quantity_available": 30.0,
+      "quantity_reserved": 1.0
     },
     {
       "sku": "TEOSYAL RHA 3 (2X1ml)",
       "code": "940013/01",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 87.0,
-      "quantity_available": 87.0,
+      "quantity": 79.0,
+      "quantity_available": 79.0,
       "quantity_reserved": 0.0
     },
     {
@@ -51,8 +51,8 @@
       "code": "940011/01",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 31.0,
-      "quantity_available": 31.0,
+      "quantity": 22.0,
+      "quantity_available": 22.0,
       "quantity_reserved": 0.0
     },
     {
@@ -96,8 +96,8 @@
       "code": "25221/2",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 66.0,
-      "quantity_available": 66.0,
+      "quantity": 63.0,
+      "quantity_available": 63.0,
       "quantity_reserved": 0.0
     },
     {
