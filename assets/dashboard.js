@@ -1143,8 +1143,10 @@ function renderRiskTable(rows) {
   document.getElementById('tbody-risk').innerHTML = filtered.map(r => `
     <tr class="${r.status === 'nuevo' ? 'risk-row-nuevo' : ''}">
       <td class="risk-name">
-        <strong>${r.name}</strong><small>${r.rut}</small>
-        ${r.contact ? `<small class="risk-contact">${r.contact}${r.phone ? ' · ' + r.phone : ''}</small>` : (r.phone ? `<small class="risk-contact">${r.phone}</small>` : '')}
+        <strong>${r.name}</strong>
+        <small>RUT: ${r.rut}</small>
+        ${r.contact ? `<small class="risk-contact-name">${r.contact}</small>` : ''}
+        ${r.phone ? `<small class="risk-contact-phone">Teléfono: ${r.phone}</small>` : ''}
       </td>
       <td>${r.vendor}</td>
       <td><span class="pill ${r.status === 'activa' ? 'ok' : r.status === 'atencion' ? 'mid' : r.status === 'riesgo' ? 'low' : 'neutral'}">${RISK_STATUS_LABEL[r.status]}</span></td>

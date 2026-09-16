@@ -314,7 +314,8 @@
   #table-risk th .arrow { opacity: .4; margin-left: 3px; }
   #table-risk td.risk-name { max-width: 220px; white-space: normal; line-height: 1.3; }
   #table-risk td.risk-name small { display: block; color: #94a3b8; font-weight: 400; }
-  #table-risk td.risk-name small.risk-contact { color: var(--gray-600); }
+  #table-risk td.risk-name small.risk-contact-name { color: var(--gray-900); font-weight: 600; font-size: 12.5px; margin-top: 2px; }
+  #table-risk td.risk-name small.risk-contact-phone { color: var(--gray-600); }
   /* Sombrear Mes en curso / Mes anterior igual que la columna Total de
      Cumplimiento -- en index.html y vendor.html por igual. */
   #table-risk th:nth-child(4),
