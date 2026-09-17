@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-09-16T21:29:29.533103Z",
+  "updated_at": "2026-09-17T21:12:43.795345Z",
   "items": [
     {
       "sku": "Jeringa monodosis x 3mL (sin aguja)",
       "code": "LL24A",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 279.0,
-      "quantity_available": 279.0,
+      "quantity": 269.0,
+      "quantity_available": 269.0,
       "quantity_reserved": 0.0
     },
     {
@@ -15,27 +15,27 @@
       "code": "910049/02",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 45.0,
-      "quantity_available": 42.0,
-      "quantity_reserved": 3.0
+      "quantity": 43.0,
+      "quantity_available": 43.0,
+      "quantity_reserved": 0.0
     },
     {
       "sku": "TEOSYAL RHA 1 (2X1ml)",
       "code": "940001/01",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 97.0,
-      "quantity_available": 96.0,
-      "quantity_reserved": 1.0
+      "quantity": 95.0,
+      "quantity_available": 95.0,
+      "quantity_reserved": 0.0
     },
     {
       "sku": "TEOSYAL RHA 2 (2X1ml)",
       "code": "940012/01",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 31.0,
-      "quantity_available": 30.0,
-      "quantity_reserved": 1.0
+      "quantity": 33.0,
+      "quantity_available": 33.0,
+      "quantity_reserved": 0.0
     },
     {
       "sku": "TEOSYAL RHA 3 (2X1ml)",
@@ -51,8 +51,8 @@
       "code": "940011/01",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 22.0,
-      "quantity_available": 22.0,
+      "quantity": 24.0,
+      "quantity_available": 24.0,
       "quantity_reserved": 0.0
     },
     {
@@ -96,8 +96,8 @@
       "code": "25221/2",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 63.0,
-      "quantity_available": 63.0,
+      "quantity": 60.0,
+      "quantity_available": 60.0,
       "quantity_reserved": 0.0
     },
     {
@@ -123,8 +123,8 @@
       "code": "78819786491958",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 57.0,
-      "quantity_available": 57.0,
+      "quantity": 59.0,
+      "quantity_available": 59.0,
       "quantity_reserved": 0.0
     },
     {
@@ -132,8 +132,8 @@
       "code": "78819789403573",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 34.0,
-      "quantity_available": 34.0,
+      "quantity": 40.0,
+      "quantity_available": 40.0,
       "quantity_reserved": 0.0
     }
   ]
