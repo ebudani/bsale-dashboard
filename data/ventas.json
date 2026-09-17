@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-16T21:29:29.169584Z",
+  "updated_at": "2026-09-17T18:03:01.945928Z",
   "users": {
     "7": "Cindy Monsalves",
     "9": "Daisy Ponce",
@@ -19,1686 +19,6 @@
       "firstName": "Mauricio",
       "lastName": "Diaz",
       "phone": "933177618"
-    },
-    "2": {
-      "name": "Sociedad Clínica Ginestetica SPA",
-      "rut": "76792347-3",
-      "firstName": "",
-      "lastName": "",
-      "phone": ""
-    },
-    "4": {
-      "name": "SOCIEDAD AXA SPA SOCIEDAD AXA SPA",
-      "rut": null,
-      "firstName": "SOCIEDAD AXA SPA",
-      "lastName": "SOCIEDAD AXA SPA",
-      "phone": ""
-    },
-    "11": {
-      "name": "SERVICIOS PROFESIONALES MCU SPA SERVICIOS PROFESIONALES MCU SPA",
-      "rut": null,
-      "firstName": "SERVICIOS PROFESIONALES MCU SPA",
-      "lastName": "SERVICIOS PROFESIONALES MCU SPA",
-      "phone": ""
-    },
-    "14": {
-      "name": "SERVICIOS MEDICOS Y DENTALES BELKNER Y CINQUEMANI SPA SERVICIOS MEDICOS Y DENTALES BELKNER Y CINQUEMANI SPA",
-      "rut": null,
-      "firstName": "SERVICIOS MEDICOS Y DENTALES BELKNER Y CINQUEMANI",
-      "lastName": "SERVICIOS MEDICOS Y DENTALES BELKNER Y CINQUEMANI",
-      "phone": ""
-    },
-    "16": {
-      "name": "SOCIEDAD PROFESIONALES MEDICA ESTETICA ODONTOLOGICA Y EDUCACIONAL FAGA L SOCIEDAD PROFESIONALES MEDICA ESTETICA ODONTOLOGICA Y EDUCACIONAL FAGA L",
-      "rut": null,
-      "firstName": "SOCIEDAD PROFESIONALES MEDICA ESTETICA ODONTOLOGIC",
-      "lastName": "SOCIEDAD PROFESIONALES MEDICA ESTETICA ODONTOLOGIC",
-      "phone": ""
-    },
-    "19": {
-      "name": "SOCIEDAD MEDICA DE OTORRINOLARINGOLOGIA EBENEZER LIMITADA SOCIEDAD MEDICA DE OTORRINOLARINGOLOGIA EBENEZER LIMITADA",
-      "rut": null,
-      "firstName": "SOCIEDAD MEDICA DE OTORRINOLARINGOLOGIA EBENEZER L",
-      "lastName": "SOCIEDAD MEDICA DE OTORRINOLARINGOLOGIA EBENEZER L",
-      "phone": ""
-    },
-    "21": {
-      "name": "MÉDICEN CENTRO MÉDICO AVANZADO SPA MÉDICEN CENTRO MÉDICO AVANZADO SPA",
-      "rut": null,
-      "firstName": "MÉDICEN CENTRO MÉDICO AVANZADO SPA",
-      "lastName": "MÉDICEN CENTRO MÉDICO AVANZADO SPA",
-      "phone": ""
-    },
-    "23": {
-      "name": "VIVA SKIN SPA VIVA SKIN SPA",
-      "rut": null,
-      "firstName": "VIVA SKIN SPA",
-      "lastName": "VIVA SKIN SPA",
-      "phone": ""
-    },
-    "29": {
-      "name": "HEVA SERVICIOS DE ESTETICA Y SALUD LIMITADA HEVA SERVICIOS DE ESTETICA Y SALUD LIMITADA",
-      "rut": null,
-      "firstName": "HEVA SERVICIOS DE ESTETICA Y SALUD LIMITADA",
-      "lastName": "HEVA SERVICIOS DE ESTETICA Y SALUD LIMITADA",
-      "phone": ""
-    },
-    "34": {
-      "name": "SERVICIOS ODONTOLOGICOS CARLA SOFIA BASTIAS NASI E.I.R.L SERVICIOS ODONTOLOGICOS CARLA SOFIA BASTIAS NASI E.I.R.L",
-      "rut": null,
-      "firstName": "SERVICIOS ODONTOLOGICOS CARLA SOFIA BASTIAS NASI E",
-      "lastName": "SERVICIOS ODONTOLOGICOS CARLA SOFIA BASTIAS NASI E",
-      "phone": ""
-    },
-    "35": {
-      "name": "PARRA Y CERUTTI LIMITADA PARRA Y CERUTTI LIMITADA",
-      "rut": null,
-      "firstName": "PARRA Y CERUTTI LIMITADA",
-      "lastName": "PARRA Y CERUTTI LIMITADA",
-      "phone": ""
-    },
-    "36": {
-      "name": "SERVICIOS ODONTOLOGICOS ANTÜ SPA SERVICIOS ODONTOLOGICOS ANTÜ SPA",
-      "rut": null,
-      "firstName": "SERVICIOS ODONTOLOGICOS ANTÜ SPA",
-      "lastName": "SERVICIOS ODONTOLOGICOS ANTÜ SPA",
-      "phone": ""
-    },
-    "38": {
-      "name": "MEDICINA ESTÉTICA Y SPA DR. CARLOS MUÑOZ E.I.R.L MEDICINA ESTÉTICA Y SPA DR. CARLOS MUÑOZ E.I.R.L",
-      "rut": null,
-      "firstName": "MEDICINA ESTÉTICA Y SPA DR. CARLOS MUÑOZ E.I.R.L",
-      "lastName": "MEDICINA ESTÉTICA Y SPA DR. CARLOS MUÑOZ E.I.R.L",
-      "phone": ""
-    },
-    "42": {
-      "name": "MEDSTETIC LIMITADA MEDSTETIC LIMITADA",
-      "rut": null,
-      "firstName": "MEDSTETIC LIMITADA",
-      "lastName": "MEDSTETIC LIMITADA",
-      "phone": ""
-    },
-    "43": {
-      "name": "SERVICIOS PROFESIONALES CLC SPA SERVICIOS PROFESIONALES CLC SPA",
-      "rut": null,
-      "firstName": "SERVICIOS PROFESIONALES CLC SPA",
-      "lastName": "SERVICIOS PROFESIONALES CLC SPA",
-      "phone": ""
-    },
-    "44": {
-      "name": "KINESUR LIMITADA KINESUR LIMITADA",
-      "rut": null,
-      "firstName": "KINESUR LIMITADA",
-      "lastName": "KINESUR LIMITADA",
-      "phone": ""
-    },
-    "45": {
-      "name": "SERVICIOS MEDICSO VALDES SPA SERVICIOS MEDICSO VALDES SPA",
-      "rut": null,
-      "firstName": "SERVICIOS MEDICSO VALDES SPA",
-      "lastName": "SERVICIOS MEDICSO VALDES SPA",
-      "phone": ""
-    },
-    "47": {
-      "name": "ODONTOLOGÍA Y ESTÉTICA DRA GALLARDO SPA ODONTOLOGÍA Y ESTÉTICA DRA GALLARDO SPA",
-      "rut": null,
-      "firstName": "ODONTOLOGÍA Y ESTÉTICA DRA GALLARDO SPA",
-      "lastName": "ODONTOLOGÍA Y ESTÉTICA DRA GALLARDO SPA",
-      "phone": ""
-    },
-    "51": {
-      "name": "SILARA SPA SILARA SPA",
-      "rut": null,
-      "firstName": "SILARA SPA",
-      "lastName": "SILARA SPA",
-      "phone": ""
-    },
-    "80": {
-      "name": "Fernanda Romero Fernanda Romero",
-      "rut": null,
-      "firstName": "Fernanda Romero",
-      "lastName": "Fernanda Romero",
-      "phone": ""
-    },
-    "81": {
-      "name": "Francisca Escanilla Francisca Escanilla",
-      "rut": null,
-      "firstName": "Francisca Escanilla",
-      "lastName": "Francisca Escanilla",
-      "phone": ""
-    },
-    "82": {
-      "name": "Francisco Kuschel Francisco Kuschel",
-      "rut": null,
-      "firstName": "Francisco Kuschel",
-      "lastName": "Francisco Kuschel",
-      "phone": ""
-    },
-    "83": {
-      "name": "Franco Klein Franco Klein",
-      "rut": null,
-      "firstName": "Franco Klein",
-      "lastName": "Franco Klein",
-      "phone": ""
-    },
-    "84": {
-      "name": "Gabriela Bastias Gabriela Bastias",
-      "rut": null,
-      "firstName": "Gabriela Bastias",
-      "lastName": "Gabriela Bastias",
-      "phone": ""
-    },
-    "85": {
-      "name": "Gabriela Cardenas Gabriela Cardenas",
-      "rut": null,
-      "firstName": "Gabriela Cardenas",
-      "lastName": "Gabriela Cardenas",
-      "phone": ""
-    },
-    "86": {
-      "name": "Gabriela Chirinos Gabriela Chirinos",
-      "rut": null,
-      "firstName": "Gabriela Chirinos",
-      "lastName": "Gabriela Chirinos",
-      "phone": ""
-    },
-    "87": {
-      "name": "Gabriela Ibañez Gabriela Ibañez",
-      "rut": null,
-      "firstName": "Gabriela Ibañez",
-      "lastName": "Gabriela Ibañez",
-      "phone": ""
-    },
-    "88": {
-      "name": "Gilda Marzullo Gilda Marzullo",
-      "rut": null,
-      "firstName": "Gilda Marzullo",
-      "lastName": "Gilda Marzullo",
-      "phone": ""
-    },
-    "89": {
-      "name": "Hector Calfin Hector Calfin",
-      "rut": null,
-      "firstName": "Hector Calfin",
-      "lastName": "Hector Calfin",
-      "phone": ""
-    },
-    "90": {
-      "name": "Helen Toncio Helen Toncio",
-      "rut": null,
-      "firstName": "Helen Toncio",
-      "lastName": "Helen Toncio",
-      "phone": ""
-    },
-    "91": {
-      "name": "Hernan Caceres Hernan Caceres",
-      "rut": null,
-      "firstName": "Hernan Caceres",
-      "lastName": "Hernan Caceres",
-      "phone": ""
-    },
-    "92": {
-      "name": "High Care High Care",
-      "rut": null,
-      "firstName": "High Care",
-      "lastName": "High Care",
-      "phone": ""
-    },
-    "93": {
-      "name": "Ignacio Alvarez Ignacio Alvarez",
-      "rut": null,
-      "firstName": "Ignacio Alvarez",
-      "lastName": "Ignacio Alvarez",
-      "phone": ""
-    },
-    "94": {
-      "name": "IME SPA IME SPA",
-      "rut": null,
-      "firstName": "IME SPA",
-      "lastName": "IME SPA",
-      "phone": ""
-    },
-    "95": {
-      "name": "Ingrid Acuña Ingrid Acuña",
-      "rut": null,
-      "firstName": "Ingrid Acuña",
-      "lastName": "Ingrid Acuña",
-      "phone": ""
-    },
-    "96": {
-      "name": "Ingrid Ganan Ingrid Ganan",
-      "rut": null,
-      "firstName": "Ingrid Ganan",
-      "lastName": "Ingrid Ganan",
-      "phone": ""
-    },
-    "97": {
-      "name": "Instituto Armony Instituto Armony",
-      "rut": null,
-      "firstName": "Instituto Armony",
-      "lastName": "Instituto Armony",
-      "phone": ""
-    },
-    "98": {
-      "name": "Isabel Maino Isabel Maino",
-      "rut": null,
-      "firstName": "Isabel Maino",
-      "lastName": "Isabel Maino",
-      "phone": ""
-    },
-    "99": {
-      "name": "Isabel Margarita Isabel Margarita",
-      "rut": null,
-      "firstName": "Isabel Margarita",
-      "lastName": "Isabel Margarita",
-      "phone": ""
-    },
-    "100": {
-      "name": "Javiera Benavente Javiera Benavente",
-      "rut": null,
-      "firstName": "Javiera Benavente",
-      "lastName": "Javiera Benavente",
-      "phone": ""
-    },
-    "101": {
-      "name": "Javiera Manriquez Javiera Manriquez",
-      "rut": null,
-      "firstName": "Javiera Manriquez",
-      "lastName": "Javiera Manriquez",
-      "phone": ""
-    },
-    "102": {
-      "name": "Javiera Villalon Javiera Villalon",
-      "rut": null,
-      "firstName": "Javiera Villalon",
-      "lastName": "Javiera Villalon",
-      "phone": ""
-    },
-    "103": {
-      "name": "Jeannette del Pilar Jeannette del Pilar",
-      "rut": null,
-      "firstName": "Jeannette del Pilar",
-      "lastName": "Jeannette del Pilar",
-      "phone": ""
-    },
-    "104": {
-      "name": "Jemima Silva Jemima Silva",
-      "rut": null,
-      "firstName": "Jemima Silva",
-      "lastName": "Jemima Silva",
-      "phone": ""
-    },
-    "105": {
-      "name": "Johanna Moreno Johanna Moreno",
-      "rut": null,
-      "firstName": "Johanna Moreno",
-      "lastName": "Johanna Moreno",
-      "phone": ""
-    },
-    "106": {
-      "name": "Jose Luis Monardes Jose Luis Monardes",
-      "rut": null,
-      "firstName": "Jose Luis Monardes",
-      "lastName": "Jose Luis Monardes",
-      "phone": ""
-    },
-    "107": {
-      "name": "Jose Oyarce Jose Oyarce",
-      "rut": null,
-      "firstName": "Jose Oyarce",
-      "lastName": "Jose Oyarce",
-      "phone": ""
-    },
-    "108": {
-      "name": "Joselyn Korn Joselyn Korn",
-      "rut": null,
-      "firstName": "Joselyn Korn",
-      "lastName": "Joselyn Korn",
-      "phone": ""
-    },
-    "109": {
-      "name": "Juan Luis Delgado Juan Luis Delgado",
-      "rut": null,
-      "firstName": "Juan Luis Delgado",
-      "lastName": "Juan Luis Delgado",
-      "phone": ""
-    },
-    "110": {
-      "name": "Karen Alarcon Karen Alarcon",
-      "rut": null,
-      "firstName": "Karen Alarcon",
-      "lastName": "Karen Alarcon",
-      "phone": ""
-    },
-    "111": {
-      "name": "Karen Nuñez Karen Nuñez",
-      "rut": null,
-      "firstName": "Karen Nuñez",
-      "lastName": "Karen Nuñez",
-      "phone": ""
-    },
-    "112": {
-      "name": "Karin Staab Karin Staab",
-      "rut": null,
-      "firstName": "Karin Staab",
-      "lastName": "Karin Staab",
-      "phone": ""
-    },
-    "113": {
-      "name": "Karina Lobos Karina Lobos",
-      "rut": null,
-      "firstName": "Karina Lobos",
-      "lastName": "Karina Lobos",
-      "phone": ""
-    },
-    "114": {
-      "name": "Karla Acuña Karla Acuña",
-      "rut": null,
-      "firstName": "Karla Acuña",
-      "lastName": "Karla Acuña",
-      "phone": ""
-    },
-    "115": {
-      "name": "Karla Carcamo Karla Carcamo",
-      "rut": null,
-      "firstName": "Karla Carcamo",
-      "lastName": "Karla Carcamo",
-      "phone": ""
-    },
-    "116": {
-      "name": "Karla Galvez Karla Galvez",
-      "rut": null,
-      "firstName": "Karla Galvez",
-      "lastName": "Karla Galvez",
-      "phone": ""
-    },
-    "117": {
-      "name": "Katherin Barria Katherin Barria",
-      "rut": null,
-      "firstName": "Katherin Barria",
-      "lastName": "Katherin Barria",
-      "phone": ""
-    },
-    "118": {
-      "name": "Katherine Ortiz Katherine Ortiz",
-      "rut": null,
-      "firstName": "Katherine Ortiz",
-      "lastName": "Katherine Ortiz",
-      "phone": ""
-    },
-    "119": {
-      "name": "Katherine Vasquez Katherine Vasquez",
-      "rut": null,
-      "firstName": "Katherine Vasquez",
-      "lastName": "Katherine Vasquez",
-      "phone": ""
-    },
-    "120": {
-      "name": "Katy Treizman Katy Treizman",
-      "rut": null,
-      "firstName": "Katy Treizman",
-      "lastName": "Katy Treizman",
-      "phone": ""
-    },
-    "121": {
-      "name": "Laura Aguilar Laura Aguilar",
-      "rut": null,
-      "firstName": "Laura Aguilar",
-      "lastName": "Laura Aguilar",
-      "phone": ""
-    },
-    "122": {
-      "name": "Leydi Maldonado Leydi Maldonado",
-      "rut": null,
-      "firstName": "Leydi Maldonado",
-      "lastName": "Leydi Maldonado",
-      "phone": ""
-    },
-    "123": {
-      "name": "Lianethe Coronel Lianethe Coronel",
-      "rut": null,
-      "firstName": "Lianethe Coronel",
-      "lastName": "Lianethe Coronel",
-      "phone": ""
-    },
-    "124": {
-      "name": "Lorena Cepeda Lorena Cepeda",
-      "rut": null,
-      "firstName": "Lorena Cepeda",
-      "lastName": "Lorena Cepeda",
-      "phone": ""
-    },
-    "125": {
-      "name": "Lorena Osorio Lorena Osorio",
-      "rut": null,
-      "firstName": "Lorena Osorio",
-      "lastName": "Lorena Osorio",
-      "phone": ""
-    },
-    "126": {
-      "name": "Macarena Massound Macarena Massound",
-      "rut": null,
-      "firstName": "Macarena Massound",
-      "lastName": "Macarena Massound",
-      "phone": ""
-    },
-    "127": {
-      "name": "Magaly Valero Magaly Valero",
-      "rut": null,
-      "firstName": "Magaly Valero",
-      "lastName": "Magaly Valero",
-      "phone": ""
-    },
-    "128": {
-      "name": "Magdalena Raveau Magdalena Raveau",
-      "rut": null,
-      "firstName": "Magdalena Raveau",
-      "lastName": "Magdalena Raveau",
-      "phone": ""
-    },
-    "129": {
-      "name": "Marcela Cerda Marcela Cerda",
-      "rut": null,
-      "firstName": "Marcela Cerda",
-      "lastName": "Marcela Cerda",
-      "phone": ""
-    },
-    "130": {
-      "name": "Marcela Hermosilla Marcela Hermosilla",
-      "rut": null,
-      "firstName": "Marcela Hermosilla",
-      "lastName": "Marcela Hermosilla",
-      "phone": ""
-    },
-    "132": {
-      "name": "Margot Contreras Margot Contreras",
-      "rut": null,
-      "firstName": "Margot Contreras",
-      "lastName": "Margot Contreras",
-      "phone": ""
-    },
-    "133": {
-      "name": "Maria Consuelo Idro Maria Consuelo Idro",
-      "rut": null,
-      "firstName": "Maria Consuelo Idro",
-      "lastName": "Maria Consuelo Idro",
-      "phone": ""
-    },
-    "134": {
-      "name": "Maria Paz Soto Maria Paz Soto",
-      "rut": null,
-      "firstName": "Maria Paz Soto",
-      "lastName": "Maria Paz Soto",
-      "phone": ""
-    },
-    "135": {
-      "name": "Mario Zavala Mario Zavala",
-      "rut": null,
-      "firstName": "Mario Zavala",
-      "lastName": "Mario Zavala",
-      "phone": ""
-    },
-    "136": {
-      "name": "Maritza Silva Maritza Silva",
-      "rut": null,
-      "firstName": "Maritza Silva",
-      "lastName": "Maritza Silva",
-      "phone": ""
-    },
-    "137": {
-      "name": "Marta Caceres Marta Caceres",
-      "rut": null,
-      "firstName": "Marta Caceres",
-      "lastName": "Marta Caceres",
-      "phone": ""
-    },
-    "138": {
-      "name": "Martin Rampone Martin Rampone",
-      "rut": null,
-      "firstName": "Martin Rampone",
-      "lastName": "Martin Rampone",
-      "phone": ""
-    },
-    "139": {
-      "name": "Mauricio Pavez Mauricio Pavez",
-      "rut": null,
-      "firstName": "Mauricio Pavez",
-      "lastName": "Mauricio Pavez",
-      "phone": ""
-    },
-    "140": {
-      "name": "Mayleri Pachano Mayleri Pachano",
-      "rut": null,
-      "firstName": "Mayleri Pachano",
-      "lastName": "Mayleri Pachano",
-      "phone": ""
-    },
-    "141": {
-      "name": "Monica Espinosa Monica Espinosa",
-      "rut": null,
-      "firstName": "Monica Espinosa",
-      "lastName": "Monica Espinosa",
-      "phone": ""
-    },
-    "142": {
-      "name": "Monica Mangiamarchi Monica Mangiamarchi",
-      "rut": null,
-      "firstName": "Monica Mangiamarchi",
-      "lastName": "Monica Mangiamarchi",
-      "phone": ""
-    },
-    "143": {
-      "name": "Mra Belen Araneda Mra Belen Araneda",
-      "rut": null,
-      "firstName": "Mra Belen Araneda",
-      "lastName": "Mra Belen Araneda",
-      "phone": ""
-    },
-    "144": {
-      "name": "Mra Consuelo Idro Montes Mra Consuelo Idro Montes",
-      "rut": null,
-      "firstName": "Mra Consuelo Idro Montes",
-      "lastName": "Mra Consuelo Idro Montes",
-      "phone": ""
-    },
-    "145": {
-      "name": "Mra Francisca Correa Mra Francisca Correa",
-      "rut": null,
-      "firstName": "Mra Francisca Correa",
-      "lastName": "Mra Francisca Correa",
-      "phone": ""
-    },
-    "147": {
-      "name": "Mra Jose Castro Mra Jose Castro",
-      "rut": null,
-      "firstName": "Mra Jose Castro",
-      "lastName": "Mra Jose Castro",
-      "phone": ""
-    },
-    "148": {
-      "name": "Mra Jose de la Vega Mra Jose de la Vega",
-      "rut": null,
-      "firstName": "Mra Jose de la Vega",
-      "lastName": "Mra Jose de la Vega",
-      "phone": ""
-    },
-    "149": {
-      "name": "Mra Jose Castro 2 Mra Jose Castro 2",
-      "rut": null,
-      "firstName": "Mra Jose Castro 2",
-      "lastName": "Mra Jose Castro 2",
-      "phone": ""
-    },
-    "150": {
-      "name": "Mra Jose Orellana Mra Jose Orellana",
-      "rut": null,
-      "firstName": "Mra Jose Orellana",
-      "lastName": "Mra Jose Orellana",
-      "phone": ""
-    },
-    "151": {
-      "name": "Mra Paz Caneo Mra Paz Caneo",
-      "rut": null,
-      "firstName": "Mra Paz Caneo",
-      "lastName": "Mra Paz Caneo",
-      "phone": ""
-    },
-    "152": {
-      "name": "Mra Teresa Gaete Mra Teresa Gaete",
-      "rut": null,
-      "firstName": "Mra Teresa Gaete",
-      "lastName": "Mra Teresa Gaete",
-      "phone": ""
-    },
-    "156": {
-      "name": "Nicole Abaroa Nicole Abaroa",
-      "rut": null,
-      "firstName": "Nicole Abaroa",
-      "lastName": "Nicole Abaroa",
-      "phone": ""
-    },
-    "157": {
-      "name": "Nicole Mourgues Nicole Mourgues",
-      "rut": null,
-      "firstName": "Nicole Mourgues",
-      "lastName": "Nicole Mourgues",
-      "phone": ""
-    },
-    "158": {
-      "name": "Noelia Martinez Noelia Martinez",
-      "rut": null,
-      "firstName": "Noelia Martinez",
-      "lastName": "Noelia Martinez",
-      "phone": ""
-    },
-    "159": {
-      "name": "Olga Valenzuela Olga Valenzuela",
-      "rut": null,
-      "firstName": "Olga Valenzuela",
-      "lastName": "Olga Valenzuela",
-      "phone": ""
-    },
-    "160": {
-      "name": "Osvaldo Orellana Osvaldo Orellana",
-      "rut": null,
-      "firstName": "Osvaldo Orellana",
-      "lastName": "Osvaldo Orellana",
-      "phone": ""
-    },
-    "161": {
-      "name": "Pablo Serrano Pablo Serrano",
-      "rut": null,
-      "firstName": "Pablo Serrano",
-      "lastName": "Pablo Serrano",
-      "phone": ""
-    },
-    "162": {
-      "name": "Paola Camacho Paola Camacho",
-      "rut": null,
-      "firstName": "Paola Camacho",
-      "lastName": "Paola Camacho",
-      "phone": ""
-    },
-    "163": {
-      "name": "Patricia Cespedes Patricia Cespedes",
-      "rut": null,
-      "firstName": "Patricia Cespedes",
-      "lastName": "Patricia Cespedes",
-      "phone": ""
-    },
-    "164": {
-      "name": "Patricio Andrade Patricio Andrade",
-      "rut": null,
-      "firstName": "Patricio Andrade",
-      "lastName": "Patricio Andrade",
-      "phone": ""
-    },
-    "165": {
-      "name": "Paula Gavilan Paula Gavilan",
-      "rut": null,
-      "firstName": "Paula Gavilan",
-      "lastName": "Paula Gavilan",
-      "phone": ""
-    },
-    "166": {
-      "name": "Paula Jaramillo Paula Jaramillo",
-      "rut": null,
-      "firstName": "Paula Jaramillo",
-      "lastName": "Paula Jaramillo",
-      "phone": ""
-    },
-    "167": {
-      "name": "Paula Roman Paula Roman",
-      "rut": null,
-      "firstName": "Paula Roman",
-      "lastName": "Paula Roman",
-      "phone": ""
-    },
-    "168": {
-      "name": "Paulina Garriga Paulina Garriga",
-      "rut": null,
-      "firstName": "Paulina Garriga",
-      "lastName": "Paulina Garriga",
-      "phone": ""
-    },
-    "189": {
-      "name": "Sebastian Latapiat Sebastian Latapiat",
-      "rut": null,
-      "firstName": "Sebastian Latapiat",
-      "lastName": "Sebastian Latapiat",
-      "phone": ""
-    },
-    "190": {
-      "name": "Sergio Llanos Sergio Llanos",
-      "rut": null,
-      "firstName": "Sergio Llanos",
-      "lastName": "Sergio Llanos",
-      "phone": ""
-    },
-    "191": {
-      "name": "Sergio Reyes Sergio Reyes",
-      "rut": null,
-      "firstName": "Sergio Reyes",
-      "lastName": "Sergio Reyes",
-      "phone": ""
-    },
-    "192": {
-      "name": "Sergio Valenzuela Sergio Valenzuela",
-      "rut": null,
-      "firstName": "Sergio Valenzuela",
-      "lastName": "Sergio Valenzuela",
-      "phone": ""
-    },
-    "193": {
-      "name": "Sierra Alta Sierra Alta",
-      "rut": null,
-      "firstName": "Sierra Alta",
-      "lastName": "Sierra Alta",
-      "phone": ""
-    },
-    "194": {
-      "name": "Silvana Izaguirre Silvana Izaguirre",
-      "rut": null,
-      "firstName": "Silvana Izaguirre",
-      "lastName": "Silvana Izaguirre",
-      "phone": ""
-    },
-    "195": {
-      "name": "Silvia Salas Silvia Salas",
-      "rut": null,
-      "firstName": "Silvia Salas",
-      "lastName": "Silvia Salas",
-      "phone": ""
-    },
-    "196": {
-      "name": "Skin Med Skin Med",
-      "rut": null,
-      "firstName": "Skin Med",
-      "lastName": "Skin Med",
-      "phone": ""
-    },
-    "197": {
-      "name": "Soledad Gramer Soledad Gramer",
-      "rut": null,
-      "firstName": "Soledad Gramer",
-      "lastName": "Soledad Gramer",
-      "phone": ""
-    },
-    "198": {
-      "name": "Sonia Diaz Sonia Diaz",
-      "rut": null,
-      "firstName": "Sonia Diaz",
-      "lastName": "Sonia Diaz",
-      "phone": ""
-    },
-    "199": {
-      "name": "Stephanie Tosso Stephanie Tosso",
-      "rut": null,
-      "firstName": "Stephanie Tosso",
-      "lastName": "Stephanie Tosso",
-      "phone": ""
-    },
-    "200": {
-      "name": "UNAB UNAB",
-      "rut": null,
-      "firstName": "UNAB",
-      "lastName": "UNAB",
-      "phone": ""
-    },
-    "207": {
-      "name": "Vital Stetic Vital Stetic",
-      "rut": null,
-      "firstName": "Vital Stetic",
-      "lastName": "Vital Stetic",
-      "phone": ""
-    },
-    "208": {
-      "name": "Viviana Valdievieso Viviana Valdievieso",
-      "rut": null,
-      "firstName": "Viviana Valdievieso",
-      "lastName": "Viviana Valdievieso",
-      "phone": ""
-    },
-    "209": {
-      "name": "Webdental Webdental",
-      "rut": null,
-      "firstName": "Webdental",
-      "lastName": "Webdental",
-      "phone": ""
-    },
-    "210": {
-      "name": "Ximena Garrido Ximena Garrido",
-      "rut": null,
-      "firstName": "Ximena Garrido",
-      "lastName": "Ximena Garrido",
-      "phone": ""
-    },
-    "211": {
-      "name": "Ximena Ortiz Ximena Ortiz",
-      "rut": null,
-      "firstName": "Ximena Ortiz",
-      "lastName": "Ximena Ortiz",
-      "phone": ""
-    },
-    "212": {
-      "name": "Yaikelin Viera Yaikelin Viera",
-      "rut": null,
-      "firstName": "Yaikelin Viera",
-      "lastName": "Yaikelin Viera",
-      "phone": ""
-    },
-    "213": {
-      "name": "Yanira Harcha Yanira Harcha",
-      "rut": null,
-      "firstName": "Yanira Harcha",
-      "lastName": "Yanira Harcha",
-      "phone": ""
-    },
-    "214": {
-      "name": "Yennifer Hernandez Yennifer Hernandez",
-      "rut": null,
-      "firstName": "Yennifer Hernandez",
-      "lastName": "Yennifer Hernandez",
-      "phone": ""
-    },
-    "215": {
-      "name": "Yuliana Davila / Solange Nuñez Yuliana Davila / Solange Nuñez",
-      "rut": null,
-      "firstName": "Yuliana Davila / Solange Nuñez",
-      "lastName": "Yuliana Davila / Solange Nuñez",
-      "phone": ""
-    },
-    "216": {
-      "name": "Zuly Zambrano Zuly Zambrano",
-      "rut": null,
-      "firstName": "Zuly Zambrano",
-      "lastName": "Zuly Zambrano",
-      "phone": ""
-    },
-    "218": {
-      "name": "Jose Luis Monardes Jose Luis Monardes",
-      "rut": null,
-      "firstName": "Jose Luis Monardes",
-      "lastName": "Jose Luis Monardes",
-      "phone": ""
-    },
-    "221": {
-      "name": "Viviane Martinez Viviane Martinez",
-      "rut": null,
-      "firstName": "Viviane Martinez",
-      "lastName": "Viviane Martinez",
-      "phone": ""
-    },
-    "223": {
-      "name": "Viviana Valdivia Viviana Valdivia",
-      "rut": null,
-      "firstName": "Viviana Valdivia",
-      "lastName": "Viviana Valdivia",
-      "phone": ""
-    },
-    "224": {
-      "name": "Yelena Salinas Yelena Salinas",
-      "rut": null,
-      "firstName": "Yelena Salinas",
-      "lastName": "Yelena Salinas",
-      "phone": ""
-    },
-    "225": {
-      "name": "Luis Vergara Luis Vergara",
-      "rut": null,
-      "firstName": "Luis Vergara",
-      "lastName": "Luis Vergara",
-      "phone": ""
-    },
-    "227": {
-      "name": "Ximena sarzosa Ximena sarzosa",
-      "rut": null,
-      "firstName": "Ximena sarzosa",
-      "lastName": "Ximena sarzosa",
-      "phone": ""
-    },
-    "228": {
-      "name": "Yessenia Valenzuela Yessenia Valenzuela",
-      "rut": null,
-      "firstName": "Yessenia Valenzuela",
-      "lastName": "Yessenia Valenzuela",
-      "phone": ""
-    },
-    "233": {
-      "name": "Paula Quezada Paula Quezada",
-      "rut": null,
-      "firstName": "Paula Quezada",
-      "lastName": "Paula Quezada",
-      "phone": ""
-    },
-    "236": {
-      "name": "Orianna Escorihuela Orianna Escorihuela",
-      "rut": null,
-      "firstName": "Orianna Escorihuela",
-      "lastName": "Orianna Escorihuela",
-      "phone": ""
-    },
-    "237": {
-      "name": "Maria Alejandra Levin Maria Alejandra Levin",
-      "rut": null,
-      "firstName": "Maria Alejandra Levin",
-      "lastName": "Maria Alejandra Levin",
-      "phone": ""
-    },
-    "239": {
-      "name": "Noelia Martinez (PROF) Noelia Martinez (PROF)",
-      "rut": null,
-      "firstName": "Noelia Martinez (PROF)",
-      "lastName": "Noelia Martinez (PROF)",
-      "phone": ""
-    },
-    "243": {
-      "name": "Isabel Abara Isabel Abara",
-      "rut": null,
-      "firstName": "Isabel Abara",
-      "lastName": "Isabel Abara",
-      "phone": ""
-    },
-    "245": {
-      "name": "Helga Farherkrog Helga Farherkrog",
-      "rut": null,
-      "firstName": "Helga Farherkrog",
-      "lastName": "Helga Farherkrog",
-      "phone": ""
-    },
-    "247": {
-      "name": "Jorge Heredia Jorge Heredia",
-      "rut": null,
-      "firstName": "Jorge Heredia",
-      "lastName": "Jorge Heredia",
-      "phone": ""
-    },
-    "249": {
-      "name": "Javier Rybertt Javier Rybertt",
-      "rut": null,
-      "firstName": "Javier Rybertt",
-      "lastName": "Javier Rybertt",
-      "phone": ""
-    },
-    "252": {
-      "name": "Paula Vargas Paula Vargas",
-      "rut": null,
-      "firstName": "Paula Vargas",
-      "lastName": "Paula Vargas",
-      "phone": ""
-    },
-    "253": {
-      "name": "Monica Calderon Monica Calderon",
-      "rut": null,
-      "firstName": "Monica Calderon",
-      "lastName": "Monica Calderon",
-      "phone": ""
-    },
-    "254": {
-      "name": "High Care Beauty High Care Beauty",
-      "rut": null,
-      "firstName": "High Care Beauty",
-      "lastName": "High Care Beauty",
-      "phone": ""
-    },
-    "257": {
-      "name": "Paulina Andrade Paulina Andrade",
-      "rut": null,
-      "firstName": "Paulina Andrade",
-      "lastName": "Paulina Andrade",
-      "phone": ""
-    },
-    "262": {
-      "name": "John Bonilla John Bonilla",
-      "rut": null,
-      "firstName": "John Bonilla",
-      "lastName": "John Bonilla",
-      "phone": ""
-    },
-    "264": {
-      "name": "Maria Fernanda del Carmen Brito Maria Fernanda del Carmen Brito",
-      "rut": null,
-      "firstName": "Maria Fernanda del Carmen Brito",
-      "lastName": "Maria Fernanda del Carmen Brito",
-      "phone": ""
-    },
-    "267": {
-      "name": "Mra Jesus Ghiringhelli Mra Jesus Ghiringhelli",
-      "rut": null,
-      "firstName": "Mra Jesus Ghiringhelli",
-      "lastName": "Mra Jesus Ghiringhelli",
-      "phone": ""
-    },
-    "274": {
-      "name": "Mra Ines Robles Mra Ines Robles",
-      "rut": null,
-      "firstName": "Mra Ines Robles",
-      "lastName": "Mra Ines Robles",
-      "phone": ""
-    },
-    "276": {
-      "name": "Mariela Uribe Mariela Uribe",
-      "rut": null,
-      "firstName": "Mariela Uribe",
-      "lastName": "Mariela Uribe",
-      "phone": ""
-    },
-    "277": {
-      "name": "Fernanda Rodriguez Fernanda Rodriguez",
-      "rut": null,
-      "firstName": "Fernanda Rodriguez",
-      "lastName": "Fernanda Rodriguez",
-      "phone": ""
-    },
-    "279": {
-      "name": "Katherine Scalia Katherine Scalia",
-      "rut": null,
-      "firstName": "Katherine Scalia",
-      "lastName": "Katherine Scalia",
-      "phone": ""
-    },
-    "280": {
-      "name": "Katica Peric Katica Peric",
-      "rut": null,
-      "firstName": "Katica Peric",
-      "lastName": "Katica Peric",
-      "phone": ""
-    },
-    "283": {
-      "name": "Jorge Rivera Jorge Rivera",
-      "rut": null,
-      "firstName": "Jorge Rivera",
-      "lastName": "Jorge Rivera",
-      "phone": ""
-    },
-    "284": {
-      "name": "Francisco Kuschel Francisco Kuschel",
-      "rut": null,
-      "firstName": "Francisco Kuschel",
-      "lastName": "Francisco Kuschel",
-      "phone": ""
-    },
-    "289": {
-      "name": "Mra Dolores de la Jara Mra Dolores de la Jara",
-      "rut": null,
-      "firstName": "Mra Dolores de la Jara",
-      "lastName": "Mra Dolores de la Jara",
-      "phone": ""
-    },
-    "292": {
-      "name": "Monica Ariño Monica Ariño",
-      "rut": null,
-      "firstName": "Monica Ariño",
-      "lastName": "Monica Ariño",
-      "phone": ""
-    },
-    "293": {
-      "name": "Fernando Gilabert Fernando Gilabert",
-      "rut": null,
-      "firstName": "Fernando Gilabert",
-      "lastName": "Fernando Gilabert",
-      "phone": ""
-    },
-    "295": {
-      "name": "Mra Angelica Fuentealba Mra Angelica Fuentealba",
-      "rut": null,
-      "firstName": "Mra Angelica Fuentealba",
-      "lastName": "Mra Angelica Fuentealba",
-      "phone": ""
-    },
-    "296": {
-      "name": "Jimena Maureri Jimena Maureri",
-      "rut": null,
-      "firstName": "Jimena Maureri",
-      "lastName": "Jimena Maureri",
-      "phone": ""
-    },
-    "299": {
-      "name": "Paula Aguilera Paula Aguilera",
-      "rut": null,
-      "firstName": "Paula Aguilera",
-      "lastName": "Paula Aguilera",
-      "phone": ""
-    },
-    "300": {
-      "name": "Isabel Albarran Isabel Albarran",
-      "rut": null,
-      "firstName": "Isabel Albarran",
-      "lastName": "Isabel Albarran",
-      "phone": ""
-    },
-    "301": {
-      "name": "Francisca Gleboff Francisca Gleboff",
-      "rut": null,
-      "firstName": "Francisca Gleboff",
-      "lastName": "Francisca Gleboff",
-      "phone": ""
-    },
-    "303": {
-      "name": "Karla Acuña Personal Karla Acuña Personal",
-      "rut": null,
-      "firstName": "Karla Acuña Personal",
-      "lastName": "Karla Acuña Personal",
-      "phone": ""
-    },
-    "304": {
-      "name": "Yle Lopez Yle Lopez",
-      "rut": null,
-      "firstName": "Yle Lopez",
-      "lastName": "Yle Lopez",
-      "phone": ""
-    },
-    "306": {
-      "name": "Isidora Gonzalez Isidora Gonzalez",
-      "rut": null,
-      "firstName": "Isidora Gonzalez",
-      "lastName": "Isidora Gonzalez",
-      "phone": ""
-    },
-    "307": {
-      "name": "Karen Alfaro Karen Alfaro",
-      "rut": null,
-      "firstName": "Karen Alfaro",
-      "lastName": "Karen Alfaro",
-      "phone": ""
-    },
-    "309": {
-      "name": "Francisca Tapia Francisca Tapia",
-      "rut": null,
-      "firstName": "Francisca Tapia",
-      "lastName": "Francisca Tapia",
-      "phone": ""
-    },
-    "311": {
-      "name": "Gleycera Beloa Gleycera Beloa",
-      "rut": null,
-      "firstName": "Gleycera Beloa",
-      "lastName": "Gleycera Beloa",
-      "phone": ""
-    },
-    "312": {
-      "name": "Isabel bernier Isabel bernier",
-      "rut": null,
-      "firstName": "Isabel bernier",
-      "lastName": "Isabel bernier",
-      "phone": ""
-    },
-    "314": {
-      "name": "Francisca Garcia Francisca Garcia",
-      "rut": null,
-      "firstName": "Francisca Garcia",
-      "lastName": "Francisca Garcia",
-      "phone": ""
-    },
-    "315": {
-      "name": "Paula Unda Paula Unda",
-      "rut": null,
-      "firstName": "Paula Unda",
-      "lastName": "Paula Unda",
-      "phone": ""
-    },
-    "316": {
-      "name": "Francisca Chamorro Francisca Chamorro",
-      "rut": null,
-      "firstName": "Francisca Chamorro",
-      "lastName": "Francisca Chamorro",
-      "phone": ""
-    },
-    "317": {
-      "name": "Macarena Soto Macarena Soto",
-      "rut": null,
-      "firstName": "Macarena Soto",
-      "lastName": "Macarena Soto",
-      "phone": ""
-    },
-    "318": {
-      "name": "Mra Estefania Vilchez Mra Estefania Vilchez",
-      "rut": null,
-      "firstName": "Mra Estefania Vilchez",
-      "lastName": "Mra Estefania Vilchez",
-      "phone": ""
-    },
-    "320": {
-      "name": "Tamara Pinto Tamara Pinto",
-      "rut": null,
-      "firstName": "Tamara Pinto",
-      "lastName": "Tamara Pinto",
-      "phone": ""
-    },
-    "323": {
-      "name": "Jonathan Garcia Jonathan Garcia",
-      "rut": null,
-      "firstName": "Jonathan Garcia",
-      "lastName": "Jonathan Garcia",
-      "phone": ""
-    },
-    "324": {
-      "name": "Yusset Arguedas Yusset Arguedas",
-      "rut": null,
-      "firstName": "Yusset Arguedas",
-      "lastName": "Yusset Arguedas",
-      "phone": ""
-    },
-    "325": {
-      "name": "Giovanni Vivas Giovanni Vivas",
-      "rut": null,
-      "firstName": "Giovanni Vivas",
-      "lastName": "Giovanni Vivas",
-      "phone": ""
-    },
-    "326": {
-      "name": "Matias Tagle Matias Tagle",
-      "rut": null,
-      "firstName": "Matias Tagle",
-      "lastName": "Matias Tagle",
-      "phone": ""
-    },
-    "327": {
-      "name": "Jeferson Plaza Jeferson Plaza",
-      "rut": null,
-      "firstName": "Jeferson Plaza",
-      "lastName": "Jeferson Plaza",
-      "phone": ""
-    },
-    "328": {
-      "name": "Sebastian Budinich Sebastian Budinich",
-      "rut": null,
-      "firstName": "Sebastian Budinich",
-      "lastName": "Sebastian Budinich",
-      "phone": ""
-    },
-    "331": {
-      "name": "XIMENA LIDIA SILVA BAHAMONDEZ XIMENA LIDIA SILVA BAHAMONDEZ",
-      "rut": null,
-      "firstName": "XIMENA LIDIA SILVA BAHAMONDEZ",
-      "lastName": "XIMENA LIDIA SILVA BAHAMONDEZ",
-      "phone": ""
-    },
-    "336": {
-      "name": "Yuliana Davila / Cindy Rada Yuliana Davila / Cindy Rada",
-      "rut": null,
-      "firstName": "Yuliana Davila / Cindy Rada",
-      "lastName": "Yuliana Davila / Cindy Rada",
-      "phone": ""
-    },
-    "337": {
-      "name": "Jose Luis Gatica Jose Luis Gatica",
-      "rut": null,
-      "firstName": "Jose Luis Gatica",
-      "lastName": "Jose Luis Gatica",
-      "phone": ""
-    },
-    "338": {
-      "name": "Tatiana Carraza Tatiana Carraza",
-      "rut": null,
-      "firstName": "Tatiana Carraza",
-      "lastName": "Tatiana Carraza",
-      "phone": ""
-    },
-    "340": {
-      "name": "Kathetine Andrea Toro Henriquez Kathetine Andrea Toro Henriquez",
-      "rut": null,
-      "firstName": "Kathetine Andrea Toro Henriquez",
-      "lastName": "Kathetine Andrea Toro Henriquez",
-      "phone": ""
-    },
-    "341": {
-      "name": "HEATHER DENISE DECAR HAHN HEATHER DENISE DECAR HAHN",
-      "rut": null,
-      "firstName": "HEATHER DENISE DECAR HAHN",
-      "lastName": "HEATHER DENISE DECAR HAHN",
-      "phone": ""
-    },
-    "342": {
-      "name": "Isabel Pierola Isabel Pierola",
-      "rut": null,
-      "firstName": "Isabel Pierola",
-      "lastName": "Isabel Pierola",
-      "phone": ""
-    },
-    "343": {
-      "name": "MACARENA PAZ LEICHTLE PENA MACARENA PAZ LEICHTLE PENA",
-      "rut": null,
-      "firstName": "MACARENA PAZ LEICHTLE PENA",
-      "lastName": "MACARENA PAZ LEICHTLE PENA",
-      "phone": ""
-    },
-    "344": {
-      "name": "Maria Isabel Alarcon Maria Isabel Alarcon",
-      "rut": null,
-      "firstName": "Maria Isabel Alarcon",
-      "lastName": "Maria Isabel Alarcon",
-      "phone": ""
-    },
-    "345": {
-      "name": "Joaquin Navarro Joaquin Navarro",
-      "rut": null,
-      "firstName": "Joaquin Navarro",
-      "lastName": "Joaquin Navarro",
-      "phone": ""
-    },
-    "346": {
-      "name": "Marjorie Gold Marjorie Gold",
-      "rut": null,
-      "firstName": "Marjorie Gold",
-      "lastName": "Marjorie Gold",
-      "phone": ""
-    },
-    "347": {
-      "name": "Maria Sanchez Maria Sanchez",
-      "rut": null,
-      "firstName": "Maria Sanchez",
-      "lastName": "Maria Sanchez",
-      "phone": ""
-    },
-    "348": {
-      "name": "Mauricio Rojas Mauricio Rojas",
-      "rut": null,
-      "firstName": "Mauricio Rojas",
-      "lastName": "Mauricio Rojas",
-      "phone": ""
-    },
-    "349": {
-      "name": "Fernando Lavin Fernando Lavin",
-      "rut": null,
-      "firstName": "Fernando Lavin",
-      "lastName": "Fernando Lavin",
-      "phone": ""
-    },
-    "350": {
-      "name": "GERALDY MARISEL GENERAL OVALLE GERALDY MARISEL GENERAL OVALLE",
-      "rut": null,
-      "firstName": "GERALDY MARISEL GENERAL OVALLE",
-      "lastName": "GERALDY MARISEL GENERAL OVALLE",
-      "phone": ""
-    },
-    "351": {
-      "name": "Lucia Marin Lucia Marin",
-      "rut": null,
-      "firstName": "Lucia Marin",
-      "lastName": "Lucia Marin",
-      "phone": ""
-    },
-    "358": {
-      "name": "Javiera Baeza Javiera Baeza",
-      "rut": null,
-      "firstName": "Javiera Baeza",
-      "lastName": "Javiera Baeza",
-      "phone": ""
-    },
-    "360": {
-      "name": "Javiera Tamarin Javiera Tamarin",
-      "rut": null,
-      "firstName": "Javiera Tamarin",
-      "lastName": "Javiera Tamarin",
-      "phone": ""
-    },
-    "362": {
-      "name": "Luis Vergara Luis Vergara",
-      "rut": null,
-      "firstName": "Luis Vergara",
-      "lastName": "Luis Vergara",
-      "phone": ""
-    },
-    "363": {
-      "name": "Ibis Balladares Ibis Balladares",
-      "rut": null,
-      "firstName": "Ibis Balladares",
-      "lastName": "Ibis Balladares",
-      "phone": ""
-    },
-    "364": {
-      "name": "Skin Up Skin Up",
-      "rut": null,
-      "firstName": "Skin Up",
-      "lastName": "Skin Up",
-      "phone": ""
-    },
-    "366": {
-      "name": "Sun-yin Boksamy Sun-yin Boksamy",
-      "rut": null,
-      "firstName": "Sun-yin Boksamy",
-      "lastName": "Sun-yin Boksamy",
-      "phone": ""
-    },
-    "367": {
-      "name": "Orianna Quintero Orianna Quintero",
-      "rut": null,
-      "firstName": "Orianna Quintero",
-      "lastName": "Orianna Quintero",
-      "phone": ""
-    },
-    "369": {
-      "name": "Francisca Constanzo Francisca Constanzo",
-      "rut": null,
-      "firstName": "Francisca Constanzo",
-      "lastName": "Francisca Constanzo",
-      "phone": ""
-    },
-    "373": {
-      "name": "Javiera Guevara Javiera Guevara",
-      "rut": null,
-      "firstName": "Javiera Guevara",
-      "lastName": "Javiera Guevara",
-      "phone": ""
-    },
-    "374": {
-      "name": "Marta Di Biaggio Marta Di Biaggio",
-      "rut": null,
-      "firstName": "Marta Di Biaggio",
-      "lastName": "Marta Di Biaggio",
-      "phone": ""
-    },
-    "377": {
-      "name": "Jaime Gaete Jaime Gaete",
-      "rut": null,
-      "firstName": "Jaime Gaete",
-      "lastName": "Jaime Gaete",
-      "phone": ""
-    },
-    "379": {
-      "name": "MELISSA ARROYAVE ESPINOSA MELISSA ARROYAVE ESPINOSA",
-      "rut": null,
-      "firstName": "MELISSA ARROYAVE ESPINOSA",
-      "lastName": "MELISSA ARROYAVE ESPINOSA",
-      "phone": ""
-    },
-    "380": {
-      "name": "INES RECART PARRA INES RECART PARRA",
-      "rut": null,
-      "firstName": "INES RECART PARRA",
-      "lastName": "INES RECART PARRA",
-      "phone": ""
-    },
-    "381": {
-      "name": "Silvana Inspira Silvana Inspira",
-      "rut": null,
-      "firstName": "Silvana Inspira",
-      "lastName": "Silvana Inspira",
-      "phone": ""
-    },
-    "383": {
-      "name": "Orianna Escorihuela Orianna Escorihuela",
-      "rut": null,
-      "firstName": "Orianna Escorihuela",
-      "lastName": "Orianna Escorihuela",
-      "phone": ""
-    },
-    "384": {
-      "name": "Macarena Toledo Macarena Toledo",
-      "rut": null,
-      "firstName": "Macarena Toledo",
-      "lastName": "Macarena Toledo",
-      "phone": ""
-    },
-    "385": {
-      "name": "Mra Jose Henriquez Mra Jose Henriquez",
-      "rut": null,
-      "firstName": "Mra Jose Henriquez",
-      "lastName": "Mra Jose Henriquez",
-      "phone": ""
-    },
-    "386": {
-      "name": "LORETO PAZ URIBE NEIRA LORETO PAZ URIBE NEIRA",
-      "rut": null,
-      "firstName": "LORETO PAZ URIBE NEIRA",
-      "lastName": "LORETO PAZ URIBE NEIRA",
-      "phone": ""
-    },
-    "387": {
-      "name": "Isabel Loyola Isabel Loyola",
-      "rut": null,
-      "firstName": "Isabel Loyola",
-      "lastName": "Isabel Loyola",
-      "phone": ""
-    },
-    "389": {
-      "name": "Paula Sanhueza Paula Sanhueza",
-      "rut": null,
-      "firstName": "Paula Sanhueza",
-      "lastName": "Paula Sanhueza",
-      "phone": ""
-    },
-    "390": {
-      "name": "Francisca Gonzalez Francisca Gonzalez",
-      "rut": null,
-      "firstName": "Francisca Gonzalez",
-      "lastName": "Francisca Gonzalez",
-      "phone": ""
-    },
-    "392": {
-      "name": "Luciana Sebastianelli Luciana Sebastianelli",
-      "rut": null,
-      "firstName": "Luciana Sebastianelli",
-      "lastName": "Luciana Sebastianelli",
-      "phone": ""
-    },
-    "394": {
-      "name": "Fernando Lavin Fernando Lavin",
-      "rut": null,
-      "firstName": "Fernando Lavin",
-      "lastName": "Fernando Lavin",
-      "phone": ""
-    },
-    "395": {
-      "name": "Giovanni Castilani Giovanni Castilani",
-      "rut": null,
-      "firstName": "Giovanni Castilani",
-      "lastName": "Giovanni Castilani",
-      "phone": ""
-    },
-    "396": {
-      "name": "Tatiana Baboun Tatiana Baboun",
-      "rut": null,
-      "firstName": "Tatiana Baboun",
-      "lastName": "Tatiana Baboun",
-      "phone": ""
-    },
-    "397": {
-      "name": "Miguel Paredes Miguel Paredes",
-      "rut": null,
-      "firstName": "Miguel Paredes",
-      "lastName": "Miguel Paredes",
-      "phone": ""
-    },
-    "401": {
-      "name": "Jennifer Rodriguez Jennifer Rodriguez",
-      "rut": null,
-      "firstName": "Jennifer Rodriguez",
-      "lastName": "Jennifer Rodriguez",
-      "phone": ""
-    },
-    "402": {
-      "name": "Helga Villaroel Helga Villaroel",
-      "rut": null,
-      "firstName": "Helga Villaroel",
-      "lastName": "Helga Villaroel",
-      "phone": ""
-    },
-    "405": {
-      "name": "Javiera Zuñiga Javiera Zuñiga",
-      "rut": null,
-      "firstName": "Javiera Zuñiga",
-      "lastName": "Javiera Zuñiga",
-      "phone": ""
-    },
-    "406": {
-      "name": "Joan Asdrubal Joan Asdrubal",
-      "rut": null,
-      "firstName": "Joan Asdrubal",
-      "lastName": "Joan Asdrubal",
-      "phone": ""
-    },
-    "407": {
-      "name": "Tami Rivera Tami Rivera",
-      "rut": null,
-      "firstName": "Tami Rivera",
-      "lastName": "Tami Rivera",
-      "phone": ""
-    },
-    "408": {
-      "name": "Laura Retamal Laura Retamal",
-      "rut": null,
-      "firstName": "Laura Retamal",
-      "lastName": "Laura Retamal",
-      "phone": ""
-    },
-    "409": {
-      "name": "Marisel Lazarde Marisel Lazarde",
-      "rut": null,
-      "firstName": "Marisel Lazarde",
-      "lastName": "Marisel Lazarde",
-      "phone": ""
-    },
-    "410": {
-      "name": "Veronica Llanos Veronica Llanos",
-      "rut": null,
-      "firstName": "Veronica Llanos",
-      "lastName": "Veronica Llanos",
-      "phone": ""
-    },
-    "411": {
-      "name": "Lisette Gomez Lisette Gomez",
-      "rut": null,
-      "firstName": "Lisette Gomez",
-      "lastName": "Lisette Gomez",
-      "phone": ""
-    },
-    "413": {
-      "name": "Vitaskin Vitaskin",
-      "rut": null,
-      "firstName": "Vitaskin",
-      "lastName": "Vitaskin",
-      "phone": ""
-    },
-    "414": {
-      "name": "Gabriela Albornoz Gabriela Albornoz",
-      "rut": null,
-      "firstName": "Gabriela Albornoz",
-      "lastName": "Gabriela Albornoz",
-      "phone": ""
-    },
-    "415": {
-      "name": "Isabel Pierola Isabel Pierola",
-      "rut": null,
-      "firstName": "Isabel Pierola",
-      "lastName": "Isabel Pierola",
-      "phone": ""
-    },
-    "417": {
-      "name": "Maria Paz Soto Maria Paz Soto",
-      "rut": null,
-      "firstName": "Maria Paz Soto",
-      "lastName": "Maria Paz Soto",
-      "phone": ""
-    },
-    "418": {
-      "name": "Janett Cruz Janett Cruz",
-      "rut": null,
-      "firstName": "Janett Cruz",
-      "lastName": "Janett Cruz",
-      "phone": ""
-    },
-    "421": {
-      "name": "Marcelino Suazo Marcelino Suazo",
-      "rut": null,
-      "firstName": "Marcelino Suazo",
-      "lastName": "Marcelino Suazo",
-      "phone": ""
-    },
-    "423": {
-      "name": "Pamela Torres Pamela Torres",
-      "rut": null,
-      "firstName": "Pamela Torres",
-      "lastName": "Pamela Torres",
-      "phone": ""
-    },
-    "424": {
-      "name": "Jearitza Rios Jearitza Rios",
-      "rut": null,
-      "firstName": "Jearitza Rios",
-      "lastName": "Jearitza Rios",
-      "phone": ""
     },
     "425": {
       "name": "ADRIANNA ALEJANDRA PARRA TOVAR",
@@ -3280,13 +1600,6 @@
       "rut": "17859060-k",
       "firstName": "Paula Quezada",
       "lastName": "Paula Quezada",
-      "phone": ""
-    },
-    "654": {
-      "name": "SERVICIOS ODONTOLOGICOS NOTEBAERT SPA",
-      "rut": "77725647-5",
-      "firstName": "Valentina Constanza",
-      "lastName": "Valentina Constanza",
       "phone": ""
     },
     "655": {
@@ -7572,6 +5885,3065 @@
       "firstName": "BARBARA",
       "lastName": "LERDON",
       "phone": "993051945"
+    },
+    "2": {
+      "name": "Sociedad Clínica Ginestetica SPA",
+      "rut": "76792347-3",
+      "firstName": "",
+      "lastName": "",
+      "phone": ""
+    },
+    "4": {
+      "name": "SOCIEDAD AXA SPA SOCIEDAD AXA SPA",
+      "rut": null,
+      "firstName": "SOCIEDAD AXA SPA",
+      "lastName": "SOCIEDAD AXA SPA",
+      "phone": ""
+    },
+    "11": {
+      "name": "SERVICIOS PROFESIONALES MCU SPA SERVICIOS PROFESIONALES MCU SPA",
+      "rut": null,
+      "firstName": "SERVICIOS PROFESIONALES MCU SPA",
+      "lastName": "SERVICIOS PROFESIONALES MCU SPA",
+      "phone": ""
+    },
+    "14": {
+      "name": "SERVICIOS MEDICOS Y DENTALES BELKNER Y CINQUEMANI SPA SERVICIOS MEDICOS Y DENTALES BELKNER Y CINQUEMANI SPA",
+      "rut": null,
+      "firstName": "SERVICIOS MEDICOS Y DENTALES BELKNER Y CINQUEMANI",
+      "lastName": "SERVICIOS MEDICOS Y DENTALES BELKNER Y CINQUEMANI",
+      "phone": ""
+    },
+    "16": {
+      "name": "SOCIEDAD PROFESIONALES MEDICA ESTETICA ODONTOLOGICA Y EDUCACIONAL FAGA L SOCIEDAD PROFESIONALES MEDICA ESTETICA ODONTOLOGICA Y EDUCACIONAL FAGA L",
+      "rut": null,
+      "firstName": "SOCIEDAD PROFESIONALES MEDICA ESTETICA ODONTOLOGIC",
+      "lastName": "SOCIEDAD PROFESIONALES MEDICA ESTETICA ODONTOLOGIC",
+      "phone": ""
+    },
+    "19": {
+      "name": "SOCIEDAD MEDICA DE OTORRINOLARINGOLOGIA EBENEZER LIMITADA SOCIEDAD MEDICA DE OTORRINOLARINGOLOGIA EBENEZER LIMITADA",
+      "rut": null,
+      "firstName": "SOCIEDAD MEDICA DE OTORRINOLARINGOLOGIA EBENEZER L",
+      "lastName": "SOCIEDAD MEDICA DE OTORRINOLARINGOLOGIA EBENEZER L",
+      "phone": ""
+    },
+    "21": {
+      "name": "MÉDICEN CENTRO MÉDICO AVANZADO SPA MÉDICEN CENTRO MÉDICO AVANZADO SPA",
+      "rut": null,
+      "firstName": "MÉDICEN CENTRO MÉDICO AVANZADO SPA",
+      "lastName": "MÉDICEN CENTRO MÉDICO AVANZADO SPA",
+      "phone": ""
+    },
+    "23": {
+      "name": "VIVA SKIN SPA VIVA SKIN SPA",
+      "rut": null,
+      "firstName": "VIVA SKIN SPA",
+      "lastName": "VIVA SKIN SPA",
+      "phone": ""
+    },
+    "29": {
+      "name": "HEVA SERVICIOS DE ESTETICA Y SALUD LIMITADA HEVA SERVICIOS DE ESTETICA Y SALUD LIMITADA",
+      "rut": null,
+      "firstName": "HEVA SERVICIOS DE ESTETICA Y SALUD LIMITADA",
+      "lastName": "HEVA SERVICIOS DE ESTETICA Y SALUD LIMITADA",
+      "phone": ""
+    },
+    "34": {
+      "name": "SERVICIOS ODONTOLOGICOS CARLA SOFIA BASTIAS NASI E.I.R.L SERVICIOS ODONTOLOGICOS CARLA SOFIA BASTIAS NASI E.I.R.L",
+      "rut": null,
+      "firstName": "SERVICIOS ODONTOLOGICOS CARLA SOFIA BASTIAS NASI E",
+      "lastName": "SERVICIOS ODONTOLOGICOS CARLA SOFIA BASTIAS NASI E",
+      "phone": ""
+    },
+    "35": {
+      "name": "PARRA Y CERUTTI LIMITADA PARRA Y CERUTTI LIMITADA",
+      "rut": null,
+      "firstName": "PARRA Y CERUTTI LIMITADA",
+      "lastName": "PARRA Y CERUTTI LIMITADA",
+      "phone": ""
+    },
+    "36": {
+      "name": "SERVICIOS ODONTOLOGICOS ANTÜ SPA SERVICIOS ODONTOLOGICOS ANTÜ SPA",
+      "rut": null,
+      "firstName": "SERVICIOS ODONTOLOGICOS ANTÜ SPA",
+      "lastName": "SERVICIOS ODONTOLOGICOS ANTÜ SPA",
+      "phone": ""
+    },
+    "38": {
+      "name": "MEDICINA ESTÉTICA Y SPA DR. CARLOS MUÑOZ E.I.R.L MEDICINA ESTÉTICA Y SPA DR. CARLOS MUÑOZ E.I.R.L",
+      "rut": null,
+      "firstName": "MEDICINA ESTÉTICA Y SPA DR. CARLOS MUÑOZ E.I.R.L",
+      "lastName": "MEDICINA ESTÉTICA Y SPA DR. CARLOS MUÑOZ E.I.R.L",
+      "phone": ""
+    },
+    "42": {
+      "name": "MEDSTETIC LIMITADA MEDSTETIC LIMITADA",
+      "rut": null,
+      "firstName": "MEDSTETIC LIMITADA",
+      "lastName": "MEDSTETIC LIMITADA",
+      "phone": ""
+    },
+    "43": {
+      "name": "SERVICIOS PROFESIONALES CLC SPA SERVICIOS PROFESIONALES CLC SPA",
+      "rut": null,
+      "firstName": "SERVICIOS PROFESIONALES CLC SPA",
+      "lastName": "SERVICIOS PROFESIONALES CLC SPA",
+      "phone": ""
+    },
+    "44": {
+      "name": "KINESUR LIMITADA KINESUR LIMITADA",
+      "rut": null,
+      "firstName": "KINESUR LIMITADA",
+      "lastName": "KINESUR LIMITADA",
+      "phone": ""
+    },
+    "45": {
+      "name": "SERVICIOS MEDICSO VALDES SPA SERVICIOS MEDICSO VALDES SPA",
+      "rut": null,
+      "firstName": "SERVICIOS MEDICSO VALDES SPA",
+      "lastName": "SERVICIOS MEDICSO VALDES SPA",
+      "phone": ""
+    },
+    "47": {
+      "name": "ODONTOLOGÍA Y ESTÉTICA DRA GALLARDO SPA ODONTOLOGÍA Y ESTÉTICA DRA GALLARDO SPA",
+      "rut": null,
+      "firstName": "ODONTOLOGÍA Y ESTÉTICA DRA GALLARDO SPA",
+      "lastName": "ODONTOLOGÍA Y ESTÉTICA DRA GALLARDO SPA",
+      "phone": ""
+    },
+    "51": {
+      "name": "SILARA SPA SILARA SPA",
+      "rut": null,
+      "firstName": "SILARA SPA",
+      "lastName": "SILARA SPA",
+      "phone": ""
+    },
+    "80": {
+      "name": "Fernanda Romero Fernanda Romero",
+      "rut": null,
+      "firstName": "Fernanda Romero",
+      "lastName": "Fernanda Romero",
+      "phone": ""
+    },
+    "81": {
+      "name": "Francisca Escanilla Francisca Escanilla",
+      "rut": null,
+      "firstName": "Francisca Escanilla",
+      "lastName": "Francisca Escanilla",
+      "phone": ""
+    },
+    "82": {
+      "name": "Francisco Kuschel Francisco Kuschel",
+      "rut": null,
+      "firstName": "Francisco Kuschel",
+      "lastName": "Francisco Kuschel",
+      "phone": ""
+    },
+    "83": {
+      "name": "Franco Klein Franco Klein",
+      "rut": null,
+      "firstName": "Franco Klein",
+      "lastName": "Franco Klein",
+      "phone": ""
+    },
+    "84": {
+      "name": "Gabriela Bastias Gabriela Bastias",
+      "rut": null,
+      "firstName": "Gabriela Bastias",
+      "lastName": "Gabriela Bastias",
+      "phone": ""
+    },
+    "85": {
+      "name": "Gabriela Cardenas Gabriela Cardenas",
+      "rut": null,
+      "firstName": "Gabriela Cardenas",
+      "lastName": "Gabriela Cardenas",
+      "phone": ""
+    },
+    "86": {
+      "name": "Gabriela Chirinos Gabriela Chirinos",
+      "rut": null,
+      "firstName": "Gabriela Chirinos",
+      "lastName": "Gabriela Chirinos",
+      "phone": ""
+    },
+    "87": {
+      "name": "Gabriela Ibañez Gabriela Ibañez",
+      "rut": null,
+      "firstName": "Gabriela Ibañez",
+      "lastName": "Gabriela Ibañez",
+      "phone": ""
+    },
+    "88": {
+      "name": "Gilda Marzullo Gilda Marzullo",
+      "rut": null,
+      "firstName": "Gilda Marzullo",
+      "lastName": "Gilda Marzullo",
+      "phone": ""
+    },
+    "89": {
+      "name": "Hector Calfin Hector Calfin",
+      "rut": null,
+      "firstName": "Hector Calfin",
+      "lastName": "Hector Calfin",
+      "phone": ""
+    },
+    "90": {
+      "name": "Helen Toncio Helen Toncio",
+      "rut": null,
+      "firstName": "Helen Toncio",
+      "lastName": "Helen Toncio",
+      "phone": ""
+    },
+    "91": {
+      "name": "Hernan Caceres Hernan Caceres",
+      "rut": null,
+      "firstName": "Hernan Caceres",
+      "lastName": "Hernan Caceres",
+      "phone": ""
+    },
+    "92": {
+      "name": "High Care High Care",
+      "rut": null,
+      "firstName": "High Care",
+      "lastName": "High Care",
+      "phone": ""
+    },
+    "93": {
+      "name": "Ignacio Alvarez Ignacio Alvarez",
+      "rut": null,
+      "firstName": "Ignacio Alvarez",
+      "lastName": "Ignacio Alvarez",
+      "phone": ""
+    },
+    "94": {
+      "name": "IME SPA IME SPA",
+      "rut": null,
+      "firstName": "IME SPA",
+      "lastName": "IME SPA",
+      "phone": ""
+    },
+    "95": {
+      "name": "Ingrid Acuña Ingrid Acuña",
+      "rut": null,
+      "firstName": "Ingrid Acuña",
+      "lastName": "Ingrid Acuña",
+      "phone": ""
+    },
+    "96": {
+      "name": "Ingrid Ganan Ingrid Ganan",
+      "rut": null,
+      "firstName": "Ingrid Ganan",
+      "lastName": "Ingrid Ganan",
+      "phone": ""
+    },
+    "97": {
+      "name": "Instituto Armony Instituto Armony",
+      "rut": null,
+      "firstName": "Instituto Armony",
+      "lastName": "Instituto Armony",
+      "phone": ""
+    },
+    "98": {
+      "name": "Isabel Maino Isabel Maino",
+      "rut": null,
+      "firstName": "Isabel Maino",
+      "lastName": "Isabel Maino",
+      "phone": ""
+    },
+    "99": {
+      "name": "Isabel Margarita Isabel Margarita",
+      "rut": null,
+      "firstName": "Isabel Margarita",
+      "lastName": "Isabel Margarita",
+      "phone": ""
+    },
+    "100": {
+      "name": "Javiera Benavente Javiera Benavente",
+      "rut": null,
+      "firstName": "Javiera Benavente",
+      "lastName": "Javiera Benavente",
+      "phone": ""
+    },
+    "101": {
+      "name": "Javiera Manriquez Javiera Manriquez",
+      "rut": null,
+      "firstName": "Javiera Manriquez",
+      "lastName": "Javiera Manriquez",
+      "phone": ""
+    },
+    "102": {
+      "name": "Javiera Villalon Javiera Villalon",
+      "rut": null,
+      "firstName": "Javiera Villalon",
+      "lastName": "Javiera Villalon",
+      "phone": ""
+    },
+    "103": {
+      "name": "Jeannette del Pilar Jeannette del Pilar",
+      "rut": null,
+      "firstName": "Jeannette del Pilar",
+      "lastName": "Jeannette del Pilar",
+      "phone": ""
+    },
+    "104": {
+      "name": "Jemima Silva Jemima Silva",
+      "rut": null,
+      "firstName": "Jemima Silva",
+      "lastName": "Jemima Silva",
+      "phone": ""
+    },
+    "105": {
+      "name": "Johanna Moreno Johanna Moreno",
+      "rut": null,
+      "firstName": "Johanna Moreno",
+      "lastName": "Johanna Moreno",
+      "phone": ""
+    },
+    "106": {
+      "name": "Jose Luis Monardes Jose Luis Monardes",
+      "rut": null,
+      "firstName": "Jose Luis Monardes",
+      "lastName": "Jose Luis Monardes",
+      "phone": ""
+    },
+    "107": {
+      "name": "Jose Oyarce Jose Oyarce",
+      "rut": null,
+      "firstName": "Jose Oyarce",
+      "lastName": "Jose Oyarce",
+      "phone": ""
+    },
+    "108": {
+      "name": "Joselyn Korn Joselyn Korn",
+      "rut": null,
+      "firstName": "Joselyn Korn",
+      "lastName": "Joselyn Korn",
+      "phone": ""
+    },
+    "109": {
+      "name": "Juan Luis Delgado Juan Luis Delgado",
+      "rut": null,
+      "firstName": "Juan Luis Delgado",
+      "lastName": "Juan Luis Delgado",
+      "phone": ""
+    },
+    "110": {
+      "name": "Karen Alarcon Karen Alarcon",
+      "rut": null,
+      "firstName": "Karen Alarcon",
+      "lastName": "Karen Alarcon",
+      "phone": ""
+    },
+    "111": {
+      "name": "Karen Nuñez Karen Nuñez",
+      "rut": null,
+      "firstName": "Karen Nuñez",
+      "lastName": "Karen Nuñez",
+      "phone": ""
+    },
+    "112": {
+      "name": "Karin Staab Karin Staab",
+      "rut": null,
+      "firstName": "Karin Staab",
+      "lastName": "Karin Staab",
+      "phone": ""
+    },
+    "113": {
+      "name": "Karina Lobos Karina Lobos",
+      "rut": null,
+      "firstName": "Karina Lobos",
+      "lastName": "Karina Lobos",
+      "phone": ""
+    },
+    "114": {
+      "name": "Karla Acuña Karla Acuña",
+      "rut": null,
+      "firstName": "Karla Acuña",
+      "lastName": "Karla Acuña",
+      "phone": ""
+    },
+    "115": {
+      "name": "Karla Carcamo Karla Carcamo",
+      "rut": null,
+      "firstName": "Karla Carcamo",
+      "lastName": "Karla Carcamo",
+      "phone": ""
+    },
+    "116": {
+      "name": "Karla Galvez Karla Galvez",
+      "rut": null,
+      "firstName": "Karla Galvez",
+      "lastName": "Karla Galvez",
+      "phone": ""
+    },
+    "117": {
+      "name": "Katherin Barria Katherin Barria",
+      "rut": null,
+      "firstName": "Katherin Barria",
+      "lastName": "Katherin Barria",
+      "phone": ""
+    },
+    "118": {
+      "name": "Katherine Ortiz Katherine Ortiz",
+      "rut": null,
+      "firstName": "Katherine Ortiz",
+      "lastName": "Katherine Ortiz",
+      "phone": ""
+    },
+    "119": {
+      "name": "Katherine Vasquez Katherine Vasquez",
+      "rut": null,
+      "firstName": "Katherine Vasquez",
+      "lastName": "Katherine Vasquez",
+      "phone": ""
+    },
+    "120": {
+      "name": "Katy Treizman Katy Treizman",
+      "rut": null,
+      "firstName": "Katy Treizman",
+      "lastName": "Katy Treizman",
+      "phone": ""
+    },
+    "121": {
+      "name": "Laura Aguilar Laura Aguilar",
+      "rut": null,
+      "firstName": "Laura Aguilar",
+      "lastName": "Laura Aguilar",
+      "phone": ""
+    },
+    "122": {
+      "name": "Leydi Maldonado Leydi Maldonado",
+      "rut": null,
+      "firstName": "Leydi Maldonado",
+      "lastName": "Leydi Maldonado",
+      "phone": ""
+    },
+    "123": {
+      "name": "Lianethe Coronel Lianethe Coronel",
+      "rut": null,
+      "firstName": "Lianethe Coronel",
+      "lastName": "Lianethe Coronel",
+      "phone": ""
+    },
+    "124": {
+      "name": "Lorena Cepeda Lorena Cepeda",
+      "rut": null,
+      "firstName": "Lorena Cepeda",
+      "lastName": "Lorena Cepeda",
+      "phone": ""
+    },
+    "125": {
+      "name": "Lorena Osorio Lorena Osorio",
+      "rut": null,
+      "firstName": "Lorena Osorio",
+      "lastName": "Lorena Osorio",
+      "phone": ""
+    },
+    "126": {
+      "name": "Macarena Massound Macarena Massound",
+      "rut": null,
+      "firstName": "Macarena Massound",
+      "lastName": "Macarena Massound",
+      "phone": ""
+    },
+    "127": {
+      "name": "Magaly Valero Magaly Valero",
+      "rut": null,
+      "firstName": "Magaly Valero",
+      "lastName": "Magaly Valero",
+      "phone": ""
+    },
+    "128": {
+      "name": "Magdalena Raveau Magdalena Raveau",
+      "rut": null,
+      "firstName": "Magdalena Raveau",
+      "lastName": "Magdalena Raveau",
+      "phone": ""
+    },
+    "129": {
+      "name": "Marcela Cerda Marcela Cerda",
+      "rut": null,
+      "firstName": "Marcela Cerda",
+      "lastName": "Marcela Cerda",
+      "phone": ""
+    },
+    "130": {
+      "name": "Marcela Hermosilla Marcela Hermosilla",
+      "rut": null,
+      "firstName": "Marcela Hermosilla",
+      "lastName": "Marcela Hermosilla",
+      "phone": ""
+    },
+    "132": {
+      "name": "Margot Contreras Margot Contreras",
+      "rut": null,
+      "firstName": "Margot Contreras",
+      "lastName": "Margot Contreras",
+      "phone": ""
+    },
+    "133": {
+      "name": "Maria Consuelo Idro Maria Consuelo Idro",
+      "rut": null,
+      "firstName": "Maria Consuelo Idro",
+      "lastName": "Maria Consuelo Idro",
+      "phone": ""
+    },
+    "134": {
+      "name": "Maria Paz Soto Maria Paz Soto",
+      "rut": null,
+      "firstName": "Maria Paz Soto",
+      "lastName": "Maria Paz Soto",
+      "phone": ""
+    },
+    "135": {
+      "name": "Mario Zavala Mario Zavala",
+      "rut": null,
+      "firstName": "Mario Zavala",
+      "lastName": "Mario Zavala",
+      "phone": ""
+    },
+    "136": {
+      "name": "Maritza Silva Maritza Silva",
+      "rut": null,
+      "firstName": "Maritza Silva",
+      "lastName": "Maritza Silva",
+      "phone": ""
+    },
+    "137": {
+      "name": "Marta Caceres Marta Caceres",
+      "rut": null,
+      "firstName": "Marta Caceres",
+      "lastName": "Marta Caceres",
+      "phone": ""
+    },
+    "138": {
+      "name": "Martin Rampone Martin Rampone",
+      "rut": null,
+      "firstName": "Martin Rampone",
+      "lastName": "Martin Rampone",
+      "phone": ""
+    },
+    "139": {
+      "name": "Mauricio Pavez Mauricio Pavez",
+      "rut": null,
+      "firstName": "Mauricio Pavez",
+      "lastName": "Mauricio Pavez",
+      "phone": ""
+    },
+    "140": {
+      "name": "Mayleri Pachano Mayleri Pachano",
+      "rut": null,
+      "firstName": "Mayleri Pachano",
+      "lastName": "Mayleri Pachano",
+      "phone": ""
+    },
+    "141": {
+      "name": "Monica Espinosa Monica Espinosa",
+      "rut": null,
+      "firstName": "Monica Espinosa",
+      "lastName": "Monica Espinosa",
+      "phone": ""
+    },
+    "142": {
+      "name": "Monica Mangiamarchi Monica Mangiamarchi",
+      "rut": null,
+      "firstName": "Monica Mangiamarchi",
+      "lastName": "Monica Mangiamarchi",
+      "phone": ""
+    },
+    "143": {
+      "name": "Mra Belen Araneda Mra Belen Araneda",
+      "rut": null,
+      "firstName": "Mra Belen Araneda",
+      "lastName": "Mra Belen Araneda",
+      "phone": ""
+    },
+    "144": {
+      "name": "Mra Consuelo Idro Montes Mra Consuelo Idro Montes",
+      "rut": null,
+      "firstName": "Mra Consuelo Idro Montes",
+      "lastName": "Mra Consuelo Idro Montes",
+      "phone": ""
+    },
+    "145": {
+      "name": "Mra Francisca Correa Mra Francisca Correa",
+      "rut": null,
+      "firstName": "Mra Francisca Correa",
+      "lastName": "Mra Francisca Correa",
+      "phone": ""
+    },
+    "147": {
+      "name": "Mra Jose Castro Mra Jose Castro",
+      "rut": null,
+      "firstName": "Mra Jose Castro",
+      "lastName": "Mra Jose Castro",
+      "phone": ""
+    },
+    "148": {
+      "name": "Mra Jose de la Vega Mra Jose de la Vega",
+      "rut": null,
+      "firstName": "Mra Jose de la Vega",
+      "lastName": "Mra Jose de la Vega",
+      "phone": ""
+    },
+    "149": {
+      "name": "Mra Jose Castro 2 Mra Jose Castro 2",
+      "rut": null,
+      "firstName": "Mra Jose Castro 2",
+      "lastName": "Mra Jose Castro 2",
+      "phone": ""
+    },
+    "150": {
+      "name": "Mra Jose Orellana Mra Jose Orellana",
+      "rut": null,
+      "firstName": "Mra Jose Orellana",
+      "lastName": "Mra Jose Orellana",
+      "phone": ""
+    },
+    "151": {
+      "name": "Mra Paz Caneo Mra Paz Caneo",
+      "rut": null,
+      "firstName": "Mra Paz Caneo",
+      "lastName": "Mra Paz Caneo",
+      "phone": ""
+    },
+    "152": {
+      "name": "Mra Teresa Gaete Mra Teresa Gaete",
+      "rut": null,
+      "firstName": "Mra Teresa Gaete",
+      "lastName": "Mra Teresa Gaete",
+      "phone": ""
+    },
+    "156": {
+      "name": "Nicole Abaroa Nicole Abaroa",
+      "rut": null,
+      "firstName": "Nicole Abaroa",
+      "lastName": "Nicole Abaroa",
+      "phone": ""
+    },
+    "157": {
+      "name": "Nicole Mourgues Nicole Mourgues",
+      "rut": null,
+      "firstName": "Nicole Mourgues",
+      "lastName": "Nicole Mourgues",
+      "phone": ""
+    },
+    "158": {
+      "name": "Noelia Martinez Noelia Martinez",
+      "rut": null,
+      "firstName": "Noelia Martinez",
+      "lastName": "Noelia Martinez",
+      "phone": ""
+    },
+    "159": {
+      "name": "Olga Valenzuela Olga Valenzuela",
+      "rut": null,
+      "firstName": "Olga Valenzuela",
+      "lastName": "Olga Valenzuela",
+      "phone": ""
+    },
+    "160": {
+      "name": "Osvaldo Orellana Osvaldo Orellana",
+      "rut": null,
+      "firstName": "Osvaldo Orellana",
+      "lastName": "Osvaldo Orellana",
+      "phone": ""
+    },
+    "161": {
+      "name": "Pablo Serrano Pablo Serrano",
+      "rut": null,
+      "firstName": "Pablo Serrano",
+      "lastName": "Pablo Serrano",
+      "phone": ""
+    },
+    "162": {
+      "name": "Paola Camacho Paola Camacho",
+      "rut": null,
+      "firstName": "Paola Camacho",
+      "lastName": "Paola Camacho",
+      "phone": ""
+    },
+    "163": {
+      "name": "Patricia Cespedes Patricia Cespedes",
+      "rut": null,
+      "firstName": "Patricia Cespedes",
+      "lastName": "Patricia Cespedes",
+      "phone": ""
+    },
+    "164": {
+      "name": "Patricio Andrade Patricio Andrade",
+      "rut": null,
+      "firstName": "Patricio Andrade",
+      "lastName": "Patricio Andrade",
+      "phone": ""
+    },
+    "165": {
+      "name": "Paula Gavilan Paula Gavilan",
+      "rut": null,
+      "firstName": "Paula Gavilan",
+      "lastName": "Paula Gavilan",
+      "phone": ""
+    },
+    "166": {
+      "name": "Paula Jaramillo Paula Jaramillo",
+      "rut": null,
+      "firstName": "Paula Jaramillo",
+      "lastName": "Paula Jaramillo",
+      "phone": ""
+    },
+    "167": {
+      "name": "Paula Roman Paula Roman",
+      "rut": null,
+      "firstName": "Paula Roman",
+      "lastName": "Paula Roman",
+      "phone": ""
+    },
+    "168": {
+      "name": "Paulina Garriga Paulina Garriga",
+      "rut": null,
+      "firstName": "Paulina Garriga",
+      "lastName": "Paulina Garriga",
+      "phone": ""
+    },
+    "189": {
+      "name": "Sebastian Latapiat Sebastian Latapiat",
+      "rut": null,
+      "firstName": "Sebastian Latapiat",
+      "lastName": "Sebastian Latapiat",
+      "phone": ""
+    },
+    "190": {
+      "name": "Sergio Llanos Sergio Llanos",
+      "rut": null,
+      "firstName": "Sergio Llanos",
+      "lastName": "Sergio Llanos",
+      "phone": ""
+    },
+    "191": {
+      "name": "Sergio Reyes Sergio Reyes",
+      "rut": null,
+      "firstName": "Sergio Reyes",
+      "lastName": "Sergio Reyes",
+      "phone": ""
+    },
+    "192": {
+      "name": "Sergio Valenzuela Sergio Valenzuela",
+      "rut": null,
+      "firstName": "Sergio Valenzuela",
+      "lastName": "Sergio Valenzuela",
+      "phone": ""
+    },
+    "193": {
+      "name": "Sierra Alta Sierra Alta",
+      "rut": null,
+      "firstName": "Sierra Alta",
+      "lastName": "Sierra Alta",
+      "phone": ""
+    },
+    "194": {
+      "name": "Silvana Izaguirre Silvana Izaguirre",
+      "rut": null,
+      "firstName": "Silvana Izaguirre",
+      "lastName": "Silvana Izaguirre",
+      "phone": ""
+    },
+    "195": {
+      "name": "Silvia Salas Silvia Salas",
+      "rut": null,
+      "firstName": "Silvia Salas",
+      "lastName": "Silvia Salas",
+      "phone": ""
+    },
+    "196": {
+      "name": "Skin Med Skin Med",
+      "rut": null,
+      "firstName": "Skin Med",
+      "lastName": "Skin Med",
+      "phone": ""
+    },
+    "197": {
+      "name": "Soledad Gramer Soledad Gramer",
+      "rut": null,
+      "firstName": "Soledad Gramer",
+      "lastName": "Soledad Gramer",
+      "phone": ""
+    },
+    "198": {
+      "name": "Sonia Diaz Sonia Diaz",
+      "rut": null,
+      "firstName": "Sonia Diaz",
+      "lastName": "Sonia Diaz",
+      "phone": ""
+    },
+    "199": {
+      "name": "Stephanie Tosso Stephanie Tosso",
+      "rut": null,
+      "firstName": "Stephanie Tosso",
+      "lastName": "Stephanie Tosso",
+      "phone": ""
+    },
+    "200": {
+      "name": "UNAB UNAB",
+      "rut": null,
+      "firstName": "UNAB",
+      "lastName": "UNAB",
+      "phone": ""
+    },
+    "207": {
+      "name": "Vital Stetic Vital Stetic",
+      "rut": null,
+      "firstName": "Vital Stetic",
+      "lastName": "Vital Stetic",
+      "phone": ""
+    },
+    "208": {
+      "name": "Viviana Valdievieso Viviana Valdievieso",
+      "rut": null,
+      "firstName": "Viviana Valdievieso",
+      "lastName": "Viviana Valdievieso",
+      "phone": ""
+    },
+    "209": {
+      "name": "Webdental Webdental",
+      "rut": null,
+      "firstName": "Webdental",
+      "lastName": "Webdental",
+      "phone": ""
+    },
+    "210": {
+      "name": "Ximena Garrido Ximena Garrido",
+      "rut": null,
+      "firstName": "Ximena Garrido",
+      "lastName": "Ximena Garrido",
+      "phone": ""
+    },
+    "211": {
+      "name": "Ximena Ortiz Ximena Ortiz",
+      "rut": null,
+      "firstName": "Ximena Ortiz",
+      "lastName": "Ximena Ortiz",
+      "phone": ""
+    },
+    "212": {
+      "name": "Yaikelin Viera Yaikelin Viera",
+      "rut": null,
+      "firstName": "Yaikelin Viera",
+      "lastName": "Yaikelin Viera",
+      "phone": ""
+    },
+    "213": {
+      "name": "Yanira Harcha Yanira Harcha",
+      "rut": null,
+      "firstName": "Yanira Harcha",
+      "lastName": "Yanira Harcha",
+      "phone": ""
+    },
+    "214": {
+      "name": "Yennifer Hernandez Yennifer Hernandez",
+      "rut": null,
+      "firstName": "Yennifer Hernandez",
+      "lastName": "Yennifer Hernandez",
+      "phone": ""
+    },
+    "215": {
+      "name": "Yuliana Davila / Solange Nuñez Yuliana Davila / Solange Nuñez",
+      "rut": null,
+      "firstName": "Yuliana Davila / Solange Nuñez",
+      "lastName": "Yuliana Davila / Solange Nuñez",
+      "phone": ""
+    },
+    "216": {
+      "name": "Zuly Zambrano Zuly Zambrano",
+      "rut": null,
+      "firstName": "Zuly Zambrano",
+      "lastName": "Zuly Zambrano",
+      "phone": ""
+    },
+    "218": {
+      "name": "Jose Luis Monardes Jose Luis Monardes",
+      "rut": null,
+      "firstName": "Jose Luis Monardes",
+      "lastName": "Jose Luis Monardes",
+      "phone": ""
+    },
+    "221": {
+      "name": "Viviane Martinez Viviane Martinez",
+      "rut": null,
+      "firstName": "Viviane Martinez",
+      "lastName": "Viviane Martinez",
+      "phone": ""
+    },
+    "223": {
+      "name": "Viviana Valdivia Viviana Valdivia",
+      "rut": null,
+      "firstName": "Viviana Valdivia",
+      "lastName": "Viviana Valdivia",
+      "phone": ""
+    },
+    "224": {
+      "name": "Yelena Salinas Yelena Salinas",
+      "rut": null,
+      "firstName": "Yelena Salinas",
+      "lastName": "Yelena Salinas",
+      "phone": ""
+    },
+    "225": {
+      "name": "Luis Vergara Luis Vergara",
+      "rut": null,
+      "firstName": "Luis Vergara",
+      "lastName": "Luis Vergara",
+      "phone": ""
+    },
+    "227": {
+      "name": "Ximena sarzosa Ximena sarzosa",
+      "rut": null,
+      "firstName": "Ximena sarzosa",
+      "lastName": "Ximena sarzosa",
+      "phone": ""
+    },
+    "228": {
+      "name": "Yessenia Valenzuela Yessenia Valenzuela",
+      "rut": null,
+      "firstName": "Yessenia Valenzuela",
+      "lastName": "Yessenia Valenzuela",
+      "phone": ""
+    },
+    "233": {
+      "name": "Paula Quezada Paula Quezada",
+      "rut": null,
+      "firstName": "Paula Quezada",
+      "lastName": "Paula Quezada",
+      "phone": ""
+    },
+    "236": {
+      "name": "Orianna Escorihuela Orianna Escorihuela",
+      "rut": null,
+      "firstName": "Orianna Escorihuela",
+      "lastName": "Orianna Escorihuela",
+      "phone": ""
+    },
+    "237": {
+      "name": "Maria Alejandra Levin Maria Alejandra Levin",
+      "rut": null,
+      "firstName": "Maria Alejandra Levin",
+      "lastName": "Maria Alejandra Levin",
+      "phone": ""
+    },
+    "239": {
+      "name": "Noelia Martinez (PROF) Noelia Martinez (PROF)",
+      "rut": null,
+      "firstName": "Noelia Martinez (PROF)",
+      "lastName": "Noelia Martinez (PROF)",
+      "phone": ""
+    },
+    "243": {
+      "name": "Isabel Abara Isabel Abara",
+      "rut": null,
+      "firstName": "Isabel Abara",
+      "lastName": "Isabel Abara",
+      "phone": ""
+    },
+    "245": {
+      "name": "Helga Farherkrog Helga Farherkrog",
+      "rut": null,
+      "firstName": "Helga Farherkrog",
+      "lastName": "Helga Farherkrog",
+      "phone": ""
+    },
+    "247": {
+      "name": "Jorge Heredia Jorge Heredia",
+      "rut": null,
+      "firstName": "Jorge Heredia",
+      "lastName": "Jorge Heredia",
+      "phone": ""
+    },
+    "249": {
+      "name": "Javier Rybertt Javier Rybertt",
+      "rut": null,
+      "firstName": "Javier Rybertt",
+      "lastName": "Javier Rybertt",
+      "phone": ""
+    },
+    "252": {
+      "name": "Paula Vargas Paula Vargas",
+      "rut": null,
+      "firstName": "Paula Vargas",
+      "lastName": "Paula Vargas",
+      "phone": ""
+    },
+    "253": {
+      "name": "Monica Calderon Monica Calderon",
+      "rut": null,
+      "firstName": "Monica Calderon",
+      "lastName": "Monica Calderon",
+      "phone": ""
+    },
+    "254": {
+      "name": "High Care Beauty High Care Beauty",
+      "rut": null,
+      "firstName": "High Care Beauty",
+      "lastName": "High Care Beauty",
+      "phone": ""
+    },
+    "257": {
+      "name": "Paulina Andrade Paulina Andrade",
+      "rut": null,
+      "firstName": "Paulina Andrade",
+      "lastName": "Paulina Andrade",
+      "phone": ""
+    },
+    "262": {
+      "name": "John Bonilla John Bonilla",
+      "rut": null,
+      "firstName": "John Bonilla",
+      "lastName": "John Bonilla",
+      "phone": ""
+    },
+    "264": {
+      "name": "Maria Fernanda del Carmen Brito Maria Fernanda del Carmen Brito",
+      "rut": null,
+      "firstName": "Maria Fernanda del Carmen Brito",
+      "lastName": "Maria Fernanda del Carmen Brito",
+      "phone": ""
+    },
+    "267": {
+      "name": "Mra Jesus Ghiringhelli Mra Jesus Ghiringhelli",
+      "rut": null,
+      "firstName": "Mra Jesus Ghiringhelli",
+      "lastName": "Mra Jesus Ghiringhelli",
+      "phone": ""
+    },
+    "274": {
+      "name": "Mra Ines Robles Mra Ines Robles",
+      "rut": null,
+      "firstName": "Mra Ines Robles",
+      "lastName": "Mra Ines Robles",
+      "phone": ""
+    },
+    "276": {
+      "name": "Mariela Uribe Mariela Uribe",
+      "rut": null,
+      "firstName": "Mariela Uribe",
+      "lastName": "Mariela Uribe",
+      "phone": ""
+    },
+    "277": {
+      "name": "Fernanda Rodriguez Fernanda Rodriguez",
+      "rut": null,
+      "firstName": "Fernanda Rodriguez",
+      "lastName": "Fernanda Rodriguez",
+      "phone": ""
+    },
+    "279": {
+      "name": "Katherine Scalia Katherine Scalia",
+      "rut": null,
+      "firstName": "Katherine Scalia",
+      "lastName": "Katherine Scalia",
+      "phone": ""
+    },
+    "280": {
+      "name": "Katica Peric Katica Peric",
+      "rut": null,
+      "firstName": "Katica Peric",
+      "lastName": "Katica Peric",
+      "phone": ""
+    },
+    "283": {
+      "name": "Jorge Rivera Jorge Rivera",
+      "rut": null,
+      "firstName": "Jorge Rivera",
+      "lastName": "Jorge Rivera",
+      "phone": ""
+    },
+    "284": {
+      "name": "Francisco Kuschel Francisco Kuschel",
+      "rut": null,
+      "firstName": "Francisco Kuschel",
+      "lastName": "Francisco Kuschel",
+      "phone": ""
+    },
+    "289": {
+      "name": "Mra Dolores de la Jara Mra Dolores de la Jara",
+      "rut": null,
+      "firstName": "Mra Dolores de la Jara",
+      "lastName": "Mra Dolores de la Jara",
+      "phone": ""
+    },
+    "292": {
+      "name": "Monica Ariño Monica Ariño",
+      "rut": null,
+      "firstName": "Monica Ariño",
+      "lastName": "Monica Ariño",
+      "phone": ""
+    },
+    "293": {
+      "name": "Fernando Gilabert Fernando Gilabert",
+      "rut": null,
+      "firstName": "Fernando Gilabert",
+      "lastName": "Fernando Gilabert",
+      "phone": ""
+    },
+    "295": {
+      "name": "Mra Angelica Fuentealba Mra Angelica Fuentealba",
+      "rut": null,
+      "firstName": "Mra Angelica Fuentealba",
+      "lastName": "Mra Angelica Fuentealba",
+      "phone": ""
+    },
+    "296": {
+      "name": "Jimena Maureri Jimena Maureri",
+      "rut": null,
+      "firstName": "Jimena Maureri",
+      "lastName": "Jimena Maureri",
+      "phone": ""
+    },
+    "299": {
+      "name": "Paula Aguilera Paula Aguilera",
+      "rut": null,
+      "firstName": "Paula Aguilera",
+      "lastName": "Paula Aguilera",
+      "phone": ""
+    },
+    "300": {
+      "name": "Isabel Albarran Isabel Albarran",
+      "rut": null,
+      "firstName": "Isabel Albarran",
+      "lastName": "Isabel Albarran",
+      "phone": ""
+    },
+    "301": {
+      "name": "Francisca Gleboff Francisca Gleboff",
+      "rut": null,
+      "firstName": "Francisca Gleboff",
+      "lastName": "Francisca Gleboff",
+      "phone": ""
+    },
+    "303": {
+      "name": "Karla Acuña Personal Karla Acuña Personal",
+      "rut": null,
+      "firstName": "Karla Acuña Personal",
+      "lastName": "Karla Acuña Personal",
+      "phone": ""
+    },
+    "304": {
+      "name": "Yle Lopez Yle Lopez",
+      "rut": null,
+      "firstName": "Yle Lopez",
+      "lastName": "Yle Lopez",
+      "phone": ""
+    },
+    "306": {
+      "name": "Isidora Gonzalez Isidora Gonzalez",
+      "rut": null,
+      "firstName": "Isidora Gonzalez",
+      "lastName": "Isidora Gonzalez",
+      "phone": ""
+    },
+    "307": {
+      "name": "Karen Alfaro Karen Alfaro",
+      "rut": null,
+      "firstName": "Karen Alfaro",
+      "lastName": "Karen Alfaro",
+      "phone": ""
+    },
+    "309": {
+      "name": "Francisca Tapia Francisca Tapia",
+      "rut": null,
+      "firstName": "Francisca Tapia",
+      "lastName": "Francisca Tapia",
+      "phone": ""
+    },
+    "311": {
+      "name": "Gleycera Beloa Gleycera Beloa",
+      "rut": null,
+      "firstName": "Gleycera Beloa",
+      "lastName": "Gleycera Beloa",
+      "phone": ""
+    },
+    "312": {
+      "name": "Isabel bernier Isabel bernier",
+      "rut": null,
+      "firstName": "Isabel bernier",
+      "lastName": "Isabel bernier",
+      "phone": ""
+    },
+    "314": {
+      "name": "Francisca Garcia Francisca Garcia",
+      "rut": null,
+      "firstName": "Francisca Garcia",
+      "lastName": "Francisca Garcia",
+      "phone": ""
+    },
+    "315": {
+      "name": "Paula Unda Paula Unda",
+      "rut": null,
+      "firstName": "Paula Unda",
+      "lastName": "Paula Unda",
+      "phone": ""
+    },
+    "316": {
+      "name": "Francisca Chamorro Francisca Chamorro",
+      "rut": null,
+      "firstName": "Francisca Chamorro",
+      "lastName": "Francisca Chamorro",
+      "phone": ""
+    },
+    "317": {
+      "name": "Macarena Soto Macarena Soto",
+      "rut": null,
+      "firstName": "Macarena Soto",
+      "lastName": "Macarena Soto",
+      "phone": ""
+    },
+    "318": {
+      "name": "Mra Estefania Vilchez Mra Estefania Vilchez",
+      "rut": null,
+      "firstName": "Mra Estefania Vilchez",
+      "lastName": "Mra Estefania Vilchez",
+      "phone": ""
+    },
+    "320": {
+      "name": "Tamara Pinto Tamara Pinto",
+      "rut": null,
+      "firstName": "Tamara Pinto",
+      "lastName": "Tamara Pinto",
+      "phone": ""
+    },
+    "323": {
+      "name": "Jonathan Garcia Jonathan Garcia",
+      "rut": null,
+      "firstName": "Jonathan Garcia",
+      "lastName": "Jonathan Garcia",
+      "phone": ""
+    },
+    "324": {
+      "name": "Yusset Arguedas Yusset Arguedas",
+      "rut": null,
+      "firstName": "Yusset Arguedas",
+      "lastName": "Yusset Arguedas",
+      "phone": ""
+    },
+    "325": {
+      "name": "Giovanni Vivas Giovanni Vivas",
+      "rut": null,
+      "firstName": "Giovanni Vivas",
+      "lastName": "Giovanni Vivas",
+      "phone": ""
+    },
+    "326": {
+      "name": "Matias Tagle Matias Tagle",
+      "rut": null,
+      "firstName": "Matias Tagle",
+      "lastName": "Matias Tagle",
+      "phone": ""
+    },
+    "327": {
+      "name": "Jeferson Plaza Jeferson Plaza",
+      "rut": null,
+      "firstName": "Jeferson Plaza",
+      "lastName": "Jeferson Plaza",
+      "phone": ""
+    },
+    "328": {
+      "name": "Sebastian Budinich Sebastian Budinich",
+      "rut": null,
+      "firstName": "Sebastian Budinich",
+      "lastName": "Sebastian Budinich",
+      "phone": ""
+    },
+    "331": {
+      "name": "XIMENA LIDIA SILVA BAHAMONDEZ XIMENA LIDIA SILVA BAHAMONDEZ",
+      "rut": null,
+      "firstName": "XIMENA LIDIA SILVA BAHAMONDEZ",
+      "lastName": "XIMENA LIDIA SILVA BAHAMONDEZ",
+      "phone": ""
+    },
+    "336": {
+      "name": "Yuliana Davila / Cindy Rada Yuliana Davila / Cindy Rada",
+      "rut": null,
+      "firstName": "Yuliana Davila / Cindy Rada",
+      "lastName": "Yuliana Davila / Cindy Rada",
+      "phone": ""
+    },
+    "337": {
+      "name": "Jose Luis Gatica Jose Luis Gatica",
+      "rut": null,
+      "firstName": "Jose Luis Gatica",
+      "lastName": "Jose Luis Gatica",
+      "phone": ""
+    },
+    "338": {
+      "name": "Tatiana Carraza Tatiana Carraza",
+      "rut": null,
+      "firstName": "Tatiana Carraza",
+      "lastName": "Tatiana Carraza",
+      "phone": ""
+    },
+    "340": {
+      "name": "Kathetine Andrea Toro Henriquez Kathetine Andrea Toro Henriquez",
+      "rut": null,
+      "firstName": "Kathetine Andrea Toro Henriquez",
+      "lastName": "Kathetine Andrea Toro Henriquez",
+      "phone": ""
+    },
+    "341": {
+      "name": "HEATHER DENISE DECAR HAHN HEATHER DENISE DECAR HAHN",
+      "rut": null,
+      "firstName": "HEATHER DENISE DECAR HAHN",
+      "lastName": "HEATHER DENISE DECAR HAHN",
+      "phone": ""
+    },
+    "342": {
+      "name": "Isabel Pierola Isabel Pierola",
+      "rut": null,
+      "firstName": "Isabel Pierola",
+      "lastName": "Isabel Pierola",
+      "phone": ""
+    },
+    "343": {
+      "name": "MACARENA PAZ LEICHTLE PENA MACARENA PAZ LEICHTLE PENA",
+      "rut": null,
+      "firstName": "MACARENA PAZ LEICHTLE PENA",
+      "lastName": "MACARENA PAZ LEICHTLE PENA",
+      "phone": ""
+    },
+    "344": {
+      "name": "Maria Isabel Alarcon Maria Isabel Alarcon",
+      "rut": null,
+      "firstName": "Maria Isabel Alarcon",
+      "lastName": "Maria Isabel Alarcon",
+      "phone": ""
+    },
+    "345": {
+      "name": "Joaquin Navarro Joaquin Navarro",
+      "rut": null,
+      "firstName": "Joaquin Navarro",
+      "lastName": "Joaquin Navarro",
+      "phone": ""
+    },
+    "346": {
+      "name": "Marjorie Gold Marjorie Gold",
+      "rut": null,
+      "firstName": "Marjorie Gold",
+      "lastName": "Marjorie Gold",
+      "phone": ""
+    },
+    "347": {
+      "name": "Maria Sanchez Maria Sanchez",
+      "rut": null,
+      "firstName": "Maria Sanchez",
+      "lastName": "Maria Sanchez",
+      "phone": ""
+    },
+    "348": {
+      "name": "Mauricio Rojas Mauricio Rojas",
+      "rut": null,
+      "firstName": "Mauricio Rojas",
+      "lastName": "Mauricio Rojas",
+      "phone": ""
+    },
+    "349": {
+      "name": "Fernando Lavin Fernando Lavin",
+      "rut": null,
+      "firstName": "Fernando Lavin",
+      "lastName": "Fernando Lavin",
+      "phone": ""
+    },
+    "350": {
+      "name": "GERALDY MARISEL GENERAL OVALLE GERALDY MARISEL GENERAL OVALLE",
+      "rut": null,
+      "firstName": "GERALDY MARISEL GENERAL OVALLE",
+      "lastName": "GERALDY MARISEL GENERAL OVALLE",
+      "phone": ""
+    },
+    "351": {
+      "name": "Lucia Marin Lucia Marin",
+      "rut": null,
+      "firstName": "Lucia Marin",
+      "lastName": "Lucia Marin",
+      "phone": ""
+    },
+    "358": {
+      "name": "Javiera Baeza Javiera Baeza",
+      "rut": null,
+      "firstName": "Javiera Baeza",
+      "lastName": "Javiera Baeza",
+      "phone": ""
+    },
+    "360": {
+      "name": "Javiera Tamarin Javiera Tamarin",
+      "rut": null,
+      "firstName": "Javiera Tamarin",
+      "lastName": "Javiera Tamarin",
+      "phone": ""
+    },
+    "362": {
+      "name": "Luis Vergara Luis Vergara",
+      "rut": null,
+      "firstName": "Luis Vergara",
+      "lastName": "Luis Vergara",
+      "phone": ""
+    },
+    "363": {
+      "name": "Ibis Balladares Ibis Balladares",
+      "rut": null,
+      "firstName": "Ibis Balladares",
+      "lastName": "Ibis Balladares",
+      "phone": ""
+    },
+    "364": {
+      "name": "Skin Up Skin Up",
+      "rut": null,
+      "firstName": "Skin Up",
+      "lastName": "Skin Up",
+      "phone": ""
+    },
+    "366": {
+      "name": "Sun-yin Boksamy Sun-yin Boksamy",
+      "rut": null,
+      "firstName": "Sun-yin Boksamy",
+      "lastName": "Sun-yin Boksamy",
+      "phone": ""
+    },
+    "367": {
+      "name": "Orianna Quintero Orianna Quintero",
+      "rut": null,
+      "firstName": "Orianna Quintero",
+      "lastName": "Orianna Quintero",
+      "phone": ""
+    },
+    "369": {
+      "name": "Francisca Constanzo Francisca Constanzo",
+      "rut": null,
+      "firstName": "Francisca Constanzo",
+      "lastName": "Francisca Constanzo",
+      "phone": ""
+    },
+    "373": {
+      "name": "Javiera Guevara Javiera Guevara",
+      "rut": null,
+      "firstName": "Javiera Guevara",
+      "lastName": "Javiera Guevara",
+      "phone": ""
+    },
+    "374": {
+      "name": "Marta Di Biaggio Marta Di Biaggio",
+      "rut": null,
+      "firstName": "Marta Di Biaggio",
+      "lastName": "Marta Di Biaggio",
+      "phone": ""
+    },
+    "377": {
+      "name": "Jaime Gaete Jaime Gaete",
+      "rut": null,
+      "firstName": "Jaime Gaete",
+      "lastName": "Jaime Gaete",
+      "phone": ""
+    },
+    "379": {
+      "name": "MELISSA ARROYAVE ESPINOSA MELISSA ARROYAVE ESPINOSA",
+      "rut": null,
+      "firstName": "MELISSA ARROYAVE ESPINOSA",
+      "lastName": "MELISSA ARROYAVE ESPINOSA",
+      "phone": ""
+    },
+    "380": {
+      "name": "INES RECART PARRA INES RECART PARRA",
+      "rut": null,
+      "firstName": "INES RECART PARRA",
+      "lastName": "INES RECART PARRA",
+      "phone": ""
+    },
+    "381": {
+      "name": "Silvana Inspira Silvana Inspira",
+      "rut": null,
+      "firstName": "Silvana Inspira",
+      "lastName": "Silvana Inspira",
+      "phone": ""
+    },
+    "383": {
+      "name": "Orianna Escorihuela Orianna Escorihuela",
+      "rut": null,
+      "firstName": "Orianna Escorihuela",
+      "lastName": "Orianna Escorihuela",
+      "phone": ""
+    },
+    "384": {
+      "name": "Macarena Toledo Macarena Toledo",
+      "rut": null,
+      "firstName": "Macarena Toledo",
+      "lastName": "Macarena Toledo",
+      "phone": ""
+    },
+    "385": {
+      "name": "Mra Jose Henriquez Mra Jose Henriquez",
+      "rut": null,
+      "firstName": "Mra Jose Henriquez",
+      "lastName": "Mra Jose Henriquez",
+      "phone": ""
+    },
+    "386": {
+      "name": "LORETO PAZ URIBE NEIRA LORETO PAZ URIBE NEIRA",
+      "rut": null,
+      "firstName": "LORETO PAZ URIBE NEIRA",
+      "lastName": "LORETO PAZ URIBE NEIRA",
+      "phone": ""
+    },
+    "387": {
+      "name": "Isabel Loyola Isabel Loyola",
+      "rut": null,
+      "firstName": "Isabel Loyola",
+      "lastName": "Isabel Loyola",
+      "phone": ""
+    },
+    "389": {
+      "name": "Paula Sanhueza Paula Sanhueza",
+      "rut": null,
+      "firstName": "Paula Sanhueza",
+      "lastName": "Paula Sanhueza",
+      "phone": ""
+    },
+    "390": {
+      "name": "Francisca Gonzalez Francisca Gonzalez",
+      "rut": null,
+      "firstName": "Francisca Gonzalez",
+      "lastName": "Francisca Gonzalez",
+      "phone": ""
+    },
+    "392": {
+      "name": "Luciana Sebastianelli Luciana Sebastianelli",
+      "rut": null,
+      "firstName": "Luciana Sebastianelli",
+      "lastName": "Luciana Sebastianelli",
+      "phone": ""
+    },
+    "394": {
+      "name": "Fernando Lavin Fernando Lavin",
+      "rut": null,
+      "firstName": "Fernando Lavin",
+      "lastName": "Fernando Lavin",
+      "phone": ""
+    },
+    "395": {
+      "name": "Giovanni Castilani Giovanni Castilani",
+      "rut": null,
+      "firstName": "Giovanni Castilani",
+      "lastName": "Giovanni Castilani",
+      "phone": ""
+    },
+    "396": {
+      "name": "Tatiana Baboun Tatiana Baboun",
+      "rut": null,
+      "firstName": "Tatiana Baboun",
+      "lastName": "Tatiana Baboun",
+      "phone": ""
+    },
+    "397": {
+      "name": "Miguel Paredes Miguel Paredes",
+      "rut": null,
+      "firstName": "Miguel Paredes",
+      "lastName": "Miguel Paredes",
+      "phone": ""
+    },
+    "401": {
+      "name": "Jennifer Rodriguez Jennifer Rodriguez",
+      "rut": null,
+      "firstName": "Jennifer Rodriguez",
+      "lastName": "Jennifer Rodriguez",
+      "phone": ""
+    },
+    "402": {
+      "name": "Helga Villaroel Helga Villaroel",
+      "rut": null,
+      "firstName": "Helga Villaroel",
+      "lastName": "Helga Villaroel",
+      "phone": ""
+    },
+    "405": {
+      "name": "Javiera Zuñiga Javiera Zuñiga",
+      "rut": null,
+      "firstName": "Javiera Zuñiga",
+      "lastName": "Javiera Zuñiga",
+      "phone": ""
+    },
+    "406": {
+      "name": "Joan Asdrubal Joan Asdrubal",
+      "rut": null,
+      "firstName": "Joan Asdrubal",
+      "lastName": "Joan Asdrubal",
+      "phone": ""
+    },
+    "407": {
+      "name": "Tami Rivera Tami Rivera",
+      "rut": null,
+      "firstName": "Tami Rivera",
+      "lastName": "Tami Rivera",
+      "phone": ""
+    },
+    "408": {
+      "name": "Laura Retamal Laura Retamal",
+      "rut": null,
+      "firstName": "Laura Retamal",
+      "lastName": "Laura Retamal",
+      "phone": ""
+    },
+    "409": {
+      "name": "Marisel Lazarde Marisel Lazarde",
+      "rut": null,
+      "firstName": "Marisel Lazarde",
+      "lastName": "Marisel Lazarde",
+      "phone": ""
+    },
+    "410": {
+      "name": "Veronica Llanos Veronica Llanos",
+      "rut": null,
+      "firstName": "Veronica Llanos",
+      "lastName": "Veronica Llanos",
+      "phone": ""
+    },
+    "411": {
+      "name": "Lisette Gomez Lisette Gomez",
+      "rut": null,
+      "firstName": "Lisette Gomez",
+      "lastName": "Lisette Gomez",
+      "phone": ""
+    },
+    "413": {
+      "name": "Vitaskin Vitaskin",
+      "rut": null,
+      "firstName": "Vitaskin",
+      "lastName": "Vitaskin",
+      "phone": ""
+    },
+    "414": {
+      "name": "Gabriela Albornoz Gabriela Albornoz",
+      "rut": null,
+      "firstName": "Gabriela Albornoz",
+      "lastName": "Gabriela Albornoz",
+      "phone": ""
+    },
+    "415": {
+      "name": "Isabel Pierola Isabel Pierola",
+      "rut": null,
+      "firstName": "Isabel Pierola",
+      "lastName": "Isabel Pierola",
+      "phone": ""
+    },
+    "417": {
+      "name": "Maria Paz Soto Maria Paz Soto",
+      "rut": null,
+      "firstName": "Maria Paz Soto",
+      "lastName": "Maria Paz Soto",
+      "phone": ""
+    },
+    "418": {
+      "name": "Janett Cruz Janett Cruz",
+      "rut": null,
+      "firstName": "Janett Cruz",
+      "lastName": "Janett Cruz",
+      "phone": ""
+    },
+    "421": {
+      "name": "Marcelino Suazo Marcelino Suazo",
+      "rut": null,
+      "firstName": "Marcelino Suazo",
+      "lastName": "Marcelino Suazo",
+      "phone": ""
+    },
+    "423": {
+      "name": "Pamela Torres Pamela Torres",
+      "rut": null,
+      "firstName": "Pamela Torres",
+      "lastName": "Pamela Torres",
+      "phone": ""
+    },
+    "424": {
+      "name": "Jearitza Rios Jearitza Rios",
+      "rut": null,
+      "firstName": "Jearitza Rios",
+      "lastName": "Jearitza Rios",
+      "phone": ""
+    },
+    "654": {
+      "name": "SERVICIOS ODONTOLOGICOS NOTEBAERT SPA",
+      "rut": "77725647-5",
+      "firstName": "Valentina Constanza",
+      "lastName": "Valentina Constanza",
+      "phone": ""
+    },
+    "467": {
+      "name": "SERVICIOS MEDICSO VALDES SPA",
+      "rut": "76076589-9",
+      "firstName": "SERVICIOS MEDICSO VALDES SPA",
+      "lastName": "SERVICIOS MEDICSO VALDES SPA",
+      "phone": ""
+    },
+    "502": {
+      "name": "MAURICIO ANDRÉS GARCÍA SANDOVAL, CLÍNICA ODONTOLÓGICA ALTO ROBLE, EMPR",
+      "rut": "76550803-7",
+      "firstName": "Fernanda",
+      "lastName": "Romero",
+      "phone": "56978889712"
+    },
+    "791": {
+      "name": "CLINICA ODONTOLÓGICA GUEVARA LIZANA LIMITADA",
+      "rut": "77725917-2",
+      "firstName": "Javiera Guevara",
+      "lastName": "Javiera Guevara",
+      "phone": ""
+    },
+    "824": {
+      "name": "RESET MEDICINA ESTETICA Y REGENERATIVA JOAN \nASDRUBAL RIVERO SAAVEDRA E",
+      "rut": "78022431-2",
+      "firstName": "Joan",
+      "lastName": "Rivero",
+      "phone": "940273582"
+    },
+    "872": {
+      "name": "Sociedad Médica Vergara & Cía. Ltda.",
+      "rut": "76112204-5",
+      "firstName": "Paula",
+      "lastName": "Vergara",
+      "phone": "978785333"
+    },
+    "928": {
+      "name": "DRA. ARIANA SANCHEZ MEDICINA ESTETICA Y LASER LIMITADA",
+      "rut": "76866132-4",
+      "firstName": "Exelencia",
+      "lastName": "Pavón",
+      "phone": ""
+    },
+    "1020": {
+      "name": "CLINICA ODONTOLOGICA LA DEHESA LIMITADA",
+      "rut": "76379280-3",
+      "firstName": "Mrentxu",
+      "lastName": "Auad",
+      "phone": "982306852"
+    },
+    "1132": {
+      "name": "servicios odontologicos y esteticos dra Galeb spa",
+      "rut": "77891671-1",
+      "firstName": "Antonia",
+      "lastName": "Galeb",
+      "phone": "94534954"
+    },
+    "1230": {
+      "name": "Clinica Solea Dermaesthetic",
+      "rut": "78291253-4",
+      "firstName": "Nelwis",
+      "lastName": "Heras",
+      "phone": "998694415"
+    },
+    "3": {
+      "name": "ADRIANNA ALEJANDRA PARRA TOVAR ADRIANNA ALEJANDRA PARRA TOVAR",
+      "rut": null,
+      "firstName": "ADRIANNA ALEJANDRA PARRA TOVAR",
+      "lastName": "ADRIANNA ALEJANDRA PARRA TOVAR",
+      "phone": ""
+    },
+    "5": {
+      "name": "ALEJANDRA IGNACIA GONZALEZ DE SANTA CRUZ ALEJANDRA IGNACIA GONZALEZ DE SANTA CRUZ",
+      "rut": null,
+      "firstName": "ALEJANDRA IGNACIA GONZALEZ DE SANTA CRUZ",
+      "lastName": "ALEJANDRA IGNACIA GONZALEZ DE SANTA CRUZ",
+      "phone": ""
+    },
+    "6": {
+      "name": "ALNESTHETIC SPA ALNESTHETIC SPA",
+      "rut": null,
+      "firstName": "ALNESTHETIC SPA",
+      "lastName": "ALNESTHETIC SPA",
+      "phone": ""
+    },
+    "7": {
+      "name": "ALEXIS MANUEL HERNANDEZ OVIEDO ALEXIS MANUEL HERNANDEZ OVIEDO",
+      "rut": null,
+      "firstName": "ALEXIS MANUEL HERNANDEZ OVIEDO",
+      "lastName": "ALEXIS MANUEL HERNANDEZ OVIEDO",
+      "phone": ""
+    },
+    "8": {
+      "name": "A Y C SERVICIOS DE SALUD LIMITADA A Y C SERVICIOS DE SALUD LIMITADA",
+      "rut": null,
+      "firstName": "A Y C SERVICIOS DE SALUD LIMITADA",
+      "lastName": "A Y C SERVICIOS DE SALUD LIMITADA",
+      "phone": ""
+    },
+    "9": {
+      "name": "CLINICA DE MEDICINA ESTETICA AVANZADA DR.ALIRIO ARRAIZ SPA CLINICA DE MEDICINA ESTETICA AVANZADA DR.ALIRIO ARRAIZ SPA",
+      "rut": null,
+      "firstName": "CLINICA DE MEDICINA ESTETICA AVANZADA DR.ALIRIO AR",
+      "lastName": "CLINICA DE MEDICINA ESTETICA AVANZADA DR.ALIRIO AR",
+      "phone": ""
+    },
+    "10": {
+      "name": "AMANDABEAUTY SERVICIOS MEDICOS SPA AMANDABEAUTY SERVICIOS MEDICOS SPA",
+      "rut": null,
+      "firstName": "AMANDABEAUTY SERVICIOS MEDICOS SPA",
+      "lastName": "AMANDABEAUTY SERVICIOS MEDICOS SPA",
+      "phone": ""
+    },
+    "12": {
+      "name": "ANDREA DEL CARMEN OPAZO ZAVALA ANDREA DEL CARMEN OPAZO ZAVALA",
+      "rut": null,
+      "firstName": "ANDREA DEL CARMEN OPAZO ZAVALA",
+      "lastName": "ANDREA DEL CARMEN OPAZO ZAVALA",
+      "phone": ""
+    },
+    "13": {
+      "name": "DRA. ANDREA GARCIA RUIZ SERVICIOS MEDICOS SPA DRA. ANDREA GARCIA RUIZ SERVICIOS MEDICOS SPA",
+      "rut": null,
+      "firstName": "DRA. ANDREA GARCIA RUIZ SERVICIOS MEDICOS SPA",
+      "lastName": "DRA. ANDREA GARCIA RUIZ SERVICIOS MEDICOS SPA",
+      "phone": ""
+    },
+    "15": {
+      "name": "COMERCIALIZADORA BEYOUNG LIMITADA COMERCIALIZADORA BEYOUNG LIMITADA",
+      "rut": null,
+      "firstName": "COMERCIALIZADORA BEYOUNG LIMITADA",
+      "lastName": "COMERCIALIZADORA BEYOUNG LIMITADA",
+      "phone": ""
+    },
+    "17": {
+      "name": "ANGELA CARDOZO ODONTOLOGIA Y ESTETICA FACIAL SPA ANGELA CARDOZO ODONTOLOGIA Y ESTETICA FACIAL SPA",
+      "rut": null,
+      "firstName": "ANGELA CARDOZO ODONTOLOGIA Y ESTETICA FACIAL SPA",
+      "lastName": "ANGELA CARDOZO ODONTOLOGIA Y ESTETICA FACIAL SPA",
+      "phone": ""
+    },
+    "18": {
+      "name": "ANGELICA MARGARITA WEST OROZCO ANGELICA MARGARITA WEST OROZCO",
+      "rut": null,
+      "firstName": "ANGELICA MARGARITA WEST OROZCO",
+      "lastName": "ANGELICA MARGARITA WEST OROZCO",
+      "phone": ""
+    },
+    "20": {
+      "name": "ARISTETIC SPA ARISTETIC SPA",
+      "rut": null,
+      "firstName": "ARISTETIC SPA",
+      "lastName": "ARISTETIC SPA",
+      "phone": ""
+    },
+    "22": {
+      "name": "BENOVA SERVICIOS MEDICOS Y ESTETICOS SPA BENOVA SERVICIOS MEDICOS Y ESTETICOS SPA",
+      "rut": null,
+      "firstName": "BENOVA SERVICIOS MEDICOS Y ESTETICOS SPA",
+      "lastName": "BENOVA SERVICIOS MEDICOS Y ESTETICOS SPA",
+      "phone": ""
+    },
+    "24": {
+      "name": "PRESTACIONES ODONTOLOGICOS DRA. BARBARA PRESTACIONES ODONTOLOGICOS DRA. BARBARA",
+      "rut": null,
+      "firstName": "PRESTACIONES ODONTOLOGICOS DRA. BARBARA",
+      "lastName": "PRESTACIONES ODONTOLOGICOS DRA. BARBARA",
+      "phone": ""
+    },
+    "25": {
+      "name": "BEMED CHILE SPA BEMED CHILE SPA",
+      "rut": null,
+      "firstName": "BEMED CHILE SPA",
+      "lastName": "BEMED CHILE SPA",
+      "phone": ""
+    },
+    "26": {
+      "name": "CALVODENT SPA CALVODENT SPA",
+      "rut": null,
+      "firstName": "CALVODENT SPA",
+      "lastName": "CALVODENT SPA",
+      "phone": ""
+    },
+    "27": {
+      "name": "BERNARDINO SPA BERNARDINO SPA",
+      "rut": null,
+      "firstName": "BERNARDINO SPA",
+      "lastName": "BERNARDINO SPA",
+      "phone": ""
+    },
+    "28": {
+      "name": "CENTRO DE ORTOPEDIA TRAUMATOLOGIA Y REHABILITACION LIMITADA CENTRO DE ORTOPEDIA TRAUMATOLOGIA Y REHABILITACION LIMITADA",
+      "rut": null,
+      "firstName": "CENTRO DE ORTOPEDIA TRAUMATOLOGIA Y REHABILITACION",
+      "lastName": "CENTRO DE ORTOPEDIA TRAUMATOLOGIA Y REHABILITACION",
+      "phone": ""
+    },
+    "30": {
+      "name": "ESTÉTICA INTEGRAL MÜNZENMAYER SPA ESTÉTICA INTEGRAL MÜNZENMAYER SPA",
+      "rut": null,
+      "firstName": "ESTÉTICA INTEGRAL MÜNZENMAYER SPA",
+      "lastName": "ESTÉTICA INTEGRAL MÜNZENMAYER SPA",
+      "phone": ""
+    },
+    "31": {
+      "name": "CAMILA PAZ MUNOZ HEMMELMANN CAMILA PAZ MUNOZ HEMMELMANN",
+      "rut": null,
+      "firstName": "CAMILA PAZ MUNOZ HEMMELMANN",
+      "lastName": "CAMILA PAZ MUNOZ HEMMELMANN",
+      "phone": ""
+    },
+    "32": {
+      "name": "CENTRO ODONTOLÓGICO CARLOS KISS SPA CENTRO ODONTOLÓGICO CARLOS KISS SPA",
+      "rut": null,
+      "firstName": "CENTRO ODONTOLÓGICO CARLOS KISS SPA",
+      "lastName": "CENTRO ODONTOLÓGICO CARLOS KISS SPA",
+      "phone": ""
+    },
+    "33": {
+      "name": "CAMILA NATALIA ROSAS MUNOZ CAMILA NATALIA ROSAS MUNOZ",
+      "rut": null,
+      "firstName": "CAMILA NATALIA ROSAS MUNOZ",
+      "lastName": "CAMILA NATALIA ROSAS MUNOZ",
+      "phone": ""
+    },
+    "37": {
+      "name": "CARLA PAULINA TABILO GARCIA CARLA PAULINA TABILO GARCIA",
+      "rut": null,
+      "firstName": "CARLA PAULINA TABILO GARCIA",
+      "lastName": "CARLA PAULINA TABILO GARCIA",
+      "phone": ""
+    },
+    "39": {
+      "name": "CARMEN PAZ URIBE GONZALEZ CARMEN PAZ URIBE GONZALEZ",
+      "rut": null,
+      "firstName": "CARMEN PAZ URIBE GONZALEZ",
+      "lastName": "CARMEN PAZ URIBE GONZALEZ",
+      "phone": ""
+    },
+    "40": {
+      "name": "SARECH SPA SARECH SPA",
+      "rut": null,
+      "firstName": "SARECH SPA",
+      "lastName": "SARECH SPA",
+      "phone": ""
+    },
+    "41": {
+      "name": "CONCEPT CLINICA SPA CONCEPT CLINICA SPA",
+      "rut": null,
+      "firstName": "CONCEPT CLINICA SPA",
+      "lastName": "CONCEPT CLINICA SPA",
+      "phone": ""
+    },
+    "46": {
+      "name": "CLINICA ÓPALO SPA CLINICA ÓPALO SPA",
+      "rut": null,
+      "firstName": "CLINICA ÓPALO SPA",
+      "lastName": "CLINICA ÓPALO SPA",
+      "phone": ""
+    },
+    "48": {
+      "name": "RUIZ Y BUCHHEISTER LIMITADA RUIZ Y BUCHHEISTER LIMITADA",
+      "rut": null,
+      "firstName": "RUIZ Y BUCHHEISTER LIMITADA",
+      "lastName": "RUIZ Y BUCHHEISTER LIMITADA",
+      "phone": ""
+    },
+    "49": {
+      "name": "CESAR IGNACIA ZAPATA SEPULVEDA CESAR IGNACIA ZAPATA SEPULVEDA",
+      "rut": null,
+      "firstName": "CESAR IGNACIA ZAPATA SEPULVEDA",
+      "lastName": "CESAR IGNACIA ZAPATA SEPULVEDA",
+      "phone": ""
+    },
+    "50": {
+      "name": "CINDY YICETH RADA CAMPUZANO CINDY YICETH RADA CAMPUZANO",
+      "rut": null,
+      "firstName": "CINDY YICETH RADA CAMPUZANO",
+      "lastName": "CINDY YICETH RADA CAMPUZANO",
+      "phone": ""
+    },
+    "52": {
+      "name": "Claudia Guajardo Claudia Guajardo",
+      "rut": null,
+      "firstName": "Claudia Guajardo",
+      "lastName": "Claudia Guajardo",
+      "phone": ""
+    },
+    "53": {
+      "name": "Clinica CH Clinica CH",
+      "rut": null,
+      "firstName": "Clinica CH",
+      "lastName": "Clinica CH",
+      "phone": ""
+    },
+    "54": {
+      "name": "Clinica Corporea Clinica Corporea",
+      "rut": null,
+      "firstName": "Clinica Corporea",
+      "lastName": "Clinica Corporea",
+      "phone": ""
+    },
+    "55": {
+      "name": "Clinica Dra Moren Clinica Dra Moren",
+      "rut": null,
+      "firstName": "Clinica Dra Moren",
+      "lastName": "Clinica Dra Moren",
+      "phone": ""
+    },
+    "56": {
+      "name": "Clinica Estetika Medica Clinica Estetika Medica",
+      "rut": null,
+      "firstName": "Clinica Estetika Medica",
+      "lastName": "Clinica Estetika Medica",
+      "phone": ""
+    },
+    "57": {
+      "name": "Clinica Palabas Clinica Palabas",
+      "rut": null,
+      "firstName": "Clinica Palabas",
+      "lastName": "Clinica Palabas",
+      "phone": ""
+    },
+    "58": {
+      "name": "Constanza de la rosa Constanza de la rosa",
+      "rut": null,
+      "firstName": "Constanza de la rosa",
+      "lastName": "Constanza de la rosa",
+      "phone": ""
+    },
+    "59": {
+      "name": "Constanza Moreno Constanza Moreno",
+      "rut": null,
+      "firstName": "Constanza Moreno",
+      "lastName": "Constanza Moreno",
+      "phone": ""
+    },
+    "60": {
+      "name": "Cristina Antunez Cristina Antunez",
+      "rut": null,
+      "firstName": "Cristina Antunez",
+      "lastName": "Cristina Antunez",
+      "phone": ""
+    },
+    "61": {
+      "name": "Cristina Barra Cristina Barra",
+      "rut": null,
+      "firstName": "Cristina Barra",
+      "lastName": "Cristina Barra",
+      "phone": ""
+    },
+    "62": {
+      "name": "Cristina Martinez Cristina Martinez",
+      "rut": null,
+      "firstName": "Cristina Martinez",
+      "lastName": "Cristina Martinez",
+      "phone": ""
+    },
+    "63": {
+      "name": "Cristina Montero Cristina Montero",
+      "rut": null,
+      "firstName": "Cristina Montero",
+      "lastName": "Cristina Montero",
+      "phone": ""
+    },
+    "64": {
+      "name": "Cristina Urrutia Cristina Urrutia",
+      "rut": null,
+      "firstName": "Cristina Urrutia",
+      "lastName": "Cristina Urrutia",
+      "phone": ""
+    },
+    "65": {
+      "name": "Cristopher Moeller Cristopher Moeller",
+      "rut": null,
+      "firstName": "Cristopher Moeller",
+      "lastName": "Cristopher Moeller",
+      "phone": ""
+    },
+    "66": {
+      "name": "Daniela Lillo Daniela Lillo",
+      "rut": null,
+      "firstName": "Daniela Lillo",
+      "lastName": "Daniela Lillo",
+      "phone": ""
+    },
+    "67": {
+      "name": "Daniela Montoya Daniela Montoya",
+      "rut": null,
+      "firstName": "Daniela Montoya",
+      "lastName": "Daniela Montoya",
+      "phone": ""
+    },
+    "68": {
+      "name": "Daniela Poblete Daniela Poblete",
+      "rut": null,
+      "firstName": "Daniela Poblete",
+      "lastName": "Daniela Poblete",
+      "phone": ""
+    },
+    "69": {
+      "name": "David Ben Dov David Ben Dov",
+      "rut": null,
+      "firstName": "David Ben Dov",
+      "lastName": "David Ben Dov",
+      "phone": ""
+    },
+    "70": {
+      "name": "Derma Femm Derma Femm",
+      "rut": null,
+      "firstName": "Derma Femm",
+      "lastName": "Derma Femm",
+      "phone": ""
+    },
+    "71": {
+      "name": "Ducci Mariella Ducci Mariella",
+      "rut": null,
+      "firstName": "Ducci Mariella",
+      "lastName": "Ducci Mariella",
+      "phone": ""
+    },
+    "72": {
+      "name": "Eduardo Yon Eduardo Yon",
+      "rut": null,
+      "firstName": "Eduardo Yon",
+      "lastName": "Eduardo Yon",
+      "phone": ""
+    },
+    "73": {
+      "name": "Eliza Lagos Eliza Lagos",
+      "rut": null,
+      "firstName": "Eliza Lagos",
+      "lastName": "Eliza Lagos",
+      "phone": ""
+    },
+    "74": {
+      "name": "Elizabeth Almonte Elizabeth Almonte",
+      "rut": null,
+      "firstName": "Elizabeth Almonte",
+      "lastName": "Elizabeth Almonte",
+      "phone": ""
+    },
+    "75": {
+      "name": "Elizabeth Reyes Elizabeth Reyes",
+      "rut": null,
+      "firstName": "Elizabeth Reyes",
+      "lastName": "Elizabeth Reyes",
+      "phone": ""
+    },
+    "76": {
+      "name": "Emilio Vargas Emilio Vargas",
+      "rut": null,
+      "firstName": "Emilio Vargas",
+      "lastName": "Emilio Vargas",
+      "phone": ""
+    },
+    "77": {
+      "name": "Fabiola Carrasco Fabiola Carrasco",
+      "rut": null,
+      "firstName": "Fabiola Carrasco",
+      "lastName": "Fabiola Carrasco",
+      "phone": ""
+    },
+    "78": {
+      "name": "Fernanda Cornejo Fernanda Cornejo",
+      "rut": null,
+      "firstName": "Fernanda Cornejo",
+      "lastName": "Fernanda Cornejo",
+      "phone": ""
+    },
+    "79": {
+      "name": "Fernanda Diaz (Personal) Fernanda Diaz (Personal)",
+      "rut": null,
+      "firstName": "Fernanda Diaz (Personal)",
+      "lastName": "Fernanda Diaz (Personal)",
+      "phone": ""
+    },
+    "131": {
+      "name": "Marcela Rivera Marcela Rivera",
+      "rut": null,
+      "firstName": "Marcela Rivera",
+      "lastName": "Marcela Rivera",
+      "phone": ""
+    },
+    "146": {
+      "name": "Mra Isabel Wilson Mra Isabel Wilson",
+      "rut": null,
+      "firstName": "Mra Isabel Wilson",
+      "lastName": "Mra Isabel Wilson",
+      "phone": ""
+    },
+    "153": {
+      "name": "Natalia Reyes Natalia Reyes",
+      "rut": null,
+      "firstName": "Natalia Reyes",
+      "lastName": "Natalia Reyes",
+      "phone": ""
+    },
+    "154": {
+      "name": "Natasha Riquelme Natasha Riquelme",
+      "rut": null,
+      "firstName": "Natasha Riquelme",
+      "lastName": "Natasha Riquelme",
+      "phone": ""
+    },
+    "155": {
+      "name": "Nicol Baden Nicol Baden",
+      "rut": null,
+      "firstName": "Nicol Baden",
+      "lastName": "Nicol Baden",
+      "phone": ""
+    },
+    "169": {
+      "name": "Paulina Retamal Paulina Retamal",
+      "rut": null,
+      "firstName": "Paulina Retamal",
+      "lastName": "Paulina Retamal",
+      "phone": ""
+    },
+    "170": {
+      "name": "Pia Alvarado Pia Alvarado",
+      "rut": null,
+      "firstName": "Pia Alvarado",
+      "lastName": "Pia Alvarado",
+      "phone": ""
+    },
+    "171": {
+      "name": "Pia Quiroga Pia Quiroga",
+      "rut": null,
+      "firstName": "Pia Quiroga",
+      "lastName": "Pia Quiroga",
+      "phone": ""
+    },
+    "172": {
+      "name": "Pilar Llanos Pilar Llanos",
+      "rut": null,
+      "firstName": "Pilar Llanos",
+      "lastName": "Pilar Llanos",
+      "phone": ""
+    },
+    "173": {
+      "name": "Pilar Rojo Pilar Rojo",
+      "rut": null,
+      "firstName": "Pilar Rojo",
+      "lastName": "Pilar Rojo",
+      "phone": ""
+    },
+    "174": {
+      "name": "Rafael Bustos Rafael Bustos",
+      "rut": null,
+      "firstName": "Rafael Bustos",
+      "lastName": "Rafael Bustos",
+      "phone": ""
+    },
+    "175": {
+      "name": "Ramirez Ramirez",
+      "rut": null,
+      "firstName": "Ramirez",
+      "lastName": "Ramirez",
+      "phone": ""
+    },
+    "176": {
+      "name": "Rannveig Grimsdóttir Rannveig Grimsdóttir",
+      "rut": null,
+      "firstName": "Rannveig Grimsdóttir",
+      "lastName": "Rannveig Grimsdóttir",
+      "phone": ""
+    },
+    "177": {
+      "name": "Robert Mattatall Robert Mattatall",
+      "rut": null,
+      "firstName": "Robert Mattatall",
+      "lastName": "Robert Mattatall",
+      "phone": ""
+    },
+    "178": {
+      "name": "Rodrigo Contreras Rodrigo Contreras",
+      "rut": null,
+      "firstName": "Rodrigo Contreras",
+      "lastName": "Rodrigo Contreras",
+      "phone": ""
+    },
+    "179": {
+      "name": "Rodrigo Guridi Rodrigo Guridi",
+      "rut": null,
+      "firstName": "Rodrigo Guridi",
+      "lastName": "Rodrigo Guridi",
+      "phone": ""
+    },
+    "180": {
+      "name": "Romina Vargas Romina Vargas",
+      "rut": null,
+      "firstName": "Romina Vargas",
+      "lastName": "Romina Vargas",
+      "phone": ""
+    },
+    "181": {
+      "name": "Roxana Pineda Roxana Pineda",
+      "rut": null,
+      "firstName": "Roxana Pineda",
+      "lastName": "Roxana Pineda",
+      "phone": ""
+    },
+    "182": {
+      "name": "Ruth Aguirre Ruth Aguirre",
+      "rut": null,
+      "firstName": "Ruth Aguirre",
+      "lastName": "Ruth Aguirre",
+      "phone": ""
+    },
+    "183": {
+      "name": "Sandra Galvan Sandra Galvan",
+      "rut": null,
+      "firstName": "Sandra Galvan",
+      "lastName": "Sandra Galvan",
+      "phone": ""
+    },
+    "184": {
+      "name": "Sandra Narea Sandra Narea",
+      "rut": null,
+      "firstName": "Sandra Narea",
+      "lastName": "Sandra Narea",
+      "phone": ""
+    },
+    "185": {
+      "name": "Sandra Salhus Sandra Salhus",
+      "rut": null,
+      "firstName": "Sandra Salhus",
+      "lastName": "Sandra Salhus",
+      "phone": ""
+    },
+    "186": {
+      "name": "Sandra Sanchez Sandra Sanchez",
+      "rut": null,
+      "firstName": "Sandra Sanchez",
+      "lastName": "Sandra Sanchez",
+      "phone": ""
+    },
+    "187": {
+      "name": "Sanmed Sanmed",
+      "rut": null,
+      "firstName": "Sanmed",
+      "lastName": "Sanmed",
+      "phone": ""
+    },
+    "188": {
+      "name": "Sebastian Billeke Sebastian Billeke",
+      "rut": null,
+      "firstName": "Sebastian Billeke",
+      "lastName": "Sebastian Billeke",
+      "phone": ""
+    },
+    "201": {
+      "name": "UNIVERSIDAD DE CHILE UNIVERSIDAD DE CHILE",
+      "rut": null,
+      "firstName": "UNIVERSIDAD DE CHILE",
+      "lastName": "UNIVERSIDAD DE CHILE",
+      "phone": ""
+    },
+    "202": {
+      "name": "Valentin Bernales Valentin Bernales",
+      "rut": null,
+      "firstName": "Valentin Bernales",
+      "lastName": "Valentin Bernales",
+      "phone": ""
+    },
+    "203": {
+      "name": "Valentina Dalbosco Valentina Dalbosco",
+      "rut": null,
+      "firstName": "Valentina Dalbosco",
+      "lastName": "Valentina Dalbosco",
+      "phone": ""
+    },
+    "204": {
+      "name": "Valeria Saavedra Valeria Saavedra",
+      "rut": null,
+      "firstName": "Valeria Saavedra",
+      "lastName": "Valeria Saavedra",
+      "phone": ""
+    },
+    "205": {
+      "name": "Verena Stehr Verena Stehr",
+      "rut": null,
+      "firstName": "Verena Stehr",
+      "lastName": "Verena Stehr",
+      "phone": ""
+    },
+    "206": {
+      "name": "Veronica Betancourt Veronica Betancourt",
+      "rut": null,
+      "firstName": "Veronica Betancourt",
+      "lastName": "Veronica Betancourt",
+      "phone": ""
+    },
+    "217": {
+      "name": "Alejandra Salomon Alejandra Salomon",
+      "rut": null,
+      "firstName": "Alejandra Salomon",
+      "lastName": "Alejandra Salomon",
+      "phone": ""
+    },
+    "219": {
+      "name": "Camila Maturana Camila Maturana",
+      "rut": null,
+      "firstName": "Camila Maturana",
+      "lastName": "Camila Maturana",
+      "phone": ""
+    },
+    "220": {
+      "name": "Andrea Gutierrez Andrea Gutierrez",
+      "rut": null,
+      "firstName": "Andrea Gutierrez",
+      "lastName": "Andrea Gutierrez",
+      "phone": ""
+    },
+    "222": {
+      "name": "Camila Maturana (Personal) Camila Maturana (Personal)",
+      "rut": null,
+      "firstName": "Camila Maturana (Personal)",
+      "lastName": "Camila Maturana (Personal)",
+      "phone": ""
+    },
+    "226": {
+      "name": "Nelson Correa Nelson Correa",
+      "rut": null,
+      "firstName": "Nelson Correa",
+      "lastName": "Nelson Correa",
+      "phone": ""
+    },
+    "229": {
+      "name": "Vanessa Burgos Vanessa Burgos",
+      "rut": null,
+      "firstName": "Vanessa Burgos",
+      "lastName": "Vanessa Burgos",
+      "phone": ""
+    },
+    "230": {
+      "name": "Carolina Parada Carolina Parada",
+      "rut": null,
+      "firstName": "Carolina Parada",
+      "lastName": "Carolina Parada",
+      "phone": ""
+    },
+    "231": {
+      "name": "Carla Nave Carla Nave",
+      "rut": null,
+      "firstName": "Carla Nave",
+      "lastName": "Carla Nave",
+      "phone": ""
+    },
+    "232": {
+      "name": "Daniela Riquelme Daniela Riquelme",
+      "rut": null,
+      "firstName": "Daniela Riquelme",
+      "lastName": "Daniela Riquelme",
+      "phone": ""
+    },
+    "234": {
+      "name": "Valentina Constanza Valentina Constanza",
+      "rut": null,
+      "firstName": "Valentina Constanza",
+      "lastName": "Valentina Constanza",
+      "phone": ""
+    },
+    "235": {
+      "name": "Fernanda Diaz Fernanda Diaz",
+      "rut": null,
+      "firstName": "Fernanda Diaz",
+      "lastName": "Fernanda Diaz",
+      "phone": ""
+    },
+    "238": {
+      "name": "Catherina Montenegro Catherina Montenegro",
+      "rut": null,
+      "firstName": "Catherina Montenegro",
+      "lastName": "Catherina Montenegro",
+      "phone": ""
+    },
+    "240": {
+      "name": "Daniela Martinez Daniela Martinez",
+      "rut": null,
+      "firstName": "Daniela Martinez",
+      "lastName": "Daniela Martinez",
+      "phone": ""
+    },
+    "241": {
+      "name": "Benedicto Villagran Benedicto Villagran",
+      "rut": null,
+      "firstName": "Benedicto Villagran",
+      "lastName": "Benedicto Villagran",
+      "phone": ""
+    },
+    "242": {
+      "name": "Alejandra Muñoz Alejandra Muñoz",
+      "rut": null,
+      "firstName": "Alejandra Muñoz",
+      "lastName": "Alejandra Muñoz",
+      "phone": ""
+    },
+    "244": {
+      "name": "Natalia Quintanilla Natalia Quintanilla",
+      "rut": null,
+      "firstName": "Natalia Quintanilla",
+      "lastName": "Natalia Quintanilla",
+      "phone": ""
+    },
+    "246": {
+      "name": "Carolina Puentes Carolina Puentes",
+      "rut": null,
+      "firstName": "Carolina Puentes",
+      "lastName": "Carolina Puentes",
+      "phone": ""
+    },
+    "248": {
+      "name": "Cristobal Hermansen Cristobal Hermansen",
+      "rut": null,
+      "firstName": "Cristobal Hermansen",
+      "lastName": "Cristobal Hermansen",
+      "phone": ""
+    },
+    "250": {
+      "name": "Andrea Fernandez Andrea Fernandez",
+      "rut": null,
+      "firstName": "Andrea Fernandez",
+      "lastName": "Andrea Fernandez",
+      "phone": ""
+    },
+    "251": {
+      "name": "Daniela Cid Daniela Cid",
+      "rut": null,
+      "firstName": "Daniela Cid",
+      "lastName": "Daniela Cid",
+      "phone": ""
+    },
+    "255": {
+      "name": "Camila Plaza Camila Plaza",
+      "rut": null,
+      "firstName": "Camila Plaza",
+      "lastName": "Camila Plaza",
+      "phone": ""
+    },
+    "256": {
+      "name": "Consuelo Sanhueza Consuelo Sanhueza",
+      "rut": null,
+      "firstName": "Consuelo Sanhueza",
+      "lastName": "Consuelo Sanhueza",
+      "phone": ""
+    },
+    "258": {
+      "name": "Carolina Abu-awad Carolina Abu-awad",
+      "rut": null,
+      "firstName": "Carolina Abu-awad",
+      "lastName": "Carolina Abu-awad",
+      "phone": ""
+    },
+    "259": {
+      "name": "Camila Parra Camila Parra",
+      "rut": null,
+      "firstName": "Camila Parra",
+      "lastName": "Camila Parra",
+      "phone": ""
+    },
+    "260": {
+      "name": "Joan Rivero Joan Rivero",
+      "rut": null,
+      "firstName": "Joan Rivero",
+      "lastName": "Joan Rivero",
+      "phone": ""
+    },
+    "261": {
+      "name": "Carolina Gomez Carolina Gomez",
+      "rut": null,
+      "firstName": "Carolina Gomez",
+      "lastName": "Carolina Gomez",
+      "phone": ""
+    },
+    "263": {
+      "name": "Andrea Opazo Andrea Opazo",
+      "rut": null,
+      "firstName": "Andrea Opazo",
+      "lastName": "Andrea Opazo",
+      "phone": ""
+    },
+    "265": {
+      "name": "Camila Plaza Camila Plaza",
+      "rut": null,
+      "firstName": "Camila Plaza",
+      "lastName": "Camila Plaza",
+      "phone": ""
+    },
+    "266": {
+      "name": "Francisca Leon Francisca Leon",
+      "rut": null,
+      "firstName": "Francisca Leon",
+      "lastName": "Francisca Leon",
+      "phone": ""
+    },
+    "268": {
+      "name": "Andrea del Pilar Ortiz Andrea del Pilar Ortiz",
+      "rut": null,
+      "firstName": "Andrea del Pilar Ortiz",
+      "lastName": "Andrea del Pilar Ortiz",
+      "phone": ""
+    },
+    "269": {
+      "name": "Carolina Gonzalez Carolina Gonzalez",
+      "rut": null,
+      "firstName": "Carolina Gonzalez",
+      "lastName": "Carolina Gonzalez",
+      "phone": ""
+    },
+    "270": {
+      "name": "Helena Canales Helena Canales",
+      "rut": null,
+      "firstName": "Helena Canales",
+      "lastName": "Helena Canales",
+      "phone": ""
+    },
+    "271": {
+      "name": "Alejandra Perez Alejandra Perez",
+      "rut": null,
+      "firstName": "Alejandra Perez",
+      "lastName": "Alejandra Perez",
+      "phone": ""
+    },
+    "272": {
+      "name": "Cristina Mena Cristina Mena",
+      "rut": null,
+      "firstName": "Cristina Mena",
+      "lastName": "Cristina Mena",
+      "phone": ""
+    },
+    "273": {
+      "name": "Faride Ferez Faride Ferez",
+      "rut": null,
+      "firstName": "Faride Ferez",
+      "lastName": "Faride Ferez",
+      "phone": ""
+    },
+    "275": {
+      "name": "Carolina Fuentes Carolina Fuentes",
+      "rut": null,
+      "firstName": "Carolina Fuentes",
+      "lastName": "Carolina Fuentes",
+      "phone": ""
+    },
+    "278": {
+      "name": "Daniela Celedon Daniela Celedon",
+      "rut": null,
+      "firstName": "Daniela Celedon",
+      "lastName": "Daniela Celedon",
+      "phone": ""
+    },
+    "281": {
+      "name": "Cecilia Ruiz Cecilia Ruiz",
+      "rut": null,
+      "firstName": "Cecilia Ruiz",
+      "lastName": "Cecilia Ruiz",
+      "phone": ""
+    },
+    "282": {
+      "name": "Nazarena Avila Nazarena Avila",
+      "rut": null,
+      "firstName": "Nazarena Avila",
+      "lastName": "Nazarena Avila",
+      "phone": ""
+    },
+    "285": {
+      "name": "Douglas Arbulo Douglas Arbulo",
+      "rut": null,
+      "firstName": "Douglas Arbulo",
+      "lastName": "Douglas Arbulo",
+      "phone": ""
+    },
+    "286": {
+      "name": "Barbara Pavez Barbara Pavez",
+      "rut": null,
+      "firstName": "Barbara Pavez",
+      "lastName": "Barbara Pavez",
+      "phone": ""
+    },
+    "287": {
+      "name": "Cristian Carreño Cristian Carreño",
+      "rut": null,
+      "firstName": "Cristian Carreño",
+      "lastName": "Cristian Carreño",
+      "phone": ""
+    },
+    "288": {
+      "name": "Carmen Gajardo Carmen Gajardo",
+      "rut": null,
+      "firstName": "Carmen Gajardo",
+      "lastName": "Carmen Gajardo",
+      "phone": ""
+    },
+    "290": {
+      "name": "Belen Perretta Belen Perretta",
+      "rut": null,
+      "firstName": "Belen Perretta",
+      "lastName": "Belen Perretta",
+      "phone": ""
+    },
+    "291": {
+      "name": "Cristopher Moeller Cristopher Moeller",
+      "rut": null,
+      "firstName": "Cristopher Moeller",
+      "lastName": "Cristopher Moeller",
+      "phone": ""
+    },
+    "294": {
+      "name": "Natalia Perez Natalia Perez",
+      "rut": null,
+      "firstName": "Natalia Perez",
+      "lastName": "Natalia Perez",
+      "phone": ""
+    },
+    "297": {
+      "name": "Andres Quiñones Andres Quiñones",
+      "rut": null,
+      "firstName": "Andres Quiñones",
+      "lastName": "Andres Quiñones",
+      "phone": ""
+    },
+    "298": {
+      "name": "Valentina Moreno Valentina Moreno",
+      "rut": null,
+      "firstName": "Valentina Moreno",
+      "lastName": "Valentina Moreno",
+      "phone": ""
+    },
+    "302": {
+      "name": "Belen Valenzuela Belen Valenzuela",
+      "rut": null,
+      "firstName": "Belen Valenzuela",
+      "lastName": "Belen Valenzuela",
+      "phone": ""
+    },
+    "305": {
+      "name": "Carolina Neira Carolina Neira",
+      "rut": null,
+      "firstName": "Carolina Neira",
+      "lastName": "Carolina Neira",
+      "phone": ""
+    },
+    "308": {
+      "name": "Andres Gaete Andres Gaete",
+      "rut": null,
+      "firstName": "Andres Gaete",
+      "lastName": "Andres Gaete",
+      "phone": ""
+    },
+    "310": {
+      "name": "Camila Parra Camila Parra",
+      "rut": null,
+      "firstName": "Camila Parra",
+      "lastName": "Camila Parra",
+      "phone": ""
+    },
+    "313": {
+      "name": "Catalina Burgos Catalina Burgos",
+      "rut": null,
+      "firstName": "Catalina Burgos",
+      "lastName": "Catalina Burgos",
+      "phone": ""
+    },
+    "319": {
+      "name": "Carolina Yudilevich Carolina Yudilevich",
+      "rut": null,
+      "firstName": "Carolina Yudilevich",
+      "lastName": "Carolina Yudilevich",
+      "phone": ""
+    },
+    "321": {
+      "name": "Natalia SanMartin Natalia SanMartin",
+      "rut": null,
+      "firstName": "Natalia SanMartin",
+      "lastName": "Natalia SanMartin",
+      "phone": ""
+    },
+    "322": {
+      "name": "Natalia Decelis Natalia Decelis",
+      "rut": null,
+      "firstName": "Natalia Decelis",
+      "lastName": "Natalia Decelis",
+      "phone": ""
+    },
+    "329": {
+      "name": "CELINA EDITH BARRIONUEVO CELINA EDITH BARRIONUEVO",
+      "rut": null,
+      "firstName": "CELINA EDITH BARRIONUEVO",
+      "lastName": "CELINA EDITH BARRIONUEVO",
+      "phone": ""
+    },
+    "330": {
+      "name": "CHRISTINE LUCHSINGER REINECKE CHRISTINE LUCHSINGER REINECKE",
+      "rut": null,
+      "firstName": "CHRISTINE LUCHSINGER REINECKE",
+      "lastName": "CHRISTINE LUCHSINGER REINECKE",
+      "phone": ""
+    },
+    "332": {
+      "name": "Claudio Carcamo Claudio Carcamo",
+      "rut": null,
+      "firstName": "Claudio Carcamo",
+      "lastName": "Claudio Carcamo",
+      "phone": ""
+    },
+    "333": {
+      "name": "Clinica Lo Arcaya Clinica Lo Arcaya",
+      "rut": null,
+      "firstName": "Clinica Lo Arcaya",
+      "lastName": "Clinica Lo Arcaya",
+      "phone": ""
+    },
+    "334": {
+      "name": "Cintia Norambuena Cintia Norambuena",
+      "rut": null,
+      "firstName": "Cintia Norambuena",
+      "lastName": "Cintia Norambuena",
+      "phone": ""
+    },
+    "335": {
+      "name": "Daniela Arancibia Daniela Arancibia",
+      "rut": null,
+      "firstName": "Daniela Arancibia",
+      "lastName": "Daniela Arancibia",
+      "phone": ""
+    },
+    "339": {
+      "name": "Daniela Chamorro Daniela Chamorro",
+      "rut": null,
+      "firstName": "Daniela Chamorro",
+      "lastName": "Daniela Chamorro",
+      "phone": ""
+    },
+    "352": {
+      "name": "DOMINIQUE CATALINA CAMPOS WALDRON DOMINIQUE CATALINA CAMPOS WALDRON",
+      "rut": null,
+      "firstName": "DOMINIQUE CATALINA CAMPOS WALDRON",
+      "lastName": "DOMINIQUE CATALINA CAMPOS WALDRON",
+      "phone": ""
+    },
+    "353": {
+      "name": "NICOLAS RICARDO OPAZO RIVERA NICOLAS RICARDO OPAZO RIVERA",
+      "rut": null,
+      "firstName": "NICOLAS RICARDO OPAZO RIVERA",
+      "lastName": "NICOLAS RICARDO OPAZO RIVERA",
+      "phone": ""
+    },
+    "354": {
+      "name": "Camila Vega Reyes Camila Vega Reyes",
+      "rut": null,
+      "firstName": "Camila Vega Reyes",
+      "lastName": "Camila Vega Reyes",
+      "phone": ""
+    },
+    "355": {
+      "name": "Romina Villegas Romina Villegas",
+      "rut": null,
+      "firstName": "Romina Villegas",
+      "lastName": "Romina Villegas",
+      "phone": ""
+    },
+    "356": {
+      "name": "Ellen de Oliveira Ellen de Oliveira",
+      "rut": null,
+      "firstName": "Ellen de Oliveira",
+      "lastName": "Ellen de Oliveira",
+      "phone": ""
+    },
+    "357": {
+      "name": "Nattaly Opitz Nattaly Opitz",
+      "rut": null,
+      "firstName": "Nattaly Opitz",
+      "lastName": "Nattaly Opitz",
+      "phone": ""
+    },
+    "359": {
+      "name": "Daniel Morales Daniel Morales",
+      "rut": null,
+      "firstName": "Daniel Morales",
+      "lastName": "Daniel Morales",
+      "phone": ""
+    },
+    "361": {
+      "name": "Clinica Terre Clinica Terre",
+      "rut": null,
+      "firstName": "Clinica Terre",
+      "lastName": "Clinica Terre",
+      "phone": ""
+    },
+    "365": {
+      "name": "PAULINA MARIA NELIDA ABARZUA PODLECH PAULINA MARIA NELIDA ABARZUA PODLECH",
+      "rut": null,
+      "firstName": "PAULINA MARIA NELIDA ABARZUA PODLECH",
+      "lastName": "PAULINA MARIA NELIDA ABARZUA PODLECH",
+      "phone": ""
+    },
+    "368": {
+      "name": "Angelica Becerra Angelica Becerra",
+      "rut": null,
+      "firstName": "Angelica Becerra",
+      "lastName": "Angelica Becerra",
+      "phone": ""
+    },
+    "370": {
+      "name": "Angela valenzuela Angela valenzuela",
+      "rut": null,
+      "firstName": "Angela valenzuela",
+      "lastName": "Angela valenzuela",
+      "phone": ""
+    },
+    "371": {
+      "name": "Barbara Carreño Barbara Carreño",
+      "rut": null,
+      "firstName": "Barbara Carreño",
+      "lastName": "Barbara Carreño",
+      "phone": ""
+    },
+    "372": {
+      "name": "Fabian Lucero Fabian Lucero",
+      "rut": null,
+      "firstName": "Fabian Lucero",
+      "lastName": "Fabian Lucero",
+      "phone": ""
+    },
+    "375": {
+      "name": "Clinica Olympus Clinica Olympus",
+      "rut": null,
+      "firstName": "Clinica Olympus",
+      "lastName": "Clinica Olympus",
+      "phone": ""
+    },
+    "376": {
+      "name": "Clinica Mares Clinica Mares",
+      "rut": null,
+      "firstName": "Clinica Mares",
+      "lastName": "Clinica Mares",
+      "phone": ""
+    },
+    "378": {
+      "name": "Carlos Mendez Toro Carlos Mendez Toro",
+      "rut": null,
+      "firstName": "Carlos Mendez Toro",
+      "lastName": "Carlos Mendez Toro",
+      "phone": ""
+    },
+    "382": {
+      "name": "Nicolas Silva Nicolas Silva",
+      "rut": null,
+      "firstName": "Nicolas Silva",
+      "lastName": "Nicolas Silva",
+      "phone": ""
+    },
+    "388": {
+      "name": "Camila Alvarez Camila Alvarez",
+      "rut": null,
+      "firstName": "Camila Alvarez",
+      "lastName": "Camila Alvarez",
+      "phone": ""
+    },
+    "391": {
+      "name": "Consuelo Salas Consuelo Salas",
+      "rut": null,
+      "firstName": "Consuelo Salas",
+      "lastName": "Consuelo Salas",
+      "phone": ""
+    },
+    "393": {
+      "name": "Rosario Oyarce Rosario Oyarce",
+      "rut": null,
+      "firstName": "Rosario Oyarce",
+      "lastName": "Rosario Oyarce",
+      "phone": ""
+    },
+    "398": {
+      "name": "Debora Flores Debora Flores",
+      "rut": null,
+      "firstName": "Debora Flores",
+      "lastName": "Debora Flores",
+      "phone": ""
+    },
+    "399": {
+      "name": "Cristin Sandoval Cristin Sandoval",
+      "rut": null,
+      "firstName": "Cristin Sandoval",
+      "lastName": "Cristin Sandoval",
+      "phone": ""
+    },
+    "400": {
+      "name": "Raul Barria Raul Barria",
+      "rut": null,
+      "firstName": "Raul Barria",
+      "lastName": "Raul Barria",
+      "phone": ""
+    },
+    "403": {
+      "name": "Amelia Querales Amelia Querales",
+      "rut": null,
+      "firstName": "Amelia Querales",
+      "lastName": "Amelia Querales",
+      "phone": ""
+    },
+    "404": {
+      "name": "Derma Femm Derma Femm",
+      "rut": null,
+      "firstName": "Derma Femm",
+      "lastName": "Derma Femm",
+      "phone": ""
+    },
+    "412": {
+      "name": "Esteban Moreno Esteban Moreno",
+      "rut": null,
+      "firstName": "Esteban Moreno",
+      "lastName": "Esteban Moreno",
+      "phone": ""
+    },
+    "416": {
+      "name": "Dearmatologia Malaga Dearmatologia Malaga",
+      "rut": null,
+      "firstName": "Dearmatologia Malaga",
+      "lastName": "Dearmatologia Malaga",
+      "phone": ""
+    },
+    "419": {
+      "name": "Belen Perretta Belen Perretta",
+      "rut": null,
+      "firstName": "Belen Perretta",
+      "lastName": "Belen Perretta",
+      "phone": ""
+    },
+    "420": {
+      "name": "Constanza Godoy Constanza Godoy",
+      "rut": null,
+      "firstName": "Constanza Godoy",
+      "lastName": "Constanza Godoy",
+      "phone": ""
+    },
+    "422": {
+      "name": "Cristian Vargas Cristian Vargas",
+      "rut": null,
+      "firstName": "Cristian Vargas",
+      "lastName": "Cristian Vargas",
+      "phone": ""
+    },
+    "430": {
+      "name": "A Y C SERVICIOS DE SALUD LIMITADA",
+      "rut": "77212198-9",
+      "firstName": "A Y C SERVICIOS DE SALUD LIMITADA",
+      "lastName": "A Y C SERVICIOS DE SALUD LIMITADA",
+      "phone": ""
+    },
+    "1116": {
+      "name": "Servicios Medicos Praga SPA",
+      "rut": "76386300k",
+      "firstName": "Roberto",
+      "lastName": "Prado",
+      "phone": "966169326"
+    },
+    "1148": {
+      "name": "Sociedad de profesionales Melinao Ramírez spa",
+      "rut": "772249357",
+      "firstName": "Mariana",
+      "lastName": "Ramírez placencia",
+      "phone": "957108955"
+    },
+    "1203": {
+      "name": "Freddy Anthony Inzunza Adasme",
+      "rut": "12267830-K",
+      "firstName": "Freddy Anthony",
+      "lastName": "Inzunza Adasme",
+      "phone": "972794014"
     }
   },
   "months": [
@@ -31641,11 +33013,11 @@
     {
       "year": 2026,
       "month": 9,
-      "count_facturas": 126,
-      "count_nc": 0,
-      "neto_facturas": 110118134,
-      "neto_nc": 0,
-      "total_neto": 110118134,
+      "count_facturas": 132,
+      "count_nc": 8,
+      "neto_facturas": 113686877,
+      "neto_nc": 5692831,
+      "total_neto": 107994046,
       "by_day": [
         {
           "date": "2026-09-01",
@@ -31706,24 +33078,29 @@
           "date": "2026-09-16",
           "count": 5,
           "neto": 6034897
+        },
+        {
+          "date": "2026-09-17",
+          "count": 6,
+          "neto": 3568743
         }
       ],
       "by_vendor": {
         "Daisy Ponce": {
-          "count": 34,
-          "neto": 26083410
+          "count": 38,
+          "neto": 25775610
         },
         "Cindy Monsalves": {
-          "count": 49,
-          "neto": 38214668
+          "count": 52,
+          "neto": 38219728
         },
         "Monica Urrutia": {
-          "count": 39,
-          "neto": 43093231
+          "count": 40,
+          "neto": 43358436
         },
         "Sin asignar": {
-          "count": 3,
-          "neto": 2581225
+          "count": 1,
+          "neto": 494672
         },
         "Freddy Inzunza": {
           "count": 1,
@@ -31781,6 +33158,11 @@
             "date": "2026-09-14",
             "count": 5,
             "neto": 3770027
+          },
+          {
+            "date": "2026-09-17",
+            "count": 4,
+            "neto": 1831821
           }
         ],
         "Cindy Monsalves": [
@@ -31826,8 +33208,8 @@
           },
           {
             "date": "2026-09-14",
-            "count": 1,
-            "neto": 670925
+            "count": 2,
+            "neto": 1204711
           },
           {
             "date": "2026-09-15",
@@ -31838,6 +33220,11 @@
             "date": "2026-09-16",
             "count": 1,
             "neto": 1135851
+          },
+          {
+            "date": "2026-09-17",
+            "count": 2,
+            "neto": 1736922
           }
         ],
         "Monica Urrutia": [
@@ -31878,8 +33265,8 @@
           },
           {
             "date": "2026-09-14",
-            "count": 3,
-            "neto": 2962358
+            "count": 4,
+            "neto": 4515125
           },
           {
             "date": "2026-09-16",
@@ -31892,11 +33279,6 @@
             "date": "2026-09-10",
             "count": 1,
             "neto": 494672
-          },
-          {
-            "date": "2026-09-14",
-            "count": 2,
-            "neto": 2086553
           }
         ],
         "Freddy Inzunza": [
@@ -31908,28 +33290,28 @@
         ]
       },
       "by_brand": {
-        "Teoxane": 90283169,
-        "RRS HA Long Lasting": 19834965,
+        "Teoxane": 87581964,
+        "RRS HA Long Lasting": 20412082,
         "FINE": 0
       },
       "by_vendor_brand": {
         "Daisy Ponce": {
-          "Teoxane": 17412914,
+          "Teoxane": 17105114,
           "RRS HA Long Lasting": 8670496,
           "FINE": 0
         },
         "Cindy Monsalves": {
-          "Teoxane": 32979390,
-          "RRS HA Long Lasting": 5235278,
+          "Teoxane": 32407333,
+          "RRS HA Long Lasting": 5812395,
           "FINE": 0
         },
         "Monica Urrutia": {
-          "Teoxane": 37658712,
+          "Teoxane": 37923917,
           "RRS HA Long Lasting": 5434519,
           "FINE": 0
         },
         "Sin asignar": {
-          "Teoxane": 2086553,
+          "Teoxane": 0,
           "RRS HA Long Lasting": 494672,
           "FINE": 0
         },
@@ -31941,52 +33323,52 @@
       },
       "by_sku": {
         "Jeringa monodosis x 3mL (sin aguja)": {
-          "neto": 19834965,
-          "qty": 195.0
+          "neto": 20412082,
+          "qty": 200.0
         },
         "RHA KISS (2X0.7ml)": {
           "neto": 756600,
           "qty": 7.0
         },
         "PureSense Ultra Deep (2X1.2ml)": {
-          "neto": 37993849,
-          "qty": 306.0
+          "neto": 37689150,
+          "qty": 303.0
         },
         "TEOSYAL RHA 4 (2X1.2ml)": {
-          "neto": 12468144,
-          "qty": 77.0
+          "neto": 11436672,
+          "qty": 70.0
         },
         "TEOSYAL RHA 3 (2X1ml)": {
-          "neto": 3604744,
-          "qty": 32.0
+          "neto": 3004830,
+          "qty": 27.0
         },
         "TEOSYAL RHA 1 (2X1ml)": {
-          "neto": 4615520,
-          "qty": 51.0
+          "neto": 4877600,
+          "qty": 53.0
         },
         "TEOSYAL RHA 2 (2X1ml)": {
           "neto": 8477725,
-          "qty": 71.0
+          "qty": 69.0
         },
         "Redensity 2 (2X1ml)": {
           "neto": 5084663,
           "qty": 39.0
         },
         "RHA 3 (2X1.2ml)": {
-          "neto": 2987000,
-          "qty": 18.0
+          "neto": 2656400,
+          "qty": 16.0
         },
         "Redensity 1 (1x3ml)": {
-          "neto": 7551000,
-          "qty": 101.0
+          "neto": 7777800,
+          "qty": 104.0
         },
         "Redensity 1 (2X1ml)": {
           "neto": 806624,
           "qty": 15.0
         },
         "RHA Kiss Volume (2X1ml)": {
-          "neto": 5937300,
-          "qty": 40.0
+          "neto": 5013900,
+          "qty": 34.0
         }
       },
       "by_vendor_sku": {
@@ -32024,33 +33406,33 @@
             "qty": 25.0
           },
           "RHA Kiss Volume (2X1ml)": {
-            "neto": 1174500,
-            "qty": 8.0
+            "neto": 866700,
+            "qty": 6.0
           }
         },
         "Cindy Monsalves": {
           "Jeringa monodosis x 3mL (sin aguja)": {
-            "neto": 5235278,
-            "qty": 53.0
+            "neto": 5812395,
+            "qty": 58.0
           },
           "RHA KISS (2X0.7ml)": {
             "neto": 429000,
             "qty": 5.0
           },
           "PureSense Ultra Deep (2X1.2ml)": {
-            "neto": 13476258,
-            "qty": 103.0
+            "neto": 13339945,
+            "qty": 102.0
           },
           "TEOSYAL RHA 3 (2X1ml)": {
             "neto": 744629,
             "qty": 7.0
           },
           "TEOSYAL RHA 4 (2X1.2ml)": {
-            "neto": 3788096,
-            "qty": 22.0
+            "neto": 3444272,
+            "qty": 20.0
           },
           "RHA 3 (2X1.2ml)": {
-            "neto": 2125700,
+            "neto": 2160500,
             "qty": 13.0
           },
           "Redensity 2 (2X1ml)": {
@@ -32058,38 +33440,38 @@
             "qty": 10.0
           },
           "Redensity 1 (1x3ml)": {
-            "neto": 3949200,
-            "qty": 52.0
+            "neto": 4176000,
+            "qty": 55.0
           },
           "Redensity 1 (2X1ml)": {
             "neto": 329056,
             "qty": 9.0
           },
           "RHA Kiss Volume (2X1ml)": {
-            "neto": 2616300,
-            "qty": 17.0
+            "neto": 2000700,
+            "qty": 13.0
           },
           "TEOSYAL RHA 1 (2X1ml)": {
-            "neto": 1892800,
-            "qty": 20.0
+            "neto": 2154880,
+            "qty": 22.0
           },
           "TEOSYAL RHA 2 (2X1ml)": {
             "neto": 2410179,
-            "qty": 23.0
+            "qty": 21.0
           }
         },
         "Monica Urrutia": {
           "TEOSYAL RHA 4 (2X1.2ml)": {
-            "neto": 6200896,
+            "neto": 6249152,
             "qty": 40.0
           },
           "PureSense Ultra Deep (2X1.2ml)": {
-            "neto": 15411363,
-            "qty": 131.0
+            "neto": 16063526,
+            "qty": 136.0
           },
           "TEOSYAL RHA 3 (2X1ml)": {
-            "neto": 2860115,
-            "qty": 25.0
+            "neto": 2260201,
+            "qty": 20.0
           },
           "Redensity 2 (2X1ml)": {
             "neto": 2326335,
@@ -32100,8 +33482,8 @@
             "qty": 30.0
           },
           "RHA Kiss Volume (2X1ml)": {
-            "neto": 1981800,
-            "qty": 14.0
+            "neto": 2146500,
+            "qty": 15.0
           },
           "Jeringa monodosis x 3mL (sin aguja)": {
             "neto": 5434519,
@@ -32128,22 +33510,6 @@
           "Jeringa monodosis x 3mL (sin aguja)": {
             "neto": 494672,
             "qty": 5.0
-          },
-          "PureSense Ultra Deep (2X1.2ml)": {
-            "neto": 820549,
-            "qty": 7.0
-          },
-          "RHA 3 (2X1.2ml)": {
-            "neto": 365400,
-            "qty": 2.0
-          },
-          "TEOSYAL RHA 4 (2X1.2ml)": {
-            "neto": 735904,
-            "qty": 5.0
-          },
-          "RHA Kiss Volume (2X1ml)": {
-            "neto": 164700,
-            "qty": 1.0
           }
         },
         "Freddy Inzunza": {
@@ -32154,16 +33520,6 @@
         }
       },
       "top_clients": [
-        {
-          "id": "651",
-          "count": 3,
-          "neto": 3649278,
-          "teox_neto": 3649278,
-          "teox_units": 30.0,
-          "rrs_neto": 0,
-          "rrs_units": 0,
-          "name": "OSVAL LIMITADA"
-        },
         {
           "id": "871",
           "count": 2,
@@ -32205,6 +33561,16 @@
           "name": "SOCIEDAD MEDICA DE TECNOLOGÍA LIMITADA"
         },
         {
+          "id": "1136",
+          "count": 4,
+          "neto": 2641994,
+          "teox_neto": 1570205,
+          "teox_units": 15.0,
+          "rrs_neto": 1071789,
+          "rrs_units": 10.0,
+          "name": "Servicios Odontológicos Mafrasa Limitada"
+        },
+        {
           "id": "1052",
           "count": 1,
           "neto": 2438779,
@@ -32233,6 +33599,16 @@
           "rrs_neto": 371004,
           "rrs_units": 3.0,
           "name": "ASESORÍAS E INVERSIONES SF SPA"
+        },
+        {
+          "id": "651",
+          "count": 3,
+          "neto": 2361716,
+          "teox_neto": 2361716,
+          "teox_units": 20.0,
+          "rrs_neto": 0,
+          "rrs_units": 0,
+          "name": "OSVAL LIMITADA"
         },
         {
           "id": "954",
@@ -32293,16 +33669,6 @@
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "SOCIEDAD DE PROFESIONALES DE SALUD SKIN LAB CAVANCHA LIMITADA"
-        },
-        {
-          "id": "1010",
-          "count": 1,
-          "neto": 1713469,
-          "teox_neto": 1218797,
-          "teox_units": 10.0,
-          "rrs_neto": 494672,
-          "rrs_units": 5.0,
-          "name": "JAVIERA IGNACIA FLORES ALMARZA"
         }
       ],
       "top_clients_by_vendor": {
@@ -32368,16 +33734,6 @@
             "name": "ODONTOLOGÍA Y ESTÉTICA INTEGRAL AVANZADA PILAR ROJO CASTRO E.I.R.L."
           },
           {
-            "id": "568",
-            "count": 2,
-            "neto": 1297143,
-            "teox_neto": 307800,
-            "teox_units": 2.0,
-            "rrs_neto": 989343,
-            "rrs_units": 10.0,
-            "name": "INVERSIONES Y ESPECIALIDADES MEDICOS Y ODONTOLOGICAS DE LA VEGA SPA"
-          },
-          {
             "id": "1267",
             "count": 1,
             "neto": 1209312,
@@ -32418,8 +33774,18 @@
             "name": "SOCIEDAD CLINICA DENTAL CARRASCO Y RENTERIA LTDA"
           },
           {
+            "id": "568",
+            "count": 2,
+            "neto": 989343,
+            "teox_neto": 0,
+            "teox_units": 0.0,
+            "rrs_neto": 989343,
+            "rrs_units": 10.0,
+            "name": "INVERSIONES Y ESPECIALIDADES MEDICOS Y ODONTOLOGICAS DE LA VEGA SPA"
+          },
+          {
             "id": "1182",
-            "count": 1,
+            "count": 2,
             "neto": 822798,
             "teox_neto": 822798,
             "teox_units": 7.0,
@@ -32439,7 +33805,7 @@
           },
           {
             "id": "1268",
-            "count": 1,
+            "count": 2,
             "neto": 734662,
             "teox_neto": 734662,
             "teox_units": 8.0,
@@ -32480,6 +33846,16 @@
             "name": "SERVICIOS PROFESIONALES JAVIERA MERCADO GOMEZ SPA"
           },
           {
+            "id": "1136",
+            "count": 4,
+            "neto": 2641994,
+            "teox_neto": 1570205,
+            "teox_units": 15.0,
+            "rrs_neto": 1071789,
+            "rrs_units": 10.0,
+            "name": "Servicios Odontológicos Mafrasa Limitada"
+          },
+          {
             "id": "1248",
             "count": 2,
             "neto": 1794177,
@@ -32498,26 +33874,6 @@
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "ODONTOLOGIA Y ESTETICA PALERMO SPA"
-          },
-          {
-            "id": "967",
-            "count": 1,
-            "neto": 1594723,
-            "teox_neto": 1594723,
-            "teox_units": 13.0,
-            "rrs_neto": 0,
-            "rrs_units": 0,
-            "name": "DRA CONSTANZA RODRIGUEZ SPA"
-          },
-          {
-            "id": "1136",
-            "count": 2,
-            "neto": 1575997,
-            "teox_neto": 1081325,
-            "teox_units": 10.0,
-            "rrs_neto": 494672,
-            "rrs_units": 5.0,
-            "name": "Servicios Odontológicos Mafrasa Limitada"
           },
           {
             "id": "1242",
@@ -32608,19 +33964,19 @@
             "rrs_neto": 989344,
             "rrs_units": 10.0,
             "name": "SOCIEDAD DE SERVICIOS INTEGRALES DE SALUD Y ESTÉTICA LIMITADA"
+          },
+          {
+            "id": "1246",
+            "count": 1,
+            "neto": 820800,
+            "teox_neto": 820800,
+            "teox_units": 10.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "Inversiones Y Servicios Regenova Spa"
           }
         ],
         "Monica Urrutia": [
-          {
-            "id": "651",
-            "count": 3,
-            "neto": 3649278,
-            "teox_neto": 3649278,
-            "teox_units": 30.0,
-            "rrs_neto": 0,
-            "rrs_units": 0,
-            "name": "OSVAL LIMITADA"
-          },
           {
             "id": "871",
             "count": 2,
@@ -32660,6 +34016,16 @@
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "De Santiago Odontologia SPA"
+          },
+          {
+            "id": "651",
+            "count": 3,
+            "neto": 2361716,
+            "teox_neto": 2361716,
+            "teox_units": 20.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "OSVAL LIMITADA"
           },
           {
             "id": "954",
@@ -32722,6 +34088,16 @@
             "name": "SOCIEDAD ODONTOLÓGICA HV LIMITADA"
           },
           {
+            "id": "1230",
+            "count": 1,
+            "neto": 1552767,
+            "teox_neto": 1552767,
+            "teox_units": 11.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "Clinica Solea Dermaesthetic"
+          },
+          {
             "id": "986",
             "count": 1,
             "neto": 1306230,
@@ -32750,39 +34126,9 @@
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "MEDICINA ESTETICA FACIAL DRA. HEIDY CORTEZ SPA"
-          },
-          {
-            "id": "1013",
-            "count": 1,
-            "neto": 1199827,
-            "teox_neto": 1199827,
-            "teox_units": 12.0,
-            "rrs_neto": 0,
-            "rrs_units": 0,
-            "name": "THE FACE PROJECT SPA"
           }
         ],
         "Sin asignar": [
-          {
-            "id": "1230",
-            "count": 1,
-            "neto": 1552767,
-            "teox_neto": 1552767,
-            "teox_units": 11.0,
-            "rrs_neto": 0,
-            "rrs_units": 0,
-            "name": "1230"
-          },
-          {
-            "id": "872",
-            "count": 1,
-            "neto": 533786,
-            "teox_neto": 533786,
-            "teox_units": 4.0,
-            "rrs_neto": 0,
-            "rrs_units": 0,
-            "name": "872"
-          },
           {
             "id": "590",
             "count": 1,
@@ -32809,19 +34155,19 @@
       },
       "brand_productivity": {
         "Teoxane": {
-          "clients": 93,
-          "units": 757.0
+          "clients": 91,
+          "units": 737.0
         },
         "RRS HA Long Lasting": {
           "clients": 36,
-          "units": 195.0
+          "units": 200.0
         }
       },
       "brand_productivity_by_vendor": {
         "Daisy Ponce": {
           "Teoxane": {
-            "clients": 24,
-            "units": 146.0
+            "clients": 23,
+            "units": 144.0
           },
           "RRS HA Long Lasting": {
             "clients": 14,
@@ -32831,17 +34177,17 @@
         "Cindy Monsalves": {
           "Teoxane": {
             "clients": 38,
-            "units": 281.0
+            "units": 277.0
           },
           "RRS HA Long Lasting": {
             "clients": 10,
-            "units": 53.0
+            "units": 58.0
           }
         },
         "Monica Urrutia": {
           "Teoxane": {
-            "clients": 28,
-            "units": 314.0
+            "clients": 29,
+            "units": 315.0
           },
           "RRS HA Long Lasting": {
             "clients": 11,
@@ -32850,8 +34196,8 @@
         },
         "Sin asignar": {
           "Teoxane": {
-            "clients": 2,
-            "units": 15.0
+            "clients": 0,
+            "units": 0
           },
           "RRS HA Long Lasting": {
             "clients": 1,
@@ -33526,7 +34872,7 @@
       "2026-02": 1056992,
       "2026-07": 577117,
       "2026-08": 577117,
-      "2026-09": 1297143
+      "2026-09": 989343
     },
     "480": {
       "2025-02": 864360,
@@ -33568,7 +34914,7 @@
       "2026-06": 4555075,
       "2026-07": 1685924,
       "2026-08": 4261048,
-      "2026-09": 3649278
+      "2026-09": 2361716
     },
     "502": {
       "2025-01": 518616
@@ -34441,7 +35787,7 @@
     },
     "967": {
       "2025-07": 1251720,
-      "2026-09": 1594723
+      "2026-09": 0
     },
     "663": {
       "2025-07": 647640
@@ -35191,7 +36537,7 @@
       "2026-06": 1031517,
       "2026-07": 1799147,
       "2026-08": 2313781,
-      "2026-09": 1575997
+      "2026-09": 2641994
     },
     "1139": {
       "2026-04": 1304326,
@@ -36119,7 +37465,9 @@
     "1273": "Freddy Inzunza",
     "1274": "Cindy Monsalves",
     "1275": "Monica Urrutia",
-    "1276": "Daisy Ponce"
+    "1276": "Daisy Ponce",
+    "872": "Cindy Monsalves",
+    "1230": "Monica Urrutia"
   },
   "last_purchase_brands": {
     "869": {
@@ -36469,7 +37817,7 @@
     },
     "568": {
       "month": "2026-09",
-      "Teoxane": 307800,
+      "Teoxane": 0,
       "RRS HA Long Lasting": 989343
     },
     "995": {
@@ -36514,7 +37862,7 @@
     },
     "651": {
       "month": "2026-09",
-      "Teoxane": 3649278,
+      "Teoxane": 2361716,
       "RRS HA Long Lasting": 0
     },
     "858": {
@@ -38114,8 +39462,8 @@
     },
     "1136": {
       "month": "2026-09",
-      "Teoxane": 1081325,
-      "RRS HA Long Lasting": 494672
+      "Teoxane": 1570205,
+      "RRS HA Long Lasting": 1071789
     },
     "1141": {
       "month": "2026-06",

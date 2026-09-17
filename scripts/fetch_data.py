@@ -122,34 +122,44 @@ def fetch_clients():
     Vendor comes straight from each client's "Vendedor" additional attribute
     in Bsale (Atributos adicionales), resolved via expand=[attributes] --
     no more manual RUT->vendor spreadsheet/fuzzy matching.
+
+    /clients.json with no "state" filter silently only covers state 0
+    (activo) and 1 (inactivo) -- it does NOT include state 3 (visto en la
+    practica: el registro "viejo" que queda cuando Bsale fusiona un cliente
+    duplicado con otro) nor state 97 (bloqueado/eliminado). Old documents
+    still reference those ids, so without fetching them too, that client's
+    name/rut/attributes are missing from `clients` and any view showing that
+    document falls back to the raw numeric client id instead of a name.
     """
     clients = {}
     vendor_value_by_client = {}
     vendedor_attr_id = None
-    offset = 0
-    while True:
-        data = get_json(f"{BASE_URL}/clients.json?limit=50&offset={offset}&expand=[attributes]")
-        items = data.get("items", [])
-        if not items:
-            break
-        for c in items:
-            cid = str(c["id"])
-            company = (c.get("company") or "").strip()
-            first   = (c.get("firstName") or "").strip()
-            last    = (c.get("lastName") or "").strip()
-            name    = company if company else f"{first} {last}".strip()
-            clients[cid] = {
-                "name": name, "rut": c.get("code", ""),
-                "firstName": first, "lastName": last,
-                "phone": (c.get("phone") or "").strip(),
-            }
-            for attr in (c.get("attributes") or {}).get("items", []):
-                if attr.get("name") == "Vendedor" and attr.get("value"):
-                    vendedor_attr_id = attr["id"]
-                    vendor_value_by_client[cid] = attr["value"]
-        if offset + 50 >= data.get("count", 0):
-            break
-        offset += 50
+
+    for state in (0, 1, 3, 97):
+        offset = 0
+        while True:
+            data = get_json(f"{BASE_URL}/clients.json?limit=50&offset={offset}&state={state}&expand=[attributes]")
+            items = data.get("items", [])
+            if not items:
+                break
+            for c in items:
+                cid = str(c["id"])
+                company = (c.get("company") or "").strip()
+                first   = (c.get("firstName") or "").strip()
+                last    = (c.get("lastName") or "").strip()
+                name    = company if company else f"{first} {last}".strip()
+                clients[cid] = {
+                    "name": name, "rut": c.get("code", ""),
+                    "firstName": first, "lastName": last,
+                    "phone": (c.get("phone") or "").strip(),
+                }
+                for attr in (c.get("attributes") or {}).get("items", []):
+                    if attr.get("name") == "Vendedor" and attr.get("value"):
+                        vendedor_attr_id = attr["id"]
+                        vendor_value_by_client[cid] = attr["value"]
+            if offset + 50 >= data.get("count", 0):
+                break
+            offset += 50
 
     client_to_vendor = {}
     if vendedor_attr_id is not None:
