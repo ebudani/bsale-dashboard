@@ -27,6 +27,24 @@ const STATUS_LABEL = { quiebre: 'Quiebre', bajo: 'Bajo', ok: 'OK', sindemanda: '
 const STATUS_PILL  = { quiebre: 'low', bajo: 'mid', ok: 'ok', sindemanda: 'neutral' };
 const STATUS_RANK  = { quiebre: 0, bajo: 1, ok: 2, sindemanda: 3 };
 
+// Mismos marcadores de nombre que classify_brand() en scripts/fetch_data.py
+// (la parte por variant_id no aplica aca -- stock.json no trae variant_id,
+// solo el nombre del producto -- pero cubre todo el catalogo igual).
+const TEOXANE_NAME_MARKERS = ['rha ', 'rha1', 'rha2', 'rha3', 'rha4', 'redensity', 'puresense'];
+const RRS_NAME_MARKERS = ['rrs', 'jeringa monodosis x 3ml'];
+const BRAND_TAG = {
+  'Teoxane': { label: 'Teoxane', bg: '#dbeafe', fg: '#1d4ed8' },
+  'RRS HA Long Lasting': { label: 'LL', bg: '#fef3c7', fg: '#b45309' },
+  'Otros': { label: 'Otros', bg: '#f1f5f9', fg: '#475569' },
+};
+
+function classifyBrand(sku) {
+  const name = (sku || '').toLowerCase();
+  if (TEOXANE_NAME_MARKERS.some(m => name.includes(m))) return 'Teoxane';
+  if (RRS_NAME_MARKERS.some(m => name.includes(m))) return 'RRS HA Long Lasting';
+  return 'Otros';
+}
+
 async function loadStock() {
   const [stockRes, ventasRes] = await Promise.all([
     fetch('data/stock.json'),
@@ -44,7 +62,7 @@ async function loadStock() {
     const status = statusFor(it.quantity_available, demand);
     const coverage = demand > 0 ? it.quantity_available / demand : null;
     const recommended = Math.ceil(demand * TARGET_MONTHS);
-    return { ...it, demand, status, coverage, recommended };
+    return { ...it, demand, status, coverage, recommended, brand: classifyBrand(it.sku) };
   });
 
   rows.sort((a, b) => {
@@ -73,7 +91,7 @@ function renderSummary(rows) {
 function renderTable(rows) {
   document.getElementById('tbody-stock').innerHTML = rows.map(r => `
     <tr>
-      <td><strong>${r.sku}</strong></td>
+      <td><strong>${r.sku}</strong> <span class="pill" style="background:${BRAND_TAG[r.brand].bg};color:${BRAND_TAG[r.brand].fg}">${BRAND_TAG[r.brand].label}</span></td>
       <td>${r.office_name || '—'}</td>
       <td>${r.quantity_available}</td>
       <td>${r.demand.toFixed(1)}</td>
