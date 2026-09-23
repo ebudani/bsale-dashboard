@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-22T21:10:38.203747Z",
+  "updated_at": "2026-09-23T21:12:19.847449Z",
   "users": {
     "7": "Cindy Monsalves",
     "9": "Daisy Ponce",
@@ -5885,6 +5885,20 @@
       "firstName": "BARBARA",
       "lastName": "LERDON",
       "phone": "993051945"
+    },
+    "1277": {
+      "name": "Carolina Oyanadel Morgado",
+      "rut": "17974595-K",
+      "firstName": "Carolina",
+      "lastName": "Oyanadel Morgado",
+      "phone": ""
+    },
+    "1278": {
+      "name": "Novadermoestetica",
+      "rut": "78390682-1",
+      "firstName": "Camila",
+      "lastName": "Fuentealba",
+      "phone": ""
     },
     "2": {
       "name": "Sociedad Clínica Ginestetica SPA",
@@ -33013,11 +33027,11 @@
     {
       "year": 2026,
       "month": 9,
-      "count_facturas": 142,
-      "count_nc": 8,
-      "neto_facturas": 124214324,
-      "neto_nc": 5692831,
-      "total_neto": 118521493,
+      "count_facturas": 151,
+      "count_nc": 10,
+      "neto_facturas": 136224303,
+      "neto_nc": 8025428,
+      "total_neto": 128198875,
       "by_day": [
         {
           "date": "2026-09-01",
@@ -33093,6 +33107,11 @@
           "date": "2026-09-22",
           "count": 1,
           "neto": 2140788
+        },
+        {
+          "date": "2026-09-23",
+          "count": 9,
+          "neto": 12009979
         }
       ],
       "by_vendor": {
@@ -33101,12 +33120,12 @@
           "neto": 26083410
         },
         "Cindy Monsalves": {
-          "count": 55,
-          "neto": 43225881
+          "count": 57,
+          "neto": 45993032
         },
         "Monica Urrutia": {
-          "count": 46,
-          "neto": 48571930
+          "count": 52,
+          "neto": 52135233
         },
         "Sin asignar": {
           "count": 1,
@@ -33115,6 +33134,10 @@
         "Freddy Inzunza": {
           "count": 1,
           "neto": 145600
+        },
+        "Francisca Salinas": {
+          "count": 1,
+          "neto": 3346928
         }
       },
       "by_vendor_day": {
@@ -33245,6 +33268,11 @@
             "date": "2026-09-21",
             "count": 3,
             "neto": 5006153
+          },
+          {
+            "date": "2026-09-23",
+            "count": 2,
+            "neto": 2767151
           }
         ],
         "Monica Urrutia": [
@@ -33302,6 +33330,11 @@
             "date": "2026-09-22",
             "count": 1,
             "neto": 2140788
+          },
+          {
+            "date": "2026-09-23",
+            "count": 6,
+            "neto": 5895900
           }
         ],
         "Sin asignar": [
@@ -33317,11 +33350,18 @@
             "count": 1,
             "neto": 145600
           }
+        ],
+        "Francisca Salinas": [
+          {
+            "date": "2026-09-23",
+            "count": 1,
+            "neto": 3346928
+          }
         ]
       },
       "by_brand": {
-        "Teoxane": 96749064,
-        "RRS HA Long Lasting": 21772429,
+        "Teoxane": 103870642,
+        "RRS HA Long Lasting": 24328233,
         "FINE": 0
       },
       "by_vendor_brand": {
@@ -33331,13 +33371,13 @@
           "FINE": 0
         },
         "Cindy Monsalves": {
-          "Teoxane": 36918814,
-          "RRS HA Long Lasting": 6307067,
+          "Teoxane": 38696621,
+          "RRS HA Long Lasting": 7296411,
           "FINE": 0
         },
         "Monica Urrutia": {
-          "Teoxane": 42271736,
-          "RRS HA Long Lasting": 6300194,
+          "Teoxane": 44268579,
+          "RRS HA Long Lasting": 7866654,
           "FINE": 0
         },
         "Sin asignar": {
@@ -33349,48 +33389,53 @@
           "Teoxane": 145600,
           "RRS HA Long Lasting": 0,
           "FINE": 0
+        },
+        "Francisca Salinas": {
+          "Teoxane": 3346928,
+          "RRS HA Long Lasting": 0,
+          "FINE": 0
         }
       },
       "by_sku": {
         "Jeringa monodosis x 3mL (sin aguja)": {
-          "neto": 21772429,
-          "qty": 215.0
+          "neto": 24328233,
+          "qty": 240.0
         },
         "RHA KISS (2X0.7ml)": {
           "neto": 756600,
           "qty": 7.0
         },
         "PureSense Ultra Deep (2X1.2ml)": {
-          "neto": 40279092,
-          "qty": 324.0
+          "neto": 42758786,
+          "qty": 345.0
         },
         "TEOSYAL RHA 4 (2X1.2ml)": {
-          "neto": 13327704,
-          "qty": 82.0
+          "neto": 14301680,
+          "qty": 90.0
         },
         "TEOSYAL RHA 3 (2X1ml)": {
-          "neto": 4204658,
-          "qty": 37.0
+          "neto": 5208569,
+          "qty": 45.0
         },
         "TEOSYAL RHA 1 (2X1ml)": {
-          "neto": 5876000,
-          "qty": 63.0
+          "neto": 5994560,
+          "qty": 65.0
         },
         "TEOSYAL RHA 2 (2X1ml)": {
-          "neto": 8890823,
-          "qty": 74.0
+          "neto": 9977725,
+          "qty": 83.0
         },
         "Redensity 2 (2X1ml)": {
-          "neto": 5084663,
-          "qty": 39.0
+          "neto": 5693398,
+          "qty": 44.0
         },
         "RHA 3 (2X1.2ml)": {
           "neto": 2987000,
           "qty": 18.0
         },
         "Redensity 1 (1x3ml)": {
-          "neto": 8598600,
-          "qty": 114.0
+          "neto": 9448400,
+          "qty": 124.0
         },
         "Redensity 1 (2X1ml)": {
           "neto": 806624,
@@ -33442,20 +33487,20 @@
         },
         "Cindy Monsalves": {
           "Jeringa monodosis x 3mL (sin aguja)": {
-            "neto": 6307067,
-            "qty": 63.0
+            "neto": 7296411,
+            "qty": 73.0
           },
           "RHA KISS (2X0.7ml)": {
             "neto": 429000,
             "qty": 5.0
           },
           "PureSense Ultra Deep (2X1.2ml)": {
-            "neto": 14863440,
-            "qty": 115.0
+            "neto": 15472838,
+            "qty": 120.0
           },
           "TEOSYAL RHA 3 (2X1ml)": {
-            "neto": 1344543,
-            "qty": 12.0
+            "neto": 1794478,
+            "qty": 15.0
           },
           "TEOSYAL RHA 4 (2X1.2ml)": {
             "neto": 4475744,
@@ -33482,12 +33527,12 @@
             "qty": 17.0
           },
           "TEOSYAL RHA 1 (2X1ml)": {
-            "neto": 2154880,
-            "qty": 22.0
+            "neto": 2273440,
+            "qty": 24.0
           },
           "TEOSYAL RHA 2 (2X1ml)": {
-            "neto": 2410179,
-            "qty": 23.0
+            "neto": 3010093,
+            "qty": 28.0
           }
         },
         "Monica Urrutia": {
@@ -33496,12 +33541,12 @@
             "qty": 45.0
           },
           "PureSense Ultra Deep (2X1.2ml)": {
-            "neto": 17129973,
-            "qty": 144.0
+            "neto": 18391534,
+            "qty": 155.0
           },
           "TEOSYAL RHA 3 (2X1ml)": {
-            "neto": 2860115,
-            "qty": 25.0
+            "neto": 3170597,
+            "qty": 28.0
           },
           "Redensity 2 (2X1ml)": {
             "neto": 2326335,
@@ -33516,16 +33561,16 @@
             "qty": 15.0
           },
           "Jeringa monodosis x 3mL (sin aguja)": {
-            "neto": 6300194,
-            "qty": 64.0
+            "neto": 7866654,
+            "qty": 79.0
           },
           "TEOSYAL RHA 1 (2X1ml)": {
             "neto": 3369600,
             "qty": 34.0
           },
           "Redensity 1 (1x3ml)": {
-            "neto": 2476800,
-            "qty": 29.0
+            "neto": 2901600,
+            "qty": 34.0
           },
           "Redensity 1 (2X1ml)": {
             "neto": 331968,
@@ -33547,9 +33592,55 @@
             "neto": 145600,
             "qty": 1.0
           }
+        },
+        "Francisca Salinas": {
+          "TEOSYAL RHA 4 (2X1.2ml)": {
+            "neto": 973976,
+            "qty": 8.0
+          },
+          "PureSense Ultra Deep (2X1.2ml)": {
+            "neto": 608735,
+            "qty": 5.0
+          },
+          "Redensity 2 (2X1ml)": {
+            "neto": 608735,
+            "qty": 5.0
+          },
+          "TEOSYAL RHA 3 (2X1ml)": {
+            "neto": 243494,
+            "qty": 2.0
+          },
+          "Redensity 1 (1x3ml)": {
+            "neto": 425000,
+            "qty": 5.0
+          },
+          "TEOSYAL RHA 2 (2X1ml)": {
+            "neto": 486988,
+            "qty": 4.0
+          }
         }
       },
       "top_clients": [
+        {
+          "id": "517",
+          "count": 3,
+          "neto": 3784824,
+          "teox_neto": 2245845,
+          "teox_units": 20.0,
+          "rrs_neto": 1538979,
+          "rrs_units": 15.0,
+          "name": "SOCIEDAD MEDICA DE TECNOLOGÍA LIMITADA"
+        },
+        {
+          "id": "860",
+          "count": 1,
+          "neto": 3346928,
+          "teox_neto": 3346928,
+          "teox_units": 29.0,
+          "rrs_neto": 0,
+          "rrs_units": 0,
+          "name": "Servicios De Salud Girardi Y Cia. Ltda"
+        },
         {
           "id": "871",
           "count": 2,
@@ -33579,16 +33670,6 @@
           "rrs_neto": 0,
           "rrs_units": 0,
           "name": "SERVICIOS PROFESIONALES JAVIERA MERCADO GOMEZ SPA"
-        },
-        {
-          "id": "517",
-          "count": 1,
-          "neto": 2740517,
-          "teox_neto": 2245845,
-          "teox_units": 19.0,
-          "rrs_neto": 494672,
-          "rrs_units": 5.0,
-          "name": "SOCIEDAD MEDICA DE TECNOLOGÍA LIMITADA"
         },
         {
           "id": "1136",
@@ -33671,6 +33752,16 @@
           "name": "THE FACE BAR SPA"
         },
         {
+          "id": "870",
+          "count": 1,
+          "neto": 2272479,
+          "teox_neto": 1777807,
+          "teox_units": 15.0,
+          "rrs_neto": 494672,
+          "rrs_units": 5.0,
+          "name": "SOCIEDAD ODONTOLÓGICA INTEGRAL DELLA ROSA SPA"
+        },
+        {
           "id": "810",
           "count": 1,
           "neto": 2068418,
@@ -33679,26 +33770,6 @@
           "rrs_neto": 247336,
           "rrs_units": 2.0,
           "name": "SERVICIOS MEDICOS DRA LUCIANA SEBASTIANELLI SPA"
-        },
-        {
-          "id": "794",
-          "count": 1,
-          "neto": 1978687,
-          "teox_neto": 0,
-          "teox_units": 0,
-          "rrs_neto": 1978687,
-          "rrs_units": 20.0,
-          "name": "CENTRO MÉDICO Y ESTÉTICO MARES LIMITADA"
-        },
-        {
-          "id": "1008",
-          "count": 1,
-          "neto": 1927932,
-          "teox_neto": 1927932,
-          "teox_units": 15.0,
-          "rrs_neto": 0,
-          "rrs_units": 0,
-          "name": "ODONTOLOGÍA Y ESTÉTICA CCL SPA"
         }
       ],
       "top_clients_by_vendor": {
@@ -33886,6 +33957,16 @@
             "name": "Servicios Odontológicos Mafrasa Limitada"
           },
           {
+            "id": "870",
+            "count": 1,
+            "neto": 2272479,
+            "teox_neto": 1777807,
+            "teox_units": 15.0,
+            "rrs_neto": 494672,
+            "rrs_units": 5.0,
+            "name": "SOCIEDAD ODONTOLÓGICA INTEGRAL DELLA ROSA SPA"
+          },
+          {
             "id": "1248",
             "count": 2,
             "neto": 1794177,
@@ -33994,19 +34075,19 @@
             "rrs_neto": 494672,
             "rrs_units": 5.0,
             "name": "SERVICIOS ODONTOLOGICOS DRA. PAULA ALBASINI SPA"
-          },
-          {
-            "id": "1143",
-            "count": 1,
-            "neto": 1085874,
-            "teox_neto": 962206,
-            "teox_units": 7.0,
-            "rrs_neto": 123668,
-            "rrs_units": 3.0,
-            "name": "Daniela Navarrete Aravena"
           }
         ],
         "Monica Urrutia": [
+          {
+            "id": "517",
+            "count": 3,
+            "neto": 3784824,
+            "teox_neto": 2245845,
+            "teox_units": 20.0,
+            "rrs_neto": 1538979,
+            "rrs_units": 15.0,
+            "name": "SOCIEDAD MEDICA DE TECNOLOGÍA LIMITADA"
+          },
           {
             "id": "871",
             "count": 2,
@@ -34016,16 +34097,6 @@
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "FRANCISCA ÁLVAREZ QUINTANA SPA"
-          },
-          {
-            "id": "517",
-            "count": 1,
-            "neto": 2740517,
-            "teox_neto": 2245845,
-            "teox_units": 19.0,
-            "rrs_neto": 494672,
-            "rrs_units": 5.0,
-            "name": "SOCIEDAD MEDICA DE TECNOLOGÍA LIMITADA"
           },
           {
             "id": "536",
@@ -34098,6 +34169,16 @@
             "name": "SERVICIOS MEDICOS DRA LUCIANA SEBASTIANELLI SPA"
           },
           {
+            "id": "986",
+            "count": 3,
+            "neto": 1958393,
+            "teox_neto": 1958393,
+            "teox_units": 15.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "CLINICA ODONTOLOGICA Y ESTETICA DRA. NATALIA DROGUETT SPA"
+          },
+          {
             "id": "1008",
             "count": 1,
             "neto": 1927932,
@@ -34106,6 +34187,16 @@
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "ODONTOLOGÍA Y ESTÉTICA CCL SPA"
+          },
+          {
+            "id": "972",
+            "count": 2,
+            "neto": 1905958,
+            "teox_neto": 1383805,
+            "teox_units": 13.0,
+            "rrs_neto": 522153,
+            "rrs_units": 5.0,
+            "name": "CLINICA PRISMA DENTAL LIMITADA"
           },
           {
             "id": "1010",
@@ -34136,26 +34227,6 @@
             "rrs_neto": 0,
             "rrs_units": 0,
             "name": "SOCIEDAD ODONTOLÓGICA HV LIMITADA"
-          },
-          {
-            "id": "1230",
-            "count": 1,
-            "neto": 1552767,
-            "teox_neto": 1552767,
-            "teox_units": 11.0,
-            "rrs_neto": 0,
-            "rrs_units": 0,
-            "name": "Clinica Solea Dermaesthetic"
-          },
-          {
-            "id": "986",
-            "count": 1,
-            "neto": 1306230,
-            "teox_neto": 1306230,
-            "teox_units": 10.0,
-            "rrs_neto": 0,
-            "rrs_units": 0,
-            "name": "CLINICA ODONTOLOGICA Y ESTETICA DRA. NATALIA DROGUETT SPA"
           }
         ],
         "Sin asignar": [
@@ -34181,16 +34252,28 @@
             "rrs_units": 0,
             "name": "Ecodent spa"
           }
+        ],
+        "Francisca Salinas": [
+          {
+            "id": "860",
+            "count": 1,
+            "neto": 3346928,
+            "teox_neto": 3346928,
+            "teox_units": 29.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "Servicios De Salud Girardi Y Cia. Ltda"
+          }
         ]
       },
       "brand_productivity": {
         "Teoxane": {
-          "clients": 99,
-          "units": 813.0
+          "clients": 102,
+          "units": 876.0
         },
         "RRS HA Long Lasting": {
-          "clients": 38,
-          "units": 215.0
+          "clients": 40,
+          "units": 240.0
         }
       },
       "brand_productivity_by_vendor": {
@@ -34206,22 +34289,22 @@
         },
         "Cindy Monsalves": {
           "Teoxane": {
-            "clients": 41,
-            "units": 315.0
+            "clients": 42,
+            "units": 330.0
           },
           "RRS HA Long Lasting": {
-            "clients": 11,
-            "units": 63.0
+            "clients": 12,
+            "units": 73.0
           }
         },
         "Monica Urrutia": {
           "Teoxane": {
-            "clients": 33,
-            "units": 351.0
+            "clients": 34,
+            "units": 370.0
           },
           "RRS HA Long Lasting": {
-            "clients": 12,
-            "units": 64.0
+            "clients": 13,
+            "units": 79.0
           }
         },
         "Sin asignar": {
@@ -34238,6 +34321,16 @@
           "Teoxane": {
             "clients": 1,
             "units": 1.0
+          },
+          "RRS HA Long Lasting": {
+            "clients": 0,
+            "units": 0
+          }
+        },
+        "Francisca Salinas": {
+          "Teoxane": {
+            "clients": 1,
+            "units": 29.0
           },
           "RRS HA Long Lasting": {
             "clients": 0,
@@ -34356,7 +34449,8 @@
       "2026-05": 1703984,
       "2026-06": 150000,
       "2026-07": 2442336,
-      "2026-08": 3519558
+      "2026-08": 3519558,
+      "2026-09": 609398
     },
     "903": {
       "2025-04": 1819560,
@@ -34581,7 +34675,8 @@
       "2026-05": 11671844,
       "2026-06": 15864234,
       "2026-07": 12639131,
-      "2026-08": 13855930
+      "2026-08": 13855930,
+      "2026-09": 3346928
     },
     "438": {
       "2025-10": 1842240,
@@ -34676,7 +34771,7 @@
       "2026-05": 2672093,
       "2026-06": 2567417,
       "2026-07": 2171663,
-      "2026-09": 2740517
+      "2026-09": 3784824
     },
     "1009": {
       "2026-01": 964530,
@@ -35191,7 +35286,8 @@
       "2026-03": 1239590,
       "2026-05": 1973338,
       "2026-07": 2292042,
-      "2026-08": 1880070
+      "2026-08": 1880070,
+      "2026-09": 2272479
     },
     "668": {
       "2025-02": 231525,
@@ -35850,7 +35946,7 @@
       "2026-04": 1354103,
       "2026-06": 1572825,
       "2026-07": 716789,
-      "2026-09": 648523
+      "2026-09": 1905958
     },
     "973": {
       "2025-07": 647640,
@@ -35934,7 +36030,7 @@
       "2026-06": 2459528,
       "2026-07": 2309112,
       "2026-08": 863554,
-      "2026-09": 1306230
+      "2026-09": 1958393
     },
     "987": {
       "2025-08": 427140
@@ -36778,7 +36874,7 @@
     },
     "1206": {
       "2026-07": 494672,
-      "2026-09": 494672
+      "2026-09": 989344
     },
     "1207": {
       "2026-07": 647473,
@@ -37502,6 +37598,8 @@
     "1274": "Cindy Monsalves",
     "1275": "Monica Urrutia",
     "1276": "Daisy Ponce",
+    "1277": "Cindy Monsalves",
+    "1278": "Cindy Monsalves",
     "872": "Cindy Monsalves",
     "1230": "Monica Urrutia"
   },
@@ -37617,9 +37715,9 @@
       "RRS HA Long Lasting": 494672
     },
     "591": {
-      "month": "2026-08",
-      "Teoxane": 2420288,
-      "RRS HA Long Lasting": 1099270
+      "month": "2026-09",
+      "Teoxane": 609398,
+      "RRS HA Long Lasting": 0
     },
     "921": {
       "month": "2026-08",
@@ -37704,7 +37802,7 @@
     "517": {
       "month": "2026-09",
       "Teoxane": 2245845,
-      "RRS HA Long Lasting": 494672
+      "RRS HA Long Lasting": 1538979
     },
     "474": {
       "month": "2026-08",
@@ -37772,9 +37870,9 @@
       "RRS HA Long Lasting": 0
     },
     "860": {
-      "month": "2026-08",
-      "Teoxane": 11979065,
-      "RRS HA Long Lasting": 1876865
+      "month": "2026-09",
+      "Teoxane": 3346928,
+      "RRS HA Long Lasting": 0
     },
     "1110": {
       "month": "2026-02",
@@ -38072,9 +38170,9 @@
       "RRS HA Long Lasting": 0
     },
     "870": {
-      "month": "2026-08",
-      "Teoxane": 1880070,
-      "RRS HA Long Lasting": 0
+      "month": "2026-09",
+      "Teoxane": 1777807,
+      "RRS HA Long Lasting": 494672
     },
     "668": {
       "month": "2026-01",
@@ -38658,8 +38756,8 @@
     },
     "972": {
       "month": "2026-09",
-      "Teoxane": 648523,
-      "RRS HA Long Lasting": 0
+      "Teoxane": 1383805,
+      "RRS HA Long Lasting": 522153
     },
     "973": {
       "month": "2026-07",
@@ -38728,7 +38826,7 @@
     },
     "986": {
       "month": "2026-09",
-      "Teoxane": 1306230,
+      "Teoxane": 1958393,
       "RRS HA Long Lasting": 0
     },
     "987": {
@@ -39794,7 +39892,7 @@
     "1206": {
       "month": "2026-09",
       "Teoxane": 0,
-      "RRS HA Long Lasting": 494672
+      "RRS HA Long Lasting": 989344
     },
     "1207": {
       "month": "2026-09",
