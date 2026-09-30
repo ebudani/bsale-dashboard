@@ -2,6 +2,11 @@
 // stock.html) -- loaded as a separate <script> before this file.
 
 // ── Config ─────────────────────────────────────────────────────────────────
+// Piloto de Contactado/Comentario/Volver a contactar: mientras se prueba,
+// solo visible en el link de estas vendedoras (y siempre en el tablero
+// general, para poder revisarlo). Agregar mas nombres (o vaciar el array
+// para mostrarlo a todas) cuando este validado.
+const RISK_CONTACT_PILOT_VENDORS = ['Cindy Monsalves'];
 const BRANDS = ['Teoxane', 'RRS HA Long Lasting'];
 const BRAND_COLORS = { 'Teoxane': '#2563eb', 'RRS HA Long Lasting': '#d97706', 'FINE': '#059669' };
 Chart.register(ChartDataLabels);
@@ -163,6 +168,11 @@ function applyVendorLock() {
   // que el resto de la tabla entre sin scroll horizontal.
   const riskTable = document.getElementById('table-risk');
   if (riskTable) riskTable.classList.add('hide-vendor-col');
+  // Piloto de Contactado/Comentario/Volver a contactar -- oculto para
+  // quien no esta en RISK_CONTACT_PILOT_VENDORS (ver comentario arriba).
+  if (riskTable && !RISK_CONTACT_PILOT_VENDORS.includes(window.LOCKED_VENDOR)) {
+    riskTable.classList.add('hide-contact-cols');
+  }
   return true;
 }
 

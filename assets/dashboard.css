@@ -326,6 +326,16 @@
   #table-risk.hide-vendor-col td:nth-child(2) {
     display: none;
   }
+  /* Piloto de Contactado/Comentario/Volver a contactar -- ver
+     RISK_CONTACT_PILOT_VENDORS en dashboard.js. */
+  #table-risk.hide-contact-cols th:nth-child(8),
+  #table-risk.hide-contact-cols td:nth-child(8),
+  #table-risk.hide-contact-cols th:nth-child(9),
+  #table-risk.hide-contact-cols td:nth-child(9),
+  #table-risk.hide-contact-cols th:nth-child(10),
+  #table-risk.hide-contact-cols td:nth-child(10) {
+    display: none;
+  }
   /* table-layout:fixed reparte el ancho segun estas columnas de tamano
      fijo; Cuenta/Comentario (sin ancho propio) se reparten lo que sobra --
      asi entra todo sin tener que scrollear al costado en una ventana de
