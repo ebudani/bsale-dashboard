@@ -434,8 +434,15 @@
   #client-history-header .name { font-size: 16px; font-weight: 700; }
   #client-history-header .meta { font-size: 12px; color: var(--gray-600); margin-top: 2px; }
   .client-history-tables { display: grid; grid-template-columns: 1fr 1.3fr; gap: 20px; align-items: start; }
+  .client-history-tables > div { min-width: 0; }
   .client-history-tables h3 { font-size: 12px; font-weight: 600; color: var(--gray-600); text-transform: uppercase; letter-spacing: .4px; margin-bottom: 8px; }
-  .client-history-chart-wrap { height: 200px; margin-top: 16px; }
+  .client-history-chart-wrap { height: 190px; margin-top: 4px; }
+  .client-history-month-charts { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+  .client-history-month-charts > div { min-width: 0; } /* si no, el grid no achica por debajo del ancho intrinseco del canvas */
+  .client-history-chart-label { font-size: 11px; font-weight: 600; text-align: center; color: var(--gray-600); }
+  @media (max-width: 500px) {
+    .client-history-month-charts { grid-template-columns: 1fr; }
+  }
   #table-client-history-years td.total, #table-client-history-months td.total { font-weight: 700; }
   #table-client-history-months tr.client-history-future td { color: #cbd5e1; }
   #table-client-history-months .up { color: #15803d; font-weight: 600; }
