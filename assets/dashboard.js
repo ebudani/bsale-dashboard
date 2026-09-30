@@ -1106,6 +1106,7 @@ function buildRiskRoster() {
       lastNote: rc ? (rc.lastNote || '') : '',
       lastNoteAt: rc ? (rc.lastNoteAt || null) : null,
       lastNoteBy: rc ? (rc.lastNoteBy || null) : null,
+      nextContactDate: rc ? (rc.nextContactDate || '') : '',
     });
   }
   return rows;
@@ -1156,6 +1157,15 @@ function renderRiskTable(rows) {
     let av = riskSortKey === 'status' ? RISK_STATUS_RANK[a.status] : a[riskSortKey];
     let bv = riskSortKey === 'status' ? RISK_STATUS_RANK[b.status] : b[riskSortKey];
     if (riskSortKey === 'lastMonth') { av = av || ''; bv = bv || ''; }
+    // "Sin fecha" siempre al final, en cualquier direccion -- si no, el
+    // orden ascendente (mas logico: proximas primero) mandaba las ~270
+    // cuentas sin fecha cargada antes que la unica con fecha real.
+    if (riskSortKey === 'nextContactDate') {
+      if (!av && !bv) return 0;
+      if (!av) return 1;
+      if (!bv) return -1;
+      return riskSortDir * av.localeCompare(bv);
+    }
     if (typeof av === 'string') return riskSortDir * av.localeCompare(bv);
     return riskSortDir * ((av || 0) - (bv || 0));
   });
@@ -1188,6 +1198,10 @@ function renderRiskTable(rows) {
                onblur="onRiskNoteBlur('${r.cid}', this.value)"
                onkeydown="if(event.key==='Enter') this.blur()">
         ${r.lastNote ? `<small class="risk-last-ref" title="${escapeHtml(r.lastNote)}">Último: ${escapeHtml(truncateText(r.lastNote, 36))}</small>` : ''}
+      </td>
+      <td class="risk-next-contact">
+        <input type="date" class="risk-next-contact-input" value="${r.nextContactDate || ''}"
+               onchange="onRiskNextContactChange('${r.cid}', this.value)">
       </td>
     </tr>
   `).join('');
@@ -1229,6 +1243,11 @@ async function onRiskNoteBlur(cid, value) {
   renderRiskTable(buildRiskRoster());
 }
 
+async function onRiskNextContactChange(cid, value) {
+  await setRiskNextContact(cid, value);
+  renderRiskTable(buildRiskRoster());
+}
+
 function renderCarteraRiesgo() {
   const card = document.getElementById('cartera-riesgo-card');
   if (selectedVendor === 'all') {
@@ -1245,7 +1264,7 @@ function renderCarteraRiesgo() {
     th.onclick = () => {
       const key = th.dataset.key;
       if (riskSortKey === key) riskSortDir *= -1;
-      else { riskSortKey = key; riskSortDir = (key === 'name' || key === 'vendor') ? 1 : -1; }
+      else { riskSortKey = key; riskSortDir = (key === 'name' || key === 'vendor' || key === 'nextContactDate') ? 1 : -1; }
       document.querySelectorAll('#table-risk thead .arrow').forEach(a => a.textContent = '');
       th.querySelector('.arrow').textContent = riskSortDir === 1 ? '↑' : '↓';
       renderRiskTable(buildRiskRoster());

@@ -110,3 +110,20 @@ async function setRiskNote(cid, note) {
     { merge: true }
   );
 }
+
+// "Volver a contactar": una sola fecha por cuenta (no por mes, a diferencia
+// de Contactado/comentario) -- es un recordatorio a futuro ("llamar de
+// nuevo el 15/11"), no algo que tenga sentido resetear cada mes.
+async function setRiskNextContact(cid, dateStr) {
+  if (!riskContactsDb) return;
+  const prev = riskContactsCache[cid] || {};
+  const data = {
+    nextContactDate: dateStr || null,
+    nextContactSetBy: dateStr ? currentContactActor() : (prev.nextContactSetBy || null),
+  };
+  riskContactsCache[cid] = { ...prev, ...data };
+  await riskContactsDb.collection('risk_contacts').doc(cid).set(
+    { ...data, updatedAt: firebase.firestore.FieldValue.serverTimestamp() },
+    { merge: true }
+  );
+}

@@ -320,16 +320,20 @@
   #table-risk.hide-vendor-col td:nth-child(2) {
     display: none;
   }
-  /* table-layout:fixed reparte el ancho segun estas columnas angostas de
-     tamano fijo; Cuenta/Vendedor/Comentario (sin ancho propio) se reparten
-     lo que sobra -- asi entra todo sin tener que scrollear al costado en
-     una ventana de laptop normal. */
+  /* table-layout:fixed reparte el ancho segun estas columnas de tamano
+     fijo; Cuenta/Comentario (sin ancho propio) se reparten lo que sobra --
+     asi entra todo sin tener que scrollear al costado en una ventana de
+     laptop normal. Vendedor tambien fijo (no necesita tanto como para
+     compartir el reparto con Cuenta/Comentario -- dejaba un hueco enorme
+     antes de Estado). */
+  #table-risk th:nth-child(2), #table-risk td:nth-child(2) { width: 130px; }
   #table-risk th:nth-child(3), #table-risk td:nth-child(3) { width: 78px; }
-  #table-risk th:nth-child(4), #table-risk td:nth-child(4) { width: 88px; }
-  #table-risk th:nth-child(5), #table-risk td:nth-child(5) { width: 88px; }
+  #table-risk th:nth-child(4), #table-risk td:nth-child(4) { width: 100px; }
+  #table-risk th:nth-child(5), #table-risk td:nth-child(5) { width: 100px; }
   #table-risk th:nth-child(6), #table-risk td:nth-child(6) { width: 76px; }
   #table-risk th:nth-child(7), #table-risk td:nth-child(7) { width: 108px; }
   #table-risk th:nth-child(8), #table-risk td:nth-child(8) { width: 108px; }
+  #table-risk th:nth-child(10), #table-risk td:nth-child(10) { width: 130px; }
   #table-risk td.risk-name { max-width: none; white-space: normal; line-height: 1.3; }
   #table-risk td.risk-name small { display: block; color: #94a3b8; font-weight: 400; }
   #table-risk td.risk-name small.risk-contact-name { color: var(--gray-900); font-weight: 600; font-size: 12.5px; margin-top: 2px; }
@@ -352,6 +356,11 @@
     border: 1px solid var(--gray-200); border-radius: 6px; background: var(--white);
   }
   #table-risk .risk-note-input:focus { outline: 2px solid var(--blue); border-color: var(--blue); }
+  #table-risk .risk-next-contact-input {
+    width: 100%; font-family: inherit; font-size: 12px; padding: 5px 6px;
+    border: 1px solid var(--gray-200); border-radius: 6px; background: var(--white); color: var(--gray-900);
+  }
+  #table-risk .risk-next-contact-input:focus { outline: 2px solid var(--blue); border-color: var(--blue); }
   /* Referencia de "la ultima vez" (mes anterior u otro previo) -- distinta
      del dato del mes en curso, que arranca en blanco cada mes. */
   #table-risk small.risk-last-ref { font-style: italic; color: #94a3b8 !important; }
