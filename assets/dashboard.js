@@ -1124,7 +1124,9 @@ function renderRiskToolbar(rows) {
     <button class="risk-chip ${riskStatusFilter === key ? 'active' : ''}" data-status="${key}">
       ${label}<span class="n">${counts[key] || 0}</span>
     </button>
-  `).join('') + `<input class="risk-search" type="search" placeholder="Buscar cuenta o RUT…" value="${riskSearch.replace(/"/g,'&quot;')}">`;
+  `).join('')
+    + `<input class="risk-search" type="search" placeholder="Buscar cuenta o RUT…" value="${riskSearch.replace(/"/g,'&quot;')}">`
+    + `<button class="risk-export-btn" title="Baja la vista actual (con estos filtros) a un archivo que abre en Excel">⬇ Descargar CSV</button>`;
 
   toolbar.querySelectorAll('.risk-chip').forEach(chip => {
     chip.addEventListener('click', () => {
@@ -1137,6 +1139,54 @@ function renderRiskToolbar(rows) {
     riskSearch = e.target.value;
     renderRiskTable(buildRiskRoster());
   });
+  toolbar.querySelector('.risk-export-btn').addEventListener('click', downloadRiskCSV);
+}
+
+// Fila por fila, tal cual quedo la ultima vez que se pinto la tabla (mismos
+// filtros/orden que esta viendo la vendedora) -- lo llena renderRiskTable().
+let riskFilteredRowsForExport = [];
+
+function csvCell(v) {
+  const s = String(v == null ? '' : v);
+  return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
+}
+
+function downloadRiskCSV() {
+  const headers = [
+    'Cuenta', 'RUT', 'Vendedor', 'Estado', 'Mes en curso', 'Mes anterior',
+    'Última compra', 'Teoxane (última compra)', 'RRS (última compra)',
+    'Contactado este mes', 'Fecha de contacto', 'Contactado por', 'Comentario',
+    'Último contacto (referencia)', 'Último comentario (referencia)', 'Volver a contactar',
+  ];
+  const lines = [headers.map(csvCell).join(',')];
+  riskFilteredRowsForExport.forEach(r => {
+    lines.push([
+      r.name, r.rut, r.vendor, RISK_STATUS_LABEL[r.status],
+      r.current, r.prev,
+      r.lastMonth ? monthLabel(...r.lastMonth.split('-').map(Number)) : '',
+      r.lastBrands ? (r.lastBrands['Teoxane'] || 0) : '',
+      r.lastBrands ? (r.lastBrands['RRS HA Long Lasting'] || 0) : '',
+      r.contacted ? 'Sí' : 'No',
+      r.contactedAt ? formatContactDate(r.contactedAt) : '',
+      r.contactedBy || '',
+      r.note || '',
+      r.lastContactedAt ? formatContactDate(r.lastContactedAt) : '',
+      r.lastNote || '',
+      r.nextContactDate || '',
+    ].map(csvCell).join(','));
+  });
+  // BOM al inicio para que Excel en Windows lea bien las tildes/ñ.
+  const blob = new Blob(['﻿' + lines.join('\r\n')], { type: 'text/csv;charset=utf-8;' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  const vendorLabel = selectedVendor === 'all' ? 'todos' : selectedVendor.replace(/\s+/g, '-');
+  const today = new Date().toISOString().slice(0, 10);
+  a.href = url;
+  a.download = `cartera-en-riesgo_${vendorLabel}_${today}.csv`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
 }
 
 function renderRiskTable(rows) {
@@ -1169,6 +1219,8 @@ function renderRiskTable(rows) {
     if (typeof av === 'string') return riskSortDir * av.localeCompare(bv);
     return riskSortDir * ((av || 0) - (bv || 0));
   });
+
+  riskFilteredRowsForExport = filtered;
 
   document.getElementById('tbody-risk').innerHTML = filtered.map(r => `
     <tr class="${r.status === 'nuevo' ? 'risk-row-nuevo' : ''}">

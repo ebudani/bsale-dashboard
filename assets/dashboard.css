@@ -311,6 +311,12 @@
     margin-left: auto; font-family: inherit; font-size: 13px; padding: 6px 10px;
     border: 1px solid var(--gray-200); border-radius: 6px; min-width: 200px;
   }
+  .risk-export-btn {
+    font-family: inherit; font-size: 12.5px; font-weight: 600; color: white;
+    background: var(--blue); border: none; border-radius: 6px; padding: 7px 12px;
+    cursor: pointer; white-space: nowrap;
+  }
+  .risk-export-btn:hover { background: #1e40af; }
   .risk-table-scroll { max-height: 65vh; overflow: auto; border: 1px solid var(--gray-200); border-radius: 8px; }
   #table-risk { margin: 0; table-layout: fixed; width: 100%; }
   #table-risk th, #table-risk td { padding: 6px 7px; font-size: 12px; overflow-wrap: break-word; }
