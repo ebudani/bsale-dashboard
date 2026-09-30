@@ -338,7 +338,7 @@ def fetch_brand_details(facturas, exenta_docs, nc_docs):
 
 def build_month_record(year, month, facturas, nc_docs, exenta_docs, clients_meta,
                        brand_details=None, client_to_vendor=None, client_activity=None,
-                       last_purchase_brands=None):
+                       last_purchase_brands=None, client_product_history=None):
     neto_facturas = sum(d.get("netAmount", 0) for d in facturas + exenta_docs)
     neto_nc       = sum(d.get("netAmount", 0) for d in nc_docs)
     total_neto    = neto_facturas - neto_nc
@@ -499,14 +499,21 @@ def build_month_record(year, month, facturas, nc_docs, exenta_docs, clients_meta
         month_key = f"{year}-{month:02d}"
         for cid, vals in by_client.items():
             client_activity.setdefault(cid, {})[month_key] = round(vals["neto"])
-            # Brand breakdown of THIS purchase, for the "Cartera en riesgo"
-            # view's "que compro / de que tamano era" column. by_client_brand
-            # is already computed above for every client (not just top 15),
-            # so this is free -- no extra API calls. Only recorded on a
-            # positive month (an actual purchase), so it always reflects the
-            # most recent real purchase once the caller has walked all months.
+            # Brand breakdown de ESE mes para ese cliente. by_client_brand ya
+            # esta calculado arriba para todos los clientes (no solo el top
+            # 15), asi que esto es gratis -- no hace falta pegarle de nuevo a
+            # la API. Alimenta tanto "Cartera en riesgo" (last_purchase_brands,
+            # solo el mes mas reciente con compra) como "Historico por
+            # Cliente" (client_product_history, todos los meses -- incluido
+            # $0/negativo, para que el historial no tenga huecos raros).
+            b = by_client_brand.get(cid, empty_brand_totals())
+            if client_product_history is not None:
+                client_product_history.setdefault(cid, {})[month_key] = {
+                    "neto": round(vals["neto"]),
+                    "Teoxane": round(b["Teoxane"]["neto"]),
+                    "RRS HA Long Lasting": round(b["RRS HA Long Lasting"]["neto"]),
+                }
             if vals["neto"] > 0 and last_purchase_brands is not None:
-                b = by_client_brand.get(cid, empty_brand_totals())
                 last_purchase_brands[cid] = {
                     "month": month_key,
                     "Teoxane": round(b["Teoxane"]["neto"]),
@@ -602,11 +609,12 @@ def load_existing():
             {(r["year"], r["month"]): r for r in data.get("months", [])},
             data.get("client_activity", {}),
             data.get("last_purchase_brands", {}),
+            data.get("client_product_history", {}),
         )
-    return {}, {}, {}, {}, {}
+    return {}, {}, {}, {}, {}, {}
 
 
-def save(users, clients, months_dict, client_activity, client_vendor, last_purchase_brands):
+def save(users, clients, months_dict, client_activity, client_vendor, last_purchase_brands, client_product_history):
     months = sorted(months_dict.values(), key=lambda r: (r["year"], r["month"]))
     output = {
         "updated_at": datetime.datetime.utcnow().isoformat() + "Z",
@@ -622,6 +630,10 @@ def save(users, clients, months_dict, client_activity, client_vendor, last_purch
         # Brand breakdown (Teoxane / RRS) of each client's most recent
         # positive-neto month -- "how big was that client" at a glance.
         "last_purchase_brands": last_purchase_brands,
+        # Historico completo por cliente: neto + Teoxane/RRS de CADA mes (no
+        # solo el ultimo) -- para "Historico por Cliente" (por año y mes a
+        # mes vs el año anterior).
+        "client_product_history": client_product_history,
     }
     os.makedirs(os.path.dirname(OUT_FILE), exist_ok=True)
     with open(OUT_FILE, "w", encoding="utf-8") as f:
@@ -648,7 +660,7 @@ def main():
     args = parser.parse_args()
 
     today = datetime.date.today()
-    _, _, existing, client_activity, last_purchase_brands = load_existing()
+    _, _, existing, client_activity, last_purchase_brands, client_product_history = load_existing()
 
     if args.backfill:
         from_year, from_month = map(int, args.from_month.split("-"))
@@ -670,6 +682,10 @@ def main():
         for cid in list(last_purchase_brands.keys()):
             if last_purchase_brands[cid].get("month", "") < cutoff:
                 del last_purchase_brands[cid]
+        for cid in list(client_product_history.keys()):
+            client_product_history[cid] = {mk: v for mk, v in client_product_history[cid].items() if mk >= cutoff}
+            if not client_product_history[cid]:
+                del client_product_history[cid]
     else:
         targets = [(today.year, today.month)]
         print(f"Daily mode: {today.year}-{today.month:02d}")
@@ -704,7 +720,7 @@ def main():
         record = build_month_record(
             year, month, facturas, nc_data["nc"], nc_data["exenta"],
             clients, brand_details, client_to_vendor, client_activity,
-            last_purchase_brands
+            last_purchase_brands, client_product_history
         )
         existing[(year, month)] = record
         print(
@@ -713,7 +729,7 @@ def main():
             f"RRS ${record['by_brand'].get('RRS HA Long Lasting', 0):,.0f}"
         )
 
-    save(users, clients, existing, client_activity, client_to_vendor, last_purchase_brands)
+    save(users, clients, existing, client_activity, client_to_vendor, last_purchase_brands, client_product_history)
 
 
 if __name__ == "__main__":

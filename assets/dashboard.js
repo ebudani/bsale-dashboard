@@ -20,6 +20,7 @@ let clientsMeta = {};
 let clientActivity = {};
 let clientVendorMap = {};
 let lastPurchaseBrands = {};
+let clientProductHistory = {};
 let riskStatusFilter = 'todas';
 let riskSearch = '';
 let riskSortKey = 'status';
@@ -129,6 +130,7 @@ async function loadData() {
   clientActivity = ventas.client_activity || {};
   clientVendorMap = ventas.client_vendor || {};
   lastPurchaseBrands = ventas.last_purchase_brands || {};
+  clientProductHistory = ventas.client_product_history || {};
 
   document.getElementById('updated-at').textContent =
     'Actualizado: ' + (ventas.updated_at || '').slice(0, 16).replace('T', ' ') + ' UTC';
@@ -138,6 +140,7 @@ async function loadData() {
   if (!applyVendorLock()) return; // window.LOCKED_VENDOR set but not a real vendor -- bail, error already shown
   buildCustomRangeSelectors();
   if (typeof initRiskContacts === 'function') await initRiskContacts();
+  if (typeof initClientHistory === 'function') initClientHistory();
   renderDispatch = window.SIMPLE_MODE ? renderVendorSimple : render;
   renderDispatch();
   document.getElementById('loading').style.display = 'none';
@@ -1332,6 +1335,140 @@ function renderCarteraRiesgo() {
       renderRiskTable(buildRiskRoster());
     };
   });
+}
+
+// ── Histórico por Cliente ─────────────────────────────────────────────────────
+// Solo existe en index.html (tablero general) -- se sale temprano en las
+// demas paginas, donde estos elementos no estan en el DOM.
+let clientHistorySelectedCid = null;
+let clientHistorySuggestionIndex = -1;
+
+function initClientHistory() {
+  const search = document.getElementById('client-history-search');
+  if (!search) return;
+  const box = document.getElementById('client-history-suggestions');
+
+  search.addEventListener('input', () => renderClientHistorySuggestions(search.value));
+  search.addEventListener('focus', () => { if (search.value.trim()) renderClientHistorySuggestions(search.value); });
+  search.addEventListener('keydown', e => {
+    const items = [...box.querySelectorAll('.client-history-suggestion')];
+    if (!items.length) return;
+    if (e.key === 'ArrowDown') { e.preventDefault(); clientHistorySuggestionIndex = Math.min(clientHistorySuggestionIndex + 1, items.length - 1); highlightSuggestion(items); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); clientHistorySuggestionIndex = Math.max(clientHistorySuggestionIndex - 1, 0); highlightSuggestion(items); }
+    else if (e.key === 'Enter') { e.preventDefault(); const it = items[clientHistorySuggestionIndex] || items[0]; if (it) selectClientHistory(it.dataset.cid); }
+    else if (e.key === 'Escape') { box.classList.remove('open'); }
+  });
+  document.addEventListener('click', e => {
+    if (!box.contains(e.target) && e.target !== search) box.classList.remove('open');
+  });
+}
+
+function highlightSuggestion(items) {
+  items.forEach((it, i) => it.classList.toggle('active', i === clientHistorySuggestionIndex));
+}
+
+function renderClientHistorySuggestions(query) {
+  const box = document.getElementById('client-history-suggestions');
+  const q = query.trim().toLowerCase();
+  clientHistorySuggestionIndex = -1;
+  if (q.length < 2) { box.classList.remove('open'); box.innerHTML = ''; return; }
+
+  const matches = [];
+  for (const cid in clientsMeta) {
+    const meta = clientsMeta[cid];
+    const name = (meta.name || '').toLowerCase();
+    const rut = (meta.rut || '').toLowerCase();
+    if (name.includes(q) || rut.includes(q)) {
+      matches.push({ cid, name: meta.name || cid, rut: meta.rut || '' });
+      if (matches.length >= 8) break;
+    }
+  }
+
+  if (!matches.length) {
+    box.innerHTML = `<div class="client-history-suggestion" style="cursor:default;color:var(--gray-600)">Sin resultados</div>`;
+    box.classList.add('open');
+    return;
+  }
+
+  box.innerHTML = matches.map(m => `
+    <div class="client-history-suggestion" data-cid="${m.cid}">
+      <strong>${escapeHtml(m.name)}</strong><small>${escapeHtml(m.rut)}</small>
+    </div>
+  `).join('');
+  box.querySelectorAll('.client-history-suggestion[data-cid]').forEach(el => {
+    el.addEventListener('click', () => selectClientHistory(el.dataset.cid));
+  });
+  box.classList.add('open');
+}
+
+function selectClientHistory(cid) {
+  clientHistorySelectedCid = cid;
+  const box = document.getElementById('client-history-suggestions');
+  box.classList.remove('open');
+  const meta = clientsMeta[cid] || {};
+  document.getElementById('client-history-search').value = meta.name || cid;
+  renderClientHistory(cid);
+}
+
+function renderClientHistory(cid) {
+  const history = clientProductHistory[cid] || {};
+  const monthKeys = Object.keys(history).sort();
+  document.getElementById('client-history-empty').style.display = monthKeys.length ? 'none' : 'block';
+  document.getElementById('client-history-content').style.display = monthKeys.length ? 'block' : 'none';
+  if (!monthKeys.length) return;
+
+  const meta = clientsMeta[cid] || {};
+  const vendor = clientVendorMap[cid] || null;
+  document.getElementById('client-history-header').innerHTML = `
+    <div class="name">${escapeHtml(meta.name || cid)}</div>
+    <div class="meta">RUT: ${escapeHtml(meta.rut || '—')}${vendor ? ' · Vendedor: ' + escapeHtml(vendor) : ''}</div>
+  `;
+
+  // Por año -- suma cada mes de ese cliente agrupado por año, mas reciente primero.
+  const byYear = {};
+  monthKeys.forEach(mk => {
+    const year = mk.slice(0, 4);
+    const y = byYear[year] || (byYear[year] = { Teoxane: 0, 'RRS HA Long Lasting': 0, neto: 0 });
+    const m = history[mk];
+    y.Teoxane += m.Teoxane || 0;
+    y['RRS HA Long Lasting'] += m['RRS HA Long Lasting'] || 0;
+    y.neto += m.neto || 0;
+  });
+  const years = Object.keys(byYear).sort().reverse();
+  document.getElementById('tbody-client-history-years').innerHTML = years.map(y => `
+    <tr>
+      <td>${y}</td>
+      <td>${M(byYear[y].Teoxane)}</td>
+      <td>${M(byYear[y]['RRS HA Long Lasting'])}</td>
+      <td class="total">${M(byYear[y].neto)}</td>
+    </tr>
+  `).join('');
+
+  // Mes a mes: año en curso vs el año anterior, neto total por mes.
+  const now = new Date();
+  const curYear = now.getUTCFullYear();
+  const prevYear = curYear - 1;
+  document.getElementById('client-history-months-title').textContent = `Mes a mes: ${curYear} vs ${prevYear}`;
+  const monthNames = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+  const curMonth1based = now.getUTCMonth() + 1; // meses futuros del año en curso: no pasaron todavia
+  const rows = monthNames.map((label, i) => {
+    const monthNum = i + 1;
+    const isFuture = monthNum > curMonth1based;
+    const mm = String(monthNum).padStart(2, '0');
+    const cur = isFuture ? 0 : ((history[`${curYear}-${mm}`] || {}).neto || 0);
+    const prev = (history[`${prevYear}-${mm}`] || {}).neto || 0;
+    let varCell = '—';
+    if (!isFuture) {
+      if (prev) {
+        const pct = ((cur - prev) / Math.abs(prev)) * 100;
+        varCell = `<span class="${pct >= 0 ? 'up' : 'down'}">${pct >= 0 ? '+' : ''}${pct.toFixed(0)}%</span>`;
+      } else if (cur) {
+        varCell = '<span class="up">Nuevo</span>';
+      }
+    }
+    return `<tr${isFuture ? ' class="client-history-future"' : ''}><td>${label}</td><td>${isFuture ? '—' : (cur ? M(cur) : '—')}</td><td>${prev ? M(prev) : '—'}</td><td>${varCell}</td></tr>`;
+  });
+  document.getElementById('tbody-client-history-months').innerHTML = rows.join('');
 }
 
 // ── Init ─────────────────────────────────────────────────────────────────────

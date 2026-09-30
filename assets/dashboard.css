@@ -394,6 +394,43 @@
   .risk-legend .pill { margin-right: 6px; }
   .risk-count { font-size: 11px; color: #94a3b8; margin-top: 8px; }
 
+  /* Histórico por Cliente */
+  .client-history-search-wrap { position: relative; max-width: 420px; margin-bottom: 4px; }
+  #client-history-search {
+    width: 100%; font-family: inherit; font-size: 14px; padding: 9px 12px;
+    border: 1px solid var(--gray-200); border-radius: 8px;
+  }
+  #client-history-search:focus { outline: 2px solid var(--blue); border-color: var(--blue); }
+  .client-history-suggestions {
+    position: absolute; top: calc(100% + 4px); left: 0; right: 0; z-index: 5;
+    background: white; border: 1px solid var(--gray-200); border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.12); max-height: 280px; overflow-y: auto;
+    display: none;
+  }
+  .client-history-suggestions.open { display: block; }
+  .client-history-suggestion {
+    padding: 8px 12px; cursor: pointer; font-size: 13px; border-bottom: 1px solid var(--gray-100);
+  }
+  .client-history-suggestion:last-child { border-bottom: none; }
+  .client-history-suggestion:hover, .client-history-suggestion.active { background: var(--gray-50); }
+  .client-history-suggestion strong { display: block; }
+  .client-history-suggestion small { color: var(--gray-600); }
+  #client-history-empty { margin-top: 14px; }
+  #client-history-header {
+    margin: 16px 0 14px; padding-bottom: 12px; border-bottom: 1px solid var(--gray-200);
+  }
+  #client-history-header .name { font-size: 16px; font-weight: 700; }
+  #client-history-header .meta { font-size: 12px; color: var(--gray-600); margin-top: 2px; }
+  .client-history-tables { display: grid; grid-template-columns: 1fr 1.3fr; gap: 20px; align-items: start; }
+  .client-history-tables h3 { font-size: 12px; font-weight: 600; color: var(--gray-600); text-transform: uppercase; letter-spacing: .4px; margin-bottom: 8px; }
+  #table-client-history-years td.total, #table-client-history-months td.total { font-weight: 700; }
+  #table-client-history-months tr.client-history-future td { color: #cbd5e1; }
+  #table-client-history-months .up { color: #15803d; font-weight: 600; }
+  #table-client-history-months .down { color: #b91c1c; font-weight: 600; }
+  @media (max-width: 760px) {
+    .client-history-tables { grid-template-columns: 1fr; }
+  }
+
   /* Cumplimiento + Teoxane + RRS (7, 4 and 4 columns in 1.5fr/1fr/1fr) need
      more room than the other 2-column rows to stay legible without
      scrolling -- collapse to 1 column earlier than the general 900px

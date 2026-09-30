@@ -222,6 +222,34 @@
       </div>
     </div>
 
+    <div class="card" id="client-history-card">
+      <h2>Histórico por Cliente</h2>
+      <div class="client-history-search-wrap">
+        <input type="search" id="client-history-search" placeholder="Buscar cuenta o RUT…" autocomplete="off">
+        <div id="client-history-suggestions" class="client-history-suggestions"></div>
+      </div>
+      <div id="client-history-empty" class="unavailable">Buscá una cuenta arriba para ver su histórico de compras.</div>
+      <div id="client-history-content" style="display:none">
+        <div id="client-history-header"></div>
+        <div class="client-history-tables">
+          <div>
+            <h3>Por año</h3>
+            <table id="table-client-history-years">
+              <thead><tr><th>Año</th><th>Teoxane</th><th>RRS LL</th><th>Total</th></tr></thead>
+              <tbody id="tbody-client-history-years"></tbody>
+            </table>
+          </div>
+          <div>
+            <h3 id="client-history-months-title">Mes a mes</h3>
+            <table id="table-client-history-months">
+              <thead><tr><th>Mes</th><th>Año actual</th><th>Año anterior</th><th>Var.</th></tr></thead>
+              <tbody id="tbody-client-history-months"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div><!-- #content -->
 </main>
 
