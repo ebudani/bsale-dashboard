@@ -336,6 +336,18 @@
   #table-risk.hide-contact-cols td:nth-child(10) {
     display: none;
   }
+  /* En el link personal de una vendedora sin el piloto (Vendedor Y las 3
+     columnas de contacto ocultas), Cuenta queda como la unica columna sin
+     ancho propio y absorbe TODO lo que sobra -- 800px+, dejando el resto de
+     la tabla apretada a la izquierda con un hueco enorme. Ahi, capada a un
+     ancho prolijo y la tabla ya no fuerza el 100% del card. */
+  #table-risk.hide-vendor-col.hide-contact-cols {
+    width: auto;
+  }
+  #table-risk.hide-vendor-col.hide-contact-cols th:nth-child(1),
+  #table-risk.hide-vendor-col.hide-contact-cols td:nth-child(1) {
+    width: 320px;
+  }
   /* table-layout:fixed reparte el ancho segun estas columnas de tamano
      fijo; Cuenta/Comentario (sin ancho propio) se reparten lo que sobra --
      asi entra todo sin tener que scrollear al costado en una ventana de
@@ -500,6 +512,14 @@
        las demas para no scrollear tanto al costado (siempre queda scroll
        horizontal en .risk-table-scroll, pero asi alcanza con menos). */
     #table-risk th:nth-child(1), #table-risk td:nth-child(1) { width: 170px; }
+    /* Misma especificidad que la regla de escritorio (2 clases) para el
+       link personal sin piloto -- sin esto, gana esa por tener mas clases
+       y Cuenta queda en 320px en el celular. */
+    #table-risk.hide-vendor-col.hide-contact-cols th:nth-child(1),
+    #table-risk.hide-vendor-col.hide-contact-cols td:nth-child(1) {
+      width: 170px;
+    }
+    #table-risk.hide-vendor-col.hide-contact-cols { width: 100%; }
     #table-risk th:nth-child(6), #table-risk td:nth-child(6) { width: 66px; }
     #table-risk th:nth-child(7), #table-risk td:nth-child(7) { width: 92px; }
     #table-risk th:nth-child(8), #table-risk td:nth-child(8) { width: 92px; }
