@@ -455,4 +455,18 @@
     #table-clients th, #table-clients td { padding: 4px 3px; }
     #table-clients th { overflow-wrap: break-word; }
     #table-clients td[style*="max-width"] { max-width: 60px !important; }
+
+    /* Cartera en riesgo: en desktop Cuenta/Comentario se reparten lo que
+       sobra del resto de columnas de ancho fijo -- en un celular angosto
+       eso las aplastaba a ~80px, partiendo cada razon social en 6-7
+       lineas. Aca les damos un minimo fijo a los dos, y se achican un poco
+       las demas para no scrollear tanto al costado (siempre queda scroll
+       horizontal en .risk-table-scroll, pero asi alcanza con menos). */
+    #table-risk th:nth-child(1), #table-risk td:nth-child(1) { width: 170px; }
+    #table-risk th:nth-child(6), #table-risk td:nth-child(6) { width: 66px; }
+    #table-risk th:nth-child(7), #table-risk td:nth-child(7) { width: 92px; }
+    #table-risk th:nth-child(8), #table-risk td:nth-child(8) { width: 92px; }
+    #table-risk th:nth-child(9), #table-risk td:nth-child(9) { width: 140px; }
+    #table-risk th:nth-child(10), #table-risk td:nth-child(10) { width: 112px; }
+    .risk-table-scroll { max-height: 55vh; }
   }
