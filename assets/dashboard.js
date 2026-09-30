@@ -1084,6 +1084,10 @@ function buildRiskRoster() {
     const lastBrands = lastPurchaseBrands[cid] && lastPurchaseBrands[cid].month === lastMonth
       ? lastPurchaseBrands[cid] : null;
     const rc = (typeof getRiskContact === 'function') ? getRiskContact(cid) : null;
+    // "Contactado" y el comentario son por mes -- arrancan en blanco cada
+    // mes nuevo. lastContactedAt/lastNote quedan aparte como referencia de
+    // "la ultima vez", aunque el mes en curso todavia no tenga nada.
+    const thisMonthEntry = (rc && rc.months && rc.months[current]) || null;
     rows.push({
       cid, vendor, status,
       name: meta.name || cid,
@@ -1093,10 +1097,15 @@ function buildRiskRoster() {
       current: curVal, prev: prevVal,
       lastMonth, lastBrands,
       lastAmount: lastBrands ? (lastBrands['Teoxane'] || 0) + (lastBrands['RRS HA Long Lasting'] || 0) : 0,
-      contacted: !!(rc && rc.contacted),
-      contactedAt: rc ? (rc.contactedAt || null) : null,
-      contactedBy: rc ? (rc.contactedBy || null) : null,
-      note: rc ? (rc.note || '') : '',
+      contacted: !!(thisMonthEntry && thisMonthEntry.contacted),
+      contactedAt: thisMonthEntry ? (thisMonthEntry.contactedAt || null) : null,
+      contactedBy: thisMonthEntry ? (thisMonthEntry.contactedBy || null) : null,
+      note: thisMonthEntry ? (thisMonthEntry.note || '') : '',
+      lastContactedAt: rc ? (rc.lastContactedAt || null) : null,
+      lastContactedBy: rc ? (rc.lastContactedBy || null) : null,
+      lastNote: rc ? (rc.lastNote || '') : '',
+      lastNoteAt: rc ? (rc.lastNoteAt || null) : null,
+      lastNoteBy: rc ? (rc.lastNoteBy || null) : null,
     });
   }
   return rows;
@@ -1170,12 +1179,15 @@ function renderRiskTable(rows) {
           <input type="checkbox" ${r.contacted ? 'checked' : ''} onchange="onRiskContactedToggle('${r.cid}', this.checked)">
           ${r.contacted ? 'Contactado' : 'Marcar'}
         </label>
-        ${r.contactedAt ? `<small>${formatContactDate(r.contactedAt)}${r.contactedBy ? ' · ' + escapeHtml(r.contactedBy) : ''}</small>` : ''}
+        ${r.contacted
+          ? `<small>${formatContactDate(r.contactedAt)}${r.contactedBy ? ' · ' + escapeHtml(r.contactedBy) : ''}</small>`
+          : (r.lastContactedAt ? `<small class="risk-last-ref">Último: ${formatContactDate(r.lastContactedAt)}${r.lastContactedBy ? ' · ' + escapeHtml(r.lastContactedBy) : ''}</small>` : '')}
       </td>
       <td class="risk-note">
         <input type="text" class="risk-note-input" placeholder="Comentario…" value="${escapeHtml(r.note)}"
                onblur="onRiskNoteBlur('${r.cid}', this.value)"
                onkeydown="if(event.key==='Enter') this.blur()">
+        ${r.lastNote ? `<small class="risk-last-ref" title="${escapeHtml(r.lastNote)}">Último: ${escapeHtml(truncateText(r.lastNote, 36))}</small>` : ''}
       </td>
     </tr>
   `).join('');
@@ -1187,6 +1199,11 @@ function escapeHtml(s) {
   return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
   })[c]);
+}
+
+function truncateText(s, max) {
+  if (!s || s.length <= max) return s || '';
+  return s.slice(0, max - 1) + '…';
 }
 
 function formatContactDate(iso) {
@@ -1205,8 +1222,11 @@ async function onRiskContactedToggle(cid, checked) {
 
 async function onRiskNoteBlur(cid, value) {
   const prev = (typeof getRiskContact === 'function') ? getRiskContact(cid) : null;
-  if ((prev && prev.note) === value || (!prev && value === '')) return; // sin cambios, no pegarle a Firestore
+  const monthKey = (typeof riskCurrentMonthKey === 'function') ? riskCurrentMonthKey() : riskMonthKeys().current;
+  const prevNote = (prev && prev.months && prev.months[monthKey] && prev.months[monthKey].note) || '';
+  if (prevNote === value) return; // sin cambios, no pegarle a Firestore
   await setRiskNote(cid, value);
+  renderRiskTable(buildRiskRoster());
 }
 
 function renderCarteraRiesgo() {

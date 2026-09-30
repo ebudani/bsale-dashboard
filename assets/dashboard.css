@@ -349,6 +349,9 @@
     border: 1px solid var(--gray-200); border-radius: 6px; background: var(--white);
   }
   #table-risk .risk-note-input:focus { outline: 2px solid var(--blue); border-color: var(--blue); }
+  /* Referencia de "la ultima vez" (mes anterior u otro previo) -- distinta
+     del dato del mes en curso, que arranca en blanco cada mes. */
+  #table-risk small.risk-last-ref { font-style: italic; color: #94a3b8 !important; }
   #table-risk tr.risk-row-nuevo td { background: var(--gray-100); color: var(--gray-600); }
   #table-risk tr.risk-row-nuevo:hover td { background: var(--gray-200); }
   .risk-caption { font-size: 11px; color: #94a3b8; margin: -6px 0 12px; }
