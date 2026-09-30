@@ -1485,8 +1485,6 @@ function renderClientHistory(cid) {
   document.getElementById('client-history-months-title').textContent = `Mes a mes: ${curYear} vs ${prevYear}`;
   const monthNames = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
   const curMonth1based = now.getUTCMonth() + 1; // meses futuros del año en curso: no pasaron todavia
-  const curVals = [];
-  const prevVals = [];
   const curTeox = [], prevTeox = [], curRrs = [], prevRrs = [];
   const rows = monthNames.map((label, i) => {
     const monthNum = i + 1;
@@ -1494,24 +1492,33 @@ function renderClientHistory(cid) {
     const mm = String(monthNum).padStart(2, '0');
     const curEntry = history[`${curYear}-${mm}`] || {};
     const prevEntry = history[`${prevYear}-${mm}`] || {};
-    const cur = isFuture ? 0 : (curEntry.neto || 0);
-    const prev = prevEntry.neto || 0;
-    curVals.push(isFuture ? null : cur); // null (no punto/linea cortada), no 0 -- un mes que no paso no es "vendio $0"
-    prevVals.push(prev);
     curTeox.push(isFuture ? null : (curEntry.Teoxane || 0));
     prevTeox.push(prevEntry.Teoxane || 0);
     curRrs.push(isFuture ? null : (curEntry['RRS HA Long Lasting'] || 0));
     prevRrs.push(prevEntry['RRS HA Long Lasting'] || 0);
-    let varCell = '—';
-    if (!isFuture) {
-      if (prev) {
-        const pct = ((cur - prev) / Math.abs(prev)) * 100;
-        varCell = `<span class="${pct >= 0 ? 'up' : 'down'}">${pct >= 0 ? '+' : ''}${pct.toFixed(0)}%</span>`;
-      } else if (cur) {
-        varCell = '<span class="up">Nuevo</span>';
+    const varPct = (c, p) => {
+      if (isFuture) return '—';
+      if (p) {
+        const pct = ((c - p) / Math.abs(p)) * 100;
+        return `<span class="${pct >= 0 ? 'up' : 'down'}">${pct >= 0 ? '+' : ''}${pct.toFixed(0)}%</span>`;
       }
-    }
-    return `<tr${isFuture ? ' class="client-history-future"' : ''}><td>${label}</td><td>${isFuture ? '—' : (cur ? M(cur) : '—')}</td><td>${prev ? M(prev) : '—'}</td><td>${varCell}</td></tr>`;
+      if (c) return '<span class="up">Nuevo</span>';
+      return '—';
+    };
+    const cell = v => (v ? M(v) : '—');
+    const curTeoxVal = isFuture ? 0 : (curEntry.Teoxane || 0);
+    const curRrsVal = isFuture ? 0 : (curEntry['RRS HA Long Lasting'] || 0);
+    const prevTeoxVal = prevEntry.Teoxane || 0;
+    const prevRrsVal = prevEntry['RRS HA Long Lasting'] || 0;
+    return `<tr${isFuture ? ' class="client-history-future"' : ''}>
+      <td>${label}</td>
+      <td class="group-start">${isFuture ? '—' : cell(curTeoxVal)}</td>
+      <td>${isFuture ? '—' : cell(curRrsVal)}</td>
+      <td class="group-start">${cell(prevTeoxVal)}</td>
+      <td>${cell(prevRrsVal)}</td>
+      <td class="group-start">${varPct(curTeoxVal, prevTeoxVal)}</td>
+      <td>${varPct(curRrsVal, prevRrsVal)}</td>
+    </tr>`;
   });
   document.getElementById('tbody-client-history-months').innerHTML = rows.join('');
 
