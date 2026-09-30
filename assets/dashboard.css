@@ -309,10 +309,25 @@
     border: 1px solid var(--gray-200); border-radius: 6px; min-width: 200px;
   }
   .risk-table-scroll { max-height: 65vh; overflow: auto; border: 1px solid var(--gray-200); border-radius: 8px; }
-  #table-risk { margin: 0; }
+  #table-risk { margin: 0; table-layout: fixed; width: 100%; }
+  #table-risk th, #table-risk td { padding: 6px 7px; font-size: 12px; overflow-wrap: break-word; }
   #table-risk th { cursor: pointer; user-select: none; position: sticky; top: 0; z-index: 2; box-shadow: 0 1px 0 var(--gray-200); }
   #table-risk th .arrow { opacity: .4; margin-left: 3px; }
-  #table-risk td.risk-name { max-width: 220px; white-space: normal; line-height: 1.3; }
+  #table-risk.hide-vendor-col th:nth-child(2),
+  #table-risk.hide-vendor-col td:nth-child(2) {
+    display: none;
+  }
+  /* table-layout:fixed reparte el ancho segun estas columnas angostas de
+     tamano fijo; Cuenta/Vendedor/Comentario (sin ancho propio) se reparten
+     lo que sobra -- asi entra todo sin tener que scrollear al costado en
+     una ventana de laptop normal. */
+  #table-risk th:nth-child(3), #table-risk td:nth-child(3) { width: 78px; }
+  #table-risk th:nth-child(4), #table-risk td:nth-child(4) { width: 88px; }
+  #table-risk th:nth-child(5), #table-risk td:nth-child(5) { width: 88px; }
+  #table-risk th:nth-child(6), #table-risk td:nth-child(6) { width: 76px; }
+  #table-risk th:nth-child(7), #table-risk td:nth-child(7) { width: 108px; }
+  #table-risk th:nth-child(8), #table-risk td:nth-child(8) { width: 108px; }
+  #table-risk td.risk-name { max-width: none; white-space: normal; line-height: 1.3; }
   #table-risk td.risk-name small { display: block; color: #94a3b8; font-weight: 400; }
   #table-risk td.risk-name small.risk-contact-name { color: var(--gray-900); font-weight: 600; font-size: 12.5px; margin-top: 2px; }
   #table-risk td.risk-name small.risk-contact-phone { color: var(--gray-600); }
@@ -324,8 +339,8 @@
   #table-risk td:nth-child(5) {
     background: var(--gray-200);
   }
-  #table-risk td.risk-brands { font-size: 12px; color: var(--gray-600); white-space: nowrap; }
-  #table-risk td.risk-contacted { white-space: nowrap; }
+  #table-risk td.risk-brands { font-size: 12px; color: var(--gray-600); white-space: normal; line-height: 1.3; }
+  #table-risk td.risk-contacted { white-space: normal; }
   #table-risk .risk-contacted-check { display: flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 600; color: var(--gray-600); cursor: pointer; }
   #table-risk td.risk-contacted small { display: block; color: #94a3b8; font-weight: 400; margin-top: 3px; }
   #table-risk td.risk-note { min-width: 160px; }

@@ -158,6 +158,11 @@ function applyVendorLock() {
   document.querySelectorAll('h1').forEach(h1 => {
     h1.innerHTML = `AestheticsPro <span>· ${window.LOCKED_VENDOR}</span>`;
   });
+  // La columna Vendedor es redundante en una pagina bloqueada a una sola
+  // vendedora (todas las filas dicen lo mismo) -- sacarla libera ancho para
+  // que el resto de la tabla entre sin scroll horizontal.
+  const riskTable = document.getElementById('table-risk');
+  if (riskTable) riskTable.classList.add('hide-vendor-col');
   return true;
 }
 
