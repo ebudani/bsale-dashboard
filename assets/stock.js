@@ -12,20 +12,21 @@ function monthlyDemand(allMonths, sku) {
   return total / DEMAND_MONTHS;
 }
 
-// "Quiebre" also covers <1 month of runway left (not just literal zero
-// stock) -- by the time it reads zero it's already too late to reorder.
+// "Quiebre" = 0 unidades en stock. "Critico" = todavia queda algo, pero
+// alcanza para menos de 1 mes al ritmo de venta reciente -- misma alerta
+// temprana de antes, separada del caso de stock realmente en cero.
 function statusFor(available, demand) {
   if (available <= 0) return 'quiebre';
   if (demand === 0) return 'sindemanda';
   const coverage = available / demand;
-  if (coverage < 1) return 'quiebre';
+  if (coverage < 1) return 'critico';
   if (coverage < TARGET_MONTHS) return 'bajo';
   return 'ok';
 }
 
-const STATUS_LABEL = { quiebre: 'Quiebre', bajo: 'Bajo', ok: 'OK', sindemanda: 'Sin demanda reciente' };
-const STATUS_PILL  = { quiebre: 'low', bajo: 'mid', ok: 'ok', sindemanda: 'neutral' };
-const STATUS_RANK  = { quiebre: 0, bajo: 1, ok: 2, sindemanda: 3 };
+const STATUS_LABEL = { quiebre: 'Quiebre', critico: 'Crítico', bajo: 'Bajo', ok: 'OK', sindemanda: 'Sin demanda reciente' };
+const STATUS_PILL  = { quiebre: 'quiebre', critico: 'low', bajo: 'mid', ok: 'ok', sindemanda: 'neutral' };
+const STATUS_RANK  = { quiebre: 0, critico: 1, bajo: 2, ok: 3, sindemanda: 4 };
 
 // Mismos marcadores de nombre que classify_brand() en scripts/fetch_data.py
 // (la parte por variant_id no aplica aca -- stock.json no trae variant_id,
@@ -80,9 +81,12 @@ async function loadStock() {
 }
 
 function renderSummary(rows) {
-  const counts = { quiebre: 0, bajo: 0, ok: 0, sindemanda: 0 };
+  const counts = { quiebre: 0, critico: 0, bajo: 0, ok: 0, sindemanda: 0 };
   rows.forEach(r => counts[r.status]++);
-  document.getElementById('kpi-quiebre').textContent = counts.quiebre;
+  // La tarjeta "Quiebre" arriba sigue siendo la alerta combinada (sin stock
+  // + menos de 1 mes de cobertura) -- la distincion Quiebre/Critico es solo
+  // en la columna Estado de la tabla, fila por fila.
+  document.getElementById('kpi-quiebre').textContent = counts.quiebre + counts.critico;
   document.getElementById('kpi-bajo').textContent = counts.bajo;
   document.getElementById('kpi-ok').textContent = counts.ok;
   document.getElementById('kpi-total-skus').textContent = rows.length;

@@ -207,6 +207,9 @@
   .pill.ok  { background: #dcfce7; color: #15803d; }
   .pill.low { background: #fee2e2; color: #b91c1c; }
   .pill.mid { background: #fef3c7; color: #92400e; }
+  /* Quiebre real (0 unidades) -- rojo mas fuerte que Critico (.pill.low),
+     que todavia tiene algo de stock aunque alcance para poco. */
+  .pill.quiebre { background: #b91c1c; color: #ffffff; }
 
   /* Wide chart */
   .full-row { margin-bottom: 22px; }
