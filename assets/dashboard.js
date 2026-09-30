@@ -132,6 +132,7 @@ async function loadData() {
   buildVendorSelector();
   if (!applyVendorLock()) return; // window.LOCKED_VENDOR set but not a real vendor -- bail, error already shown
   buildCustomRangeSelectors();
+  if (typeof initRiskContacts === 'function') await initRiskContacts();
   renderDispatch = window.SIMPLE_MODE ? renderVendorSimple : render;
   renderDispatch();
   document.getElementById('loading').style.display = 'none';
@@ -1077,6 +1078,7 @@ function buildRiskRoster() {
     const meta = clientsMeta[cid] || {};
     const lastBrands = lastPurchaseBrands[cid] && lastPurchaseBrands[cid].month === lastMonth
       ? lastPurchaseBrands[cid] : null;
+    const rc = (typeof getRiskContact === 'function') ? getRiskContact(cid) : null;
     rows.push({
       cid, vendor, status,
       name: meta.name || cid,
@@ -1086,6 +1088,10 @@ function buildRiskRoster() {
       current: curVal, prev: prevVal,
       lastMonth, lastBrands,
       lastAmount: lastBrands ? (lastBrands['Teoxane'] || 0) + (lastBrands['RRS HA Long Lasting'] || 0) : 0,
+      contacted: !!(rc && rc.contacted),
+      contactedAt: rc ? (rc.contactedAt || null) : null,
+      contactedBy: rc ? (rc.contactedBy || null) : null,
+      note: rc ? (rc.note || '') : '',
     });
   }
   return rows;
@@ -1154,10 +1160,48 @@ function renderRiskTable(rows) {
       <td>${r.prev ? M(r.prev) : '—'}</td>
       <td>${r.lastMonth ? monthLabel(...r.lastMonth.split('-').map(Number)) : '—'}</td>
       <td class="risk-brands">${formatLastBrands(r.lastBrands)}</td>
+      <td class="risk-contacted">
+        <label class="risk-contacted-check">
+          <input type="checkbox" ${r.contacted ? 'checked' : ''} onchange="onRiskContactedToggle('${r.cid}', this.checked)">
+          ${r.contacted ? 'Contactado' : 'Marcar'}
+        </label>
+        ${r.contactedAt ? `<small>${formatContactDate(r.contactedAt)}${r.contactedBy ? ' · ' + escapeHtml(r.contactedBy) : ''}</small>` : ''}
+      </td>
+      <td class="risk-note">
+        <input type="text" class="risk-note-input" placeholder="Comentario…" value="${escapeHtml(r.note)}"
+               onblur="onRiskNoteBlur('${r.cid}', this.value)"
+               onkeydown="if(event.key==='Enter') this.blur()">
+      </td>
     </tr>
   `).join('');
   document.getElementById('risk-count').textContent =
     `${filtered.length} de ${rows.length} cuenta${rows.length === 1 ? '' : 's'}`;
+}
+
+function escapeHtml(s) {
+  return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
+  })[c]);
+}
+
+function formatContactDate(iso) {
+  try {
+    return new Date(iso).toLocaleDateString('es-CL', { day: '2-digit', month: 'short', year: 'numeric' });
+  } catch { return ''; }
+}
+
+// Los checkbox/input llaman a estas dos funciones globales -- vuelven a
+// pintar solo la tabla (no todo el tablero) para no perder el filtro/orden
+// ni saltar el scroll mientras se escribe un comentario.
+async function onRiskContactedToggle(cid, checked) {
+  await setRiskContacted(cid, checked);
+  renderRiskTable(buildRiskRoster());
+}
+
+async function onRiskNoteBlur(cid, value) {
+  const prev = (typeof getRiskContact === 'function') ? getRiskContact(cid) : null;
+  if ((prev && prev.note) === value || (!prev && value === '')) return; // sin cambios, no pegarle a Firestore
+  await setRiskNote(cid, value);
 }
 
 function renderCarteraRiesgo() {

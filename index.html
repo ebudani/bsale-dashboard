@@ -210,6 +210,8 @@
                 <th data-key="prev">Mes anterior <span class="arrow"></span></th>
                 <th data-key="lastMonth">Última compra <span class="arrow"></span></th>
                 <th data-key="lastAmount">Monto por producto (esa compra) <span class="arrow"></span></th>
+                <th data-key="contacted">Contactado <span class="arrow"></span></th>
+                <th>Comentario</th>
               </tr>
             </thead>
             <tbody id="tbody-risk"></tbody>
@@ -222,6 +224,11 @@
   </div><!-- #content -->
 </main>
 
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+<script src="assets/firebase-config.js"></script>
+<script src="assets/risk-contacts.js"></script>
 <script src="assets/pin-gate.js"></script>
 <script src="assets/dashboard.js"></script>
 </body>

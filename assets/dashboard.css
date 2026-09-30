@@ -325,6 +325,15 @@
     background: var(--gray-200);
   }
   #table-risk td.risk-brands { font-size: 12px; color: var(--gray-600); white-space: nowrap; }
+  #table-risk td.risk-contacted { white-space: nowrap; }
+  #table-risk .risk-contacted-check { display: flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 600; color: var(--gray-600); cursor: pointer; }
+  #table-risk td.risk-contacted small { display: block; color: #94a3b8; font-weight: 400; margin-top: 3px; }
+  #table-risk td.risk-note { min-width: 160px; }
+  #table-risk .risk-note-input {
+    width: 100%; font-family: inherit; font-size: 12px; padding: 5px 7px;
+    border: 1px solid var(--gray-200); border-radius: 6px; background: var(--white);
+  }
+  #table-risk .risk-note-input:focus { outline: 2px solid var(--blue); border-color: var(--blue); }
   #table-risk tr.risk-row-nuevo td { background: var(--gray-100); color: var(--gray-600); }
   #table-risk tr.risk-row-nuevo:hover td { background: var(--gray-200); }
   .risk-caption { font-size: 11px; color: #94a3b8; margin: -6px 0 12px; }
