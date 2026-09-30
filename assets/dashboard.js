@@ -34,6 +34,7 @@ let periodMode = 'this_month';
 let customFromIdx = 0;
 let customToIdx = 0;
 let chartMonthly, chartDaily, chartBrands, chartSku;
+let chartClientHistoryYears, chartClientHistoryMonths;
 // Base de 10 colores muy distinguibles para los productos top; si el
 // catalogo historico tiene mas SKUs que colores base, se generan tonos
 // adicionales igualmente espaciados en el circulo de matices en vez de
@@ -1444,6 +1445,44 @@ function renderClientHistory(cid) {
     </tr>
   `).join('');
 
+  const yearsAsc = years.slice().reverse(); // para el grafico: cronologico, no mas reciente primero
+  if (chartClientHistoryYears) chartClientHistoryYears.destroy();
+  chartClientHistoryYears = new Chart(document.getElementById('chart-client-history-years'), {
+    type: 'bar',
+    data: {
+      labels: yearsAsc,
+      datasets: [
+        {
+          label: 'Teoxane',
+          data: yearsAsc.map(y => byYear[y].Teoxane),
+          backgroundColor: BRAND_COLORS['Teoxane'],
+          borderRadius: 4,
+          stack: 'brands',
+        },
+        {
+          label: 'RRS HA Long Lasting',
+          data: yearsAsc.map(y => byYear[y]['RRS HA Long Lasting']),
+          backgroundColor: BRAND_COLORS['RRS HA Long Lasting'],
+          borderRadius: 4,
+          stack: 'brands',
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'top', labels: { boxWidth: 10, font: { size: 10 } } },
+        tooltip: { callbacks: { label: ctx => ` ${ctx.dataset.label}: ${M(ctx.raw)}` } },
+        datalabels: { display: false },
+      },
+      scales: {
+        x: { grid: { display: false }, ticks: { font: { size: 11 } } },
+        y: { ticks: { font: { size: 9 }, callback: v => M(v) }, grid: { color: '#f1f5f9' } },
+      },
+    },
+  });
+
   // Mes a mes: año en curso vs el año anterior, neto total por mes.
   const now = new Date();
   const curYear = now.getUTCFullYear();
@@ -1451,12 +1490,16 @@ function renderClientHistory(cid) {
   document.getElementById('client-history-months-title').textContent = `Mes a mes: ${curYear} vs ${prevYear}`;
   const monthNames = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
   const curMonth1based = now.getUTCMonth() + 1; // meses futuros del año en curso: no pasaron todavia
+  const curVals = [];
+  const prevVals = [];
   const rows = monthNames.map((label, i) => {
     const monthNum = i + 1;
     const isFuture = monthNum > curMonth1based;
     const mm = String(monthNum).padStart(2, '0');
     const cur = isFuture ? 0 : ((history[`${curYear}-${mm}`] || {}).neto || 0);
     const prev = (history[`${prevYear}-${mm}`] || {}).neto || 0;
+    curVals.push(isFuture ? null : cur); // null (no punto/linea cortada), no 0 -- un mes que no paso no es "vendio $0"
+    prevVals.push(prev);
     let varCell = '—';
     if (!isFuture) {
       if (prev) {
@@ -1469,6 +1512,51 @@ function renderClientHistory(cid) {
     return `<tr${isFuture ? ' class="client-history-future"' : ''}><td>${label}</td><td>${isFuture ? '—' : (cur ? M(cur) : '—')}</td><td>${prev ? M(prev) : '—'}</td><td>${varCell}</td></tr>`;
   });
   document.getElementById('tbody-client-history-months').innerHTML = rows.join('');
+
+  if (chartClientHistoryMonths) chartClientHistoryMonths.destroy();
+  chartClientHistoryMonths = new Chart(document.getElementById('chart-client-history-months'), {
+    type: 'line',
+    data: {
+      labels: monthNames,
+      datasets: [
+        {
+          label: String(curYear),
+          data: curVals,
+          borderColor: '#1d4ed8',
+          backgroundColor: 'transparent',
+          pointRadius: 3,
+          pointBackgroundColor: '#1d4ed8',
+          borderWidth: 2,
+          tension: 0.25,
+          spanGaps: false,
+        },
+        {
+          label: String(prevYear),
+          data: prevVals,
+          borderColor: '#94a3b8',
+          backgroundColor: 'transparent',
+          pointRadius: 3,
+          pointBackgroundColor: '#94a3b8',
+          borderWidth: 2,
+          borderDash: [5, 3],
+          tension: 0.25,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'top', labels: { boxWidth: 10, font: { size: 10 } } },
+        tooltip: { callbacks: { label: ctx => ` ${ctx.dataset.label}: ${ctx.raw == null ? '—' : M(ctx.raw)}` } },
+        datalabels: { display: false },
+      },
+      scales: {
+        x: { grid: { display: false }, ticks: { font: { size: 10 } } },
+        y: { ticks: { font: { size: 9 }, callback: v => M(v) }, grid: { color: '#f1f5f9' } },
+      },
+    },
+  });
 }
 
 // ── Init ─────────────────────────────────────────────────────────────────────
