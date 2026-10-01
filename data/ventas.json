@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-01T00:23:27.195586Z",
+  "updated_at": "2026-10-01T16:51:12.221943Z",
   "users": {
     "7": "Cindy Monsalves",
     "9": "Daisy Ponce",
@@ -9329,7 +9329,7 @@
           "neto": 215233,
           "qty": 7.0
         },
-        "Jeringa monodosis x 3mL (sin aguja)": {
+        "RRS Long Lasting": {
           "neto": 21561960,
           "qty": 223.0
         },
@@ -9368,7 +9368,7 @@
             "neto": 61495,
             "qty": 2.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 2268945,
             "qty": 21.0
           },
@@ -9382,7 +9382,7 @@
           }
         },
         "Cindy Monsalves": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 6865488,
             "qty": 72.0
           },
@@ -9396,7 +9396,7 @@
           }
         },
         "Monica Urrutia": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 11430426,
             "qty": 121.0
           },
@@ -9422,7 +9422,7 @@
           }
         },
         "Sin asignar": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 997101,
             "qty": 9.0
           },
@@ -10353,7 +10353,7 @@
         }
       },
       "by_sku": {
-        "Jeringa monodosis x 3mL (sin aguja)": {
+        "RRS Long Lasting": {
           "neto": 21139188,
           "qty": 219.0
         },
@@ -10384,7 +10384,7 @@
       },
       "by_vendor_sku": {
         "Cindy Monsalves": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 5331249,
             "qty": 54.0
           },
@@ -10402,13 +10402,13 @@
           }
         },
         "Sin asignar": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 1731807,
             "qty": 18.0
           }
         },
         "Monica Urrutia": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 9445485,
             "qty": 99.0
           },
@@ -10434,13 +10434,13 @@
           }
         },
         "Daisy Ponce": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 2719647,
             "qty": 28.0
           }
         },
         "Francisca Salinas": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 1911000,
             "qty": 20.0
           },
@@ -11380,7 +11380,7 @@
           "neto": 717442,
           "qty": 7.0
         },
-        "Jeringa monodosis x 3mL (sin aguja)": {
+        "RRS Long Lasting": {
           "neto": 29733674,
           "qty": 291.0
         },
@@ -11435,7 +11435,7 @@
             "neto": 617320,
             "qty": 5.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 2945525,
             "qty": 27.0
           },
@@ -11445,7 +11445,7 @@
           }
         },
         "Monica Urrutia": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 19237258,
             "qty": 191.0
           },
@@ -11483,7 +11483,7 @@
           }
         },
         "Daisy Ponce": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 2513660,
             "qty": 23.0
           },
@@ -11503,7 +11503,7 @@
           }
         },
         "Francisca Salinas": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 5037231,
             "qty": 50.0
           },
@@ -12462,7 +12462,7 @@
         }
       },
       "by_sku": {
-        "Jeringa monodosis x 3mL (sin aguja)": {
+        "RRS Long Lasting": {
           "neto": 22730874,
           "qty": 225.0
         },
@@ -12517,7 +12517,7 @@
       },
       "by_vendor_sku": {
         "Monica Urrutia": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 12201653,
             "qty": 121.0
           },
@@ -12571,7 +12571,7 @@
           }
         },
         "Cindy Monsalves": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 3977519,
             "qty": 41.0
           },
@@ -12605,7 +12605,7 @@
           }
         },
         "Daisy Ponce": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 2219684,
             "qty": 20.0
           },
@@ -12637,7 +12637,7 @@
           }
         },
         "Francisca Salinas": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 4332018,
             "qty": 43.0
           },
@@ -13664,7 +13664,7 @@
           "neto": 24112830,
           "qty": 194.0
         },
-        "Jeringa monodosis x 3mL (sin aguja)": {
+        "RRS Long Lasting": {
           "neto": 31181634,
           "qty": 302.0
         },
@@ -13711,7 +13711,7 @@
             "neto": 8110920,
             "qty": 63.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 6881385,
             "qty": 70.0
           },
@@ -13745,7 +13745,7 @@
           }
         },
         "Monica Urrutia": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 13135769,
             "qty": 128.0
           },
@@ -13787,7 +13787,7 @@
           }
         },
         "Daisy Ponce": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 3831597,
             "qty": 35.0
           },
@@ -13801,7 +13801,7 @@
           }
         },
         "Sin asignar": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 2497144,
             "qty": 21.0
           },
@@ -13843,7 +13843,7 @@
             "neto": 2470230,
             "qty": 21.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 4835739,
             "qty": 48.0
           },
@@ -14872,7 +14872,7 @@
         }
       },
       "by_sku": {
-        "Jeringa monodosis x 3mL (sin aguja)": {
+        "RRS Long Lasting": {
           "neto": 28401713,
           "qty": 279.0
         },
@@ -14915,7 +14915,7 @@
       },
       "by_vendor_sku": {
         "Monica Urrutia": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 18444514,
             "qty": 185.0
           },
@@ -14965,7 +14965,7 @@
             "neto": 4024620,
             "qty": 30.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 2384839,
             "qty": 21.0
           },
@@ -14999,7 +14999,7 @@
             "neto": 2093800,
             "qty": 12.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 1829918,
             "qty": 16.0
           },
@@ -15047,7 +15047,7 @@
             "neto": 2823120,
             "qty": 24.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 5742442,
             "qty": 57.0
           }
@@ -16108,7 +16108,7 @@
           "neto": 17311350,
           "qty": 132.0
         },
-        "Jeringa monodosis x 3mL (sin aguja)": {
+        "RRS Long Lasting": {
           "neto": 20795042,
           "qty": 202.0
         },
@@ -16143,7 +16143,7 @@
             "neto": 15497100,
             "qty": 114.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 4948417,
             "qty": 46.0
           },
@@ -16197,7 +16197,7 @@
             "neto": 13250920,
             "qty": 107.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 9142982,
             "qty": 92.0
           },
@@ -16235,7 +16235,7 @@
             "neto": 342200,
             "qty": 2.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 2774605,
             "qty": 25.0
           },
@@ -16273,7 +16273,7 @@
             "neto": 215630,
             "qty": 2.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 3929038,
             "qty": 39.0
           }
@@ -17329,7 +17329,7 @@
         }
       },
       "by_sku": {
-        "Jeringa monodosis x 3mL (sin aguja)": {
+        "RRS Long Lasting": {
           "neto": 21275904,
           "qty": 212.0
         },
@@ -17372,7 +17372,7 @@
       },
       "by_vendor_sku": {
         "Daisy Ponce": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 2140409,
             "qty": 20.0
           },
@@ -17410,7 +17410,7 @@
             "neto": 4452800,
             "qty": 45.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 8885339,
             "qty": 91.0
           },
@@ -17460,7 +17460,7 @@
             "neto": 3721630,
             "qty": 40.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 6520955,
             "qty": 65.0
           },
@@ -17478,7 +17478,7 @@
           }
         },
         "Sin asignar": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 1109842,
             "qty": 10.0
           },
@@ -17512,7 +17512,7 @@
             "neto": 907560,
             "qty": 12.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 2619359,
             "qty": 26.0
           }
@@ -18662,7 +18662,7 @@
           "neto": 10162500,
           "qty": 75.0
         },
-        "Jeringa monodosis x 3mL (sin aguja)": {
+        "RRS Long Lasting": {
           "neto": 21620444,
           "qty": 209.0
         },
@@ -18713,7 +18713,7 @@
             "neto": 3431640,
             "qty": 23.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 4280818,
             "qty": 39.0
           }
@@ -18755,7 +18755,7 @@
             "neto": 0,
             "qty": 0.1
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 9598809,
             "qty": 96.0
           }
@@ -18777,13 +18777,13 @@
             "neto": 0,
             "qty": 0.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 2061135,
             "qty": 20.0
           }
         },
         "Daisy Ponce": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 3564046,
             "qty": 33.0
           },
@@ -18841,7 +18841,7 @@
             "neto": 823410,
             "qty": 7.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 2115636,
             "qty": 21.0
           }
@@ -19956,7 +19956,7 @@
         }
       },
       "by_sku": {
-        "Jeringa monodosis x 3mL (sin aguja)": {
+        "RRS Long Lasting": {
           "neto": 30796455,
           "qty": 308.0
         },
@@ -20003,7 +20003,7 @@
       },
       "by_vendor_sku": {
         "Cindy Monsalves": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 9545958,
             "qty": 95.0
           },
@@ -20045,7 +20045,7 @@
           }
         },
         "Monica Urrutia": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 13291676,
             "qty": 135.0
           },
@@ -20103,7 +20103,7 @@
             "neto": 1757400,
             "qty": 10.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 3071883,
             "qty": 30.0
           },
@@ -20113,7 +20113,7 @@
           }
         },
         "Sin asignar": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 554921,
             "qty": 5.0
           }
@@ -20147,7 +20147,7 @@
             "neto": 2117340,
             "qty": 18.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 4332017,
             "qty": 43.0
           }
@@ -21227,7 +21227,7 @@
         }
       },
       "by_sku": {
-        "Jeringa monodosis x 3mL (sin aguja)": {
+        "RRS Long Lasting": {
           "neto": 26755116,
           "qty": 261.0
         },
@@ -21274,7 +21274,7 @@
       },
       "by_vendor_sku": {
         "Monica Urrutia": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 14091026,
             "qty": 143.0
           },
@@ -21348,7 +21348,7 @@
             "neto": 3822830,
             "qty": 37.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 4723434,
             "qty": 44.0
           }
@@ -21366,7 +21366,7 @@
             "neto": 1058200,
             "qty": 8.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 3606986,
             "qty": 32.0
           },
@@ -21392,7 +21392,7 @@
           }
         },
         "Sin asignar": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 1109842,
             "qty": 10.0
           },
@@ -21438,7 +21438,7 @@
             "neto": 1456000,
             "qty": 13.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 3223828,
             "qty": 32.0
           }
@@ -22490,7 +22490,7 @@
           "neto": 4760470,
           "qty": 39.0
         },
-        "Jeringa monodosis x 3mL (sin aguja)": {
+        "RRS Long Lasting": {
           "neto": 28753864,
           "qty": 277.0
         },
@@ -22545,7 +22545,7 @@
             "neto": 1730860,
             "qty": 12.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 14976256,
             "qty": 148.0
           },
@@ -22575,7 +22575,7 @@
           }
         },
         "Cindy Monsalves": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 7131767,
             "qty": 65.0
           },
@@ -22609,7 +22609,7 @@
           }
         },
         "Daisy Ponce": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 3019034,
             "qty": 28.0
           },
@@ -22681,7 +22681,7 @@
             "neto": 1999710,
             "qty": 17.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 3626807,
             "qty": 36.0
           }
@@ -23731,7 +23731,7 @@
         }
       },
       "by_sku": {
-        "Jeringa monodosis x 3mL (sin aguja)": {
+        "RRS Long Lasting": {
           "neto": 21897907,
           "qty": 213.0
         },
@@ -23778,7 +23778,7 @@
       },
       "by_vendor_sku": {
         "Cindy Monsalves": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 5654908,
             "qty": 55.0
           },
@@ -23816,7 +23816,7 @@
           }
         },
         "Monica Urrutia": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 11204118,
             "qty": 111.0
           },
@@ -23862,13 +23862,13 @@
           }
         },
         "Sin asignar": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 554921,
             "qty": 5.0
           }
         },
         "Daisy Ponce": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 3778747,
             "qty": 35.0
           },
@@ -23934,7 +23934,7 @@
             "neto": 470520,
             "qty": 4.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 705213,
             "qty": 7.0
           }
@@ -24972,7 +24972,7 @@
           "neto": 7611400,
           "qty": 64.0
         },
-        "Jeringa monodosis x 3mL (sin aguja)": {
+        "RRS Long Lasting": {
           "neto": 19585738,
           "qty": 193.0
         },
@@ -25019,7 +25019,7 @@
             "neto": 3159970,
             "qty": 28.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 10708652,
             "qty": 108.0
           },
@@ -25057,7 +25057,7 @@
             "neto": 3339600,
             "qty": 34.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 2384839,
             "qty": 21.0
           },
@@ -25115,7 +25115,7 @@
             "neto": 460200,
             "qty": 3.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 2563206,
             "qty": 25.0
           }
@@ -25153,7 +25153,7 @@
             "neto": 823410,
             "qty": 7.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 3929041,
             "qty": 39.0
           }
@@ -26216,7 +26216,7 @@
         }
       },
       "by_sku": {
-        "Jeringa monodosis x 3mL (sin aguja)": {
+        "RRS Long Lasting": {
           "neto": 23248205,
           "qty": 219.0
         },
@@ -26271,7 +26271,7 @@
       },
       "by_vendor_sku": {
         "Daisy Ponce": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 2286272,
             "qty": 20.0
           },
@@ -26325,7 +26325,7 @@
             "neto": 9968112,
             "qty": 64.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 14820069,
             "qty": 143.0
           },
@@ -26359,7 +26359,7 @@
           }
         },
         "Cindy Monsalves": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 3535107,
             "qty": 31.0
           },
@@ -26423,7 +26423,7 @@
           }
         },
         "Francisca Salinas": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 2606757,
             "qty": 25.0
           },
@@ -27614,7 +27614,7 @@
           "neto": 4781323,
           "qty": 42.0
         },
-        "Jeringa monodosis x 3mL (sin aguja)": {
+        "RRS Long Lasting": {
           "neto": 27254668,
           "qty": 264.0
         },
@@ -27657,7 +27657,7 @@
             "neto": 3902704,
             "qty": 26.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 18838746,
             "qty": 186.0
           },
@@ -27703,7 +27703,7 @@
             "neto": 647276,
             "qty": 5.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 2720694,
             "qty": 25.0
           },
@@ -27725,7 +27725,7 @@
           }
         },
         "Sin asignar": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 1154234,
             "qty": 10.0
           },
@@ -27767,7 +27767,7 @@
             "neto": 158600,
             "qty": 1.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 1621424,
             "qty": 15.0
           },
@@ -27785,7 +27785,7 @@
           }
         },
         "Francisca Salinas": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 2919570,
             "qty": 28.0
           },
@@ -28857,7 +28857,7 @@
         }
       },
       "by_sku": {
-        "Jeringa monodosis x 3mL (sin aguja)": {
+        "RRS Long Lasting": {
           "neto": 17209263,
           "qty": 169.0
         },
@@ -28908,7 +28908,7 @@
       },
       "by_vendor_sku": {
         "Daisy Ponce": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 4658160,
             "qty": 46.0
           },
@@ -28970,7 +28970,7 @@
             "neto": 1778400,
             "qty": 18.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 7131517,
             "qty": 73.0
           },
@@ -29024,7 +29024,7 @@
             "neto": 4780800,
             "qty": 58.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 2679473,
             "qty": 24.0
           },
@@ -29042,7 +29042,7 @@
           }
         },
         "Sin asignar": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 1071789,
             "qty": 10.0
           },
@@ -29092,7 +29092,7 @@
             "neto": 112000,
             "qty": 1.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 1668324,
             "qty": 16.0
           }
@@ -30217,7 +30217,7 @@
         }
       },
       "by_sku": {
-        "Jeringa monodosis x 3mL (sin aguja)": {
+        "RRS Long Lasting": {
           "neto": 32557016,
           "qty": 314.0
         },
@@ -30264,7 +30264,7 @@
       },
       "by_vendor_sku": {
         "Daisy Ponce": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 7880393,
             "qty": 73.0
           },
@@ -30318,7 +30318,7 @@
             "neto": 8984664,
             "qty": 58.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 16482183,
             "qty": 161.0
           },
@@ -30372,7 +30372,7 @@
             "neto": 931446,
             "qty": 8.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 4328378,
             "qty": 44.0
           },
@@ -30390,7 +30390,7 @@
           }
         },
         "Sin asignar": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 1676387,
             "qty": 15.0
           },
@@ -30440,7 +30440,7 @@
             "neto": 313109,
             "qty": 4.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 2189675,
             "qty": 21.0
           }
@@ -31609,7 +31609,7 @@
           "neto": 8151600,
           "qty": 104.0
         },
-        "Jeringa monodosis x 3mL (sin aguja)": {
+        "RRS Long Lasting": {
           "neto": 31314685,
           "qty": 300.0
         },
@@ -31648,7 +31648,7 @@
             "neto": 478400,
             "qty": 11.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 5709336,
             "qty": 54.0
           },
@@ -31690,7 +31690,7 @@
             "neto": 1351800,
             "qty": 19.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 8292621,
             "qty": 78.0
           },
@@ -31728,7 +31728,7 @@
             "neto": 4644640,
             "qty": 29.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 13864547,
             "qty": 136.0
           },
@@ -31746,13 +31746,13 @@
           }
         },
         "Sin asignar": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 1154234,
             "qty": 10.0
           }
         },
         "Francisca Salinas": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 2293947,
             "qty": 22.0
           },
@@ -32955,7 +32955,7 @@
           "neto": 8711131,
           "qty": 77.0
         },
-        "Jeringa monodosis x 3mL (sin aguja)": {
+        "RRS Long Lasting": {
           "neto": 21663731,
           "qty": 211.0
         },
@@ -32990,7 +32990,7 @@
             "neto": 4319954,
             "qty": 32.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 12078232,
             "qty": 121.0
           },
@@ -33032,7 +33032,7 @@
             "neto": 1594507,
             "qty": 13.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 3799354,
             "qty": 36.0
           },
@@ -33062,7 +33062,7 @@
             "neto": 3715712,
             "qty": 21.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 3909280,
             "qty": 36.0
           },
@@ -33094,7 +33094,7 @@
           }
         },
         "Francisca Salinas": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 1876865,
             "qty": 18.0
           },
@@ -34255,7 +34255,7 @@
         }
       },
       "by_sku": {
-        "Jeringa monodosis x 3mL (sin aguja)": {
+        "RRS Long Lasting": {
           "neto": 33341473,
           "qty": 329.0
         },
@@ -34306,7 +34306,7 @@
       },
       "by_vendor_sku": {
         "Daisy Ponce": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 9742285,
             "qty": 93.0
           },
@@ -34344,7 +34344,7 @@
           }
         },
         "Cindy Monsalves": {
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 8182698,
             "qty": 81.0
           },
@@ -34418,7 +34418,7 @@
             "neto": 2146500,
             "qty": 15.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 13122542,
             "qty": 133.0
           },
@@ -34470,7 +34470,7 @@
             "neto": 486988,
             "qty": 4.0
           },
-          "Jeringa monodosis x 3mL (sin aguja)": {
+          "RRS Long Lasting": {
             "neto": 2293948,
             "qty": 22.0
           }
@@ -41134,11 +41134,6 @@
         "Teoxane": 0,
         "RRS HA Long Lasting": 324135
       },
-      "2024-12": {
-        "neto": 1407672,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 1407672
-      },
       "2025-02": {
         "neto": 648270,
         "Teoxane": 0,
@@ -41486,11 +41481,6 @@
         "Teoxane": 0,
         "RRS HA Long Lasting": 1004142
       },
-      "2024-12": {
-        "neto": 987840,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 987840
-      },
       "2025-06": {
         "neto": 1056992,
         "Teoxane": 0,
@@ -41619,11 +41609,6 @@
       }
     },
     "785": {
-      "2024-12": {
-        "neto": 98784,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 98784
-      },
       "2025-08": {
         "neto": 0,
         "Teoxane": 0,
@@ -41641,11 +41626,6 @@
       }
     },
     "429": {
-      "2024-12": {
-        "neto": 2060214,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 1407672
-      },
       "2026-04": {
         "neto": 0,
         "Teoxane": 0,
@@ -41740,11 +41720,6 @@
         "neto": 972806,
         "Teoxane": 114000,
         "RRS HA Long Lasting": 858806
-      },
-      "2024-12": {
-        "neto": 98784,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 98784
       },
       "2026-09": {
         "neto": 624218,
@@ -42042,11 +42017,6 @@
         "neto": 2115840,
         "Teoxane": 2115840,
         "RRS HA Long Lasting": 0
-      },
-      "2024-12": {
-        "neto": 926100,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 926100
       },
       "2025-03": {
         "neto": 1528133,
@@ -42700,11 +42670,6 @@
         "Teoxane": 2245845,
         "RRS HA Long Lasting": 1538979
       },
-      "2024-12": {
-        "neto": 3582519,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 1407672
-      },
       "2025-01": {
         "neto": 1407672,
         "Teoxane": 0,
@@ -43327,11 +43292,6 @@
         "Teoxane": 307800,
         "RRS HA Long Lasting": 989343
       },
-      "2024-12": {
-        "neto": 987840,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 987840
-      },
       "2025-07": {
         "neto": 554921,
         "Teoxane": 0,
@@ -43358,11 +43318,6 @@
         "neto": 2361716,
         "Teoxane": 2361716,
         "RRS HA Long Lasting": 0
-      },
-      "2024-12": {
-        "neto": 1407672,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 1407672
       },
       "2025-02": {
         "neto": 1407672,
@@ -43712,19 +43667,7 @@
         "RRS HA Long Lasting": 0
       }
     },
-    "566": {
-      "2024-12": {
-        "neto": 153737,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 0
-      }
-    },
     "443": {
-      "2024-12": {
-        "neto": 159030,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 0
-      },
       "2025-01": {
         "neto": 98304,
         "Teoxane": 0,
@@ -43732,11 +43675,6 @@
       }
     },
     "479": {
-      "2024-12": {
-        "neto": 588345,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 0
-      },
       "2025-11": {
         "neto": 975240,
         "Teoxane": 975240,
@@ -43744,11 +43682,6 @@
       }
     },
     "458": {
-      "2024-12": {
-        "neto": 196608,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 0
-      },
       "2025-06": {
         "neto": 642600,
         "Teoxane": 642600,
@@ -43786,11 +43719,6 @@
       }
     },
     "824": {
-      "2024-12": {
-        "neto": 672966,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 672966
-      },
       "2025-01": {
         "neto": 478485,
         "Teoxane": 0,
@@ -43853,11 +43781,6 @@
       }
     },
     "830": {
-      "2024-12": {
-        "neto": 518616,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 518616
-      },
       "2025-01": {
         "neto": 324135,
         "Teoxane": 0,
@@ -43915,11 +43838,6 @@
       }
     },
     "562": {
-      "2024-12": {
-        "neto": 299791,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 0
-      },
       "2025-10": {
         "neto": 1247160,
         "Teoxane": 1247160,
@@ -43947,11 +43865,6 @@
       }
     },
     "793": {
-      "2024-12": {
-        "neto": 324135,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 324135
-      },
       "2025-01": {
         "neto": 431179,
         "Teoxane": 0,
@@ -43984,11 +43897,6 @@
       }
     },
     "774": {
-      "2024-12": {
-        "neto": 324135,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 324135
-      },
       "2025-01": {
         "neto": 518616,
         "Teoxane": 0,
@@ -44041,11 +43949,6 @@
       }
     },
     "480": {
-      "2024-12": {
-        "neto": 172872,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 172872
-      },
       "2025-02": {
         "neto": 864360,
         "Teoxane": 0,
@@ -44072,19 +43975,7 @@
         "RRS HA Long Lasting": 647780
       }
     },
-    "763": {
-      "2024-12": {
-        "neto": 681215,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 0
-      }
-    },
     "745": {
-      "2024-12": {
-        "neto": 839664,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 839664
-      },
       "2025-01": {
         "neto": 2938824,
         "Teoxane": 0,
@@ -44117,11 +44008,6 @@
       }
     },
     "846": {
-      "2024-12": {
-        "neto": 518616,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 518616
-      },
       "2025-04": {
         "neto": 554921,
         "Teoxane": 0,
@@ -44148,40 +44034,7 @@
         "RRS HA Long Lasting": 554921
       }
     },
-    "748": {
-      "2024-12": {
-        "neto": 296352,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 296352
-      }
-    },
-    "848": {
-      "2024-12": {
-        "neto": 98784,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 98784
-      }
-    },
-    "807": {
-      "2024-12": {
-        "neto": 98784,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 98784
-      }
-    },
-    "849": {
-      "2024-12": {
-        "neto": 93844,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 93844
-      }
-    },
     "600": {
-      "2024-12": {
-        "neto": 1407672,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 1407672
-      },
       "2025-07": {
         "neto": 645750,
         "Teoxane": 645750,
@@ -44243,73 +44096,14 @@
         "RRS HA Long Lasting": 0
       }
     },
-    "851": {
-      "2024-12": {
-        "neto": 154350,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 154350
-      }
-    },
-    "505": {
-      "2024-12": {
-        "neto": 288177,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 0
-      }
-    },
-    "850": {
-      "2024-12": {
-        "neto": 187688,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 187688
-      }
-    },
-    "853": {
-      "2024-12": {
-        "neto": 231525,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 231525
-      }
-    },
-    "852": {
-      "2024-12": {
-        "neto": 324135,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 324135
-      }
-    },
-    "854": {
-      "2024-12": {
-        "neto": 30748,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 0
-      }
-    },
     "502": {
-      "2024-12": {
-        "neto": 1064748,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 518616
-      },
       "2025-01": {
         "neto": 518616,
         "Teoxane": 0,
         "RRS HA Long Lasting": 518616
       }
     },
-    "855": {
-      "2024-12": {
-        "neto": 518616,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 518616
-      }
-    },
     "773": {
-      "2024-12": {
-        "neto": 1876896,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 1876896
-      },
       "2025-02": {
         "neto": 1876896,
         "Teoxane": 0,
@@ -44341,26 +44135,7 @@
         "RRS HA Long Lasting": 1566460
       }
     },
-    "842": {
-      "2024-12": {
-        "neto": 745275,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 0
-      }
-    },
-    "856": {
-      "2024-12": {
-        "neto": 641414,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 0
-      }
-    },
     "857": {
-      "2024-12": {
-        "neto": 174762,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 0
-      },
       "2025-05": {
         "neto": 174762,
         "Teoxane": 0,
@@ -44406,13 +44181,6 @@
         "neto": 324135,
         "Teoxane": 0,
         "RRS HA Long Lasting": 324135
-      }
-    },
-    "478": {
-      "2024-12": {
-        "neto": 4239722,
-        "Teoxane": 0,
-        "RRS HA Long Lasting": 4108650
       }
     },
     "493": {
