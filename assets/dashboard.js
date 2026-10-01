@@ -1475,7 +1475,7 @@ function renderClientHistory(cid) {
       },
       scales: {
         x: { grid: { display: false }, ticks: { font: { size: 11 } } },
-        y: { ticks: { font: { size: 9 }, callback: v => M(v) }, grid: { color: '#f1f5f9' } },
+        y: { min: 0, ticks: { font: { size: 9 }, callback: v => M(v) }, grid: { color: '#f1f5f9' } },
       },
     },
   });
@@ -1567,7 +1567,7 @@ function renderClientHistory(cid) {
         },
         scales: {
           x: { grid: { display: false }, ticks: { font: { size: 9 } } },
-          y: { ticks: { font: { size: 8 }, callback: v => M(v) }, grid: { color: '#f1f5f9' } },
+          y: { min: 0, ticks: { font: { size: 8 }, callback: v => M(v) }, grid: { color: '#f1f5f9' } },
         },
       },
     });
