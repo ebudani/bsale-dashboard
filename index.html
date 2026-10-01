@@ -24,11 +24,11 @@
   <h1>AestheticsPro <span>· Ventas</span></h1>
   <div class="header-right">
     <span id="updated-at">Cargando…</span>
+    <button type="button" class="filter-select" onclick="scrollToClientHistory()">Histórico por Cliente</button>
     <div class="filter-group" id="vendor-filter-group">
       <span class="filter-label">Vendedor</span>
       <select id="vendor-select" class="filter-select" onchange="selectVendor(this.value)"></select>
     </div>
-    <button type="button" class="filter-select" onclick="scrollToClientHistory()">Histórico por Cliente</button>
     <div class="filter-group">
       <span class="filter-label">Periodo</span>
       <select id="period-select" class="filter-select" onchange="onPeriodChange(this.value)">
