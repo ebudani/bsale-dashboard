@@ -140,6 +140,18 @@ async function loadData() {
   buildSkuColorMap();
   buildVendorSelector();
   if (!applyVendorLock()) return; // window.LOCKED_VENDOR set but not a real vendor -- bail, error already shown
+
+  // client-history.html: pagina chica aparte, solo el buscador de historico
+  // por cliente (sin KPIs/Cumplimiento/Cartera en riesgo, que no existen en
+  // su HTML) -- no llamar renderDispatch(), rompe porque busca elementos
+  // que esa pagina no tiene.
+  if (window.CLIENT_HISTORY_ONLY) {
+    if (typeof initClientHistory === 'function') initClientHistory();
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('content').classList.add('loaded');
+    return;
+  }
+
   buildCustomRangeSelectors();
   if (typeof initRiskContacts === 'function') await initRiskContacts();
   if (typeof initClientHistory === 'function') initClientHistory();
@@ -1413,17 +1425,6 @@ function selectClientHistory(cid) {
   const meta = clientsMeta[cid] || {};
   document.getElementById('client-history-search').value = meta.name || cid;
   renderClientHistory(cid);
-}
-
-// Boton "Histórico por Cliente" del header (vendor.html) -- la card queda al
-// final de una pagina larga (Cartera en riesgo puede tener cientos de
-// cuentas), asi que esto evita tener que scrollear todo a mano.
-function scrollToClientHistory() {
-  const card = document.getElementById('client-history-card');
-  if (!card) return;
-  card.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  const search = document.getElementById('client-history-search');
-  if (search) setTimeout(() => search.focus(), 400);
 }
 
 function renderClientHistory(cid) {

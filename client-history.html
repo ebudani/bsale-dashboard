@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AestheticsPro · Histórico por Cliente</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+<link rel="stylesheet" href="assets/dashboard.css">
+</head>
+<body>
+
+<div id="pin-gate">
+  <div class="pin-box">
+    <h1>AestheticsPro <span>· Ventas</span></h1>
+    <p>Ingresá el PIN para continuar</p>
+    <input type="password" id="pin-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" autocomplete="off" placeholder="••••">
+    <button id="pin-submit">Entrar</button>
+    <div id="pin-error">PIN incorrecto</div>
+  </div>
+</div>
+
+<header>
+  <div class="header-left">
+    <h1>AestheticsPro <span>· Ventas</span></h1>
+    <button type="button" class="history-shortcut-btn" onclick="location.href = 'vendor.html' + location.search">← Volver</button>
+  </div>
+  <div class="header-right">
+    <span id="updated-at">Cargando…</span>
+    <!-- Oculto: solo esta aca para que buildVendorSelector()/applyVendorLock() de dashboard.js, que lo leen, no rompan en esta pagina. -->
+    <div class="filter-group" id="vendor-filter-group" style="display:none">
+      <span class="filter-label">Vendedor</span>
+      <select id="vendor-select" class="filter-select" onchange="selectVendor(this.value)"></select>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div id="loading">Cargando datos…</div>
+  <div id="content">
+
+    <div class="card" id="client-history-card">
+      <h2>Histórico por Cliente</h2>
+      <div class="client-history-search-wrap">
+        <input type="search" id="client-history-search" placeholder="Buscar cuenta o RUT…" autocomplete="off" autofocus>
+        <div id="client-history-suggestions" class="client-history-suggestions"></div>
+      </div>
+      <div id="client-history-empty" class="unavailable">Buscá una cuenta arriba para ver su histórico de compras.</div>
+      <div id="client-history-content" style="display:none">
+        <div id="client-history-header"></div>
+        <div class="client-history-tables">
+          <div>
+            <h3>Por año</h3>
+            <table id="table-client-history-years">
+              <thead><tr><th>Año</th><th>Teoxane</th><th>RRS LL</th><th>Total</th></tr></thead>
+              <tbody id="tbody-client-history-years"></tbody>
+            </table>
+            <div class="chart-wrap client-history-chart-wrap"><canvas id="chart-client-history-years"></canvas></div>
+          </div>
+          <div>
+            <h3 id="client-history-months-title">Mes a mes</h3>
+            <table id="table-client-history-months" class="grouped-head">
+              <thead>
+                <tr>
+                  <th rowspan="2">Mes</th>
+                  <th colspan="2" class="group-start">Año actual</th>
+                  <th colspan="2" class="group-start">Año anterior</th>
+                  <th colspan="2" class="group-start">Var.</th>
+                </tr>
+                <tr>
+                  <th class="group-start">Teoxane</th>
+                  <th>LL</th>
+                  <th class="group-start">Teoxane</th>
+                  <th>LL</th>
+                  <th class="group-start">Teoxane</th>
+                  <th>LL</th>
+                </tr>
+              </thead>
+              <tbody id="tbody-client-history-months"></tbody>
+            </table>
+            <div class="client-history-month-charts">
+              <div>
+                <div class="client-history-chart-label">Teoxane</div>
+                <div class="chart-wrap client-history-chart-wrap"><canvas id="chart-client-history-months-teox"></canvas></div>
+              </div>
+              <div>
+                <div class="client-history-chart-label">RRS LL</div>
+                <div class="chart-wrap client-history-chart-wrap"><canvas id="chart-client-history-months-rrs"></canvas></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- #content -->
+</main>
+
+<script>
+  window.SIMPLE_MODE = true;
+  window.CLIENT_HISTORY_ONLY = true;
+</script>
+<script src="assets/vendor-links.js"></script>
+<script src="assets/pin-gate.js"></script>
+<script src="assets/dashboard.js"></script>
+</body>
+</html>

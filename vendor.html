@@ -23,7 +23,7 @@
 <header>
   <div class="header-left">
     <h1>AestheticsPro <span>· Ventas</span></h1>
-    <button type="button" class="history-shortcut-btn" onclick="scrollToClientHistory()">Histórico por Cliente</button>
+    <button type="button" class="history-shortcut-btn" onclick="location.href = 'client-history.html' + location.search">Histórico por Cliente</button>
   </div>
   <div class="header-right">
     <span id="updated-at">Cargando…</span>
@@ -169,93 +169,11 @@
       <div class="risk-count" id="risk-count"></div>
     </div>
 
-    <div class="card" id="client-history-card">
-      <h2>Histórico por Cliente</h2>
-      <div class="client-history-search-wrap">
-        <input type="search" id="client-history-search" placeholder="Buscar cuenta o RUT…" autocomplete="off">
-        <div id="client-history-suggestions" class="client-history-suggestions"></div>
-      </div>
-      <div id="client-history-empty" class="unavailable">Buscá una cuenta arriba para ver su histórico de compras.</div>
-      <div id="client-history-content" style="display:none">
-        <div id="client-history-header"></div>
-        <div class="client-history-tables">
-          <div>
-            <h3>Por año</h3>
-            <table id="table-client-history-years">
-              <thead><tr><th>Año</th><th>Teoxane</th><th>RRS LL</th><th>Total</th></tr></thead>
-              <tbody id="tbody-client-history-years"></tbody>
-            </table>
-            <div class="chart-wrap client-history-chart-wrap"><canvas id="chart-client-history-years"></canvas></div>
-          </div>
-          <div>
-            <h3 id="client-history-months-title">Mes a mes</h3>
-            <table id="table-client-history-months" class="grouped-head">
-              <thead>
-                <tr>
-                  <th rowspan="2">Mes</th>
-                  <th colspan="2" class="group-start">Año actual</th>
-                  <th colspan="2" class="group-start">Año anterior</th>
-                  <th colspan="2" class="group-start">Var.</th>
-                </tr>
-                <tr>
-                  <th class="group-start">Teoxane</th>
-                  <th>LL</th>
-                  <th class="group-start">Teoxane</th>
-                  <th>LL</th>
-                  <th class="group-start">Teoxane</th>
-                  <th>LL</th>
-                </tr>
-              </thead>
-              <tbody id="tbody-client-history-months"></tbody>
-            </table>
-            <div class="client-history-month-charts">
-              <div>
-                <div class="client-history-chart-label">Teoxane</div>
-                <div class="chart-wrap client-history-chart-wrap"><canvas id="chart-client-history-months-teox"></canvas></div>
-              </div>
-              <div>
-                <div class="client-history-chart-label">RRS LL</div>
-                <div class="chart-wrap client-history-chart-wrap"><canvas id="chart-client-history-months-rrs"></canvas></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </div><!-- #content -->
 </main>
 
-<script>
-  window.SIMPLE_MODE = true;
-  // Which vendor this link is pinned to -- ?v=monica etc. Add a new entry
-  // here (not a new HTML file) any time another vendor needs their own link.
-  const VENDOR_LINKS = {
-    monica: 'Monica Urrutia',
-    daisy: 'Daisy Ponce',
-    cindy: 'Cindy Monsalves',
-    francisca: 'Francisca Salinas',
-  };
-  const code = new URLSearchParams(location.search).get('v');
-  // Unknown/missing code still sets LOCKED_VENDOR (to a value no real vendor
-  // has) so dashboard.js's applyVendorLock() shows its "link inválido" error
-  // instead of silently falling through to the unlocked all-vendors view.
-  window.LOCKED_VENDOR = VENDOR_LINKS[code] || '__invalid__';
-
-  // Un PIN propio por vendedora (no el del tablero general) -- sha256 de un
-  // PIN de 4 digitos, mismo formato que el PIN_HASH de dashboard.js.
-  const PIN_HASHES = {
-    monica: '93d842ed8c8969c60d6807c4438a3765fe93e0de68a3301f5a6c997a045d26aa',
-    cindy: 'e4a6258e6ff7094ad1cec2fda9ee04a6c41763dd0326e5df6506b273799c6ab3',
-    daisy: '648da2ec87858ef68c2145ad40fd52c9ffcbe2e0673ab7adc921e70b0f65c4ea',
-    francisca: '38bc3d1c4787dd15fb6b16dccd548786cb773da29ffeb075602c76d2ca87f9fd',
-  };
-  window.LOCKED_PIN_HASH = PIN_HASHES[code] || null;
-  // Distinto localStorage key por vendedora tambien -- si no, desbloquear
-  // con el PIN de una vendedora desbloquearia (por compartir el mismo
-  // origen) el link de cualquier otra.
-  window.LOCKED_CODE = code;
-</script>
+<script>window.SIMPLE_MODE = true;</script>
+<script src="assets/vendor-links.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
