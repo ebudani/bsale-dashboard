@@ -201,8 +201,9 @@ function selectVendor(v) {
 }
 
 // ── Periodo selector ─────────────────────────────────────────────────────────
-// vendor.html has no Período filter at all (SIMPLE_MODE is always "this
-// month"), so these elements don't exist there -- bail quietly.
+// vendor.html tiene su propio filtro de Periodo en el header (afecta solo el
+// KPI row via renderVendorSimple -> monthsForPeriod()); Cumplimiento queda
+// fijo a mes actual/anterior y Top Clientes tiene su propio filtro aparte.
 function buildCustomRangeSelectors() {
   const from = document.getElementById('custom-from');
   const to   = document.getElementById('custom-to');

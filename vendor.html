@@ -29,6 +29,23 @@
       <span class="filter-label">Vendedor</span>
       <select id="vendor-select" class="filter-select" onchange="selectVendor(this.value)"></select>
     </div>
+    <div class="filter-group">
+      <span class="filter-label">Periodo</span>
+      <select id="period-select" class="filter-select" onchange="onPeriodChange(this.value)">
+        <option value="this_month">Este mes</option>
+        <option value="prev_month">Mes anterior</option>
+        <option value="this_year">Año actual</option>
+        <option value="prev_year">Año anterior</option>
+        <option value="all_time">Todo</option>
+        <option value="custom">Personalizar</option>
+      </select>
+      <div id="custom-range">
+        <span class="filter-label">Desde</span>
+        <select id="custom-from" class="filter-select" onchange="onCustomRangeChange()"></select>
+        <span class="filter-label">Hasta</span>
+        <select id="custom-to" class="filter-select" onchange="onCustomRangeChange()"></select>
+      </div>
+    </div>
   </div>
 </header>
 
