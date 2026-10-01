@@ -21,10 +21,7 @@
 </div>
 
 <header>
-  <div class="header-left">
-    <h1>AestheticsPro <span>· Ventas</span></h1>
-    <button type="button" class="history-shortcut-btn" onclick="location.href = 'client-history.html' + location.search">Histórico por Cliente</button>
-  </div>
+  <h1>AestheticsPro <span>· Ventas</span></h1>
   <div class="header-right">
     <span id="updated-at">Cargando…</span>
     <!-- No hay selector de Vendedor: esta vista queda fija a quien indique ?v= -->
@@ -32,6 +29,7 @@
       <span class="filter-label">Vendedor</span>
       <select id="vendor-select" class="filter-select" onchange="selectVendor(this.value)"></select>
     </div>
+    <button type="button" class="filter-select" onclick="location.href = 'client-history.html' + location.search">Histórico por Cliente</button>
     <div class="filter-group">
       <span class="filter-label">Periodo</span>
       <select id="period-select" class="filter-select" onchange="onPeriodChange(this.value)">
