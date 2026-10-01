@@ -30,6 +30,18 @@
   }
   header h1 { font-size: 18px; font-weight: 700; letter-spacing: .3px; }
   header h1 span { color: #93c5fd; }
+  .header-left { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .history-shortcut-btn {
+    font-size: 11px;
+    font-weight: 600;
+    color: #93c5fd;
+    background: rgba(147, 197, 253, .12);
+    border: 1px solid rgba(147, 197, 253, .4);
+    border-radius: 20px;
+    padding: 5px 12px;
+    cursor: pointer;
+  }
+  .history-shortcut-btn:hover { background: rgba(147, 197, 253, .22); }
   .header-right { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
   #updated-at { font-size: 11px; color: #94a3b8; }
 

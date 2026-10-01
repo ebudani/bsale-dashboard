@@ -1415,6 +1415,17 @@ function selectClientHistory(cid) {
   renderClientHistory(cid);
 }
 
+// Boton "Histórico por Cliente" del header (vendor.html) -- la card queda al
+// final de una pagina larga (Cartera en riesgo puede tener cientos de
+// cuentas), asi que esto evita tener que scrollear todo a mano.
+function scrollToClientHistory() {
+  const card = document.getElementById('client-history-card');
+  if (!card) return;
+  card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const search = document.getElementById('client-history-search');
+  if (search) setTimeout(() => search.focus(), 400);
+}
+
 function renderClientHistory(cid) {
   const history = clientProductHistory[cid] || {};
   const monthKeys = Object.keys(history).sort();
