@@ -1377,6 +1377,8 @@ function renderClientHistorySuggestions(query) {
 
   const matches = [];
   for (const cid in clientsMeta) {
+    // Tablero de una vendedora puntual: no mostrar historico de cuentas de otras vendedoras.
+    if (window.LOCKED_VENDOR && clientVendorMap[cid] !== window.LOCKED_VENDOR) continue;
     const meta = clientsMeta[cid];
     const name = (meta.name || '').toLowerCase();
     const rut = (meta.rut || '').toLowerCase();

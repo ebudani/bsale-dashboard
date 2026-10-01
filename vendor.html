@@ -149,6 +149,60 @@
       <div class="risk-count" id="risk-count"></div>
     </div>
 
+    <div class="card" id="client-history-card">
+      <h2>Histórico por Cliente</h2>
+      <div class="client-history-search-wrap">
+        <input type="search" id="client-history-search" placeholder="Buscar cuenta o RUT…" autocomplete="off">
+        <div id="client-history-suggestions" class="client-history-suggestions"></div>
+      </div>
+      <div id="client-history-empty" class="unavailable">Buscá una cuenta arriba para ver su histórico de compras.</div>
+      <div id="client-history-content" style="display:none">
+        <div id="client-history-header"></div>
+        <div class="client-history-tables">
+          <div>
+            <h3>Por año</h3>
+            <table id="table-client-history-years">
+              <thead><tr><th>Año</th><th>Teoxane</th><th>RRS LL</th><th>Total</th></tr></thead>
+              <tbody id="tbody-client-history-years"></tbody>
+            </table>
+            <div class="chart-wrap client-history-chart-wrap"><canvas id="chart-client-history-years"></canvas></div>
+          </div>
+          <div>
+            <h3 id="client-history-months-title">Mes a mes</h3>
+            <table id="table-client-history-months" class="grouped-head">
+              <thead>
+                <tr>
+                  <th rowspan="2">Mes</th>
+                  <th colspan="2" class="group-start">Año actual</th>
+                  <th colspan="2" class="group-start">Año anterior</th>
+                  <th colspan="2" class="group-start">Var.</th>
+                </tr>
+                <tr>
+                  <th class="group-start">Teoxane</th>
+                  <th>LL</th>
+                  <th class="group-start">Teoxane</th>
+                  <th>LL</th>
+                  <th class="group-start">Teoxane</th>
+                  <th>LL</th>
+                </tr>
+              </thead>
+              <tbody id="tbody-client-history-months"></tbody>
+            </table>
+            <div class="client-history-month-charts">
+              <div>
+                <div class="client-history-chart-label">Teoxane</div>
+                <div class="chart-wrap client-history-chart-wrap"><canvas id="chart-client-history-months-teox"></canvas></div>
+              </div>
+              <div>
+                <div class="client-history-chart-label">RRS LL</div>
+                <div class="chart-wrap client-history-chart-wrap"><canvas id="chart-client-history-months-rrs"></canvas></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div><!-- #content -->
 </main>
 
