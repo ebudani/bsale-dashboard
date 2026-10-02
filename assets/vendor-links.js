@@ -21,7 +21,11 @@ const code = new URLSearchParams(location.search).get('v');
 // Unknown/missing code still sets LOCKED_VENDOR (to a value no real vendor
 // has) so dashboard.js's applyVendorLock() shows its "link inválido" error
 // instead of silently falling through to the unlocked all-vendors view.
-window.LOCKED_VENDOR = VENDOR_LINKS[code] || '__invalid__';
+// client-history.html tambien se abre desde el tablero general, sin ?v= ni vendedora
+// fija (window.ALLOW_GENERAL): ahi no se bloquea nada y rige el PIN general.
+if (!(window.ALLOW_GENERAL && !code)) {
+  window.LOCKED_VENDOR = VENDOR_LINKS[code] || '__invalid__';
+}
 window.LOCKED_PIN_HASH = PIN_HASHES[code] || null;
 // Distinto localStorage key por vendedora tambien -- si no, desbloquear con
 // el PIN de una vendedora desbloquearia (por compartir el mismo origen) el

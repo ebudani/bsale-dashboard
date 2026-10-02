@@ -23,7 +23,7 @@
 <header>
   <div class="header-left">
     <h1>AestheticsPro <span>· Ventas</span></h1>
-    <button type="button" class="history-shortcut-btn" onclick="location.href = 'vendor.html' + location.search">← Volver</button>
+    <button type="button" class="history-shortcut-btn" onclick="location.href = code ? 'vendor.html' + location.search : 'index.html'">← Volver</button>
   </div>
   <div class="header-right">
     <span id="updated-at">Cargando…</span>
@@ -99,6 +99,7 @@
 <script>
   window.SIMPLE_MODE = true;
   window.CLIENT_HISTORY_ONLY = true;
+  window.ALLOW_GENERAL = true;
 </script>
 <script src="assets/vendor-links.js"></script>
 <script src="assets/pin-gate.js"></script>

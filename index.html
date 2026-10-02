@@ -24,7 +24,7 @@
   <h1>AestheticsPro <span>· Ventas</span></h1>
   <div class="header-right">
     <span id="updated-at">Cargando…</span>
-    <button type="button" class="filter-select" onclick="scrollToClientHistory()">Histórico por Cliente</button>
+    <button type="button" class="filter-select" onclick="location.href = 'client-history.html'">Histórico por Cliente</button>
     <div class="filter-group" id="vendor-filter-group">
       <span class="filter-label">Vendedor</span>
       <select id="vendor-select" class="filter-select" onchange="selectVendor(this.value)"></select>
@@ -171,8 +171,8 @@
       </div>
     </div>
 
-    <!-- Top clients + Cartera en riesgo (esta solo con un vendedor puntual
-         seleccionado arriba) lado a lado en escritorio, apiladas en mobile.
+    <!-- Top clients + Cartera en riesgo (de todas las vendedoras, o solo la
+         del vendedor elegido arriba) lado a lado en escritorio, apiladas en mobile.
          Con un vendedor puntual seleccionado, #card-topclientes se muda
          dentro de #cumpl-slot (ver layoutTopClientsForVendorFilter en
          dashboard.js) y esta fila queda con Cartera en riesgo sola, a lo
@@ -220,60 +220,6 @@
           </table>
         </div>
         <div class="risk-count" id="risk-count"></div>
-      </div>
-    </div>
-
-    <div class="card" id="client-history-card">
-      <h2>Histórico por Cliente</h2>
-      <div class="client-history-search-wrap">
-        <input type="search" id="client-history-search" placeholder="Buscar cuenta o RUT…" autocomplete="off">
-        <div id="client-history-suggestions" class="client-history-suggestions"></div>
-      </div>
-      <div id="client-history-empty" class="unavailable">Buscá una cuenta arriba para ver su histórico de compras.</div>
-      <div id="client-history-content" style="display:none">
-        <div id="client-history-header"></div>
-        <div class="client-history-tables">
-          <div>
-            <h3>Por año</h3>
-            <table id="table-client-history-years">
-              <thead><tr><th>Año</th><th>Teoxane</th><th>RRS LL</th><th>Total</th></tr></thead>
-              <tbody id="tbody-client-history-years"></tbody>
-            </table>
-            <div class="chart-wrap client-history-chart-wrap"><canvas id="chart-client-history-years"></canvas></div>
-          </div>
-          <div>
-            <h3 id="client-history-months-title">Mes a mes</h3>
-            <table id="table-client-history-months" class="grouped-head">
-              <thead>
-                <tr>
-                  <th rowspan="2">Mes</th>
-                  <th colspan="2" class="group-start">Año actual</th>
-                  <th colspan="2" class="group-start">Año anterior</th>
-                  <th colspan="2" class="group-start">Var.</th>
-                </tr>
-                <tr>
-                  <th class="group-start col-teox">Teoxane</th>
-                  <th>LL</th>
-                  <th class="group-start col-teox">Teoxane</th>
-                  <th>LL</th>
-                  <th class="group-start col-teox">Teoxane</th>
-                  <th>LL</th>
-                </tr>
-              </thead>
-              <tbody id="tbody-client-history-months"></tbody>
-            </table>
-            <div class="client-history-month-charts">
-              <div>
-                <div class="client-history-chart-label">Teoxane</div>
-                <div class="chart-wrap client-history-chart-wrap"><canvas id="chart-client-history-months-teox"></canvas></div>
-              </div>
-              <div>
-                <div class="client-history-chart-label">RRS LL</div>
-                <div class="chart-wrap client-history-chart-wrap"><canvas id="chart-client-history-months-rrs"></canvas></div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
 

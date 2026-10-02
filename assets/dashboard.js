@@ -1330,12 +1330,9 @@ async function onRiskNextContactChange(cid, value) {
 
 function renderCarteraRiesgo() {
   const card = document.getElementById('cartera-riesgo-card');
-  if (selectedVendor === 'all') {
-    card.style.display = 'none';
-    return;
-  }
   card.style.display = 'block';
-  document.getElementById('table-risk-title').textContent = `Cartera en riesgo — ${selectedVendor}`;
+  document.getElementById('table-risk-title').textContent =
+    `Cartera en riesgo — ${selectedVendor === 'all' ? 'Todas las vendedoras' : selectedVendor}`;
   const rows = buildRiskRoster();
   renderRiskToolbar(rows);
   renderRiskTable(rows);
@@ -1353,8 +1350,8 @@ function renderCarteraRiesgo() {
 }
 
 // ── Histórico por Cliente ─────────────────────────────────────────────────────
-// Solo existe en index.html (tablero general) -- se sale temprano en las
-// demas paginas, donde estos elementos no estan en el DOM.
+// Vive en client-history.html -- se sale temprano en las demas paginas,
+// donde estos elementos no estan en el DOM.
 let clientHistorySelectedCid = null;
 let clientHistorySuggestionIndex = -1;
 
@@ -1425,18 +1422,6 @@ function selectClientHistory(cid) {
   const meta = clientsMeta[cid] || {};
   document.getElementById('client-history-search').value = meta.name || cid;
   renderClientHistory(cid);
-}
-
-// Boton "Histórico por Cliente" del header en index.html -- ahi la card
-// sigue dentro de la misma pagina (al final, bajo Cartera en riesgo), asi
-// que alcanza con scrollear en vez de navegar a otra hoja como en
-// vendor.html/client-history.html.
-function scrollToClientHistory() {
-  const card = document.getElementById('client-history-card');
-  if (!card) return;
-  card.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  const search = document.getElementById('client-history-search');
-  if (search) setTimeout(() => search.focus(), 400);
 }
 
 function renderClientHistory(cid) {
