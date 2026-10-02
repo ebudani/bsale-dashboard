@@ -116,6 +116,17 @@ function pillClass(ratio) {
   return 'low';
 }
 
+// "← Volver" de las paginas aparte: usa el historial del navegador (trae la
+// misma pagina que se estaba viendo, con su scroll y filtros) y solo abre el
+// link a mano si se llego directo, sin pasar antes por este sitio. Abrir
+// siempre el link podia traer una copia vieja de la pagina guardada en cache.
+function goBack(fallbackUrl) {
+  let sameSite = false;
+  try { sameSite = !!document.referrer && new URL(document.referrer).origin === location.origin; } catch (e) {}
+  if (sameSite && history.length > 1) history.back();
+  else location.href = fallbackUrl;
+}
+
 // ── Load ────────────────────────────────────────────────────────────────────
 async function loadData() {
   const [vRes, tRes] = await Promise.all([
