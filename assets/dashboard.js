@@ -152,6 +152,17 @@ async function loadData() {
     return;
   }
 
+  // cartera-riesgo.html: pagina aparte solo con la tabla de Cartera en
+  // riesgo (tablero general, con selector de vendedor).
+  if (window.CARTERA_ONLY) {
+    if (typeof initRiskContacts === 'function') await initRiskContacts();
+    renderDispatch = renderCarteraRiesgo;
+    renderDispatch();
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('content').classList.add('loaded');
+    return;
+  }
+
   buildCustomRangeSelectors();
   if (typeof initRiskContacts === 'function') await initRiskContacts();
   if (typeof initClientHistory === 'function') initClientHistory();
@@ -423,24 +434,6 @@ function vendorBrandForMonth(mm, vendorName, brand) {
 // moves in under Cumplimiento (same column) so Cartera en riesgo can take
 // the full row width instead of sharing it -- with "Todos" nothing changes.
 // DOM move rather than pure CSS since the two live in different grid rows.
-function layoutTopClientsForVendorFilter() {
-  const cumplSlot = document.getElementById('cumpl-slot');
-  const topRow = document.getElementById('topclientes-cartera-row');
-  const topCard = document.getElementById('card-topclientes');
-  if (!cumplSlot || !topRow || !topCard) return;
-
-  const isVendor = selectedVendor !== 'all';
-  const inCumplSlot = topCard.parentElement === cumplSlot;
-
-  if (isVendor && !inCumplSlot) {
-    cumplSlot.appendChild(topCard);
-    topRow.classList.add('single-col');
-  } else if (!isVendor && inCumplSlot) {
-    topRow.insertBefore(topCard, topRow.firstChild);
-    topRow.classList.remove('single-col');
-  }
-}
-
 // ── Render all ──────────────────────────────────────────────────────────────
 function render() {
   const months = monthsForPeriod();
@@ -453,7 +446,6 @@ function render() {
   const t      = months.length === 1 ? aggregateTargets(months) : null;
   const view   = applyVendorFilter(agg, selectedVendor);
 
-  layoutTopClientsForVendorFilter();
   renderKPIs(view, t, label);
   renderMonthlyChart();
   renderSkuChart(view, label);
@@ -464,7 +456,6 @@ function render() {
   renderProductivityTable('tbody-prod-teox', 'Teoxane');
   renderProductivityTable('tbody-prod-rrs', 'RRS HA Long Lasting');
   renderTopClients(view, label, months.length > 1);
-  renderCarteraRiesgo();
 }
 
 // ── KPI Cards ───────────────────────────────────────────────────────────────

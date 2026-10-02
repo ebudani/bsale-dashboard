@@ -146,11 +146,7 @@
     margin-bottom: 22px;
   }
   .tables-row-3 { grid-template-columns: 1.5fr 1fr 1fr; }
-  /* Dashboard principal: con un vendedor puntual seleccionado, Top Clientes
-     se muda dentro de #cumpl-slot (debajo de Cumplimiento) y esta fila
-     queda con Cartera en riesgo sola -- a lo ancho en vez de a mitad. */
   #cumpl-slot .card:not(:last-child) { margin-bottom: 16px; }
-  .tables-row.single-col { grid-template-columns: 1fr; }
   /* .card table sets min-width:max-content globally so wide tables (like
      Cartera en riesgo) scroll instead of squeezing -- but these three are
      meant to fit their grid column exactly, at any window width, so they
@@ -176,14 +172,9 @@
   .tables-row #table-clients th { overflow-wrap: break-word; }
   .tables-row #table-clients td[style*="max-width"] { max-width: 90px !important; }
   /* index.html only: sombrear $ Neto Total, misma logica que las columnas
-     grises de Cumplimiento y Cartera en riesgo. #table-clients vive en
-     #topclientes-cartera-row con "Todos" seleccionado, o dentro de
-     #cumpl-slot con un vendedor puntual (ver layoutTopClientsForVendorFilter
-     en dashboard.js) -- hay que cubrir los dos. */
+     grises de Cumplimiento. */
   #topclientes-cartera-row #table-clients th:nth-child(4),
-  #topclientes-cartera-row #table-clients td:nth-child(4),
-  #cumpl-slot #table-clients th:nth-child(4),
-  #cumpl-slot #table-clients td:nth-child(4) {
+  #topclientes-cartera-row #table-clients td:nth-child(4) {
     background: var(--gray-200);
   }
   .grouped-head thead th { text-align: center; }

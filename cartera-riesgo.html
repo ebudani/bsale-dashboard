@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AestheticsPro · Cartera en riesgo</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+<link rel="stylesheet" href="assets/dashboard.css">
+</head>
+<body>
+
+<div id="pin-gate">
+  <div class="pin-box">
+    <h1>AestheticsPro <span>· Ventas</span></h1>
+    <p>Ingresá el PIN para continuar</p>
+    <input type="password" id="pin-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" autocomplete="off" placeholder="••••">
+    <button id="pin-submit">Entrar</button>
+    <div id="pin-error">PIN incorrecto</div>
+  </div>
+</div>
+
+<header>
+  <div class="header-left">
+    <h1>AestheticsPro <span>· Ventas</span></h1>
+    <button type="button" class="history-shortcut-btn" onclick="location.href = 'index.html'">← Volver</button>
+  </div>
+  <div class="header-right">
+    <span id="updated-at">Cargando…</span>
+    <div class="filter-group" id="vendor-filter-group">
+      <span class="filter-label">Vendedor</span>
+      <select id="vendor-select" class="filter-select" onchange="selectVendor(this.value)"></select>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div id="loading">Cargando datos…</div>
+  <div id="content">
+
+    <div class="card" id="cartera-riesgo-card">
+      <h2 id="table-risk-title">Cartera en riesgo — </h2>
+      <div class="risk-legend">
+        <span><span class="pill ok">Activa</span> compró este mes</span>
+        <span><span class="pill mid">Atención</span> no compró este mes, sí el anterior</span>
+        <span><span class="pill low">En riesgo</span> no compró estos dos meses, pero compró antes</span>
+        <span><span class="pill neutral">Sin historial</span> nunca compró</span>
+      </div>
+      <div class="risk-toolbar" id="risk-toolbar"></div>
+      <div class="risk-table-scroll">
+        <table id="table-risk">
+          <thead>
+            <tr>
+              <th data-key="name">Cuenta <span class="arrow"></span></th>
+              <th data-key="vendor">Vendedor <span class="arrow"></span></th>
+              <th data-key="status">Estado <span class="arrow"></span></th>
+              <th data-key="current">Mes en curso <span class="arrow"></span></th>
+              <th data-key="prev">Mes anterior <span class="arrow"></span></th>
+              <th data-key="lastMonth">Última compra <span class="arrow"></span></th>
+              <th data-key="lastAmount">Monto por producto (esa compra) <span class="arrow"></span></th>
+              <th data-key="contacted">Contactado <span class="arrow"></span></th>
+              <th>Comentario</th>
+              <th data-key="nextContactDate">Volver a contactar <span class="arrow"></span></th>
+            </tr>
+          </thead>
+          <tbody id="tbody-risk"></tbody>
+        </table>
+      </div>
+      <div class="risk-count" id="risk-count"></div>
+    </div>
+
+  </div><!-- #content -->
+</main>
+
+<script>
+  window.CARTERA_ONLY = true;
+  window.ALLOW_GENERAL = true;
+</script>
+<script src="assets/vendor-links.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+<script src="assets/firebase-config.js"></script>
+<script src="assets/risk-contacts.js"></script>
+<script src="assets/pin-gate.js"></script>
+<script src="assets/dashboard.js"></script>
+</body>
+</html>
