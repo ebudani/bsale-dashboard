@@ -1539,11 +1539,11 @@ function renderClientHistory(cid) {
     const prevRrsVal = prevEntry['RRS HA Long Lasting'] || 0;
     return `<tr${isFuture ? ' class="client-history-future"' : ''}>
       <td>${label}</td>
-      <td class="group-start">${isFuture ? '—' : cell(curTeoxVal)}</td>
+      <td class="group-start col-teox">${isFuture ? '—' : cell(curTeoxVal)}</td>
       <td>${isFuture ? '—' : cell(curRrsVal)}</td>
-      <td class="group-start">${cell(prevTeoxVal)}</td>
+      <td class="group-start col-teox">${cell(prevTeoxVal)}</td>
       <td>${cell(prevRrsVal)}</td>
-      <td class="group-start">${varPct(curTeoxVal, prevTeoxVal)}</td>
+      <td class="group-start col-teox">${varPct(curTeoxVal, prevTeoxVal)}</td>
       <td>${varPct(curRrsVal, prevRrsVal)}</td>
     </tr>`;
   });
