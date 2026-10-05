@@ -152,6 +152,15 @@ async function loadData() {
   buildVendorSelector();
   if (!applyVendorLock()) return; // window.LOCKED_VENDOR set but not a real vendor -- bail, error already shown
 
+  // objetivos-historico.html: pagina aparte con el cuadro de objetivos vs
+  // real, mes a mes, por vendedor (solo tablero general).
+  if (window.OBJETIVOS_ONLY) {
+    renderObjetivosHistorico();
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('content').classList.add('loaded');
+    return;
+  }
+
   // client-history.html: pagina chica aparte, solo el buscador de historico
   // por cliente (sin KPIs/Cumplimiento/Cartera en riesgo, que no existen en
   // su HTML) -- no llamar renderDispatch(), rompe porque busca elementos
@@ -1349,6 +1358,67 @@ function renderCarteraRiesgo() {
       renderRiskTable(buildRiskRoster());
     };
   });
+}
+
+// ── Histórico de Objetivos ───────────────────────────────────────────────────
+// Un bloque por vendedor con los meses que tienen objetivos cargados en
+// targets.json (mas reciente primero), mas un bloque "Total empresa".
+// Real = Teoxane + RRS, igual que el Cumplimiento del tablero general.
+function renderObjetivosHistorico() {
+  const BR_T = 'Teoxane', BR_R = 'RRS HA Long Lasting';
+  const currentMm = allMonths[allMonths.length - 1];
+  const periods = Object.keys(targetsData).sort().reverse().map(key => {
+    const [y, m] = key.split('-').map(Number);
+    const mm = allMonths.find(x => x.year === y && x.month === m);
+    return mm ? { mm, t: targetsData[key], inProgress: mm === currentMm } : null;
+  }).filter(Boolean);
+
+  const tbody = document.getElementById('tbody-objetivos-historico');
+  if (!periods.length) {
+    tbody.innerHTML = '<tr><td colspan="10" style="color:#94a3b8;text-align:center">Todavía no hay objetivos cargados.</td></tr>';
+    return;
+  }
+
+  const vendors = [...new Set(periods.flatMap(p => Object.keys(p.t.by_vendor || {})))]
+    .sort((a, b) => a.localeCompare(b, 'es'));
+
+  const group = (obj, real, cls) => {
+    const pct = obj ? real / obj : null;
+    const tot = cls.includes('col-total') ? ' class="col-total"' : '';
+    return `<td class="${cls}">${obj ? M(obj) : '—'}</td>` +
+      `<td${tot}>${M(real)}</td>` +
+      `<td${tot}>${pct === null ? '—' : `<span class="pill ${pillClass(pct)}">${PCT0(pct)}</span>`}</td>`;
+  };
+  const row = (label, objT, realT, objR, realR) => `<tr>
+      <td>${label}</td>
+      ${group(objT, realT, 'group-start')}
+      ${group(objR, realR, 'group-start')}
+      ${group(objT + objR, realT + realR, 'group-start col-total')}
+    </tr>`;
+  const labelFor = p => monthLabel(p.mm.year, p.mm.month) + (p.inProgress ? ' <small>(en curso)</small>' : '');
+
+  const html = [];
+  vendors.forEach(name => {
+    html.push(`<tr class="obj-block-row"><td colspan="10">${escapeHtml(name)}</td></tr>`);
+    periods.forEach(p => {
+      const targets = (p.t.by_vendor || {})[name];
+      if (!targets) return;
+      html.push(row(
+        labelFor(p),
+        targets[BR_T] || 0, vendorBrandForMonth(p.mm, name, BR_T),
+        targets[BR_R] || 0, vendorBrandForMonth(p.mm, name, BR_R),
+      ));
+    });
+  });
+
+  html.push('<tr class="obj-block-row"><td colspan="10">Total empresa</td></tr>');
+  periods.forEach(p => {
+    const sumObj = brand => Object.values(p.t.by_vendor || {}).reduce((s, b) => s + ((b || {})[brand] || 0), 0);
+    const by = p.mm.by_brand || {};
+    html.push(row(labelFor(p), sumObj(BR_T), by[BR_T] || 0, sumObj(BR_R), by[BR_R] || 0));
+  });
+
+  tbody.innerHTML = html.join('');
 }
 
 // ── Histórico por Cliente ─────────────────────────────────────────────────────

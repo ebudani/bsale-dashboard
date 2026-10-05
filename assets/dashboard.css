@@ -185,6 +185,10 @@
   .grouped-head tbody td:first-child { text-align: left; }
   .cumpl-total-row td { background: var(--gray-200); font-weight: 700; }
   .grouped-head .col-total { background: var(--gray-200); }
+  #table-objetivos-historico { font-size: 12px; }
+  #table-objetivos-historico td:not(:first-child) { text-align: center; }
+  #table-objetivos-historico tr.obj-block-row td { background: var(--gray-100); font-weight: 700; text-align: left; border-top: 2px solid var(--gray-200); }
+  #table-objetivos-historico td small { color: var(--gray-600); font-weight: 400; }
   #table-client-history-months .col-teox { background: var(--gray-100); }
   #table-client-history-months thead th.col-teox { background: var(--gray-200); }
   table { width: 100%; border-collapse: collapse; font-size: 13px; }
