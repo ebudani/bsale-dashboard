@@ -23,7 +23,11 @@ const code = new URLSearchParams(location.search).get('v');
 // instead of silently falling through to the unlocked all-vendors view.
 // client-history.html tambien se abre desde el tablero general, sin ?v= ni vendedora
 // fija (window.ALLOW_GENERAL): ahi no se bloquea nada y rige el PIN general.
-if (!(window.ALLOW_GENERAL && !code)) {
+// window.GENERAL_ONLY (objetivos-historico.html): pagina solo del tablero general,
+// con cualquier ?v= se muestra "link invalido" en vez de abrirla con el PIN de una vendedora.
+if (window.GENERAL_ONLY && code) {
+  window.LOCKED_VENDOR = '__invalid__';
+} else if (!(window.ALLOW_GENERAL && !code)) {
   window.LOCKED_VENDOR = VENDOR_LINKS[code] || '__invalid__';
 }
 window.LOCKED_PIN_HASH = PIN_HASHES[code] || null;
