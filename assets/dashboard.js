@@ -1367,11 +1367,15 @@ function renderCarteraRiesgo() {
 function renderObjetivosHistorico() {
   const BR_T = 'Teoxane', BR_R = 'RRS HA Long Lasting';
   const currentMm = allMonths[allMonths.length - 1];
-  const periods = Object.keys(targetsData).sort().reverse().map(key => {
-    const [y, m] = key.split('-').map(Number);
-    const mm = allMonths.find(x => x.year === y && x.month === m);
-    return mm ? { mm, t: targetsData[key], inProgress: mm === currentMm } : null;
-  }).filter(Boolean);
+  // Desde el primer mes con objetivos hasta el mes en curso: el mes en curso
+  // (o cualquiera sin objetivos cargados todavia) aparece igual, con el
+  // objetivo en "—" hasta que se cargue en targets.json.
+  const monthKey = mm => `${mm.year}-${String(mm.month).padStart(2, '0')}`;
+  const firstTargetKey = Object.keys(targetsData).sort()[0];
+  const periods = !firstTargetKey ? [] : allMonths
+    .filter(mm => monthKey(mm) >= firstTargetKey)
+    .map(mm => ({ mm, t: targetsData[monthKey(mm)] || { by_vendor: {} }, inProgress: mm === currentMm }))
+    .reverse();
 
   const tbody = document.getElementById('tbody-objetivos-historico');
   if (!periods.length) {
@@ -1400,8 +1404,9 @@ function renderObjetivosHistorico() {
   vendors.forEach(name => {
     html.push(`<tr class="obj-block-row"><td colspan="10">${escapeHtml(name)}</td></tr>`);
     periods.forEach(p => {
-      const targets = (p.t.by_vendor || {})[name];
-      if (!targets) return;
+      const monthHasTargets = Object.keys(p.t.by_vendor || {}).length > 0;
+      const targets = (p.t.by_vendor || {})[name] || {};
+      if (monthHasTargets && !Object.keys(targets).length) return;
       html.push(row(
         labelFor(p),
         targets[BR_T] || 0, vendorBrandForMonth(p.mm, name, BR_T),
