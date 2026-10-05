@@ -1386,17 +1386,19 @@ function renderObjetivosHistorico() {
   const vendors = [...new Set(periods.flatMap(p => Object.keys(p.t.by_vendor || {})))]
     .sort((a, b) => a.localeCompare(b, 'es'));
 
-  const group = (obj, real) => {
+  // dark: grupo Total -- su Objetivo y su % van en un gris mas oscuro que Real.
+  const group = (obj, real, dark = false) => {
     const pct = obj ? real / obj : null;
-    return `<td class="group-start">${obj ? M(obj) : '—'}</td>` +
+    const d = dark ? ' col-total-dark' : '';
+    return `<td class="group-start${d}">${obj ? M(obj) : '—'}</td>` +
       `<td class="col-real">${M(real)}</td>` +
-      `<td>${pct === null ? '—' : `<span class="pill ${pillClass(pct)}">${PCT0(pct)}</span>`}</td>`;
+      `<td${dark ? ' class="col-total-dark"' : ''}>${pct === null ? '—' : `<span class="pill ${pillClass(pct)}">${PCT0(pct)}</span>`}</td>`;
   };
   const row = (label, objT, realT, objR, realR, rowClass = '') => `<tr${rowClass ? ` class="${rowClass}"` : ''}>
       <td>${label}</td>
       ${group(objT, realT)}
       ${group(objR, realR)}
-      ${group(objT + objR, realT + realR)}
+      ${group(objT + objR, realT + realR, true)}
     </tr>`;
   const labelFor = p => monthLabel(p.mm.year, p.mm.month) + (p.inProgress ? ' <small>(en curso)</small>' : '');
 

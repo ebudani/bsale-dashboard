@@ -189,9 +189,16 @@
   #table-objetivos-historico td:not(:first-child) { text-align: center; }
   #table-objetivos-historico tr.obj-block-row td { background: var(--gray-100); font-weight: 700; text-align: left; border-top: 2px solid var(--gray-200); }
   #table-objetivos-historico .col-real { background: var(--gray-200); }
+  /* Recuadro propio con scroll: la .card tiene overflow-x:auto, y eso hace que un
+     encabezado sticky dentro de ella no se fije al scrollear la pagina. */
+  .obj-table-scroll { overflow: auto; max-height: calc(100vh - 170px); min-height: 260px; }
+  #table-objetivos-historico thead { position: sticky; top: 0; z-index: 3; box-shadow: 0 1px 0 var(--gray-200); }
+  #table-objetivos-historico .col-total-dark { background: #c3cedc; }
   #table-objetivos-historico tr.obj-total-row td { background: var(--gray-200); }
+  #table-objetivos-historico tr.obj-total-row td.col-total-dark { background: #a9b7c9; }
   #table-objetivos-historico tr.obj-total-row td.col-real,
   #table-objetivos-historico tr.obj-block-row.obj-total-block td { background: #cbd5e1; }
+  @media (max-width: 600px) { .obj-table-scroll { max-height: calc(100vh - 90px); } }
   #table-objetivos-historico td small { color: var(--gray-600); font-weight: 400; }
   #table-client-history-months .col-teox { background: var(--gray-100); }
   #table-client-history-months thead th.col-teox { background: var(--gray-200); }
