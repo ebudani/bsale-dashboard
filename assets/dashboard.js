@@ -1382,18 +1382,17 @@ function renderObjetivosHistorico() {
   const vendors = [...new Set(periods.flatMap(p => Object.keys(p.t.by_vendor || {})))]
     .sort((a, b) => a.localeCompare(b, 'es'));
 
-  const group = (obj, real, cls) => {
+  const group = (obj, real) => {
     const pct = obj ? real / obj : null;
-    const tot = cls.includes('col-total') ? ' class="col-total"' : '';
-    return `<td class="${cls}">${obj ? M(obj) : '—'}</td>` +
-      `<td${tot}>${M(real)}</td>` +
-      `<td${tot}>${pct === null ? '—' : `<span class="pill ${pillClass(pct)}">${PCT0(pct)}</span>`}</td>`;
+    return `<td class="group-start">${obj ? M(obj) : '—'}</td>` +
+      `<td class="col-real">${M(real)}</td>` +
+      `<td>${pct === null ? '—' : `<span class="pill ${pillClass(pct)}">${PCT0(pct)}</span>`}</td>`;
   };
-  const row = (label, objT, realT, objR, realR) => `<tr>
+  const row = (label, objT, realT, objR, realR, rowClass = '') => `<tr${rowClass ? ` class="${rowClass}"` : ''}>
       <td>${label}</td>
-      ${group(objT, realT, 'group-start')}
-      ${group(objR, realR, 'group-start')}
-      ${group(objT + objR, realT + realR, 'group-start col-total')}
+      ${group(objT, realT)}
+      ${group(objR, realR)}
+      ${group(objT + objR, realT + realR)}
     </tr>`;
   const labelFor = p => monthLabel(p.mm.year, p.mm.month) + (p.inProgress ? ' <small>(en curso)</small>' : '');
 
@@ -1411,11 +1410,11 @@ function renderObjetivosHistorico() {
     });
   });
 
-  html.push('<tr class="obj-block-row"><td colspan="10">Total empresa</td></tr>');
+  html.push('<tr class="obj-block-row obj-total-block"><td colspan="10">Total empresa</td></tr>');
   periods.forEach(p => {
     const sumObj = brand => Object.values(p.t.by_vendor || {}).reduce((s, b) => s + ((b || {})[brand] || 0), 0);
     const by = p.mm.by_brand || {};
-    html.push(row(labelFor(p), sumObj(BR_T), by[BR_T] || 0, sumObj(BR_R), by[BR_R] || 0));
+    html.push(row(labelFor(p), sumObj(BR_T), by[BR_T] || 0, sumObj(BR_R), by[BR_R] || 0, 'obj-total-row'));
   });
 
   tbody.innerHTML = html.join('');

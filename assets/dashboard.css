@@ -188,6 +188,10 @@
   #table-objetivos-historico { font-size: 12px; }
   #table-objetivos-historico td:not(:first-child) { text-align: center; }
   #table-objetivos-historico tr.obj-block-row td { background: var(--gray-100); font-weight: 700; text-align: left; border-top: 2px solid var(--gray-200); }
+  #table-objetivos-historico .col-real { background: var(--gray-200); }
+  #table-objetivos-historico tr.obj-total-row td { background: var(--gray-200); }
+  #table-objetivos-historico tr.obj-total-row td.col-real,
+  #table-objetivos-historico tr.obj-block-row.obj-total-block td { background: #cbd5e1; }
   #table-objetivos-historico td small { color: var(--gray-600); font-weight: 400; }
   #table-client-history-months .col-teox { background: var(--gray-100); }
   #table-client-history-months thead th.col-teox { background: var(--gray-200); }
