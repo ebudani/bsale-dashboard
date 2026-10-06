@@ -6,7 +6,7 @@
 <title>AestheticsPro · Dashboard Ventas</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
-<link rel="stylesheet" href="assets/dashboard.css?v=20261005f">
+<link rel="stylesheet" href="assets/dashboard.css?v=20261006">
 </head>
 <body>
 
@@ -148,6 +148,30 @@
           </table>
         </div>
       </div>
+      <!-- Independiente del filtro de Periodo: siempre el mes en curso y los 2 anteriores
+           (sigue el selector de Vendedor: Total o una vendedora). -->
+      <div class="card" id="card-cumpl-detail">
+        <h2>Cumplimiento — Mes actual y últimos 2 meses</h2>
+        <table id="table-cumpl-detail" class="grouped-head">
+          <thead>
+            <tr>
+              <th rowspan="2">Período</th>
+              <th colspan="2" class="group-start" style="color:#2563eb">Teoxane</th>
+              <th colspan="2" class="group-start" style="color:#d97706">RRS LL</th>
+              <th colspan="2" class="group-start col-total">Total</th>
+            </tr>
+            <tr>
+              <th class="group-start">Real</th>
+              <th>vs Obj</th>
+              <th class="group-start">Real</th>
+              <th>vs Obj</th>
+              <th class="group-start col-total">Real</th>
+              <th class="col-total">vs Obj</th>
+            </tr>
+          </thead>
+          <tbody id="tbody-cumpl-detail"></tbody>
+        </table>
+      </div>
       </div><!-- #cumpl-slot -->
       <div class="card" id="card-teox">
         <h2>Teoxane — Clientes, unidades y productividad por mes</h2>
@@ -196,9 +220,9 @@
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
-<script src="assets/firebase-config.js?v=20261005f"></script>
-<script src="assets/risk-contacts.js?v=20261005f"></script>
-<script src="assets/pin-gate.js?v=20261005f"></script>
-<script src="assets/dashboard.js?v=20261005f"></script>
+<script src="assets/firebase-config.js?v=20261006"></script>
+<script src="assets/risk-contacts.js?v=20261006"></script>
+<script src="assets/pin-gate.js?v=20261006"></script>
+<script src="assets/dashboard.js?v=20261006"></script>
 </body>
 </html>

@@ -476,6 +476,7 @@ function render() {
   renderProductivityTable('tbody-prod-teox', 'Teoxane');
   renderProductivityTable('tbody-prod-rrs', 'RRS HA Long Lasting');
   renderTopClients(view, label, months.length > 1);
+  renderCumplDetail();
 }
 
 // ── KPI Cards ───────────────────────────────────────────────────────────────
@@ -616,9 +617,8 @@ function renderCumplDetail() {
   const tbody = document.getElementById('tbody-cumpl-detail');
   if (!tbody || !allMonths.length) return;
 
-  const curMonth  = allMonths[allMonths.length - 1];
-  const prevMonth = allMonths.length > 1 ? allMonths[allMonths.length - 2] : null;
-  const periods = [curMonth, prevMonth].filter(Boolean).map(mm => ({
+  // Mes actual + los 2 anteriores, el mas reciente primero.
+  const periods = allMonths.slice(-3).reverse().map(mm => ({
     label: monthLabel(mm.year, mm.month),
     view: applyVendorFilter(aggregateMonths([mm]), selectedVendor),
     t: aggregateTargets([mm]),
@@ -633,7 +633,14 @@ function renderCumplDetail() {
   };
 
   tbody.innerHTML = periods.map(p => {
-    const vendorTarget = p.t ? (p.t.by_vendor[selectedVendor] || {}) : {};
+    // "Total": suma de los objetivos de todas las vendedoras; si no, el de la elegida.
+    const vendorTarget = !p.t ? {}
+      : selectedVendor === 'all'
+        ? Object.values(p.t.by_vendor || {}).reduce((acc, b) => {
+            Object.entries(b || {}).forEach(([brand, v]) => { acc[brand] = (acc[brand] || 0) + v; });
+            return acc;
+          }, {})
+        : (p.t.by_vendor[selectedVendor] || {});
     const teoxReal = (p.view.by_brand || {})['Teoxane'] || 0;
     const rrsReal  = (p.view.by_brand || {})['RRS HA Long Lasting'] || 0;
     const teoxObj  = vendorTarget['Teoxane'] || 0;
