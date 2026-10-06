@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-10-04T23:51:08.617098Z",
+  "updated_at": "2026-10-06T01:41:24.855627Z",
   "items": [
     {
       "sku": "RRS Long Lasting",
       "code": "LL24A",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 152.0,
-      "quantity_available": 152.0,
+      "quantity": 146.0,
+      "quantity_available": 146.0,
       "quantity_reserved": 0.0
     },
     {
@@ -24,8 +24,8 @@
       "code": "940001/01",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 76.0,
-      "quantity_available": 76.0,
+      "quantity": 74.0,
+      "quantity_available": 74.0,
       "quantity_reserved": 0.0
     },
     {
@@ -33,8 +33,8 @@
       "code": "940012/01",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 6.0,
-      "quantity_available": 6.0,
+      "quantity": 5.0,
+      "quantity_available": 5.0,
       "quantity_reserved": 0.0
     },
     {
@@ -53,42 +53,6 @@
       "office_name": "Casa Matriz",
       "quantity": 1.0,
       "quantity_available": 1.0,
-      "quantity_reserved": 0.0
-    },
-    {
-      "sku": "Alimento para deportistas BTY",
-      "code": "FBTY10",
-      "office_id": 1,
-      "office_name": "Casa Matriz",
-      "quantity": 13.0,
-      "quantity_available": 13.0,
-      "quantity_reserved": 0.0
-    },
-    {
-      "sku": "Alimento para deportistas PWR",
-      "code": "FPWR14",
-      "office_id": 1,
-      "office_name": "Casa Matriz",
-      "quantity": 18.0,
-      "quantity_available": 18.0,
-      "quantity_reserved": 0.0
-    },
-    {
-      "sku": "RHA KISS (2X0.7ml)",
-      "code": "940010/01",
-      "office_id": 1,
-      "office_name": "Casa Matriz",
-      "quantity": 0.0,
-      "quantity_available": 0.0,
-      "quantity_reserved": 0.0
-    },
-    {
-      "sku": "Alimento para deportistas SMOOTH",
-      "code": "FSMTH",
-      "office_id": 1,
-      "office_name": "Casa Matriz",
-      "quantity": 0.0,
-      "quantity_available": 0.0,
       "quantity_reserved": 0.0
     },
     {
@@ -123,8 +87,8 @@
       "code": "78819786491958",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 51.0,
-      "quantity_available": 51.0,
+      "quantity": 50.0,
+      "quantity_available": 50.0,
       "quantity_reserved": 0.0
     },
     {
@@ -132,8 +96,8 @@
       "code": "78819789403573",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 15.0,
-      "quantity_available": 15.0,
+      "quantity": 19.0,
+      "quantity_available": 19.0,
       "quantity_reserved": 0.0
     }
   ]
