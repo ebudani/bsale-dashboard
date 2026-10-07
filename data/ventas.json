@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-06T01:41:24.267310Z",
+  "updated_at": "2026-10-07T00:23:55.432555Z",
   "users": {
     "7": "Cindy Monsalves",
     "9": "Daisy Ponce",
@@ -1740,7 +1740,7 @@
       "rut": "77182959-7",
       "firstName": "Camila Plaza",
       "lastName": "Camila Plaza",
-      "phone": ""
+      "phone": "982406243"
     },
     "675": {
       "name": "CONSULTORA OFTALMOLOGICA MCSL Y COMPANIA LIMITADA",
@@ -1824,7 +1824,7 @@
       "rut": "77689076-6",
       "firstName": "Maria Jesus",
       "lastName": "Ghiringhelli",
-      "phone": ""
+      "phone": "93307619"
     },
     "687": {
       "name": "ANDREA DEL PILAR ORTIZ GRILLO",
@@ -2564,8 +2564,8 @@
     "793": {
       "name": "SERVICIOS MEDICOS OLYMPUS LIMITADA",
       "rut": "76734884-3",
-      "firstName": "JOSEFA",
-      "lastName": "WIJNANDS",
+      "firstName": "BIANCA",
+      "lastName": "NASI",
       "phone": "997895109"
     },
     "794": {
@@ -3756,7 +3756,7 @@
       "rut": "77041802-K",
       "firstName": "Pedro",
       "lastName": "Tapia",
-      "phone": ""
+      "phone": "954116702"
     },
     "967": {
       "name": "DRA CONSTANZA RODRIGUEZ SPA",
@@ -4435,7 +4435,7 @@
       "rut": "78253341-k",
       "firstName": "Tamara",
       "lastName": "Rivera",
-      "phone": ""
+      "phone": "982511179"
     },
     "1065": {
       "name": "DON CRISPIN SPA",
@@ -5004,13 +5004,6 @@
       "lastName": "Hernandez",
       "phone": "962081358"
     },
-    "1149": {
-      "name": "servicios odontologicos francisca Fernanda Villegas Mansilla eirl",
-      "rut": "77563968-7",
-      "firstName": "Francisca",
-      "lastName": "Villegas mansilla",
-      "phone": "954187009"
-    },
     "1150": {
       "name": "SOCIEDAD DE SERVICIOS INTEGRALES DE SALUD Y ESTÉTICA LIMITADA",
       "rut": "78366023-7",
@@ -5096,7 +5089,7 @@
       "phone": ""
     },
     "1162": {
-      "name": "clinica afiora spa",
+      "name": "CLINICA AFIORA SPA",
       "rut": "78080978-7",
       "firstName": "paula",
       "lastName": "guzman",
@@ -5194,7 +5187,7 @@
       "phone": ""
     },
     "1176": {
-      "name": "Rodrigo Cueto y Cia Ltda",
+      "name": "RODRIGO CUETO Y CIA LTDA",
       "rut": "76261884-2",
       "firstName": "Claudia",
       "lastName": "Cueto",
@@ -5401,13 +5394,6 @@
       "rut": "78264052-6",
       "firstName": "Yarelli perez",
       "lastName": "Valentina Pavez",
-      "phone": ""
-    },
-    "1207": {
-      "name": "Inversiones y Servicios Médicos Soho Spa",
-      "rut": "77316503-3",
-      "firstName": "Antonio",
-      "lastName": "Poblete",
       "phone": ""
     },
     "1208": {
@@ -5906,6 +5892,27 @@
       "firstName": "Romina",
       "lastName": "Llanos Perez",
       "phone": "958827126"
+    },
+    "1280": {
+      "name": "INVERSIONES Y SERVICIOS MEDICOS SOHO SPA",
+      "rut": "77316503-3",
+      "firstName": "ANTONIO",
+      "lastName": "POBLETE",
+      "phone": "977496976"
+    },
+    "1281": {
+      "name": "SERVICIOS ODONTOLOGICOS FERNANDA VILLEGAS MANSILLA EIRL",
+      "rut": "77563968-7",
+      "firstName": "Francisca",
+      "lastName": "Villegas mansilla",
+      "phone": "954187009"
+    },
+    "1282": {
+      "name": "ROSSANA AURELIA AGUILERA ASTETE",
+      "rut": "13108315-7",
+      "firstName": "ROSSANA",
+      "lastName": "AGUILERA",
+      "phone": "977571762"
     },
     "2": {
       "name": "Sociedad Clínica Ginestetica SPA",
@@ -7649,6 +7656,20 @@
       "firstName": "Antonia",
       "lastName": "Galeb",
       "phone": "94534954"
+    },
+    "1149": {
+      "name": "servicios odontologicos francisca Fernanda Villegas Mansilla eirl",
+      "rut": "77563968-7",
+      "firstName": "Francisca",
+      "lastName": "Villegas mansilla",
+      "phone": "954187009"
+    },
+    "1207": {
+      "name": "Inversiones y Servicios Médicos Soho Spa",
+      "rut": "77316503-3",
+      "firstName": "Antonio",
+      "lastName": "Poblete",
+      "phone": ""
     },
     "1230": {
       "name": "Clinica Solea Dermaesthetic",
@@ -35176,11 +35197,11 @@
     {
       "year": 2026,
       "month": 10,
-      "count_facturas": 7,
+      "count_facturas": 9,
       "count_nc": 1,
-      "neto_facturas": 2988981,
+      "neto_facturas": 4709214,
       "neto_nc": 615600,
-      "total_neto": 2373381,
+      "total_neto": 4093614,
       "by_day": [
         {
           "date": "2026-10-02",
@@ -35191,16 +35212,21 @@
           "date": "2026-10-05",
           "count": 3,
           "neto": 866267
+        },
+        {
+          "date": "2026-10-06",
+          "count": 2,
+          "neto": 1720233
         }
       ],
       "by_vendor": {
         "Monica Urrutia": {
-          "count": 2,
-          "neto": 453600
+          "count": 3,
+          "neto": 1074563
         },
         "Daisy Ponce": {
-          "count": 3,
-          "neto": 1363124
+          "count": 4,
+          "neto": 2462394
         },
         "Cindy Monsalves": {
           "count": 2,
@@ -35213,6 +35239,11 @@
             "date": "2026-10-02",
             "count": 2,
             "neto": 1069200
+          },
+          {
+            "date": "2026-10-06",
+            "count": 1,
+            "neto": 620963
           }
         ],
         "Daisy Ponce": [
@@ -35225,6 +35256,11 @@
             "date": "2026-10-05",
             "count": 2,
             "neto": 763210
+          },
+          {
+            "date": "2026-10-06",
+            "count": 1,
+            "neto": 1099270
           }
         ],
         "Cindy Monsalves": [
@@ -35241,19 +35277,19 @@
         ]
       },
       "by_brand": {
-        "Teoxane": 1775652,
-        "RRS HA Long Lasting": 597729,
+        "Teoxane": 2396615,
+        "RRS HA Long Lasting": 1696999,
         "FINE": 0
       },
       "by_vendor_brand": {
         "Monica Urrutia": {
-          "Teoxane": 453600,
+          "Teoxane": 1074563,
           "RRS HA Long Lasting": 0,
           "FINE": 0
         },
         "Daisy Ponce": {
           "Teoxane": 868452,
-          "RRS HA Long Lasting": 494672,
+          "RRS HA Long Lasting": 1593942,
           "FINE": 0
         },
         "Cindy Monsalves": {
@@ -35276,12 +35312,16 @@
           "qty": 7.0
         },
         "RRS Long Lasting": {
-          "neto": 597729,
-          "qty": 6.0
+          "neto": 1696999,
+          "qty": 16.0
         },
         "TEOSYAL RHA 1 (2X1ml)": {
           "neto": 118560,
           "qty": 2.0
+        },
+        "TEOSYAL RHA 3 (2X1ml)": {
+          "neto": 620963,
+          "qty": 5.0
         }
       },
       "by_vendor_sku": {
@@ -35293,6 +35333,10 @@
           "RHA Kiss Volume (2X1ml)": {
             "neto": 0,
             "qty": 0.0
+          },
+          "TEOSYAL RHA 3 (2X1ml)": {
+            "neto": 620963,
+            "qty": 5.0
           }
         },
         "Daisy Ponce": {
@@ -35301,8 +35345,8 @@
             "qty": 7.0
           },
           "RRS Long Lasting": {
-            "neto": 494672,
-            "qty": 5.0
+            "neto": 1593942,
+            "qty": 15.0
           },
           "TEOSYAL RHA 1 (2X1ml)": {
             "neto": 118560,
@@ -35321,6 +35365,26 @@
         }
       },
       "top_clients": [
+        {
+          "id": "1172",
+          "count": 1,
+          "neto": 1099270,
+          "teox_neto": 0,
+          "teox_units": 0,
+          "rrs_neto": 1099270,
+          "rrs_units": 10.0,
+          "name": "CONSULTORA Y SERVICIOS MEDICOS NATALY ROJO ROMERO"
+        },
+        {
+          "id": "995",
+          "count": 1,
+          "neto": 620963,
+          "teox_neto": 620963,
+          "teox_units": 5.0,
+          "rrs_neto": 0,
+          "rrs_units": 0,
+          "name": "SERVICIOS PROFESIONALES BEAUTY & SOUL LIMITADA"
+        },
         {
           "id": "705",
           "count": 1,
@@ -35395,6 +35459,16 @@
       "top_clients_by_vendor": {
         "Monica Urrutia": [
           {
+            "id": "995",
+            "count": 1,
+            "neto": 620963,
+            "teox_neto": 620963,
+            "teox_units": 5.0,
+            "rrs_neto": 0,
+            "rrs_units": 0,
+            "name": "SERVICIOS PROFESIONALES BEAUTY & SOUL LIMITADA"
+          },
+          {
             "id": "958",
             "count": 1,
             "neto": 453600,
@@ -35416,6 +35490,16 @@
           }
         ],
         "Daisy Ponce": [
+          {
+            "id": "1172",
+            "count": 1,
+            "neto": 1099270,
+            "teox_neto": 0,
+            "teox_units": 0,
+            "rrs_neto": 1099270,
+            "rrs_units": 10.0,
+            "name": "CONSULTORA Y SERVICIOS MEDICOS NATALY ROJO ROMERO"
+          },
           {
             "id": "705",
             "count": 1,
@@ -35472,19 +35556,19 @@
       },
       "brand_productivity": {
         "Teoxane": {
-          "clients": 4,
-          "units": 19.0
+          "clients": 5,
+          "units": 24.0
         },
         "RRS HA Long Lasting": {
-          "clients": 2,
-          "units": 6.0
+          "clients": 3,
+          "units": 16.0
         }
       },
       "brand_productivity_by_vendor": {
         "Monica Urrutia": {
           "Teoxane": {
-            "clients": 1,
-            "units": 5.0
+            "clients": 2,
+            "units": 10.0
           },
           "RRS HA Long Lasting": {
             "clients": 0,
@@ -35497,8 +35581,8 @@
             "units": 9.0
           },
           "RRS HA Long Lasting": {
-            "clients": 1,
-            "units": 5.0
+            "clients": 2,
+            "units": 15.0
           }
         },
         "Cindy Monsalves": {
@@ -36077,7 +36161,8 @@
       "2026-04": 1402045,
       "2026-05": 760032,
       "2026-06": 1388067,
-      "2026-07": 1423094
+      "2026-07": 1423094,
+      "2026-10": 620963
     },
     "908": {
       "2026-08": 2752661,
@@ -37969,7 +38054,8 @@
     "1172": {
       "2026-06": 1099270,
       "2026-07": 577117,
-      "2026-09": 1587525
+      "2026-09": 1587525,
+      "2026-10": 1099270
     },
     "1174": {
       "2026-06": 826858
@@ -38665,7 +38751,6 @@
     "1145": "Cindy Monsalves",
     "1146": "Monica Urrutia",
     "1147": "Monica Urrutia",
-    "1149": "Daisy Ponce",
     "1150": "Cindy Monsalves",
     "1151": "Cindy Monsalves",
     "1153": "Cindy Monsalves",
@@ -38721,7 +38806,6 @@
     "1204": "Daisy Ponce",
     "1205": "Cindy Monsalves",
     "1206": "Cindy Monsalves",
-    "1207": "Daisy Ponce",
     "1208": "Daisy Ponce",
     "1209": "Cindy Monsalves",
     "1210": "Daisy Ponce",
@@ -38792,7 +38876,12 @@
     "1277": "Cindy Monsalves",
     "1278": "Cindy Monsalves",
     "1279": "Cindy Monsalves",
+    "1280": "Daisy Ponce",
+    "1281": "Daisy Ponce",
+    "1282": "Daisy Ponce",
     "872": "Cindy Monsalves",
+    "1149": "Daisy Ponce",
+    "1207": "Daisy Ponce",
     "1230": "Monica Urrutia"
   },
   "last_purchase_brands": {
@@ -39147,8 +39236,8 @@
       "RRS HA Long Lasting": 989343
     },
     "995": {
-      "month": "2026-08",
-      "Teoxane": 1520064,
+      "month": "2026-10",
+      "Teoxane": 620963,
       "RRS HA Long Lasting": 0
     },
     "480": {
@@ -40977,9 +41066,9 @@
       "RRS HA Long Lasting": 0
     },
     "1172": {
-      "month": "2026-09",
-      "Teoxane": 515736,
-      "RRS HA Long Lasting": 1071789
+      "month": "2026-10",
+      "Teoxane": 0,
+      "RRS HA Long Lasting": 1099270
     },
     "1179": {
       "month": "2026-06",
@@ -43854,6 +43943,11 @@
       "2026-07": {
         "neto": 1423094,
         "Teoxane": 1423094,
+        "RRS HA Long Lasting": 0
+      },
+      "2026-10": {
+        "neto": 620963,
+        "Teoxane": 620963,
         "RRS HA Long Lasting": 0
       }
     },
@@ -50227,6 +50321,11 @@
         "neto": 1587525,
         "Teoxane": 515736,
         "RRS HA Long Lasting": 1071789
+      },
+      "2026-10": {
+        "neto": 1099270,
+        "Teoxane": 0,
+        "RRS HA Long Lasting": 1099270
       }
     },
     "1174": {
