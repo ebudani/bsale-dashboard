@@ -1264,7 +1264,7 @@ function renderRiskTable(rows) {
     // "Sin fecha" siempre al final, en cualquier direccion -- si no, el
     // orden ascendente (mas logico: proximas primero) mandaba las ~270
     // cuentas sin fecha cargada antes que la unica con fecha real.
-    if (riskSortKey === 'nextContactDate') {
+    if (riskSortKey === 'nextContactDate' || riskSortKey === 'contact') {
       if (!av && !bv) return 0;
       if (!av) return 1;
       if (!bv) return -1;
@@ -1278,10 +1278,10 @@ function renderRiskTable(rows) {
 
   document.getElementById('tbody-risk').innerHTML = filtered.map(r => `
     <tr class="${r.status === 'nuevo' ? 'risk-row-nuevo' : ''}">
-      <td class="risk-name">
-        <strong>${r.name}</strong>
-        <small>RUT: ${r.rut}</small>
+      <td class="risk-name"><strong>${r.name}</strong></td>
+      <td class="risk-contact">
         ${r.contact ? `<small class="risk-contact-name">${r.contact}</small>` : ''}
+        <small>RUT: ${r.rut}</small>
         ${r.phone ? `<small class="risk-contact-phone">Teléfono: ${r.phone}</small>` : ''}
       </td>
       <td>${r.vendor}</td>
@@ -1367,7 +1367,7 @@ function renderCarteraRiesgo() {
     th.onclick = () => {
       const key = th.dataset.key;
       if (riskSortKey === key) riskSortDir *= -1;
-      else { riskSortKey = key; riskSortDir = (key === 'name' || key === 'vendor' || key === 'nextContactDate') ? 1 : -1; }
+      else { riskSortKey = key; riskSortDir = (key === 'name' || key === 'contact' || key === 'vendor' || key === 'nextContactDate') ? 1 : -1; }
       document.querySelectorAll('#table-risk thead .arrow').forEach(a => a.textContent = '');
       th.querySelector('.arrow').textContent = riskSortDir === 1 ? '↑' : '↓';
       renderRiskTable(buildRiskRoster());
