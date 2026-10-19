@@ -83,12 +83,15 @@ async function loadStock() {
 function renderSummary(rows) {
   const counts = { quiebre: 0, critico: 0, bajo: 0, ok: 0, sindemanda: 0 };
   rows.forEach(r => counts[r.status]++);
-  // La tarjeta "Quiebre" arriba sigue siendo la alerta combinada (sin stock
-  // + menos de 1 mes de cobertura) -- la distincion Quiebre/Critico es solo
-  // en la columna Estado de la tabla, fila por fila.
-  document.getElementById('kpi-quiebre').textContent = counts.quiebre + counts.critico;
+  // Un cuadro por estado de la tabla (Quiebre, Critico, Bajo, OK), asi lo de
+  // arriba coincide con lo que se ve fila por fila.
+  document.getElementById('kpi-quiebre').textContent = counts.quiebre;
+  document.getElementById('kpi-critico').textContent = counts.critico;
   document.getElementById('kpi-bajo').textContent = counts.bajo;
   document.getElementById('kpi-ok').textContent = counts.ok;
+  document.getElementById('kpi-total-sub').textContent = counts.sindemanda
+    ? `Con stock en Bsale (${counts.sindemanda} sin demanda reciente)`
+    : 'Con stock en Bsale';
   document.getElementById('kpi-total-skus').textContent = rows.length;
 }
 

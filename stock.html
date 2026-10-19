@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AestheticsPro · Stock</title>
-<link rel="stylesheet" href="assets/dashboard.css?v=20261019">
+<link rel="stylesheet" href="assets/dashboard.css?v=20261019b">
 </head>
 <body>
 
@@ -31,15 +31,20 @@
   <div id="content">
 
     <div class="kpi-grid">
-      <div class="kpi red">
+      <div class="kpi" style="border-color:#991b1b">
         <label>Quiebre</label>
         <div class="val" id="kpi-quiebre">—</div>
-        <div class="sub">Sin stock o menos de 1 mes de cobertura</div>
+        <div class="sub">Sin stock (0 unidades)</div>
+      </div>
+      <div class="kpi red">
+        <label>Crítico</label>
+        <div class="val" id="kpi-critico">—</div>
+        <div class="sub">Menos de 1 mes de cobertura</div>
       </div>
       <div class="kpi" style="border-color:#d97706">
         <label>Stock bajo</label>
         <div class="val" id="kpi-bajo">—</div>
-        <div class="sub">Menos de 2 meses de cobertura</div>
+        <div class="sub">Entre 1 y 2 meses de cobertura</div>
       </div>
       <div class="kpi green">
         <label>OK</label>
@@ -49,7 +54,7 @@
       <div class="kpi">
         <label>Total productos</label>
         <div class="val" id="kpi-total-skus">—</div>
-        <div class="sub">Con stock en Bsale</div>
+        <div class="sub" id="kpi-total-sub">Con stock en Bsale</div>
       </div>
     </div>
 
@@ -69,7 +74,7 @@
   </div><!-- #content -->
 </main>
 
-<script src="assets/pin-gate.js?v=20261019"></script>
-<script src="assets/stock.js?v=20261019"></script>
+<script src="assets/pin-gate.js?v=20261019b"></script>
+<script src="assets/stock.js?v=20261019b"></script>
 </body>
 </html>
