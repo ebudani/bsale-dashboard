@@ -44,11 +44,21 @@ jobs:
           fi
           python scripts/fetch_stock.py
 
+      # Cuentas sin direccion para el boton "Info Bsale". continue-on-error: si
+      # falla, el resto de la actualizacion diaria sigue igual y el archivo
+      # anterior queda sin tocar.
+      - name: Fetch Info Bsale (cuentas sin direccion)
+        continue-on-error: true
+        env:
+          BSALE_TOKEN: ${{ secrets.BSALE_TOKEN }}
+        run: python scripts/fetch_info_bsale.py
+
       - name: Commit updated data
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/ventas.json data/stock.json
+          [ -f data/info_bsale.json ] && git add data/info_bsale.json || true
           git diff --cached --quiet || git commit -m "chore: update ventas/stock data $(date -u +%Y-%m-%d)"
 
       - name: Push changes

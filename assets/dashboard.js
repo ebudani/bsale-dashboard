@@ -152,6 +152,14 @@ async function loadData() {
   buildVendorSelector();
   if (!applyVendorLock()) return; // window.LOCKED_VENDOR set but not a real vendor -- bail, error already shown
 
+  // info-bsale.html: pagina aparte con las cuentas sin direccion (data/info_bsale.json).
+  if (window.INFO_BSALE_ONLY) {
+    await renderInfoBsale();
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('content').classList.add('loaded');
+    return;
+  }
+
   // objetivos-historico.html: pagina aparte con el cuadro de objetivos vs
   // real, mes a mes, por vendedor (solo tablero general).
   if (window.OBJETIVOS_ONLY) {
@@ -1365,6 +1373,58 @@ function renderCarteraRiesgo() {
       renderRiskTable(buildRiskRoster());
     };
   });
+}
+
+// ── Info Bsale ───────────────────────────────────────────────────────────────
+// Cuentas con ventas y SIN direccion en "Direcciones del cliente", de la venta
+// mas reciente a la mas antigua. Lo genera scripts/fetch_info_bsale.py.
+async function renderInfoBsale() {
+  const tbody = document.getElementById('tbody-info-bsale');
+  const countEl = document.getElementById('info-bsale-count');
+  const search = document.getElementById('info-bsale-search');
+  let data = null;
+  try {
+    const res = await fetch('data/info_bsale.json');
+    if (res.ok) data = await res.json();
+  } catch (e) { /* sin archivo: se avisa abajo */ }
+  if (!data) {
+    tbody.innerHTML = '<tr><td colspan="6" style="color:#94a3b8;text-align:center">Todavía no hay datos. Se generan en la actualización diaria de las 18:00.</td></tr>';
+    countEl.textContent = '';
+    return;
+  }
+
+  // Con el link de una vendedora, solo sus cuentas (vendedor segun el atributo
+  // "Vendedor" de Bsale, ya cargado en clientVendorMap).
+  const accounts = (data.accounts || []).filter(a =>
+    !window.LOCKED_VENDOR || clientVendorMap[a.id] === window.LOCKED_VENDOR);
+  const today = Date.now();
+  const fmtDate = iso => iso.split('-').reverse().join('-');
+  const daysAgo = iso => Math.max(0, Math.floor((today - Date.parse(iso + 'T00:00:00Z')) / 86400000));
+
+  const draw = () => {
+    const q = search.value.trim().toLowerCase();
+    const rows = accounts.filter(a => !q ||
+      `${a.name} ${a.rut} ${a.contact} ${a.phone}`.toLowerCase().includes(q));
+    tbody.innerHTML = rows.length ? rows.map(a => `
+      <tr>
+        <td><strong>${escapeHtml(a.name || '—')}</strong></td>
+        <td>${escapeHtml(a.rut || '—')}</td>
+        <td>${a.contact ? escapeHtml(a.contact) : '—'}${a.phone ? `<br><small>${escapeHtml(a.phone)}</small>` : ''}</td>
+        <td>${a.billing_address ? escapeHtml(a.billing_address) : '—'}</td>
+        <td><span class="pill low">Sin dirección</span></td>
+        <td>${fmtDate(a.last_sale)}<br><small>hace ${daysAgo(a.last_sale)} días</small></td>
+      </tr>`).join('')
+      : '<tr><td colspan="6" style="color:#94a3b8;text-align:center">Sin resultados.</td></tr>';
+    countEl.textContent = q
+      ? `${rows.length} de ${accounts.length} cuentas`
+      : window.LOCKED_VENDOR
+        ? `${accounts.length} cuentas sin dirección`
+        : `${accounts.length} cuentas sin dirección, de ${data.accounts_with_sales} con ventas`;
+  };
+  search.addEventListener('input', draw);
+  draw();
+  document.getElementById('info-bsale-updated').textContent =
+    'Actualizado: ' + (data.updated_at || '').slice(0, 16).replace('T', ' ') + ' UTC';
 }
 
 // ── Histórico de Objetivos ───────────────────────────────────────────────────

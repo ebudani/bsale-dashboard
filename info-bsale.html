@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AestheticsPro · Info Bsale</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+<link rel="stylesheet" href="assets/dashboard.css?v=20261020c">
+</head>
+<body>
+
+<div id="pin-gate">
+  <div class="pin-box">
+    <h1>AestheticsPro <span>· Ventas</span></h1>
+    <p>Ingresá el PIN para continuar</p>
+    <input type="password" id="pin-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" autocomplete="off" placeholder="••••">
+    <button id="pin-submit">Entrar</button>
+    <div id="pin-error">PIN incorrecto</div>
+  </div>
+</div>
+
+<header>
+  <div class="header-left">
+    <h1>AestheticsPro <span>· Ventas</span></h1>
+    <button type="button" class="history-shortcut-btn" onclick="goBack(code ? 'vendor.html' + location.search : 'index.html')">← Volver</button>
+  </div>
+  <div class="header-right">
+    <span id="updated-at">Cargando…</span>
+    <!-- Oculto: solo esta aca para que buildVendorSelector()/applyVendorLock() de dashboard.js, que lo leen, no rompan en esta pagina. -->
+    <div class="filter-group" id="vendor-filter-group" style="display:none">
+      <span class="filter-label">Vendedor</span>
+      <select id="vendor-select" class="filter-select" onchange="selectVendor(this.value)"></select>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div id="loading">Cargando datos…</div>
+  <div id="content">
+
+    <div class="card" id="info-bsale-card">
+      <h2>Info Bsale — cuentas sin dirección</h2>
+      <div class="risk-caption">Cuentas con ventas que no tienen ninguna dirección cargada en "Direcciones del cliente" de Bsale, de la venta más reciente a la más antigua. La dirección de facturación es la de "Información básica".</div>
+      <div class="risk-toolbar">
+        <span class="risk-count" id="info-bsale-count" style="margin:0 auto 0 0"></span>
+        <input class="risk-search" id="info-bsale-search" type="search" placeholder="Buscar cuenta, RUT o contacto…">
+      </div>
+      <div class="obj-table-scroll">
+        <table id="table-info-bsale">
+          <thead>
+            <tr>
+              <th>Cuenta</th>
+              <th>RUT</th>
+              <th>Contacto</th>
+              <th>Dirección de facturación</th>
+              <th>Dirección (del cliente)</th>
+              <th>Fecha última venta</th>
+            </tr>
+          </thead>
+          <tbody id="tbody-info-bsale"></tbody>
+        </table>
+      </div>
+      <div class="risk-count" id="info-bsale-updated"></div>
+    </div>
+
+  </div><!-- #content -->
+</main>
+
+<script>
+  window.INFO_BSALE_ONLY = true;
+  window.ALLOW_GENERAL = true;
+</script>
+<script src="assets/vendor-links.js?v=20261020c"></script>
+<script src="assets/pin-gate.js?v=20261020c"></script>
+<script src="assets/dashboard.js?v=20261020c"></script>
+</body>
+</html>

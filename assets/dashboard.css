@@ -192,7 +192,9 @@
   /* Recuadro propio con scroll: la .card tiene overflow-x:auto, y eso hace que un
      encabezado sticky dentro de ella no se fije al scrollear la pagina. */
   .obj-table-scroll { overflow: auto; max-height: calc(100vh - 170px); min-height: 260px; }
-  #table-objetivos-historico thead { position: sticky; top: 0; z-index: 3; box-shadow: 0 1px 0 var(--gray-200); }
+  #table-objetivos-historico thead, #table-info-bsale thead { position: sticky; top: 0; z-index: 3; box-shadow: 0 1px 0 var(--gray-200); }
+  #table-info-bsale { font-size: 12px; }
+  #table-info-bsale td small { color: var(--gray-600); }
   #table-objetivos-historico .col-total-dark { background: #c3cedc; }
   #table-objetivos-historico tr.obj-total-row td { background: var(--gray-200); }
   #table-objetivos-historico tr.obj-total-row td.col-total-dark { background: #a9b7c9; }
