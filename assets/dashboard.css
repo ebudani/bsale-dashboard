@@ -359,6 +359,11 @@
   #table-risk.hide-vendor-col td:nth-child(3) {
     display: none;
   }
+  /* Tablero general (cartera-riesgo.html): sin la columna "Volver a contactar". */
+  #table-risk.hide-next-contact-col th:nth-child(11),
+  #table-risk.hide-next-contact-col td:nth-child(11) {
+    display: none;
+  }
   /* Piloto de Contactado/Comentario/Volver a contactar -- ver
      RISK_CONTACT_PILOT_VENDORS en dashboard.js. */
   #table-risk.hide-contact-cols th:nth-child(9),
