@@ -1,8 +1,26 @@
 {
-  "updated_at": "2026-10-20T00:10:45.260052+00:00",
+  "updated_at": "2026-10-20T23:41:28.111852+00:00",
   "accounts_with_sales": 532,
-  "accounts_without_address": 468,
+  "accounts_without_address": 467,
   "accounts": [
+    {
+      "id": "903",
+      "name": "INVERSIONES Y SERVICIOS MEDICOS JUAN OPAZO SPA",
+      "rut": "76777522-9",
+      "contact": "Eduardo Opazo",
+      "phone": "964944568",
+      "billing_address": "Coimbra 110, Las Condes, Santiago",
+      "last_sale": "2026-10-20"
+    },
+    {
+      "id": "950",
+      "name": "SERVICIOS PROFESIONALES JAVIERA MERCADO GOMEZ SPA",
+      "rut": "77516565-0",
+      "contact": "Javiera Mercado",
+      "phone": "998106781",
+      "billing_address": "Montenegro 2042, Ñuñoa, Santiago",
+      "last_sale": "2026-10-20"
+    },
     {
       "id": "570",
       "name": "DERMADENT LIMITADA",
@@ -238,15 +256,6 @@
       "last_sale": "2026-10-13"
     },
     {
-      "id": "1145",
-      "name": "Serv. Odont Yanira Arevalo EIRL",
-      "rut": "76877353-k",
-      "contact": "",
-      "phone": "961191895",
-      "billing_address": "Av. Picarte 427 of 405, Valdivia, Valdivia",
-      "last_sale": "2026-10-13"
-    },
-    {
       "id": "1283",
       "name": "Pamela Lizana Becerra",
       "rut": "15915901-9",
@@ -334,15 +343,6 @@
       "contact": "Pricila Vasquez",
       "phone": "991292689",
       "billing_address": "Angol 436, Concepcion, Concepcion",
-      "last_sale": "2026-10-08"
-    },
-    {
-      "id": "950",
-      "name": "SERVICIOS PROFESIONALES JAVIERA MERCADO GOMEZ SPA",
-      "rut": "77516565-0",
-      "contact": "Javiera Mercado",
-      "phone": "998106781",
-      "billing_address": "Montenegro 2042, Ñuñoa, Santiago",
       "last_sale": "2026-10-08"
     },
     {
@@ -640,15 +640,6 @@
       "contact": "Carla Nave",
       "phone": "",
       "billing_address": "PADRE MARIANO 181 OF 303, Providencia, Santiago",
-      "last_sale": "2026-09-16"
-    },
-    {
-      "id": "903",
-      "name": "INVERSIONES Y SERVICIOS MEDICOS JUAN OPAZO SPA",
-      "rut": "76777522-9",
-      "contact": "Eduardo Opazo",
-      "phone": "964944568",
-      "billing_address": "Coimbra 110, Las Condes, Santiago",
       "last_sale": "2026-09-16"
     },
     {
