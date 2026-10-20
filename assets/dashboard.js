@@ -1399,10 +1399,34 @@ async function renderInfoBsale() {
     !window.LOCKED_VENDOR || clientVendorMap[a.id] === window.LOCKED_VENDOR);
   const fmtDate = iso => iso.split('-').reverse().join('-');
 
+  // Orden por clic en cada titulo (un clic ordena, otro invierte). Arranca por
+  // fecha de ultima venta, la mas reciente primero. Los vacios van siempre al final.
+  let sortKey = 'last_sale', sortDir = -1;
+  const sortRows = rows => rows.slice().sort((a, b) => {
+    if (sortKey === 'address') return 0; // todas son "Sin direccion"
+    const av = a[sortKey] || '', bv = b[sortKey] || '';
+    if (!av && !bv) return 0;
+    if (!av) return 1;
+    if (!bv) return -1;
+    return sortDir * av.localeCompare(bv, 'es', { sensitivity: 'base', numeric: true });
+  });
+  const updateArrows = () => document.querySelectorAll('#table-info-bsale thead th').forEach(th => {
+    th.querySelector('.arrow').textContent = th.dataset.key === sortKey && sortKey !== 'address' ? (sortDir === 1 ? '↑' : '↓') : '';
+  });
+  document.querySelectorAll('#table-info-bsale thead th[data-key]').forEach(th => {
+    th.addEventListener('click', () => {
+      const key = th.dataset.key;
+      if (sortKey === key) sortDir *= -1;
+      else { sortKey = key; sortDir = key === 'last_sale' ? -1 : 1; }
+      updateArrows();
+      draw();
+    });
+  });
+
   const draw = () => {
     const q = search.value.trim().toLowerCase();
-    const rows = accounts.filter(a => !q ||
-      `${a.name} ${a.rut} ${a.contact} ${a.phone}`.toLowerCase().includes(q));
+    const rows = sortRows(accounts.filter(a => !q ||
+      `${a.name} ${a.rut} ${a.contact} ${a.phone}`.toLowerCase().includes(q)));
     tbody.innerHTML = rows.length ? rows.map(a => `
       <tr>
         <td><strong>${escapeHtml(a.name || '—')}</strong></td>
@@ -1420,6 +1444,7 @@ async function renderInfoBsale() {
         : `${accounts.length} cuentas sin dirección, de ${data.accounts_with_sales} con ventas`;
   };
   search.addEventListener('input', draw);
+  updateArrows();
   draw();
   document.getElementById('info-bsale-updated').textContent =
     'Actualizado: ' + (data.updated_at || '').slice(0, 16).replace('T', ' ') + ' UTC';

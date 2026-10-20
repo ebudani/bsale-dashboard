@@ -204,6 +204,8 @@
   #table-info-bsale th:nth-child(4) { width: 27%; }
   #table-info-bsale th:nth-child(5) { width: 10%; }
   #table-info-bsale th:nth-child(6) { width: 12%; }
+  #table-info-bsale th { cursor: pointer; user-select: none; }
+  #table-info-bsale th .arrow { opacity: .5; margin-left: 3px; }
   #table-info-bsale td small { color: var(--gray-600); }
   @media (max-width: 760px) { #table-info-bsale { min-width: 720px; } }
   #table-objetivos-historico .col-total-dark { background: #c3cedc; }
