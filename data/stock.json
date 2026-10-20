@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-10-18T22:49:13.928740Z",
+  "updated_at": "2026-10-20T00:08:13.336262Z",
   "items": [
     {
       "sku": "RRS Long Lasting",
       "code": "LL24A",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 10.0,
-      "quantity_available": 10.0,
+      "quantity": 19.0,
+      "quantity_available": 19.0,
       "quantity_reserved": 0.0
     },
     {
@@ -15,8 +15,8 @@
       "code": "910049/02",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 684.0,
-      "quantity_available": 684.0,
+      "quantity": 655.0,
+      "quantity_available": 655.0,
       "quantity_reserved": 0.0
     },
     {
@@ -33,8 +33,8 @@
       "code": "940012/01",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 127.0,
-      "quantity_available": 127.0,
+      "quantity": 124.0,
+      "quantity_available": 124.0,
       "quantity_reserved": 0.0
     },
     {
@@ -51,8 +51,8 @@
       "code": "940011/01",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 212.0,
-      "quantity_available": 212.0,
+      "quantity": 210.0,
+      "quantity_available": 210.0,
       "quantity_reserved": 0.0
     },
     {
@@ -60,8 +60,8 @@
       "code": "25221/2",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 539.0,
-      "quantity_available": 539.0,
+      "quantity": 537.0,
+      "quantity_available": 537.0,
       "quantity_reserved": 0.0
     },
     {
@@ -87,8 +87,8 @@
       "code": "78819786491958",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 177.0,
-      "quantity_available": 177.0,
+      "quantity": 174.0,
+      "quantity_available": 174.0,
       "quantity_reserved": 0.0
     },
     {
@@ -96,8 +96,8 @@
       "code": "78819789403573",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 67.0,
-      "quantity_available": 67.0,
+      "quantity": 66.0,
+      "quantity_available": 66.0,
       "quantity_reserved": 0.0
     }
   ]
