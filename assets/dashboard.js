@@ -1403,9 +1403,27 @@ async function renderInfoBsale() {
     .filter(a => !window.LOCKED_VENDOR || a.vendor === window.LOCKED_VENDOR);
   const fmtDate = iso => iso.split('-').reverse().join('-');
 
+  // Cuadro resumen: cuentas sin direccion por vendedora (siempre sobre todas las
+  // cuentas, sin importar la busqueda). Un clic en una vendedora filtra la tabla.
+  const summaryEl = document.getElementById('info-bsale-summary');
+  const drawSummary = () => {
+    const counts = {};
+    accounts.forEach(a => { counts[a.vendor] = (counts[a.vendor] || 0) + 1; });
+    const sel = vendorSel.value;
+    const item = (label, n, key, extra = '') =>
+      `<button type="button" class="info-summary-item${extra}${(sel === key) ? ' active' : ''}" data-vendor="${escapeHtml(key)}">
+         <span class="info-summary-name">${escapeHtml(label)}</span><span class="info-summary-val">${n}</span></button>`;
+    summaryEl.innerHTML =
+      item('Total', accounts.length, '', ' info-summary-total') +
+      Object.entries(counts).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'es'))
+        .map(([name, n]) => item(name, n, name)).join('');
+  };
+
   if (window.LOCKED_VENDOR) {
     table.classList.add('hide-vendor-col');
     vendorSel.style.display = 'none';
+    summaryEl.style.display = 'none';
+    document.getElementById('info-bsale-summary-title').style.display = 'none';
   } else {
     const names = [...new Set(accounts.map(a => a.vendor))].sort((a, b) => a.localeCompare(b, 'es'));
     vendorSel.innerHTML = '<option value="">Todas las vendedoras</option>' +
@@ -1466,7 +1484,15 @@ async function renderInfoBsale() {
     });
   });
   search.addEventListener('input', draw);
-  vendorSel.addEventListener('change', draw);
+  vendorSel.addEventListener('change', () => { drawSummary(); draw(); });
+  summaryEl.addEventListener('click', e => {
+    const btn = e.target.closest('.info-summary-item');
+    if (!btn || window.LOCKED_VENDOR) return;
+    vendorSel.value = btn.dataset.vendor;
+    drawSummary();
+    draw();
+  });
+  if (!window.LOCKED_VENDOR) drawSummary();
   document.getElementById('info-bsale-export').addEventListener('click', () => {
     const label = window.LOCKED_VENDOR || vendorSel.value || 'Todas';
     exportInfoBsaleExcel(shownRows, label);

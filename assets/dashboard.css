@@ -196,6 +196,22 @@
   /* Que toda la tabla entre en el ancho de la pantalla, sin scroll de costado:
      columnas en porcentaje y el texto largo (razon social, direccion) se parte
      en varias lineas. En celular no entra, ahi vuelve a scrollear. */
+  /* Cuadro resumen de Info Bsale: cuentas sin direccion por vendedora. */
+  .info-summary-title { font-size: 12px; font-weight: 600; color: var(--gray-600); margin: 6px 0 2px; }
+  .info-summary { display: flex; flex-wrap: wrap; gap: 10px; margin: 4px 0 14px; }
+  .info-summary-item {
+    display: flex; flex-direction: column; align-items: flex-start; gap: 2px; min-width: 120px;
+    background: var(--gray-100); border: 1px solid var(--gray-200); border-radius: 8px;
+    padding: 8px 14px; cursor: pointer; font-family: inherit; text-align: left;
+  }
+  .info-summary-item:hover { background: var(--gray-200); }
+  .info-summary-item.active { border-color: var(--blue); box-shadow: 0 0 0 1px var(--blue); }
+  .info-summary-name { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .4px; color: var(--gray-600); }
+  .info-summary-val { font-size: 22px; font-weight: 700; color: var(--gray-900); }
+  .info-summary-total { background: var(--navy); border-color: var(--navy); }
+  .info-summary-total .info-summary-name { color: #93c5fd; }
+  .info-summary-total .info-summary-val { color: #fff; }
+  .info-summary-total:hover { background: #1b3a6b; }
   #table-info-bsale { font-size: 12px; table-layout: fixed; width: 100%; min-width: 0; }
   #table-info-bsale th, #table-info-bsale td { padding: 6px 7px; overflow-wrap: anywhere; }
   #table-info-bsale th:nth-child(1) { width: 21%; }
