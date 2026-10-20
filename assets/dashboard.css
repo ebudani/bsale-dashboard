@@ -193,8 +193,19 @@
      encabezado sticky dentro de ella no se fije al scrollear la pagina. */
   .obj-table-scroll { overflow: auto; max-height: calc(100vh - 170px); min-height: 260px; }
   #table-objetivos-historico thead, #table-info-bsale thead { position: sticky; top: 0; z-index: 3; box-shadow: 0 1px 0 var(--gray-200); }
-  #table-info-bsale { font-size: 12px; }
+  /* Que toda la tabla entre en el ancho de la pantalla, sin scroll de costado:
+     columnas en porcentaje y el texto largo (razon social, direccion) se parte
+     en varias lineas. En celular no entra, ahi vuelve a scrollear. */
+  #table-info-bsale { font-size: 12px; table-layout: fixed; width: 100%; min-width: 0; }
+  #table-info-bsale th, #table-info-bsale td { padding: 6px 7px; overflow-wrap: anywhere; }
+  #table-info-bsale th:nth-child(1) { width: 25%; }
+  #table-info-bsale th:nth-child(2) { width: 9%; }
+  #table-info-bsale th:nth-child(3) { width: 17%; }
+  #table-info-bsale th:nth-child(4) { width: 27%; }
+  #table-info-bsale th:nth-child(5) { width: 10%; }
+  #table-info-bsale th:nth-child(6) { width: 12%; }
   #table-info-bsale td small { color: var(--gray-600); }
+  @media (max-width: 760px) { #table-info-bsale { min-width: 720px; } }
   #table-objetivos-historico .col-total-dark { background: #c3cedc; }
   #table-objetivos-historico tr.obj-total-row td { background: var(--gray-200); }
   #table-objetivos-historico tr.obj-total-row td.col-total-dark { background: #a9b7c9; }

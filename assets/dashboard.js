@@ -1397,9 +1397,7 @@ async function renderInfoBsale() {
   // "Vendedor" de Bsale, ya cargado en clientVendorMap).
   const accounts = (data.accounts || []).filter(a =>
     !window.LOCKED_VENDOR || clientVendorMap[a.id] === window.LOCKED_VENDOR);
-  const today = Date.now();
   const fmtDate = iso => iso.split('-').reverse().join('-');
-  const daysAgo = iso => Math.max(0, Math.floor((today - Date.parse(iso + 'T00:00:00Z')) / 86400000));
 
   const draw = () => {
     const q = search.value.trim().toLowerCase();
@@ -1412,7 +1410,7 @@ async function renderInfoBsale() {
         <td>${a.contact ? escapeHtml(a.contact) : '—'}${a.phone ? `<br><small>${escapeHtml(a.phone)}</small>` : ''}</td>
         <td>${a.billing_address ? escapeHtml(a.billing_address) : '—'}</td>
         <td><span class="pill low">Sin dirección</span></td>
-        <td>${fmtDate(a.last_sale)}<br><small>hace ${daysAgo(a.last_sale)} días</small></td>
+        <td>${fmtDate(a.last_sale)}</td>
       </tr>`).join('')
       : '<tr><td colspan="6" style="color:#94a3b8;text-align:center">Sin resultados.</td></tr>';
     countEl.textContent = q
