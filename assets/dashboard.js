@@ -1382,22 +1382,38 @@ async function renderInfoBsale() {
   const tbody = document.getElementById('tbody-info-bsale');
   const countEl = document.getElementById('info-bsale-count');
   const search = document.getElementById('info-bsale-search');
+  const vendorSel = document.getElementById('info-bsale-vendor');
+  const table = document.getElementById('table-info-bsale');
+  const cols = window.LOCKED_VENDOR ? 6 : 7; // con el link de una vendedora no se muestra la columna Vendedor
   let data = null;
   try {
     const res = await fetch('data/info_bsale.json');
     if (res.ok) data = await res.json();
   } catch (e) { /* sin archivo: se avisa abajo */ }
   if (!data) {
-    tbody.innerHTML = '<tr><td colspan="6" style="color:#94a3b8;text-align:center">Todavía no hay datos. Se generan en la actualización diaria de las 18:00.</td></tr>';
+    tbody.innerHTML = `<tr><td colspan="${cols}" style="color:#94a3b8;text-align:center">Todavía no hay datos. Se generan en la actualización diaria de las 18:00.</td></tr>`;
     countEl.textContent = '';
     return;
   }
 
-  // Con el link de una vendedora, solo sus cuentas (vendedor segun el atributo
-  // "Vendedor" de Bsale, ya cargado en clientVendorMap).
-  const accounts = (data.accounts || []).filter(a =>
-    !window.LOCKED_VENDOR || clientVendorMap[a.id] === window.LOCKED_VENDOR);
+  // Vendedor segun el atributo "Vendedor" de Bsale (clientVendorMap). Con el link
+  // de una vendedora, solo sus cuentas.
+  const accounts = (data.accounts || [])
+    .map(a => ({ ...a, vendor: clientVendorMap[a.id] || 'Sin asignar' }))
+    .filter(a => !window.LOCKED_VENDOR || a.vendor === window.LOCKED_VENDOR);
   const fmtDate = iso => iso.split('-').reverse().join('-');
+
+  if (window.LOCKED_VENDOR) {
+    table.classList.add('hide-vendor-col');
+    vendorSel.style.display = 'none';
+  } else {
+    const names = [...new Set(accounts.map(a => a.vendor))].sort((a, b) => a.localeCompare(b, 'es'));
+    vendorSel.innerHTML = '<option value="">Todas las vendedoras</option>' +
+      names.map(n => `<option value="${escapeHtml(n)}">${escapeHtml(n)}</option>`).join('');
+    // Viene de la primera pagina: si ahi estaba elegida una vendedora, llega filtrada.
+    const wanted = new URLSearchParams(location.search).get('vendedor');
+    if (wanted && names.includes(wanted)) vendorSel.value = wanted;
+  }
 
   // Orden por clic en cada titulo (un clic ordena, otro invierte). Arranca por
   // fecha de ultima venta, la mas reciente primero. Los vacios van siempre al final.
@@ -1413,6 +1429,33 @@ async function renderInfoBsale() {
   const updateArrows = () => document.querySelectorAll('#table-info-bsale thead th').forEach(th => {
     th.querySelector('.arrow').textContent = th.dataset.key === sortKey && sortKey !== 'address' ? (sortDir === 1 ? '↑' : '↓') : '';
   });
+
+  let shownRows = []; // lo que se ve ahora, para exportar
+  const draw = () => {
+    const vendorFilter = window.LOCKED_VENDOR ? '' : vendorSel.value;
+    const base = vendorFilter ? accounts.filter(a => a.vendor === vendorFilter) : accounts;
+    const q = search.value.trim().toLowerCase();
+    const rows = sortRows(base.filter(a => !q ||
+      `${a.name} ${a.rut} ${a.contact} ${a.phone}`.toLowerCase().includes(q)));
+    shownRows = rows;
+    tbody.innerHTML = rows.length ? rows.map(a => `
+      <tr>
+        <td><strong>${escapeHtml(a.name || '—')}</strong></td>
+        <td>${escapeHtml(a.rut || '—')}</td>
+        <td>${a.contact ? escapeHtml(a.contact) : '—'}${a.phone ? `<br><small>${escapeHtml(a.phone)}</small>` : ''}</td>
+        <td>${escapeHtml(a.vendor)}</td>
+        <td>${a.billing_address ? escapeHtml(a.billing_address) : '—'}</td>
+        <td><span class="pill low">Sin dirección</span></td>
+        <td>${fmtDate(a.last_sale)}</td>
+      </tr>`).join('')
+      : `<tr><td colspan="${cols}" style="color:#94a3b8;text-align:center">Sin resultados.</td></tr>`;
+    countEl.textContent = q
+      ? `${rows.length} de ${base.length} cuentas`
+      : (window.LOCKED_VENDOR || vendorFilter)
+        ? `${base.length} cuentas sin dirección`
+        : `${base.length} cuentas sin dirección, de ${data.accounts_with_sales} con ventas`;
+  };
+
   document.querySelectorAll('#table-info-bsale thead th[data-key]').forEach(th => {
     th.addEventListener('click', () => {
       const key = th.dataset.key;
@@ -1422,32 +1465,46 @@ async function renderInfoBsale() {
       draw();
     });
   });
-
-  const draw = () => {
-    const q = search.value.trim().toLowerCase();
-    const rows = sortRows(accounts.filter(a => !q ||
-      `${a.name} ${a.rut} ${a.contact} ${a.phone}`.toLowerCase().includes(q)));
-    tbody.innerHTML = rows.length ? rows.map(a => `
-      <tr>
-        <td><strong>${escapeHtml(a.name || '—')}</strong></td>
-        <td>${escapeHtml(a.rut || '—')}</td>
-        <td>${a.contact ? escapeHtml(a.contact) : '—'}${a.phone ? `<br><small>${escapeHtml(a.phone)}</small>` : ''}</td>
-        <td>${a.billing_address ? escapeHtml(a.billing_address) : '—'}</td>
-        <td><span class="pill low">Sin dirección</span></td>
-        <td>${fmtDate(a.last_sale)}</td>
-      </tr>`).join('')
-      : '<tr><td colspan="6" style="color:#94a3b8;text-align:center">Sin resultados.</td></tr>';
-    countEl.textContent = q
-      ? `${rows.length} de ${accounts.length} cuentas`
-      : window.LOCKED_VENDOR
-        ? `${accounts.length} cuentas sin dirección`
-        : `${accounts.length} cuentas sin dirección, de ${data.accounts_with_sales} con ventas`;
-  };
   search.addEventListener('input', draw);
+  vendorSel.addEventListener('change', draw);
+  document.getElementById('info-bsale-export').addEventListener('click', () => {
+    const label = window.LOCKED_VENDOR || vendorSel.value || 'Todas';
+    exportInfoBsaleExcel(shownRows, label);
+  });
   updateArrows();
   draw();
   document.getElementById('info-bsale-updated').textContent =
     'Actualizado: ' + (data.updated_at || '').slice(0, 16).replace('T', ' ') + ' UTC';
+}
+
+// Arma el libro de Excel con las filas que se estan viendo.
+function buildInfoBsaleWorkbook(rows) {
+  const header = ['Vendedora', 'Cuenta', 'RUT', 'Contacto', 'Teléfono', 'Dirección de facturación', 'Fecha última venta'];
+  const aoa = [header].concat(rows.map(a => {
+    const [y, m, d] = a.last_sale.split('-').map(Number);
+    // Fecha local (no UTC): SheetJS convierte en hora local y, con UTC, correria un dia en Chile.
+    return [a.vendor, a.name, a.rut, a.contact, a.phone, a.billing_address, new Date(y, m - 1, d)];
+  }));
+  const ws = XLSX.utils.aoa_to_sheet(aoa, { cellDates: true });
+  for (let r = 1; r < aoa.length; r++) {
+    const cell = ws[XLSX.utils.encode_cell({ r, c: 6 })];
+    if (cell) cell.z = 'dd-mm-yyyy';
+  }
+  ws['!cols'] = [{ wch: 18 }, { wch: 44 }, { wch: 12 }, { wch: 24 }, { wch: 13 }, { wch: 50 }, { wch: 14 }];
+  ws['!autofilter'] = { ref: `A1:G${Math.max(aoa.length, 2)}` };
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, 'Info Bsale');
+  return wb;
+}
+
+function exportInfoBsaleExcel(rows, label) {
+  if (typeof XLSX === 'undefined') {
+    alert('No se pudo cargar el generador de Excel. Revisá la conexión y recargá la página.');
+    return;
+  }
+  const today = new Date();
+  const stamp = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+  XLSX.writeFile(buildInfoBsaleWorkbook(rows), `Info Bsale - cuentas sin direccion - ${label} - ${stamp}.xlsx`, { cellDates: true });
 }
 
 // ── Histórico de Objetivos ───────────────────────────────────────────────────

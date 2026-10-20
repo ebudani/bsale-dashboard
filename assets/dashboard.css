@@ -198,14 +198,16 @@
      en varias lineas. En celular no entra, ahi vuelve a scrollear. */
   #table-info-bsale { font-size: 12px; table-layout: fixed; width: 100%; min-width: 0; }
   #table-info-bsale th, #table-info-bsale td { padding: 6px 7px; overflow-wrap: anywhere; }
-  #table-info-bsale th:nth-child(1) { width: 25%; }
-  #table-info-bsale th:nth-child(2) { width: 9%; }
-  #table-info-bsale th:nth-child(3) { width: 17%; }
-  #table-info-bsale th:nth-child(4) { width: 27%; }
-  #table-info-bsale th:nth-child(5) { width: 10%; }
-  #table-info-bsale th:nth-child(6) { width: 12%; }
-  #table-info-bsale th { cursor: pointer; user-select: none; }
-  #table-info-bsale th .arrow { opacity: .5; margin-left: 3px; }
+  #table-info-bsale th:nth-child(1) { width: 21%; }
+  #table-info-bsale th:nth-child(2) { width: 8%; }
+  #table-info-bsale th:nth-child(3) { width: 15%; }
+  #table-info-bsale th:nth-child(4) { width: 11%; }
+  #table-info-bsale th:nth-child(5) { width: 24%; }
+  #table-info-bsale th:nth-child(6) { width: 10%; }
+  #table-info-bsale th:nth-child(7) { width: 11%; }
+  /* Link de una vendedora: sin columna Vendedor (todas las filas serian la misma). */
+  #table-info-bsale.hide-vendor-col th:nth-child(4),
+  #table-info-bsale.hide-vendor-col td:nth-child(4) { display: none; }
   #table-info-bsale td small { color: var(--gray-600); }
   @media (max-width: 760px) { #table-info-bsale { min-width: 720px; } }
   #table-objetivos-historico .col-total-dark { background: #c3cedc; }
