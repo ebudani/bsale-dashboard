@@ -512,13 +512,22 @@
     .client-history-tables { grid-template-columns: 1fr; }
   }
 
+  /* Filtro Marca (index.html): dashboard.js pone body[data-brand] en teox o
+     rrs. Cumplimiento muestra solo las columnas de esa marca (y el Total, que
+     deja de tener sentido), y se oculta la tabla de productividad de la otra. */
+  body[data-brand="teox"] .c-rrs, body[data-brand="teox"] .c-total,
+  body[data-brand="rrs"] .c-teox, body[data-brand="rrs"] .c-total { display: none; }
+  body[data-brand="teox"] #card-rrs, body[data-brand="rrs"] #card-teox { display: none; }
+  body[data-brand="teox"] .tables-row-3, body[data-brand="rrs"] .tables-row-3 { grid-template-columns: 1.5fr 1fr; }
+
   /* Cumplimiento + Teoxane + RRS (7, 4 and 4 columns in 1.5fr/1fr/1fr) need
      more room than the other 2-column rows to stay legible without
      scrolling -- collapse to 1 column earlier than the general 900px
      breakpoint below, instead of squeezing into an unreadable sliver on a
      not-quite-wide-enough window. */
   @media (max-width: 1150px) {
-    .tables-row-3 { grid-template-columns: 1fr; }
+    .tables-row-3,
+    body[data-brand="teox"] .tables-row-3, body[data-brand="rrs"] .tables-row-3 { grid-template-columns: 1fr; }
   }
 
   @media (max-width: 900px) {

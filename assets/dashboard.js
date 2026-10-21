@@ -26,6 +26,7 @@ let riskSearch = '';
 let riskSortKey = 'status';
 let riskSortDir = 1;
 let selectedVendor = 'all';
+let selectedBrand = 'all';   // filtro "Marca" del header (solo index.html): 'all' | una de BRANDS
 // Which render function period/vendor changes call -- full render() on
 // index.html, renderVendorSimple() on the personal vendor.html page.
 // Set once in loadData(), once we know which page/mode this is.
@@ -81,6 +82,77 @@ function skuColor(sku) {
 // this so aggregation across months groups the same person together.
 function canonVendor(key) {
   return usersMap[key] || key;
+}
+
+// ── Filtro de Marca (header de index.html) ───────────────────────────────────
+// 'all' deja el tablero como siempre; una marca limita KPIs, graficos y tablas
+// a esa marca. Los datos por marca ya vienen en ventas.json (by_brand,
+// by_vendor_brand, brand_productivity, client_product_history); la curva
+// diaria por marca (by_day_brand) existe desde que fetch_data.py la genera.
+const BRAND_SHORT = { 'Teoxane': 'Teoxane', 'RRS HA Long Lasting': 'RRS' };
+const BRAND_CLASS = { 'Teoxane': 'teox', 'RRS HA Long Lasting': 'rrs' };
+
+function brandOn() { return selectedBrand !== 'all'; }
+
+// Misma regla por nombre de producto que classify_brand() en fetch_data.py
+// (verificada contra by_brand: coincide en todos los meses y vendedoras).
+const TEOXANE_NAME_MARKERS = ['rha ', 'rha1', 'rha2', 'rha3', 'rha4', 'redensity', 'puresense'];
+const RRS_NAME_MARKERS = ['rrs', 'jeringa monodosis x 3ml'];
+function skuBrand(name) {
+  const n = (name || '').toLowerCase();
+  if (TEOXANE_NAME_MARKERS.some(k => n.includes(k))) return 'Teoxane';
+  if (RRS_NAME_MARKERS.some(k => n.includes(k))) return 'RRS HA Long Lasting';
+  return 'Otros';
+}
+
+function selectBrand(b) {
+  selectedBrand = b;
+  document.body.dataset.brand = brandOn() ? BRAND_CLASS[b] : '';
+  renderDispatch();
+}
+
+// Unidades y clientes de la marca en el periodo (y vendedora, si hay una
+// elegida). Un mes: lo mismo que las tablas de productividad. Varios meses:
+// los clientes se cuentan distintos desde el historico por cliente.
+function brandUnitsClients(months) {
+  let units = 0;
+  months.forEach(mm => {
+    const prod = selectedVendor === 'all'
+      ? (mm.brand_productivity || {})[selectedBrand]
+      : (((mm.brand_productivity_by_vendor || {})[selectedVendor]) || {})[selectedBrand];
+    if (prod) units += prod.units || 0;
+  });
+  let clients = 0;
+  if (months.length === 1) {
+    const mm = months[0];
+    const prod = selectedVendor === 'all'
+      ? (mm.brand_productivity || {})[selectedBrand]
+      : (((mm.brand_productivity_by_vendor || {})[selectedVendor]) || {})[selectedBrand];
+    clients = prod ? prod.clients || 0 : 0;
+  } else {
+    const keys = months.map(mm => `${mm.year}-${String(mm.month).padStart(2, '0')}`);
+    for (const cid in clientProductHistory) {
+      if (selectedVendor !== 'all' && clientVendorMap[cid] !== selectedVendor) continue;
+      const h = clientProductHistory[cid];
+      if (keys.some(k => ((h[k] || {})[selectedBrand] || 0) > 0)) clients++;
+    }
+  }
+  return { units, clients };
+}
+
+// Top de clientes de la marca, exacto, desde client_product_history (el top
+// mensual de ventas.json esta armado por venta total, no por marca).
+function brandTopClients(months) {
+  const keys = months.map(mm => `${mm.year}-${String(mm.month).padStart(2, '0')}`);
+  const rows = [];
+  for (const cid in clientProductHistory) {
+    const vendor = clientVendorMap[cid] || 'Sin asignar';
+    if (selectedVendor !== 'all' && vendor !== selectedVendor) continue;
+    const h = clientProductHistory[cid];
+    const neto = keys.reduce((s, k) => s + ((h[k] || {})[selectedBrand] || 0), 0);
+    if (neto > 0) rows.push({ cid, vendor, neto, name: (clientsMeta[cid] || {}).name || cid });
+  }
+  return rows.sort((a, b) => b.neto - a.neto);
 }
 
 // ── Formatting ─────────────────────────────────────────────────────────────
@@ -322,7 +394,8 @@ function aggregateMonths(months) {
   const agg = {
     total_neto: 0, count_facturas: 0, count_nc: 0, neto_facturas: 0, neto_nc: 0,
     by_brand: {}, by_vendor: {}, by_vendor_brand: {}, by_day: [], top_clients: [],
-    by_vendor_day: {}, top_clients_by_vendor: {}, by_sku: {}, by_vendor_sku: {}
+    by_vendor_day: {}, top_clients_by_vendor: {}, by_sku: {}, by_vendor_sku: {},
+    by_day_brand: {}, by_vendor_day_brand: {}, day_brand_ok: months.length > 0
   };
   const clientMap = {};
   const vendorClientMap = {};
@@ -363,6 +436,20 @@ function aggregateMonths(months) {
       });
     });
     (mm.by_day || []).forEach(d => agg.by_day.push(d));
+    // Curva diaria por marca: meses cargados antes de que fetch_data.py la
+    // generara no la traen -- con uno solo que falte, no se muestra (seria
+    // una curva con huecos).
+    if (!mm.by_day_brand) agg.day_brand_ok = false;
+    Object.entries(mm.by_day_brand || {}).forEach(([b, days]) => {
+      (agg.by_day_brand[b] = agg.by_day_brand[b] || []).push(...days);
+    });
+    Object.entries(mm.by_vendor_day_brand || {}).forEach(([k, brands]) => {
+      const name = canonVendor(k);
+      agg.by_vendor_day_brand[name] = agg.by_vendor_day_brand[name] || {};
+      Object.entries(brands || {}).forEach(([b, days]) => {
+        (agg.by_vendor_day_brand[name][b] = agg.by_vendor_day_brand[name][b] || []).push(...days);
+      });
+    });
     (mm.top_clients || []).forEach(c => {
       const key = c.id || c.name;
       if (!clientMap[key]) clientMap[key] = { name: c.name, count: 0, neto: 0, teox_neto: 0, teox_units: 0, rrs_neto: 0, rrs_units: 0 };
@@ -444,6 +531,22 @@ function applyVendorFilter(agg, vendorName) {
   };
 }
 
+// Filtro Marca encima del filtro Vendedor: deja en la vista solo lo de la
+// marca elegida. by_day queda en null si algun mes del periodo todavia no
+// trae la curva diaria por marca (ver aggregateMonths).
+function applyBrandFilter(view, agg) {
+  if (!brandOn()) return view;
+  const days = !agg.day_brand_ok ? null
+    : selectedVendor === 'all' ? (agg.by_day_brand[selectedBrand] || [])
+    : ((agg.by_vendor_day_brand[selectedVendor] || {})[selectedBrand] || []);
+  return {
+    ...view,
+    by_brand: { [selectedBrand]: (view.by_brand || {})[selectedBrand] || 0 },
+    by_sku: Object.fromEntries(Object.entries(view.by_sku || {}).filter(([sku]) => skuBrand(sku) === selectedBrand)),
+    by_day: days,
+  };
+}
+
 function vendorNetoForMonth(mm, vendorName) {
   if (vendorName === 'all') return mm.total_neto || 0;
   return Object.entries(mm.by_vendor || {})
@@ -472,7 +575,7 @@ function render() {
   // period would silently compare a full period's sales against whichever
   // few months happen to have a target, understating how much is really owed.
   const t      = months.length === 1 ? aggregateTargets(months) : null;
-  const view   = applyVendorFilter(agg, selectedVendor);
+  const view   = applyBrandFilter(applyVendorFilter(agg, selectedVendor), agg);
 
   renderKPIs(view, t, label);
   renderMonthlyChart();
@@ -483,12 +586,75 @@ function render() {
   renderSinAsignarDetail(agg, label);
   renderProductivityTable('tbody-prod-teox', 'Teoxane');
   renderProductivityTable('tbody-prod-rrs', 'RRS HA Long Lasting');
-  renderTopClients(view, label, months.length > 1);
+  renderTopClients(view, label, months.length > 1, months);
   renderCumplDetail();
 }
 
 // ── KPI Cards ───────────────────────────────────────────────────────────────
+// Con el filtro Marca las tarjetas cambian de contenido (venta, unidades,
+// clientes, cumplimiento de esa marca); estas dos guardan el rotulo original
+// para volver a "Todas" sin recargar.
+function setKpiCard(id, label, cls) {
+  const card = document.getElementById(id).closest('.kpi');
+  const lab = card.querySelector('label');
+  if (card.dataset.origLabel === undefined) { card.dataset.origLabel = lab.textContent; card.dataset.origClass = card.className; }
+  lab.textContent = label;
+  card.className = cls;
+  card.style.display = '';
+  return card;
+}
+
+function resetKpiCards() {
+  document.querySelectorAll('.kpi[data-orig-label]').forEach(card => {
+    card.querySelector('label').textContent = card.dataset.origLabel;
+    card.className = card.dataset.origClass;
+    card.style.display = '';
+  });
+}
+
+function renderKPIsBrand(m, t) {
+  const b = selectedBrand, short = BRAND_SHORT[b], cls = BRAND_CLASS[b];
+  const months = monthsForPeriod();
+  const neto = (m.by_brand || {})[b] || 0;
+  const { units, clients } = brandUnitsClients(months);
+  const set = (id, text) => { document.getElementById(id).textContent = text; };
+
+  setKpiCard('kpi-total', `Venta neta ${short}`, `kpi ${cls}`);
+  set('kpi-total', M(neto));
+  set('kpi-total-sub', `${PCT(m.total_neto ? neto / m.total_neto : 0)} de la venta total`);
+
+  setKpiCard('kpi-teox', 'Unidades', `kpi ${cls}`);
+  set('kpi-teox', Math.round(units).toLocaleString('es-CL'));
+  set('kpi-teox-sub', units ? `${M(neto / units)} neto por unidad` : '—');
+
+  setKpiCard('kpi-rrs', 'Clientes con compra', `kpi ${cls}`);
+  set('kpi-rrs', clients);
+  set('kpi-rrs-sub', clients
+    ? (months.length > 1
+        ? `${(units / clients).toFixed(1)} unid. por cliente en el periodo`
+        : `${(units / clients).toFixed(1)} unid./cliente`)
+    : '—');
+
+  const vendorTarget = selectedVendor !== 'all' && t ? (t.by_vendor[selectedVendor] || {}) : null;
+  const obj = !t ? 0 : selectedVendor !== 'all' ? ((vendorTarget || {})[b] || 0) : sumVendorTargets(t, b);
+  const card = setKpiCard('kpi-cumpl-card', `Cumplimiento ${short}`, 'kpi');
+  if (obj) {
+    const ratio = neto / obj;
+    set('kpi-cumpl', PCT(ratio));
+    set('kpi-cumpl-sub', `Obj: ${M(obj)}`);
+    card.className = `kpi ${ratio >= 1 ? 'green' : ratio >= 0.85 ? '' : 'red'}`;
+  } else {
+    set('kpi-cumpl', '—');
+    set('kpi-cumpl-sub', 'Sin objetivo');
+  }
+
+  // Facturas emitidas no se separa por marca (una factura mezcla marcas).
+  setKpiCard('kpi-docs', 'Facturas emitidas', 'kpi').style.display = 'none';
+}
+
 function renderKPIs(m, t, label) {
+  if (brandOn()) { renderKPIsBrand(m, t); return; }
+  resetKpiCards();
   const isVendor = selectedVendor !== 'all';
   const teox = (m.by_brand || {})['Teoxane'] || 0;
   const rrs  = (m.by_brand || {})['RRS HA Long Lasting'] || 0;
@@ -632,12 +798,12 @@ function renderCumplDetail() {
     t: aggregateTargets([mm]),
   }));
 
-  const cell = (real, obj) => {
+  const cell = (real, obj, cls) => {
     const ratio = obj ? real / obj : null;
-    return `<td class="group-start">${M(real)}</td>` +
+    return `<td class="group-start ${cls}">${M(real)}</td>` +
       (ratio !== null
-        ? `<td><span class="pill ${pillClass(ratio)}">${PCT0(ratio)}</span><br><small>${M(obj)}</small></td>`
-        : `<td>—</td>`);
+        ? `<td class="${cls}"><span class="pill ${pillClass(ratio)}">${PCT0(ratio)}</span><br><small>${M(obj)}</small></td>`
+        : `<td class="${cls}">—</td>`);
   };
 
   tbody.innerHTML = periods.map(p => {
@@ -660,10 +826,10 @@ function renderCumplDetail() {
     return `
       <tr>
         <td><strong>${p.label}</strong></td>
-        ${cell(teoxReal, teoxObj)}
-        ${cell(rrsReal, rrsObj)}
-        <td class="group-start col-total"><strong>${M(totalReal)}</strong></td>
-        <td class="col-total">${totalRatio !== null
+        ${cell(teoxReal, teoxObj, 'c-teox')}
+        ${cell(rrsReal, rrsObj, 'c-rrs')}
+        <td class="group-start col-total c-total"><strong>${M(totalReal)}</strong></td>
+        <td class="col-total c-total">${totalRatio !== null
           ? `<span class="pill ${pillClass(totalRatio)}">${PCT0(totalRatio)}</span><br><small>${M(totalObj)}</small>`
           : '—'}</td>
       </tr>`;
@@ -678,7 +844,11 @@ function renderMonthlyChart() {
   const rrss   = allMonths.map(m => vendorBrandForMonth(m, selectedVendor, 'RRS HA Long Lasting'));
   const inPeriod = periodIndices();
 
+  document.querySelector('#card-monthly h2').textContent =
+    'Ventas Netas Mensuales' + (brandOn() ? ` — ${BRAND_SHORT[selectedBrand]}` : '');
+
   const pct = (brandVal, i) => {
+    if (brandOn()) return null;   // una sola marca: no hay reparto que mostrar
     const sum = teoxs[i] + rrss[i];
     return sum ? Math.round(brandVal / sum * 100) : null;
   };
@@ -732,7 +902,7 @@ function renderMonthlyChart() {
           yAxisID: 'y',
           datalabels: { display: false },
         }
-      ]
+      ].filter(ds => !brandOn() || ds.label === selectedBrand)
     },
     options: {
       responsive: true,
@@ -761,7 +931,8 @@ function renderMonthlyChart() {
 
 // ── Sales by SKU (Producto / Servicio) pie ──────────────────────────────────
 function renderSkuChart(m, label) {
-  document.getElementById('chart-sku-title').textContent = `Ventas por Producto — ${label}`;
+  document.getElementById('chart-sku-title').textContent =
+    `Ventas por Producto${brandOn() ? ' ' + BRAND_SHORT[selectedBrand] : ''} — ${label}`;
 
   const entries = Object.entries(m.by_sku || {})
     .map(([sku, v]) => [sku, v.neto])
@@ -816,11 +987,15 @@ function renderSkuChart(m, label) {
 
 // ── Daily chart ──────────────────────────────────────────────────────────────
 function renderDailyChart(m, label, isMulti) {
-  document.getElementById('chart-daily-title').textContent = `Curva Diaria — ${label}`;
+  document.getElementById('chart-daily-title').textContent =
+    `Curva Diaria${brandOn() ? ' ' + BRAND_SHORT[selectedBrand] : ''} — ${label}`;
   const unavailable = document.getElementById('chart-daily-unavailable');
   const canvas = document.getElementById('chart-daily');
 
   if (m.by_day === null) {
+    unavailable.textContent = brandOn()
+      ? 'Curva diaria por marca: aún no disponible para este período'
+      : 'No disponible por vendedor';
     unavailable.style.display = 'flex';
     canvas.style.display = 'none';
     if (chartDaily) { chartDaily.destroy(); chartDaily = null; }
@@ -887,13 +1062,16 @@ function renderDailyChart(m, label, isMulti) {
 function renderBrandsChart() {
   const last12 = allMonths.slice(-12);
   const labels = last12.map(m => monthLabel(m.year, m.month));
+  const brandList = brandOn() ? [selectedBrand] : BRANDS;
+  document.querySelector('#card-brands h2').textContent =
+    brandOn() ? `${BRAND_SHORT[selectedBrand]} por Mes (últimos 12)` : 'Marcas por Mes (últimos 12)';
 
   if (chartBrands) chartBrands.destroy();
   chartBrands = new Chart(document.getElementById('chart-brands'), {
     type: 'line',
     data: {
       labels,
-      datasets: BRANDS.map(b => ({
+      datasets: brandList.map(b => ({
         label: b === 'RRS HA Long Lasting' ? 'RRS' : b,
         data: last12.map(m => vendorBrandForMonth(m, selectedVendor, b)),
         borderColor: BRAND_COLORS[b],
@@ -989,12 +1167,12 @@ function renderCumplTable(agg, t, label) {
     const tr = document.createElement('tr');
     tr.innerHTML = `
       <td><strong>${name}</strong></td>
-      <td class="group-start" style="color:${BRAND_COLORS['Teoxane']}">${M(teoxReal)}</td>
-      <td>${teoxR !== null ? `<span class="pill ${pillClass(teoxR)}">${PCT0(teoxR)}</span><br><small>${M(teoxObj)}</small>` : '—'}</td>
-      <td class="group-start" style="color:${BRAND_COLORS['RRS HA Long Lasting']}">${M(rrsReal)}</td>
-      <td>${rrsR !== null ? `<span class="pill ${pillClass(rrsR)}">${PCT0(rrsR)}</span><br><small>${M(rrsObj)}</small>` : '—'}</td>
-      <td class="group-start col-total"><strong>${M(totalReal)}</strong></td>
-      <td class="col-total">${totalR !== null ? `<span class="pill ${pillClass(totalR)}">${PCT0(totalR)}</span><br><small>${M(totalObj)}</small>` : '—'}</td>
+      <td class="group-start c-teox" style="color:${BRAND_COLORS['Teoxane']}">${M(teoxReal)}</td>
+      <td class="c-teox">${teoxR !== null ? `<span class="pill ${pillClass(teoxR)}">${PCT0(teoxR)}</span><br><small>${M(teoxObj)}</small>` : '—'}</td>
+      <td class="group-start c-rrs" style="color:${BRAND_COLORS['RRS HA Long Lasting']}">${M(rrsReal)}</td>
+      <td class="c-rrs">${rrsR !== null ? `<span class="pill ${pillClass(rrsR)}">${PCT0(rrsR)}</span><br><small>${M(rrsObj)}</small>` : '—'}</td>
+      <td class="group-start col-total c-total"><strong>${M(totalReal)}</strong></td>
+      <td class="col-total c-total">${totalR !== null ? `<span class="pill ${pillClass(totalR)}">${PCT0(totalR)}</span><br><small>${M(totalObj)}</small>` : '—'}</td>
     `;
     tbody.appendChild(tr);
   });
@@ -1012,12 +1190,12 @@ function renderCumplTable(agg, t, label) {
     tr2.className = 'cumpl-total-row';
     tr2.innerHTML = `
       <td>Total</td>
-      <td class="group-start" style="color:${BRAND_COLORS['Teoxane']}">${M(totTeox)}</td>
-      <td>${tTeox ? `<span class="pill ${pillClass(totTeox/tTeox)}">${PCT0(totTeox/tTeox)}</span><br><small>${M(tTeox)}</small>` : '—'}</td>
-      <td class="group-start" style="color:${BRAND_COLORS['RRS HA Long Lasting']}">${M(totRrs)}</td>
-      <td>${tRrs ? `<span class="pill ${pillClass(totRrs/tRrs)}">${PCT0(totRrs/tRrs)}</span><br><small>${M(tRrs)}</small>` : '—'}</td>
-      <td class="group-start col-total">${M(totTotal)}</td>
-      <td class="col-total">${tTotal ? `<span class="pill ${pillClass(totTotal/tTotal)}">${PCT0(totTotal/tTotal)}</span><br><small>${M(tTotal)}</small>` : '—'}</td>
+      <td class="group-start c-teox" style="color:${BRAND_COLORS['Teoxane']}">${M(totTeox)}</td>
+      <td class="c-teox">${tTeox ? `<span class="pill ${pillClass(totTeox/tTeox)}">${PCT0(totTeox/tTeox)}</span><br><small>${M(tTeox)}</small>` : '—'}</td>
+      <td class="group-start c-rrs" style="color:${BRAND_COLORS['RRS HA Long Lasting']}">${M(totRrs)}</td>
+      <td class="c-rrs">${tRrs ? `<span class="pill ${pillClass(totRrs/tRrs)}">${PCT0(totRrs/tRrs)}</span><br><small>${M(tRrs)}</small>` : '—'}</td>
+      <td class="group-start col-total c-total">${M(totTotal)}</td>
+      <td class="col-total c-total">${tTotal ? `<span class="pill ${pillClass(totTotal/tTotal)}">${PCT0(totTotal/tTotal)}</span><br><small>${M(tTotal)}</small>` : '—'}</td>
     `;
     tbody.appendChild(tr2);
   }
@@ -1031,7 +1209,12 @@ function renderSinAsignarDetail(agg, label) {
   const wrap = document.getElementById('sinasignar-detail');
   if (!wrap) return;
 
-  const rows = (agg.top_clients_by_vendor || {})['Sin asignar'] || [];
+  let rows = (agg.top_clients_by_vendor || {})['Sin asignar'] || [];
+  if (brandOn()) {
+    // Solo la venta de la marca elegida; las facturas no se separan por marca.
+    const key = BRAND_CLASS[selectedBrand] + '_neto';
+    rows = rows.map(c => ({ ...c, neto: c[key] || 0 })).filter(c => c.neto > 0).sort((a, b) => b.neto - a.neto);
+  }
   if (selectedVendor !== 'all' || !rows.length) {
     wrap.style.display = 'none';
     return;
@@ -1041,14 +1224,41 @@ function renderSinAsignarDetail(agg, label) {
   document.getElementById('tbody-sinasignar').innerHTML = rows.map(c => `
     <tr>
       <td>${c.name}</td>
-      <td>${c.count}</td>
+      <td>${brandOn() ? '—' : c.count}</td>
       <td>${M(c.neto)}</td>
     </tr>
   `).join('');
 }
 
 // ── Top clients ──────────────────────────────────────────────────────────────
-function renderTopClients(m, label, isMulti) {
+// Con el filtro Marca el top se arma por venta de esa marca (exacto, desde el
+// historico por cliente) y sin la columna Facturas, que no se separa por marca.
+function renderTopClientsBrand(label, months) {
+  const short = BRAND_SHORT[selectedBrand];
+  document.getElementById('table-clients-title').textContent = `Top 10 Clientes ${short} — ${label}`;
+  document.getElementById('clients-unavailable').style.display = 'none';
+  const table = document.getElementById('table-clients');
+  table.style.display = 'table';
+  table.querySelector('thead').innerHTML =
+    `<tr><th>#</th><th>Cliente</th><th>Vendedor</th><th>$ Neto ${short}</th><th>% de ${short}</th></tr>`;
+  const rows = brandTopClients(months);
+  const total = rows.reduce((s, r) => s + r.neto, 0);
+  document.getElementById('tbody-clients').innerHTML = rows.slice(0, 10).map((c, i) => `
+    <tr>
+      <td style="color:#94a3b8;width:28px">${i + 1}</td>
+      <td style="max-width:130px;white-space:normal;line-height:1.3"><strong>${escapeHtml(c.name)}</strong></td>
+      <td>${escapeHtml(c.vendor)}</td>
+      <td>${M(c.neto)}</td>
+      <td>${total ? (c.neto / total * 100).toFixed(1) : '—'}%</td>
+    </tr>
+  `).join('');
+}
+
+function renderTopClients(m, label, isMulti, months) {
+  const thead = document.querySelector('#table-clients thead');
+  if (thead.dataset.orig === undefined) thead.dataset.orig = thead.innerHTML;
+  if (brandOn()) { renderTopClientsBrand(label, months || monthsForPeriod()); return; }
+  thead.innerHTML = thead.dataset.orig;
   document.getElementById('table-clients-title').innerHTML =
     `Top 10 Clientes — ${label}` + (isMulti && m.top_clients !== null ? '<span class="approx-note">(aprox., suma de tops mensuales)</span>' : '');
 

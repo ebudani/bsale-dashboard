@@ -353,6 +353,9 @@ def build_month_record(year, month, facturas, nc_docs, exenta_docs, clients_meta
     # By day (total and per vendor)
     by_day = {}
     by_vendor_day = {}
+    PRODUCTIVITY_BRANDS_DAY = ["Teoxane", "RRS HA Long Lasting"]
+    by_day_brand = {}          # brand -> day -> neto
+    by_vendor_day_brand = {}   # vname -> brand -> day -> neto
     for d in facturas + exenta_docs:
         dia = datetime.datetime.utcfromtimestamp(d["emissionDate"]).strftime("%Y-%m-%d")
         by_day.setdefault(dia, {"count": 0, "neto": 0})
@@ -364,6 +367,18 @@ def build_month_record(year, month, facturas, nc_docs, exenta_docs, clients_meta
         by_vendor_day[vname].setdefault(dia, {"count": 0, "neto": 0})
         by_vendor_day[vname][dia]["count"] += 1
         by_vendor_day[vname][dia]["neto"] += d.get("netAmount", 0)
+
+        # Curva diaria por marca (filtro Marca del tablero): neto de cada
+        # factura repartido segun las lineas de cada marca. Igual que by_day,
+        # cuenta facturas/exentas (no NC).
+        if brand_details:
+            for brand, vals in brand_details.get(d["id"], {}).get("by_brand", {}).items():
+                if brand not in PRODUCTIVITY_BRANDS_DAY:
+                    continue
+                by_day_brand.setdefault(brand, {}).setdefault(dia, 0)
+                by_day_brand[brand][dia] += vals.get("neto", 0)
+                by_vendor_day_brand.setdefault(vname, {}).setdefault(brand, {}).setdefault(dia, 0)
+                by_vendor_day_brand[vname][brand][dia] += vals.get("neto", 0)
 
     # By vendor (keyed by vendor name from client assignment)
     by_vendor = {}
@@ -584,6 +599,17 @@ def build_month_record(year, month, facturas, nc_docs, exenta_docs, clients_meta
             vname: [{"date": k, "count": v["count"], "neto": v["neto"]}
                      for k, v in sorted(days.items())]
             for vname, days in by_vendor_day.items()
+        },
+        "by_day_brand": {
+            brand: [{"date": k, "neto": n} for k, n in sorted(days.items())]
+            for brand, days in by_day_brand.items()
+        },
+        "by_vendor_day_brand": {
+            vname: {
+                brand: [{"date": k, "neto": n} for k, n in sorted(days.items())]
+                for brand, days in brands.items()
+            }
+            for vname, brands in by_vendor_day_brand.items()
         },
         "by_brand": by_brand,
         "by_vendor_brand": by_vendor_brand,

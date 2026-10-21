@@ -6,7 +6,7 @@
 <title>AestheticsPro · Dashboard Ventas</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
-<link rel="stylesheet" href="assets/dashboard.css?v=20261022c">
+<link rel="stylesheet" href="assets/dashboard.css?v=20261022d">
 </head>
 <body>
 
@@ -28,6 +28,14 @@
     <button type="button" class="filter-select" onclick="location.href = 'cartera-riesgo.html'">Cartera en riesgo</button>
     <button type="button" class="filter-select" onclick="location.href = 'objetivos-historico.html'">Histórico Objetivos</button>
     <button type="button" class="filter-select" onclick="location.href = 'info-bsale.html' + (selectedVendor !== 'all' ? '?vendedor=' + encodeURIComponent(selectedVendor) : '')">Info Bsale</button>
+    <div class="filter-group" id="brand-filter-group">
+      <span class="filter-label">Marca</span>
+      <select id="brand-select" class="filter-select" onchange="selectBrand(this.value)">
+        <option value="all">Todas</option>
+        <option value="Teoxane">Teoxane</option>
+        <option value="RRS HA Long Lasting">RRS HA Long Lasting</option>
+      </select>
+    </div>
     <div class="filter-group" id="vendor-filter-group">
       <span class="filter-label">Vendedor</span>
       <select id="vendor-select" class="filter-select" onchange="selectVendor(this.value)"></select>
@@ -122,17 +130,17 @@
           <thead>
             <tr>
               <th rowspan="2">Vendedor</th>
-              <th colspan="2" class="group-start" style="color:#2563eb">Teoxane</th>
-              <th colspan="2" class="group-start" style="color:#d97706">RRS LL</th>
-              <th colspan="2" class="group-start col-total">Total</th>
+              <th colspan="2" class="group-start c-teox" style="color:#2563eb">Teoxane</th>
+              <th colspan="2" class="group-start c-rrs" style="color:#d97706">RRS LL</th>
+              <th colspan="2" class="group-start col-total c-total">Total</th>
             </tr>
             <tr>
-              <th class="group-start">Real</th>
-              <th>vs Obj</th>
-              <th class="group-start">Real</th>
-              <th>vs Obj</th>
-              <th class="group-start col-total">Real</th>
-              <th class="col-total">vs Obj</th>
+              <th class="group-start c-teox">Real</th>
+              <th class="c-teox">vs Obj</th>
+              <th class="group-start c-rrs">Real</th>
+              <th class="c-rrs">vs Obj</th>
+              <th class="group-start col-total c-total">Real</th>
+              <th class="col-total c-total">vs Obj</th>
             </tr>
           </thead>
           <tbody id="tbody-cumpl"></tbody>
@@ -157,17 +165,17 @@
           <thead>
             <tr>
               <th rowspan="2">Período</th>
-              <th colspan="2" class="group-start" style="color:#2563eb">Teoxane</th>
-              <th colspan="2" class="group-start" style="color:#d97706">RRS LL</th>
-              <th colspan="2" class="group-start col-total">Total</th>
+              <th colspan="2" class="group-start c-teox" style="color:#2563eb">Teoxane</th>
+              <th colspan="2" class="group-start c-rrs" style="color:#d97706">RRS LL</th>
+              <th colspan="2" class="group-start col-total c-total">Total</th>
             </tr>
             <tr>
-              <th class="group-start">Real</th>
-              <th>vs Obj</th>
-              <th class="group-start">Real</th>
-              <th>vs Obj</th>
-              <th class="group-start col-total">Real</th>
-              <th class="col-total">vs Obj</th>
+              <th class="group-start c-teox">Real</th>
+              <th class="c-teox">vs Obj</th>
+              <th class="group-start c-rrs">Real</th>
+              <th class="c-rrs">vs Obj</th>
+              <th class="group-start col-total c-total">Real</th>
+              <th class="col-total c-total">vs Obj</th>
             </tr>
           </thead>
           <tbody id="tbody-cumpl-detail"></tbody>
@@ -221,9 +229,9 @@
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
-<script src="assets/firebase-config.js?v=20261022c"></script>
-<script src="assets/risk-contacts.js?v=20261022c"></script>
-<script src="assets/pin-gate.js?v=20261022c"></script>
-<script src="assets/dashboard.js?v=20261022c"></script>
+<script src="assets/firebase-config.js?v=20261022d"></script>
+<script src="assets/risk-contacts.js?v=20261022d"></script>
+<script src="assets/pin-gate.js?v=20261022d"></script>
+<script src="assets/dashboard.js?v=20261022d"></script>
 </body>
 </html>
