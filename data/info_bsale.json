@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-20T23:41:28.111852+00:00",
+  "updated_at": "2026-10-21T23:58:14.568642+00:00",
   "accounts_with_sales": 532,
-  "accounts_without_address": 467,
+  "accounts_without_address": 463,
   "accounts": [
     {
       "id": "903",
@@ -244,15 +244,6 @@
       "contact": "Claudia Loncon",
       "phone": "9971078815",
       "billing_address": "Renaca norte 265, Viña del Mar, Viña del Mar",
-      "last_sale": "2026-10-13"
-    },
-    {
-      "id": "1136",
-      "name": "Servicios Odontológicos Mafrasa Limitada",
-      "rut": "76772234-6",
-      "contact": "Maria francisca Salvo",
-      "phone": "",
-      "billing_address": "Pedro Lira 1080, San Pedro de la Paz, Puerto Varas",
       "last_sale": "2026-10-13"
     },
     {
@@ -1201,15 +1192,6 @@
       "last_sale": "2026-08-27"
     },
     {
-      "id": "1068",
-      "name": "ALL SMILES SPA",
-      "rut": "76230842-8",
-      "contact": "Dennisse Rodriguez",
-      "phone": "",
-      "billing_address": "Padre Mariano 103, Providencia, Santiago",
-      "last_sale": "2026-08-27"
-    },
-    {
       "id": "1232",
       "name": "SOCIEDAD ODONTOLOGICA COLMILLO SPA",
       "rut": "77892071-9",
@@ -1577,15 +1559,6 @@
       "phone": "930126486",
       "billing_address": "El Alba 9500. Torre B, Las Condes, Santiago",
       "last_sale": "2026-07-23"
-    },
-    {
-      "id": "913",
-      "name": "SOCIEDAD DE PROFESIONALES ARASAL SPA",
-      "rut": "76511631-7",
-      "contact": "Emiliano Figueroa",
-      "phone": "",
-      "billing_address": "Ramón Subercaseaux 1268, San Miguel, Santiago",
-      "last_sale": "2026-07-22"
     },
     {
       "id": "1060",
@@ -3242,15 +3215,6 @@
       "phone": "999538590",
       "billing_address": "calle 48 medio oriente C, Talca, Talca",
       "last_sale": "2025-09-02"
-    },
-    {
-      "id": "720",
-      "name": "FG ODONTOLOGIA Y ESTETICA SPA",
-      "rut": "77252752-7",
-      "contact": "Francisca Gleboff",
-      "phone": "",
-      "billing_address": "PAUL HARRIS 10349 CLINICA 104 CLINICA ESTORIL 104, Las Condes, Santiago",
-      "last_sale": "2025-09-01"
     },
     {
       "id": "898",
