@@ -1,8 +1,26 @@
 {
-  "updated_at": "2026-10-21T23:58:14.568642+00:00",
-  "accounts_with_sales": 532,
-  "accounts_without_address": 463,
+  "updated_at": "2026-10-22T23:56:40.701010+00:00",
+  "accounts_with_sales": 533,
+  "accounts_without_address": 461,
   "accounts": [
+    {
+      "id": "476",
+      "name": "DERMOESTHETIC SPA",
+      "rut": "76506352-3",
+      "contact": "",
+      "phone": "",
+      "billing_address": "Augusto Leguia Sur 79 202, Las Condes, Santiago",
+      "last_sale": "2026-10-22"
+    },
+    {
+      "id": "1124",
+      "name": "JL servicios médicos limitada",
+      "rut": "78218408-3",
+      "contact": "Maria Jimena Llorente",
+      "phone": "933098595",
+      "billing_address": "Av. Presidente Kennedy 5600, Vitacura, Santiago",
+      "last_sale": "2026-10-22"
+    },
     {
       "id": "903",
       "name": "INVERSIONES Y SERVICIOS MEDICOS JUAN OPAZO SPA",
@@ -194,10 +212,10 @@
     },
     {
       "id": "1206",
-      "name": "Sociedad e Inversiones Mudra Skin Spa",
+      "name": "Sociedad E Inversiones Mudra Skin Spa",
       "rut": "78264052-6",
-      "contact": "Yarelli perez Valentina Pavez",
-      "phone": "",
+      "contact": "Yarelli Perez Valentina Pavez",
+      "phone": "941735910",
       "billing_address": "Av Presidente Kennedy 5735, OF 1601, Las Condes, Santiago",
       "last_sale": "2026-10-14"
     },
@@ -548,7 +566,7 @@
       "name": "Clinica Gutierrez S.A",
       "rut": "96793590-5",
       "contact": "Mariana Rabajille Hizmeri",
-      "phone": "",
+      "phone": "941222959",
       "billing_address": "Benjamin 2945, Las Condes, Santiago",
       "last_sale": "2026-09-28"
     },
@@ -560,15 +578,6 @@
       "phone": "954164192",
       "billing_address": "Bellohorizonte 781, Rancagua, Rancagua",
       "last_sale": "2026-09-23"
-    },
-    {
-      "id": "471",
-      "name": "CESAR IGNACIO ZAPATA SEPULVEDA",
-      "rut": "15118002-7",
-      "contact": "",
-      "phone": "5696140152",
-      "billing_address": "LAS MULATAS 360, Valdivia, Valdivia",
-      "last_sale": "2026-09-21"
     },
     {
       "id": "548",
@@ -755,7 +764,7 @@
       "name": "Romina Saravia Alvarez",
       "rut": "17307609-6",
       "contact": "",
-      "phone": "",
+      "phone": "988907285",
       "billing_address": "Las Acacias 7800 dpto 1204, La Florida, Santiago",
       "last_sale": "2026-09-10"
     },
@@ -1016,7 +1025,7 @@
       "name": "Servicio Odontológico Macarena Hald Spa",
       "rut": "77408221-2",
       "contact": "Macarena Hald",
-      "phone": "",
+      "phone": "978094691",
       "billing_address": "Shimon peres 51 , dpto 603, Lo Barnechea, Santiago",
       "last_sale": "2026-09-06"
     },
@@ -1094,10 +1103,10 @@
     },
     {
       "id": "1217",
-      "name": "Jasmin Del Valle Angel Angel",
+      "name": "Jasmin Del Valle Angel",
       "rut": "27134807-k",
       "contact": "",
-      "phone": "",
+      "phone": "987465498",
       "billing_address": "La Concepción 65 oficina 902, Providencia, Santiago",
       "last_sale": "2026-09-02"
     },
@@ -1205,7 +1214,7 @@
       "name": "Dra. Barbara Guzman Spa",
       "rut": "78366268-K",
       "contact": "Barbara Guzmán",
-      "phone": "",
+      "phone": "975131439",
       "billing_address": "Nelson 2040, depto 410, Ñuñoa, Santiago",
       "last_sale": "2026-08-27"
     },
@@ -1313,7 +1322,7 @@
       "name": "Camila Retamal",
       "rut": "19805814-9",
       "contact": "",
-      "phone": "",
+      "phone": "956218834",
       "billing_address": "Calle 3, casa 697, Maule, Maule",
       "last_sale": "2026-08-20"
     },
@@ -1328,10 +1337,10 @@
     },
     {
       "id": "1223",
-      "name": "SERVICIOS MÉDICOS Y ODONTOLÓGICOS LE FACE SPA",
+      "name": "Servicios Médicos Y Odontológicos Le Face Spa",
       "rut": "78178398-6",
       "contact": "Francisco Escala",
-      "phone": "",
+      "phone": "989063335",
       "billing_address": "AV. LAS CONDES 12587 DP 206A, Las Condes, Santiago",
       "last_sale": "2026-08-18"
     },
@@ -1372,15 +1381,6 @@
       "last_sale": "2026-08-14"
     },
     {
-      "id": "476",
-      "name": "DERMOESTHETIC SPA",
-      "rut": "76506352-3",
-      "contact": "",
-      "phone": "",
-      "billing_address": "Augusto Leguia Sur 79 202, Las Condes, Santiago",
-      "last_sale": "2026-08-12"
-    },
-    {
       "id": "488",
       "name": "ODONTOLOGÌA Y ESTÈTICA DANIELLA LILLO VIDAURRE E.I.R.L.",
       "rut": "77573876-6",
@@ -1396,15 +1396,6 @@
       "contact": "Rodrigo Contreras",
       "phone": "",
       "billing_address": "CAMINO DE LA AGUADA 10445, Lo Barnechea, Santiago",
-      "last_sale": "2026-08-12"
-    },
-    {
-      "id": "822",
-      "name": "DERMA FEMM LIMITADA",
-      "rut": "77768439-6",
-      "contact": "Oriana Quintero",
-      "phone": "94871536",
-      "billing_address": "BADAJOZ 100, Las Condes, Santiago",
       "last_sale": "2026-08-12"
     },
     {
@@ -1819,15 +1810,6 @@
       "contact": "Gianina Escobar",
       "phone": "961236417",
       "billing_address": "Av El Rodeo Poniente 1950, Pudahuel, Santiago",
-      "last_sale": "2026-06-18"
-    },
-    {
-      "id": "1124",
-      "name": "JL servicios médicos limitada",
-      "rut": "78218408-3",
-      "contact": "Maria Jimena Llorente",
-      "phone": "933098595",
-      "billing_address": "Av. Presidente Kennedy 5600, Vitacura, Santiago",
       "last_sale": "2026-06-18"
     },
     {
