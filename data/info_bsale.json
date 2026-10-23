@@ -1,8 +1,17 @@
 {
-  "updated_at": "2026-10-22T23:56:40.701010+00:00",
-  "accounts_with_sales": 533,
+  "updated_at": "2026-10-23T23:50:15.642071+00:00",
+  "accounts_with_sales": 535,
   "accounts_without_address": 461,
   "accounts": [
+    {
+      "id": "893",
+      "name": "SERVICIOS ODONTOLÓGICOS Y ESTÉTICOS NBF SPA",
+      "rut": "77246924-1",
+      "contact": "Jorge Ramirez",
+      "phone": "942156418",
+      "billing_address": "AV. BOSQUES DE MONTEMAR 30, Viña del Mar, Viña del Mar",
+      "last_sale": "2026-10-23"
+    },
     {
       "id": "476",
       "name": "DERMOESTHETIC SPA",
@@ -1469,15 +1478,6 @@
       "phone": "32604729",
       "billing_address": "Holanda 099, Providencia, Santiago",
       "last_sale": "2026-08-06"
-    },
-    {
-      "id": "893",
-      "name": "SERVICIOS ODONTOLÓGICOS Y ESTÉTICOS NBF SPA",
-      "rut": "77246924-1",
-      "contact": "Jorge Ramirez",
-      "phone": "942156418",
-      "billing_address": "AV. BOSQUES DE MONTEMAR 30, Viña del Mar, Viña del Mar",
-      "last_sale": "2026-08-04"
     },
     {
       "id": "916",
