@@ -28,23 +28,24 @@ const STATUS_LABEL = { quiebre: 'Quiebre', critico: 'Crítico', bajo: 'Bajo', ok
 const STATUS_PILL  = { quiebre: 'quiebre', critico: 'low', bajo: 'mid', ok: 'ok', sindemanda: 'neutral' };
 const STATUS_RANK  = { quiebre: 0, critico: 1, bajo: 2, ok: 3, sindemanda: 4 };
 
-// Mismos marcadores de nombre que classify_brand() en scripts/fetch_data.py
-// (la parte por variant_id no aplica aca -- stock.json no trae variant_id,
-// solo el nombre del producto -- pero cubre todo el catalogo igual).
-const TEOXANE_NAME_MARKERS = ['rha ', 'rha1', 'rha2', 'rha3', 'rha4', 'redensity', 'puresense'];
-const RRS_NAME_MARKERS = ['rrs', 'jeringa monodosis x 3ml'];
+// La clasificacion por nombre (skuBrand) y el filtro Marca viven en brand-filter.js.
 const BRAND_TAG = {
   'Teoxane': { label: 'Teoxane', bg: '#dbeafe', fg: '#1d4ed8' },
   'RRS HA Long Lasting': { label: 'LL', bg: '#fef3c7', fg: '#b45309' },
   'Otros': { label: 'Otros', bg: '#f1f5f9', fg: '#475569' },
 };
 
-function classifyBrand(sku) {
-  const name = (sku || '').toLowerCase();
-  if (TEOXANE_NAME_MARKERS.some(m => name.includes(m))) return 'Teoxane';
-  if (RRS_NAME_MARKERS.some(m => name.includes(m))) return 'RRS HA Long Lasting';
-  return 'Otros';
+let stockRows = [];
+
+// Con el filtro Marca, solo los productos de esa marca (los KPIs de estado
+// cuentan lo mismo que la tabla).
+function renderStockPage() {
+  const rows = brandOn() ? stockRows.filter(r => r.brand === selectedBrand) : stockRows;
+  renderSummary(rows);
+  renderTable(rows);
 }
+
+function applyBrandChange() { renderStockPage(); }
 
 async function loadStock() {
   const [stockRes, ventasRes] = await Promise.all([
@@ -63,7 +64,7 @@ async function loadStock() {
     const status = statusFor(it.quantity_available, demand);
     const coverage = demand > 0 ? it.quantity_available / demand : null;
     const recommended = Math.ceil(demand * TARGET_MONTHS);
-    return { ...it, demand, status, coverage, recommended, brand: classifyBrand(it.sku) };
+    return { ...it, demand, status, coverage, recommended, brand: skuBrand(it.sku) };
   });
 
   rows.sort((a, b) => {
@@ -73,8 +74,9 @@ async function loadStock() {
     return ca - cb;
   });
 
-  renderSummary(rows);
-  renderTable(rows);
+  stockRows = rows;
+  initBrandFilter();
+  renderStockPage();
 
   document.getElementById('loading').style.display = 'none';
   document.getElementById('content').classList.add('loaded');

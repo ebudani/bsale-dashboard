@@ -6,7 +6,7 @@
 <title>AestheticsPro · Histórico por Cliente</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
-<link rel="stylesheet" href="assets/dashboard.css?v=20261022d">
+<link rel="stylesheet" href="assets/dashboard.css?v=20261022f">
 </head>
 <body>
 
@@ -52,7 +52,7 @@
           <div class="client-history-left">
             <h3>Por año</h3>
             <table id="table-client-history-years">
-              <thead><tr><th>Año</th><th>Teoxane</th><th>RRS LL</th><th>Total</th></tr></thead>
+              <thead><tr><th>Año</th><th class="c-teox">Teoxane</th><th class="c-rrs">RRS LL</th><th class="c-total">Total</th></tr></thead>
               <tbody id="tbody-client-history-years"></tbody>
             </table>
             <h3 id="client-history-months-title" class="client-history-months-title">Mes a mes</h3>
@@ -65,12 +65,12 @@
                   <th colspan="2" class="group-start">Var.</th>
                 </tr>
                 <tr>
-                  <th class="group-start col-teox">Teoxane</th>
-                  <th>LL</th>
-                  <th class="group-start col-teox">Teoxane</th>
-                  <th>LL</th>
-                  <th class="group-start col-teox">Teoxane</th>
-                  <th>LL</th>
+                  <th class="group-start col-teox c-teox">Teoxane</th>
+                  <th class="c-rrs">LL</th>
+                  <th class="group-start col-teox c-teox">Teoxane</th>
+                  <th class="c-rrs">LL</th>
+                  <th class="group-start col-teox c-teox">Teoxane</th>
+                  <th class="c-rrs">LL</th>
                 </tr>
               </thead>
               <tbody id="tbody-client-history-months"></tbody>
@@ -78,11 +78,11 @@
           </div>
           <div class="client-history-charts">
             <div class="chart-wrap client-history-chart-wrap"><canvas id="chart-client-history-years"></canvas></div>
-            <div>
+            <div id="ch-wrap-teox">
               <div class="client-history-chart-label">Teoxane</div>
               <div class="chart-wrap client-history-chart-wrap"><canvas id="chart-client-history-months-teox"></canvas></div>
             </div>
-            <div>
+            <div id="ch-wrap-rrs">
               <div class="client-history-chart-label">RRS LL</div>
               <div class="chart-wrap client-history-chart-wrap"><canvas id="chart-client-history-months-rrs"></canvas></div>
             </div>
@@ -99,8 +99,9 @@
   window.CLIENT_HISTORY_ONLY = true;
   window.ALLOW_GENERAL = true;
 </script>
-<script src="assets/vendor-links.js?v=20261022d"></script>
-<script src="assets/pin-gate.js?v=20261022d"></script>
-<script src="assets/dashboard.js?v=20261022d"></script>
+<script src="assets/vendor-links.js?v=20261022f"></script>
+<script src="assets/pin-gate.js?v=20261022f"></script>
+<script src="assets/brand-filter.js?v=20261022f"></script>
+<script src="assets/dashboard.js?v=20261022f"></script>
 </body>
 </html>

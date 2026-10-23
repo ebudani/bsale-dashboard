@@ -26,7 +26,6 @@ let riskSearch = '';
 let riskSortKey = 'status';
 let riskSortDir = 1;
 let selectedVendor = 'all';
-let selectedBrand = 'all';   // filtro "Marca" del header (solo index.html): 'all' | una de BRANDS
 // Which render function period/vendor changes call -- full render() on
 // index.html, renderVendorSimple() on the personal vendor.html page.
 // Set once in loadData(), once we know which page/mode this is.
@@ -84,31 +83,31 @@ function canonVendor(key) {
   return usersMap[key] || key;
 }
 
-// ── Filtro de Marca (header de index.html) ───────────────────────────────────
-// 'all' deja el tablero como siempre; una marca limita KPIs, graficos y tablas
-// a esa marca. Los datos por marca ya vienen en ventas.json (by_brand,
-// by_vendor_brand, brand_productivity, client_product_history); la curva
-// diaria por marca (by_day_brand) existe desde que fetch_data.py la genera.
-const BRAND_SHORT = { 'Teoxane': 'Teoxane', 'RRS HA Long Lasting': 'RRS' };
-const BRAND_CLASS = { 'Teoxane': 'teox', 'RRS HA Long Lasting': 'rrs' };
-
-function brandOn() { return selectedBrand !== 'all'; }
-
-// Misma regla por nombre de producto que classify_brand() en fetch_data.py
-// (verificada contra by_brand: coincide en todos los meses y vendedoras).
-const TEOXANE_NAME_MARKERS = ['rha ', 'rha1', 'rha2', 'rha3', 'rha4', 'redensity', 'puresense'];
-const RRS_NAME_MARKERS = ['rrs', 'jeringa monodosis x 3ml'];
-function skuBrand(name) {
-  const n = (name || '').toLowerCase();
-  if (TEOXANE_NAME_MARKERS.some(k => n.includes(k))) return 'Teoxane';
-  if (RRS_NAME_MARKERS.some(k => n.includes(k))) return 'RRS HA Long Lasting';
-  return 'Otros';
+// ── Filtro de Marca ──────────────────────────────────────────────────────────
+// El estado, el selector del encabezado y skuBrand() viven en brand-filter.js
+// (compartido con stock.js). Aca: como se repinta cada pagina al cambiar la
+// marca, y los calculos por marca que usan las secciones.
+function applyBrandChange() {
+  if (window.INFO_BSALE_ONLY) { if (window.infoBsaleRefresh) window.infoBsaleRefresh(); }
+  else if (window.OBJETIVOS_ONLY) renderObjetivosHistorico();
+  else if (window.CLIENT_HISTORY_ONLY) {
+    const search = document.getElementById('client-history-search');
+    if (search && document.getElementById('client-history-suggestions').classList.contains('open')) renderClientHistorySuggestions(search.value);
+    if (clientHistorySelectedCid) renderClientHistory(clientHistorySelectedCid);
+  }
+  else if (renderDispatch) renderDispatch();
 }
 
-function selectBrand(b) {
-  selectedBrand = b;
-  document.body.dataset.brand = brandOn() ? BRAND_CLASS[b] : '';
-  renderDispatch();
+// Cuentas que alguna vez compraron la marca (en lo que trackea el tablero):
+// con el filtro Marca, las listas de cuentas muestran solo esas.
+function lastBrandMonth(cid) {
+  const h = clientProductHistory[cid] || {};
+  return Object.keys(h).filter(mk => ((h[mk] || {})[selectedBrand] || 0) > 0).sort().pop() || '';
+}
+
+function clientHasBrand(cid) {
+  const h = clientProductHistory[cid];
+  return !!h && Object.keys(h).some(mk => ((h[mk] || {})[selectedBrand] || 0) > 0);
 }
 
 // Unidades y clientes de la marca en el periodo (y vendedora, si hay una
@@ -220,6 +219,7 @@ async function loadData() {
   document.getElementById('updated-at').textContent =
     'Actualizado: ' + (ventas.updated_at || '').slice(0, 16).replace('T', ' ') + ' UTC';
 
+  initBrandFilter();
   buildSkuColorMap();
   buildVendorSelector();
   if (!applyVendorLock()) return; // window.LOCKED_VENDOR set but not a real vendor -- bail, error already shown
@@ -743,7 +743,7 @@ function renderVendorSimple() {
   const label  = periodLabel(months);
   const agg    = aggregateMonths(months);
   const t      = months.length === 1 ? aggregateTargets(months) : null;
-  const view   = applyVendorFilter(agg, selectedVendor);
+  const view   = applyBrandFilter(applyVendorFilter(agg, selectedVendor), agg);
 
   renderKPIs(view, t, label);
   renderCumplDetail();
@@ -778,8 +778,8 @@ function renderTopClientsForVendor() {
   const months = monthsForTopClientsPeriod();
   const label  = topClientsPeriodLabel(months);
   const agg    = aggregateMonths(months);
-  const view   = applyVendorFilter(agg, selectedVendor);
-  renderTopClients(view, label, months.length > 1);
+  const view   = applyBrandFilter(applyVendorFilter(agg, selectedVendor), agg);
+  renderTopClients(view, label, months.length > 1, months);
 }
 
 function onTopClientsPeriodChange(mode) {
@@ -1325,13 +1325,26 @@ function contactNameFor(meta) {
   return full;
 }
 
+// Con el filtro Marca, la actividad de cada cuenta es la de esa marca (desde
+// client_product_history) y solo entran las cuentas que alguna vez la
+// compraron: "Sin historial" pasa a ser "nunca compro esta marca" y esas
+// cuentas no se listan.
+function riskActivityFor(cid) {
+  if (!brandOn()) return clientActivity[cid] || {};
+  const h = clientProductHistory[cid] || {};
+  const out = {};
+  Object.keys(h).forEach(mk => { out[mk] = (h[mk] || {})[selectedBrand] || 0; });
+  return out;
+}
+
 function buildRiskRoster() {
   const { current, prev } = riskMonthKeys();
   const rows = [];
   for (const cid in clientVendorMap) {
     const vendor = clientVendorMap[cid];
     if (selectedVendor !== 'all' && vendor !== selectedVendor) continue;
-    const months = clientActivity[cid] || {};
+    if (brandOn() && !clientHasBrand(cid)) continue;
+    const months = riskActivityFor(cid);
     const curVal = months[current] || 0;
     const prevVal = months[prev] || 0;
     let lastMonth = null, everBought = false;
@@ -1345,8 +1358,10 @@ function buildRiskRoster() {
     else status = 'riesgo';
 
     const meta = clientsMeta[cid] || {};
-    const lastBrands = lastPurchaseBrands[cid] && lastPurchaseBrands[cid].month === lastMonth
-      ? lastPurchaseBrands[cid] : null;
+    const lastBrands = brandOn()
+      ? (lastMonth ? { [selectedBrand]: months[lastMonth] } : null)
+      : (lastPurchaseBrands[cid] && lastPurchaseBrands[cid].month === lastMonth
+          ? lastPurchaseBrands[cid] : null);
     const rc = (typeof getRiskContact === 'function') ? getRiskContact(cid) : null;
     // "Contactado" y el comentario son por mes -- arrancan en blanco cada
     // mes nuevo. lastContactedAt/lastNote quedan aparte como referencia de
@@ -1418,7 +1433,8 @@ function csvCell(v) {
 function downloadRiskCSV() {
   const headers = [
     'Cuenta', 'RUT', 'Vendedor', 'Estado', 'Mes en curso', 'Mes anterior',
-    'Última compra', 'Teoxane (última compra)', 'RRS (última compra)',
+    'Última compra',
+    ...(brandOn() ? [`${BRAND_SHORT[selectedBrand]} (última compra)`] : ['Teoxane (última compra)', 'RRS (última compra)']),
     'Contactado este mes', 'Fecha de contacto', 'Contactado por', 'Comentario',
     'Último contacto (referencia)', 'Último comentario (referencia)', 'Volver a contactar',
   ];
@@ -1428,8 +1444,9 @@ function downloadRiskCSV() {
       r.name, r.rut, r.vendor, RISK_STATUS_LABEL[r.status],
       r.current, r.prev,
       r.lastMonth ? monthLabel(...r.lastMonth.split('-').map(Number)) : '',
-      r.lastBrands ? (r.lastBrands['Teoxane'] || 0) : '',
-      r.lastBrands ? (r.lastBrands['RRS HA Long Lasting'] || 0) : '',
+      ...(brandOn()
+        ? [r.lastBrands ? (r.lastBrands[selectedBrand] || 0) : '']
+        : [r.lastBrands ? (r.lastBrands['Teoxane'] || 0) : '', r.lastBrands ? (r.lastBrands['RRS HA Long Lasting'] || 0) : '']),
       r.contacted ? 'Sí' : 'No',
       r.contactedAt ? formatContactDate(r.contactedAt) : '',
       r.contactedBy || '',
@@ -1443,7 +1460,8 @@ function downloadRiskCSV() {
   const blob = new Blob(['﻿' + lines.join('\r\n')], { type: 'text/csv;charset=utf-8;' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
-  const vendorLabel = selectedVendor === 'all' ? 'todos' : selectedVendor.replace(/\s+/g, '-');
+  const vendorLabel = (selectedVendor === 'all' ? 'todos' : selectedVendor.replace(/\s+/g, '-')) +
+    (brandOn() ? '_' + BRAND_SHORT[selectedBrand] : '');
   const today = new Date().toISOString().slice(0, 10);
   a.href = url;
   a.download = `cartera-en-riesgo_${vendorLabel}_${today}.csv`;
@@ -1568,7 +1586,17 @@ function renderCarteraRiesgo() {
   const card = document.getElementById('cartera-riesgo-card');
   card.style.display = 'block';
   document.getElementById('table-risk-title').textContent =
-    `Cartera en riesgo — ${selectedVendor === 'all' ? 'Todas las vendedoras' : selectedVendor}`;
+    `Cartera en riesgo${brandOn() ? ' ' + BRAND_SHORT[selectedBrand] : ''} — ${selectedVendor === 'all' ? 'Todas las vendedoras' : selectedVendor}`;
+  // Leyenda de estados: con Marca, "compro" pasa a ser "compro RRS" (la actividad es de esa marca).
+  const legend = card.querySelector('.risk-legend');
+  if (legend) {
+    const b = brandOn() ? ` ${BRAND_SHORT[selectedBrand]}` : '';
+    legend.innerHTML =
+      `<span><span class="pill ok">Activa</span> compró${b} este mes</span>` +
+      `<span><span class="pill mid">Atención</span> no compró${b} este mes, sí el anterior</span>` +
+      `<span><span class="pill low">En riesgo</span> no compró${b} estos dos meses, pero compró antes</span>` +
+      `<span><span class="pill neutral">Sin historial</span> nunca compró${b}</span>`;
+  }
   const rows = buildRiskRoster();
   renderRiskToolbar(rows);
   renderRiskTable(rows);
@@ -1608,9 +1636,17 @@ async function renderInfoBsale() {
 
   // Vendedor segun el atributo "Vendedor" de Bsale (clientVendorMap). Con el link
   // de una vendedora, solo sus cuentas.
-  const accounts = (data.accounts || [])
-    .map(a => ({ ...a, vendor: clientVendorMap[a.id] || 'Sin asignar' }))
-    .filter(a => !window.LOCKED_VENDOR || a.vendor === window.LOCKED_VENDOR);
+  // Con el filtro Marca, solo las cuentas que alguna vez compraron esa marca.
+  let accounts = [];
+  const loadAccounts = () => {
+    accounts = (data.accounts || [])
+      .map(a => ({ ...a, vendor: clientVendorMap[a.id] || 'Sin asignar' }))
+      .filter(a => !window.LOCKED_VENDOR || a.vendor === window.LOCKED_VENDOR)
+      .filter(a => !brandOn() || clientHasBrand(a.id))
+      // Con Marca: mes de la ultima compra de esa marca (el historico es mensual).
+      .map(a => ({ ...a, last_brand: brandOn() ? lastBrandMonth(a.id) : '' }));
+  };
+  loadAccounts();
   const fmtDate = iso => iso.split('-').reverse().join('-');
 
   // Cuadro resumen: cuentas sin direccion por vendedora (siempre sobre todas las
@@ -1642,13 +1678,18 @@ async function renderInfoBsale() {
     const wanted = new URLSearchParams(location.search).get('vendedor');
     if (wanted && names.includes(wanted)) vendorSel.value = wanted;
   }
+  // Total de cuentas con ventas, para el texto del contador (con Marca: las de esa marca).
+  const accountsWithSales = () => brandOn()
+    ? Object.keys(clientProductHistory).filter(clientHasBrand).length
+    : data.accounts_with_sales;
 
   // Orden por clic en cada titulo (un clic ordena, otro invierte). Arranca por
   // fecha de ultima venta, la mas reciente primero. Los vacios van siempre al final.
   let sortKey = 'last_sale', sortDir = -1;
   const sortRows = rows => rows.slice().sort((a, b) => {
     if (sortKey === 'address') return 0; // todas son "Sin direccion"
-    const av = a[sortKey] || '', bv = b[sortKey] || '';
+    const k = sortKey === 'last_sale' && brandOn() ? 'last_brand' : sortKey;
+    const av = a[k] || '', bv = b[k] || '';
     if (!av && !bv) return 0;
     if (!av) return 1;
     if (!bv) return -1;
@@ -1666,6 +1707,9 @@ async function renderInfoBsale() {
     const rows = sortRows(base.filter(a => !q ||
       `${a.name} ${a.rut} ${a.contact} ${a.phone}`.toLowerCase().includes(q)));
     shownRows = rows;
+    const lastTh = document.querySelector('#table-info-bsale thead th[data-key="last_sale"]');
+    lastTh.innerHTML = `${brandOn() ? 'Última compra ' + BRAND_SHORT[selectedBrand] + ' (mes)' : 'Fecha última venta'} <span class="arrow"></span>`;
+    updateArrows();
     tbody.innerHTML = rows.length ? rows.map(a => `
       <tr>
         <td><strong>${escapeHtml(a.name || '—')}</strong></td>
@@ -1674,14 +1718,14 @@ async function renderInfoBsale() {
         <td>${escapeHtml(a.vendor)}</td>
         <td>${a.billing_address ? escapeHtml(a.billing_address) : '—'}</td>
         <td><span class="pill low">Sin dirección</span></td>
-        <td>${fmtDate(a.last_sale)}</td>
+        <td>${brandOn() ? (a.last_brand ? monthLabel(...a.last_brand.split('-').map(Number)) : '—') : fmtDate(a.last_sale)}</td>
       </tr>`).join('')
       : `<tr><td colspan="${cols}" style="color:#94a3b8;text-align:center">Sin resultados.</td></tr>`;
     countEl.textContent = q
       ? `${rows.length} de ${base.length} cuentas`
       : (window.LOCKED_VENDOR || vendorFilter)
         ? `${base.length} cuentas sin dirección`
-        : `${base.length} cuentas sin dirección, de ${data.accounts_with_sales} con ventas`;
+        : `${base.length} cuentas sin dirección, de ${accountsWithSales()} con ventas${brandOn() ? ' de ' + BRAND_SHORT[selectedBrand] : ''}`;
   };
 
   document.querySelectorAll('#table-info-bsale thead th[data-key]').forEach(th => {
@@ -1707,6 +1751,20 @@ async function renderInfoBsale() {
     const label = window.LOCKED_VENDOR || vendorSel.value || 'Todas';
     exportInfoBsaleExcel(shownRows, label);
   });
+  // Al cambiar la marca del encabezado: recalcula las cuentas, las vendedoras
+  // del selector (conservando la elegida si sigue estando) y vuelve a pintar.
+  window.infoBsaleRefresh = () => {
+    loadAccounts();
+    if (!window.LOCKED_VENDOR) {
+      const keep = vendorSel.value;
+      const names = [...new Set(accounts.map(a => a.vendor))].sort((a, b) => a.localeCompare(b, 'es'));
+      vendorSel.innerHTML = '<option value="">Todas las vendedoras</option>' +
+        names.map(n => `<option value="${escapeHtml(n)}">${escapeHtml(n)}</option>`).join('');
+      vendorSel.value = names.includes(keep) ? keep : '';
+      drawSummary();
+    }
+    draw();
+  };
   updateArrows();
   draw();
   document.getElementById('info-bsale-updated').textContent =
@@ -1715,8 +1773,14 @@ async function renderInfoBsale() {
 
 // Arma el libro de Excel con las filas que se estan viendo.
 function buildInfoBsaleWorkbook(rows) {
-  const header = ['Vendedora', 'Cuenta', 'RUT', 'Contacto', 'Teléfono', 'Dirección de facturación', 'Fecha última venta'];
+  const header = ['Vendedora', 'Cuenta', 'RUT', 'Contacto', 'Teléfono', 'Dirección de facturación',
+    brandOn() ? `Última compra ${BRAND_SHORT[selectedBrand]} (mes)` : 'Fecha última venta'];
   const aoa = [header].concat(rows.map(a => {
+    if (brandOn()) {
+      // Mes de la ultima compra de la marca elegida (texto: el historico es mensual).
+      return [a.vendor, a.name, a.rut, a.contact, a.phone, a.billing_address,
+        a.last_brand ? monthLabel(...a.last_brand.split('-').map(Number)) : ''];
+    }
     const [y, m, d] = a.last_sale.split('-').map(Number);
     // Fecha local (no UTC): SheetJS convierte en hora local y, con UTC, correria un dia en Chile.
     return [a.vendor, a.name, a.rut, a.contact, a.phone, a.billing_address, new Date(y, m - 1, d)];
@@ -1724,7 +1788,7 @@ function buildInfoBsaleWorkbook(rows) {
   const ws = XLSX.utils.aoa_to_sheet(aoa, { cellDates: true });
   for (let r = 1; r < aoa.length; r++) {
     const cell = ws[XLSX.utils.encode_cell({ r, c: 6 })];
-    if (cell) cell.z = 'dd-mm-yyyy';
+    if (cell && !brandOn()) cell.z = 'dd-mm-yyyy';
   }
   ws['!cols'] = [{ wch: 18 }, { wch: 44 }, { wch: 12 }, { wch: 24 }, { wch: 13 }, { wch: 50 }, { wch: 14 }];
   ws['!autofilter'] = { ref: `A1:G${Math.max(aoa.length, 2)}` };
@@ -1740,7 +1804,8 @@ function exportInfoBsaleExcel(rows, label) {
   }
   const today = new Date();
   const stamp = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
-  XLSX.writeFile(buildInfoBsaleWorkbook(rows), `Info Bsale - cuentas sin direccion - ${label} - ${stamp}.xlsx`, { cellDates: true });
+  const brandTag = brandOn() ? ` - ${BRAND_SHORT[selectedBrand]}` : '';
+  XLSX.writeFile(buildInfoBsaleWorkbook(rows), `Info Bsale - cuentas sin direccion - ${label}${brandTag} - ${stamp}.xlsx`, { cellDates: true });
 }
 
 // ── Histórico de Objetivos ───────────────────────────────────────────────────
@@ -1770,18 +1835,19 @@ function renderObjetivosHistorico() {
     .sort((a, b) => a.localeCompare(b, 'es'));
 
   // dark: grupo Total -- su Objetivo y su % van en un gris mas oscuro que Real.
-  const group = (obj, real, dark = false) => {
+  // cls: c-teox / c-rrs / c-total, para que el filtro Marca oculte el grupo.
+  const group = (obj, real, cls, dark = false) => {
     const pct = obj ? real / obj : null;
     const d = dark ? ' col-total-dark' : '';
-    return `<td class="group-start${d}">${obj ? M(obj) : '—'}</td>` +
-      `<td class="col-real">${M(real)}</td>` +
-      `<td${dark ? ' class="col-total-dark"' : ''}>${pct === null ? '—' : `<span class="pill ${pillClass(pct)}">${PCT0(pct)}</span>`}</td>`;
+    return `<td class="group-start${d} ${cls}">${obj ? M(obj) : '—'}</td>` +
+      `<td class="col-real ${cls}">${M(real)}</td>` +
+      `<td class="${cls}${d}">${pct === null ? '—' : `<span class="pill ${pillClass(pct)}">${PCT0(pct)}</span>`}</td>`;
   };
   const row = (label, objT, realT, objR, realR, rowClass = '') => `<tr${rowClass ? ` class="${rowClass}"` : ''}>
       <td>${label}</td>
-      ${group(objT, realT)}
-      ${group(objR, realR)}
-      ${group(objT + objR, realT + realR, true)}
+      ${group(objT, realT, 'c-teox')}
+      ${group(objR, realR, 'c-rrs')}
+      ${group(objT + objR, realT + realR, 'c-total', true)}
     </tr>`;
   const labelFor = p => monthLabel(p.mm.year, p.mm.month) + (p.inProgress ? ' <small>(en curso)</small>' : '');
 
@@ -1808,6 +1874,14 @@ function renderObjetivosHistorico() {
   });
 
   tbody.innerHTML = html.join('');
+
+  const note = document.querySelector('#objetivos-historico-card > .risk-count');
+  if (note) {
+    if (note.dataset.orig === undefined) note.dataset.orig = note.textContent;
+    note.textContent = brandOn()
+      ? `Real = ventas netas de ${selectedBrand}. "Total empresa" incluye todas las cuentas, también las sin vendedor asignado. El mes en curso aparece siempre; mientras no tenga objetivos cargados, el objetivo y el % se ven como —.`
+      : note.dataset.orig;
+  }
 }
 
 // ── Histórico por Cliente ─────────────────────────────────────────────────────
@@ -1850,6 +1924,8 @@ function renderClientHistorySuggestions(query) {
   for (const cid in clientsMeta) {
     // Tablero de una vendedora puntual: no mostrar historico de cuentas de otras vendedoras.
     if (window.LOCKED_VENDOR && clientVendorMap[cid] !== window.LOCKED_VENDOR) continue;
+    // Con el filtro Marca, solo cuentas que alguna vez compraron esa marca.
+    if (brandOn() && !clientHasBrand(cid)) continue;
     const meta = clientsMeta[cid];
     const name = (meta.name || '').toLowerCase();
     const rut = (meta.rut || '').toLowerCase();
@@ -1913,9 +1989,9 @@ function renderClientHistory(cid) {
   document.getElementById('tbody-client-history-years').innerHTML = years.map(y => `
     <tr>
       <td>${y}</td>
-      <td>${M(byYear[y].Teoxane)}</td>
-      <td>${M(byYear[y]['RRS HA Long Lasting'])}</td>
-      <td class="total">${M(byYear[y].neto)}</td>
+      <td class="c-teox">${M(byYear[y].Teoxane)}</td>
+      <td class="c-rrs">${M(byYear[y]['RRS HA Long Lasting'])}</td>
+      <td class="total c-total">${M(byYear[y].neto)}</td>
     </tr>
   `).join('');
 
@@ -1928,10 +2004,10 @@ function renderClientHistory(cid) {
   chartClientHistoryYears = new Chart(document.getElementById('chart-client-history-years'), {
     type: 'bar',
     data: {
-      labels: ['Teoxane', 'RRS LL'],
+      labels: brandOn() ? [selectedBrand === 'Teoxane' ? 'Teoxane' : 'RRS LL'] : ['Teoxane', 'RRS LL'],
       datasets: yearsAsc.map((y, i) => ({
         label: y,
-        data: [byYear[y].Teoxane, byYear[y]['RRS HA Long Lasting']],
+        data: brandOn() ? [byYear[y][selectedBrand]] : [byYear[y].Teoxane, byYear[y]['RRS HA Long Lasting']],
         backgroundColor: yearBarColor(i),
         borderRadius: 4,
       })),
@@ -1985,15 +2061,18 @@ function renderClientHistory(cid) {
     const prevRrsVal = prevEntry['RRS HA Long Lasting'] || 0;
     return `<tr${isFuture ? ' class="client-history-future"' : ''}>
       <td>${label}</td>
-      <td class="group-start col-teox">${isFuture ? '—' : cell(curTeoxVal)}</td>
-      <td>${isFuture ? '—' : cell(curRrsVal)}</td>
-      <td class="group-start col-teox">${cell(prevTeoxVal)}</td>
-      <td>${cell(prevRrsVal)}</td>
-      <td class="group-start col-teox">${varPct(curTeoxVal, prevTeoxVal)}</td>
-      <td>${varPct(curRrsVal, prevRrsVal)}</td>
+      <td class="group-start col-teox c-teox">${isFuture ? '—' : cell(curTeoxVal)}</td>
+      <td class="c-rrs">${isFuture ? '—' : cell(curRrsVal)}</td>
+      <td class="group-start col-teox c-teox">${cell(prevTeoxVal)}</td>
+      <td class="c-rrs">${cell(prevRrsVal)}</td>
+      <td class="group-start col-teox c-teox">${varPct(curTeoxVal, prevTeoxVal)}</td>
+      <td class="c-rrs">${varPct(curRrsVal, prevRrsVal)}</td>
     </tr>`;
   });
   document.getElementById('tbody-client-history-months').innerHTML = rows.join('');
+  // Con una sola marca visible, cada titulo de grupo (Año actual / anterior / Var.) abarca 1 columna.
+  document.querySelectorAll('#table-client-history-months thead tr:first-child th[colspan]')
+    .forEach(th => { th.colSpan = brandOn() ? 1 : 2; });
 
   // Un mini-grafico por producto, cada uno con la linea de 2025 (punteada,
   // se dibuja primero / va primero en la leyenda) y la de 2026 (solida).
