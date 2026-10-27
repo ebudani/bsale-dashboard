@@ -1,8 +1,17 @@
 {
-  "updated_at": "2026-10-25T23:06:17.703009+00:00",
-  "accounts_with_sales": 535,
-  "accounts_without_address": 461,
+  "updated_at": "2026-10-27T00:19:26.322712+00:00",
+  "accounts_with_sales": 536,
+  "accounts_without_address": 459,
   "accounts": [
+    {
+      "id": "943",
+      "name": "SOCIEDAD COMERCIAL Y SERVICIOS ODONTOLOGICOS CONTIDENTAL LIMITADA",
+      "rut": "76530314-1",
+      "contact": "Monserrat Aro",
+      "phone": "983421125",
+      "billing_address": "Montt 265, Constitución, Constitución",
+      "last_sale": "2026-10-26"
+    },
     {
       "id": "893",
       "name": "SERVICIOS ODONTOLÓGICOS Y ESTÉTICOS NBF SPA",
@@ -886,15 +895,6 @@
       "last_sale": "2026-09-07"
     },
     {
-      "id": "943",
-      "name": "SOCIEDAD COMERCIAL Y SERVICIOS ODONTOLOGICOS CONTIDENTAL LIMITADA",
-      "rut": "76530314-1",
-      "contact": "Monserrat Aro",
-      "phone": "983421125",
-      "billing_address": "Montt 265, Constitución, Constitución",
-      "last_sale": "2026-09-07"
-    },
-    {
       "id": "1033",
       "name": "CENTRO DE MEDICINA Y ESTÉTICA EIIGE SPA",
       "rut": "77910871-6",
@@ -1018,15 +1018,6 @@
       "contact": "Heidy Carolina Cortez Flores",
       "phone": "993368201",
       "billing_address": "Santiago de rosas 2871, Osorno, Osorno",
-      "last_sale": "2026-09-06"
-    },
-    {
-      "id": "1108",
-      "name": "HEALTHY BODIES W&G SPA",
-      "rut": "76819812-8",
-      "contact": "Daniela Sepulveda",
-      "phone": "966217431",
-      "billing_address": "Merino Jarpa 352, Curico, Curico",
       "last_sale": "2026-09-06"
     },
     {
@@ -1523,15 +1514,6 @@
       "phone": "",
       "billing_address": "30 Oriente 1528, Talca, Talca",
       "last_sale": "2026-08-03"
-    },
-    {
-      "id": "1104",
-      "name": "ESTETICA ABURTO SPA",
-      "rut": "77115676-2",
-      "contact": "Boris Aburto Ortiz",
-      "phone": "",
-      "billing_address": "JUAN REUSCH 471, Temuco, Temuco",
-      "last_sale": "2026-07-30"
     },
     {
       "id": "933",
