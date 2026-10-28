@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-27T00:19:26.322712+00:00",
+  "updated_at": "2026-10-28T00:19:23.603056+00:00",
   "accounts_with_sales": 536,
-  "accounts_without_address": 459,
+  "accounts_without_address": 458,
   "accounts": [
     {
       "id": "943",
@@ -515,15 +515,6 @@
       "phone": "998735793",
       "billing_address": "Av La Plaza 560, Las Condes, Santiago",
       "last_sale": "2026-10-05"
-    },
-    {
-      "id": "958",
-      "name": "SERVICIOS ODONTOLOGICOS INDEPENDIENTES CONSTANZA HERRERA MACIAS E.I.R.",
-      "rut": "77334898-7",
-      "contact": "Constanza Herrera",
-      "phone": "",
-      "billing_address": "Los espinos 3033, Macul, Santiago",
-      "last_sale": "2026-10-02"
     },
     {
       "id": "999",
