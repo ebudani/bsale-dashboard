@@ -1,8 +1,17 @@
 {
-  "updated_at": "2026-10-29T00:41:33.347507+00:00",
+  "updated_at": "2026-10-29T15:10:09.009212+00:00",
   "accounts_with_sales": 536,
   "accounts_without_address": 455,
   "accounts": [
+    {
+      "id": "438",
+      "name": "SOCIEDAD PROFESIONAL MEDICA ESTETICA ODONTOLOGICA Y EDUCACIONAL FAGA L",
+      "rut": "77535365-1",
+      "contact": "Helga Farherkrog",
+      "phone": "",
+      "billing_address": "DR GENARO REYES C 581, Los Angeles, Los Angeles",
+      "last_sale": "2026-10-29"
+    },
     {
       "id": "651",
       "name": "OSVAL LIMITADA",
@@ -1820,15 +1829,6 @@
       "phone": "954070299",
       "billing_address": "ESTORIL 120 OF 910 TORRE A PISO 9, Santiago, Santiago",
       "last_sale": "2026-06-04"
-    },
-    {
-      "id": "438",
-      "name": "SOCIEDAD PROFESIONAL MEDICA ESTETICA ODONTOLOGICA Y EDUCACIONAL FAGA L",
-      "rut": "77535365-1",
-      "contact": "Helga Farherkrog",
-      "phone": "",
-      "billing_address": "DR GENARO REYES C 581, Los Angeles, Los Angeles",
-      "last_sale": "2026-06-02"
     },
     {
       "id": "1065",
