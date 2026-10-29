@@ -1,8 +1,26 @@
 {
-  "updated_at": "2026-10-28T00:19:23.603056+00:00",
+  "updated_at": "2026-10-29T00:41:33.347507+00:00",
   "accounts_with_sales": 536,
-  "accounts_without_address": 458,
+  "accounts_without_address": 455,
   "accounts": [
+    {
+      "id": "651",
+      "name": "OSVAL LIMITADA",
+      "rut": "76870654-9",
+      "contact": "Carla Nave",
+      "phone": "",
+      "billing_address": "PADRE MARIANO 181 OF 303, Providencia, Santiago",
+      "last_sale": "2026-10-28"
+    },
+    {
+      "id": "921",
+      "name": "SOCIEDAD ODONTOLOGICA DEL MAULE SPA",
+      "rut": "76960027-2",
+      "contact": "Rodrigo Villalobos",
+      "phone": "998208443",
+      "billing_address": "Independencia 85 Edificio Subercaseaux, Linares, Linares",
+      "last_sale": "2026-10-28"
+    },
     {
       "id": "943",
       "name": "SOCIEDAD COMERCIAL Y SERVICIOS ODONTOLOGICOS CONTIDENTAL LIMITADA",
@@ -265,15 +283,6 @@
       "last_sale": "2026-10-13"
     },
     {
-      "id": "921",
-      "name": "SOCIEDAD ODONTOLOGICA DEL MAULE SPA",
-      "rut": "76960027-2",
-      "contact": "Rodrigo Villalobos",
-      "phone": "998208443",
-      "billing_address": "Independencia 85 Edificio Subercaseaux, Linares, Linares",
-      "last_sale": "2026-10-13"
-    },
-    {
       "id": "1043",
       "name": "LONCÓN REBOLLEDO CENTRO DE ESTÉTICA FACIAL Y ODONTOLOGIA SPA",
       "rut": "78218616-7",
@@ -415,15 +424,6 @@
       "contact": "Natalia Droguett",
       "phone": "998956643",
       "billing_address": "Av. Pucara 020,, Machali, Machali",
-      "last_sale": "2026-10-08"
-    },
-    {
-      "id": "1080",
-      "name": "SOCIEDAD DE PROFESIONALES ODONTOLOGIA INTEGRAL AUREA AESTHETICS LIMITA",
-      "rut": "78260818-5",
-      "contact": "Claudia Guajardo",
-      "phone": "",
-      "billing_address": "Fundo San Valentin 16, Concepcion, Concepcion",
       "last_sale": "2026-10-08"
     },
     {
@@ -641,15 +641,6 @@
       "phone": "958280096",
       "billing_address": "CALLE HERNAN CIUDAD 60, MACHALI, RANCAGUA",
       "last_sale": "2026-09-17"
-    },
-    {
-      "id": "651",
-      "name": "OSVAL LIMITADA",
-      "rut": "76870654-9",
-      "contact": "Carla Nave",
-      "phone": "",
-      "billing_address": "PADRE MARIANO 181 OF 303, Providencia, Santiago",
-      "last_sale": "2026-09-16"
     },
     {
       "id": "1008",
@@ -892,15 +883,6 @@
       "contact": "Jennifer Garces",
       "phone": "",
       "billing_address": "Kurt Molier 437, Linares, Linares",
-      "last_sale": "2026-09-07"
-    },
-    {
-      "id": "1070",
-      "name": "MAGNOLIA TECNOLOGIA MEDICA Y ESTETICA SPA",
-      "rut": "77737549-0",
-      "contact": "Daniela Gonzalez",
-      "phone": "964051133",
-      "billing_address": "Antonio varas 55, Puerto Montt, Puerto Montt",
       "last_sale": "2026-09-07"
     },
     {
@@ -1282,15 +1264,6 @@
       "last_sale": "2026-08-25"
     },
     {
-      "id": "587",
-      "name": "SERVICIOS ODONTOLOGICOS ROMAN MERDECH Y COMPANIA SPA",
-      "rut": "77402025-k",
-      "contact": "Paula Roman",
-      "phone": "984171162",
-      "billing_address": "Valenzuela Puelma 9753, Casa 10, La Reina, Santiago",
-      "last_sale": "2026-08-24"
-    },
-    {
       "id": "1225",
       "name": "CLINICA ESTETICA SUBERCASEAUX SPA",
       "rut": "77703748-k",
@@ -1546,8 +1519,8 @@
       "id": "514",
       "name": "SOCIEDAD COMERCIAL Y SERVICIOS MAGANDA LIMITADA",
       "rut": "76435930-5",
-      "contact": "Nataly Laplagne",
-      "phone": "",
+      "contact": "Gisela Fuentes",
+      "phone": "940778702",
       "billing_address": "AVENIDA KENNEDY 5735 1 PISO 1, Las Condes, Santiago",
       "last_sale": "2026-07-21"
     },
