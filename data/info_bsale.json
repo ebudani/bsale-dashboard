@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-30T00:40:41.837540+00:00",
+  "updated_at": "2026-10-30T15:47:34.560320+00:00",
   "accounts_with_sales": 537,
-  "accounts_without_address": 454,
+  "accounts_without_address": 453,
   "accounts": [
     {
       "id": "438",
@@ -865,15 +865,6 @@
       "contact": "Katherine Scalia",
       "phone": "945690879",
       "billing_address": "RAMON FREIRE 366, Quillota, Quillota",
-      "last_sale": "2026-09-07"
-    },
-    {
-      "id": "810",
-      "name": "SERVICIOS MEDICOS DRA LUCIANA SEBASTIANELLI SPA",
-      "rut": "77760218-7",
-      "contact": "",
-      "phone": "",
-      "billing_address": "VALENZUELA CASTILLO 1858 DP 706 7P, Providencia, Santiago",
       "last_sale": "2026-09-07"
     },
     {
