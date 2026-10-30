@@ -6,7 +6,7 @@
 <title>AestheticsPro · Dashboard Ventas</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
-<link rel="stylesheet" href="assets/dashboard.css?v=20261030a">
+<link rel="stylesheet" href="assets/dashboard.css?v=20261030b">
 </head>
 <body>
 
@@ -132,27 +132,6 @@
       </div>
     </div>
 
-    <!-- Concentracion de clientes: los que hacen el 80% de la venta -->
-    <div class="card" id="card-pareto">
-      <div class="card-header-row">
-        <h2 id="pareto-title">Concentración de clientes (80/20) — </h2>
-        <button type="button" class="risk-export-btn" id="pareto-export" onclick="exportParetoExcel()" title="Baja a Excel el ranking de clientes, marcando los que hacen el 80% de la venta">⬇ Descargar Excel</button>
-      </div>
-      <div class="pareto-headline" id="pareto-headline"></div>
-      <div class="risk-caption" id="pareto-sub"></div>
-      <div class="pareto-body">
-        <div class="pareto-chart"><canvas id="chart-pareto"></canvas></div>
-        <div class="pareto-table obj-table-scroll">
-          <table id="table-pareto">
-            <thead>
-              <tr><th>#</th><th>Cliente</th><th>Vendedor</th><th>Región</th><th>Venta neta</th><th>% de la venta</th><th>% acumulado</th></tr>
-            </thead>
-            <tbody id="tbody-pareto"></tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-
     <!-- Cumplimiento / productividad por marca -->
     <div class="tables-row tables-row-3">
       <div id="cumpl-slot">
@@ -238,9 +217,19 @@
       </div>
     </div>
 
-    <!-- Top 10 Clientes a lo ancho. Cartera en riesgo se abre desde el boton
-         del header (cartera-riesgo.html), ya no vive en esta pagina. -->
-    <div id="topclientes-cartera-row">
+    <!-- Abajo de todo: Concentracion de clientes (80/20) a la izquierda y Top 10 Clientes
+         a la derecha. Cartera en riesgo se abre desde el boton del header
+         (cartera-riesgo.html), ya no vive en esta pagina. -->
+    <div id="topclientes-cartera-row" class="conc-row">
+      <div class="card" id="card-pareto">
+        <div class="card-header-row">
+          <h2 id="pareto-title">Concentración de clientes (80/20) — </h2>
+          <button type="button" class="risk-export-btn" id="pareto-export" onclick="exportParetoExcel()" title="Baja a Excel el ranking de clientes, marcando los que hacen el 80% de la venta">⬇ Descargar Excel</button>
+        </div>
+        <div class="pareto-headline" id="pareto-headline"></div>
+        <div class="risk-caption" id="pareto-sub"></div>
+        <div class="pareto-chart"><canvas id="chart-pareto"></canvas></div>
+      </div>
       <div class="card" id="card-topclientes">
         <h2 id="table-clients-title">Top 10 Clientes — </h2>
         <div id="clients-unavailable" class="unavailable" style="display:none">No disponible por vendedor</div>
@@ -261,11 +250,11 @@
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
-<script src="assets/firebase-config.js?v=20261030a"></script>
-<script src="assets/risk-contacts.js?v=20261030a"></script>
-<script src="assets/pin-gate.js?v=20261030a"></script>
+<script src="assets/firebase-config.js?v=20261030b"></script>
+<script src="assets/risk-contacts.js?v=20261030b"></script>
+<script src="assets/pin-gate.js?v=20261030b"></script>
 <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
-<script src="assets/brand-filter.js?v=20261030a"></script>
-<script src="assets/dashboard.js?v=20261030a"></script>
+<script src="assets/brand-filter.js?v=20261030b"></script>
+<script src="assets/dashboard.js?v=20261030b"></script>
 </body>
 </html>

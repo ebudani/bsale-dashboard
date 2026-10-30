@@ -192,7 +192,7 @@
   /* Recuadro propio con scroll: la .card tiene overflow-x:auto, y eso hace que un
      encabezado sticky dentro de ella no se fije al scrollear la pagina. */
   .obj-table-scroll { overflow: auto; max-height: calc(100vh - 170px); min-height: 260px; }
-  #table-objetivos-historico thead, #table-info-bsale thead, #table-pareto thead { position: sticky; top: 0; z-index: 3; box-shadow: 0 1px 0 var(--gray-200); }
+  #table-objetivos-historico thead, #table-info-bsale thead { position: sticky; top: 0; z-index: 3; box-shadow: 0 1px 0 var(--gray-200); }
   /* Que toda la tabla entre en el ancho de la pantalla, sin scroll de costado:
      columnas en porcentaje y el texto largo (razon social, direccion) se parte
      en varias lineas. En celular no entra, ahi vuelve a scrollear. */
@@ -295,19 +295,14 @@
     #card-regions { order: 9; }
   }
 
-  /* Concentracion de clientes 80/20 (index.html) */
+  /* Fila de abajo (index.html): Concentracion 80/20 a la izquierda, Top 10 Clientes a la derecha */
+  .conc-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; align-items: stretch; }
   .pareto-headline { font-size: 18px; color: #0f172a; margin: 4px 0 2px; }
-  .pareto-body { display: grid; grid-template-columns: minmax(280px, 40%) 1fr; gap: 24px; align-items: start; margin-top: 10px; }
-  .pareto-chart { height: 420px; }
-  .pareto-table { max-height: 420px; overflow: auto; }
-  .pareto-table tr.pareto-cut td { background: #0f172a; color: #fff; font-size: 11px; font-weight: 600; text-align: center; padding: 5px 8px; }
-  .pareto-table table { min-width: 0; font-size: 12px; }
-  .pareto-table th, .pareto-table td { padding: 6px 8px; }
-  .pareto-table td:nth-child(n+5), .pareto-table th:nth-child(n+5) { text-align: right; }
+  #card-pareto { display: flex; flex-direction: column; }
+  .pareto-chart { flex: 1; min-height: 340px; position: relative; margin-top: 10px; }
   #pareto-export:disabled { opacity: .5; cursor: default; }
   @media (max-width: 900px) {
-    .pareto-body { grid-template-columns: 1fr; }
-    #card-pareto { order: 10; }
+    .conc-row { grid-template-columns: 1fr; }
   }
 
   /* Loading state */
@@ -591,7 +586,7 @@
        this row, not as direct flex children, except when Top Clientes gets
        moved into #cumpl-slot instead (then it just follows Cumplimiento's
        own order:3 there, which is already the desired position). */
-    #topclientes-cartera-row { order: 8; }
+    #topclientes-cartera-row { order: 10; }
   }
 
   @media (max-width: 480px) {

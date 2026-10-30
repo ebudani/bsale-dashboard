@@ -1455,13 +1455,11 @@ function renderParetoCard(months, label) {
   const { rows, total, n80, top20, share20 } = paretoData(months);
   const head = document.getElementById('pareto-headline');
   const sub = document.getElementById('pareto-sub');
-  const tbody = document.getElementById('tbody-pareto');
   const exportBtn = document.getElementById('pareto-export');
 
   if (!rows.length) {
     head.textContent = 'Sin ventas en el período elegido.';
     sub.textContent = '';
-    tbody.innerHTML = '';
     exportBtn.disabled = true;
     if (chartPareto) { chartPareto.destroy(); chartPareto = null; }
     paretoRowsForExport = [];
@@ -1473,22 +1471,10 @@ function renderParetoCard(months, label) {
   sub.textContent = `El 20% de los clientes (${top20}) hace el ${Math.round(share20 * 100)}% · Venta total ${M(total)}` +
     (months.length === 1 ? ' · con un solo mes la lista es corta: probá "Año actual"' : '');
 
-  // Ranking completo de clientes: los que hacen el 80% de la venta van sombreados,
-  // con una linea de corte donde se llega a ese 80%.
+  // El detalle por cliente ya no se muestra en pantalla: solo baja en el Excel
+  // (ranking completo, con la columna Grupo que marca a los del 80%).
   const color = REGION_COLOR[brandOn() ? selectedBrand : 'all'];
   paretoRowsForExport = rows.map((r, i) => ({ ...r, group: i < n80 ? '80% de la venta' : 'Resto' }));
-  tbody.innerHTML = rows.map((r, i) => `
-    <tr${i < n80 ? ` class="pareto-a" style="background:${color}14"` : ''}>
-      <td style="color:#94a3b8">${i + 1}</td>
-      <td><strong>${escapeHtml(r.name)}</strong></td>
-      <td>${escapeHtml(r.vendor)}</td>
-      <td>${escapeHtml(r.region)}</td>
-      <td>${M(r.neto)}</td>
-      <td>${PCT(r.share)}</td>
-      <td>${PCT(r.cum)}</td>
-    </tr>` + (i === n80 - 1 && n80 < n
-      ? `<tr class="pareto-cut"><td colspan="7">Hasta acá: ${n80} cliente${n80 === 1 ? '' : 's'} = 80% de la venta · debajo, el 20% restante (${n - n80} clientes)</td></tr>`
-      : '')).join('');
 
   // Curva: % de clientes (x) vs % acumulado de la venta (y).
   const curve = [{ x: 0, y: 0 }].concat(rows.map((r, i) => ({ x: (i + 1) / n * 100, y: r.cum * 100 })));
