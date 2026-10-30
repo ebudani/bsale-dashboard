@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-29T15:07:33.096871Z",
+  "updated_at": "2026-10-30T00:38:42.682388Z",
   "items": [
     {
       "sku": "RRS Long Lasting",
@@ -15,8 +15,8 @@
       "code": "910049/02",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 571.0,
-      "quantity_available": 571.0,
+      "quantity": 566.0,
+      "quantity_available": 566.0,
       "quantity_reserved": 0.0
     },
     {
@@ -60,8 +60,8 @@
       "code": "25221/2",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 517.0,
-      "quantity_available": 517.0,
+      "quantity": 514.0,
+      "quantity_available": 514.0,
       "quantity_reserved": 0.0
     },
     {
@@ -69,8 +69,8 @@
       "code": "910070/02",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 180.0,
-      "quantity_available": 180.0,
+      "quantity": 179.0,
+      "quantity_available": 179.0,
       "quantity_reserved": 0.0
     },
     {
@@ -78,8 +78,8 @@
       "code": "910043/01",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 283.0,
-      "quantity_available": 283.0,
+      "quantity": 280.0,
+      "quantity_available": 280.0,
       "quantity_reserved": 0.0
     },
     {
@@ -87,8 +87,8 @@
       "code": "78819786491958",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 168.0,
-      "quantity_available": 168.0,
+      "quantity": 162.0,
+      "quantity_available": 162.0,
       "quantity_reserved": 0.0
     },
     {

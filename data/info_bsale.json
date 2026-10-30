@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-29T15:10:09.009212+00:00",
-  "accounts_with_sales": 536,
-  "accounts_without_address": 455,
+  "updated_at": "2026-10-30T00:40:41.837540+00:00",
+  "accounts_with_sales": 537,
+  "accounts_without_address": 454,
   "accounts": [
     {
       "id": "438",
@@ -1991,15 +1991,6 @@
       "phone": "",
       "billing_address": "Badajoz 100, of 1014, Las Condes, Santiago",
       "last_sale": "2026-05-13"
-    },
-    {
-      "id": "1155",
-      "name": "Odontologia Studio SPA",
-      "rut": "77381744-8",
-      "contact": "Francisca Casanueva",
-      "phone": "993468293",
-      "billing_address": "Padre Esteban 10876 CHamisero, Colina, Santiago",
-      "last_sale": "2026-05-12"
     },
     {
       "id": "788",
