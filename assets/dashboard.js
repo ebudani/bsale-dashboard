@@ -588,6 +588,8 @@ function render() {
   renderProductivityTable('tbody-prod-rrs', 'RRS HA Long Lasting');
   renderTopClients(view, label, months.length > 1, months);
   renderCumplDetail();
+  renderRegionSales(months, label);
+  renderParetoCard(months, label);
 }
 
 // ── KPI Cards ───────────────────────────────────────────────────────────────
@@ -1288,6 +1290,271 @@ function renderTopClients(m, label, isMulti, months) {
     `;
     tbody.appendChild(tr);
   });
+}
+
+// ── Ventas por región ────────────────────────────────────────────────────────
+// Region de la direccion de facturacion de cada cuenta (clients[cid].region, que
+// fetch_data.py saca de la comuna / ciudad de la ficha). Las ventas salen de
+// client_product_history, asi respeta Periodo, Vendedor y Marca. El mapa
+// (data/chile_regiones.json) lo genera scripts/build_chile_map.py.
+const REGION_NAME = {
+  XV: 'Arica y Parinacota', I: 'Tarapacá', II: 'Antofagasta', III: 'Atacama', IV: 'Coquimbo',
+  V: 'Valparaíso', RM: 'Metropolitana', VI: "O'Higgins", VII: 'Maule', XVI: 'Ñuble',
+  VIII: 'Biobío', IX: 'La Araucanía', XIV: 'Los Ríos', X: 'Los Lagos', XI: 'Aysén', XII: 'Magallanes',
+};
+const REGION_COLOR = { all: '#1d4ed8', Teoxane: BRAND_COLORS['Teoxane'], 'RRS HA Long Lasting': BRAND_COLORS['RRS HA Long Lasting'] };
+let regionMapPromise = null;
+
+function loadRegionMap() {
+  if (!regionMapPromise) {
+    regionMapPromise = fetch('data/chile_regiones.json')
+      .then(r => (r.ok ? r.json() : null))
+      .catch(() => null);
+  }
+  return regionMapPromise;
+}
+
+// {codigo: {teox, rrs, clients}} del periodo; '?' = cuentas sin region reconocida.
+function regionSalesData(months) {
+  const keys = months.map(mm => `${mm.year}-${String(mm.month).padStart(2, '0')}`);
+  const out = {};
+  for (const cid in clientProductHistory) {
+    if (selectedVendor !== 'all' && clientVendorMap[cid] !== selectedVendor) continue;
+    const h = clientProductHistory[cid];
+    let teox = 0, rrs = 0;
+    keys.forEach(k => { const e = h[k]; if (e) { teox += e['Teoxane'] || 0; rrs += e['RRS HA Long Lasting'] || 0; } });
+    const val = brandOn() ? (selectedBrand === 'Teoxane' ? teox : rrs) : teox + rrs;
+    if (val <= 0) continue;   // sin compra neta (de la marca elegida) en el periodo
+    const code = (clientsMeta[cid] || {}).region || '?';
+    const o = out[code] || (out[code] = { teox: 0, rrs: 0, clients: 0 });
+    o.teox += teox; o.rrs += rrs; o.clients++;
+  }
+  return out;
+}
+
+async function renderRegionSales(months, label) {
+  const card = document.getElementById('card-regions');
+  if (!card) return;   // solo index.html
+  document.getElementById('regions-title').textContent =
+    `Ventas por región${brandOn() ? ' ' + BRAND_SHORT[selectedBrand] : ''} — ${label}`;
+  const mapData = await loadRegionMap();
+  const data = regionSalesData(months);
+  const valOf = o => brandOn() ? (selectedBrand === 'Teoxane' ? o.teox : o.rrs) : o.teox + o.rrs;
+  const known = Object.keys(data).filter(c => c !== '?');
+  const note = document.getElementById('regions-note');
+  const tbody = document.getElementById('tbody-regions');
+  const svg = document.getElementById('regions-svg');
+
+  if (!known.length) {
+    note.textContent = 'Todavía no hay regiones cargadas: se completan en la próxima actualización diaria de datos (18:00).';
+    tbody.innerHTML = ''; svg.innerHTML = '';
+    return;
+  }
+  const unknown = data['?'];
+  const grand = known.reduce((s, c) => s + valOf(data[c]), 0) + (unknown ? valOf(unknown) : 0);
+  note.textContent = 'Región de la dirección de facturación de cada cuenta, según su comuna. ' +
+    (brandOn() ? `Venta neta de ${selectedBrand}` : 'Venta neta de Teoxane + RRS') + (unknown ? `; ${unknown.clients} cuenta${unknown.clients === 1 ? '' : 's'} sin región reconocida (${M(valOf(unknown))}).` : '.');
+
+  const rows = known.map(c => ({ code: c, name: REGION_NAME[c] || c, ...data[c] })).sort((a, b) => valOf(b) - valOf(a));
+  if (unknown) rows.push({ code: '?', name: 'Sin región', ...unknown });
+  tbody.innerHTML = rows.map(r => `
+    <tr data-code="${r.code}"${r.code === '?' ? ' class="region-unknown"' : ''}>
+      <td><strong>${escapeHtml(r.name)}</strong></td>
+      <td class="c-teox">${M(r.teox)}</td>
+      <td class="c-rrs">${M(r.rrs)}</td>
+      <td class="c-total">${M(r.teox + r.rrs)}</td>
+      <td>${grand ? PCT(valOf(r) / grand) : '—'}</td>
+      <td>${r.clients}</td>
+    </tr>`).join('');
+
+  // Mapa: color por venta (raiz cuadrada, para que la Metropolitana no deje a las demas en blanco).
+  if (!mapData) { svg.innerHTML = ''; return; }
+  // Se recorta hacia el norte y el sur hasta las regiones con ventas: no se dibuja el tramo vacio.
+  const [w, h] = mapData.viewBox;
+  let y0 = h, y1 = 0;
+  known.forEach(c => {
+    const reg = mapData.regions[c];
+    if (!reg) return;
+    if (!reg.bb) {
+      const ys = (reg.d.match(/-?\d+(?:\.\d+)?\s+(-?\d+(?:\.\d+)?)/g) || []).map(p => parseFloat(p.trim().split(/\s+/)[1]));
+      reg.bb = [Math.min(...ys), Math.max(...ys)];
+    }
+    y0 = Math.min(y0, reg.bb[0]); y1 = Math.max(y1, reg.bb[1]);
+  });
+  if (y1 <= y0) { y0 = 0; y1 = h; }
+  y0 = Math.max(0, y0 - 8); y1 = Math.min(h, y1 + 8);
+  if (y1 - y0 < 120) { const mid = (y0 + y1) / 2; y0 = Math.max(0, mid - 60); y1 = Math.min(h, mid + 60); }
+  svg.setAttribute('viewBox', `0 ${y0.toFixed(0)} ${w} ${(y1 - y0).toFixed(0)}`);
+  if ((y1 - y0) < h * 0.95) note.textContent += ' El mapa se recorta a las regiones con ventas.';
+  const max = Math.max(...known.map(c => valOf(data[c])), 1);
+  const base = REGION_COLOR[brandOn() ? selectedBrand : 'all'];
+  svg.innerHTML = Object.entries(mapData.regions).map(([code, reg]) => {
+    const o = data[code];
+    const v = o ? valOf(o) : 0;
+    const opacity = v > 0 ? 0.18 + 0.82 * Math.sqrt(v / max) : 1;
+    const tip = `${REGION_NAME[code] || code}: ${v > 0 ? M(v) + ' · ' + o.clients + ' cliente' + (o.clients === 1 ? '' : 's') : 'sin ventas'}`;
+    return `<path d="${reg.d}" data-code="${code}" fill="${v > 0 ? base : '#e2e8f0'}" fill-opacity="${opacity.toFixed(2)}"
+      stroke="#fff" stroke-width="0.6" stroke-linejoin="round"><title>${escapeHtml(tip)}</title></path>`;
+  }).join('');
+
+  // Pasar el mouse por una region del mapa o por una fila de la tabla resalta la otra.
+  const link = (code, on) => {
+    svg.querySelectorAll('path').forEach(p => p.classList.toggle('region-hl', on && p.dataset.code === code));
+    tbody.querySelectorAll('tr').forEach(t => t.classList.toggle('region-hl', on && t.dataset.code === code));
+  };
+  svg.querySelectorAll('path').forEach(p => {
+    p.addEventListener('mouseenter', () => link(p.dataset.code, true));
+    p.addEventListener('mouseleave', () => link(p.dataset.code, false));
+  });
+  tbody.querySelectorAll('tr').forEach(t => {
+    t.addEventListener('mouseenter', () => link(t.dataset.code, true));
+    t.addEventListener('mouseleave', () => link(t.dataset.code, false));
+  });
+}
+
+// ── Concentración de clientes (80/20) ────────────────────────────────────────
+// Clientes ordenados de mayor a menor venta del periodo (segun Marca y Vendedor
+// elegidos), con la venta acumulada: cuantos hacen el 80% de la facturacion.
+// Sale de client_product_history, igual que Ventas por region.
+let chartPareto = null;
+let paretoRowsForExport = [];
+
+function paretoData(months) {
+  const keys = months.map(mm => `${mm.year}-${String(mm.month).padStart(2, '0')}`);
+  const rows = [];
+  for (const cid in clientProductHistory) {
+    const vendor = clientVendorMap[cid] || 'Sin asignar';
+    if (selectedVendor !== 'all' && vendor !== selectedVendor) continue;
+    const h = clientProductHistory[cid];
+    let teox = 0, rrs = 0;
+    keys.forEach(k => { const e = h[k]; if (e) { teox += e['Teoxane'] || 0; rrs += e['RRS HA Long Lasting'] || 0; } });
+    const neto = brandOn() ? (selectedBrand === 'Teoxane' ? teox : rrs) : teox + rrs;
+    if (neto <= 0) continue;   // sin compra neta en el periodo
+    const meta = clientsMeta[cid] || {};
+    rows.push({ cid, vendor, neto, teox, rrs, name: meta.name || cid, region: REGION_NAME[meta.region] || '—' });
+  }
+  rows.sort((a, b) => b.neto - a.neto);
+  const total = rows.reduce((s, r) => s + r.neto, 0);
+  let acc = 0, n80 = 0;
+  rows.forEach((r, i) => {
+    acc += r.neto;
+    r.share = total ? r.neto / total : 0;
+    r.cum = total ? acc / total : 0;
+    if (!n80 && r.cum >= 0.8) n80 = i + 1;
+  });
+  const top20 = Math.max(1, Math.round(rows.length * 0.2));
+  const share20 = rows.length && total ? rows.slice(0, top20).reduce((s, r) => s + r.neto, 0) / total : 0;
+  return { rows, total, n80, top20, share20 };
+}
+
+function renderParetoCard(months, label) {
+  const card = document.getElementById('card-pareto');
+  if (!card) return;   // solo index.html
+  const short = brandOn() ? ' ' + BRAND_SHORT[selectedBrand] : '';
+  document.getElementById('pareto-title').textContent = `Concentración de clientes (80/20)${short} — ${label}`;
+  const { rows, total, n80, top20, share20 } = paretoData(months);
+  const head = document.getElementById('pareto-headline');
+  const sub = document.getElementById('pareto-sub');
+  const tbody = document.getElementById('tbody-pareto');
+  const exportBtn = document.getElementById('pareto-export');
+
+  if (!rows.length) {
+    head.textContent = 'Sin ventas en el período elegido.';
+    sub.textContent = '';
+    tbody.innerHTML = '';
+    exportBtn.disabled = true;
+    if (chartPareto) { chartPareto.destroy(); chartPareto = null; }
+    paretoRowsForExport = [];
+    return;
+  }
+  exportBtn.disabled = false;
+  const n = rows.length;
+  head.innerHTML = `<strong>${n80}</strong> cliente${n80 === 1 ? '' : 's'} (${Math.round(n80 / n * 100)}% de los ${n} con compras) hacen el <strong>80%</strong> de la venta`;
+  sub.textContent = `El 20% de los clientes (${top20}) hace el ${Math.round(share20 * 100)}% · Venta total ${M(total)}` +
+    (months.length === 1 ? ' · con un solo mes la lista es corta: probá "Año actual"' : '');
+
+  // Ranking completo de clientes: los que hacen el 80% de la venta van sombreados,
+  // con una linea de corte donde se llega a ese 80%.
+  const color = REGION_COLOR[brandOn() ? selectedBrand : 'all'];
+  paretoRowsForExport = rows.map((r, i) => ({ ...r, group: i < n80 ? '80% de la venta' : 'Resto' }));
+  tbody.innerHTML = rows.map((r, i) => `
+    <tr${i < n80 ? ` class="pareto-a" style="background:${color}14"` : ''}>
+      <td style="color:#94a3b8">${i + 1}</td>
+      <td><strong>${escapeHtml(r.name)}</strong></td>
+      <td>${escapeHtml(r.vendor)}</td>
+      <td>${escapeHtml(r.region)}</td>
+      <td>${M(r.neto)}</td>
+      <td>${PCT(r.share)}</td>
+      <td>${PCT(r.cum)}</td>
+    </tr>` + (i === n80 - 1 && n80 < n
+      ? `<tr class="pareto-cut"><td colspan="7">Hasta acá: ${n80} cliente${n80 === 1 ? '' : 's'} = 80% de la venta · debajo, el 20% restante (${n - n80} clientes)</td></tr>`
+      : '')).join('');
+
+  // Curva: % de clientes (x) vs % acumulado de la venta (y).
+  const curve = [{ x: 0, y: 0 }].concat(rows.map((r, i) => ({ x: (i + 1) / n * 100, y: r.cum * 100 })));
+  const x80 = n80 / n * 100;
+  if (chartPareto) chartPareto.destroy();
+  chartPareto = new Chart(document.getElementById('chart-pareto'), {
+    type: 'line',
+    data: {
+      datasets: [
+        { label: 'Venta acumulada', data: curve, borderColor: color, backgroundColor: color + '22', fill: true,
+          pointRadius: 0, borderWidth: 2, tension: 0.1, order: 3 },
+        // Guias del 20% de clientes y del 80% de la venta.
+        { label: 'Guía', data: [{ x: 0, y: 80 }, { x: x80, y: 80 }, { x: x80, y: 0 }], borderColor: '#64748b', borderDash: [5, 4],
+          pointRadius: 0, borderWidth: 1, fill: false, order: 2 },
+        { label: 'Guía 20%', data: [{ x: 20, y: 0 }, { x: 20, y: share20 * 100 }, { x: 0, y: share20 * 100 }], borderColor: '#cbd5e1', borderDash: [3, 3],
+          pointRadius: 0, borderWidth: 1, fill: false, order: 2 },
+        { label: 'Puntos', type: 'scatter', data: [{ x: x80, y: 80 }, { x: 20, y: share20 * 100 }],
+          backgroundColor: ['#0f172a', '#64748b'], pointRadius: 5, order: 1,
+          datalabels: {
+            display: true, align: 'bottom', anchor: 'end', offset: 4, color: '#0f172a', font: { size: 10, weight: '600' },
+            formatter: (v, ctx) => (ctx.dataIndex === 0
+              ? `${n80} clientes (${Math.round(x80)}%) → 80%`
+              : `20% → ${Math.round(share20 * 100)}%`),
+          } },
+      ],
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false, animation: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { filter: it => it.dataset.label === 'Venta acumulada',
+          callbacks: { label: ctx => ` ${ctx.parsed.x.toFixed(0)}% de los clientes → ${ctx.parsed.y.toFixed(0)}% de la venta` } },
+      },
+      scales: {
+        x: { type: 'linear', min: 0, max: 100, title: { display: true, text: '% de clientes (de mayor a menor venta)', font: { size: 10 } },
+             ticks: { font: { size: 9 }, callback: v => v + '%' }, grid: { color: '#f1f5f9' } },
+        y: { min: 0, max: 100, title: { display: true, text: '% acumulado de la venta', font: { size: 10 } },
+             ticks: { font: { size: 9 }, callback: v => v + '%' }, grid: { color: '#f1f5f9' } },
+      },
+    },
+  });
+}
+
+// Baja a Excel el ranking completo, con la columna que marca quienes hacen el 80%.
+function exportParetoExcel() {
+  if (typeof XLSX === 'undefined') {
+    alert('No se pudo cargar el generador de Excel. Revisá la conexión y recargá la página.');
+    return;
+  }
+  const aoa = [['#', 'Cliente', 'Vendedora', 'Región', 'Venta neta', '% de la venta', '% acumulado', 'Grupo']]
+    .concat(paretoRowsForExport.map((r, i) => [i + 1, r.name, r.vendor, r.region, Math.round(r.neto), r.share, r.cum, r.group]));
+  const ws = XLSX.utils.aoa_to_sheet(aoa);
+  for (let r = 1; r < aoa.length; r++) {
+    ws[XLSX.utils.encode_cell({ r, c: 4 })].z = '#,##0';
+    ws[XLSX.utils.encode_cell({ r, c: 5 })].z = '0.0%';
+    ws[XLSX.utils.encode_cell({ r, c: 6 })].z = '0.0%';
+  }
+  ws['!cols'] = [{ wch: 5 }, { wch: 46 }, { wch: 18 }, { wch: 18 }, { wch: 14 }, { wch: 13 }, { wch: 13 }, { wch: 16 }];
+  ws['!autofilter'] = { ref: `A1:H${Math.max(aoa.length, 2)}` };
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, 'Clientes 80-20');
+  const t = new Date();
+  const stamp = `${t.getFullYear()}-${String(t.getMonth() + 1).padStart(2, '0')}-${String(t.getDate()).padStart(2, '0')}`;
+  const per = (document.getElementById('pareto-title').textContent.split('— ')[1] || '').trim();
+  const vend = selectedVendor === 'all' ? 'Todas' : selectedVendor;
+  XLSX.writeFile(wb, `Clientes 80-20 - ${per} - ${vend}${brandOn() ? ' - ' + BRAND_SHORT[selectedBrand] : ''} - ${stamp}.xlsx`);
 }
 
 // ── Cartera en riesgo ─────────────────────────────────────────────────────────

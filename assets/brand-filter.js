@@ -34,6 +34,23 @@ function setBodyBrand() {
   document.body.dataset.brand = brandOn() ? BRAND_CLASS[selectedBrand] : '';
 }
 
+// Si la marca se cambia en otra pestaña o ventana (o la pagina vuelve de "atras"
+// con su estado viejo), esta pagina la toma de localStorage y se repinta.
+function syncBrandFromStorage() {
+  let b;
+  try { b = localStorage.getItem(BRAND_KEY); } catch (e) { return; }
+  if (!BRAND_LIST.includes(b)) b = 'all';
+  if (b === selectedBrand) return;
+  selectedBrand = b;
+  const sel = document.getElementById('brand-select');
+  if (sel) sel.value = selectedBrand;
+  setBodyBrand();
+  if (typeof applyBrandChange === 'function') applyBrandChange();
+}
+window.addEventListener('storage', e => { if (e.key === BRAND_KEY) syncBrandFromStorage(); });
+window.addEventListener('pageshow', e => { if (e.persisted) syncBrandFromStorage(); });
+document.addEventListener('visibilitychange', () => { if (!document.hidden) syncBrandFromStorage(); });
+
 // Pone el selector "Marca" en el encabezado de la pagina (primer filtro, a la
 // izquierda de los demas) y deja listo el atributo del body.
 function initBrandFilter() {

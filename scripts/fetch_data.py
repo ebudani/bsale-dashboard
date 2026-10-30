@@ -23,6 +23,8 @@ import urllib.request
 import urllib.error
 import argparse
 
+from chile_regions import region_from_address
+
 TOKEN = os.environ.get("BSALE_TOKEN", "")
 BASE_URL = "https://api.bsale.io/v1"
 DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
@@ -153,6 +155,15 @@ def fetch_clients():
                     "firstName": first, "lastName": last,
                     "phone": (c.get("phone") or "").strip(),
                 }
+                # Region para "Ventas por region": sale de la comuna / ciudad de la
+                # direccion de facturacion de la ficha (Bsale no tiene campo region).
+                # Solo se guarda el codigo y la comuna, no la direccion.
+                muni = (c.get("municipality") or "").strip()
+                region = region_from_address(c.get("address"), muni, (c.get("city") or "").strip())
+                if region:
+                    clients[cid]["region"] = region
+                if muni:
+                    clients[cid]["comuna"] = muni
                 for attr in (c.get("attributes") or {}).get("items", []):
                     if attr.get("name") == "Vendedor" and attr.get("value"):
                         vendedor_attr_id = attr["id"]
