@@ -8,7 +8,13 @@ const BRAND_LIST = ['Teoxane', 'RRS HA Long Lasting'];
 const BRAND_SHORT = { 'Teoxane': 'Teoxane', 'RRS HA Long Lasting': 'RRS' };
 const BRAND_CLASS = { 'Teoxane': 'teox', 'RRS HA Long Lasting': 'rrs' };
 
+// Una pagina puede apagar el filtro con `window.BRAND_FILTER_OFF = true` antes de
+// cargar este archivo (el tablero general lo hace): sin selector, siempre 'all',
+// y no toma la marca que se haya elegido en otras paginas.
+const BRAND_FILTER_OFF = !!window.BRAND_FILTER_OFF;
+
 let selectedBrand = (() => {
+  if (BRAND_FILTER_OFF) return 'all';
   try {
     const b = localStorage.getItem(BRAND_KEY);
     return BRAND_LIST.includes(b) ? b : 'all';
@@ -37,6 +43,7 @@ function setBodyBrand() {
 // Si la marca se cambia en otra pestaña o ventana (o la pagina vuelve de "atras"
 // con su estado viejo), esta pagina la toma de localStorage y se repinta.
 function syncBrandFromStorage() {
+  if (BRAND_FILTER_OFF) return;
   let b;
   try { b = localStorage.getItem(BRAND_KEY); } catch (e) { return; }
   if (!BRAND_LIST.includes(b)) b = 'all';
@@ -55,6 +62,7 @@ document.addEventListener('visibilitychange', () => { if (!document.hidden) sync
 // izquierda de los demas) y deja listo el atributo del body.
 function initBrandFilter() {
   setBodyBrand();
+  if (BRAND_FILTER_OFF) return;
   const right = document.querySelector('.header-right');
   if (!right || document.getElementById('brand-select')) return;
   const group = document.createElement('div');
