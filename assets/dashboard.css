@@ -289,10 +289,11 @@
   .regions-table th:not(:first-child), .regions-table td:not(:first-child) { text-align: right; }
   .regions-table tr.region-hl td { background: #fef9c3; }
   .regions-table tr.region-unknown td { color: var(--gray-600); }
+  .regions-table tfoot td { font-weight: 700; background: var(--gray-100, #f1f5f9); border-top: 2px solid var(--gray-300, #cbd5e1); }
   @media (max-width: 900px) {
     .regions-body { grid-template-columns: 1fr; }
     .regions-map { height: 320px; }
-    #card-regions { order: 9; }
+    #card-regions { order: 11; }
   }
 
   /* Fila de abajo (index.html): Concentracion 80/20 a la izquierda, Top 10 Clientes a la derecha */

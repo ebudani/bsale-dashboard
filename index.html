@@ -6,7 +6,7 @@
 <title>AestheticsPro · Dashboard Ventas</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
-<link rel="stylesheet" href="assets/dashboard.css?v=20261030b">
+<link rel="stylesheet" href="assets/dashboard.css?v=20261102a">
 </head>
 <body>
 
@@ -110,25 +110,6 @@
       <div class="card" id="card-brands">
         <h2>Marcas por Mes (últimos 12)</h2>
         <div class="chart-wrap"><canvas id="chart-brands"></canvas></div>
-      </div>
-    </div>
-
-    <!-- Ventas por region (mapa + tabla), segun la direccion de facturacion de cada cuenta -->
-    <div class="card" id="card-regions">
-      <h2 id="regions-title">Ventas por región — </h2>
-      <div class="risk-caption" id="regions-note"></div>
-      <div class="regions-body">
-        <div class="regions-map"><svg id="regions-svg" viewBox="0 0 143 702" preserveAspectRatio="xMidYMin meet" role="img" aria-label="Mapa de Chile por región"></svg></div>
-        <div class="regions-table">
-          <table id="table-regions">
-            <thead>
-              <tr>
-                <th>Región</th><th class="c-teox">Teoxane</th><th class="c-rrs">RRS LL</th><th class="c-total">Total</th><th>% del total</th><th>Clientes</th>
-              </tr>
-            </thead>
-            <tbody id="tbody-regions"></tbody>
-          </table>
-        </div>
       </div>
     </div>
 
@@ -244,17 +225,37 @@
       </div>
     </div>
 
+    <!-- Ventas por region (mapa + tabla), segun la direccion de facturacion de cada cuenta -->
+    <div class="card" id="card-regions">
+      <h2 id="regions-title">Ventas por región — </h2>
+      <div class="risk-caption" id="regions-note"></div>
+      <div class="regions-body">
+        <div class="regions-map"><svg id="regions-svg" viewBox="0 0 143 702" preserveAspectRatio="xMidYMin meet" role="img" aria-label="Mapa de Chile por región"></svg></div>
+        <div class="regions-table">
+          <table id="table-regions">
+            <thead>
+              <tr>
+                <th>Región</th><th class="c-teox">Teoxane</th><th class="c-rrs">RRS LL</th><th class="c-total">Total</th><th>% del total</th><th>Clientes</th>
+              </tr>
+            </thead>
+            <tbody id="tbody-regions"></tbody>
+            <tfoot id="tfoot-regions"></tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+
   </div><!-- #content -->
 </main>
 
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
-<script src="assets/firebase-config.js?v=20261030b"></script>
-<script src="assets/risk-contacts.js?v=20261030b"></script>
-<script src="assets/pin-gate.js?v=20261030b"></script>
+<script src="assets/firebase-config.js?v=20261102a"></script>
+<script src="assets/risk-contacts.js?v=20261102a"></script>
+<script src="assets/pin-gate.js?v=20261102a"></script>
 <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
-<script src="assets/brand-filter.js?v=20261030b"></script>
-<script src="assets/dashboard.js?v=20261030b"></script>
+<script src="assets/brand-filter.js?v=20261102a"></script>
+<script src="assets/dashboard.js?v=20261102a"></script>
 </body>
 </html>

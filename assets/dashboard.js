@@ -1347,7 +1347,13 @@ async function renderRegionSales(months, label) {
 
   if (!known.length) {
     note.textContent = 'Todavía no hay regiones cargadas: se completan en la próxima actualización diaria de datos (18:00).';
-    tbody.innerHTML = ''; svg.innerHTML = '';
+    tbody.innerHTML = '';
+    document.getElementById('tfoot-regions').innerHTML = '';
+    if (mapData) {
+      svg.setAttribute('viewBox', `0 0 ${mapData.viewBox[0]} ${mapData.viewBox[1]}`);
+      svg.innerHTML = Object.values(mapData.regions).map(reg =>
+        `<path d="${reg.d}" fill="#e2e8f0" stroke="#fff" stroke-width="0.6" stroke-linejoin="round"></path>`).join('');
+    } else svg.innerHTML = '';
     return;
   }
   const unknown = data['?'];
@@ -1366,6 +1372,18 @@ async function renderRegionSales(months, label) {
       <td>${grand ? PCT(valOf(r) / grand) : '—'}</td>
       <td>${r.clients}</td>
     </tr>`).join('');
+
+  // Fila TOTAL: suma de todas las filas (incluida "Sin región"), cada columna con su marca.
+  const sum = f => rows.reduce((s, r) => s + f(r), 0);
+  document.getElementById('tfoot-regions').innerHTML = `
+    <tr>
+      <td>TOTAL</td>
+      <td class="c-teox">${M(sum(r => r.teox))}</td>
+      <td class="c-rrs">${M(sum(r => r.rrs))}</td>
+      <td class="c-total">${M(sum(r => r.teox + r.rrs))}</td>
+      <td>${grand ? PCT(1) : '—'}</td>
+      <td>${sum(r => r.clients)}</td>
+    </tr>`;
 
   // Mapa: color por venta (raiz cuadrada, para que la Metropolitana no deje a las demas en blanco).
   if (!mapData) { svg.innerHTML = ''; return; }
