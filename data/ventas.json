@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-31T23:59:05.994371Z",
+  "updated_at": "2026-11-02T00:18:09.596077Z",
   "users": {
     "7": "Cindy Monsalves",
     "9": "Daisy Ponce",
@@ -43237,6 +43237,41 @@
           }
         }
       }
+    },
+    {
+      "year": 2026,
+      "month": 11,
+      "count_facturas": 0,
+      "count_nc": 0,
+      "neto_facturas": 0,
+      "neto_nc": 0,
+      "total_neto": 0,
+      "by_day": [],
+      "by_vendor": {},
+      "by_vendor_day": {},
+      "by_day_brand": {},
+      "by_vendor_day_brand": {},
+      "by_brand": {
+        "Teoxane": 0,
+        "RRS HA Long Lasting": 0,
+        "FINE": 0
+      },
+      "by_vendor_brand": {},
+      "by_sku": {},
+      "by_vendor_sku": {},
+      "top_clients": [],
+      "top_clients_by_vendor": {},
+      "brand_productivity": {
+        "Teoxane": {
+          "clients": 0,
+          "units": 0
+        },
+        "RRS HA Long Lasting": {
+          "clients": 0,
+          "units": 0
+        }
+      },
+      "brand_productivity_by_vendor": {}
     }
   ],
   "client_activity": {
