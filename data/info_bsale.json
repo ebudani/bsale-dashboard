@@ -1,8 +1,17 @@
 {
-  "updated_at": "2026-11-02T00:20:41.633928+00:00",
+  "updated_at": "2026-11-03T02:50:11.725280+00:00",
   "accounts_with_sales": 537,
-  "accounts_without_address": 453,
+  "accounts_without_address": 450,
   "accounts": [
+    {
+      "id": "591",
+      "name": "THE BEAUTY LAB SPA",
+      "rut": "77244624-1",
+      "contact": "Pia Quiroga",
+      "phone": "988998476",
+      "billing_address": "LO FONTECILLA 201 TORRE B PISO 7, Las Condes, Las Condes",
+      "last_sale": "2026-11-02"
+    },
     {
       "id": "438",
       "name": "SOCIEDAD PROFESIONAL MEDICA ESTETICA ODONTOLOGICA Y EDUCACIONAL FAGA L",
@@ -499,15 +508,6 @@
       "last_sale": "2026-10-07"
     },
     {
-      "id": "591",
-      "name": "THE BEAUTY LAB SPA",
-      "rut": "77244624-1",
-      "contact": "Pia Quiroga",
-      "phone": "988998476",
-      "billing_address": "LO FONTECILLA 201 TORRE B PISO 7, Las Condes, Las Condes",
-      "last_sale": "2026-10-07"
-    },
-    {
       "id": "995",
       "name": "SERVICIOS PROFESIONALES BEAUTY & SOUL LIMITADA",
       "rut": "77190631-1",
@@ -553,15 +553,6 @@
       "last_sale": "2026-09-28"
     },
     {
-      "id": "792",
-      "name": "CENTRO ESTÉTICA INTEGRAL VILLARROEL Y DI BIAGGIO LIMITADA",
-      "rut": "77888011-3",
-      "contact": "Marta Di Biaggio",
-      "phone": "978041616",
-      "billing_address": "P LYNCH 080, Villa Alemana, Villa Alemana",
-      "last_sale": "2026-09-28"
-    },
-    {
       "id": "871",
       "name": "FRANCISCA ÁLVAREZ QUINTANA SPA",
       "rut": "76999941-8",
@@ -587,15 +578,6 @@
       "phone": "941222959",
       "billing_address": "Benjamin 2945, Las Condes, Santiago",
       "last_sale": "2026-09-28"
-    },
-    {
-      "id": "870",
-      "name": "SOCIEDAD ODONTOLÓGICA INTEGRAL DELLA ROSA SPA",
-      "rut": "77216843-8",
-      "contact": "Constanza De La Rosa",
-      "phone": "954164192",
-      "billing_address": "Bellohorizonte 781, Rancagua, Rancagua",
-      "last_sale": "2026-09-23"
     },
     {
       "id": "548",
@@ -1036,15 +1018,6 @@
       "contact": "Penélope Pooley",
       "phone": "",
       "billing_address": "Camino el alba 9500 Torre B, Las Condes, Santiago",
-      "last_sale": "2026-09-03"
-    },
-    {
-      "id": "1010",
-      "name": "JAVIERA IGNACIA FLORES ALMARZA",
-      "rut": "20132883-7",
-      "contact": "Javiera Flores",
-      "phone": "",
-      "billing_address": "Esmeralda1390, Los Andes, Los Andes",
       "last_sale": "2026-09-03"
     },
     {
