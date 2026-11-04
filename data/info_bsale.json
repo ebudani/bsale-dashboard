@@ -1,8 +1,17 @@
 {
-  "updated_at": "2026-11-03T02:50:11.725280+00:00",
-  "accounts_with_sales": 537,
+  "updated_at": "2026-11-04T01:07:10.714339+00:00",
+  "accounts_with_sales": 539,
   "accounts_without_address": 450,
   "accounts": [
+    {
+      "id": "1124",
+      "name": "JL servicios médicos limitada",
+      "rut": "78218408-3",
+      "contact": "Maria Jimena Llorente",
+      "phone": "933098595",
+      "billing_address": "Av. Presidente Kennedy 5600, Vitacura, Santiago",
+      "last_sale": "2026-11-03"
+    },
     {
       "id": "591",
       "name": "THE BEAUTY LAB SPA",
@@ -64,15 +73,6 @@
       "contact": "",
       "phone": "",
       "billing_address": "Augusto Leguia Sur 79 202, Las Condes, Santiago",
-      "last_sale": "2026-10-22"
-    },
-    {
-      "id": "1124",
-      "name": "JL servicios médicos limitada",
-      "rut": "78218408-3",
-      "contact": "Maria Jimena Llorente",
-      "phone": "933098595",
-      "billing_address": "Av. Presidente Kennedy 5600, Vitacura, Santiago",
       "last_sale": "2026-10-22"
     },
     {
