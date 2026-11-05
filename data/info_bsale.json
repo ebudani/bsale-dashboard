@@ -1,8 +1,17 @@
 {
-  "updated_at": "2026-11-04T01:07:10.714339+00:00",
-  "accounts_with_sales": 539,
-  "accounts_without_address": 450,
+  "updated_at": "2026-11-05T01:21:43.504581+00:00",
+  "accounts_with_sales": 540,
+  "accounts_without_address": 447,
   "accounts": [
+    {
+      "id": "651",
+      "name": "OSVAL LIMITADA",
+      "rut": "76870654-9",
+      "contact": "Carla Nave",
+      "phone": "",
+      "billing_address": "PADRE MARIANO 181 OF 303, Providencia, Santiago",
+      "last_sale": "2026-11-04"
+    },
     {
       "id": "1124",
       "name": "JL servicios médicos limitada",
@@ -29,15 +38,6 @@
       "phone": "",
       "billing_address": "DR GENARO REYES C 581, Los Angeles, Los Angeles",
       "last_sale": "2026-10-29"
-    },
-    {
-      "id": "651",
-      "name": "OSVAL LIMITADA",
-      "rut": "76870654-9",
-      "contact": "Carla Nave",
-      "phone": "",
-      "billing_address": "PADRE MARIANO 181 OF 303, Providencia, Santiago",
-      "last_sale": "2026-10-28"
     },
     {
       "id": "921",
@@ -524,15 +524,6 @@
       "phone": "998735793",
       "billing_address": "Av La Plaza 560, Las Condes, Santiago",
       "last_sale": "2026-10-05"
-    },
-    {
-      "id": "999",
-      "name": "ODONTOLOGIA RAFFAELA FRANCESCA SMOQUINA MONTIEL E.I.R.L.",
-      "rut": "77967842-3",
-      "contact": "Rafaela Smoquina",
-      "phone": "942536808",
-      "billing_address": "Alonso de Córdova 5870 oficina 221, Las condes, Santiago",
-      "last_sale": "2026-10-02"
     },
     {
       "id": "782",
@@ -1444,15 +1435,6 @@
       "last_sale": "2026-08-03"
     },
     {
-      "id": "1079",
-      "name": "MEDICINA ESTETICA FACIAL SEMEF SPA",
-      "rut": "77807033-2",
-      "contact": "Sofia Espinoza",
-      "phone": "",
-      "billing_address": "30 Oriente 1528, Talca, Talca",
-      "last_sale": "2026-08-03"
-    },
-    {
       "id": "933",
       "name": "PRESTADORA DE SERVICIOS MEDICOS NILO Y SANCHEZ LIMITADA",
       "rut": "76221064-9",
@@ -1820,15 +1802,6 @@
       "phone": "",
       "billing_address": "Av. La dehesa 1201, La Dehesa, Santiago",
       "last_sale": "2026-05-28"
-    },
-    {
-      "id": "715",
-      "name": "CLINICA CHLOE SPA",
-      "rut": "77225468-7",
-      "contact": "Maria Jimena Maugueri",
-      "phone": "",
-      "billing_address": "REÑACA NORTE 25, Viña del Mar, Viña del Mar",
-      "last_sale": "2026-05-26"
     },
     {
       "id": "1072",

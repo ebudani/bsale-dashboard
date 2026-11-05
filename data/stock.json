@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-11-04T01:04:36.590799Z",
+  "updated_at": "2026-11-05T01:19:36.187682Z",
   "items": [
     {
       "sku": "Long Lasting",
       "code": "LL24A",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 946.0,
-      "quantity_available": 946.0,
+      "quantity": 938.0,
+      "quantity_available": 938.0,
       "quantity_reserved": 0.0
     },
     {
@@ -15,8 +15,8 @@
       "code": "910049/02",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 541.0,
-      "quantity_available": 541.0,
+      "quantity": 531.0,
+      "quantity_available": 531.0,
       "quantity_reserved": 0.0
     },
     {
@@ -24,8 +24,8 @@
       "code": "940001/01",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 91.0,
-      "quantity_available": 91.0,
+      "quantity": 86.0,
+      "quantity_available": 86.0,
       "quantity_reserved": 0.0
     },
     {
@@ -42,8 +42,8 @@
       "code": "940013/01",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 161.0,
-      "quantity_available": 161.0,
+      "quantity": 151.0,
+      "quantity_available": 151.0,
       "quantity_reserved": 0.0
     },
     {
@@ -51,8 +51,8 @@
       "code": "940011/01",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 189.0,
-      "quantity_available": 189.0,
+      "quantity": 184.0,
+      "quantity_available": 184.0,
       "quantity_reserved": 0.0
     },
     {
@@ -60,8 +60,8 @@
       "code": "25221/2",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 509.0,
-      "quantity_available": 509.0,
+      "quantity": 494.0,
+      "quantity_available": 494.0,
       "quantity_reserved": 0.0
     },
     {
@@ -78,8 +78,8 @@
       "code": "910043/01",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 260.0,
-      "quantity_available": 260.0,
+      "quantity": 255.0,
+      "quantity_available": 255.0,
       "quantity_reserved": 0.0
     },
     {
@@ -96,8 +96,8 @@
       "code": "78819789403573",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 58.0,
-      "quantity_available": 58.0,
+      "quantity": 53.0,
+      "quantity_available": 53.0,
       "quantity_reserved": 0.0
     },
     {
