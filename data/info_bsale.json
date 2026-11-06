@@ -1,8 +1,26 @@
 {
-  "updated_at": "2026-11-05T01:21:43.504581+00:00",
-  "accounts_with_sales": 540,
-  "accounts_without_address": 447,
+  "updated_at": "2026-11-06T01:25:09.302004+00:00",
+  "accounts_with_sales": 541,
+  "accounts_without_address": 445,
   "accounts": [
+    {
+      "id": "1091",
+      "name": "BEAUTY LINE SPA",
+      "rut": "78141976-1",
+      "contact": "Gloria Charrie Troncoso",
+      "phone": "971733680",
+      "billing_address": "Av. El santo 1490, La serena, La serena",
+      "last_sale": "2026-11-05"
+    },
+    {
+      "id": "1301",
+      "name": "Clínica Franjo Vukelic limitada",
+      "rut": "77787015-7",
+      "contact": "Franjo Vukelic",
+      "phone": "956117435",
+      "billing_address": "Avenida Presidente Kennedy 6800, Vitacura, Santiago",
+      "last_sale": "2026-11-05"
+    },
     {
       "id": "651",
       "name": "OSVAL LIMITADA",
@@ -208,15 +226,6 @@
       "contact": "Macarena Massoud",
       "phone": "971387428",
       "billing_address": "ALONSO DE CORDOVA 5870 Of 1121, Las Condes, Santiago",
-      "last_sale": "2026-10-14"
-    },
-    {
-      "id": "552",
-      "name": "SOCIEDAD DE SERVICIOS MEDICOS Y ESTETICOS MPRS LIMITADA",
-      "rut": "77769164-3",
-      "contact": "Marcela Rivera",
-      "phone": "954453724",
-      "billing_address": "HOSCHTETTER 599 OF. 306 ED. UNO-K, Temuco, Temuco",
       "last_sale": "2026-10-14"
     },
     {
@@ -454,15 +463,6 @@
       "last_sale": "2026-10-08"
     },
     {
-      "id": "1209",
-      "name": "Inversiones Altamira Spa",
-      "rut": "77586708-6",
-      "contact": "Ihan Contreras",
-      "phone": "986844884",
-      "billing_address": "Altamira 1401, Vitacura, Santiago",
-      "last_sale": "2026-10-08"
-    },
-    {
       "id": "1227",
       "name": "Ricardo Fernandez",
       "rut": "13861976-1",
@@ -605,15 +605,6 @@
       "phone": "998953082",
       "billing_address": "Ongolmo 365, Concepción, Concepción",
       "last_sale": "2026-09-21"
-    },
-    {
-      "id": "1176",
-      "name": "RODRIGO CUETO Y CIA LTDA",
-      "rut": "76261884-2",
-      "contact": "Claudia Cueto",
-      "phone": "952284562",
-      "billing_address": "Av Libertad 63, of 503, Viña Del Mar, Viña del Mar",
-      "last_sale": "2026-09-17"
     },
     {
       "id": "1182",
@@ -1280,15 +1271,6 @@
       "phone": "74306181",
       "billing_address": "El Mirador 34, Illapel, Illapel",
       "last_sale": "2026-08-18"
-    },
-    {
-      "id": "1091",
-      "name": "BEAUTY LINE SPA",
-      "rut": "78141976-1",
-      "contact": "Gloria Charrie Troncoso",
-      "phone": "971733680",
-      "billing_address": "Av. El santo 1490, La serena, La serena",
-      "last_sale": "2026-08-17"
     },
     {
       "id": "428",
