@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-06T01:23:06.197061Z",
+  "updated_at": "2026-11-07T00:39:36.575499Z",
   "users": {
     "7": "Cindy Monsalves",
     "9": "Daisy Ponce",
@@ -7751,6 +7751,51 @@
       "phone": "956117435",
       "region": "RM",
       "comuna": "Vitacura"
+    },
+    "1302": {
+      "name": "Carolina Sepúlveda",
+      "rut": "18145503-9",
+      "firstName": "Carolina",
+      "lastName": "Sepúlveda",
+      "phone": "",
+      "region": "RM",
+      "comuna": "Santiago"
+    },
+    "1303": {
+      "name": "Doctora Catalina Lira SPA",
+      "rut": "77243758-7",
+      "firstName": "Catalina",
+      "lastName": "Lira",
+      "phone": "996797897",
+      "region": "RM",
+      "comuna": "Providencia"
+    },
+    "1304": {
+      "name": "CINDY GRACE SERVICIOS DENTALES SPA",
+      "rut": "77927757-7",
+      "firstName": "CINDY",
+      "lastName": "CORNEJO",
+      "phone": "997535036",
+      "region": "RM",
+      "comuna": "Lo Barnechea"
+    },
+    "1305": {
+      "name": "PILAR ISABEL NEIRA CUEVAS",
+      "rut": "19906195-k",
+      "firstName": "PILAR",
+      "lastName": "NEIRA",
+      "phone": "933205687",
+      "region": "VIII",
+      "comuna": "Concepción"
+    },
+    "1306": {
+      "name": "Catalina Lucero",
+      "rut": "17956750-4",
+      "firstName": "Catalina",
+      "lastName": "Lucero",
+      "phone": "962465557",
+      "region": "RM",
+      "comuna": "Santiago"
     },
     "2": {
       "name": "Sociedad Clínica Ginestetica SPA",
@@ -47590,6 +47635,11 @@
     "1299": "Daisy Ponce",
     "1300": "Cindy Monsalves",
     "1301": "Monica Urrutia",
+    "1302": "Cindy Monsalves",
+    "1303": "Cindy Monsalves",
+    "1304": "Daisy Ponce",
+    "1305": "Daisy Ponce",
+    "1306": "Cindy Monsalves",
     "872": "Cindy Monsalves",
     "1009": "Cindy Monsalves",
     "1149": "Daisy Ponce",
