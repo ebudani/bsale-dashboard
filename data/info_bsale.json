@@ -1,8 +1,17 @@
 {
-  "updated_at": "2026-11-09T00:37:10.157351+00:00",
-  "accounts_with_sales": 541,
-  "accounts_without_address": 445,
+  "updated_at": "2026-11-10T03:15:20.051064+00:00",
+  "accounts_with_sales": 545,
+  "accounts_without_address": 443,
   "accounts": [
+    {
+      "id": "905",
+      "name": "PALLINI LTDA.",
+      "rut": "76129871-2",
+      "contact": "Oreste Pallini",
+      "phone": "998260927",
+      "billing_address": "Ohiggins 1338, Concepción, Concepcion",
+      "last_sale": "2026-11-09"
+    },
     {
       "id": "1091",
       "name": "BEAUTY LINE SPA",
@@ -137,15 +146,6 @@
       "phone": "",
       "billing_address": "Pasaje E lobos 229, Iquique, Iquique",
       "last_sale": "2026-10-19"
-    },
-    {
-      "id": "905",
-      "name": "PALLINI LTDA.",
-      "rut": "76129871-2",
-      "contact": "Oreste Pallini",
-      "phone": "998260927",
-      "billing_address": "Ohiggins 1338, Concepción, Concepcion",
-      "last_sale": "2026-10-16"
     },
     {
       "id": "964",
@@ -335,15 +335,6 @@
       "phone": "984291579",
       "billing_address": "AVENIDA ARTURO PRAT CHACON 3545, Iquique, Iquique",
       "last_sale": "2026-10-13"
-    },
-    {
-      "id": "517",
-      "name": "SOCIEDAD MEDICA DE TECNOLOGÍA LIMITADA",
-      "rut": "77215854-8",
-      "contact": "Ingrid Acuña",
-      "phone": "99647172",
-      "billing_address": "Libertad 1035, Chillan, Chillan",
-      "last_sale": "2026-10-08"
     },
     {
       "id": "577",
@@ -1261,15 +1252,6 @@
       "contact": "Francisco Escala",
       "phone": "989063335",
       "billing_address": "AV. LAS CONDES 12587 DP 206A, Las Condes, Santiago",
-      "last_sale": "2026-08-18"
-    },
-    {
-      "id": "1224",
-      "name": "Sociedad Silva Vidal limitada",
-      "rut": "78101189-4",
-      "contact": "Sebastian Silva",
-      "phone": "74306181",
-      "billing_address": "El Mirador 34, Illapel, Illapel",
       "last_sale": "2026-08-18"
     },
     {
