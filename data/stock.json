@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-11-10T03:12:43.877843Z",
+  "updated_at": "2026-11-11T01:02:39.582355Z",
   "items": [
     {
       "sku": "Long Lasting",
       "code": "LL24A",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 899.0,
-      "quantity_available": 899.0,
+      "quantity": 890.0,
+      "quantity_available": 890.0,
       "quantity_reserved": 0.0
     },
     {
@@ -15,8 +15,8 @@
       "code": "910049/02",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 451.0,
-      "quantity_available": 451.0,
+      "quantity": 435.0,
+      "quantity_available": 435.0,
       "quantity_reserved": 0.0
     },
     {
@@ -33,8 +33,8 @@
       "code": "940012/01",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 90.0,
-      "quantity_available": 90.0,
+      "quantity": 86.0,
+      "quantity_available": 86.0,
       "quantity_reserved": 0.0
     },
     {
@@ -42,8 +42,8 @@
       "code": "940013/01",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 143.0,
-      "quantity_available": 143.0,
+      "quantity": 126.0,
+      "quantity_available": 126.0,
       "quantity_reserved": 0.0
     },
     {
@@ -51,8 +51,8 @@
       "code": "940011/01",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 183.0,
-      "quantity_available": 183.0,
+      "quantity": 178.0,
+      "quantity_available": 178.0,
       "quantity_reserved": 0.0
     },
     {
@@ -69,8 +69,8 @@
       "code": "910070/02",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 178.0,
-      "quantity_available": 178.0,
+      "quantity": 175.0,
+      "quantity_available": 175.0,
       "quantity_reserved": 0.0
     },
     {
@@ -78,8 +78,8 @@
       "code": "910043/01",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 243.0,
-      "quantity_available": 243.0,
+      "quantity": 235.0,
+      "quantity_available": 235.0,
       "quantity_reserved": 0.0
     },
     {

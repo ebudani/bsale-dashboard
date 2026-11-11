@@ -1,8 +1,17 @@
 {
-  "updated_at": "2026-11-10T03:15:20.051064+00:00",
-  "accounts_with_sales": 545,
-  "accounts_without_address": 443,
+  "updated_at": "2026-11-11T01:05:29.949248+00:00",
+  "accounts_with_sales": 546,
+  "accounts_without_address": 439,
   "accounts": [
+    {
+      "id": "651",
+      "name": "OSVAL LIMITADA",
+      "rut": "76870654-9",
+      "contact": "Carla Nave",
+      "phone": "",
+      "billing_address": "PADRE MARIANO 181 OF 303, Providencia, Santiago",
+      "last_sale": "2026-11-10"
+    },
     {
       "id": "905",
       "name": "PALLINI LTDA.",
@@ -31,15 +40,6 @@
       "last_sale": "2026-11-05"
     },
     {
-      "id": "651",
-      "name": "OSVAL LIMITADA",
-      "rut": "76870654-9",
-      "contact": "Carla Nave",
-      "phone": "",
-      "billing_address": "PADRE MARIANO 181 OF 303, Providencia, Santiago",
-      "last_sale": "2026-11-04"
-    },
-    {
       "id": "1124",
       "name": "JL servicios médicos limitada",
       "rut": "78218408-3",
@@ -56,15 +56,6 @@
       "phone": "988998476",
       "billing_address": "LO FONTECILLA 201 TORRE B PISO 7, Las Condes, Las Condes",
       "last_sale": "2026-11-02"
-    },
-    {
-      "id": "438",
-      "name": "SOCIEDAD PROFESIONAL MEDICA ESTETICA ODONTOLOGICA Y EDUCACIONAL FAGA L",
-      "rut": "77535365-1",
-      "contact": "Helga Farherkrog",
-      "phone": "",
-      "billing_address": "DR GENARO REYES C 581, Los Angeles, Los Angeles",
-      "last_sale": "2026-10-29"
     },
     {
       "id": "921",
@@ -598,15 +589,6 @@
       "last_sale": "2026-09-21"
     },
     {
-      "id": "1182",
-      "name": "ITALO BERRIOS MUÑOZ",
-      "rut": "19678917-0",
-      "contact": "",
-      "phone": "958280096",
-      "billing_address": "CALLE HERNAN CIUDAD 60, MACHALI, RANCAGUA",
-      "last_sale": "2026-09-17"
-    },
-    {
       "id": "1008",
       "name": "ODONTOLOGÍA Y ESTÉTICA CCL SPA",
       "rut": "77471495-2",
@@ -1100,15 +1082,6 @@
       "phone": "99433135",
       "billing_address": "AV QUINCHAMALI 14210, Las Condes, Las Condes",
       "last_sale": "2026-08-28"
-    },
-    {
-      "id": "569",
-      "name": "SERVICIOS MEDICOS TAOTE LTDA",
-      "rut": "76381165-4",
-      "contact": "Maria Jose Castro",
-      "phone": "994343403",
-      "billing_address": "PLAZOLETA CUATRO 5341 CS.B, Peñalolen, Santiago",
-      "last_sale": "2026-08-27"
     },
     {
       "id": "899",
@@ -2612,15 +2585,6 @@
       "phone": "974317589",
       "billing_address": "Pucara 50, Machali, Machali",
       "last_sale": "2025-11-24"
-    },
-    {
-      "id": "479",
-      "name": "PALAVAS DEPILACION LASER LTDA",
-      "rut": "76297938-1",
-      "contact": "",
-      "phone": "",
-      "billing_address": "18 DE SEPTIEMBRE 961, Chillan, Chillan",
-      "last_sale": "2025-11-19"
     },
     {
       "id": "1069",
