@@ -1719,6 +1719,8 @@ function downloadRiskExcel() {
   const cols = [
     ['Cuenta', r => r.name, 44],
     ['RUT', r => r.rut, 12],
+    ['Contacto', r => r.contact || '', 24],
+    ['Teléfono', r => r.phone || '', 14],
     ...(showVendor ? [['Vendedor', r => r.vendor, 18]] : []),
     ['Estado', r => RISK_STATUS_LABEL[r.status], 13],
     [`Mes en curso (${currentLabel})`, r => r.current, 16],
