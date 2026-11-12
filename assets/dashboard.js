@@ -2,10 +2,9 @@
 // stock.html) -- loaded as a separate <script> before this file.
 
 // ── Config ─────────────────────────────────────────────────────────────────
-// Piloto de Contactado/Comentario/Volver a contactar: mientras se prueba,
-// solo visible en el link de estas vendedoras (y siempre en el tablero
-// general, para poder revisarlo). Agregar mas nombres (o vaciar el array
-// para mostrarlo a todas) cuando este validado.
+// Contactado y Comentario los ven todas las vendedoras (y el tablero general).
+// "Volver a contactar" sigue en piloto: solo visible en el link de estas vendedoras
+// (el tablero general la oculta). Agregar mas nombres cuando este validado.
 const RISK_CONTACT_PILOT_VENDORS = ['Cindy Monsalves'];
 const BRANDS = ['Teoxane', 'RRS HA Long Lasting'];
 const BRAND_COLORS = { 'Teoxane': '#2563eb', 'RRS HA Long Lasting': '#d97706', 'FINE': '#059669' };
@@ -296,10 +295,10 @@ function applyVendorLock() {
   // que el resto de la tabla entre sin scroll horizontal.
   const riskTable = document.getElementById('table-risk');
   if (riskTable) riskTable.classList.add('hide-vendor-col');
-  // Piloto de Contactado/Comentario/Volver a contactar -- oculto para
-  // quien no esta en RISK_CONTACT_PILOT_VENDORS (ver comentario arriba).
+  // "Volver a contactar" (piloto) -- oculta para quien no esta en
+  // RISK_CONTACT_PILOT_VENDORS (ver comentario arriba). Contactado y Comentario se ven siempre.
   if (riskTable && !RISK_CONTACT_PILOT_VENDORS.includes(window.LOCKED_VENDOR)) {
-    riskTable.classList.add('hide-contact-cols');
+    riskTable.classList.add('hide-next-contact-col');
   }
   // En cartera-riesgo.html la columna "Volver a contactar" se oculta en el tablero general;
   // quien esta en el piloto de contacto la sigue viendo en su link personal.
@@ -755,6 +754,7 @@ function renderVendorSimple() {
   renderKPIs(view, t, label);
   renderCumplDetail();
   renderTopClientsForVendor();
+  renderCarteraRiesgo();
 }
 
 // Top 10 Clientes on vendor.html has its own period filter (YTD / mes
