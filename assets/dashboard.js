@@ -301,6 +301,11 @@ function applyVendorLock() {
   if (riskTable && !RISK_CONTACT_PILOT_VENDORS.includes(window.LOCKED_VENDOR)) {
     riskTable.classList.add('hide-contact-cols');
   }
+  // En cartera-riesgo.html la columna "Volver a contactar" se oculta en el tablero general;
+  // quien esta en el piloto de contacto la sigue viendo en su link personal.
+  if (riskTable && RISK_CONTACT_PILOT_VENDORS.includes(window.LOCKED_VENDOR)) {
+    riskTable.classList.remove('hide-next-contact-col');
+  }
   return true;
 }
 
@@ -750,7 +755,6 @@ function renderVendorSimple() {
   renderKPIs(view, t, label);
   renderCumplDetail();
   renderTopClientsForVendor();
-  renderCarteraRiesgo();
 }
 
 // Top 10 Clientes on vendor.html has its own period filter (YTD / mes
@@ -1676,7 +1680,7 @@ function renderRiskToolbar(rows) {
     </button>
   `).join('')
     + `<input class="risk-search" type="search" placeholder="Buscar cuenta o RUT…" value="${riskSearch.replace(/"/g,'&quot;')}">`
-    + `<button class="risk-export-btn" title="Baja la vista actual (con estos filtros) a un archivo que abre en Excel">⬇ Descargar CSV</button>`;
+    + `<button class="risk-export-btn" title="Baja a Excel lo que estás viendo (con estos filtros, la búsqueda y el orden actuales)">⬇ Descargar Excel</button>`;
 
   toolbar.querySelectorAll('.risk-chip').forEach(chip => {
     chip.addEventListener('click', () => {
@@ -1689,57 +1693,71 @@ function renderRiskToolbar(rows) {
     riskSearch = e.target.value;
     renderRiskTable(buildRiskRoster());
   });
-  toolbar.querySelector('.risk-export-btn').addEventListener('click', downloadRiskCSV);
+  toolbar.querySelector('.risk-export-btn').addEventListener('click', downloadRiskExcel);
 }
 
 // Fila por fila, tal cual quedo la ultima vez que se pinto la tabla (mismos
 // filtros/orden que esta viendo la vendedora) -- lo llena renderRiskTable().
 let riskFilteredRowsForExport = [];
 
-function csvCell(v) {
-  const s = String(v == null ? '' : v);
-  return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
-}
-
-function downloadRiskCSV() {
-  const headers = [
-    'Cuenta', 'RUT', 'Vendedor', 'Estado', 'Mes en curso', 'Mes anterior',
-    'Última compra',
-    ...(brandOn() ? [`${BRAND_SHORT[selectedBrand]} (última compra)`] : ['Teoxane (última compra)', 'RRS (última compra)']),
-    'Contactado este mes', 'Fecha de contacto', 'Contactado por', 'Comentario',
-    'Último contacto (referencia)', 'Último comentario (referencia)', 'Volver a contactar',
+// Baja a Excel lo que se esta viendo: mismas filas (filtro, busqueda y orden) y las mismas
+// columnas que muestra la tabla (sin Vendedor en un link personal, sin las de contacto si no corresponden).
+function downloadRiskExcel() {
+  if (typeof XLSX === 'undefined') {
+    alert('No se pudo cargar el generador de Excel. Revisá la conexión y recargá la página.');
+    return;
+  }
+  const table = document.getElementById('table-risk');
+  const showVendor = !table.classList.contains('hide-vendor-col');
+  const showContact = !table.classList.contains('hide-contact-cols');
+  const showNext = showContact && !table.classList.contains('hide-next-contact-col');
+  const { currentLabel, prevLabel } = riskMonthKeys();
+  const toDate = iso => {
+    const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso || '');
+    return m ? new Date(+m[1], +m[2] - 1, +m[3]) : (iso || '');   // fecha local, para que no corra un dia
+  };
+  const cols = [
+    ['Cuenta', r => r.name, 44],
+    ['RUT', r => r.rut, 12],
+    ...(showVendor ? [['Vendedor', r => r.vendor, 18]] : []),
+    ['Estado', r => RISK_STATUS_LABEL[r.status], 13],
+    [`Mes en curso (${currentLabel})`, r => r.current, 16],
+    [`Mes anterior (${prevLabel})`, r => r.prev, 16],
+    ['Última compra', r => (r.lastMonth ? monthLabel(...r.lastMonth.split('-').map(Number)) : ''), 14],
+    ...(brandOn()
+      ? [[`${BRAND_SHORT[selectedBrand]} (última compra)`, r => (r.lastBrands ? (r.lastBrands[selectedBrand] || 0) : ''), 18]]
+      : [['Teoxane (última compra)', r => (r.lastBrands ? (r.lastBrands['Teoxane'] || 0) : ''), 18],
+         ['RRS (última compra)', r => (r.lastBrands ? (r.lastBrands['RRS HA Long Lasting'] || 0) : ''), 18]]),
+    ...(showContact ? [
+      ['Contactado este mes', r => (r.contacted ? 'Sí' : 'No'), 16],
+      ['Fecha de contacto', r => (r.contactedAt ? formatContactDate(r.contactedAt) : ''), 15],
+      ['Contactado por', r => r.contactedBy || '', 16],
+      ['Comentario', r => r.note || '', 40],
+      ['Último contacto (referencia)', r => (r.lastContactedAt ? formatContactDate(r.lastContactedAt) : ''), 18],
+      ['Último comentario (referencia)', r => r.lastNote || '', 40],
+    ] : []),
+    ...(showNext ? [['Volver a contactar', r => toDate(r.nextContactDate), 16]] : []),
   ];
-  const lines = [headers.map(csvCell).join(',')];
-  riskFilteredRowsForExport.forEach(r => {
-    lines.push([
-      r.name, r.rut, r.vendor, RISK_STATUS_LABEL[r.status],
-      r.current, r.prev,
-      r.lastMonth ? monthLabel(...r.lastMonth.split('-').map(Number)) : '',
-      ...(brandOn()
-        ? [r.lastBrands ? (r.lastBrands[selectedBrand] || 0) : '']
-        : [r.lastBrands ? (r.lastBrands['Teoxane'] || 0) : '', r.lastBrands ? (r.lastBrands['RRS HA Long Lasting'] || 0) : '']),
-      r.contacted ? 'Sí' : 'No',
-      r.contactedAt ? formatContactDate(r.contactedAt) : '',
-      r.contactedBy || '',
-      r.note || '',
-      r.lastContactedAt ? formatContactDate(r.lastContactedAt) : '',
-      r.lastNote || '',
-      r.nextContactDate || '',
-    ].map(csvCell).join(','));
+  const aoa = [cols.map(c => c[0])].concat(riskFilteredRowsForExport.map(r => cols.map(c => c[1](r))));
+  const ws = XLSX.utils.aoa_to_sheet(aoa, { cellDates: true });
+  cols.forEach((c, ci) => {
+    const isMoney = /^(Mes en curso|Mes anterior|Teoxane \(última|RRS \(última)/.test(c[0]) || /\(última compra\)$/.test(c[0]);
+    for (let r = 1; r < aoa.length; r++) {
+      const cell = ws[XLSX.utils.encode_cell({ r, c: ci })];
+      if (!cell) continue;
+      if (isMoney && typeof cell.v === 'number') cell.z = '#,##0';
+      if (c[0] === 'Volver a contactar' && cell.v instanceof Date) cell.z = 'dd-mm-yyyy';
+    }
   });
-  // BOM al inicio para que Excel en Windows lea bien las tildes/ñ.
-  const blob = new Blob(['﻿' + lines.join('\r\n')], { type: 'text/csv;charset=utf-8;' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
+  ws['!cols'] = cols.map(c => ({ wch: c[2] }));
+  ws['!autofilter'] = { ref: `A1:${XLSX.utils.encode_col(cols.length - 1)}${Math.max(aoa.length, 2)}` };
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, 'Cartera en riesgo');
   const vendorLabel = (selectedVendor === 'all' ? 'todos' : selectedVendor.replace(/\s+/g, '-')) +
     (brandOn() ? '_' + BRAND_SHORT[selectedBrand] : '');
-  const today = new Date().toISOString().slice(0, 10);
-  a.href = url;
-  a.download = `cartera-en-riesgo_${vendorLabel}_${today}.csv`;
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  URL.revokeObjectURL(url);
+  const t = new Date();
+  const stamp = `${t.getFullYear()}-${String(t.getMonth() + 1).padStart(2, '0')}-${String(t.getDate()).padStart(2, '0')}`;
+  XLSX.writeFile(wb, `cartera-en-riesgo_${vendorLabel}_${stamp}.xlsx`, { cellDates: true });
 }
 
 function renderRiskTable(rows) {
