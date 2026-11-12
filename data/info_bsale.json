@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-11-11T01:05:29.949248+00:00",
-  "accounts_with_sales": 546,
-  "accounts_without_address": 439,
+  "updated_at": "2026-11-12T02:12:22.537610+00:00",
+  "accounts_with_sales": 547,
+  "accounts_without_address": 437,
   "accounts": [
     {
       "id": "651",
@@ -1237,15 +1237,6 @@
       "last_sale": "2026-08-14"
     },
     {
-      "id": "1034",
-      "name": "KIAKAHA ODONTOLOGÍA SPA",
-      "rut": "77214473-3",
-      "contact": "Asuncion Diez",
-      "phone": "932012586",
-      "billing_address": "Tabancura 1515, Vitacura, Santiago",
-      "last_sale": "2026-08-14"
-    },
-    {
       "id": "488",
       "name": "ODONTOLOGÌA Y ESTÈTICA DANIELLA LILLO VIDAURRE E.I.R.L.",
       "rut": "77573876-6",
@@ -1901,15 +1892,6 @@
       "phone": "97462430",
       "billing_address": "Balmaceda 280, Quilpue, Quilpue",
       "last_sale": "2026-05-04"
-    },
-    {
-      "id": "960",
-      "name": "CENTRO DE MEDICINA CLINICA ESTETICA Y REPARADORA CLIMER SPA",
-      "rut": "77082039-1",
-      "contact": "Claudia Plazas",
-      "phone": "949985884",
-      "billing_address": "manuel antonio matta 1839, Antofagasta, Antofagasta",
-      "last_sale": "2026-04-28"
     },
     {
       "id": "1151",
