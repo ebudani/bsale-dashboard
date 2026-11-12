@@ -1735,8 +1735,6 @@ function downloadRiskExcel() {
       ['Fecha de contacto', r => (r.contactedAt ? formatContactDate(r.contactedAt) : ''), 15],
       ['Contactado por', r => r.contactedBy || '', 16],
       ['Comentario', r => r.note || '', 40],
-      ['Último contacto (referencia)', r => (r.lastContactedAt ? formatContactDate(r.lastContactedAt) : ''), 18],
-      ['Último comentario (referencia)', r => r.lastNote || '', 40],
     ] : []),
     ...(showNext ? [['Volver a contactar', r => toDate(r.nextContactDate), 16]] : []),
   ];
