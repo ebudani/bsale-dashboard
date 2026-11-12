@@ -1701,9 +1701,10 @@ function renderRiskToolbar(rows) {
 let riskFilteredRowsForExport = [];
 
 // Baja a Excel lo que se esta viendo: mismas filas (filtro, busqueda y orden) y las mismas
-// columnas que muestra la tabla (sin Vendedor en un link personal, sin las de contacto si no corresponden).
-function downloadRiskExcel() {
-  if (typeof XLSX === 'undefined') {
+// columnas que muestra la tabla (sin Vendedor en un link personal, sin "Volver a contactar" si no corresponde).
+// Usa ExcelJS (y no SheetJS) porque permite color de fondo en el titulo y fijar la primera fila.
+async function downloadRiskExcel() {
+  if (typeof ExcelJS === 'undefined') {
     alert('No se pudo cargar el generador de Excel. Revisá la conexión y recargá la página.');
     return;
   }
@@ -1714,7 +1715,7 @@ function downloadRiskExcel() {
   const { currentLabel, prevLabel } = riskMonthKeys();
   const toDate = iso => {
     const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso || '');
-    return m ? new Date(+m[1], +m[2] - 1, +m[3]) : (iso || '');   // fecha local, para que no corra un dia
+    return m ? new Date(Date.UTC(+m[1], +m[2] - 1, +m[3])) : (iso || '');   // UTC: Excel muestra el dia exacto
   };
   const cols = [
     ['Cuenta', r => r.name, 44],
@@ -1738,26 +1739,40 @@ function downloadRiskExcel() {
     ] : []),
     ...(showNext ? [['Volver a contactar', r => toDate(r.nextContactDate), 16]] : []),
   ];
-  const aoa = [cols.map(c => c[0])].concat(riskFilteredRowsForExport.map(r => cols.map(c => c[1](r))));
-  const ws = XLSX.utils.aoa_to_sheet(aoa, { cellDates: true });
-  cols.forEach((c, ci) => {
-    const isMoney = /^(Mes en curso|Mes anterior|Teoxane \(última|RRS \(última)/.test(c[0]) || /\(última compra\)$/.test(c[0]);
-    for (let r = 1; r < aoa.length; r++) {
-      const cell = ws[XLSX.utils.encode_cell({ r, c: ci })];
-      if (!cell) continue;
-      if (isMoney && typeof cell.v === 'number') cell.z = '#,##0';
-      if (c[0] === 'Volver a contactar' && cell.v instanceof Date) cell.z = 'dd-mm-yyyy';
-    }
+  const wb = new ExcelJS.Workbook();
+  // Primera fila inmovilizada: queda fija al bajar por la lista.
+  const ws = wb.addWorksheet('Cartera en riesgo', { views: [{ state: 'frozen', ySplit: 1 }] });
+  ws.columns = cols.map(c => ({ header: c[0], width: Math.max(c[2], c[0].length + 5) }));   // el titulo siempre entra completo
+  riskFilteredRowsForExport.forEach(r => ws.addRow(cols.map(c => c[1](r))));
+  // Titulo: fondo gris y negrita.
+  const head = ws.getRow(1);
+  head.height = 30;
+  head.eachCell(cell => {
+    cell.font = { bold: true, color: { argb: 'FF111111' } };
+    cell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFD9D9D9' } };
+    cell.alignment = { vertical: 'middle', wrapText: true };
+    cell.border = { bottom: { style: 'thin', color: { argb: 'FF999999' } } };
   });
-  ws['!cols'] = cols.map(c => ({ wch: c[2] }));
-  ws['!autofilter'] = { ref: `A1:${XLSX.utils.encode_col(cols.length - 1)}${Math.max(aoa.length, 2)}` };
-  const wb = XLSX.utils.book_new();
-  XLSX.utils.book_append_sheet(wb, ws, 'Cartera en riesgo');
+  cols.forEach((c, i) => {
+    const isMoney = /^(Mes en curso|Mes anterior)/.test(c[0]) || /\(última compra\)$/.test(c[0]);
+    if (isMoney) ws.getColumn(i + 1).numFmt = '#,##0';
+    if (c[0] === 'Volver a contactar') ws.getColumn(i + 1).numFmt = 'dd-mm-yyyy';
+  });
+  ws.autoFilter = { from: { row: 1, column: 1 }, to: { row: 1, column: cols.length } };
+  const buf = await wb.xlsx.writeBuffer();
+  const blob = new Blob([buf], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
   const vendorLabel = (selectedVendor === 'all' ? 'todos' : selectedVendor.replace(/\s+/g, '-')) +
     (brandOn() ? '_' + BRAND_SHORT[selectedBrand] : '');
   const t = new Date();
   const stamp = `${t.getFullYear()}-${String(t.getMonth() + 1).padStart(2, '0')}-${String(t.getDate()).padStart(2, '0')}`;
-  XLSX.writeFile(wb, `cartera-en-riesgo_${vendorLabel}_${stamp}.xlsx`, { cellDates: true });
+  a.href = url;
+  a.download = `cartera-en-riesgo_${vendorLabel}_${stamp}.xlsx`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
 function renderRiskTable(rows) {
