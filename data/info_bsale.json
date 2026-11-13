@@ -1,8 +1,17 @@
 {
-  "updated_at": "2026-11-12T02:12:22.537610+00:00",
-  "accounts_with_sales": 547,
+  "updated_at": "2026-11-13T01:45:44.059370+00:00",
+  "accounts_with_sales": 550,
   "accounts_without_address": 437,
   "accounts": [
+    {
+      "id": "1308",
+      "name": "Servicios médicos cerro el plomo Santiago",
+      "rut": "77785557-3",
+      "contact": "Dr. Diego Rodriguez",
+      "phone": "969031545",
+      "billing_address": "los dominicos 8630, Las Condes, Santiago",
+      "last_sale": "2026-11-12"
+    },
     {
       "id": "651",
       "name": "OSVAL LIMITADA",
@@ -1325,15 +1334,6 @@
       "phone": "32604729",
       "billing_address": "Holanda 099, Providencia, Santiago",
       "last_sale": "2026-08-06"
-    },
-    {
-      "id": "916",
-      "name": "SOCIEDAD ODONTOLOGICA BHER SPA",
-      "rut": "77269799-6",
-      "contact": "Camila Bustos",
-      "phone": "926397248",
-      "billing_address": "San Carlos 171, Valdivia, Valdivia",
-      "last_sale": "2026-08-04"
     },
     {
       "id": "1134",
