@@ -1,8 +1,26 @@
 {
-  "updated_at": "2026-11-13T01:45:44.059370+00:00",
-  "accounts_with_sales": 550,
+  "updated_at": "2026-11-14T01:21:15.016673+00:00",
+  "accounts_with_sales": 551,
   "accounts_without_address": 437,
   "accounts": [
+    {
+      "id": "597",
+      "name": "DR MATTATALL SPA",
+      "rut": "77522796-6",
+      "contact": "Robert Mattatall",
+      "phone": "",
+      "billing_address": "18 de Septiembre 246, Chillan, Chillan",
+      "last_sale": "2026-11-13"
+    },
+    {
+      "id": "921",
+      "name": "SOCIEDAD ODONTOLOGICA DEL MAULE SPA",
+      "rut": "76960027-2",
+      "contact": "Rodrigo Villalobos",
+      "phone": "998208443",
+      "billing_address": "Independencia 85 Edificio Subercaseaux, Linares, Linares",
+      "last_sale": "2026-11-13"
+    },
     {
       "id": "1308",
       "name": "Servicios médicos cerro el plomo Santiago",
@@ -65,15 +83,6 @@
       "phone": "988998476",
       "billing_address": "LO FONTECILLA 201 TORRE B PISO 7, Las Condes, Las Condes",
       "last_sale": "2026-11-02"
-    },
-    {
-      "id": "921",
-      "name": "SOCIEDAD ODONTOLOGICA DEL MAULE SPA",
-      "rut": "76960027-2",
-      "contact": "Rodrigo Villalobos",
-      "phone": "998208443",
-      "billing_address": "Independencia 85 Edificio Subercaseaux, Linares, Linares",
-      "last_sale": "2026-10-28"
     },
     {
       "id": "943",
@@ -568,15 +577,6 @@
       "contact": "Magaly Valero",
       "phone": "993193404",
       "billing_address": "ACUEDUCTO 2869, Peñalolen, Santiago",
-      "last_sale": "2026-09-21"
-    },
-    {
-      "id": "597",
-      "name": "DR MATTATALL SPA",
-      "rut": "77522796-6",
-      "contact": "Robert Mattatall",
-      "phone": "",
-      "billing_address": "18 de Septiembre 246, Chillan, Chillan",
       "last_sale": "2026-09-21"
     },
     {
