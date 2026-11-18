@@ -214,6 +214,12 @@ async function loadData() {
   clientVendorMap = ventas.client_vendor || {};
   lastPurchaseBrands = ventas.last_purchase_brands || {};
   clientProductHistory = ventas.client_product_history || {};
+  if (document.getElementById('table-risk')) {   // solo las paginas con Cartera en riesgo
+    try {
+      const tr = await fetch('data/talleres_cuentas.json');
+      if (tr.ok) tallerPorCuenta = (await tr.json()).cuentas || {};
+    } catch (e) { tallerPorCuenta = {}; }
+  }
 
   document.getElementById('updated-at').textContent =
     'Actualizado: ' + (ventas.updated_at || '').slice(0, 16).replace('T', ' ') + ' UTC';
@@ -1569,6 +1575,10 @@ function exportParetoExcel() {
 // Independent of the Periodo filter -- always compares "today"'s calendar
 // month against the previous one, since that's what "en riesgo" means
 // regardless of which historical range is being reviewed elsewhere on the page.
+// Cuenta -> {f: fecha del ultimo taller/evento al que asistio alguien de la cuenta, p: precision (dia/mes/año)}.
+// Lo genera scripts/build_talleres_cuentas.py; si el archivo no esta, la columna queda en "—".
+let tallerPorCuenta = {};
+
 const RISK_STATUS_LABEL = { activa: 'Activa', atencion: 'Atención', riesgo: 'En riesgo', nuevo: 'Sin historial' };
 const RISK_STATUS_RANK  = { atencion: 0, riesgo: 1, nuevo: 2, activa: 3 };
 
@@ -1612,6 +1622,30 @@ function riskActivityFor(cid) {
   return out;
 }
 
+// Frecuencia de compra de una cuenta: en cuantos de los ultimos 12 meses completos compro (si la cuenta es mas
+// nueva, desde su primera compra). Intervalo esperado = meses de la ventana / meses con compra.
+//   <= 1,35 Mensual | <= 1,8 Casi mensual | <= 2,5 Cada 2 meses | <= 3,5 Trimestral | mas, Esporadica.
+// "Toca comprar": no compro en el mes en curso y ya paso, desde su ultima compra, el intervalo habitual
+// (redondeado a meses enteros, minimo 1) -- una cuenta mensual que no compro este mes, o una bimestral que
+// no compra hace 2 meses. Con menos de 3 compras en la ventana no se clasifica (pocos datos).
+function riskFrequency(months, current, curVal) {
+  const idx = mk => { const [y, m] = mk.split('-').map(Number); return y * 12 + m; };
+  const curIdx = idx(current);
+  const bought = Object.keys(months).filter(mk => months[mk] > 0 && idx(mk) < curIdx).map(idx).sort((a, b) => a - b);
+  if (!bought.length) return { label: '', sub: '', sort: 100, toca: null };
+  const start = Math.max(curIdx - 12, bought[0]);
+  const inWin = bought.filter(i => i >= start);
+  const win = curIdx - start, n = inWin.length;
+  if (!n) return { label: 'Sin compras en 12 meses', sub: '', sort: 99, toca: null };
+  if (n < 3) return { label: 'Pocas compras', sub: `${n} compra${n > 1 ? 's' : ''}`, sort: 98, toca: null };
+  const interval = win / n;
+  const label = interval <= 1.35 ? 'Mensual' : interval <= 1.8 ? 'Casi mensual' : interval <= 2.5 ? 'Cada 2 meses'
+              : interval <= 3.5 ? 'Trimestral' : 'Esporádica';
+  const gap = curIdx - bought[bought.length - 1];
+  const toca = (curVal > 0 || label === 'Esporádica') ? null : gap >= Math.max(1, Math.round(interval));
+  return { label, sub: `${n} de ${win} meses`, sort: interval, toca };
+}
+
 function buildRiskRoster() {
   const { current, prev } = riskMonthKeys();
   const rows = [];
@@ -1632,6 +1666,7 @@ function buildRiskRoster() {
     else if (prevVal > 0) status = 'atencion';
     else status = 'riesgo';
 
+    const freq = riskFrequency(months, current, curVal);
     const meta = clientsMeta[cid] || {};
     const lastBrands = brandOn()
       ? (lastMonth ? { [selectedBrand]: months[lastMonth] } : null)
@@ -1650,6 +1685,9 @@ function buildRiskRoster() {
       phone: meta.phone || '',
       current: curVal, prev: prevVal,
       lastMonth, lastBrands,
+      freqLabel: freq.label, freqSub: freq.sub, freqSort: freq.sort, freqToca: freq.toca,
+      lastWorkshop: (tallerPorCuenta[cid] || {}).f || '',
+      lastWorkshopPrec: (tallerPorCuenta[cid] || {}).p || '',
       lastAmount: lastBrands ? (lastBrands['Teoxane'] || 0) + (lastBrands['RRS HA Long Lasting'] || 0) : 0,
       contacted: !!(thisMonthEntry && thisMonthEntry.contacted),
       contactedAt: thisMonthEntry ? (thisMonthEntry.contactedAt || null) : null,
@@ -1727,6 +1765,9 @@ async function downloadRiskExcel() {
     [`Mes en curso (${currentLabel})`, r => r.current, 16],
     [`Mes anterior (${prevLabel})`, r => r.prev, 16],
     ['Última compra', r => (r.lastMonth ? monthLabel(...r.lastMonth.split('-').map(Number)) : ''), 14],
+    ['Frecuencia de compra', r => (r.freqLabel ? r.freqLabel + (r.freqSub ? ` (${r.freqSub})` : '') : ''), 26],
+    ['Toca comprar este mes', r => (r.freqToca === true ? 'Sí' : r.freqToca === false ? 'No, en plazo' : ''), 18],
+    ['Fecha último taller', r => toDate(r.lastWorkshop), 16],
     ...(brandOn()
       ? [[`${BRAND_SHORT[selectedBrand]} (última compra)`, r => (r.lastBrands ? (r.lastBrands[selectedBrand] || 0) : ''), 18]]
       : [['Teoxane (última compra)', r => (r.lastBrands ? (r.lastBrands['Teoxane'] || 0) : ''), 18],
@@ -1756,7 +1797,7 @@ async function downloadRiskExcel() {
   cols.forEach((c, i) => {
     const isMoney = /^(Mes en curso|Mes anterior)/.test(c[0]) || /\(última compra\)$/.test(c[0]);
     if (isMoney) ws.getColumn(i + 1).numFmt = '#,##0';
-    if (c[0] === 'Volver a contactar') ws.getColumn(i + 1).numFmt = 'dd-mm-yyyy';
+    if (c[0] === 'Volver a contactar' || c[0] === 'Fecha último taller') ws.getColumn(i + 1).numFmt = 'dd-mm-yyyy';
   });
   ws.autoFilter = { from: { row: 1, column: 1 }, to: { row: 1, column: cols.length } };
   const buf = await wb.xlsx.writeBuffer();
@@ -1796,7 +1837,7 @@ function renderRiskTable(rows) {
     // "Sin fecha" siempre al final, en cualquier direccion -- si no, el
     // orden ascendente (mas logico: proximas primero) mandaba las ~270
     // cuentas sin fecha cargada antes que la unica con fecha real.
-    if (riskSortKey === 'nextContactDate' || riskSortKey === 'contact') {
+    if (riskSortKey === 'nextContactDate' || riskSortKey === 'contact' || riskSortKey === 'lastWorkshop') {
       if (!av && !bv) return 0;
       if (!av) return 1;
       if (!bv) return -1;
@@ -1821,6 +1862,8 @@ function renderRiskTable(rows) {
       <td>${r.current ? M(r.current) : '—'}</td>
       <td>${r.prev ? M(r.prev) : '—'}</td>
       <td>${r.lastMonth ? monthLabel(...r.lastMonth.split('-').map(Number)) : '—'}</td>
+      <td class="risk-freq">${formatFrequency(r)}</td>
+      <td class="risk-workshop">${formatWorkshopDate(r)}</td>
       <td class="risk-brands">${formatLastBrands(r.lastBrands)}</td>
       <td class="risk-contacted">
         <label class="risk-contacted-check">
@@ -1856,6 +1899,25 @@ function escapeHtml(s) {
 function truncateText(s, max) {
   if (!s || s.length <= max) return s || '';
   return s.slice(0, max - 1) + '…';
+}
+
+// Frecuencia de compra: etiqueta, "n de N meses" y, si corresponde, si ya "toca comprar" o aun esta "en plazo".
+function formatFrequency(r) {
+  if (!r.freqLabel) return '—';
+  const strong = r.freqSort < 98;   // las cuentas con pocos datos / sin compras reciente van en gris
+  return `<strong class="${strong ? '' : 'risk-freq-weak'}">${r.freqLabel}</strong>`
+    + (r.freqSub ? `<small>${r.freqSub}</small>` : '')
+    + (r.freqToca === true ? '<small class="risk-freq-toca" title="Ya pasó el tiempo habitual entre compras de esta cuenta">Toca comprar</small>'
+      : r.freqToca === false ? '<small class="risk-freq-plazo" title="Todavía está dentro de su intervalo habitual entre compras">En plazo</small>' : '');
+}
+
+// Fecha del ultimo taller: exacta (dd-mm-aaaa) o aproximada con "~" (solo se conoce el mes o el año del evento).
+function formatWorkshopDate(r) {
+  if (!r.lastWorkshop) return '—';
+  const [y, m, d] = r.lastWorkshop.split('-');
+  if (r.lastWorkshopPrec === 'año') return `<span title="Fecha aproximada: solo se conoce el año">~${y}</span>`;
+  if (r.lastWorkshopPrec === 'mes') return `<span title="Fecha aproximada: solo se conoce el mes">~${m}-${y}</span>`;
+  return `${d}-${m}-${y}`;
 }
 
 function formatContactDate(iso) {
@@ -1899,7 +1961,8 @@ function renderCarteraRiesgo() {
       `<span><span class="pill ok">Activa</span> compró${b} este mes</span>` +
       `<span><span class="pill mid">Atención</span> no compró${b} este mes, sí el anterior</span>` +
       `<span><span class="pill low">En riesgo</span> no compró${b} estos dos meses, pero compró antes</span>` +
-      `<span><span class="pill neutral">Sin historial</span> nunca compró${b}</span>`;
+      `<span><span class="pill neutral">Sin historial</span> nunca compró${b}</span>` +
+      `<span><strong>Frecuencia:</strong> en cuántos de los últimos 12 meses compró${b}. <em>Toca comprar</em> = ya pasó el tiempo habitual entre sus compras (una cuenta mensual que no compró este mes, una bimestral que no compra hace 2 meses).</span>`;
   }
   const rows = buildRiskRoster();
   renderRiskToolbar(rows);
@@ -1909,7 +1972,7 @@ function renderCarteraRiesgo() {
     th.onclick = () => {
       const key = th.dataset.key;
       if (riskSortKey === key) riskSortDir *= -1;
-      else { riskSortKey = key; riskSortDir = (key === 'name' || key === 'contact' || key === 'vendor' || key === 'nextContactDate') ? 1 : -1; }
+      else { riskSortKey = key; riskSortDir = (key === 'name' || key === 'contact' || key === 'vendor' || key === 'nextContactDate' || key === 'freqSort') ? 1 : -1; }
       document.querySelectorAll('#table-risk thead .arrow').forEach(a => a.textContent = '');
       th.querySelector('.arrow').textContent = riskSortDir === 1 ? '↑' : '↓';
       renderRiskTable(buildRiskRoster());
