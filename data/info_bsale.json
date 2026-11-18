@@ -1,8 +1,17 @@
 {
-  "updated_at": "2026-11-17T03:29:09.594545+00:00",
-  "accounts_with_sales": 552,
-  "accounts_without_address": 437,
+  "updated_at": "2026-11-18T02:48:07.538651+00:00",
+  "accounts_with_sales": 554,
+  "accounts_without_address": 434,
   "accounts": [
+    {
+      "id": "995",
+      "name": "SERVICIOS PROFESIONALES BEAUTY & SOUL LIMITADA",
+      "rut": "77190631-1",
+      "contact": "Sofia Levrini",
+      "phone": "956001235",
+      "billing_address": "Av. Vitacura 5093, oficina 406, Vitacura, Santiago",
+      "last_sale": "2026-11-17"
+    },
     {
       "id": "651",
       "name": "OSVAL LIMITADA",
@@ -297,7 +306,7 @@
       "rut": "70360100-6",
       "contact": "Zimei Yu",
       "phone": "977471597",
-      "billing_address": "Ramon Carnicer 163, Providencia, Santiago",
+      "billing_address": "Ramon Carnicer 163., Providencia, Santiago",
       "last_sale": "2026-10-14"
     },
     {
@@ -514,15 +523,6 @@
       "contact": "David Bendo",
       "phone": "",
       "billing_address": "El trovador 4280, Las Condes, Santiago",
-      "last_sale": "2026-10-07"
-    },
-    {
-      "id": "995",
-      "name": "SERVICIOS PROFESIONALES BEAUTY & SOUL LIMITADA",
-      "rut": "77190631-1",
-      "contact": "Sofia Levrini",
-      "phone": "956001235",
-      "billing_address": "Av. Vitacura 5093, oficina 406, Vitacura, Santiago",
       "last_sale": "2026-10-07"
     },
     {
@@ -832,15 +832,6 @@
       "last_sale": "2026-09-07"
     },
     {
-      "id": "1084",
-      "name": "ELYS CLÍNICA ESTÉTICA SPA",
-      "rut": "78074983-0",
-      "contact": "Sebastian Martinez",
-      "phone": "976012204",
-      "billing_address": "Lo Fontecilla 201, Las condes, Santiago",
-      "last_sale": "2026-09-07"
-    },
-    {
       "id": "1101",
       "name": "CLINICA PAULA SPA",
       "rut": "77621243-1",
@@ -1046,15 +1037,6 @@
       "phone": "994798405",
       "billing_address": "1 PONIENTE  140, Viña del Mar, Viña del Mar",
       "last_sale": "2026-09-02"
-    },
-    {
-      "id": "499",
-      "name": "SOCIEDAD CLINICA DENTAL CARRASCO Y RENTERIA LTDA",
-      "rut": "76107009-6",
-      "contact": "FABIOLA CARRASCO",
-      "phone": "976995178",
-      "billing_address": "DALCAHUE 1120 202 EDIF.CUMBRES CENTER, Concepción, Concepción",
-      "last_sale": "2026-09-01"
     },
     {
       "id": "1071",
@@ -1460,15 +1442,6 @@
       "phone": "966853508",
       "billing_address": "BAQUEDANO 50 OF 704 EDIFICIO SINGULAR, ANTOFAGASTA, ANTOFAGASTA",
       "last_sale": "2026-07-14"
-    },
-    {
-      "id": "439",
-      "name": "ANGELA CARDOZO ODONTOLOGIA Y ESTETICA FACIAL SPA",
-      "rut": "77511366-9",
-      "contact": "ANGELA CARDOZO",
-      "phone": "",
-      "billing_address": "MARIATEGUI 2452 DP 201, Santiago, Santiago",
-      "last_sale": "2026-07-13"
     },
     {
       "id": "549",
