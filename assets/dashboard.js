@@ -22,7 +22,7 @@ let lastPurchaseBrands = {};
 let clientProductHistory = {};
 let riskStatusFilter = 'todas';
 let riskSearch = '';
-let riskSortKey = 'status';
+let riskSortKey = 'status';      // arranca por estado y, dentro de cada estado, por ultima compra (mas reciente primero)
 let riskSortDir = 1;
 let selectedVendor = 'all';
 // Which render function period/vendor changes call -- full render() on
@@ -1830,7 +1830,7 @@ function renderRiskTable(rows) {
       r.contact.toLowerCase().includes(q) || r.phone.includes(q)
     );
   }
-  filtered = filtered.slice().sort((a, b) => {
+  const primaryCmp = (a, b) => {
     let av = riskSortKey === 'status' ? RISK_STATUS_RANK[a.status] : a[riskSortKey];
     let bv = riskSortKey === 'status' ? RISK_STATUS_RANK[b.status] : b[riskSortKey];
     if (riskSortKey === 'lastMonth') { av = av || ''; bv = bv || ''; }
@@ -1845,7 +1845,16 @@ function renderRiskTable(rows) {
     }
     if (typeof av === 'string') return riskSortDir * av.localeCompare(bv);
     return riskSortDir * ((av || 0) - (bv || 0));
-  });
+  };
+  // Desempate: dentro del mismo estado (o el mismo valor de la columna elegida) va primero la ultima compra mas
+  // reciente. La fecha es solo mensual, asi que dentro del mismo mes va primero la compra mas grande y despues
+  // el nombre, para que el orden sea estable.
+  const lastMonthDesc = (a, b) => (b.lastMonth || '').localeCompare(a.lastMonth || '');
+  filtered = filtered.slice().sort((a, b) =>
+    primaryCmp(a, b)
+    || (riskSortKey === 'lastMonth' ? 0 : lastMonthDesc(a, b))
+    || (b.lastAmount - a.lastAmount)
+    || a.name.localeCompare(b.name));
 
   riskFilteredRowsForExport = filtered;
 
@@ -1968,6 +1977,10 @@ function renderCarteraRiesgo() {
   renderRiskToolbar(rows);
   renderRiskTable(rows);
 
+  // Flecha del orden vigente (al abrir y cada vez que se vuelve a armar la tabla, por ejemplo al cambiar de marca).
+  document.querySelectorAll('#table-risk thead .arrow').forEach(a => a.textContent = '');
+  const sortTh = document.querySelector(`#table-risk thead th[data-key="${riskSortKey}"] .arrow`);
+  if (sortTh) sortTh.textContent = riskSortDir === 1 ? '↑' : '↓';
   document.querySelectorAll('#table-risk thead th[data-key]').forEach(th => {
     th.onclick = () => {
       const key = th.dataset.key;
