@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-11-18T02:48:07.538651+00:00",
-  "accounts_with_sales": 554,
-  "accounts_without_address": 434,
+  "updated_at": "2026-11-19T02:21:17.271048+00:00",
+  "accounts_with_sales": 556,
+  "accounts_without_address": 432,
   "accounts": [
     {
       "id": "995",
@@ -688,15 +688,6 @@
       "last_sale": "2026-09-10"
     },
     {
-      "id": "934",
-      "name": "SERVICIOS ODONTOLÓGICOS NICOLÁS GONZÁLEZ QUINTEROS E.I.R.L.",
-      "rut": "77607003-3",
-      "contact": "Nicolás González Quinteros",
-      "phone": "986469521",
-      "billing_address": "George Friedrich Haendel 257, Melipilla, Santiago",
-      "last_sale": "2026-09-10"
-    },
-    {
       "id": "1040",
       "name": "ODONTOLOGÍA DIANDRA TORRES CONTARDO E.I.R.L.",
       "rut": "77785634-0",
@@ -865,15 +856,6 @@
       "contact": "Catalina Alfaro",
       "phone": "999899086",
       "billing_address": "CESPEDES Y GONZALEZ 700 1502, Iquique, Iquique",
-      "last_sale": "2026-09-07"
-    },
-    {
-      "id": "1254",
-      "name": "SERVICIOS ODONTOLÓGICOS MILB SPA",
-      "rut": "77341785-7",
-      "contact": "Isidora Lobos",
-      "phone": "96798936",
-      "billing_address": "Benvenuto cellini 7905, Las Condes, Santiago",
       "last_sale": "2026-09-07"
     },
     {
