@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19T02:18:39.702963Z",
+  "updated_at": "2026-11-20T02:03:22.091035Z",
   "items": [
     {
       "sku": "Long Lasting",
@@ -15,8 +15,8 @@
       "code": "910049/02",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 300.0,
-      "quantity_available": 295.0,
+      "quantity": 298.0,
+      "quantity_available": 293.0,
       "quantity_reserved": 5.0
     },
     {
@@ -51,8 +51,8 @@
       "code": "940011/01",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 135.0,
-      "quantity_available": 135.0,
+      "quantity": 134.0,
+      "quantity_available": 134.0,
       "quantity_reserved": 0.0
     },
     {
@@ -78,8 +78,8 @@
       "code": "910043/01",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 196.0,
-      "quantity_available": 196.0,
+      "quantity": 195.0,
+      "quantity_available": 195.0,
       "quantity_reserved": 0.0
     },
     {
@@ -96,8 +96,8 @@
       "code": "78819789403573",
       "office_id": 1,
       "office_name": "Casa Matriz",
-      "quantity": 44.0,
-      "quantity_available": 44.0,
+      "quantity": 43.0,
+      "quantity_available": 43.0,
       "quantity_reserved": 0.0
     },
     {
