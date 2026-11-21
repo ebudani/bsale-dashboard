@@ -1,8 +1,17 @@
 {
-  "updated_at": "2026-11-20T02:06:27.221753+00:00",
-  "accounts_with_sales": 557,
-  "accounts_without_address": 432,
+  "updated_at": "2026-11-21T02:01:58.611564+00:00",
+  "accounts_with_sales": 558,
+  "accounts_without_address": 430,
   "accounts": [
+    {
+      "id": "950",
+      "name": "SERVICIOS PROFESIONALES JAVIERA MERCADO GOMEZ SPA",
+      "rut": "77516565-0",
+      "contact": "Javiera Mercado",
+      "phone": "998106781",
+      "billing_address": "Montenegro 2042, Ñuñoa, Santiago",
+      "last_sale": "2026-11-20"
+    },
     {
       "id": "995",
       "name": "SERVICIOS PROFESIONALES BEAUTY & SOUL LIMITADA",
@@ -10,7 +19,7 @@
       "contact": "Sofia Levrini",
       "phone": "956001235",
       "billing_address": "Av. Vitacura 5093, oficina 406, Vitacura, Santiago",
-      "last_sale": "2026-11-17"
+      "last_sale": "2026-11-20"
     },
     {
       "id": "651",
@@ -148,15 +157,6 @@
       "last_sale": "2026-10-20"
     },
     {
-      "id": "950",
-      "name": "SERVICIOS PROFESIONALES JAVIERA MERCADO GOMEZ SPA",
-      "rut": "77516565-0",
-      "contact": "Javiera Mercado",
-      "phone": "998106781",
-      "billing_address": "Montenegro 2042, Ñuñoa, Santiago",
-      "last_sale": "2026-10-20"
-    },
-    {
       "id": "570",
       "name": "DERMADENT LIMITADA",
       "rut": "76441185-4",
@@ -199,15 +199,6 @@
       "contact": "CARMEN GLORIA MORA",
       "phone": "939128130",
       "billing_address": "Freire 498, Los andes, Los andes",
-      "last_sale": "2026-10-16"
-    },
-    {
-      "id": "1146",
-      "name": "Dermoestetica y Salud Integral Macarena Herrera Olmos E.I.R.L,",
-      "rut": "76832169-8",
-      "contact": "Macarena Herrera",
-      "phone": "985537061",
-      "billing_address": "El Arrayan 152, La Ligua, La ligua",
       "last_sale": "2026-10-16"
     },
     {
@@ -964,15 +955,6 @@
       "contact": "Daniel Subiabre",
       "phone": "",
       "billing_address": "Beauchef 723, Valdivia, Valdivia",
-      "last_sale": "2026-09-03"
-    },
-    {
-      "id": "1150",
-      "name": "SOCIEDAD DE SERVICIOS INTEGRALES DE SALUD Y ESTÉTICA LIMITADA",
-      "rut": "78366023-7",
-      "contact": "GIOVANNA CICHERO",
-      "phone": "991719327",
-      "billing_address": "LIBANO PONIENTE 16947 JARDIN DEL SUR II, MAIPU, SANTIAGO",
       "last_sale": "2026-09-03"
     },
     {
