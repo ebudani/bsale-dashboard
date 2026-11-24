@@ -1,8 +1,35 @@
 {
-  "updated_at": "2026-11-23T01:28:48.118389+00:00",
-  "accounts_with_sales": 558,
-  "accounts_without_address": 430,
+  "updated_at": "2026-11-24T05:13:25.277407+00:00",
+  "accounts_with_sales": 557,
+  "accounts_without_address": 425,
   "accounts": [
+    {
+      "id": "491",
+      "name": "PRESTACIONES MEDICAS HIGIA SPA",
+      "rut": "76572238-1",
+      "contact": "David Bendo",
+      "phone": "",
+      "billing_address": "El trovador 4280, Las Condes, Santiago",
+      "last_sale": "2026-11-23"
+    },
+    {
+      "id": "515",
+      "name": "SOCIEDAD DE PREST. ODONTOLOGICAS DEL SUR LIMITADA",
+      "rut": "76273088-k",
+      "contact": "",
+      "phone": "",
+      "billing_address": "OHIGGINS 302, Chonchi, Chonchi",
+      "last_sale": "2026-11-23"
+    },
+    {
+      "id": "597",
+      "name": "DR MATTATALL SPA",
+      "rut": "77522796-6",
+      "contact": "Robert Mattatall",
+      "phone": "",
+      "billing_address": "18 de Septiembre 246, Chillan, Chillan",
+      "last_sale": "2026-11-23"
+    },
     {
       "id": "950",
       "name": "SERVICIOS PROFESIONALES JAVIERA MERCADO GOMEZ SPA",
@@ -47,15 +74,6 @@
       "phone": "998956643",
       "billing_address": "Av. Pucara 020,, Machali, Machali",
       "last_sale": "2026-11-16"
-    },
-    {
-      "id": "597",
-      "name": "DR MATTATALL SPA",
-      "rut": "77522796-6",
-      "contact": "Robert Mattatall",
-      "phone": "",
-      "billing_address": "18 de Septiembre 246, Chillan, Chillan",
-      "last_sale": "2026-11-13"
     },
     {
       "id": "921",
@@ -310,15 +328,6 @@
       "last_sale": "2026-10-14"
     },
     {
-      "id": "1219",
-      "name": "RESET MEDICINA ESTETICA Y REGENERATIVA JOAN RIVERO SAAVEDRA EIRL",
-      "rut": "78022431-2",
-      "contact": "Joan Rivero",
-      "phone": "940273582",
-      "billing_address": "JAIME ARCE 1176, San Vicente, San Vicente",
-      "last_sale": "2026-10-14"
-    },
-    {
       "id": "462",
       "name": "SARECH SPA",
       "rut": "76277386-4",
@@ -508,15 +517,6 @@
       "last_sale": "2026-10-08"
     },
     {
-      "id": "491",
-      "name": "PRESTACIONES MEDICAS HIGIA SPA",
-      "rut": "76572238-1",
-      "contact": "David Bendo",
-      "phone": "",
-      "billing_address": "El trovador 4280, Las Condes, Santiago",
-      "last_sale": "2026-10-07"
-    },
-    {
       "id": "1153",
       "name": "Nicole Levi Torres",
       "rut": "16938586-6",
@@ -557,7 +557,7 @@
       "name": "NEXAURA LIMITADA",
       "rut": "78219115-2",
       "contact": "PAULA QUEZADA",
-      "phone": "",
+      "phone": "966793588",
       "billing_address": "EDUARDO DE LA BARRA 1444, PROVIDENCIA, SANTIAGO",
       "last_sale": "2026-09-28"
     },
@@ -584,7 +584,7 @@
       "name": "SIXTINA MÉDICINA SPA",
       "rut": "76927532-0",
       "contact": "Catalina Burgos",
-      "phone": "",
+      "phone": "965363050",
       "billing_address": "MANQUEHUE NORTE 151 OF 1201 PS 12, Las Condes, Santiago",
       "last_sale": "2026-09-21"
     },
@@ -809,7 +809,7 @@
       "name": "CENTRO DE MEDICINA Y ESTÉTICA EIIGE SPA",
       "rut": "77910871-6",
       "contact": "Jennifer Garces",
-      "phone": "",
+      "phone": "965055030",
       "billing_address": "Kurt Molier 437, Linares, Linares",
       "last_sale": "2026-09-07"
     },
@@ -967,15 +967,6 @@
       "last_sale": "2026-09-03"
     },
     {
-      "id": "1217",
-      "name": "Jasmin Del Valle Angel",
-      "rut": "27134807-k",
-      "contact": "",
-      "phone": "987465498",
-      "billing_address": "La Concepción 65 oficina 902, Providencia, Santiago",
-      "last_sale": "2026-09-02"
-    },
-    {
       "id": "1241",
       "name": "Constanza Wilson",
       "rut": "18394189-5",
@@ -1037,15 +1028,6 @@
       "phone": "99433135",
       "billing_address": "AV QUINCHAMALI 14210, Las Condes, Las Condes",
       "last_sale": "2026-08-28"
-    },
-    {
-      "id": "899",
-      "name": "SERVICIOS ODONTOLOGICOS ESCOBAR Y BARBERIA LIMITADA",
-      "rut": "76235411-k",
-      "contact": "Fabiola Barberia",
-      "phone": "989885909",
-      "billing_address": "Pedro Sarmiento de Gamboa 440, Punta Arenas, Punta Arenas",
-      "last_sale": "2026-08-27"
     },
     {
       "id": "1232",
@@ -1813,15 +1795,6 @@
       "last_sale": "2026-05-11"
     },
     {
-      "id": "1018",
-      "name": "MARIA JOSE SUBBRERO MASSERANO",
-      "rut": "19257282-7",
-      "contact": "Maria Jose Subbrero",
-      "phone": "95363875",
-      "billing_address": "Av. Costanera sur 12275, Vitacura, Santiago",
-      "last_sale": "2026-05-06"
-    },
-    {
       "id": "1067",
       "name": "KINMADE GROUP LIMITADA",
       "rut": "77062432-0",
@@ -2126,15 +2099,6 @@
       "phone": "",
       "billing_address": "Alonso de cordova 5019, Las condes, Santiago",
       "last_sale": "2026-02-10"
-    },
-    {
-      "id": "679",
-      "name": "JOAN ASDRUBAL RIVERO SAAVEDRA",
-      "rut": "25649307-1",
-      "contact": "",
-      "phone": "",
-      "billing_address": "Alfonso Brintrup 2025 A CHAMIZA, Puerto Montt, Puerto Montt",
-      "last_sale": "2026-02-09"
     },
     {
       "id": "707",
@@ -2656,15 +2620,6 @@
       "contact": "Carolina Sofia Cuinas Camus",
       "phone": "974993013",
       "billing_address": "Kennedy 6968, Vitacura, Santiago",
-      "last_sale": "2025-10-17"
-    },
-    {
-      "id": "1057",
-      "name": "ODONTOLOGÍA SMILE & CO. SPA",
-      "rut": "77956351-0",
-      "contact": "Carolina Yudilevich",
-      "phone": "",
-      "billing_address": "Luis Thayer Ojeda 073, Providencia, Santiago",
       "last_sale": "2025-10-17"
     },
     {
