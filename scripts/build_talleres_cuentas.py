@@ -3,14 +3,18 @@ build_talleres_cuentas.py - arma data/talleres_cuentas.json: para cada cuenta de
 ultimo taller / evento al que asistio alguna persona vinculada a esa cuenta (columna "Fecha ultimo
 taller" de Cartera en riesgo).
 
-Fuente: Excel "Talleres - Conversion eventos y talleres" (Drive: Eugenia Aestheticspro - 2026), hojas
-"Detalle por evento" (eventos 2025-2026, con fecha exacta), "Base personas" (vinculo persona-empresa
-y lista de eventos) y "Eventos historicos" (eventos 2020-2024, algunos con fecha aproximada).
+Fuentes (Drive: Eugenia Aestheticspro - 2026):
+  - 2026: Excel "Talleres y eventos - asistentes y gastos", hoja "Asistentes eventos 2026". Trae el RUT de la
+    empresa de cada asistente (puede haber varios, separados con ";") y la columna ASISTENCIA: solo cuentan
+    las filas que dicen "Asistio ..." (no "Inscrito ..." ni "Sin firma").
+  - 2025 y anteriores: Excel "Talleres - Conversion eventos y talleres", hojas "Detalle por evento" (con fecha
+    exacta), "Base personas" (vinculo persona-empresa y lista de eventos) y "Eventos historicos" (2020-2024,
+    algunos con fecha aproximada). De este archivo NO se toma nada de 2026 (SOEMAF figuraba con fecha errada).
 
 Solo guarda, por cuenta, la fecha (y su precision). No copia nombres, correos ni telefonos.
 No cuentan: inscritos que no asistieron, solo inscritos (SOCHIMCE) y eventos futuros.
 
-Uso: python scripts/build_talleres_cuentas.py ruta/al/Conversion_eventos_y_talleres.xlsx [data/ventas.json]
+Uso: python scripts/build_talleres_cuentas.py Conversion_eventos_y_talleres.xlsx Asistentes_y_gastos.xlsx [data/ventas.json]
 """
 import datetime
 import json
@@ -23,7 +27,9 @@ import openpyxl
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT_FILE = os.path.join(HERE, "..", "data", "talleres_cuentas.json")
 DEFAULT_VENTAS = os.path.join(HERE, "..", "data", "ventas.json")
-SOURCE = "Talleres - Conversion eventos y talleres 27-10-2026.xlsx (Drive: Eugenia Aestheticspro - 2026)"
+SOURCE = ("2026: Talleres y eventos - asistentes y gastos 19-11-2026.xlsx; 2025 y anteriores: "
+          "Talleres - Conversion eventos y talleres 27-10-2026.xlsx (Drive: Eugenia Aestheticspro - 2026)")
+DESDE_NUEVO = datetime.datetime(2026, 1, 1)   # de aca en adelante manda el archivo de asistentes y gastos
 HOY = datetime.datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
 
 
@@ -34,7 +40,25 @@ def norm_rut(s):
     return (m.group(1).replace(".", "") + "-" + m.group(2).upper()) if m else None
 
 
-def main(conv_path, ventas_path):
+def asistencia_2026(path):
+    """rut empresa -> (fecha, "día") del ultimo evento 2026 al que ASISTIO alguien de esa empresa."""
+    ws = openpyxl.load_workbook(path, data_only=True, read_only=True)["Asistentes eventos 2026"]
+    rows = ws.iter_rows(values_only=True)
+    ix = {h: i for i, h in enumerate(next(rows)) if h}
+    out = {}
+    for r in rows:
+        r = list(r) + [None] * (max(ix.values()) + 1 - len(r))
+        fecha, asis = r[ix["FECHA DEL EVENTO"]], str(r[ix["ASISTENCIA"]] or "").lower()
+        if not isinstance(fecha, datetime.datetime) or not DESDE_NUEVO <= fecha <= HOY or not asis.startswith("asisti"):
+            continue
+        for parte in str(r[ix["RUT"]] or "").split(";"):
+            rut_e = norm_rut(parte)
+            if rut_e and (rut_e not in out or fecha > out[rut_e][0]):
+                out[rut_e] = (fecha, "día")
+    return out
+
+
+def main(conv_path, nuevo_path, ventas_path):
     wb = openpyxl.load_workbook(conv_path, data_only=True)
 
     # ---- fecha de cada evento historico (por nombre)
@@ -58,7 +82,7 @@ def main(conv_path, ventas_path):
         if not nombre or not rut_p or not isinstance(fecha, datetime.datetime):
             continue
         s = str(nombre).lower()
-        if "no asistieron" in s or s.endswith("– inscritos") or fecha > HOY or str(nombre) in futuros:
+        if "no asistieron" in s or s.endswith("– inscritos") or fecha > HOY or fecha >= DESDE_NUEVO or str(nombre) in futuros:
             continue                                  # no fue / solo inscrito / evento futuro o sin asistencia confirmada
         prec = prec_ev.get(str(nombre), "día")
         if rut_p not in ultimo or fecha > ultimo[rut_p][0]:
@@ -82,13 +106,18 @@ def main(conv_path, ventas_path):
             cand.append(ultimo[rut_p])
         for ev in str(r[ix["Eventos y cursos"]] or "").split(" | "):
             ev = ev.strip()
-            if ev in hist and hist[ev][0] <= HOY:
+            if ev in hist and hist[ev][0] <= HOY and hist[ev][0] < DESDE_NUEVO:
                 cand.append(hist[ev])
             elif ev and ev not in hist:
                 sin_fecha_hist.add(ev)
         if not cand:
             continue
         best = max(cand, key=lambda x: x[0])
+        if rut_e not in por_empresa or best[0] > por_empresa[rut_e][0]:
+            por_empresa[rut_e] = best
+
+    # ---- 2026: archivo de asistentes y gastos (ya trae el RUT de la empresa)
+    for rut_e, best in asistencia_2026(nuevo_path).items():
         if rut_e not in por_empresa or best[0] > por_empresa[rut_e][0]:
             por_empresa[rut_e] = best
 
@@ -115,6 +144,6 @@ def main(conv_path, ventas_path):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) not in (2, 3):
+    if len(sys.argv) not in (3, 4):
         sys.exit(__doc__)
-    main(sys.argv[1], sys.argv[2] if len(sys.argv) == 3 else DEFAULT_VENTAS)
+    main(sys.argv[1], sys.argv[2], sys.argv[3] if len(sys.argv) == 4 else DEFAULT_VENTAS)
