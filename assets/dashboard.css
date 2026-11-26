@@ -544,8 +544,9 @@
   .risk-count { font-size: 11px; color: #94a3b8; margin-top: 8px; }
 
   /* Histórico por Cliente */
-  /* Colores de marca solo en esta hoja: Teoxane grafito, RRS LL bordo. */
-  #client-history-card { --teox: #2c2c2c; --rrs: #84283d; }
+  /* Colores de marca solo en esta hoja: Teoxane plateado, RRS LL bordo.
+     --teox es un plata oscuro para que los titulos se lean sobre blanco. */
+  #client-history-card { --teox: #686d75; --teox-silver: #b9bdc4; --rrs: #84283d; }
   .client-history-search-wrap { position: relative; max-width: 420px; margin-bottom: 4px; }
   #client-history-search {
     width: 100%; font-family: inherit; font-size: 14px; padding: 9px 12px;
@@ -583,7 +584,7 @@
   .ch-months-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 6px; }
   .ch-legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 11px; color: var(--gray-600); }
   .ch-legend span { display: inline-flex; align-items: center; gap: 5px; }
-  .ch-legend i { width: 10px; height: 10px; border-radius: 2px; }
+  .ch-legend i { width: 13px; height: 13px; border: 1.5px solid; border-radius: 2px; }
   .ch-view-btns { display: flex; gap: 6px; margin-left: auto; }
   .ch-view-btns button {
     font-family: inherit; font-size: 12px; font-weight: 600; padding: 6px 12px; cursor: pointer;
@@ -591,7 +592,7 @@
   }
   .ch-view-btns button.active { color: white; border-color: transparent; }
   .ch-view-btns button.active[data-view="total"] { background: var(--blue); }
-  .ch-view-btns button.active[data-view="teox"] { background: var(--teox); }
+  .ch-view-btns button.active[data-view="teox"] { background: var(--teox-silver); color: #111827; }
   .ch-view-btns button.active[data-view="rrs"] { background: var(--rrs); }
   .ch-months-chart-wrap { height: 320px; }
   #table-client-history-years th.c-teox, #table-client-history-months th.c-teox { color: var(--teox); }

@@ -37,9 +37,17 @@ let chartClientHistoryYears, chartClientHistoryMonths;
 let clientHistoryView = 'total';    // total | teox | rrs (botones del grafico mensual)
 let clientHistoryMonthData = null;
 // Colores de marca, por ahora solo en Historico por Cliente (en dashboard.css van los mismos
-// en #client-history-card). Tono pleno: año actual; tono claro: años anteriores.
-const CLIENT_HISTORY_COLORS = { 'Teoxane': '#2c2c2c', 'RRS HA Long Lasting': '#84283d' };
-const CLIENT_HISTORY_PREV_COLORS = { 'Teoxane': '#bfc1c6', 'RRS HA Long Lasting': '#d5a3b0' };
+// en #client-history-card): Teoxane plateado, RRS LL bordo. El año actual va lleno (solid) y
+// los anteriores solo con contorno (line) sobre un relleno muy suave (tint).
+const CLIENT_HISTORY_COLORS = {
+  'Teoxane':             { solid: '#b9bdc4', tint: '#f4f5f6', line: '#9ca1a9' },
+  'RRS HA Long Lasting': { solid: '#84283d', tint: '#fbf1f3', line: '#84283d' },
+  'Otros':               { solid: '#6fae8f', tint: '#eef7f2', line: '#6fae8f' },
+};
+function clientHistoryBarStyle(brand, isPrev) {
+  const c = CLIENT_HISTORY_COLORS[brand];
+  return { fill: isPrev ? c.tint : c.solid, line: isPrev ? c.line : c.solid };
+}
 // Base de 10 colores muy distinguibles para los productos top; si el
 // catalogo historico tiene mas SKUs que colores base, se generan tonos
 // adicionales igualmente espaciados en el circulo de matices en vez de
@@ -2427,13 +2435,18 @@ function renderClientHistory(cid) {
     type: 'bar',
     data: {
       labels: yearBrands.map(b => b === 'Teoxane' ? 'Teoxane' : 'RRS LL'),
-      // Cada barra va con el color de su marca: claro los años anteriores, pleno el actual.
-      datasets: yearsAsc.map((y, i) => ({
-        label: y,
-        data: yearBrands.map(b => byYear[y][b]),
-        backgroundColor: yearBrands.map(b => (i === yearsAsc.length - 1 ? CLIENT_HISTORY_COLORS : CLIENT_HISTORY_PREV_COLORS)[b]),
-        borderRadius: 4,
-      })),
+      // Cada barra va con el color de su marca: solo contorno los años anteriores, lleno el actual.
+      datasets: yearsAsc.map((y, i) => {
+        const styles = yearBrands.map(b => clientHistoryBarStyle(b, i !== yearsAsc.length - 1));
+        return {
+          label: y,
+          data: yearBrands.map(b => byYear[y][b]),
+          backgroundColor: styles.map(st => st.fill),
+          borderColor: styles.map(st => st.line),
+          borderWidth: 1.5,
+          borderRadius: 4,
+        };
+      }),
     },
     options: {
       responsive: true,
@@ -2530,29 +2543,40 @@ function renderClientHistoryMonthsChart() {
     b.onclick = () => { clientHistoryView = b.dataset.view; renderClientHistoryMonthsChart(); };
   });
 
-  const bar = (label, data, color, stack) => ({ label, data, backgroundColor: color, stack, borderRadius: 3 });
+  // isPrev: año anterior, solo contorno (completo, tambien entre los tramos apilados).
+  const bar = (label, data, brand, isPrev, stack) => {
+    const st = clientHistoryBarStyle(brand, isPrev);
+    return {
+      label, data, stack, backgroundColor: st.fill, borderColor: st.line,
+      borderWidth: 1.5, borderRadius: 3, borderSkipped: isPrev ? false : 'start',
+    };
+  };
   let datasets, legend;
   if (view === 'total') {
     const hasOtros = [...d.otros.prev, ...d.otros.cur].some(v => v);
     datasets = [];
-    [['prev', d.prevYear, CLIENT_HISTORY_PREV_COLORS, '#e2e8f0'], ['cur', d.curYear, CLIENT_HISTORY_COLORS, '#94a3b8']]
-      .forEach(([k, year, colors, otrosColor]) => {
-        datasets.push(bar(`Teoxane ${year}`, d.teox[k], colors['Teoxane'], String(year)));
-        datasets.push(bar(`RRS LL ${year}`, d.rrs[k], colors['RRS HA Long Lasting'], String(year)));
-        if (hasOtros) datasets.push(bar(`Otros ${year}`, d.otros[k], otrosColor, String(year)));
-      });
-    legend = datasets.filter(s => !s.label.startsWith('Otros')).map(s => [s.label, s.backgroundColor]);
-    if (hasOtros) legend.push(['Otros', '#94a3b8']);
+    [['prev', d.prevYear], ['cur', d.curYear]].forEach(([k, year]) => {
+      const isPrev = k === 'prev';
+      datasets.push(bar(`Teoxane ${year}`, d.teox[k], 'Teoxane', isPrev, String(year)));
+      datasets.push(bar(`RRS LL ${year}`, d.rrs[k], 'RRS HA Long Lasting', isPrev, String(year)));
+      if (hasOtros) datasets.push(bar(`Otros ${year}`, d.otros[k], 'Otros', isPrev, String(year)));
+    });
+    legend = datasets.filter(s => !s.label.startsWith('Otros')).map(s => [s.label, s.backgroundColor, s.borderColor]);
+    if (hasOtros) {
+      const st = clientHistoryBarStyle('Otros', false);
+      legend.push(['Otros', st.fill, st.line]);
+    }
   } else {
     const brand = view === 'teox' ? 'Teoxane' : 'RRS HA Long Lasting';
     datasets = [
-      bar(String(d.prevYear), d[view].prev, CLIENT_HISTORY_PREV_COLORS[brand], 'prev'),
-      bar(String(d.curYear), d[view].cur, CLIENT_HISTORY_COLORS[brand], 'cur'),
+      bar(String(d.prevYear), d[view].prev, brand, true, 'prev'),
+      bar(String(d.curYear), d[view].cur, brand, false, 'cur'),
     ];
-    legend = datasets.map(s => [s.label, s.backgroundColor]);
+    legend = datasets.map(s => [s.label, s.backgroundColor, s.borderColor]);
   }
   document.getElementById('ch-months-legend').innerHTML =
-    legend.map(([label, color]) => `<span><i style="background:${color}"></i>${label}</span>`).join('');
+    legend.map(([label, fill, line]) =>
+      `<span><i style="background:${fill};border-color:${line}"></i>${label}</span>`).join('');
 
   const monthTotal = (k, i) => (d.teox[k][i] || 0) + (d.rrs[k][i] || 0) + (d.otros[k][i] || 0);
   if (chartClientHistoryMonths) chartClientHistoryMonths.destroy();
