@@ -749,3 +749,11 @@
     #table-risk th:nth-child(13), #table-risk td:nth-child(13) { width: 112px; }
     .risk-table-scroll { max-height: 55vh; }
   }
+
+  /* Tablero general: barra mas compacta para que entre el boton Altas y cotizaciones */
+  @media (min-width: 761px) and (max-width: 1700px) {
+    .page-general header { padding-left: 16px; padding-right: 16px; column-gap: 10px; }
+    .page-general header .header-right { gap: 8px; }
+    .page-general header .header-right button.filter-select, .page-general header .header-right a.filter-select { font-size: 12px; padding: 5px 8px; }
+    .page-general header .header-right select.filter-select { font-size: 12px; padding: 4px 6px; }
+  }

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AestheticsPro · Altas y cotizaciones</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/exceljs@4.4.0/dist/exceljs.min.js"></script>
+<link rel="stylesheet" href="assets/altas.css?v=20261126e">
+</head>
+<body>
+
+<div id="pin-gate">
+  <div class="pin-box">
+    <h1>AestheticsPro <span>· Ventas</span></h1>
+    <p>Ingresá el PIN para continuar</p>
+    <input type="password" id="pin-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" autocomplete="off" placeholder="••••">
+    <button id="pin-submit">Entrar</button>
+    <div id="pin-error">PIN incorrecto</div>
+  </div>
+</div>
+
+<header>
+  <div class="header-left">
+    <h1>AestheticsPro <span>· Altas y cotizaciones</span></h1>
+    <button type="button" class="history-shortcut-btn" onclick="goBack(code ? 'vendor.html' + location.search : 'index.html')">← Volver</button>
+  </div>
+  <div class="filtros">
+    <small id="actualizado">Cargando…</small>
+    <label>Año de alta <select id="f-anio"></select></label>
+    <label id="filtro-vend">Vendedora <select id="f-vend"></select></label>
+  </div>
+</header>
+<main>
+  <div class="kpis" id="kpis"></div>
+  <div class="fila">
+    <div class="card">
+      <h2>Por mes de alta</h2>
+      <div class="scroll"><table id="t-mes"><thead></thead><tbody></tbody><tfoot></tfoot></table></div>
+      <div class="sub" style="margin-top:6px">Tocá un mes para ver abajo quiénes son.</div>
+    </div>
+    <div class="card graf-card">
+      <h2>Qué pasó con los clientes nuevos</h2>
+      <div class="graf"><canvas id="graf"></canvas></div>
+    </div>
+  </div>
+  <div class="card" id="detalle">
+    <h2 id="det-titulo">Detalle</h2>
+    <div class="barra">
+      <span id="chips" style="display:contents"></span>
+      <select id="f-mes" aria-label="Mes de alta"></select>
+      <input id="f-texto" type="search" placeholder="Buscar cliente o RUT…">
+      <button class="btn" id="excel" type="button">⬇ Descargar Excel</button>
+    </div>
+    <div class="scroll">
+      <table id="t-det"><thead><tr><th>Alta</th><th>Cliente</th><th>Contacto</th><th class="col-vend">Vendedora</th><th>Estado</th><th>Cotizaciones (N° · fecha · total con IVA)</th><th>1ª compra</th><th class="num">Total 1ª compra</th><th class="num">Días</th></tr></thead><tbody></tbody></table>
+    </div>
+    <div class="sub" id="det-cuenta" style="margin-top:8px"></div>
+    <details class="nota">
+      <summary>Cómo se cuenta</summary>
+      <ul>
+        <li><b>Cliente nuevo:</b> ficha creada en Bsale desde enero de 2025. Se usa la fecha de alta de Bsale. Fichas con el mismo RUT cuentan una sola vez, con la fecha más antigua. Quedan afuera las cuentas que ya existían en la carga inicial (nov-2024) y las fichas repetidas sin movimientos de un cliente ya contado (2 casos).</li>
+        <li><b>Compró:</b> tiene factura o boleta en la fecha de su primera cotización o después (de cualquier monto y producto), descontando notas de crédito.</li>
+        <li><b>En plazo:</b> todavía no compró y su última cotización tiene 7 días o menos. El 95% de quienes compran lo hace dentro de los 7 días.</li>
+        <li><b>No compró:</b> cotizó hace más de 7 días y no compró. Incluye las compras anuladas completas con nota de crédito.</li>
+        <li><b>Seguimiento pendiente:</b> ficha dada de alta que no tiene en Bsale ninguna cotización ni compra. Cuenta como alta y hay que hacerle seguimiento.</li>
+        <li><b>Otros:</b> compró sin cotización previa (aparece solo si hay algún caso).</li>
+        <li><b>Días:</b> en quienes compraron, días entre la primera cotización y la primera compra. En seguimiento pendiente, días desde el alta. En el resto, días desde la última cotización.</li>
+        <li>No se cuentan las cotizaciones anuladas. La vendedora es la del campo «Vendedor» de la ficha en Bsale (igual que Cartera en riesgo).</li>
+        <li>Se actualiza una vez por día junto con el resto del tablero.</li>
+      </ul>
+    </details>
+  </div>
+</main>
+<script>window.ALLOW_GENERAL = true;</script>
+<script src="assets/vendor-links.js?v=20261126e"></script>
+<script src="assets/pin-gate.js?v=20261126e"></script>
+<script src="assets/altas.js?v=20261126e"></script>
+</body>
+</html>
