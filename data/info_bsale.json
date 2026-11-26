@@ -1,8 +1,17 @@
 {
-  "updated_at": "2026-11-26T03:25:49.619528+00:00",
+  "updated_at": "2026-11-26T18:16:26.029804+00:00",
   "accounts_with_sales": 563,
-  "accounts_without_address": 422,
+  "accounts_without_address": 417,
   "accounts": [
+    {
+      "id": "627",
+      "name": "VITAL STETIC SPA",
+      "rut": "76493124-6",
+      "contact": "",
+      "phone": "",
+      "billing_address": "AVDA KENNEDY 5770 912, Las Condes, Santiago",
+      "last_sale": "2026-11-26"
+    },
     {
       "id": "476",
       "name": "DERMOESTHETIC SPA",
@@ -155,15 +164,6 @@
       "phone": "933098595",
       "billing_address": "Av. Presidente Kennedy 5600, Vitacura, Santiago",
       "last_sale": "2026-11-03"
-    },
-    {
-      "id": "943",
-      "name": "SOCIEDAD COMERCIAL Y SERVICIOS ODONTOLOGICOS CONTIDENTAL LIMITADA",
-      "rut": "76530314-1",
-      "contact": "Monserrat Aro",
-      "phone": "983421125",
-      "billing_address": "Montt 265, Constitución, Constitución",
-      "last_sale": "2026-10-26"
     },
     {
       "id": "893",
@@ -373,15 +373,6 @@
       "last_sale": "2026-10-08"
     },
     {
-      "id": "627",
-      "name": "VITAL STETIC SPA",
-      "rut": "76493124-6",
-      "contact": "",
-      "phone": "",
-      "billing_address": "AVDA KENNEDY 5770 912, Las Condes, Santiago",
-      "last_sale": "2026-10-08"
-    },
-    {
       "id": "873",
       "name": "SERVICIOS ODONTOLOGICOS MAINO Y COMPANIA LIMITADA",
       "rut": "77704251-3",
@@ -532,15 +523,6 @@
       "contact": "",
       "phone": "",
       "billing_address": "BRASIL 9121 51, La Florida, Santiago",
-      "last_sale": "2026-09-28"
-    },
-    {
-      "id": "871",
-      "name": "FRANCISCA ÁLVAREZ QUINTANA SPA",
-      "rut": "76999941-8",
-      "contact": "Francisca Alvarez",
-      "phone": "982331311",
-      "billing_address": "Cochrane N°635 torre B, Concepcion, Concepcion",
       "last_sale": "2026-09-28"
     },
     {
@@ -877,15 +859,6 @@
       "last_sale": "2026-09-07"
     },
     {
-      "id": "1035",
-      "name": "MEDICINA ESTETICA FACIAL DRA. HEIDY CORTEZ SPA",
-      "rut": "76840675-8",
-      "contact": "Heidy Carolina Cortez Flores",
-      "phone": "993368201",
-      "billing_address": "Santiago de rosas 2871, Osorno, Osorno",
-      "last_sale": "2026-09-06"
-    },
-    {
       "id": "1252",
       "name": "Servicio Odontológico Macarena Hald Spa",
       "rut": "77408221-2",
@@ -1072,15 +1045,6 @@
       "contact": "KATHERINE CASTILLO",
       "phone": "958515497",
       "billing_address": "FRANCISCO BILBAO 3771, Providencia, Providencia",
-      "last_sale": "2026-08-26"
-    },
-    {
-      "id": "1231",
-      "name": "SERVICIOS ODONTOLÓGICOS N R SPA",
-      "rut": "78484161-8",
-      "contact": "Nataly Reyes",
-      "phone": "954454040",
-      "billing_address": "Coimbra 110 of 801, Las Condes, Santiago",
       "last_sale": "2026-08-26"
     },
     {
@@ -2297,15 +2261,6 @@
       "phone": "",
       "billing_address": "Av. Presidente Kennedy 5757 303 oficina - torre orie, Las Condes, Santiago",
       "last_sale": "2025-12-09"
-    },
-    {
-      "id": "1047",
-      "name": "SOCIEDAD ODONTOLOGICA PAMELA RODRIGUEZ AEDO E.I.R.L.",
-      "rut": "76771145-k",
-      "contact": "Pamela Rodriguez",
-      "phone": "978483350",
-      "billing_address": "Los Alerces 924, Chillan, Chillan",
-      "last_sale": "2025-12-04"
     },
     {
       "id": "1087",
