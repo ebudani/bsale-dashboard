@@ -544,6 +544,8 @@
   .risk-count { font-size: 11px; color: #94a3b8; margin-top: 8px; }
 
   /* Histórico por Cliente */
+  /* Colores de marca solo en esta hoja: Teoxane grafito, RRS LL bordo. */
+  #client-history-card { --teox: #2c2c2c; --rrs: #84283d; }
   .client-history-search-wrap { position: relative; max-width: 420px; margin-bottom: 4px; }
   #client-history-search {
     width: 100%; font-family: inherit; font-size: 14px; padding: 9px 12px;
@@ -578,13 +580,73 @@
   .client-history-charts { display: flex; flex-direction: column; gap: 16px; }
   .client-history-charts > div { min-width: 0; } /* si no, el canvas impide que la columna achique */
   .client-history-months-title { margin-top: 22px; }
-  .client-history-chart-label { font-size: 11px; font-weight: 600; text-align: center; color: var(--gray-600); }
+  .ch-months-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 6px; }
+  .ch-legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 11px; color: var(--gray-600); }
+  .ch-legend span { display: inline-flex; align-items: center; gap: 5px; }
+  .ch-legend i { width: 10px; height: 10px; border-radius: 2px; }
+  .ch-view-btns { display: flex; gap: 6px; margin-left: auto; }
+  .ch-view-btns button {
+    font-family: inherit; font-size: 12px; font-weight: 600; padding: 6px 12px; cursor: pointer;
+    background: white; color: var(--gray-600); border: 1px solid var(--gray-200); border-radius: 8px;
+  }
+  .ch-view-btns button.active { color: white; border-color: transparent; }
+  .ch-view-btns button.active[data-view="total"] { background: var(--blue); }
+  .ch-view-btns button.active[data-view="teox"] { background: var(--teox); }
+  .ch-view-btns button.active[data-view="rrs"] { background: var(--rrs); }
+  .ch-months-chart-wrap { height: 320px; }
+  #table-client-history-years th.c-teox, #table-client-history-months th.c-teox { color: var(--teox); }
+  #table-client-history-years th.c-rrs, #table-client-history-months th.c-rrs { color: var(--rrs); }
   #table-client-history-years td.total, #table-client-history-months td.total { font-weight: 700; }
   #table-client-history-months tr.client-history-future td { color: #cbd5e1; }
-  #table-client-history-months .up { color: #15803d; font-weight: 600; }
-  #table-client-history-months .down { color: #b91c1c; font-weight: 600; }
+  #table-client-history-months .up, #table-client-history-years .up { color: #15803d; font-weight: 600; }
+  #table-client-history-months .down, #table-client-history-years .down { color: #b91c1c; font-weight: 600; }
+  /* Bloque "mismos meses" dentro de la tabla Por año */
+  #table-client-history-years tr.ch-same-first td { border-top: 2px solid #94a3b8; }
+  #table-client-history-years tr.ch-same-first td, #table-client-history-years tr.ch-same td { background: var(--gray-50); }
+  #table-client-history-years tr.ch-same-var td { font-weight: 700; }
   @media (max-width: 760px) {
     .client-history-tables { grid-template-columns: 1fr; }
+  }
+
+  /* Histórico por Cliente compacto: entra en una pantalla sin bajar. El alto de las filas
+     (--ch-pad) y de los graficos se ajusta al alto de la ventana. */
+  .page-client-history { --ch-pad: clamp(2px, calc((100vh - 645px) / 34 + 2px), 8px); }
+  .page-client-history header { padding-top: 8px; padding-bottom: 8px; }
+  .page-client-history main { padding-top: 10px; padding-bottom: 10px; }
+  #client-history-card { padding-top: 12px; padding-bottom: 12px; min-height: 390px; } /* lugar para las sugerencias */
+  .ch-top {
+    display: flex; align-items: center; flex-wrap: wrap; gap: 8px 20px;
+    padding-bottom: 10px; margin-bottom: 10px; border-bottom: 1px solid var(--gray-200);
+  }
+  .ch-top h2 { margin: 0; }
+  .ch-top .client-history-search-wrap { width: 360px; max-width: 100%; margin: 0; }
+  .ch-top #client-history-search { padding: 7px 12px; }
+  .ch-top #client-history-header { margin: 0; padding: 0; border: 0; line-height: 1.3; }
+  .ch-top #client-history-header .name { font-size: 15px; }
+  .ch-top #client-history-header .meta { margin-top: 0; }
+  #client-history-content h3 { margin-bottom: 4px; }
+  #client-history-content .client-history-months-title { margin-top: 10px; }
+  #table-client-history-years th, #table-client-history-months th { padding-top: 5px; padding-bottom: 5px; }
+  #table-client-history-months thead tr:last-child th { padding-top: 1px; padding-bottom: 3px; }
+  #table-client-history-years td, #table-client-history-months td { padding-top: var(--ch-pad); padding-bottom: var(--ch-pad); line-height: 1.3; }
+  @media (max-height: 700px) {
+    #table-client-history-years td, #table-client-history-months td { font-size: 12px; }
+  }
+  @media (max-height: 640px) and (min-width: 761px) {
+    #client-history-card { padding-top: 8px; padding-bottom: 8px; }
+    .page-client-history main { padding-top: 6px; padding-bottom: 6px; }
+    .ch-top { padding-bottom: 6px; margin-bottom: 6px; }
+    #client-history-content .client-history-months-title { margin-top: 6px; }
+    #table-client-history-years th, #table-client-history-months th { padding-top: 3px; padding-bottom: 3px; }
+  }
+  /* En PC los graficos ocupan el mismo alto que las tablas */
+  @media (min-width: 761px) {
+    #client-history-content .client-history-tables { align-items: stretch; }
+    #client-history-content .client-history-charts { gap: 8px; }
+    #client-history-content .client-history-charts > .client-history-chart-wrap { height: clamp(140px, 22vh, 200px); margin-top: 0; }
+    #ch-wrap-months { flex: 1; display: flex; flex-direction: column; }
+    #ch-wrap-months .ch-months-chart-wrap { flex: 1 1 0; height: auto; min-height: 200px; }
+    #ch-wrap-months canvas { position: absolute; top: 0; left: 0; }
   }
 
   /* Filtro Marca (index.html): dashboard.js pone body[data-brand] en teox o
@@ -595,7 +657,7 @@
   body[data-brand="teox"] .c-rrs, body[data-brand="teox"] .c-total,
   body[data-brand="rrs"] .c-teox, body[data-brand="rrs"] .c-total { display: none; }
   body[data-brand="teox"] #card-rrs, body[data-brand="rrs"] #card-teox,
-  body[data-brand="teox"] #ch-wrap-rrs, body[data-brand="rrs"] #ch-wrap-teox { display: none; }
+  body[data-brand="teox"] #ch-view-btns, body[data-brand="rrs"] #ch-view-btns { display: none; }
   body[data-brand="teox"] .tables-row-3, body[data-brand="rrs"] .tables-row-3 { grid-template-columns: 1.5fr 1fr; }
 
   /* Cumplimiento + Teoxane + RRS (7, 4 and 4 columns in 1.5fr/1fr/1fr) need

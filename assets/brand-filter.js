@@ -26,7 +26,7 @@ function brandOn() { return selectedBrand !== 'all'; }
 // Misma regla por nombre de producto que classify_brand() en fetch_data.py
 // (verificada contra by_brand: coincide en todos los meses y vendedoras).
 const TEOXANE_NAME_MARKERS = ['rha ', 'rha1', 'rha2', 'rha3', 'rha4', 'redensity', 'puresense'];
-const RRS_NAME_MARKERS = ['rrs', 'jeringa monodosis x 3ml'];
+const RRS_NAME_MARKERS = ['rrs', 'long lasting', 'jeringa monodosis x 3ml'];
 function skuBrand(name) {
   const n = (name || '').toLowerCase();
   if (TEOXANE_NAME_MARKERS.some(k => n.includes(k))) return 'Teoxane';

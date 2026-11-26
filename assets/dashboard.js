@@ -33,8 +33,13 @@ let periodMode = 'this_month';
 let customFromIdx = 0;
 let customToIdx = 0;
 let chartMonthly, chartDaily, chartBrands, chartSku;
-let chartClientHistoryYears, chartClientHistoryMonthsTeox, chartClientHistoryMonthsRrs;
-const CLIENT_HISTORY_YEAR_COLOR = { current: '#1d4ed8', prev: '#94a3b8' }; // mismo criterio que la tabla: año en curso solido/azul, anterior gris
+let chartClientHistoryYears, chartClientHistoryMonths;
+let clientHistoryView = 'total';    // total | teox | rrs (botones del grafico mensual)
+let clientHistoryMonthData = null;
+// Colores de marca, por ahora solo en Historico por Cliente (en dashboard.css van los mismos
+// en #client-history-card). Tono pleno: año actual; tono claro: años anteriores.
+const CLIENT_HISTORY_COLORS = { 'Teoxane': '#2c2c2c', 'RRS HA Long Lasting': '#84283d' };
+const CLIENT_HISTORY_PREV_COLORS = { 'Teoxane': '#bfc1c6', 'RRS HA Long Lasting': '#d5a3b0' };
 // Base de 10 colores muy distinguibles para los productos top; si el
 // catalogo historico tiene mas SKUs que colores base, se generan tonos
 // adicionales igualmente espaciados en el circulo de matices en vez de
@@ -2346,7 +2351,7 @@ function renderClientHistory(cid) {
   const monthKeys = Object.keys(history).sort();
   document.getElementById('client-history-empty').style.display = monthKeys.length ? 'none' : 'block';
   document.getElementById('client-history-content').style.display = monthKeys.length ? 'block' : 'none';
-  if (!monthKeys.length) return;
+  if (!monthKeys.length) { document.getElementById('client-history-header').innerHTML = ''; return; }
 
   const meta = clientsMeta[cid] || {};
   const vendor = clientVendorMap[cid] || null;
@@ -2366,29 +2371,67 @@ function renderClientHistory(cid) {
     y.neto += m.neto || 0;
   });
   const years = Object.keys(byYear).sort().reverse();
-  document.getElementById('tbody-client-history-years').innerHTML = years.map(y => `
-    <tr>
-      <td>${y}</td>
-      <td class="c-teox">${M(byYear[y].Teoxane)}</td>
-      <td class="c-rrs">${M(byYear[y]['RRS HA Long Lasting'])}</td>
-      <td class="total c-total">${M(byYear[y].neto)}</td>
+  const thisYear = new Date().getUTCFullYear();
+  const yearRow = (label, v, cls = '') => `
+    <tr${cls ? ` class="${cls}"` : ''}>
+      <td>${label}</td>
+      <td class="c-teox">${M(v.Teoxane)}</td>
+      <td class="c-rrs">${M(v['RRS HA Long Lasting'])}</td>
+      <td class="total c-total">${M(v.neto)}</td>
     </tr>
-  `).join('');
+  `;
+  let yearRows = years.map(y => yearRow(`${y} ${Number(y) === thisYear ? 'a la fecha' : 'año completo'}`, byYear[y])).join('');
+
+  // Comparacion justa: los mismos meses ya terminados de los dos años (el mes en
+  // curso queda afuera hasta que cierre). En enero todavia no hay meses cerrados.
+  const closed = new Date().getUTCMonth();
+  if (closed > 0) {
+    const sumClosed = year => {
+      const t = { Teoxane: 0, 'RRS HA Long Lasting': 0, neto: 0 };
+      for (let m = 1; m <= closed; m++) {
+        const e = history[`${year}-${String(m).padStart(2, '0')}`];
+        if (e) Object.keys(t).forEach(k => { t[k] += e[k] || 0; });
+      }
+      return t;
+    };
+    const cur = sumClosed(thisYear), prev = sumClosed(thisYear - 1);
+    const lastName = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'][closed - 1];
+    const range = closed === 1 ? 'Ene' : `Ene–${lastName}`;
+    const change = k => {
+      if (prev[k] > 0) {
+        const pct = Math.round((cur[k] - prev[k]) / prev[k] * 100);
+        return `<span class="${pct >= 0 ? 'up' : 'down'}">${pct >= 0 ? '+' : ''}${pct}%</span>`;
+      }
+      return cur[k] > 0 ? '<span class="up">Nuevo</span>' : '—';
+    };
+    yearRows += yearRow(`${range} ${thisYear}`, cur, 'ch-same-first')
+      + yearRow(`${range} ${thisYear - 1}`, prev, 'ch-same')
+      + `
+    <tr class="ch-same ch-same-var">
+      <td>Variación ${range}</td>
+      <td class="c-teox">${change('Teoxane')}</td>
+      <td class="c-rrs">${change('RRS HA Long Lasting')}</td>
+      <td class="total c-total">${change('neto')}</td>
+    </tr>
+  `;
+  }
+  document.getElementById('tbody-client-history-years').innerHTML = yearRows;
 
   // Cronologico (2025, 2026, ...), no "mas reciente primero" como la tabla --
   // en el grafico el eje X es el PRODUCTO (Teoxane / RRS LL), y cada uno
   // tiene una barra por año al lado de la otra, mas vieja primero.
   const yearsAsc = years.slice().reverse();
-  const yearBarColor = (i) => i === yearsAsc.length - 1 ? CLIENT_HISTORY_YEAR_COLOR.current : CLIENT_HISTORY_YEAR_COLOR.prev;
+  const yearBrands = brandOn() ? [selectedBrand] : ['Teoxane', 'RRS HA Long Lasting'];
   if (chartClientHistoryYears) chartClientHistoryYears.destroy();
   chartClientHistoryYears = new Chart(document.getElementById('chart-client-history-years'), {
     type: 'bar',
     data: {
-      labels: brandOn() ? [selectedBrand === 'Teoxane' ? 'Teoxane' : 'RRS LL'] : ['Teoxane', 'RRS LL'],
+      labels: yearBrands.map(b => b === 'Teoxane' ? 'Teoxane' : 'RRS LL'),
+      // Cada barra va con el color de su marca: claro los años anteriores, pleno el actual.
       datasets: yearsAsc.map((y, i) => ({
         label: y,
-        data: brandOn() ? [byYear[y][selectedBrand]] : [byYear[y].Teoxane, byYear[y]['RRS HA Long Lasting']],
-        backgroundColor: yearBarColor(i),
+        data: yearBrands.map(b => byYear[y][b]),
+        backgroundColor: yearBrands.map(b => (i === yearsAsc.length - 1 ? CLIENT_HISTORY_COLORS : CLIENT_HISTORY_PREV_COLORS)[b]),
         borderRadius: 4,
       })),
     },
@@ -2396,13 +2439,17 @@ function renderClientHistory(cid) {
       responsive: true,
       maintainAspectRatio: false,
       plugins: {
-        legend: { position: 'top', labels: { boxWidth: 10, font: { size: 10 } } },
+        legend: { display: false },
         tooltip: { callbacks: { label: ctx => ` ${ctx.dataset.label}: ${M(ctx.raw)}` } },
-        datalabels: { display: false },
+        // El año y el monto van arriba de cada barra (reemplaza la leyenda).
+        datalabels: {
+          display: true, anchor: 'end', align: 'end', offset: 0, textAlign: 'center', color: '#475569', font: { size: 10 },
+          formatter: (v, ctx) => [ctx.dataset.label, M(v)],
+        },
       },
       scales: {
         x: { grid: { display: false }, ticks: { font: { size: 11 } } },
-        y: { min: 0, ticks: { font: { size: 9 }, callback: v => M(v) }, grid: { color: '#f1f5f9' } },
+        y: { beginAtZero: true, grace: '28%', ticks: { font: { size: 9 }, callback: v => M(v) }, grid: { color: '#f1f5f9' } },
       },
     },
   });
@@ -2414,7 +2461,12 @@ function renderClientHistory(cid) {
   document.getElementById('client-history-months-title').textContent = `Mes a mes: ${curYear} vs ${prevYear}`;
   const monthNames = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
   const curMonth1based = now.getUTCMonth() + 1; // meses futuros del año en curso: no pasaron todavia
-  const curTeox = [], prevTeox = [], curRrs = [], prevRrs = [];
+  const curTeox = [], prevTeox = [], curRrs = [], prevRrs = [], curOtros = [], prevOtros = [];
+  // Lo que no es Teoxane ni RRS LL, para que la vista Total sume el neto completo.
+  const otros = e => {
+    const v = (e.neto || 0) - (e.Teoxane || 0) - (e['RRS HA Long Lasting'] || 0);
+    return Math.abs(v) >= 1000 ? v : 0;
+  };
   const rows = monthNames.map((label, i) => {
     const monthNum = i + 1;
     const isFuture = monthNum > curMonth1based;
@@ -2425,6 +2477,8 @@ function renderClientHistory(cid) {
     prevTeox.push(prevEntry.Teoxane || 0);
     curRrs.push(isFuture ? null : (curEntry['RRS HA Long Lasting'] || 0));
     prevRrs.push(prevEntry['RRS HA Long Lasting'] || 0);
+    curOtros.push(isFuture ? null : otros(curEntry));
+    prevOtros.push(otros(prevEntry));
     const varPct = (c, p) => {
       if (isFuture) return '—';
       if (p) {
@@ -2454,57 +2508,84 @@ function renderClientHistory(cid) {
   document.querySelectorAll('#table-client-history-months thead tr:first-child th[colspan]')
     .forEach(th => { th.colSpan = brandOn() ? 1 : 2; });
 
-  // Un mini-grafico por producto, cada uno con la linea de 2025 (punteada,
-  // se dibuja primero / va primero en la leyenda) y la de 2026 (solida).
-  function renderMonthProductChart(prevChartRef, canvasId, prevData, curData) {
-    if (prevChartRef) prevChartRef.destroy();
-    return new Chart(document.getElementById(canvasId), {
-      type: 'line',
-      data: {
-        labels: monthNames,
-        datasets: [
-          {
-            label: String(prevYear),
-            data: prevData,
-            borderColor: CLIENT_HISTORY_YEAR_COLOR.prev,
-            backgroundColor: 'transparent',
-            pointRadius: 3,
-            pointBackgroundColor: CLIENT_HISTORY_YEAR_COLOR.prev,
-            borderWidth: 2,
-            borderDash: [5, 3],
-            tension: 0.25,
-          },
-          {
-            label: String(curYear),
-            data: curData,
-            borderColor: CLIENT_HISTORY_YEAR_COLOR.current,
-            backgroundColor: 'transparent',
-            pointRadius: 3,
-            pointBackgroundColor: CLIENT_HISTORY_YEAR_COLOR.current,
-            borderWidth: 2,
-            tension: 0.25,
-            spanGaps: false,
-          },
-        ],
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: { position: 'top', labels: { boxWidth: 10, font: { size: 10 } } },
-          tooltip: { callbacks: { label: ctx => ` ${ctx.dataset.label}: ${ctx.raw == null ? '—' : M(ctx.raw)}` } },
-          datalabels: { display: false },
-        },
-        scales: {
-          x: { grid: { display: false }, ticks: { font: { size: 9 } } },
-          y: { min: 0, ticks: { font: { size: 8 }, callback: v => M(v) }, grid: { color: '#f1f5f9' } },
-        },
-      },
-    });
-  }
+  clientHistoryMonthData = {
+    monthNames, curYear, prevYear,
+    teox: { prev: prevTeox, cur: curTeox },
+    rrs: { prev: prevRrs, cur: curRrs },
+    otros: { prev: prevOtros, cur: curOtros },
+  };
+  renderClientHistoryMonthsChart();
+}
 
-  chartClientHistoryMonthsTeox = renderMonthProductChart(chartClientHistoryMonthsTeox, 'chart-client-history-months-teox', prevTeox, curTeox);
-  chartClientHistoryMonthsRrs = renderMonthProductChart(chartClientHistoryMonthsRrs, 'chart-client-history-months-rrs', prevRrs, curRrs);
+// Grafico mensual unico: año anterior y actual en barras, con botones
+// Total / Teoxane / RRS LL. En Total, cada barra se apila por marca.
+function renderClientHistoryMonthsChart() {
+  const d = clientHistoryMonthData;
+  if (!d) return;
+  // Con el filtro Marca la vista queda fija en esa marca (los botones se ocultan por CSS).
+  const view = brandOn() ? (selectedBrand === 'Teoxane' ? 'teox' : 'rrs') : clientHistoryView;
+  document.querySelectorAll('#ch-view-btns button').forEach(b => {
+    b.classList.toggle('active', b.dataset.view === view);
+    b.setAttribute('aria-pressed', b.dataset.view === view);
+    b.onclick = () => { clientHistoryView = b.dataset.view; renderClientHistoryMonthsChart(); };
+  });
+
+  const bar = (label, data, color, stack) => ({ label, data, backgroundColor: color, stack, borderRadius: 3 });
+  let datasets, legend;
+  if (view === 'total') {
+    const hasOtros = [...d.otros.prev, ...d.otros.cur].some(v => v);
+    datasets = [];
+    [['prev', d.prevYear, CLIENT_HISTORY_PREV_COLORS, '#e2e8f0'], ['cur', d.curYear, CLIENT_HISTORY_COLORS, '#94a3b8']]
+      .forEach(([k, year, colors, otrosColor]) => {
+        datasets.push(bar(`Teoxane ${year}`, d.teox[k], colors['Teoxane'], String(year)));
+        datasets.push(bar(`RRS LL ${year}`, d.rrs[k], colors['RRS HA Long Lasting'], String(year)));
+        if (hasOtros) datasets.push(bar(`Otros ${year}`, d.otros[k], otrosColor, String(year)));
+      });
+    legend = datasets.filter(s => !s.label.startsWith('Otros')).map(s => [s.label, s.backgroundColor]);
+    if (hasOtros) legend.push(['Otros', '#94a3b8']);
+  } else {
+    const brand = view === 'teox' ? 'Teoxane' : 'RRS HA Long Lasting';
+    datasets = [
+      bar(String(d.prevYear), d[view].prev, CLIENT_HISTORY_PREV_COLORS[brand], 'prev'),
+      bar(String(d.curYear), d[view].cur, CLIENT_HISTORY_COLORS[brand], 'cur'),
+    ];
+    legend = datasets.map(s => [s.label, s.backgroundColor]);
+  }
+  document.getElementById('ch-months-legend').innerHTML =
+    legend.map(([label, color]) => `<span><i style="background:${color}"></i>${label}</span>`).join('');
+
+  const monthTotal = (k, i) => (d.teox[k][i] || 0) + (d.rrs[k][i] || 0) + (d.otros[k][i] || 0);
+  if (chartClientHistoryMonths) chartClientHistoryMonths.destroy();
+  chartClientHistoryMonths = new Chart(document.getElementById('chart-client-history-months'), {
+    type: 'bar',
+    data: { labels: d.monthNames, datasets },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          filter: item => item.raw != null && (view !== 'total' || item.raw !== 0),
+          callbacks: {
+            label: ctx => ` ${ctx.dataset.label}: ${M(ctx.raw)}`,
+            footer: items => {
+              if (view !== 'total' || !items.length) return '';
+              const i = items[0].dataIndex;
+              const lines = [`Total ${d.prevYear}: ${M(monthTotal('prev', i))}`];
+              if (d.teox.cur[i] != null) lines.push(`Total ${d.curYear}: ${M(monthTotal('cur', i))}`);
+              return lines;
+            },
+          },
+        },
+        datalabels: { display: false },
+      },
+      scales: {
+        x: { stacked: true, grid: { display: false }, ticks: { font: { size: 10 }, autoSkip: false, maxRotation: 0 } },
+        y: { stacked: true, beginAtZero: true, ticks: { font: { size: 10 }, callback: v => M(v) }, grid: { color: '#f1f5f9' } },
+      },
+    },
+  });
 }
 
 // ── Init ─────────────────────────────────────────────────────────────────────
