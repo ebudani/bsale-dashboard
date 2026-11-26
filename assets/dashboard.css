@@ -750,10 +750,19 @@
     .risk-table-scroll { max-height: 55vh; }
   }
 
-  /* Tablero general: barra mas compacta para que entre el boton Altas y cotizaciones */
-  @media (min-width: 761px) and (max-width: 1700px) {
-    .page-general header { padding-left: 16px; padding-right: 16px; column-gap: 10px; }
-    .page-general header .header-right { gap: 8px; }
-    .page-general header .header-right button.filter-select, .page-general header .header-right a.filter-select { font-size: 12px; padding: 5px 8px; }
-    .page-general header .header-right select.filter-select { font-size: 12px; padding: 4px 6px; }
+  /* Tablero general: barra mas alta, letra y botones mas grandes, y "Actualizado" debajo de
+     Periodo. Los tamaños crecen con el ancho de la ventana para que siga entrando en pantallas chicas. */
+  .page-general .periodo-col { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+  .page-general #updated-at { font-size: 12px; white-space: nowrap; }
+  @media (min-width: 761px) {
+    .page-general header { padding: 20px clamp(16px, 1.3vw, 26px) 26px; column-gap: clamp(10px, 1vw, 18px); }
+    .page-general header h1 { font-size: clamp(19px, 1.25vw, 24px); }
+    .page-general header .header-right { gap: clamp(8px, .75vw, 15px); }
+    .page-general header .header-right button.filter-select, .page-general header .header-right a.filter-select {
+      font-size: clamp(13px, .82vw, 15.5px); padding: clamp(6px, .42vw, 8px) clamp(8px, .68vw, 13px); }
+    .page-general header .header-right select.filter-select { font-size: clamp(13px, .82vw, 15.5px); padding: clamp(5px, .36vw, 7px) 8px; }
+    .page-general header .filter-label { font-size: clamp(10px, .62vw, 12px); }
+    /* "Actualizado" cuelga debajo de Periodo sin correr a los demas controles de la fila */
+    .page-general .periodo-col { position: relative; display: block; }
+    .page-general #updated-at { position: absolute; top: calc(100% + 5px); left: 0; }
   }
