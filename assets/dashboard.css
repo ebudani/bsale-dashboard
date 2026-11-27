@@ -89,6 +89,11 @@
   .kpi label { font-size: 11px; text-transform: uppercase; letter-spacing: .5px; color: var(--gray-600); display: block; margin-bottom: 6px; }
   .kpi .val  { font-size: 22px; font-weight: 700; }
   .kpi .sub  { font-size: 11px; color: var(--gray-600); margin-top: 3px; }
+  /* "Facturas emitidas" se puede tocar: abre el detalle (facturas.html) */
+  #kpi-docs-card { cursor: pointer; transition: box-shadow .15s, transform .15s; }
+  /* flotante: si en el cuadro no entra al lado del titulo, baja de linea en vez de taparlo */
+  #kpi-docs-card label::after { content: 'Ver detalle →'; float: right; margin-left: 8px; text-transform: none; letter-spacing: 0; font-weight: 600; color: var(--blue); }
+  #kpi-docs-card:hover, #kpi-docs-card:focus-visible { box-shadow: 0 4px 14px rgba(29,78,216,.25); transform: translateY(-1px); }
 
   /* Charts row */
   .charts-row {

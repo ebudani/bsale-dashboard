@@ -1,0 +1,23 @@
+/* Pagina Facturas emitidas (facturas.html). La base (encabezado, tarjeta, tabla,
+   boton Volver y candado de PIN) viene de altas.css */
+  main { max-width:1500px; }
+  [hidden] { display:none !important; }
+  #rango { display:flex; align-items:center; gap:14px; }
+  .barra input { width:320px; }
+
+  /* La tabla se desplaza dentro de su cuadro: los titulos quedan arriba y los totales abajo, a la vista */
+  .tabla-fact { overflow:auto; max-height:calc(100vh - 200px); min-height:280px; border:1px solid var(--g200); border-radius:8px; }
+  #t-fact { border-collapse:separate; border-spacing:0; }
+  #t-fact th { position:sticky; top:0; z-index:2; cursor:pointer; user-select:none; white-space:nowrap; border-bottom:1px solid var(--g200); }
+  #t-fact th .flecha { display:inline-block; width:10px; color:var(--blue); }
+  #t-fact th.num { text-align:right; }
+  #t-fact td { vertical-align:middle; }
+  #t-fact td.corta { white-space:nowrap; }
+  #t-fact td.num { white-space:nowrap; }
+  #t-fact tbody tr:hover { background:#f8fafc; }
+  #t-fact tr.nc td.num, #t-fact tr.nc td.nro { color:var(--red); }
+  #t-fact tfoot td { position:sticky; bottom:0; z-index:1; background:#e8eef7; border-top:2px solid var(--navy); border-bottom:0; font-weight:700; font-size:13.5px; padding-top:9px; padding-bottom:9px; }
+  #t-fact .pill { margin-left:6px; font-size:10px; padding:1px 7px; }
+  .cero { color:#cbd5e1; }
+
+  @media (max-width:760px) { #t-fact { min-width:820px; } .barra input { width:100%; } .tabla-fact { max-height:70vh; } }

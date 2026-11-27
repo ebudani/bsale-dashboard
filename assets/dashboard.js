@@ -282,12 +282,45 @@ async function loadData() {
   }
 
   buildCustomRangeSelectors();
+  restoreFilters();
+  setupInvoicesLink();
   if (typeof initRiskContacts === 'function') await initRiskContacts();
   if (typeof initClientHistory === 'function') initClientHistory();
   renderDispatch = window.SIMPLE_MODE ? renderVendorSimple : render;
   renderDispatch();
   document.getElementById('loading').style.display = 'none';
   document.getElementById('content').classList.add('loaded');
+}
+
+// El cuadro "Facturas emitidas" abre el detalle (facturas.html) con el mismo periodo y
+// vendedora que se estan viendo. Desde el link de una vendedora viaja su ?v=, y alla
+// solo se muestran las facturas de su cartera.
+function invoicesUrl() {
+  const p = new URLSearchParams();
+  const code = new URLSearchParams(location.search).get('v');
+  if (window.LOCKED_VENDOR && code) p.set('v', code);
+  else if (selectedVendor !== 'all') p.set('vendedor', selectedVendor);
+  p.set('periodo', periodMode);
+  if (periodMode === 'custom') {
+    const key = m => `${m.year}-${String(m.month).padStart(2, '0')}`;
+    const months = monthsForPeriod();
+    p.set('desde', key(months[0]));
+    p.set('hasta', key(months[months.length - 1]));
+  }
+  return 'facturas.html?' + p.toString();
+}
+
+function setupInvoicesLink() {
+  const val = document.getElementById('kpi-docs');
+  if (!val) return;
+  const card = val.closest('.kpi');
+  card.id = 'kpi-docs-card';
+  card.setAttribute('role', 'link');
+  card.tabIndex = 0;
+  card.title = 'Ver el detalle de las facturas';
+  const open = () => { location.href = invoicesUrl(); };
+  card.addEventListener('click', open);
+  card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
 }
 
 // Personal per-vendor pages (monica.html, daisy.html, ...) set
@@ -343,7 +376,37 @@ function buildVendorSelector() {
 
 function selectVendor(v) {
   selectedVendor = v;
+  saveFilters();
   renderDispatch();
+}
+
+// ── Recordar los filtros al volver ───────────────────────────────────────────
+// Sin esto, al entrar a otra pagina y tocar "← Volver" el navegador dejaba el
+// selector en lo que estaba elegido (ej. "Mes anterior") pero los numeros volvian
+// a ser los del mes en curso. Se guarda en el historial de esta pestaña: sirve
+// para volver o recargar; al entrar de nuevo arranca como siempre.
+function saveFilters() {
+  const filtros = { vendor: selectedVendor, period: periodMode, from: customFromIdx, to: customToIdx, top: topClientsPeriod };
+  history.replaceState({ ...(history.state || {}), filtros }, '');
+}
+
+function restoreFilters() {
+  const f = (history.state || {}).filtros || {};
+  const vendorSel = document.getElementById('vendor-select');
+  // en el link de una vendedora la vendedora queda siempre fija
+  if (!window.LOCKED_VENDOR && f.vendor && Array.from(vendorSel.options).some(o => o.value === f.vendor)) selectedVendor = f.vendor;
+  vendorSel.value = selectedVendor;
+  if (f.period) periodMode = f.period;
+  if (f.from >= 0 && f.from < allMonths.length) customFromIdx = f.from;
+  if (f.to >= 0 && f.to < allMonths.length) customToIdx = f.to;
+  if (f.top) topClientsPeriod = f.top;
+  const set = (id, value) => { const el = document.getElementById(id); if (el) el.value = value; };
+  set('period-select', periodMode);
+  set('custom-from', customFromIdx);
+  set('custom-to', customToIdx);
+  set('top-clients-period-select', topClientsPeriod);
+  const range = document.getElementById('custom-range');
+  if (range) range.style.display = periodMode === 'custom' ? 'inline-flex' : 'none';
 }
 
 // ── Periodo selector ─────────────────────────────────────────────────────────
@@ -370,12 +433,14 @@ function buildCustomRangeSelectors() {
 function onPeriodChange(mode) {
   periodMode = mode;
   document.getElementById('custom-range').style.display = mode === 'custom' ? 'inline-flex' : 'none';
+  saveFilters();
   renderDispatch();
 }
 
 function onCustomRangeChange() {
   customFromIdx = parseInt(document.getElementById('custom-from').value);
   customToIdx   = parseInt(document.getElementById('custom-to').value);
+  saveFilters();
   renderDispatch();
 }
 
@@ -809,6 +874,7 @@ function renderTopClientsForVendor() {
 
 function onTopClientsPeriodChange(mode) {
   topClientsPeriod = mode;
+  saveFilters();
   renderTopClientsForVendor();
 }
 

@@ -1,10 +1,8 @@
 """
 fetch_data.py  -  Bsale data fetcher for AestheticsPro dashboard
 
-Block structure of /documents.json (ordered by internal ID, grouped by type):
-  Offsets 0-2128:    Cotizaciones (24), NC (2), Exentas (15), Boletas (22)
-  Offsets 2129-3099: Guias de despacho (7)
-  Offsets 3100-5058: Facturas electronicas (5)
+Documents are requested to Bsale by document type (documenttypeid): facturas
+electronicas (5), exentas (15) and notas de credito (2).
 
 Net sales = facturas + exentas - NC
 
@@ -16,7 +14,6 @@ Modes:
 
 import os
 import json
-import calendar
 import datetime
 import time
 import urllib.request
@@ -29,19 +26,12 @@ TOKEN = os.environ.get("BSALE_TOKEN", "")
 BASE_URL = "https://api.bsale.io/v1"
 DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
 OUT_FILE = os.path.join(DATA_DIR, "ventas.json")
+INVOICES_FILE = os.path.join(DATA_DIR, "facturas.json")
 HEADERS = {"access_token": TOKEN}
 
 TIPO_FACTURA = {"5"}
 TIPO_EXENTA  = {"15"}
 TIPO_NC      = {"2"}
-
-# Facturas electronicas are the newest document type adopted, so they occupy
-# a suffix of /documents.json starting at this offset (stable historically).
-# The end of that suffix is NOT fixed here -- it grows with every new factura,
-# so it's fetched fresh each run via get_total_document_count() in main().
-FACT_BLOCK_START = 3100
-NC_BLOCK_START   = 0
-NC_BLOCK_END     = 2128
 
 # variant_id -> brand name, for the handful of variants confirmed by id.
 # This alone silently misses brand-new/renamed catalog variants (that's what
@@ -185,90 +175,45 @@ def fetch_clients():
 
 # -- Document fetching ---------------------------------------------------------
 
-def date_at_offset(offset, block_end):
-    if offset > block_end:
-        return 99999999999
-    data = get_json(f"{BASE_URL}/documents.json?limit=1&offset={offset}")
-    items = data.get("items", [])
-    return items[0]["emissionDate"] if items else 99999999999
-
-
-def get_total_document_count():
+def fetch_documents_of_type(type_id):
     """
-    Total documents currently in the account. Facturas electronicas are the
-    newest/last block in /documents.json, so this IS the true upper bound of
-    that block -- it grows every time a new factura is issued. Fetching it
-    fresh on every run keeps recently-issued facturas from silently falling
-    outside the search range as the document count grows.
+    Every document of one type, asked to Bsale by type. Until 2026-11 they were
+    located by their position inside /documents.json (hardcoded block offsets +
+    binary search). Positions move as documents get added, so that silently
+    missed facturas: all of Jan-Feb 2025, and the latest one whenever a new
+    document appeared while the script was running.
     """
-    data = get_json(f"{BASE_URL}/documents.json?limit=1&offset=0")
-    return data.get("count", 0)
+    docs = {}
+    offset = 0
+    while True:
+        data = get_json(f"{BASE_URL}/documents.json?limit=50&offset={offset}&documenttypeid={type_id}")
+        items = data.get("items", [])
+        for d in items:
+            if str((d.get("document_type") or {}).get("id")) == type_id:
+                docs[d["id"]] = d
+        offset += len(items)
+        if not items or offset >= data.get("count", 0):
+            break
+    return list(docs.values())
 
 
-def fetch_facturas_for_month(year, month, fact_block_end):
-    """Binary search + paginated fetch within the facturas block."""
-    start_ts = calendar.timegm(datetime.datetime(year, month, 1, 0, 0, 0).timetuple())
-    last_day = calendar.monthrange(year, month)[1]
-    end_ts = calendar.timegm(datetime.datetime(year, month, last_day, 23, 59, 59).timetuple())
-
-    lo, hi = FACT_BLOCK_START, fact_block_end
-    while lo < hi:
-        mid = (lo + hi) // 2
-        if date_at_offset(mid, fact_block_end) < start_ts:
-            lo = mid + 1
-        else:
-            hi = mid
-    s_off = lo
-
-    lo2, hi2 = s_off, fact_block_end
-    while lo2 < hi2:
-        mid = (lo2 + hi2 + 1) // 2
-        if date_at_offset(mid, fact_block_end) <= end_ts:
-            lo2 = mid
-        else:
-            hi2 = mid - 1
-    e_off = lo2
-
-    docs = []
-    off = s_off
-    while off <= e_off:
-        limit = min(50, e_off - off + 1)
-        data = get_json(f"{BASE_URL}/documents.json?limit={limit}&offset={off}")
-        for d in data.get("items", []):
-            if (
-                start_ts <= d.get("emissionDate", 0) <= end_ts
-                and d.get("document_type", {}).get("id") in TIPO_FACTURA
-            ):
-                docs.append(d)
-        off += limit
-    return docs
-
-
-def scan_nc_and_exentas_all_months():
+def fetch_sales_documents():
     """
-    Full scan of the NC block (0-2128).
-    Returns {(year, month): {"nc": [...], "exenta": [...]}}
-    NC internal IDs are not correlated with cotizacion date ordering.
+    Returns {(year, month): {"factura": [...], "exenta": [...], "nc": [...]}}.
+    An empty list of facturas means something is wrong with the query, so the
+    run stops instead of saving a month with no sales.
     """
     by_month = {}
-    print("  Scanning NC/exenta block...", end=" ", flush=True)
-    for off in range(NC_BLOCK_START, NC_BLOCK_END + 1, 50):
-        limit = min(50, NC_BLOCK_END - off + 1)
-        data = get_json(f"{BASE_URL}/documents.json?limit={limit}&offset={off}")
-        for d in data.get("items", []):
-            tid = d.get("document_type", {}).get("id", "")
-            if tid not in TIPO_NC and tid not in TIPO_EXENTA:
-                continue
-            ts = d.get("emissionDate", 0)
-            dt = datetime.datetime.utcfromtimestamp(ts)
-            key = (dt.year, dt.month)
-            by_month.setdefault(key, {"nc": [], "exenta": []})
-            if tid in TIPO_NC:
-                by_month[key]["nc"].append(d)
-            else:
-                by_month[key]["exenta"].append(d)
-    total = sum(len(v["nc"]) + len(v["exenta"]) for v in by_month.values())
-    print(f"done ({total} docs)")
+    for kind, types in (("factura", TIPO_FACTURA), ("exenta", TIPO_EXENTA), ("nc", TIPO_NC)):
+        print(f"  Fetching documents ({kind})...", end=" ", flush=True)
+        docs = [d for type_id in types for d in fetch_documents_of_type(type_id)]
+        if kind == "factura" and not docs:
+            raise RuntimeError("Bsale no devolvio ninguna factura")
+        for d in sorted(docs, key=lambda d: (d.get("emissionDate", 0), d.get("number") or 0)):
+            dt = datetime.datetime.utcfromtimestamp(d.get("emissionDate", 0))
+            month = by_month.setdefault((dt.year, dt.month), {"factura": [], "exenta": [], "nc": []})
+            month[kind].append(d)
+        print(f"{len(docs)} docs")
     return by_month
 
 
@@ -634,6 +579,53 @@ def build_month_record(year, month, facturas, nc_docs, exenta_docs, clients_meta
     return record
 
 
+# -- Detalle por factura (facturas.html) ----------------------------------------
+
+def invoice_rows(facturas, exenta_docs, nc_docs, brand_details):
+    """
+    One row per document of the month, for the "Facturas emitidas" detail page:
+    [number, type ("F" factura, "E" exenta, "N" nota de credito), date,
+    client_id, neto Teoxane, neto RRS LL, neto total]. NCs go in negative.
+    No names or RUT here: the page joins client_id with ventas.json. "Total" is
+    the document's own netAmount (same figure the dashboard adds up), so
+    total - Teoxane - RRS is whatever else the document carries.
+    """
+    rows = []
+    for kind, docs in (("F", facturas), ("E", exenta_docs), ("N", nc_docs)):
+        sign = -1 if kind == "N" else 1
+        for d in docs:
+            brands = brand_details.get(d["id"], {}).get("by_brand", {})
+            rows.append([
+                d.get("number"),
+                kind,
+                datetime.datetime.utcfromtimestamp(d["emissionDate"]).strftime("%Y-%m-%d"),
+                str((d.get("client") or {}).get("id", "")),
+                round(brands.get("Teoxane", {}).get("neto", 0)),
+                round(brands.get("RRS HA Long Lasting", {}).get("neto", 0)),
+                sign * round(d.get("netAmount", 0)),
+            ])
+    return sorted(rows, key=lambda r: (r[2], r[1], r[0] or 0))
+
+
+def load_invoices():
+    """Returns {"YYYY-MM": [rows]}."""
+    if os.path.exists(INVOICES_FILE):
+        with open(INVOICES_FILE, "r", encoding="utf-8") as f:
+            return json.load(f).get("months", {})
+    return {}
+
+
+def save_invoices(invoices):
+    # One month per line: small file, and the daily commit only touches one line.
+    lines = ",\n".join(
+        f'"{k}":{json.dumps(invoices[k], separators=(",", ":"))}' for k in sorted(invoices)
+    )
+    stamp = datetime.datetime.utcnow().isoformat() + "Z"
+    os.makedirs(os.path.dirname(INVOICES_FILE), exist_ok=True)
+    with open(INVOICES_FILE, "w", encoding="utf-8", newline="\n") as f:
+        f.write(f'{{"updated_at":"{stamp}","months":{{\n{lines}\n}}}}\n')
+
+
 # -- Persistence ---------------------------------------------------------------
 
 def load_existing():
@@ -736,19 +728,19 @@ def main():
     print(f"{len(clients)} clients")
     print(f"Vendor lookup: {len(client_to_vendor)} clients mapped (from Bsale 'Vendedor' attribute)")
 
-    total_docs = get_total_document_count()
-    fact_block_end = total_docs - 1
-    print(f"Total documents in account: {total_docs} (facturas search range: {FACT_BLOCK_START}-{fact_block_end})")
+    docs_by_month = fetch_sales_documents()
 
-    nc_by_month = scan_nc_and_exentas_all_months()
+    invoices = load_invoices()
+    if args.backfill:
+        invoices = {k: v for k, v in invoices.items() if k >= args.from_month}
 
     for year, month in targets:
         label = f"{year}-{month:02d}"
-        print(f"  Fetching facturas {label}...", end=" ", flush=True)
-        facturas = fetch_facturas_for_month(year, month, fact_block_end)
-        nc_data = nc_by_month.get((year, month), {"nc": [], "exenta": []})
+        month_docs = docs_by_month.get((year, month), {"factura": [], "exenta": [], "nc": []})
+        facturas = month_docs["factura"]
+        nc_data = {"exenta": month_docs["exenta"], "nc": month_docs["nc"]}
         print(
-            f"{len(facturas)} facturas | {len(nc_data['nc'])} NC | "
+            f"  {label}: {len(facturas)} facturas | {len(nc_data['nc'])} NC | "
             f"{len(nc_data['exenta'])} exentas"
         )
 
@@ -760,6 +752,7 @@ def main():
             last_purchase_brands, client_product_history
         )
         existing[(year, month)] = record
+        invoices[label] = invoice_rows(facturas, nc_data["exenta"], nc_data["nc"], brand_details)
         print(
             f"    neto ${record['total_neto']:,.0f} | "
             f"Teoxane ${record['by_brand'].get('Teoxane', 0):,.0f} | "
@@ -767,6 +760,7 @@ def main():
         )
 
     save(users, clients, existing, client_activity, client_to_vendor, last_purchase_brands, client_product_history)
+    save_invoices(invoices)
 
 
 if __name__ == "__main__":
