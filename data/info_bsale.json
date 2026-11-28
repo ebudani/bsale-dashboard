@@ -1,8 +1,35 @@
 {
-  "updated_at": "2026-11-27T03:33:38.192203+00:00",
-  "accounts_with_sales": 566,
-  "accounts_without_address": 417,
+  "updated_at": "2026-11-28T03:10:36.607937+00:00",
+  "accounts_with_sales": 567,
+  "accounts_without_address": 412,
   "accounts": [
+    {
+      "id": "428",
+      "name": "ALNESTHETIC SPA",
+      "rut": "77805614-3",
+      "contact": "",
+      "phone": "",
+      "billing_address": "EL SENDERO 990 CS 4, Villa Alemana, Villa Alemana",
+      "last_sale": "2026-11-27"
+    },
+    {
+      "id": "873",
+      "name": "SERVICIOS ODONTOLOGICOS MAINO Y COMPANIA LIMITADA",
+      "rut": "77704251-3",
+      "contact": "Isabel Maino",
+      "phone": "992404659",
+      "billing_address": "Av. Las Condes 11380, Las Condes, Santiago",
+      "last_sale": "2026-11-27"
+    },
+    {
+      "id": "963",
+      "name": "SOCIEDAD ODONTOLÓGICA HV LIMITADA",
+      "rut": "77705259-4",
+      "contact": "Valentina Suarez",
+      "phone": "965866702",
+      "billing_address": "Beauchef 683, Valdivia, Valdivia",
+      "last_sale": "2026-11-27"
+    },
     {
       "id": "627",
       "name": "VITAL STETIC SPA",
@@ -137,15 +164,6 @@
       "phone": "969031545",
       "billing_address": "los dominicos 8630, Las Condes, Santiago",
       "last_sale": "2026-11-12"
-    },
-    {
-      "id": "905",
-      "name": "PALLINI LTDA.",
-      "rut": "76129871-2",
-      "contact": "Oreste Pallini",
-      "phone": "998260927",
-      "billing_address": "Ohiggins 1338, Concepción, Concepcion",
-      "last_sale": "2026-11-09"
     },
     {
       "id": "1301",
@@ -346,15 +364,6 @@
       "last_sale": "2026-10-13"
     },
     {
-      "id": "1043",
-      "name": "LONCÓN REBOLLEDO CENTRO DE ESTÉTICA FACIAL Y ODONTOLOGIA SPA",
-      "rut": "78218616-7",
-      "contact": "Claudia Loncon",
-      "phone": "9971078815",
-      "billing_address": "Renaca norte 265, Viña del Mar, Viña del Mar",
-      "last_sale": "2026-10-13"
-    },
-    {
       "id": "1284",
       "name": "Paula Ferreira Luttgues",
       "rut": "18371929-7",
@@ -370,15 +379,6 @@
       "contact": "Nicole Mourgues",
       "phone": "",
       "billing_address": "Carmen Sylva 2870, Providencia, Santiago",
-      "last_sale": "2026-10-08"
-    },
-    {
-      "id": "873",
-      "name": "SERVICIOS ODONTOLOGICOS MAINO Y COMPANIA LIMITADA",
-      "rut": "77704251-3",
-      "contact": "Isabel Maino",
-      "phone": "992404659",
-      "billing_address": "Av. Las Condes 11380, Las Condes, Santiago",
       "last_sale": "2026-10-08"
     },
     {
@@ -424,15 +424,6 @@
       "contact": "Sandra Mena",
       "phone": "",
       "billing_address": "Antonio Bellet 77, Providencia, Santiago",
-      "last_sale": "2026-10-08"
-    },
-    {
-      "id": "963",
-      "name": "SOCIEDAD ODONTOLÓGICA HV LIMITADA",
-      "rut": "77705259-4",
-      "contact": "Valentina Suarez",
-      "phone": "965866702",
-      "billing_address": "Beauchef 683, Valdivia, Valdivia",
       "last_sale": "2026-10-08"
     },
     {
@@ -526,15 +517,6 @@
       "last_sale": "2026-09-28"
     },
     {
-      "id": "1128",
-      "name": "NEXAURA LIMITADA",
-      "rut": "78219115-2",
-      "contact": "PAULA QUEZADA",
-      "phone": "966793588",
-      "billing_address": "EDUARDO DE LA BARRA 1444, PROVIDENCIA, SANTIAGO",
-      "last_sale": "2026-09-28"
-    },
-    {
       "id": "1243",
       "name": "Clinica Gutierrez S.A",
       "rut": "96793590-5",
@@ -625,30 +607,12 @@
       "last_sale": "2026-09-10"
     },
     {
-      "id": "757",
-      "name": "GARDENIA CLINIC SPA",
-      "rut": "77829738-8",
-      "contact": "Daniela Chamorro",
-      "phone": "",
-      "billing_address": "SALVADOR 95 OF 814, Providencia, Santiago",
-      "last_sale": "2026-09-10"
-    },
-    {
       "id": "931",
       "name": "PRESTADORA DE SERVICIOS MEDICOS HERNAN VALENZUELA Y COMPANIA LIMITADA",
       "rut": "76428880-7",
       "contact": "Gabriela Valenzuela",
       "phone": "",
       "billing_address": "Av. Nueva Providencia 1860, Providencia, Santiago",
-      "last_sale": "2026-09-10"
-    },
-    {
-      "id": "1040",
-      "name": "ODONTOLOGÍA DIANDRA TORRES CONTARDO E.I.R.L.",
-      "rut": "77785634-0",
-      "contact": "Diandra Torres",
-      "phone": "71201115",
-      "billing_address": "Camino a la viña 4387, Talca, Talca",
       "last_sale": "2026-09-10"
     },
     {
@@ -1109,15 +1073,6 @@
       "phone": "989063335",
       "billing_address": "AV. LAS CONDES 12587 DP 206A, Las Condes, Santiago",
       "last_sale": "2026-08-18"
-    },
-    {
-      "id": "428",
-      "name": "ALNESTHETIC SPA",
-      "rut": "77805614-3",
-      "contact": "",
-      "phone": "",
-      "billing_address": "EL SENDERO 990 CS 4, Villa Alemana, Villa Alemana",
-      "last_sale": "2026-08-14"
     },
     {
       "id": "488",
